@@ -339,9 +339,13 @@ and $\varepsilon_2(\omega)$ denotes the imaginary part of the dielectric functio
 
 This scalar form represents the dielectric response along a specific direction.
 Here, the complex dielectric function describes the response of medium to an external electric field.
-we can therefore derive the absorption coefficient $\alpha(\omega)$,
-the refractive index $n(\omega)$, the extinction coefficient $k(\omega)$,
-the reflectivity $R(\omega)$, and the energy-loss function $L(\omega)$.
+we can therefore derive 
+the absorption coefficient $\alpha(\omega)$,
+the refractive index $n(\omega)$,
+the extinction coefficient $k(\omega)$,
+the reflectivity $R(\omega)$,
+and the energy-loss function $L(\omega)$.
+
 It represents a unified framework for the linear optical properties~\cite{djurivsic2002progress}.
 
 These two parts of the dielectric function together determine the optical response.
@@ -471,7 +475,7 @@ each principal direction corresponds to a specific complex dielectric response.
 Once we determine the principal directions,
 equation~\eqref{principal_axis_dielectric_tensor} describes the principal-axis form of the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$.
 For each principal component with $\lambda=x,y,z$, 
-we write the complex dielectric function with direction resolved:
+we write the complex dielectric function in a direction-resolved form:
 
 \begin{equation}
     \varepsilon_{\lambda\lambda}(\omega) =
@@ -482,33 +486,37 @@ we write the complex dielectric function with direction resolved:
 
 here, the real part $\varepsilon_{1,\lambda\lambda}(\omega)$ describes the directional dispersive response,
 whereas the imaginary part $\varepsilon_{2,\lambda\lambda}(\omega)$ describes the directional absorptive response.
-Therefore, as different principal components produce different optical responses along different directions, 
+As different principal components produce different optical responses along different directions, 
 optical anisotropy appears~\cite{nye1985physical}.
 
 For xenes, the dielectric response separates into the structural plane and the normal direction~\cite{matthes2016influence}.
 
 In the present work,
 we denote the dielectric response within the structural plane by the in-plane dielectric function $\varepsilon_{\varparallel}(\omega)$,
-whereas the response normal to that plane by the out-of-plane dielectric function $\varepsilon_{\perp}(\omega)$.
+whereas we denote the response normal to that plane by
+the out-of-plane dielectric function $\varepsilon_{\perp}(\omega)$.
 This notation keeps the later comparison clear.
 
 Once we decompose the dielectric response into directional channels,
 the derived optical quantities inherit the same anisotropy~\cite{alonso2004optical}.
 
-Therefore, via the same directional decomposition,
+% Therefore, via the same directional decomposition,
+% the absorption coefficient $\alpha(\omega)$,
+% the refractive index $n(\omega)$,
+% the extinction coefficient $k(\omega)$,
+% the reflectivity $R(\omega)$,
+% and the energy-loss function $L(\omega)$
+% also inherit the same anisotropy.
 
-Draft % Draft
+At this stage, we have established a direction-resolved complex dielectric response for anisotropic media.
 
-the refractive index $n(\omega)$, the extinction coefficient $k(\omega)$, the absorption coefficient $\alpha(\omega)$, the reflectivity $R(\omega)$, and the energy-loss function $L(\omega)$ also inherit the same anisotropy.
-
-the refractive index $n(\omega)$, extinction coefficient $k(\omega)$, absorption coefficient $\alpha(\omega)$, reflectivity $R(\omega)$, and energy-loss function $L(\omega)$ also inherit the same anisotropy.
-
-At this stage, we arrive at a direction-resolved complex dielectric response for anisotropic media.
-Each component carries a real part and an imaginary part, and causality links these two parts for each direction separately.
-We next establish this link through the Kramers--Kronig relations.
+As each component includes a real part and an imaginary part,
+we next turn to the Kramers--Kronig relations for each direction to connect the real and imaginary parts of each directional component.
 
 \newpage
 \section{Causality and the Kramers--Kronig relations}
+
+Draft % Draft
 
 \subsection{Causality and analytic structure of response functions}
 
