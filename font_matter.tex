@@ -1,0 +1,136 @@
+% Front-matter lists loaded by thesis.tex after the main contents.
+
+\phantomsection
+\listoffigures
+\phantomsection
+\listoftables
+
+\chapter*{List of Abbreviations and Symbols}
+
+% A compact, page-breaking two-column list without an additional package.
+\newenvironment{thesisfrontmatterentries}{%
+  \begin{list}{}{%
+    \setlength{\labelwidth}{0.31\textwidth}%
+    \setlength{\labelsep}{0.04\textwidth}%
+    \setlength{\leftmargin}{0.35\textwidth}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\listparindent}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\itemsep}{0.2\baselineskip}%
+    \setlength{\topsep}{0.4\baselineskip}%
+    \renewcommand{\makelabel}[1]{\makebox[\labelwidth][l]{##1}}%
+  }%
+}{%
+  \end{list}%
+}
+
+\newcommand{\thesisfrontmattergroup}[1]{%
+  \par\addvspace{1.2\baselineskip}%
+  {\large\bfseries #1\par}%
+  \nopagebreak[4]%
+}
+
+\begingroup
+\singlespacing
+
+\thesisfrontmattergroup{Abbreviations}
+
+\begin{thesisfrontmatterentries}
+  \item[2D] Two-dimensional
+  \item[AFM] Antiferromagnetic
+  \item[AIMD] \textit{Ab initio} molecular dynamics
+  \item[bcc] Body-centred cubic
+  \item[BO] Born--Oppenheimer
+  \item[BZ] Brillouin zone
+  \item[D3(BJ)] Grimme D3 dispersion correction with Becke--Johnson damping
+  \item[DFT] Density functional theory
+  \item[DoS] Density of states
+  \item[EPW] Electron--phonon coupling using Wannier functions
+  \item[FM] Ferromagnetic
+  \item[GGA] Generalized gradient approximation
+  \item[hcp] Hexagonal close-packed
+  \item[HEG] Homogeneous electron gas
+  \item[HF] Hartree--Fock
+  \item[HK] Hohenberg--Kohn
+  \item[HSE/HSE06] Heyd--Scuseria--Ernzerhof screened hybrid functional and its 2006 parametrization
+  \item[IPA] Independent-particle approximation
+  \item[KS] Kohn--Sham
+  \item[LDA] Local density approximation
+  \item[PAW] Projector augmented-wave
+  \item[PBE] Perdew--Burke--Ernzerhof
+  \item[PDoS] Projected density of states
+  \item[\(\mathrm{r}^{2}\)SCAN] Restored-regularized strongly constrained and appropriately normed meta-GGA
+  \item[SI] International System of Units
+  \item[TF] Thomas--Fermi
+  \item[TFD] Thomas--Fermi--Dirac
+  \item[TFDW] Thomas--Fermi--Dirac--von Weizs\"acker
+  \item[VASP] Vienna \textit{Ab initio} Simulation Package
+  \item[vdW] van der Waals
+\end{thesisfrontmatterentries}
+
+\thesisfrontmattergroup{Electronic-structure and DFT symbols}
+
+\begin{thesisfrontmatterentries}
+  \item[\(\hat{H}\)] Many-body Hamiltonian operator
+  \item[\(\Psi\)] Interacting many-electron wave function
+  \item[\(\psi_i(\vec{r}\,)\)] \(i\)th Kohn--Sham spin-orbital
+  \item[\(n(\vec{r}\,)\)] Electron number density
+  \item[\(N\)] Total number of electrons
+  \item[\(\vec{r}\)] Electronic position vector
+  \item[\(\vec{R}_I\)] Position of nucleus \(I\)
+  \item[\(\vec{k}\)] Crystal wave vector
+  \item[\(f_i\)] Occupation number of orbital \(i\)
+  \item[\(\lambda_i\)] Kohn--Sham eigenvalue
+  \item[{\(T_s[n]\)}] Noninteracting kinetic-energy functional
+  \item[{\(E[n]\)}] Ground-state total-energy functional
+  \item[{\(E_{\mathrm{H}}[n]\)}] Hartree energy functional
+  \item[{\(E_{\mathrm{xc}}[n]\)}] Exchange-correlation energy functional
+  \item[\(v_{\mathrm{ext}}(\vec{r}\,)\)] External one-electron potential
+  \item[{\(v_{\mathrm{H}}([n];\vec{r}\,)\)}] Hartree potential
+  \item[{\(v_{\mathrm{xc}}([n];\vec{r}\,)\)}] Exchange-correlation potential
+  \item[{\(v_{\mathrm{eff}}([n];\vec{r}\,)\)}] Effective Kohn--Sham potential
+  \item[\(\Delta\rho(\vec{r}\,)\)] Charge-density difference
+\end{thesisfrontmatterentries}
+
+\thesisfrontmattergroup{Optical-response symbols}
+
+\begin{thesisfrontmatterentries}
+  \item[\(\vec{E}\)] Electric field
+  \item[\(\vec{P}\)] Electric polarization
+  \item[\(\vec{D}\)] Electric displacement field
+  \item[\(\chi_{\alpha\beta}(\omega)\)] Electric-susceptibility tensor
+  \item[\(\varepsilon_{\alpha\beta}(\omega)\)] Relative dielectric tensor
+  \item[\(\varepsilon_{1,\alpha\beta}(\omega)\)] Real, dispersive part of the dielectric tensor
+  \item[\(\varepsilon_{2,\alpha\beta}(\omega)\)] Imaginary, absorptive part of the dielectric tensor
+  \item[\(\varepsilon_{\varparallel}(\omega)\)] In-plane dielectric function
+  \item[\(\varepsilon_{\perp}(\omega)\)] Out-of-plane dielectric function
+  \item[\(\sigma_{\alpha\beta}(\omega)\)] Optical-conductivity tensor
+  \item[\(\omega\)] Angular frequency
+  \item[\(\hbar\omega\)] Photon energy
+  \item[\(N_{\lambda}(\omega)\)] Complex refractive index
+  \item[\(n_{\lambda}(\omega)\)] Refractive index
+  \item[\(k_{\lambda}(\omega)\)] Extinction coefficient
+  \item[\(\alpha_{\lambda}(\omega)\)] Absorption coefficient
+  \item[\(R_{\lambda}(\omega)\)] Reflectivity
+  \item[\(L_{\lambda}(\omega)\)] Energy-loss function
+  \item[\(d_{\mathrm{SC}}\)] Supercell length normal to the two-dimensional layer
+  \item[\(d_{\mathrm{2D}}\)] Effective thickness of the two-dimensional material
+  \item[\(\varepsilon_0\)] Vacuum permittivity
+  \item[\(c\)] Speed of light in vacuum
+\end{thesisfrontmatterentries}
+
+\thesisfrontmattergroup{Topological symbols}
+
+\begin{thesisfrontmatterentries}
+  \item[\(Z_2\)] Time-reversal-invariant topological classification
+  \item[\(\Lambda_i\)] \(i\)th time-reversal-invariant momentum
+  \item[\(N_{\mathrm{occ}}\)] Number of occupied spin-orbit-coupled bands
+  \item[\(\xi_{2m}(\Lambda_i)\)] Parity eigenvalue of the \(m\)th occupied Kramers pair at \(\Lambda_i\)
+  \item[\(\delta_i\)] Product of occupied-state parity eigenvalues at \(\Lambda_i\)
+  \item[\(\nu\)] \(Z_2\) topological index: \(0\) for trivial and \(1\) for non-trivial topology
+\end{thesisfrontmatterentries}
+
+\endgroup
+
+% Ship out the final Roman-numbered page before thesis.tex resets page numbers.
+\cleardoublepage
