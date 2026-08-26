@@ -31,8 +31,7 @@
 
 % Read and reopen an amsbook contents file without creating another chapter.
 \makeatletter
-\newcommand{\thesisfrontmatterlist}[2]{%
-  \thesisfrontmattersection{#2}%
+\newcommand{\thesisfrontmatterlist}[1]{%
   \begingroup
     \setTrue{#1}%
     \parskip\z@skip
@@ -62,9 +61,13 @@
 
 \chapter*{Lists of Figures, Tables, Abbreviations and Symbols}
 
-\thesisfrontmatterlist{lof}{List of Figures}
+% The first section shares the chapter-opening page; later sections start
+% on new pages via \thesisfrontmattersection.
+\thesisfrontmattergroup{List of Figures}
+\thesisfrontmatterlist{lof}
 
-\thesisfrontmatterlist{lot}{List of Tables}
+\thesisfrontmattersection{List of Tables}
+\thesisfrontmatterlist{lot}
 
 \singlespacing
 
