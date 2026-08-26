@@ -23,13 +23,28 @@
   \nopagebreak[4]%
 }
 
+% Each top-level list section starts on its own page.
+\newcommand{\thesisfrontmattersection}[1]{%
+  \clearpage
+  \thesisfrontmattergroup{#1}%
+}
+
 % Read and reopen an amsbook contents file without creating another chapter.
 \makeatletter
 \newcommand{\thesisfrontmatterlist}[2]{%
-  \thesisfrontmattergroup{#2}%
+  \thesisfrontmattersection{#2}%
   \begingroup
     \setTrue{#1}%
     \parskip\z@skip
+    % The class ends every contents entry with \nobreak.  Add a legal
+    % page-break point after each complete entry so long captions cannot
+    % be forced through the footer.
+    \let\thesisfrontmatter@savedtocline\@tocline
+    \def\@tocline##1##2##3##4##5##6##7{%
+      \thesisfrontmatter@savedtocline
+        {##1}{##2}{##3}{##4}{##5}{##6}{##7}%
+      \penalty\z@
+    }%
     \makeatletter
     \@input{\jobname.#1}%
     \if@filesw
@@ -49,13 +64,11 @@
 
 \thesisfrontmatterlist{lof}{List of Figures}
 
-\clearpage
 \thesisfrontmatterlist{lot}{List of Tables}
 
-\clearpage
 \singlespacing
 
-\thesisfrontmattergroup{List of Abbreviations and Symbols}
+\thesisfrontmattersection{List of Abbreviations and Symbols}
 
 \thesisfrontmattergroup{Abbreviations}
 
