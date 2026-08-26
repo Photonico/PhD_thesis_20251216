@@ -1,12 +1,5 @@
 % Front-matter lists loaded by thesis.tex after the main contents.
 
-\phantomsection
-\listoffigures
-\phantomsection
-\listoftables
-
-\chapter*{List of Abbreviations and Symbols}
-
 % A compact, page-breaking two-column list without an additional package.
 \newenvironment{thesisfrontmatterentries}{%
   \begin{list}{}{%
@@ -30,8 +23,39 @@
   \nopagebreak[4]%
 }
 
+% Read and reopen an amsbook contents file without creating another chapter.
+\makeatletter
+\newcommand{\thesisfrontmatterlist}[2]{%
+  \thesisfrontmattergroup{#2}%
+  \begingroup
+    \setTrue{#1}%
+    \parskip\z@skip
+    \makeatletter
+    \@input{\jobname.#1}%
+    \if@filesw
+      \expandafter\newwrite\csname tf@#1\endcsname
+      \immediate\expandafter\openout\csname tf@#1\endcsname
+        \jobname.#1\relax
+    \fi
+    \global\@nobreakfalse
+  \endgroup
+}
+\makeatother
+
 \begingroup
+\hypersetup{allcolors=Black}
+
+\chapter*{Lists of Figures, Tables, Abbreviations and Symbols}
+
+\thesisfrontmatterlist{lof}{List of Figures}
+
+\clearpage
+\thesisfrontmatterlist{lot}{List of Tables}
+
+\clearpage
 \singlespacing
+
+\thesisfrontmattergroup{List of Abbreviations and Symbols}
 
 \thesisfrontmattergroup{Abbreviations}
 
@@ -130,7 +154,6 @@
   \item[\(\nu\)] \(Z_2\) topological index: \(0\) for trivial and \(1\) for non-trivial topology
 \end{thesisfrontmatterentries}
 
-\endgroup
-
 % Ship out the final Roman-numbered page before thesis.tex resets page numbers.
 \cleardoublepage
+\endgroup
