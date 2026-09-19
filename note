@@ -1,9 +1,0 @@
-# Prompt
-
-这是我的论文初稿, 编译后的文件在: `.output/thesis.pdf`;
-然后 examiner reports 在 `reports`;
-请你结合 reports, 给出详细的修改意见和措施,
-然后把内容增加到 `assistance/<your_name.md>`,
-如果你是 copilot, 那么则为 kimi.md, 因为我设置你的 backend 为 kimi,
-注意不要覆盖以前的内容, 也不要改动论文文件本身, 这个我自己改动;
-请你用中文讲解, 但是论文内容本身保持英文;
