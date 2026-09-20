@@ -18,6 +18,10 @@ We then introduce density functionals and establish the Hohenberg--Kohn theorem 
 With the electron density $n(\vec{r}\,)$ as the central variable, we construct the Kohn--Sham framework in section~\ref{sec:from_density_functional_to_Kohn_Sham_theory}.
 Finally, section~\ref{sec:exchange_correlation_functional} demonstrates practical exchange-correlation approximations and brings the formal theory to the working form of density functional theory.
 
+In section~\ref{sec:practical_computational_methods},
+we then connect these foundations to the calculations used in this thesis.
+Readers interested in the computational procedure can proceed directly to that section.
+
 \newpage
 \section{A story starts with time evolution quantum mechanics}
 \label{sec:time_evolution_quantum_mechanics}
@@ -3124,6 +3128,16 @@ more reasonable defect-level positions,
 and a more reliable description of localized states in semiconductors and insulators~\cite{paier2006screened,krukau2006influence}.
 These advantages make the Heyd--Scuseria--Ernzerhof functional one of the most widely used hybrid functionals in first-principles calculations of condensed-matter systems.
 
+In the present work,
+we use PBE and HSE06 to examine how the electronic properties depend on the exchange-correlation approximation.
+The screened exchange contribution in equation~\eqref{HSE_exchange_correlation_functional} can change the localization of electronic states and the predicted band gap.
+However, HSE06 remains an approximation.
+A larger band gap does not by itself imply a more accurate result.
+Therefore, when comparing the results in chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron},
+we need to consider the limitations of both functionals.
+For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE.
+We discuss this choice and its limitations with the corresponding calculations.
+
 Consequently, the local density approximation,
 the generalized gradient approximation,
 and hybrid functionals such as the Heyd--Scuseria--Ernzerhof functional form a practical hierarchy of exchange-correlation approximations in density functional theory.
@@ -3132,6 +3146,445 @@ The generalized gradient approximation includes the density gradient and capture
 Hybrid functionals incorporate a fraction of exact exchange.
 Therefore, for the density functional theory framework used in the present work,
 we arrive at the essential exchange-correlation approximations required in practical first-principles calculations.
+
+\newpage
+\section{From density functional theory to practical calculations}
+\label{sec:practical_computational_methods}
+
+% opening paragraph
+The previous sections established the density functional theory framework used in this thesis.
+We now connect this framework to the calculations in the research chapters.
+We start from the total energy and its derivatives,
+which determine structural relaxation, lattice vibrations, and atomic motion.
+We then introduce spin polarization, electron-phonon coupling, and band topology.
+The settings for individual systems are discussed in sections~\ref{1_calculation_methods}, \ref{2_methods}, and~\ref{3_methods}.
+
+We retain the Hartree atomic units introduced in section~\ref{sec:manybody_schrodinger_equation}.
+When discussing electron-phonon coupling and the transition temperature,
+we restore $\hbar$ and $\kB$ explicitly to distinguish frequency, energy, and temperature.
+
+\subsection{Structural relaxation and convergence}
+\label{subsec:method_relaxation}
+
+Firstly, we need an atomic structure for the calculation of electronic properties.
+For fixed nuclear positions,
+we solve the Kohn--Sham equations~\eqref{KS_equation_diagonal_dirac} together with the density relation~\eqref{density_with_occupation_number}.
+This gives the electronic ground-state energy for the chosen structure.
+
+Recall that equation~\eqref{absorbed_electronic_energy} separates the electronic energy $E$ from the nucleus-nucleus repulsion $E_\mathrm{NN}$.
+When the nuclei move, both contributions change.
+Therefore, the forces follow from the complete Born--Oppenheimer energy:
+
+\begin{equation}
+\left\{\begin{aligned}
+    E_\mathrm{BO}(\{\vec{R}_I\})
+    &= E(\{\vec{R}_I\})+E_\mathrm{NN}(\{\vec{R}_I\}) \\
+    \vec{F}_I
+    &= -\nabla_{\vec{R}_I}E_\mathrm{BO}(\{\vec{R}_J\})
+\end{aligned}\right.
+\label{BO_energy_and_force}
+\end{equation}
+
+here, $\vec{R}_I$ and $\vec{F}_I$ denote the position and force of nucleus $I$.
+The electronic energy is evaluated self-consistently at each nuclear configuration.
+The force therefore connects the electronic problem in equation~\eqref{BO_SE_with_ENN} to the motion of the nuclei.
+
+We then update the atomic positions and the lattice parameters allowed to vary.
+For example, the electronic and force convergence criteria can be expressed as:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \left|E_\mathrm{SCF}^{(j)}-E_\mathrm{SCF}^{(j-1)}\right|
+    &<\eta_E \\
+    \max_I|\vec{F}_I|&<\eta_F
+\end{aligned}\right.
+\label{electronic_and_force_convergence}
+\end{equation}
+
+here, $j$ labels successive electronic iterations at fixed nuclear positions,
+$E_\mathrm{SCF}^{(j)}$ denotes the energy evaluated at that iteration,
+and $\eta_E$ and $\eta_F$ denote the chosen energy and force tolerances.
+The first condition controls the electronic iteration,
+whereas the second controls the residual forces during structural relaxation.
+If lattice parameters are relaxed, the corresponding stress also needs to be converged.
+
+However, satisfying these stopping criteria does not establish convergence with respect to the plane-wave cutoff or the sampling of reciprocal space.
+We need to examine how these choices affect the physical quantity being compared.
+For two-dimensional structures, the vacuum separation also controls the interaction between periodically repeated layers.
+The treatment of dispersion interactions is particularly relevant to the interlayer geometry in chapter~\ref{cha:project_bilayers}.
+The actual stopping criteria and numerical settings are given with the calculations in chapters~\ref{cha:project_bilayers}, \ref{cha:project_boron}, and~\ref{cha:project_beryllene}.
+
+\subsection{Brillouin-zone sampling}
+\label{subsec:method_kpoints}
+
+Next, we consider the periodic electronic problem.
+We label a Bloch state $\ket{\psi_{n\vec{k}}}$ by its band index $n$ and wave vector $\vec{k}$,
+and denote its one-particle energy by $E_{n\vec{k}}$.
+This is the periodic-system notation for the Kohn--Sham eigenvalue $\lambda_i$ in equation~\eqref{KS_equation_diagonal_dirac}.
+It is also the band-energy notation used in chapter~\ref{cha:fundamentals_b}.
+
+Electronic quantities require integration over the Brillouin zone.
+For a quantity $A(\vec{k})$, we approximate its Brillouin-zone average by:
+
+\begin{equation}
+    \frac{1}{\Omega_\mathrm{BZ}}
+    \int_\mathrm{BZ}\dif^3{k}\,A(\vec{k})
+    \approx \sum_{\vec{k}}w_{\vec{k}}A(\vec{k}),
+    \qquad
+    \sum_{\vec{k}}w_{\vec{k}}=1
+\label{brillouin_zone_quadrature}
+\end{equation}
+
+here, $\Omega_\mathrm{BZ}$ denotes the Brillouin-zone volume of the periodic calculation,
+and $w_{\vec{k}}$ denotes the normalized weight of each sampled point.
+For a slab supercell, the in-plane mesh is refined while the sampling along the vacuum direction is usually restricted to one point.
+The required mesh depends on the reciprocal-cell dimensions and the quantity of interest.
+
+By increasing the sampling density, we examine the numerical accuracy of equation~\eqref{brillouin_zone_quadrature}.
+However, a mesh that gives a converged total energy may still be insufficient for an optical spectrum.
+In equation~\eqref{independent_particle_imaginary_dielectric_tensor} of chapter~\ref{cha:fundamentals_b},
+the integrand also contains transition matrix elements and the energy difference $E_{c\vec{k}}-E_{v\vec{k}}$.
+Therefore, optical convergence depends on the k-point mesh, the number of bands included, and the broadening of the transitions.
+The research chapters discuss the meshes used for structural and optical calculations separately.
+
+\subsection{Phonons and molecular dynamics}
+\label{subsec:method_stability}
+
+Once a structure is relaxed, we examine its response to small atomic displacements.
+Let $u_{I\alpha}$ denote the displacement of nucleus $I$ along the Cartesian direction $\alpha$.
+Starting from the force in equation~\eqref{BO_energy_and_force},
+we define the harmonic force constants as:
+
+\begin{equation}
+    \Phi_{I\alpha,J\beta}
+    \coloneqq
+    \left.\frac{\partial^2E_\mathrm{BO}}
+    {\partial u_{I\alpha}\,\partial u_{J\beta}}\right|_0
+    =
+    -\left.\frac{\partial F_{I\alpha}}{\partial u_{J\beta}}\right|_0
+\label{harmonic_force_constants_method}
+\end{equation}
+
+here, the subscript $0$ denotes the relaxed reference structure.
+The force constants describe the curvature of the same energy surface used for structural relaxation.
+They can be obtained from finite-displacement calculations or density-functional perturbation theory~\cite{baroni2001phonons}.
+
+For a periodic crystal, we write the nuclear index as $I=(l,\kappa)$,
+where $l$ labels the cell and $\kappa$ labels the atom within the cell.
+Using the cell-phase convention $\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{L}_l}$,
+we construct the dynamical matrix and its eigenvalue equation:
+
+\begin{equation}
+\left\{\begin{aligned}
+    D_{\kappa\alpha,\kappa'\beta}(\vec{q})
+    &=
+    \frac{1}{\sqrt{M_\kappa M_{\kappa'}}}
+    \sum_l\Phi_{0\kappa\alpha,l\kappa'\beta}
+    \,\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{L}_l} \\
+    \sum_{\kappa'\beta}
+    D_{\kappa\alpha,\kappa'\beta}(\vec{q})
+    e_{\kappa'\beta,s}(\vec{q})
+    &=\omega_{\vec{q}s}^{2}e_{\kappa\alpha,s}(\vec{q})
+\end{aligned}\right.
+\label{phonon_dynamical_matrix_method}
+\end{equation}
+
+here, $\vec{L}_l$ denotes a lattice translation,
+$M_\kappa$ denotes the nuclear mass,
+$\vec{q}$ denotes the phonon wave vector,
+and $s$ labels a phonon branch.
+The eigenvector components $e_{\kappa\alpha,s}(\vec{q})$ describe the mass-weighted displacement pattern,
+with normalization $\sum_{\kappa\alpha}|e_{\kappa\alpha,s}(\vec{q})|^2=1$.
+The quantity $\omega_{\vec{q}s}$ is an angular frequency;
+the ordinary frequency is $\omega_{\vec{q}s}/(2\pi)$.
+Here, $\omega$ denotes a frequency, rather than the range-separation parameter used in section~\ref{sec:exchange_correlation_functional}.
+
+A negative eigenvalue $\omega_{\vec{q}s}^{2}$ gives an imaginary frequency and indicates a harmonic instability of the reference structure.
+Small imaginary frequencies require convergence checks before they can be attributed to numerical errors.
+The absence of imaginary modes supports harmonic dynamical stability within the wave vectors and numerical accuracy examined.
+
+We then turn to \textit{ab initio} molecular dynamics (AIMD).
+In the Born--Oppenheimer approximation,
+the electronic ground state determines the forces acting on the nuclei.
+Before adding any thermostat terms, the classical nuclear equation of motion is:
+
+\begin{equation}
+    M_I\frac{\dif^2\vec{R}_I(t)}{\dif t^2}
+    =
+    \vec{F}_I(\{\vec{R}_J(t)\})
+    =
+    -\nabla_{\vec{R}_I}E_\mathrm{BO}(\{\vec{R}_J(t)\})
+\label{born_oppenheimer_nuclear_motion}
+\end{equation}
+
+here, the electronic problem is solved at successive nuclear configurations to update the forces.
+Phonons examine the local curvature of the energy surface,
+whereas AIMD follows an atomic trajectory on that surface.
+The trajectory tests whether the structure persists at the chosen temperature over the simulated time.
+The ensemble, temperature control, time step, and duration must therefore be specified with each calculation.
+These two methods address the boron and beryllene structures in chapters~\ref{cha:project_boron} and~\ref{cha:project_beryllene}.
+Neither test alone establishes thermodynamic stability or experimental synthesizability.
+
+\subsection{Spin polarization and magnetic ordering}
+\label{subsec:method_magnetism}
+
+In equation~\eqref{density_with_occupation_number}, the orbital index includes spin implicitly.
+For a collinear spin-polarized calculation,
+we now separate the spin-up and spin-down contributions:
+
+\begin{equation}
+\left\{\begin{aligned}
+    n_\sigma(\vec{r}\,)
+    &=\sum_i f_{i\sigma}\left|\braket{\vec{r}\,|\psi_{i\sigma}}\right|^2,
+    \qquad \sigma\in\{\uparrow,\downarrow\} \\
+    n(\vec{r}\,)&=n_\uparrow(\vec{r}\,)+n_\downarrow(\vec{r}\,) \\
+    \Delta n(\vec{r}\,)&=n_\uparrow(\vec{r}\,)-n_\downarrow(\vec{r}\,)
+\end{aligned}\right.
+\label{spin_resolved_density_method}
+\end{equation}
+
+here, $\ket{\psi_{i\sigma}}$ denotes the spatial orbital in spin channel $\sigma$,
+$f_{i\sigma}$ denotes its occupation,
+and $\Delta n(\vec{r}\,)$ denotes the spin-density difference.
+The position projection follows the coordinate representation in equation~\eqref{coordinate_representation_definition}.
+In a periodic calculation, the orbital sum also includes the weighted k-point sampling in equation~\eqref{brillouin_zone_quadrature}.
+The exchange-correlation energy then depends on both spin densities.
+For a semilocal functional, the potential definition in equation~\eqref{xc_potential_definition} becomes:
+
+\begin{equation}
+    v_\mathrm{xc}^{\sigma}([n_\uparrow,n_\downarrow];\vec{r}\,)
+    =
+    \frac{\delta E_\mathrm{xc}[n_\uparrow,n_\downarrow]}
+    {\delta n_\sigma(\vec{r}\,)}
+\label{spin_dependent_xc_potential_method}
+\end{equation}
+
+here, each spin channel has its own exchange-correlation potential,
+while the Hartree potential depends on the total density.
+We accordingly solve equation~\eqref{KS_equation_diagonal_dirac} for the two spin channels and update their densities self-consistently.
+For hybrid functionals, the generalized Kohn--Sham operator also contains the non-local exchange contribution discussed in section~\ref{sec:exchange_correlation_functional}.
+
+Different initial spin arrangements allow us to examine competing magnetic solutions.
+We compare their converged energies and local spin densities under consistent numerical conditions.
+For ferromagnetic and antiferromagnetic configurations represented by cells of the same composition and size,
+we can define the energy difference per atom as:
+
+\begin{equation}
+    \Delta e_\mathrm{AFM-FM}
+    \coloneqq
+    \frac{E_\mathrm{BO}^\mathrm{AFM}-E_\mathrm{BO}^\mathrm{FM}}
+    {N_\mathrm{at}}
+\label{magnetic_energy_difference_method}
+\end{equation}
+
+here, $N_\mathrm{at}$ denotes the number of atoms in each comparison cell.
+A negative value favours the antiferromagnetic configuration within this comparison.
+The normalization must be stated when reporting an energy difference,
+and the numerical uncertainty must be small compared with that difference.
+
+In chapter~\ref{cha:project_boron},
+this comparison addresses the competing magnetic states of monolayer o-\ce{B14}.
+A vanishing total spin moment alone does not distinguish an antiferromagnetic state from a non-magnetic state;
+the local spin density is also required.
+The lowest-energy solution among the configurations examined identifies the preferred state within that set,
+but does not by itself establish magnetic order at finite temperature.
+
+\subsection{Electron-phonon coupling and superconductivity}
+\label{subsec:method_elph}
+
+Lattice vibrations also perturb the Kohn--Sham potential in equation~\eqref{KS_potential_decomposition}.
+Atomic displacement changes the external potential and induces a density response,
+which also changes the Hartree and exchange-correlation contributions.
+The same phonon eigenvectors obtained from equation~\eqref{phonon_dynamical_matrix_method}
+describe the atomic displacement associated with this perturbation.
+Density-functional perturbation theory gives both the phonon response and the first-order change in the self-consistent potential~\cite{baroni2001phonons}.
+
+We now restore $\hbar$ explicitly, and keep $\omega_{\vec{q}s}$ as an angular frequency.
+Using the cell-periodic parts $\ket{u_{n\vec{k}}}$ of the Bloch states, normalized over a unit cell,
+we write the electron-phonon matrix element as~\cite{giustino2017electron}:
+
+\begin{equation}
+    g_{mn,s}(\vec{k},\vec{q})
+    =
+    \sum_{\kappa\alpha}
+    \left(\frac{\hbar}{2M_\kappa\omega_{\vec{q}s}}\right)^{1/2}
+    e_{\kappa\alpha,s}(\vec{q})
+    \bra{u_{m,\vec{k}+\vec{q}}}
+    \partial_{\vec{q}\kappa\alpha}\hat{v}_\mathrm{KS}
+    \ket{u_{n\vec{k}}}_\mathrm{cell}
+\label{electron_phonon_matrix_element_method}
+\end{equation}
+
+here, $\partial_{\vec{q}\kappa\alpha}\hat{v}_\mathrm{KS}$ denotes the cell-periodic part of the self-consistent perturbation operator generated by a unit-amplitude displacement of sublattice $\kappa$ along $\alpha$,
+with cell dependence $\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{L}_l}$.
+The factor $\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{r}}$ is removed from the perturbation before taking the cell matrix element.
+Together with $e_{\kappa\alpha,s}(\vec{q})$,
+the mass-dependent prefactor sets the zero-point displacement scale for that atom and mode.
+The matrix element $g_{mn,s}(\vec{k},\vec{q})$ has the dimension of energy.
+Zero-frequency rigid translations are excluded from this mode expression.
+The matrix element therefore describes the scattering of an electron from $\ket{\psi_{n\vec{k}}}$ to $\ket{\psi_{m,\vec{k}+\vec{q}}}$ by the phonon $(\vec{q},s)$.
+Direct evaluation on dense reciprocal-space grids is expensive.
+We therefore transform the electronic states and perturbation matrix elements to a localized Wannier representation.
+The localized quantities are then interpolated back to finer electronic and phonon meshes in EPW~\cite{pizzi2020wannier90,ponce2016epw}.
+
+For a spin-degenerate reference state, we use the density of states per unit cell and per spin at the Fermi energy.
+With independently normalized weights $\sum_{\vec{k}}w_{\vec{k}}=\sum_{\vec{q}}w_{\vec{q}}=1$,
+the Fermi-surface average gives the Eliashberg spectral function:
+
+\begin{equation}
+\begin{aligned}
+    \alpha^2F(\omega)
+    &=
+    \frac{1}{N(E_\mathrm{F})}
+    \sum_{mn,s}\sum_{\vec{k},\vec{q}}
+    w_{\vec{k}}w_{\vec{q}}
+    |g_{mn,s}(\vec{k},\vec{q})|^2 \\
+    &\quad\times
+    \delta(E_{n\vec{k}}-E_\mathrm{F})
+    \delta(E_{m,\vec{k}+\vec{q}}-E_\mathrm{F})
+    \delta(\hbar\omega-\hbar\omega_{\vec{q}s}), \\
+    N(E_\mathrm{F})
+    &=\sum_{n,\vec{k}}w_{\vec{k}}\,
+    \delta(E_{n\vec{k}}-E_\mathrm{F})
+\end{aligned}
+\label{eliashberg_spectral_function_method}
+\end{equation}
+
+here, the band sums use the same per-spin convention as $N(E_\mathrm{F})$.
+The first two delta functions select electronic states at the Fermi energy,
+while the last selects the phonon energy.
+The weights follow the Brillouin-zone normalization in equation~\eqref{brillouin_zone_quadrature}.
+With the energy delta function written in this form, $\alpha^2F(\omega)$ is dimensionless.
+In numerical calculations, the delta functions are replaced by a specified integration or broadening procedure.
+A spin-polarized reference requires a consistent spin-resolved treatment.
+
+We then obtain the coupling strength and logarithmic average frequency from the same spectral function:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \lambda
+    &=2\int_0^\infty\dif{\omega}\,
+    \frac{\alpha^2F(\omega)}{\omega} \\
+    \omega_\mathrm{log}
+    &=\omega_\mathrm{ref}
+    \exp\left[
+    \frac{2}{\lambda}
+    \int_0^\infty\dif{\omega}\,
+    \frac{\alpha^2F(\omega)}{\omega}
+    \ln\left(\frac{\omega}{\omega_\mathrm{ref}}\right)
+    \right]
+\end{aligned}\right.
+\label{electron_phonon_spectral_moments}
+\end{equation}
+
+here, $\lambda$ is the dimensionless electron-phonon coupling strength,
+rather than the one-particle eigenvalue $\lambda_i$ used earlier.
+The positive reference frequency $\omega_\mathrm{ref}$ makes the logarithm dimensionless.
+It cancels from $\omega_\mathrm{log}$ when the first relation is used.
+These expressions assume a well-defined spectrum of stable phonon modes and $\lambda>0$.
+
+For the commonly used simplified Allen--Dynes expression,
+the transition temperature is estimated as~\cite{allen-dynes}:
+
+\begin{equation}
+    T_\mathrm{c}^{\mathrm{AD}}
+    =
+    \frac{\hbar\omega_\mathrm{log}}{1.20\kB}
+    \exp\left[
+    -\frac{1.04(1+\lambda)}
+    {\lambda-\mu^*(1+0.62\lambda)}
+    \right]
+\label{allen_dynes_temperature_estimate}
+\end{equation}
+
+here, $\mu^*$ denotes the dimensionless screened Coulomb pseudopotential.
+The factor $\hbar\omega_\mathrm{log}/\kB$ converts the phonon frequency scale into a temperature.
+This simplified expression omits the additional strong-coupling and spectral-shape correction factors of the full Allen--Dynes formula.
+Its applicability must be checked for the system considered;
+in particular, it should not be extrapolated through a zero or negative denominator in the exponent.
+
+The anisotropic Migdal--Eliashberg treatment retains the band, momentum, and frequency dependence of the coupling instead of reducing it to these spectral averages~\cite{margine2013anisotropic}.
+It determines the superconducting gap $\Delta_{n\vec{k}}(\mathrm{i}\omega_j,T)$ together with the electronic renormalization function.
+Here, $\omega_j=(2j+1)\pi\kB T/\hbar$ denotes a fermionic Matsubara frequency, with integer $j$.
+The averaged function $\alpha^2F(\omega)$ alone does not retain the information required for this anisotropic calculation.
+The transition is determined from the disappearance of the non-zero gap solution upon increasing temperature.
+The corresponding $T_\mathrm{c}$ is therefore a separate result from equation~\eqref{allen_dynes_temperature_estimate}.
+
+Chapter~\ref{cha:project_boron} compares bulk, monolayer, and hydrogen-terminated bilayer o-\ce{B14}.
+Section~\ref{2_superconducting} reports the coupling strengths and transition temperatures.
+The electronic reference state, fine meshes, spectral integration, Coulomb pseudopotential, and form of the transition-temperature estimate must be identified with those results.
+
+\subsection{Spin-orbit coupling and band topology}
+\label{subsec:method_topology}
+
+We finally return to the one-particle description in equation~\eqref{KS_equation_diagonal_dirac}.
+In the collinear treatment above, the two spin channels are treated separately.
+With spin-orbit coupling, these components can mix.
+We therefore write the electronic state as a spinor:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \ket{\psi_{n\vec{k}}}
+    &=
+    \ket{\psi_{n\vec{k},\uparrow}}\otimes\ket{\uparrow}
+    +
+    \ket{\psi_{n\vec{k},\downarrow}}\otimes\ket{\downarrow} \\
+    \hat{h}_\mathrm{KS}^\mathrm{SOC}\ket{\psi_{n\vec{k}}}
+    &=E_{n\vec{k}}\ket{\psi_{n\vec{k}}}
+\end{aligned}\right.
+\label{KS_spinor_equation_method}
+\end{equation}
+
+here, $\ket{\psi_{n\vec{k},\uparrow}}$ and $\ket{\psi_{n\vec{k},\downarrow}}$ denote the spatial components,
+while $\ket{\uparrow}$ and $\ket{\downarrow}$ form an orthonormal spin basis.
+The operator $\hat{h}_\mathrm{KS}^\mathrm{SOC}$ includes spin-orbit coupling.
+The eigenvalues $E_{n\vec{k}}$ retain the band-energy notation introduced in subsection~\ref{subsec:method_kpoints}.
+This spinor description provides the states used in the parity analysis.
+
+For a two-dimensional system with time-reversal and inversion symmetry,
+consider a subspace formed by the lowest $2N_\mathrm{p}$ spinor bands.
+Here, $N_\mathrm{p}$ denotes the number of Kramers pairs.
+For this subspace to remain separated from the remaining bands,
+we require:
+
+\begin{equation}
+    E_{2N_\mathrm{p}+1,\vec{k}}-E_{2N_\mathrm{p},\vec{k}}>0,
+    \qquad \vec{k}\in\mathrm{BZ}
+\label{isolated_band_subspace_method}
+\end{equation}
+
+This is a direct-gap condition throughout the Brillouin zone.
+It cannot be established only from the time-reversal invariant momenta or from the plotted high-symmetry path.
+It also does not exclude an indirect overlap between energies at different k points.
+Therefore, an isolated band subspace can exist without an insulating state at the Fermi level.
+
+At each of the four time-reversal invariant momenta $\Lambda_i$,
+the two states in a Kramers pair have the same parity.
+The Fu--Kane criterion therefore takes one parity eigenvalue from each pair~\cite{fu2007topological}:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \delta_i&=\prod_{m=1}^{N_\mathrm{p}}\xi_{2m}(\Lambda_i) \\
+    (-1)^\nu&=\prod_{i=1}^{4}\delta_i
+\end{aligned}\right.
+\label{Fu_Kane_parity_criterion_method}
+\end{equation}
+
+here, $\Lambda_i=-\Lambda_i+\vec{G}_i$ for a reciprocal-lattice vector $\vec{G}_i$,
+and $\xi_{2m}(\Lambda_i)=\pm1$ denotes the parity eigenvalue of one state in the $m$th Kramers pair.
+The values $\nu=0$ and $\nu=1$ describe trivial and non-trivial $Z_2$ topology of the specified subspace, respectively.
+
+For an insulator whose occupied bands form this subspace,
+$2N_\mathrm{p}=N_\mathrm{occ}$.
+Equation~\eqref{Fu_Kane_parity_criterion_method} then has the same counting as equations~\eqref{eq:proj3_parity_product} and~\eqref{eq:proj3_z2_index} in chapter~\ref{cha:project_beryllene}.
+For the metallic beryllene systems, the chosen subspace and the separation in equation~\eqref{isolated_band_subspace_method} must be checked before interpreting the parity product.
+A non-trivial product alone does not establish a topological insulator.
+
+At this stage, we have connected the electronic ground-state framework to structural, vibrational, magnetic, superconducting, and topological calculations.
+We now turn to chapter~\ref{cha:fundamentals_b},
+where the same electronic states enter the response to an external electromagnetic field.
+The transition matrix elements and energy-conservation condition in equations~\eqref{independent_particle_imaginary_dielectric_tensor} and~\eqref{dirac_energy_conservation_condition}
+connect these states to the optical spectra examined in the research chapters.
 
 % draft
 
