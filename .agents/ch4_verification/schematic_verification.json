@@ -12,7 +12,15 @@
       [
         0.0,
         0.0
+      ],
+      [
+        0.8500000000000001,
+        0.8500000000000001
       ]
+    ],
+    "internal_contacts": [
+      -1.5707963267948968,
+      1.5707963267948966
     ],
     "trim": {
       "triangular": {
@@ -66,8 +74,8 @@
     ],
     "inline_dpi": 160,
     "pdf_sha256": {
-      "4.1_band_subspace.pdf": "6a9ecf36fac4142acb9d29805ce284df1f704792e8a189eef1b803a637f1c38c",
-      "4.2_trim.pdf": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040"
+      "4.1_band_subspace.pdf": "2c92108e545294f530da33d6cc6979d83edffe6f7615286aa6c031b937426a07",
+      "4.2_trim.pdf": "a1be40321964bb2380a43044144ac6e0fc28968bd147c6c0bb40d3b4208687c8"
     }
   },
   "figures_folder": {
@@ -83,7 +91,15 @@
       [
         0.0,
         0.0
+      ],
+      [
+        0.8500000000000001,
+        0.8500000000000001
       ]
+    ],
+    "internal_contacts": [
+      -1.5707963267948968,
+      1.5707963267948966
     ],
     "trim": {
       "triangular": {
@@ -137,9 +153,14 @@
     ],
     "inline_dpi": 160,
     "pdf_sha256": {
-      "4.1_band_subspace.pdf": "6a9ecf36fac4142acb9d29805ce284df1f704792e8a189eef1b803a637f1c38c",
-      "4.2_trim.pdf": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040"
+      "4.1_band_subspace.pdf": "2c92108e545294f530da33d6cc6979d83edffe6f7615286aa6c031b937426a07",
+      "4.2_trim.pdf": "a1be40321964bb2380a43044144ac6e0fc28968bd147c6c0bb40d3b4208687c8"
     }
   },
-  "pdfs_identical_between_working_directories": true
+  "pdfs_identical_between_working_directories": true,
+  "unchanged_trim_retained": {
+    "path": "figures_ch4/4.2_trim.pdf",
+    "sha256": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040",
+    "note": "The fresh-kernel checks regenerated both figures. The unchanged TRIM PDF and its notebook cell were then restored to their existing version; the band-subspace PDF retains the verified export."
+  }
 }
