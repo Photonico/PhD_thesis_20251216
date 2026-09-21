@@ -1,0 +1,50 @@
+{
+  "fundamentals_a.tex": {
+    "original_labels": 291,
+    "current_labels": 299,
+    "missing": []
+  },
+  "fundamentals_b.tex": {
+    "original_labels": 63,
+    "current_labels": 65,
+    "missing": [],
+    "equation": {
+      "before": 52,
+      "after": 54
+    },
+    "figure": {
+      "before": 6,
+      "after": 6
+    },
+    "same_section_headers": true
+  },
+  "active_files": [
+    "thesis.tex",
+    "src/statement.tex",
+    "src/abstract.tex",
+    "src/publications.tex",
+    "src/acknowledgements.tex",
+    "src/ai.tex",
+    "src/font_matter.tex",
+    "src/introduction.tex",
+    "src/fundamentals_a.tex",
+    "src/fundamentals_b.tex",
+    "src/project_1_main.tex",
+    "src/project_1_SI.tex",
+    "src/project_2_main.tex",
+    "src/project_2_SI.tex",
+    "src/project_3_main.tex",
+    "src/project_3_SI.tex",
+    "src/conclusion.tex",
+    "src/appendix.tex"
+  ],
+  "duplicate_labels": {},
+  "undefined_static_refs": [],
+  "chapter4_deferred": true,
+  "navigation_unchanged": {
+    "thesis.tex": true,
+    "src/introduction.tex": true,
+    "src/publications.tex": true,
+    "src/appendix.tex": true
+  }
+}

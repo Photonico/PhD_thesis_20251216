@@ -22,9 +22,8 @@ Hydrogen functionalization substantially modifies the structural and electronic 
 It yields stable hydrogen-functionalized configurations and drives $\alpha$-beryllene into a wide-gap semiconducting state,
 while preserving metallic behaviour in hydrogen-functionalized $\beta$-based structures.
 The calculated dielectric response reveals strong anisotropy and low-dimensional optical effects,
-including visible-to-ultraviolet absorption,
-modified plasmonic behaviour,
-and direction-dependent dielectric response associated with collective electronic excitations.
+including a direction-dependent redistribution of visible-to-ultraviolet optical response
+and distinct dielectric and energy-loss features under the stated effective-thickness convention.
 Furthermore,
 parity analysis of the spin-orbit-coupled electronic states demonstrates that,
 beyond the previously reported $\alpha$-beryllene,
@@ -144,7 +143,7 @@ optical,
 and topological properties of pristine and hydrogen-functionalized beryllene systems.
 The results identify stable hydrogen-functionalized structures and a cubic trilayer geometry with non-trivial $Z_{2}$ topology.
 The optical properties demonstrate direction-dependent and dimensionality-dependent response,
-together with plasmon-related features and visible-to-ultraviolet absorption.
+together with anisotropic dielectric and energy-loss spectra and a redistribution of visible-to-ultraviolet optical response.
 
 \section{Computation methods}
 \label{3_methods}
@@ -206,14 +205,15 @@ the Kramers--Kronig relation,
 and the derived optical quantities are introduced in chapter~\ref{cha:fundamentals_b},
 especially sections~\ref{sec:from_electronic_response_to_dielectric_function} and~\ref{sec:from_dielectric_function_to_optical_properties}.
 Therefore, we do not repeat these formula definitions here.
-For the pristine $\alpha$- and $\beta$-beryllene spectra discussed in section~\ref{3_optical_alpha_beta},
+For all eight selected optical datasets,
 we use the independent-particle approximation in VASP 6.5.0 with \texttt{LOPTICS=T}.
 These calculations are spin-unpolarized and do not include spin-orbit coupling
 (\texttt{ISPIN=1} and \texttt{LSORBIT=F}).
 We use Gaussian occupation smearing of \qty{0.01}{\electronvolt}
 (\texttt{ISMEAR=0} and \texttt{SIGMA=0.01})
 and a complex frequency shift of \qty{0.1}{\electronvolt} (\texttt{CSHIFT=0.1}).
-The output contains 133 bands in total, while the input requests \texttt{NBANDS=128}.
+The pristine two-dimensional outputs contain 133 bands in total, while their inputs request \texttt{NBANDS=128};
+the actual total band counts for all systems are given in section~\ref{3_supplementary}.
 The spectra include interband transitions without microscopic local-field effects or a Drude contribution
 (\texttt{WPLASMAI=0}); no Drude term is added in the postprocessing.
 They therefore do not describe the complete low-frequency response of these metallic systems.
@@ -221,6 +221,12 @@ For the two-dimensional systems,
 the calculated dielectric tensor contains the combined dielectric response of the material and the vacuum region.
 We therefore renormalize the calculated dielectric functions to obtain the effective dielectric response under the chosen thickness convention,
 using the two-dimensional dielectric-function renormalization method~\cite{yang2021method}.
+We assign $d_{\mathrm{2D}}$ as the separation of the outermost atomic centres along the surface normal,
+plus the radii of the atoms at those two surfaces: \qty{1.98}{\angstrom} for Be and \qty{0.70}{\angstrom} for H.
+The relaxed coordinates are converted to Cartesian lengths with periodic wrapping removed.
+The same optical volume normalization is applied to the $xx$, $yy$ and $zz$ components.
+The absolute effective response depends on this thickness convention.
+The full normal supercell height for the two-dimensional optical calculations is \qty{40}{\angstrom}.
 The thickness values used for this correction are given in section~\ref{3_supplementary}.
 
 \section{Results and discussion}
@@ -696,16 +702,12 @@ The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components,
 \end{figure}
 
 The absorption coefficient and refractive index are shown in figure~\ref{fig:proj3_alpha_beta_abs_refractive}.
-The absorption spectra show differences between the two optical directions and between the two structures.
-In the in-plane channel,
-$\beta$-beryllene has a stronger absorption response than $\alpha$-beryllene over a broad photon-energy range,
-including a noticeable peak in the visible-light region.
-In contrast,
-$\alpha$-beryllene develops its main absorption only beyond the low-energy range and then forms a broader spectral feature.
-In the out-of-plane channel,
-both structures develop stronger peak structures only beyond the visible range,
-while $\beta$-beryllene still shows the stronger overall absorption.
-These trends show that the optical attenuation depends on both the optical direction and the crystal structure.
+The effective absorption is strongly anisotropic.
+Within the \qtyrange{0}{12}{\electronvolt} window, the largest sampled coefficients for $\alpha$-beryllene are approximately
+\qty{0.135}{\per\nano\metre} in $xx$ and \qty{0.175}{\per\nano\metre} in $zz$;
+the corresponding $\beta$-beryllene values are approximately \qty{0.159}{\per\nano\metre} and \qty{0.241}{\per\nano\metre}.
+The strongest $\beta$ out-of-plane feature occurs near \qty{5.96}{\electronvolt}.
+The spectra cross at some energies, so the larger maxima do not imply that $\beta$-beryllene absorbs more strongly at every energy.
 
 The refractive index spectra follow the same structural and directional contrast.
 In the in-plane channel,
@@ -728,7 +730,7 @@ This behaviour follows from both parts of the complex dielectric function and do
     \par\nointerlineskip
     \adjustbox{valign=c}{\includegraphics[width=0.80\linewidth]{figures_proj3/fig3.14b_refractive.pdf}}%
 \caption{Absorption coefficient and refractive index of $\alpha$-beryllene and $\beta$-beryllene.
-Upper: absorption coefficient; Lower: refractive index.
+Upper: absorption coefficient ($\mathrm{nm}^{-1}$); Lower: refractive index.
 The spectra are shown for the in-plane and out-of-plane directions as functions of photon energy.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.
 The absorption coefficient is given in $\mathrm{nm}^{-1}$.}
@@ -742,7 +744,7 @@ separated by a pronounced trough.
 By contrast,
 $\alpha$-beryllene again varies more smoothly.
 In the out-of-plane channel,
-$\beta$-beryllene develops its strongest extinction in the ultraviolet region.
+$\beta$-beryllene develops its strongest extinction peak near \qty{5.96}{\electronvolt}, where $k\approx4.00$, followed by weaker higher-energy features.
 This behaviour shows that amplitude attenuation also depends on both optical direction and crystal structure.
 
 \begin{figure}[!htbp]
@@ -763,13 +765,13 @@ For out-of-plane polarization,
 $\beta$-beryllene remains stronger over the low-energy range,
 whereas $\alpha$-beryllene shows pronounced peaks in the ultraviolet region.
 
-The energy-loss spectrum of $\beta$-beryllene shows a visible-range peak and a stronger response in the deep-ultraviolet region in the in-plane channel.
-By contrast,
-$\alpha$-beryllene remains weak at low photon energy and rises toward the upper end of the plotted range.
-In the out-of-plane channel,
-both structures remain weak in the visible range and develop stronger loss features at higher energies.
-The deep-ultraviolet peak of $\alpha$-beryllene is stronger than that of $\beta$-beryllene.
-These spectra describe the longitudinal loss response associated with the inverse dielectric function.
+The in-plane energy-loss spectrum of $\beta$-beryllene has a visible-range local maximum of approximately 0.45
+and a larger high-energy local maximum of approximately 1.33 near \qty{11.77}{\electronvolt}.
+It reaches approximately 1.51 at the last available sample near \qty{11.99}{\electronvolt} while still rising;
+this boundary value is not a resolved peak.
+For out-of-plane response, $\alpha$-beryllene has a dominant loss maximum of approximately 8.88 near \qty{10.64}{\electronvolt},
+substantially above the $\beta$ maximum of approximately 1.00 near \qty{9.97}{\electronvolt}.
+These spectra describe the inverse dielectric response under the stated effective-thickness convention.
 
 \subsubsection{Bulk hcp, bulk bcc, and cubic trilayer beryllene}
 \label{3_optical_bulk_cubic}
@@ -786,20 +788,15 @@ and then rises smoothly toward zero around \qty{12}{\electronvolt}.
 The imaginary part displays a broad low-energy feature up to approximately \qty{5.5}{\electronvolt},
 indicating a wide range of allowed interband transitions.
 It then decreases sharply around \qty{6}{\electronvolt},
-coinciding with the minimum in the real part and indicating a plasmonic optical response.
+coinciding with a minimum in the real part and a change in the inverse dielectric response.
 
 For cubic trilayer beryllene,
-the most prominent feature is its enhanced visible-region optical response compared with bulk bcc beryllium.
-A pronounced feature appears around \qtyrange{2.0}{2.5}{\electronvolt},
-together with a redistribution of spectral weight toward lower excitation energies.
-This indicates increased electronic polarizability in the trilayer.
-In the out-of-plane direction,
-this low-energy peak becomes even more pronounced.
-The rapid decrease of the real part to negative values above approximately \qty{3.8}{\electronvolt} indicates the onset of metallic-like screening and plasmonic behaviour,
-with a negative region extending over a broader energy range than in bulk beryllium.
-The deeper minimum around \qtyrange{5.5}{6.0}{\electronvolt} and the stronger imaginary dielectric peak further suggest an increased density of optically active electronic states arising from quantum confinement and surface-derived bands.
-The large peak of the imaginary part near \qtyrange{3.7}{4.0}{\electronvolt} indicates strong interband transitions in the trilayer,
-whereas in the out-of-plane direction the corresponding large peak appears at a lower energy near \qty{2.5}{\electronvolt}.
+the dielectric response is redistributed and becomes direction dependent relative to bulk bcc beryllium.
+The largest imaginary dielectric features occur near \qty{3.74}{\electronvolt} in $xx$ and $yy$, with a value of approximately 19.75,
+and near \qty{2.71}{\electronvolt} in $zz$, with a value of approximately 27.32.
+The real part also develops direction-dependent sign changes.
+These dielectric features do not coincide in general with absorption maxima, which also depend on the photon energy and the nonlinear relation between the dielectric function and the extinction coefficient.
+Assignments to specific surface bands or transitions would require band- and matrix-element-resolved evidence.
 
 \begin{figure}[!htbp]
 \centering
@@ -816,22 +813,19 @@ and $zz$ components as functions of photon energy.}
 \end{figure}
 
 The absorption coefficient and energy-loss spectra are shown in figure~\ref{fig:proj3_bulk_cubic_abs_loss}.
-The absorption spectra show that reducing cubic beryllium to cubic trilayer beryllene enhances the optical response.
-Compared with the bulk phase,
-the trilayer exhibits an earlier absorption onset and larger absorption coefficients throughout the visible and near-ultraviolet regions,
-with a broad maximum near \qtyrange{5.5}{6.0}{\electronvolt}.
-The enhanced intensity and slight redshift of the main absorption features indicate stronger optical transitions caused by the modified electronic structure of the low-dimensional system.
-The trilayer also displays several pronounced absorption maxima between \qtyrange{5}{9}{\electronvolt},
-reflecting a richer distribution of interband transitions than in the bulk material.
-These results suggest that quantum confinement and surface-induced electronic states increase the optical activity of cubic trilayer beryllene over a broad spectral range.
+With the corrected thickness normalization, cubic trilayer beryllene does not show a universal absorption enhancement relative to bulk bcc beryllium.
+In the explicitly defined visible interval of \qtyrange{1.65}{3.26}{\electronvolt},
+the trilayer $xx$ and $yy$ absorption is lower than bulk bcc at every available trilayer sample;
+the bulk spectrum is linearly interpolated to the trilayer grid for this comparison.
+The respective visible maxima are approximately \qty{0.0604}{\per\nano\metre} and \qty{0.0746}{\per\nano\metre}.
+The trilayer $zz$ response exceeds the bulk value over only part of this interval.
+Its strongest sampled absorption occurs near \qty{5.40}{\electronvolt} in $xx$ and $yy$,
+and near \qty{5.25}{\electronvolt} in $zz$, with coefficients of approximately \qty{0.148}{\per\nano\metre} and \qty{0.166}{\per\nano\metre}, respectively.
+These results show a redistribution of the effective interband response rather than enhanced absorption throughout the visible and near-ultraviolet regions.
 
-The energy-loss spectra show that,
-unlike $\beta$-beryllene with its visible-range loss peak near \qty{2.4}{\electronvolt},
-the other structures remain almost featureless below approximately \qty{6}{\electronvolt}.
-At higher energies,
-broad loss features begin to develop,
-especially around and above \qty{6}{\electronvolt}.
-These features are consistent with the onset of interband transitions and collective electronic response.
+The loss spectra also differ between directions and structures.
+The low-energy $\beta$ in-plane feature and the high-energy $\alpha$ out-of-plane maximum are retained in the comparison.
+The scalar loss features identify variations in the inverse dielectric response; they do not alone establish propagating plasmon modes.
 
 \begin{figure}[!htbp]
 \centering
@@ -843,7 +837,7 @@ bulk bcc beryllium,
 $\alpha$-beryllene,
 $\beta$-beryllene,
 and cubic trilayer beryllene.
-Upper: absorption coefficient; Lower: energy-loss spectrum.
+Upper: absorption coefficient ($\mathrm{nm}^{-1}$); Lower: energy-loss spectrum.
 The spectra are shown for the $xx$,
 $yy$,
 and $zz$ components as functions of photon energy.}
@@ -857,60 +851,23 @@ We now examine the effect of hydrogen adsorption on the optical properties of $\
 The real and imaginary parts of the dielectric function for the pristine and hydrogen-functionalized structures are shown in figure~\ref{fig:proj3_hydrogenated_dielectric}.
 
 For $\alpha$-beryllene,
-the pristine structure exhibits a relatively low and slowly varying real part in the low-energy region below approximately \qty{4}{\electronvolt},
-followed by a modest peak near \qtyrange{5}{6}{\electronvolt}.
-In contrast,
-2H-$\alpha$-beryllene shows a strongly enhanced dielectric response,
-with values reaching approximately 60--70 near \qty{5}{\electronvolt}.
-This increase indicates a strong enhancement of electronic polarizability after hydrogen adsorption.
-The hydrogen-functionalized structure also shows a sharp transition from large positive values to negative values around \qtyrange{5.5}{6.0}{\electronvolt},
-indicating plasma-like behaviour and a shifted zero crossing relative to pristine $\alpha$-beryllene.
-This shift suggests that hydrogen functionalization modifies the electronic structure by introducing new hybridized states and changing the band dispersion,
-thereby strengthening collective electronic oscillations.
-
-For the imaginary part,
-the difference is also pronounced.
-Pristine $\alpha$-beryllene shows relatively weak absorption with a modest peak centred around \qty{6}{\electronvolt}.
-By contrast,
-2H-$\alpha$-beryllene displays an intense and broadened absorption peak near \qtyrange{5.0}{5.5}{\electronvolt},
-together with additional features at higher photon energies.
-This enhancement and slight redshift of the dominant peak indicate that hydrogen adsorption introduces or strengthens optically allowed transitions,
-likely through hybridization between hydrogen states and the host electronic states.
-The broadening also suggests an increased density of accessible electronic transitions over a wider energy range.
-Consequently,
-2H-$\alpha$-beryllene is expected to exhibit substantially stronger optical absorption in the visible to near-ultraviolet region than pristine $\alpha$-beryllene.
+hydrogen adsorption changes the magnitude and spectral distribution of the effective dielectric response.
+In $xx$ and $yy$, 2H-$\alpha$-beryllene has a real dielectric maximum of approximately 31.2 near \qty{4.91}{\electronvolt},
+and its strongest imaginary dielectric feature is approximately 31.2 near \qty{5.59}{\electronvolt}.
+The out-of-plane spectrum is different: its largest imaginary dielectric feature occurs near \qty{9.77}{\electronvolt}.
+These comparisons retain the specified H/H surface-radius convention for the hydrogenated layer.
+Changes in peak height therefore describe an effective response under that convention, not a thickness-independent measure of oscillator strength.
 
 For $\beta$-beryllene,
-the pristine phase shows a moderate low-energy dielectric response,
-followed by a rapid decrease into negative values around \qtyrange{1}{2}{\electronvolt},
-and then a recovery with a broad positive feature near \qtyrange{4}{5}{\electronvolt}.
-Upon single-sided hydrogen adsorption,
-the magnitude of the real part is slightly enhanced in the low-energy range,
-and the spectral features become shifted and smoothed.
-The zero crossing shifts to higher energies,
-around \qtyrange{3}{4}{\electronvolt},
-and the oscillatory behaviour becomes less abrupt.
-This behaviour indicates a redistribution of electronic states and a reduction of sharp interband features.
-For double-sided hydrogen adsorption,
-these effects become stronger.
-The real part increases over a wider energy range and shows a more gradual dispersion,
-with a delayed and deeper transition into negative values near \qtyrange{6}{6.5}{\electronvolt}.
-This progression suggests that increasing hydrogen coverage enhances electronic screening and modifies the effective plasma frequency,
-consistent with stronger perturbation of the band structure and increased carrier polarization.
-
-For the imaginary part of $\beta$-beryllene,
-the pristine phase shows a sharp and intense low-energy absorption peak near \qtyrange{1}{1.5}{\electronvolt},
-followed by a weaker and broader feature near \qty{5}{\electronvolt}.
-For 1H-$\beta$-beryllene,
-the low-energy peak is reduced in intensity and broadened,
-while a more prominent absorption feature emerges around \qtyrange{3.5}{4.0}{\electronvolt}.
-This indicates a shift of the dominant interband transitions toward higher energies.
-For 2H-$\beta$-beryllene,
-the spectral weight is redistributed even more strongly:
-the low-energy peak nearly vanishes,
-and a strong broad absorption peak appears around \qtyrange{6}{6.5}{\electronvolt}.
-This substantial blue shift and enhancement suggest that hydrogen adsorption suppresses low-energy transitions and promotes higher-energy electronic excitations,
-likely through band-structure modification and the formation of new hybridized states involving hydrogen.
+single- and double-sided hydrogen adsorption redistribute the dielectric response and change its directional dependence.
+Double-sided adsorption produces distinct spectra in all three Cartesian components.
+The strongest imaginary dielectric features occur near \qty{6.59}{\electronvolt} in $xx$,
+\qty{9.26}{\electronvolt} in $yy$ and \qty{8.24}{\electronvolt} in $zz$,
+with values of approximately 14.96, 7.68 and 14.97, respectively.
+The first real-part sign changes occur near \qty{6.64}{\electronvolt}, \qty{9.32}{\electronvolt} and \qty{8.10}{\electronvolt}, respectively.
+Thus, increasing hydrogen coverage changes the spectral distribution and in-plane anisotropy;
+it does not produce a common peak energy, a common zero crossing, or a monotonic enhancement in every component.
+The imaginary dielectric peaks should also be distinguished from maxima of the derived absorption coefficient.
 
 \begin{figure}[!htbp]
 \centering
@@ -923,13 +880,16 @@ and $zz$ components as functions of photon energy.}
 \end{figure}
 
 The corresponding absorption coefficient and energy-loss spectra are shown in figure~\ref{fig:proj3_hydrogenated_abs_loss}.
-For $\alpha$-beryllene,
-hydrogen adsorption strongly enhances the absorption response in the visible to near-ultraviolet range.
-For $\beta$-beryllene,
-hydrogen adsorption shifts spectral weight from the low-energy region toward higher photon energies.
-The progression from pristine $\beta$-beryllene to 1H-$\beta$-beryllene and then to 2H-$\beta$-beryllene therefore shows a systematic redistribution of optical spectral weight with increasing hydrogen coverage.
-The corresponding energy-loss spectra follow the same trend,
-indicating that hydrogen functionalization modifies both interband transitions and collective electronic excitations.
+For $\alpha$-beryllene, hydrogen adsorption produces a strongly direction-dependent redistribution of absorption.
+The $xx$ and $yy$ coefficients increase over the sampled visible interval,
+but the 2H-$\alpha$ visible maximum is only approximately \qty{0.00137}{\per\nano\metre}, much smaller than its ultraviolet maximum near \qty{5.71}{\electronvolt}.
+The $zz$ coefficient instead decreases throughout the sampled \qtyrange{1.65}{4.13}{\electronvolt} interval,
+and its strongest peak occurs near \qty{9.83}{\electronvolt}.
+For 2H-$\beta$-beryllene, the strongest sampled absorption peaks occur near \qty{6.75}{\electronvolt} in $xx$,
+\qty{9.39}{\electronvolt} in $yy$ and \qty{8.36}{\electronvolt} in $zz$.
+The loss spectra likewise change with hydrogen coverage and direction.
+These results establish changes in the calculated interband and inverse dielectric response;
+weak low-energy tails under finite numerical broadening are not evidence of a sharply defined absorption onset or strong visible absorption.
 
 \begin{figure}[!htbp]
 \centering
@@ -937,17 +897,16 @@ indicating that hydrogen functionalization modifies both interband transitions a
     \par\nointerlineskip
     \adjustbox{valign=c}{\includegraphics[width=1\linewidth]{figures_proj3/fig3.19b_energy-loss_H.pdf}}%
 \caption{Absorption coefficient and energy-loss spectrum for pristine and hydrogen-functionalized $\alpha$- and $\beta$-beryllene structures.
-Upper: absorption coefficient; Lower: energy-loss spectrum.
+Upper: absorption coefficient ($\mathrm{nm}^{-1}$); Lower: energy-loss spectrum.
 The spectra are shown for the $xx$,
 $yy$,
 and $zz$ components as functions of photon energy.}
 \label{fig:proj3_hydrogenated_abs_loss}
 \end{figure}
 
-These results show that both dimensionality and hydrogen functionalization strongly modify the optical response of beryllene.
-The pristine $\alpha$ and $\beta$ structures already display pronounced anisotropy and distinct longitudinal loss features.
-The cubic trilayer shifts optical spectral weight toward lower energies and enhances visible-to-near-ultraviolet absorption.
-Hydrogen adsorption further redistributes the dielectric response and changes the characteristic excitation energies through modified electronic hybridization and screening.
+These results show that both dimensionality and hydrogen functionalization redistribute the effective interband optical response of beryllene.
+The pristine phases exhibit pronounced anisotropy, while the cubic trilayer and hydrogenated phases enhance some components and reduce others.
+The comparisons depend on the stated thickness convention and do not include a Drude intraband contribution.
 
 \section{Conclusions}
 \label{3_conclusions}
@@ -966,13 +925,11 @@ The 2H-$\alpha$-beryllene phase transforms from a metallic system into a wide-ga
 whereas the hydrogen-functionalized $\beta$-based structures retain metallic behaviour.
 The calculated adsorption energies indicate that the hydrogen-functionalized structures are stable with respect to molecular hydrogen.
 
-The calculated optical properties demonstrate that dimensional reduction and hydrogen functionalization strongly modify the dielectric response of beryllium.
-Compared with the bulk phases,
-cubic trilayer beryllene exhibits enhanced optical activity,
-increased spectral weight at lower excitation energies,
-and stronger absorption features caused by the modified electronic structure of the low-dimensional system.
-The $\alpha$ and $\beta$ phases show pronounced optical anisotropy and distinct longitudinal loss features.
-Hydrogen functionalization further redistributes optical spectral weight and shifts the characteristic excitation energies through changes in electronic hybridization and screening.
+The calculated optical properties show a direction-dependent redistribution of the effective interband response after dimensional reduction and hydrogen functionalization.
+Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy and distinct loss features.
+Cubic trilayer absorption does not exceed bulk bcc throughout the visible range or in all directions,
+and hydrogen adsorption enhances some components while reducing others.
+These comparisons use the stated effective-thickness convention and exclude a Drude intraband contribution.
 
 Topological analysis based on parity eigenvalues confirms the previously reported non-trivial topology of $\alpha$-beryllene.
 It also shows that the cubic trilayer phase has a non-trivial $Z_{2}$ invariant.
