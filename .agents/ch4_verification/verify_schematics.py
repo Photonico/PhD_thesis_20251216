@@ -22,7 +22,12 @@ for lower, upper in models:
     assert np.all(upper >= lower)
     assert np.allclose([lower[0], upper[0]], [lower[-1], upper[-1]])
     gaps.append((direct_min, indirect))
-assert np.allclose(gaps, [(1.20, .76), (.70, -.90), (0., 0.)], atol=1e-12)
+assert np.allclose(gaps, [(1.20, .76), (.70, -.90), (0., 0.), (.85, .85)], atol=1e-12)
+assert np.all(internal_pair <= models[3][0])
+contacts = np.flatnonzero(np.isclose(internal_pair, models[3][0], atol=1e-12))
+assert np.allclose(k[contacts], [-np.pi / 2, np.pi / 2])
+assert np.allclose(internal_pair[contacts], -.65)
+assert np.min(models[3][1] - models[3][0]) > 0
 
 def trim_class(basis, point):
     fractional = np.linalg.solve(basis, point)
@@ -52,7 +57,8 @@ allowed_colors = {"#5082FF", "#50AFAF", "#FAA03C", "#B95FF5", "#F0508C"}
 assert set(colors) <= allowed_colors
 assert params["figure.dpi"] <= 200
 print("SCHEMATIC_AUDIT=" + json.dumps({
-    "gaps": gaps, "trim": trim_results, "palette": colors,
+    "gaps": gaps, "internal_contacts": k[contacts].tolist(),
+    "trim": trim_results, "palette": colors,
     "inline_dpi": params["figure.dpi"]
 }))
 '''
@@ -97,7 +103,7 @@ def main():
     nbformat.validate(final_notebook)
     nbformat.write(final_notebook, NOTEBOOK)
     (AUDIT / "schematic_verification.json").write_text(json.dumps(reports, indent=2) + "\n")
-    for panel, gap in zip("abc", reports["repository_root"]["gaps"]):
+    for panel, gap in zip("abcd", reports["repository_root"]["gaps"]):
         print(f"({panel}) minimum direct gap = {gap[0]:.6f}; global gap = {gap[1]:.6f}")
     print("Both PDF files are byte-identical between the two fresh executions.")
 
