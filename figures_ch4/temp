@@ -1,0 +1,64 @@
+## bands and labels
+k = np.linspace(-np.pi, np.pi, 1201)
+c = np.cos(k)
+models = [(-0.60 + 0.22*c, 0.60 + 0.22*c),
+          (-0.35 + 0.80*c, 0.35 + 0.80*c),
+          (-0.85*np.sqrt(2*(1-c)), 0.85*np.sqrt(2*(1-c))),
+          (-0.65 + 0.35*np.abs(c), 0.65 + 0.10*c)]
+titles = ["(a) Global gap", "(b) Energy overlap", "(c) Boundary contact", "(d) Internal crossing"]
+conditions = [r"$\Delta_{\rm dir}^{\rm min}>0,\ \Delta_{\rm ind}>0$",
+              r"$\Delta_{\rm dir}^{\rm min}>0,\ \Delta_{\rm ind}<0$",
+              r"$\Delta_{\rm dir}^{\rm min}=0$", r"$\Delta_{\rm dir}^{\rm min}>0$"]
+box = dict(boxstyle="round", facecolor="white", alpha=0.9)
+
+def gap_arrow(ax, x, low, high, color):
+    ax.annotate("", (x, high), (x, low), zorder=6, arrowprops=dict(
+        arrowstyle="<->", color=color, lw=line_width, shrinkA=0, shrinkB=0))
+
+## layout
+fig = plt.figure(figsize=band_size, dpi=dpi)
+gs = fig.add_gridspec(2, 3, width_ratios=(1, 1, 0.5), left=0.08, right=1,
+                     bottom=0.1, top=1, wspace=0.10, hspace=0.15)
+axes = np.array([[fig.add_subplot(gs[i, j]) for j in range(2)] for i in range(2)])
+for ax in axes.flat[1:]: ax.sharey(axes[0, 0])
+
+for i, (ax, (lower, upper)) in enumerate(zip(axes.flat, models)):
+    ax.set(xlim=(-1.06*np.pi, 1.06*np.pi), ylim=(-1.75, 1.75), yticks=[-1, 0, 1])
+    ax.set_xticks([-np.pi, 0, np.pi], [r"$-\pi$", r"$0$", r"$\pi$"])
+    ax.tick_params(direction="in", top=True, right=True, labelleft=(i % 2 == 0))
+    if i > 1: ax.set_xlabel(r"Wave vector ($k$)", labelpad=4)
+    if i % 2 == 0: ax.set_ylabel("Energy (arbitrary units)", labelpad=7)
+
+    ef = ax.axhline(0, color=grey, ls="--", alpha=0.9, zorder=0)
+    lo, = ax.plot(k, lower, color=blue, zorder=4)
+    hi, = ax.plot(k, upper, color=teal, zorder=4)
+    if i == 3: inner, = ax.plot(k, -0.65-0.35*np.abs(c), color=blue, ls="--", zorder=4)
+    ax.set_title(titles[i], loc="left", x=0.045, y=0.95, pad=0, va="top", fontsize=subtitle,
+                 bbox=dict(box, edgecolor=plt.rcParams["legend.edgecolor"]), zorder=10)
+    ax.text(0.025, 0.04, conditions[i], transform=ax.transAxes, va="bottom",
+            fontsize=params["xtick.labelsize"], bbox=dict(box, edgecolor="none"), zorder=10)
+
+    if i != 2:
+        x = 0.35*np.pi
+        gap_arrow(ax, x, np.interp(x, k, lower), np.interp(x, k, upper), orange)
+    if i < 2:
+        umin, lmax = upper.min(), lower.max()
+        for e in (umin, lmax): ax.axhline(e, color=violet, lw=0.9, ls=":", alpha=0.9, zorder=1)
+        if i == 1: ax.axhspan(umin, lmax, facecolor=violet, alpha=0.1, zorder=-1)
+        gap_arrow(ax, -0.77*np.pi, lmax, umin, violet)
+    if i > 1:
+        ck, ce = ([0], [0]) if i == 2 else ([-np.pi/2, np.pi/2], [-0.65, -0.65])
+        contact = ax.scatter(ck, ce, s=60, fc="white", ec=orange, lw=line_width, zorder=7)
+
+## legend: reuse the artists from panel (d)
+legend_ax = fig.add_subplot(gs[:, 2]); legend_ax.axis("off")
+handles = [lo, inner, hi, ef, Line2D([], [], color=orange), Line2D([], [], color=violet), contact]
+labels = [r"$E_{2N_{\rm p},\vec{k}}$", r"$E_{2N_{\rm p}-2,\vec{k}}$",
+          r"$E_{2N_{\rm p}+1,\vec{k}}$", r"$E_{\rm F}=0$",
+          r"$\Delta_{\rm dir}(k)$", r"$\Delta_{\rm ind}$", "Contact"]
+legend_ax.legend(handles, labels, loc="center", bbox_to_anchor=(0.5, 0.75),
+                 frameon=True, fancybox=True)
+
+fig.savefig(output_directory / "4.1_band_subspace.pdf", metadata={"CreationDate": None})
+plt.show()
+plt.close(fig)
