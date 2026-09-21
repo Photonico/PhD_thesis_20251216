@@ -1,5 +1,16 @@
 # Reproducing the optical figures
 
+## Source-project synchronization on 2026-09-21
+
+The current PDFs were subsequently synchronized from the repaired calculation
+project `../H-Beryllene_20250718/exported_figures/`. That project's notebook-based
+pipeline is the canonical generator for all 34 A/B/C figures, including the bulk,
+cubic, hydrogenated and convergence comparisons. See `../optics_update.md` and
+`../optics_update_manifest.json` from this directory for the synchronization record.
+The self-contained scripts below remain an independent A-group reproduction;
+the earlier audit hashes described below are historical and do not identify the
+new source-library export bytes.
+
 `regenerate_optics.py` produces the six Chapter 3 figures and the six
 corresponding Project 3 figures from the same corrected arrays. It retains
 the original filenames, colors, solid curves, panel layout, visible-spectrum

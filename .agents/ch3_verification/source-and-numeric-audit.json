@@ -1,0 +1,1221 @@
+{
+  "source_commit": "f863ab02ebf93d5804f5552967ea750571778335",
+  "source_repository": "https://github.com/Photonico/H-Beryllene_20250718",
+  "pdf_file_identity": {
+    "ref": "f863ab02ebf93d5804f5552967ea750571778335",
+    "files": [
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch3/3.1_dielectric.pdf",
+        "remote": "figures_for_thesis/3.1_dielectric.pdf",
+        "local_blob": "31110f2b42dc2957d63032ff91d7b75be2f63da0",
+        "remote_blob": "31110f2b42dc2957d63032ff91d7b75be2f63da0",
+        "identical": true,
+        "sha256": "0dc33c32d9c97901d576719196b8713b5844e2c520a72ba53d7f7e17216c42fd"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_proj3/fig3.13_dielectric.pdf",
+        "remote": "figures_for_publication/fig3.13_dielectric.pdf",
+        "local_blob": "bf6dc3d5ec392da6946f23c966782b6a800a26e9",
+        "remote_blob": "bf6dc3d5ec392da6946f23c966782b6a800a26e9",
+        "identical": true,
+        "sha256": "9532f525cf3a8d01920a26cef402e3909af822b691458d89fb63a3c7a8aa7bf9"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch3/4.1_absorption.pdf",
+        "remote": "figures_for_thesis/4.1_absorption.pdf",
+        "local_blob": "925c8cf5ced13d3d3f3be5b92bc93d937f326f38",
+        "remote_blob": "925c8cf5ced13d3d3f3be5b92bc93d937f326f38",
+        "identical": true,
+        "sha256": "3db16a00b030675a1928f448c073253db8e7e4d7732447b4b74c56fe59046223"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_proj3/fig3.14a_absorption.pdf",
+        "remote": "figures_for_publication/fig3.14a_absorption.pdf",
+        "local_blob": "6ca6d4df6fee2258e4efa9ff04aa2b4790cacf21",
+        "remote_blob": "6ca6d4df6fee2258e4efa9ff04aa2b4790cacf21",
+        "identical": true,
+        "sha256": "cd06a76b1cbc1e0285e35c6baa94767477cce47129c35f3b9ed9fff7195abaf5"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch3/4.2_refractive.pdf",
+        "remote": "figures_for_thesis/4.2_refractive.pdf",
+        "local_blob": "fe0b34e894ec271abbbf177fe262aa445aae3c21",
+        "remote_blob": "fe0b34e894ec271abbbf177fe262aa445aae3c21",
+        "identical": true,
+        "sha256": "9f6dd60a851077ce4b54ef01bd72be5dec170b554a546f685e0f9cc62e21a757"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_proj3/fig3.14b_refractive.pdf",
+        "remote": "figures_for_publication/fig3.14b_refractive.pdf",
+        "local_blob": "6ad09ffce32bfda109ede83c45d453288d5f8648",
+        "remote_blob": "6ad09ffce32bfda109ede83c45d453288d5f8648",
+        "identical": true,
+        "sha256": "4009a92b5f9878b9f4c9de82c3dbcc854b0f09e1960278ec58732ba73d086cf8"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch3/4.3_extinction.pdf",
+        "remote": "figures_for_thesis/4.3_extinction.pdf",
+        "local_blob": "47f36fa09de4c13435580484b1940b9ba75f9105",
+        "remote_blob": "47f36fa09de4c13435580484b1940b9ba75f9105",
+        "identical": true,
+        "sha256": "65d220487a12bd5659f91d2efb7929dc306ca7743afab3a5070e97a97c166d52"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_proj3/fig3.15_extinction.pdf",
+        "remote": "figures_for_publication/fig3.15_extinction.pdf",
+        "local_blob": "e6ee9a265844bfad898a8268ac2e1de487de56dd",
+        "remote_blob": "e6ee9a265844bfad898a8268ac2e1de487de56dd",
+        "identical": true,
+        "sha256": "d870d0a574e78a3a11d688e5222fb9451cac1e81546e2e54540bb84975164cc6"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch3/4.4_reflectivity.pdf",
+        "remote": "figures_for_thesis/4.4_reflectivity.pdf",
+        "local_blob": "304a2d8fa0bf96f3585ba4155ba5a57d7a29214f",
+        "remote_blob": "304a2d8fa0bf96f3585ba4155ba5a57d7a29214f",
+        "identical": true,
+        "sha256": "ddb4040997ddeccbdbf6ea3dabc58d87be6cf39f18cada7b858d945b122cf0a8"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_proj3/S3.16_reflectivity.pdf",
+        "remote": "figures_for_publication/S3.16_reflectivity.pdf",
+        "local_blob": "3d4419c45722135f2a4139eacc38127ed4236452",
+        "remote_blob": "3d4419c45722135f2a4139eacc38127ed4236452",
+        "identical": true,
+        "sha256": "dc93eb5d4a7b9189afebe84bdcf115563c5ad6f4eff4ce970e30857fe1feb2cf"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch3/4.5_energy-loss.pdf",
+        "remote": "figures_for_thesis/4.5_energy-loss.pdf",
+        "local_blob": "f627e0e40c15a7dff718ebb2bee7e8cfc723141d",
+        "remote_blob": "f627e0e40c15a7dff718ebb2bee7e8cfc723141d",
+        "identical": true,
+        "sha256": "e861d4a5322f7d99342fd5c1e0c963f3a4d74bc6b1132ce878bf7731f005b98d"
+      },
+      {
+        "local": "/Users/lu/Repos/PhD_thesis_20251216/figures_proj3/S3.17_energy-loss.pdf",
+        "remote": "figures_for_publication/S3.17_energy-loss.pdf",
+        "local_blob": "387ecfb771c3fe511bf3e9d4a134ab3b5e786a54",
+        "remote_blob": "387ecfb771c3fe511bf3e9d4a134ab3b5e786a54",
+        "identical": true,
+        "sha256": "94ba779053b9ba9c109c0229da6942741b6d63a81ac479541aba3ae4d1807577"
+      }
+    ]
+  },
+  "pdf_curve_comparison": {
+    "source_commit": "f863ab02ebf93d5804f5552967ea750571778335",
+    "curve_count": 28,
+    "visible_pdf_vertices": 6510,
+    "max_visible_vertex_discrepancy_pt": 0.0025949647137380747,
+    "max_vertex_energy_offset_from_raw_sample_eV": 2.0575449735105167e-06,
+    "per_quantity": {
+      "eps1": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 0.00018481477520859713,
+        "max_polyline_error_fraction_of_full_raw_range": 0.0074828341232579445
+      },
+      "eps2": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 9.345449691444685e-05,
+        "max_polyline_error_fraction_of_full_raw_range": 0.017698690665801025
+      },
+      "absorption_nm^-1": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 9.891755552854375e-08,
+        "max_polyline_error_fraction_of_full_raw_range": 0.004732678663722987
+      },
+      "n": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 1.31282536575128e-05,
+        "max_polyline_error_fraction_of_full_raw_range": 0.0028293797512364146
+      },
+      "k": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 9.49765124902413e-06,
+        "max_polyline_error_fraction_of_full_raw_range": 0.004807354225228683
+      },
+      "R": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 3.193968405867942e-06,
+        "max_polyline_error_fraction_of_full_raw_range": 0.006344021019163378
+      },
+      "L": {
+        "curve_count": 4,
+        "max_absolute_retained_vertex_error": 1.8707421662655932e-05,
+        "max_polyline_error_fraction_of_full_raw_range": 0.00287058753247493
+      }
+    },
+    "limits": [
+      "PDF paths are simplified polylines: intermediate raw samples need not lie exactly on them. Errors against retained vertices provide the strict reproduction check.",
+      "Visible vertices only are used for the strict numerical comparison. Peaks clipped by axis/page boundaries are checked from raw arrays and the calibrated y limits.",
+      "The last available input sample below 12 eV is 11.9819406022 (alpha) or 11.9902565340 (beta). No extrapolation to an artificial sample at 12 eV."
+    ]
+  },
+  "postprocessing": {
+    "source_commit": "f863ab02ebf93d5804f5552967ea750571778335",
+    "scope": "Postprocessing of the same archived dielectric density-density h5 arrays; no DFT rerun. Corrected beta thickness follows notebook intended geometry formula; retained common 40/d dielectric rescaling for both components.",
+    "corrections": {
+      "beta_thickness": "fractional_z_span * 40 A + 2*1.98 A",
+      "absorption": "ordinary frequency E/h replaced by angular frequency 2*pi*E/h; output remains nm^-1"
+    },
+    "descriptive_window_boundaries_eV": {
+      "IR": [
+        0.0,
+        1.65
+      ],
+      "visible": [
+        1.65,
+        3.1
+      ],
+      "near_UV": [
+        3.1,
+        4.13
+      ],
+      "deep_UV": [
+        4.13,
+        12.0
+      ]
+    },
+    "phases": {
+      "a": {
+        "CONTCAR": {
+          "c_A": 40.0,
+          "fractional_z": [
+            0.1000000000000014
+          ],
+          "fractional_span": 0.0,
+          "geometric_span_A": 0.0,
+          "effective_thickness_A": 3.96
+        },
+        "old_thickness_A": 3.96,
+        "corrected_thickness_A": 3.96,
+        "ratio_corrected_to_old_eps_minus_one": 1.0,
+        "channels": {
+          "in_plane": {
+            "archived": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 5.338687102500367,
+                  "value": 7.220518740675961,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 6.342199715752316,
+                  "value": 9.427748710317516,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 5.7200218955361075,
+                  "value": 2.816077856292835,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 6.44255097707751,
+                  "value": 2.0719230446675256,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 6.46262122934255,
+                  "value": 0.021561614810759896,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 6.4826914816075885,
+                  "value": 0.39743576740998365,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 11.981940602228267,
+                  "value": 2.226474306742218,
+                  "at_window_boundary": true
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.645760685733196,
+                  "value": 0.001762019262738409,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 3.090818848816002,
+                  "value": 0.003933414005704807,
+                  "at_window_boundary": true
+                },
+                "near_UV": {
+                  "energy_eV": 4.114401714332989,
+                  "value": 0.006709967101584941,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 11.981940602228267,
+                  "value": 2.226474306742218,
+                  "at_window_boundary": true
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 10.396390673290188,
+                  "value": 1.4260159802145587
+                },
+                {
+                  "energy_eV": 10.17561789837476,
+                  "value": 1.3219503214970763
+                },
+                {
+                  "energy_eV": 10.015055880254447,
+                  "value": 1.2733141983200826
+                },
+                {
+                  "energy_eV": 9.633721087218706,
+                  "value": 1.0261442786098813
+                },
+                {
+                  "energy_eV": 9.19217553738785,
+                  "value": 0.8031574722194544
+                },
+                {
+                  "energy_eV": 9.031613519267538,
+                  "value": 0.7387645411065931
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": [
+                [
+                  11.94180009769819,
+                  11.981940602228267
+                ]
+              ]
+            },
+            "corrected": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 5.338687102500367,
+                  "value": 7.220518740675961,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 6.342199715752316,
+                  "value": 9.427748710317516,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 5.7200218955361075,
+                  "value": 2.816077856292835,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 6.44255097707751,
+                  "value": 2.0719230446675256,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 6.46262122934255,
+                  "value": 0.13547562137803235,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 6.4826914816075885,
+                  "value": 0.39743576740998365,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 11.981940602228267,
+                  "value": 2.226474306742218,
+                  "at_window_boundary": true
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.645760685733196,
+                  "value": 0.001762019262738409,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 3.090818848816002,
+                  "value": 0.003933414005704807,
+                  "at_window_boundary": true
+                },
+                "near_UV": {
+                  "energy_eV": 4.114401714332989,
+                  "value": 0.006709967101584941,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 11.981940602228267,
+                  "value": 2.226474306742218,
+                  "at_window_boundary": true
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 10.396390673290188,
+                  "value": 1.4260159802145587
+                },
+                {
+                  "energy_eV": 10.17561789837476,
+                  "value": 1.3219503214970763
+                },
+                {
+                  "energy_eV": 10.015055880254447,
+                  "value": 1.2733141983200826
+                },
+                {
+                  "energy_eV": 9.633721087218706,
+                  "value": 1.0261442786098813
+                },
+                {
+                  "energy_eV": 9.19217553738785,
+                  "value": 0.8031574722194544
+                },
+                {
+                  "energy_eV": 9.031613519267538,
+                  "value": 0.7387645411065931
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": [
+                [
+                  11.94180009769819,
+                  11.981940602228267
+                ]
+              ]
+            }
+          },
+          "out_of_plane": {
+            "archived": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 5.218265588910133,
+                  "value": 17.151460642980236,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 5.318616850235328,
+                  "value": 19.31730570636893,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 5.238335841175172,
+                  "value": 4.370248463163603,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 5.338687102500367,
+                  "value": 2.6791247074347524,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 7.747117374305044,
+                  "value": 0.02785371543654315,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 9.111894528327694,
+                  "value": 0.8516725981682405,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 10.637233700470656,
+                  "value": 8.878108733429997,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.645760685733196,
+                  "value": 0.0016753383197843444,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 3.090818848816002,
+                  "value": 0.0036929484193651205,
+                  "at_window_boundary": true
+                },
+                "near_UV": {
+                  "energy_eV": 4.114401714332989,
+                  "value": 0.006284012357030925,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 10.637233700470656,
+                  "value": 8.878108733429997,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 10.637233700470656,
+                  "value": 8.878108733429997
+                },
+                {
+                  "energy_eV": 11.259411520686864,
+                  "value": 2.7313960096729537
+                },
+                {
+                  "energy_eV": 9.653791339483746,
+                  "value": 1.1296686230154676
+                },
+                {
+                  "energy_eV": 8.529857212641565,
+                  "value": 0.2229111662311353
+                },
+                {
+                  "energy_eV": 7.5062743471245765,
+                  "value": 0.1666632036920297
+                },
+                {
+                  "energy_eV": 6.723534508788056,
+                  "value": 0.1390179811501717
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": [
+                [
+                  10.456601430085305,
+                  10.817865970856007
+                ],
+                [
+                  11.219271016156787,
+                  11.319622277481981
+                ]
+              ]
+            },
+            "corrected": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 5.218265588910133,
+                  "value": 17.151460642980236,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 5.318616850235328,
+                  "value": 19.31730570636893,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 5.238335841175172,
+                  "value": 4.370248463163603,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 5.338687102500367,
+                  "value": 2.6791247074347524,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 7.747117374305044,
+                  "value": 0.17501005558124916,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 9.111894528327694,
+                  "value": 0.8516725981682405,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 10.637233700470656,
+                  "value": 8.878108733429997,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.645760685733196,
+                  "value": 0.0016753383197843444,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 3.090818848816002,
+                  "value": 0.0036929484193651205,
+                  "at_window_boundary": true
+                },
+                "near_UV": {
+                  "energy_eV": 4.114401714332989,
+                  "value": 0.006284012357030925,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 10.637233700470656,
+                  "value": 8.878108733429997,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 10.637233700470656,
+                  "value": 8.878108733429997
+                },
+                {
+                  "energy_eV": 11.259411520686864,
+                  "value": 2.7313960096729537
+                },
+                {
+                  "energy_eV": 9.653791339483746,
+                  "value": 1.1296686230154676
+                },
+                {
+                  "energy_eV": 8.529857212641565,
+                  "value": 0.2229111662311353
+                },
+                {
+                  "energy_eV": 7.5062743471245765,
+                  "value": 0.1666632036920297
+                },
+                {
+                  "energy_eV": 6.723534508788056,
+                  "value": 0.1390179811501717
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": [
+                [
+                  10.456601430085305,
+                  10.817865970856007
+                ],
+                [
+                  11.219271016156787,
+                  11.319622277481981
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "b": {
+        "CONTCAR": {
+          "c_A": 40.0,
+          "fractional_z": [
+            0.1236885820987794,
+            0.0763114179012234
+          ],
+          "fractional_span": 0.04737716419755601,
+          "geometric_span_A": 1.8950865679022404,
+          "effective_thickness_A": 5.855086567902241
+        },
+        "old_thickness_A": 4.007377164197562,
+        "corrected_thickness_A": 5.855086567902241,
+        "ratio_corrected_to_old_eps_minus_one": 0.684426629345862,
+        "channels": {
+          "in_plane": {
+            "archived": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 0.9624286181126354,
+                  "value": 30.869701248285963,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 1.1629345802194344,
+                  "value": 36.13509884121464,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 1.0025298105339953,
+                  "value": 5.89137392751025,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 1.2832381574835139,
+                  "value": 3.8365443893675875,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 7.178113443423406,
+                  "value": 0.03140203075596824,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 9.503982603862275,
+                  "value": 0.6071599989791095,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 11.087979704505987,
+                  "value": 0.653399536873036,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.644148889275752,
+                  "value": 0.06904569067876962,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 2.486273930124308,
+                  "value": 0.34428103428751466,
+                  "at_window_boundary": false
+                },
+                "near_UV": {
+                  "energy_eV": 3.107842412655385,
+                  "value": 0.05630987331477242,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 11.087979704505987,
+                  "value": 0.653399536873036,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 11.087979704505987,
+                  "value": 0.653399536873036
+                },
+                {
+                  "energy_eV": 11.769699975669104,
+                  "value": 0.6257454490986936
+                },
+                {
+                  "energy_eV": 11.348637455244827,
+                  "value": 0.5827068195743232
+                },
+                {
+                  "energy_eV": 10.42631002955355,
+                  "value": 0.5065670023066174
+                },
+                {
+                  "energy_eV": 10.64686658787103,
+                  "value": 0.4947483935055233
+                },
+                {
+                  "energy_eV": 2.486273930124308,
+                  "value": 0.34428103428751466
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": []
+            },
+            "corrected": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 0.9624286181126354,
+                  "value": 21.443618944932247,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 1.1629345802194344,
+                  "value": 24.731823900972103,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 1.0025298105339953,
+                  "value": 4.902274466089142,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 1.2832381574835139,
+                  "value": 3.1498997641546707,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 7.178113443423406,
+                  "value": 0.15929803272055487,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 1.3834911385369133,
+                  "value": 0.5374463436773261,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 11.990256533986583,
+                  "value": 1.5067609378179883,
+                  "at_window_boundary": true
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.644148889275752,
+                  "value": 0.10340221511889328,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 2.386020949070909,
+                  "value": 0.4490155043495116,
+                  "at_window_boundary": false
+                },
+                "near_UV": {
+                  "energy_eV": 3.107842412655385,
+                  "value": 0.06725778789168249,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 11.990256533986583,
+                  "value": 1.5067609378179883,
+                  "at_window_boundary": true
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 11.769699975669104,
+                  "value": 1.3335336968811737
+                },
+                {
+                  "energy_eV": 11.027827915873948,
+                  "value": 1.3248390016139304
+                },
+                {
+                  "energy_eV": 11.388738647666186,
+                  "value": 1.1562409479014002
+                },
+                {
+                  "energy_eV": 10.386208837132191,
+                  "value": 1.0748977054363928
+                },
+                {
+                  "energy_eV": 10.64686658787103,
+                  "value": 1.0232549966427045
+                },
+                {
+                  "energy_eV": 2.386020949070909,
+                  "value": 0.4490155043495116
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": []
+            }
+          },
+          "out_of_plane": {
+            "archived": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 3.3283989709728643,
+                  "value": 28.995608603106025,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 5.854774093518532,
+                  "value": 34.099164656830155,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 3.348449567183544,
+                  "value": 5.598276902273418,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 5.955027074571932,
+                  "value": 4.871220573191942,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 5.975077670782611,
+                  "value": 0.046811256452026155,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 8.60170577438168,
+                  "value": 0.8119404665180356,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 9.985196912918592,
+                  "value": 0.5308661930391312,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.644148889275752,
+                  "value": 0.008556855622896316,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 2.927387046759266,
+                  "value": 0.011470752985680474,
+                  "at_window_boundary": false
+                },
+                "near_UV": {
+                  "energy_eV": 4.110372223189381,
+                  "value": 0.045634890530978384,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 9.985196912918592,
+                  "value": 0.5308661930391312,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 9.985196912918592,
+                  "value": 0.5308661930391312
+                },
+                {
+                  "energy_eV": 10.22580406744675,
+                  "value": 0.43416292216856506
+                },
+                {
+                  "energy_eV": 9.664387373547713,
+                  "value": 0.3218397873902211
+                },
+                {
+                  "energy_eV": 11.248384474191427,
+                  "value": 0.3206811666135071
+                },
+                {
+                  "energy_eV": 11.669446994615704,
+                  "value": 0.25877128440529096
+                },
+                {
+                  "energy_eV": 8.962616506173918,
+                  "value": 0.23715364093812671
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": []
+            },
+            "corrected": {
+              "maxima_0_to_12_eV": {
+                "eps1": {
+                  "energy_eV": 3.3283989709728643,
+                  "value": 20.16094003270987,
+                  "at_window_boundary": false
+                },
+                "eps2": {
+                  "energy_eV": 5.854774093518532,
+                  "value": 23.33837632958381,
+                  "at_window_boundary": false
+                },
+                "n": {
+                  "energy_eV": 3.348449567183544,
+                  "value": 4.662807141612765,
+                  "at_window_boundary": false
+                },
+                "k": {
+                  "energy_eV": 5.955027074571932,
+                  "value": 4.000425883693884,
+                  "at_window_boundary": false
+                },
+                "absorption_nm^-1": {
+                  "energy_eV": 5.955027074571932,
+                  "value": 0.24145349604941888,
+                  "at_window_boundary": false
+                },
+                "R": {
+                  "energy_eV": 8.60170577438168,
+                  "value": 0.7660174490411309,
+                  "at_window_boundary": false
+                },
+                "L": {
+                  "energy_eV": 9.965146316707912,
+                  "value": 1.0017697277759554,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_window_maxima": {
+                "IR": {
+                  "energy_eV": 1.644148889275752,
+                  "value": 0.011716331498532141,
+                  "at_window_boundary": true
+                },
+                "visible": {
+                  "energy_eV": 2.947437642969946,
+                  "value": 0.01605390730646415,
+                  "at_window_boundary": false
+                },
+                "near_UV": {
+                  "energy_eV": 4.110372223189381,
+                  "value": 0.06610342681899214,
+                  "at_window_boundary": true
+                },
+                "deep_UV": {
+                  "energy_eV": 9.965146316707912,
+                  "value": 1.0017697277759554,
+                  "at_window_boundary": false
+                }
+              },
+              "loss_local_maxima": [
+                {
+                  "energy_eV": 9.965146316707912,
+                  "value": 1.0017697277759554
+                },
+                {
+                  "energy_eV": 10.205753471236072,
+                  "value": 0.753232912815313
+                },
+                {
+                  "energy_eV": 9.624286181126354,
+                  "value": 0.6810168527691859
+                },
+                {
+                  "energy_eV": 11.228333877980747,
+                  "value": 0.6348883153483822
+                },
+                {
+                  "energy_eV": 8.962616506173918,
+                  "value": 0.4473389977286489
+                },
+                {
+                  "energy_eV": 5.293357399619495,
+                  "value": 0.2414017185660014
+                }
+              ],
+              "loss_clipped_by_ylim_2_1_intervals_eV": []
+            }
+          }
+        }
+      }
+    },
+    "phase_comparisons": {
+      "in_plane_archived": {
+        "absorption_nm^-1": {
+          "beta_over_alpha_integral_0_12": 1.9618377592540575,
+          "fraction_of_grid_beta_above_alpha": 0.9999166736105325
+        },
+        "n": {
+          "beta_over_alpha_integral_0_12": 1.347858274402061,
+          "fraction_of_grid_beta_above_alpha": 0.538038496791934
+        },
+        "k": {
+          "beta_over_alpha_integral_0_12": 2.5760898467387454,
+          "fraction_of_grid_beta_above_alpha": 0.9999166736105325
+        },
+        "R": {
+          "beta_over_alpha_integral_0_12": 2.2476275316577903,
+          "fraction_of_grid_beta_above_alpha": 0.9789184234647113
+        },
+        "L": {
+          "beta_over_alpha_integral_0_12": 0.46769465587379283,
+          "fraction_of_grid_beta_above_alpha": 0.5092075660361637
+        }
+      },
+      "in_plane_corrected": {
+        "absorption_nm^-1": {
+          "beta_over_alpha_integral_0_12": 1.5102185323078738,
+          "fraction_of_grid_beta_above_alpha": 0.9176735272060662
+        },
+        "n": {
+          "beta_over_alpha_integral_0_12": 1.1518526718266506,
+          "fraction_of_grid_beta_above_alpha": 0.3945504541288226
+        },
+        "k": {
+          "beta_over_alpha_integral_0_12": 2.023810064785041,
+          "fraction_of_grid_beta_above_alpha": 0.9176735272060662
+        },
+        "R": {
+          "beta_over_alpha_integral_0_12": 1.8323619694876707,
+          "fraction_of_grid_beta_above_alpha": 0.8560119990000833
+        },
+        "L": {
+          "beta_over_alpha_integral_0_12": 0.8649427814289313,
+          "fraction_of_grid_beta_above_alpha": 0.6070327472710607
+        }
+      },
+      "out_of_plane_archived": {
+        "absorption_nm^-1": {
+          "beta_over_alpha_integral_0_12": 1.955782638949399,
+          "fraction_of_grid_beta_above_alpha": 0.9679193400549955
+        },
+        "n": {
+          "beta_over_alpha_integral_0_12": 1.3655362953328132,
+          "fraction_of_grid_beta_above_alpha": 0.6412798933422215
+        },
+        "k": {
+          "beta_over_alpha_integral_0_12": 2.1645199682769514,
+          "fraction_of_grid_beta_above_alpha": 0.9679193400549955
+        },
+        "R": {
+          "beta_over_alpha_integral_0_12": 1.5847534242241648,
+          "fraction_of_grid_beta_above_alpha": 0.8270977418548454
+        },
+        "L": {
+          "beta_over_alpha_integral_0_12": 0.29162924586754224,
+          "fraction_of_grid_beta_above_alpha": 0.5026247812682276
+        }
+      },
+      "out_of_plane_corrected": {
+        "absorption_nm^-1": {
+          "beta_over_alpha_integral_0_12": 1.535599142602221,
+          "fraction_of_grid_beta_above_alpha": 0.8157653528872594
+        },
+        "n": {
+          "beta_over_alpha_integral_0_12": 1.1541327138429311,
+          "fraction_of_grid_beta_above_alpha": 0.5927839346721107
+        },
+        "k": {
+          "beta_over_alpha_integral_0_12": 1.7203519015419821,
+          "fraction_of_grid_beta_above_alpha": 0.8156820264977919
+        },
+        "R": {
+          "beta_over_alpha_integral_0_12": 1.358984206573558,
+          "fraction_of_grid_beta_above_alpha": 0.7931839013415549
+        },
+        "L": {
+          "beta_over_alpha_integral_0_12": 0.5360952122595295,
+          "fraction_of_grid_beta_above_alpha": 0.6825264561286559
+        }
+      }
+    }
+  },
+  "actual_optical_settings": {
+    "a": {
+      "source": "https://raw.githubusercontent.com/Photonico/H-Beryllene_20250718/f863ab02ebf93d5804f5552967ea750571778335/6.0_dielectric_selection/a-Beryllene/vasprun.xml",
+      "bytes_read": 327680,
+      "records": {
+        "version": "6.5.0",
+        "subversion": "16Dec24 (build Jan 08 2025 16:17:04) complex parallel",
+        "platform": "LinuxIFC",
+        "date": "2025 12 06",
+        "time": "12:26:31",
+        "NBANDS": "133",
+        "ISMEAR": "0",
+        "SIGMA": "0.01000000",
+        "ISPIN": "1",
+        "LNONCOLLINEAR": "F",
+        "LSORBIT": "F",
+        "TIME": "0.40000000",
+        "NEDOS": "4000",
+        "LOPTICS": "T",
+        "LHFCALC": "F",
+        "LEPSILON": "F",
+        "LRPA": "F",
+        "CSHIFT": "0.10000000",
+        "WPLASMAI": "0.00000000",
+        "WPLASMA": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "has_WPLASMAI": true,
+      "h5_records": {
+        "input/incar/LOPTICS": 1,
+        "input/incar/ISMEAR": 0,
+        "input/incar/SIGMA": 0.01,
+        "input/incar/CSHIFT": 0.1,
+        "input/incar/ALGO": "Normal",
+        "input/incar/NBANDS": 128,
+        "input/incar/NEDOS": 4000,
+        "results/electron_eigenvalues/ispin": 1,
+        "version/major": 6,
+        "version/minor": 5,
+        "version/patch": 0
+      },
+      "h5_WPLASMAI_absent": true,
+      "conclusion": "Actual vasprun parameters record WPLASMAI=0 and WPLASMA tensor all zero; no VASP LOPTICS Drude addition enabled. Archived plotting helper reads density-density epsilon, applies thickness normalization, and derives observables; no Drude term is added in postprocessing."
+    },
+    "b": {
+      "source": "https://raw.githubusercontent.com/Photonico/H-Beryllene_20250718/f863ab02ebf93d5804f5552967ea750571778335/6.0_dielectric_selection/b-Beryllene/vasprun.xml",
+      "bytes_read": 524288,
+      "records": {
+        "version": "6.5.0",
+        "subversion": "16Dec24 (build Jan 08 2025 16:17:04) complex parallel",
+        "platform": "LinuxIFC",
+        "date": "2025 12 06",
+        "time": "12:27:27",
+        "NBANDS": "133",
+        "ISMEAR": "0",
+        "SIGMA": "0.01000000",
+        "ISPIN": "1",
+        "LNONCOLLINEAR": "F",
+        "LSORBIT": "F",
+        "TIME": "0.40000000",
+        "NEDOS": "4000",
+        "LOPTICS": "T",
+        "LHFCALC": "F",
+        "LEPSILON": "F",
+        "LRPA": "F",
+        "CSHIFT": "0.10000000",
+        "WPLASMAI": "0.00000000",
+        "WPLASMA": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "has_WPLASMAI": true,
+      "h5_records": {
+        "input/incar/LOPTICS": 1,
+        "input/incar/ISMEAR": 0,
+        "input/incar/SIGMA": 0.01,
+        "input/incar/CSHIFT": 0.1,
+        "input/incar/ALGO": "Normal",
+        "input/incar/NBANDS": 128,
+        "input/incar/NEDOS": 4000,
+        "results/electron_eigenvalues/ispin": 1,
+        "version/major": 6,
+        "version/minor": 5,
+        "version/patch": 0
+      },
+      "h5_WPLASMAI_absent": true,
+      "conclusion": "Actual vasprun parameters record WPLASMAI=0 and WPLASMA tensor all zero; no VASP LOPTICS Drude addition enabled. Archived plotting helper reads density-density epsilon, applies thickness normalization, and derives observables; no Drude term is added in postprocessing."
+    },
+    "official_semantics_source": "https://vasp.at/wiki/index.php?title=WPLASMAI&oldid=35854",
+    "official_LOPTICS_source": "https://vasp.at/wiki/index.php?title=LOPTICS&oldid=31076",
+    "helper_evidence": {
+      "9.0_thesis_demo.ipynb": "cells 1-7 use plot_dielectric_function and plot_linear_optical_property on same systems",
+      "dielectric_function.py": "extract_dielectric_hdf5 lines 220-278; extract_dielectric_function lines349-358",
+      "linear_optical_properties.py": "normalization and observable evaluation in actual plot_linear_optical_property lines 560-575; scalar observable formulas lines33-57",
+      "keyword_search": "No drude / wplasma / intraband additions in these three source files."
+    }
+  },
+  "raw_file_identity": [
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/vaspout.h5",
+      "git_blob": "7aa63c1f7aff89269a5f9a1689b07084700a3ebd",
+      "sha256": "50609bd82c41b81ba4c386da69e4f3bb219ddb8b66eafb4f80375c3bc76d7d19",
+      "bytes": 8012282
+    },
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/POSCAR",
+      "git_blob": "37fb2e26d6cb03104a461d572489154454ec2a05",
+      "sha256": "48bffdd86c55e36c31983c31327bc899377ce6c979085c8dec284dd45bef638d",
+      "bytes": 369
+    },
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/CONTCAR",
+      "git_blob": "12c90c8753ddccacb7240cc2c66a21c1ee8431ac",
+      "sha256": "e36bcb9206cd198020d09178a6bc5a3bb02a73ff113dda84f70d7d217eccd5cd",
+      "bytes": 420
+    },
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/INCAR",
+      "git_blob": "bc936415fbcadf53f437ac614523cd572b6674b9",
+      "sha256": "c23534834dc75fe24884c2a90fade0e8eee028968ce53edceef91f5398774065",
+      "bytes": 2452
+    },
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/KPOINTS",
+      "git_blob": "c4b0a3f34778bebdb0ef52f05df7fb86e847c5af",
+      "sha256": "0fa5d48f31210bbecf84647c5a699cf4c695b4218467db954caa5c3f53a06ff2",
+      "bytes": 37
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/vaspout.h5",
+      "git_blob": "c879068cd77ca5e49af6c1b52fde84f2a4950ea7",
+      "sha256": "639db6a94ff71123d7758eb37014c7f1f9961a201feebdd32d395da2e9a4dbea",
+      "bytes": 13852922
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/POSCAR",
+      "git_blob": "dd4afc79c15d071126322e9fb6eb1f5b2b40740f",
+      "sha256": "8a180b0cc4899bd4d625efcf5c96131a7c17d6565d335d919efec82ad71e7533",
+      "bytes": 394
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/CONTCAR",
+      "git_blob": "6bed3aedb06aba8f179a3a386885fea50b82c9a2",
+      "sha256": "db7f6143175489b93ac9ca4caa14ac5a1e05903ea31080528dd09a69a0ef9a02",
+      "bytes": 537
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/INCAR",
+      "git_blob": "bc936415fbcadf53f437ac614523cd572b6674b9",
+      "sha256": "c23534834dc75fe24884c2a90fade0e8eee028968ce53edceef91f5398774065",
+      "bytes": 2452
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/KPOINTS",
+      "git_blob": "c4b0a3f34778bebdb0ef52f05df7fb86e847c5af",
+      "sha256": "0fa5d48f31210bbecf84647c5a699cf4c695b4218467db954caa5c3f53a06ff2",
+      "bytes": 37
+    }
+  ]
+}

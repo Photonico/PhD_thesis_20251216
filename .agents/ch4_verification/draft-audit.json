@@ -1,0 +1,38 @@
+{
+  "sections": [
+    "Toward the topology of Bloch states",
+    "From phase freedom to the Berry phase",
+    "Time-reversal and inversion symmetry",
+    "From parity eigenvalues to the two-dimensional \\texorpdfstring{$Z_2$}{Z2} index",
+    "From the parity criterion to the calculation"
+  ],
+  "subsections": 13,
+  "equations": 26,
+  "new_labels": 36,
+  "duplicate_new_labels": [],
+  "unresolved_source_references": [],
+  "citations": [
+    "berry1984quantal",
+    "fu2007topological",
+    "gao2021irvsp",
+    "kane2005z2",
+    "wilczek1984appearance"
+  ],
+  "missing_citations": [],
+  "duplicated_bibliography_keys": [],
+  "figures": [
+    "figures_ch4/4.1_band_subspace.pdf",
+    "figures_ch4/4.2_trim.pdf"
+  ],
+  "missing_figures": [],
+  "unsupported_math_environments": [],
+  "unspaced_r_right_parenthesis": 0,
+  "unspaced_r_prime": 0,
+  "overfull_boxes": [],
+  "unresolved_build_items": [],
+  "latex_warnings": [
+    "LaTeX Warning: You have requested document class `style/usydthesis',",
+    "LaTeX Warning: Command \\@footnotetext  has changed."
+  ],
+  "master_includes_draft": false
+}

@@ -1,0 +1,99 @@
+{
+  "plan_sha256": "1aada8a4e1cdc0fc4f58c2db65567ab52e7e9226445001fb778c3a92e48855d0",
+  "operations": [
+    {
+      "id": "C2-01",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-02",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-03",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-04",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-05",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-06",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-07",
+      "unique_anchor": true,
+      "approved_block_match": true
+    },
+    {
+      "id": "C2-08",
+      "unique_anchor": true,
+      "approved_block_match": true
+    }
+  ],
+  "labels": {
+    "original_count": 291,
+    "result_count": 300,
+    "lost": [],
+    "added": [
+      "PAW_reconstruction_method",
+      "bloch_state_cell_periodic_method",
+      "cha:fundamentals_c",
+      "harmonic_energy_and_motion_method",
+      "phonon_normal_mode_method",
+      "plane_wave_cutoff_method",
+      "plane_wave_expansion_method",
+      "wannier_hamiltonian_interpolation_method",
+      "wannier_transformation_method"
+    ]
+  },
+  "files": {
+    "src/fundamentals_a.tex": {
+      "before_sha256": "7c6543d8ac070c48041b441873498f161328598d3d48fe23b1ea78ea591cd9bc",
+      "after_sha256": "7326c56607a65681f258a54b2695dd58a5773c4214e5376d9dcb6c5f83d36189"
+    },
+    "thesis.tex": {
+      "before_sha256": "78e6ac690a1e0ad1a553a053389846c833af74d31c74f5ca5ad8f3f8d692bd09",
+      "after_sha256": "bcf57c0ae9ed5f0773b05641d964e41da2ad6024901779a5dab3c19514b7e0ef"
+    },
+    "src/introduction.tex": {
+      "before_sha256": "964b302cabda4212cfa8cba2bc4b0a94d95d89d8556f698b677e0284e2b7680a",
+      "after_sha256": "424b7c17a082053bce1a9b6a00cc56ffd6502e0d880c6c9c8ca9b147d664ca68"
+    },
+    "src/publications.tex": {
+      "before_sha256": "3c6815c0bd04d5ccd407f734f84460ca7024fa922d3ab95e8470e4699437ded3",
+      "after_sha256": "3b5814270093ae9bbcae92293d624e084aecf0581ec22964921ad39da8239128"
+    },
+    "src/fundamentals_c.tex": {
+      "created": true,
+      "after_sha256": "96abb4e3523314ce393b7b9540effc1e8ec930fedd267d4357b68b77e548459f"
+    }
+  },
+  "user_steer_topology_deferred": {
+    "instruction": "Defer the new Chapter 4; restore the original topology subsection within Chapter 2 while retaining all approved Chapter 2 additions and n/m optical linkage.",
+    "chapter_seed_preserved_at": "/tmp/thesis-apply-approved/fundamentals_c.deferred.tex",
+    "formal_chapter_file_removed": true,
+    "topology_restored_exactly_from_backup": true,
+    "topology_subsection_number": "2.6.6",
+    "migration_scope_and_navigation_reverted": true,
+    "optical_nm_occupation_linkage_retained": true,
+    "after_sha256": {
+      "src/fundamentals_a.tex": "91b17ccd6938e89d90d71ef2cdfe6ec84ede337338fd13884305a44596d15a20",
+      "thesis.tex": "78e6ac690a1e0ad1a553a053389846c833af74d31c74f5ca5ad8f3f8d692bd09",
+      "src/introduction.tex": "964b302cabda4212cfa8cba2bc4b0a94d95d89d8556f698b677e0284e2b7680a",
+      "src/publications.tex": "3c6815c0bd04d5ccd407f734f84460ca7024fa922d3ab95e8470e4699437ded3"
+    },
+    "compile_performed": false
+  }
+}

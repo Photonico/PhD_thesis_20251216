@@ -50,22 +50,33 @@ especially section~\ref{sec:from_dielectric_function_to_optical_properties}.
 Therefore,
 we do not repeat these formula definitions here.
 
-The effective thicknesses $d_{\mathrm{2D}}$ used in the dielectric-function renormalization for the two-dimensional structures are as follows:
-\qty{3.96}{\angstrom} for $\alpha$-Beryllene,
-\qty{5.855}{\angstrom} for $\beta$-Beryllene,
-\qty{6.97}{\angstrom} for cubic trilayer beryllene,
-\qty{3.14}{\angstrom} for double-sided hydrogen-terminated $\alpha$-Beryllene,
-\qty{5.52}{\angstrom} for single-sided hydrogen-terminated $\beta$-Beryllene,
-and \qty{5.192}{\angstrom} for double-sided hydrogen-terminated $\beta$-Beryllene.
-For pristine $\alpha$- and $\beta$-Beryllene,
-the effective thickness is the vertical span of the Be atomic positions plus twice the chosen radius of \qty{1.98}{\angstrom}.
-The unrounded thickness is used in the optical volume normalization.
-The total number of bands included in the calculation of the dielectric function is 140 for the hydrogen-terminated two-dimensional systems,
-133 for the two-dimensional structures without hydrogen termination,
-70 for bulk bcc beryllium,
-and 66 for bulk hcp beryllium.
+The effective thicknesses $d_{\mathrm{2D}}$ used in the dielectric-function renormalization are
+\qty{3.960}{\angstrom} for pristine $\alpha$-Beryllene,
+\qty{5.855}{\angstrom} for pristine $\beta$-Beryllene,
+\qty{6.966}{\angstrom} for cubic trilayer beryllene,
+\qty{3.145}{\angstrom} for double-sided hydrogen-terminated $\alpha$-Beryllene,
+\qty{5.524}{\angstrom} for single-sided hydrogen-terminated $\beta$-Beryllene,
+and \qty{5.193}{\angstrom} for double-sided hydrogen-terminated $\beta$-Beryllene.
+We assign $d_{\mathrm{2D}}$ as the separation of the outermost atomic centres along the surface normal,
+plus the radii of the atoms at those two surfaces: \qty{1.98}{\angstrom} for Be and \qty{0.70}{\angstrom} for H.
+The relaxed coordinates are converted to Cartesian lengths with periodic wrapping removed.
+The same optical volume normalization is applied to the $xx$, $yy$ and $zz$ components.
+The absolute effective response depends on this thickness convention.
+The endpoint-radius contribution is Be+Be for pristine structures, H+H for double-sided termination, and Be+H for single-sided termination.
+Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value; this is a consequence of the chosen convention and is not a unique physical layer thickness.
+Unrounded structure-derived values are used in all calculations.
+The actual total numbers of bands are 140 for each hydrogenated structure,
+133 for pristine $\alpha$- and $\beta$-beryllene and cubic trilayer beryllene,
+70 for bulk bcc beryllium and 66 for bulk hcp beryllium.
+These are total bands, not counts of unoccupied bands; the actual output may differ from the requested \texttt{NBANDS} because of parallel band allocation.
 
 \subsection*{Dielectric-function convergence}
+
+The plots retain the full range of every curve within the displayed energy window.
+In particular, the bulk hcp $45\times45\times45$ k-point calculation has a large low-energy dielectric response that is visible in figure~\ref{fig:proj3_hcp_dielectric_kpoint_convergence}.
+These comparisons do not establish convergence of the complete low-frequency metallic response, which would also require an intraband treatment.
+The selected reference may change both the k-point grid and the total band count relative to a convergence series;
+it is a final-parameter reference rather than an additional strictly one-parameter convergence point.
 
 \begin{figure}[!htbp]
 \centering

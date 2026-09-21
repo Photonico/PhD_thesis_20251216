@@ -1,0 +1,54 @@
+{
+  "printed_pages": {
+    "chapter2": [
+      36,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "chapter3": [
+      113,
+      114,
+      115,
+      116,
+      119,
+      120,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132
+    ],
+    "project3": [
+      207,
+      208,
+      209,
+      218,
+      219,
+      220,
+      221,
+      228,
+      229,
+      236,
+      237
+    ]
+  },
+  "new_clipping_or_overlap_observed": false,
+  "existing_layout_notes": [
+    "Small original Project 3 legends retained.",
+    "SI float order on printed page 229 deferred to chapter-level review."
+  ]
+}

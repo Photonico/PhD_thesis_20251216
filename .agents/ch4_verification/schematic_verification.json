@@ -1,0 +1,145 @@
+{
+  "repository_root": {
+    "gaps": [
+      [
+        1.2,
+        0.76
+      ],
+      [
+        0.6999999999999998,
+        -0.9000000000000001
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "trim": {
+      "triangular": {
+        "classes": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "periodic_copies": 3
+      },
+      "square": {
+        "classes": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "periodic_copies": 5
+      }
+    },
+    "palette": [
+      "#5082FF",
+      "#50AFAF",
+      "#FAA03C",
+      "#B95FF5"
+    ],
+    "inline_dpi": 160,
+    "pdf_sha256": {
+      "4.1_band_subspace.pdf": "6a9ecf36fac4142acb9d29805ce284df1f704792e8a189eef1b803a637f1c38c",
+      "4.2_trim.pdf": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040"
+    }
+  },
+  "figures_folder": {
+    "gaps": [
+      [
+        1.2,
+        0.76
+      ],
+      [
+        0.6999999999999998,
+        -0.9000000000000001
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "trim": {
+      "triangular": {
+        "classes": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "periodic_copies": 3
+      },
+      "square": {
+        "classes": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "periodic_copies": 5
+      }
+    },
+    "palette": [
+      "#5082FF",
+      "#50AFAF",
+      "#FAA03C",
+      "#B95FF5"
+    ],
+    "inline_dpi": 160,
+    "pdf_sha256": {
+      "4.1_band_subspace.pdf": "6a9ecf36fac4142acb9d29805ce284df1f704792e8a189eef1b803a637f1c38c",
+      "4.2_trim.pdf": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040"
+    }
+  },
+  "pdfs_identical_between_working_directories": true
+}

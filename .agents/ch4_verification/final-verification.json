@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-21",
+  "draft_pdf_pages": 18,
+  "body_pages": 17,
+  "equation_environments": 26,
+  "figures": 2,
+  "new_bibliography_entries": 3,
+  "source_and_build_references_verified": true,
+  "quantum_states_dirac_notation_reviewed": true,
+  "latex_style_reviewed_against_chapters_2_and_3": true,
+  "physics_review_resolved": [
+    "full Bloch states for Kramers orthogonality",
+    "Berry sign and closed endpoint identification",
+    "fixed-rank band isolation versus Fermi-level gap",
+    "one parity per Kramers pair",
+    "inversion shortcut versus time-reversal protection",
+    "reciprocal-lattice-compatible frame"
+  ],
+  "visual_review_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "visual_review_detail_pages": [
+    5,
+    6,
+    7,
+    8,
+    11
+  ],
+  "overflow_and_unresolved_references": false,
+  "notebook_markdown_cells": 3,
+  "notebook_code_cells": 3,
+  "notebook_output_types": [
+    "display_data",
+    "display_data"
+  ],
+  "existing_main_chapters_unchanged": true,
+  "sha256": {
+    "src/fundamentals_c.tex": "3c0fe53a42fdd73e790f72cfd04e80cd4224765b6a5d3a5b787b5d15f97f4926",
+    "thesis.bib": "1fc77856c2f237a227cf844a92ac583183a5723dc2e0f45e8a90884e9eae8711",
+    "figures_ch4/figures_ch4.ipynb": "d2d5f4d33f97c5f57ee663ce45ba32a8ca1c85aee0d379fbf7501796bf9b90bd",
+    "figures_ch4/4.1_band_subspace.pdf": "6a9ecf36fac4142acb9d29805ce284df1f704792e8a189eef1b803a637f1c38c",
+    "figures_ch4/4.2_trim.pdf": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040",
+    ".output/ch4-draft/fundamentals_c_draft.pdf": "161f8e6170de13b91495e67a70ba7e18f9c096a9b8483a1b70099a3007a2e763"
+  },
+  "legend_revision": {
+    "canvas_inches": [
+      8,
+      4
+    ],
+    "pdf_dimensions_points": {
+      "4.1_band_subspace.pdf": [
+        576.0,
+        288.0
+      ],
+      "4.2_trim.pdf": [
+        576.0,
+        288.0
+      ]
+    },
+    "reference": "figures_ch2/2.0_HK.pdf",
+    "label_tick_legend_font_pt": 14,
+    "title_font_pt": 16,
+    "matplotlib_legend_layout": "outside lower center with constrained layout",
+    "manual_gap_labels_removed": true
+  }
+}

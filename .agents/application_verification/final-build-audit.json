@@ -1,0 +1,189 @@
+{
+  "pdf_path": ".output/thesis.pdf",
+  "pdf_sha256": "091a28bc5731905dea5d269bf01cd0d4585b4c0b22dbf08f290a3cb42aeb85af",
+  "pdf_pages": 292,
+  "baseline_pdf_pages": 288,
+  "undefined_refs_or_cites": false,
+  "overfull_warnings_match_baseline": true,
+  "overfull_warnings": [
+    "Overfull \\hbox (13.42091pt too wide)",
+    "Overfull \\hbox (4.24358pt too wide)",
+    "Overfull \\hbox (4.03809pt too wide)",
+    "Overfull \\vbox (24.62164pt too high)",
+    "Overfull \\hbox (25.94962pt too wide)",
+    "Overfull \\hbox (5.28813pt too wide)",
+    "Overfull \\hbox (13.97218pt too wide)",
+    "Overfull \\hbox (27.27335pt too wide)",
+    "Overfull \\hbox (8.13083pt too wide)",
+    "Overfull \\hbox (5.24617pt too wide)"
+  ],
+  "figure_inputs_verified": [
+    {
+      "path": "figures_proj3/fig3.13_dielectric.pdf",
+      "sha256": "cf7ffaf01a9aca533385053b75045b6af4cd5b19aeca35287a4affd3b90c073e"
+    },
+    {
+      "path": "figures_ch3/3.1_dielectric.pdf",
+      "sha256": "169635e7a270101d33b9179e83e8166bd9ea49664856b9d0d01ea84865b68c70"
+    },
+    {
+      "path": "figures_proj3/fig3.14a_absorption.pdf",
+      "sha256": "4436184d324e68a0d8036a673f58ee73e872b174d999e930cd5bf80d669ce813"
+    },
+    {
+      "path": "figures_ch3/4.1_absorption.pdf",
+      "sha256": "5b852a8e787a6007941c5b5179896bff114b3ea69eb7f7b730b3f5c65c473d6a"
+    },
+    {
+      "path": "figures_proj3/fig3.14b_refractive.pdf",
+      "sha256": "02be69b824a709cd1b2365f6bccc5d37bc988b3e8eec6654515c4af1597fd03a"
+    },
+    {
+      "path": "figures_ch3/4.2_refractive.pdf",
+      "sha256": "cf3c7c2995aefb987d9ef1e26b7195dd7c4f04f94540072e309014195b7e17de"
+    },
+    {
+      "path": "figures_proj3/fig3.15_extinction.pdf",
+      "sha256": "bac634335b5a34cbed3e5229d70c7b45cae1fa65fd87269c4a618cd039b25bd5"
+    },
+    {
+      "path": "figures_ch3/4.3_extinction.pdf",
+      "sha256": "4678975faa979c8cb7a45284dac1431f35652641fa1fd9c9b89fc84f577c1eea"
+    },
+    {
+      "path": "figures_proj3/S3.16_reflectivity.pdf",
+      "sha256": "ad50970083c6fbd29c7f99776686d791d0d512919a42c334e4c6d5a1a76a3b61"
+    },
+    {
+      "path": "figures_ch3/4.4_reflectivity.pdf",
+      "sha256": "1427c11a08ec934bd29a95d6b1fd8f9185dfc63b7e44c8544116fdc5c0e3ea50"
+    },
+    {
+      "path": "figures_proj3/S3.17_energy-loss.pdf",
+      "sha256": "d0195f0f1e47d7216beaceb0c8a694434007df057a3e76392f0ad6dfb4ccb954"
+    },
+    {
+      "path": "figures_ch3/4.5_energy-loss.pdf",
+      "sha256": "73dcbad870053c30328f95e84fec29e281ad9b930a735dc76348d9272b91fc8a"
+    }
+  ],
+  "chapter_starts": {
+    "cha:fundamentals_a": {
+      "number": "2",
+      "printed_page": 15
+    },
+    "sec:practical_computational_methods": {
+      "number": "2.6",
+      "printed_page": 88
+    },
+    "subsec:method_relaxation": {
+      "number": "2.6.1",
+      "printed_page": 88
+    },
+    "subsec:method_kpoints": {
+      "number": "2.6.2",
+      "printed_page": 89
+    },
+    "subsec:method_stability": {
+      "number": "2.6.3",
+      "printed_page": 91
+    },
+    "subsec:method_magnetism": {
+      "number": "2.6.4",
+      "printed_page": 93
+    },
+    "subsec:method_elph": {
+      "number": "2.6.5",
+      "printed_page": 94
+    },
+    "subsec:method_topology": {
+      "number": "2.6.6",
+      "printed_page": 98
+    },
+    "cha:fundamentals_b": {
+      "number": "3",
+      "printed_page": 101
+    },
+    "independent_particle_imaginary_dielectric_tensor": {
+      "number": "3.23",
+      "printed_page": 113
+    },
+    "interband_and_drude_dielectric_response": {
+      "number": "3.25",
+      "printed_page": 114
+    },
+    "optical_volume_normalization_2d": {
+      "number": "3.27",
+      "printed_page": 115
+    },
+    "figure_representative_dielectric_response": {
+      "number": "3.1",
+      "printed_page": 116
+    },
+    "absorption_coefficient_present_systems": {
+      "number": "3.2",
+      "printed_page": 124
+    },
+    "refractive_index_present_systems": {
+      "number": "3.3",
+      "printed_page": 126
+    },
+    "extinction_coefficient_alpha_beta_beryllene": {
+      "number": "3.4",
+      "printed_page": 127
+    },
+    "reflectivity_alpha_beta_beryllene": {
+      "number": "3.5",
+      "printed_page": 129
+    },
+    "energy_loss_spectrum_alpha_beta_beryllene": {
+      "number": "3.6",
+      "printed_page": 131
+    },
+    "cha:project_bilayers": {
+      "number": "4",
+      "printed_page": 133
+    },
+    "cha:project_boron": {
+      "number": "5",
+      "printed_page": 169
+    },
+    "cha:project_beryllene": {
+      "number": "6",
+      "printed_page": 203
+    },
+    "3_methods": {
+      "number": "6.3",
+      "printed_page": 207
+    },
+    "3_optical_alpha_beta": {
+      "number": "6.4.5.1",
+      "printed_page": 218
+    },
+    "3_supplementary": {
+      "number": "6.7",
+      "printed_page": 228
+    },
+    "fig:proj3_alpha_beta_dielectric": {
+      "number": "6.9",
+      "printed_page": 219
+    },
+    "fig:proj3_alpha_beta_abs_refractive": {
+      "number": "6.10",
+      "printed_page": 220
+    },
+    "fig:proj3_alpha_beta_extinction": {
+      "number": "6.11",
+      "printed_page": 220
+    },
+    "fig:proj3_reflectivity_alpha_beta": {
+      "number": "6.31",
+      "printed_page": 236
+    },
+    "fig:proj3_energy_loss_alpha_beta": {
+      "number": "6.32",
+      "printed_page": 237
+    }
+  },
+  "tex_diff_check": true
+}
