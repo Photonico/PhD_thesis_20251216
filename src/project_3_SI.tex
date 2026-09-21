@@ -12,7 +12,7 @@ and~\ref{fig:proj3_total_energy_convergence},
 respectively,
 as functions of the k-point set for the beryllium structures.
 Convergence tests for the calculation of the dielectric function are shown in figures~\ref{fig:proj3_hcp_dielectric_nbands_convergence}--\ref{fig:proj3_cubic_dielectric_kpoint_convergence},
-including tests for both the k-point set and the number of unoccupied bands included through the parameter \texttt{NBANDS}.
+including tests for both the k-point set and the total number of bands specified through the parameter \texttt{NBANDS}.
 
 \begin{figure}[!htbp]
 \centering
@@ -50,14 +50,17 @@ especially section~\ref{sec:from_dielectric_function_to_optical_properties}.
 Therefore,
 we do not repeat these formula definitions here.
 
-The values of the thickness $d_{\mathrm{2D}}$ used in the dielectric-function renormalization for the two-dimensional structures are as follows:
+The effective thicknesses $d_{\mathrm{2D}}$ used in the dielectric-function renormalization for the two-dimensional structures are as follows:
 \qty{3.96}{\angstrom} for $\alpha$-Beryllene,
-\qty{5.85}{\angstrom} for $\beta$-Beryllene,
+\qty{5.855}{\angstrom} for $\beta$-Beryllene,
 \qty{6.97}{\angstrom} for cubic trilayer beryllene,
 \qty{3.14}{\angstrom} for double-sided hydrogen-terminated $\alpha$-Beryllene,
 \qty{5.52}{\angstrom} for single-sided hydrogen-terminated $\beta$-Beryllene,
 and \qty{5.192}{\angstrom} for double-sided hydrogen-terminated $\beta$-Beryllene.
-The number of unoccupied bands included in the calculation of the dielectric function is 140 for the hydrogen-terminated two-dimensional systems,
+For pristine $\alpha$- and $\beta$-Beryllene,
+the effective thickness is the vertical span of the Be atomic positions plus twice the chosen radius of \qty{1.98}{\angstrom}.
+The unrounded thickness is used in the optical volume normalization.
+The total number of bands included in the calculation of the dielectric function is 140 for the hydrogen-terminated two-dimensional systems,
 133 for the two-dimensional structures without hydrogen termination,
 70 for bulk bcc beryllium,
 and 66 for bulk hcp beryllium.
@@ -68,7 +71,7 @@ and 66 for bulk hcp beryllium.
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/S3.3_dielec_hcp.pdf}
 \caption{Real and imaginary parts of the dielectric function for bulk hcp beryllium,
-calculated with different numbers of unoccupied bands included in the calculation.}
+calculated with different total numbers of bands included in the calculation.}
 \label{fig:proj3_hcp_dielectric_nbands_convergence}
 \end{figure}
 
@@ -84,7 +87,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/S3.5_dielec_alpha.pdf}
 \caption{Real and imaginary parts of the dielectric function for $\alpha$-Beryllene,
-calculated with different numbers of unoccupied bands included in the calculation.}
+calculated with different total numbers of bands included in the calculation.}
 \label{fig:proj3_alpha_dielectric_nbands_convergence}
 \end{figure}
 
@@ -100,7 +103,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/S3.7_dielec_beta.pdf}
 \caption{Real and imaginary parts of the dielectric function for $\beta$-Beryllene,
-calculated with different numbers of unoccupied bands included in the calculation.}
+calculated with different total numbers of bands included in the calculation.}
 \label{fig:proj3_beta_dielectric_nbands_convergence}
 \end{figure}
 
@@ -116,7 +119,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/S3.9_dielec_bcc.pdf}
 \caption{Real and imaginary parts of the dielectric function for bulk bcc beryllium,
-calculated with different numbers of unoccupied bands included in the calculation.}
+calculated with different total numbers of bands included in the calculation.}
 \label{fig:proj3_bcc_dielectric_nbands_convergence}
 \end{figure}
 
@@ -132,7 +135,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/S3.11_dielec_cubic.pdf}
 \caption{Real and imaginary parts of the dielectric function for cubic trilayer beryllene,
-calculated with different numbers of unoccupied bands included in the calculation.}
+calculated with different total numbers of bands included in the calculation.}
 \label{fig:proj3_cubic_dielectric_nbands_convergence}
 \end{figure}
 
@@ -196,14 +199,17 @@ whereas figure~\ref{fig:proj3_optical_hydrogenated} compares the corresponding h
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/S3.16_reflectivity.pdf}
-\caption{Reflectivity for the in-plane and out-of-plane directions as function of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.}
+\caption{Reflectivity for the in-plane and out-of-plane directions as function of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.
+The reflectivities are evaluated within the effective-medium model described in chapter~\ref{cha:fundamentals_b}.}
 \label{fig:proj3_reflectivity_alpha_beta}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/S3.17_energy-loss.pdf}
-\caption{Energy-loss spectrum for the in-plane and out-of-plane directions as function of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.}
+\caption{Energy-loss spectrum for the in-plane and out-of-plane directions as function of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.}
 \label{fig:proj3_energy_loss_alpha_beta}
 \end{figure}
 
