@@ -915,30 +915,37 @@ In the presence of an oscillating electromagnetic field, we introduce the Bohr f
 \label{Bohr_frequency}
 \end{equation}
 
-The corresponding phase factor associated with the excitation energy is $\mathrm{e}^{-i(E_n-E_g)t}$.
-If one separates the trivial time phases, we obtain the time-dependent form of the stationary state wave functions for the ground and excited states:
+The corresponding phase factor associated with the excitation energy is $\mathrm{e}^{-\mathrm{i}\omega_{ng}t}$.
+We retain $\hbar$ explicitly in these phase relations.
+For a time-independent hamiltonian, we separate the time dependence of each stationary state as:
 
 \begin{equation}
-    \Psi_{g/n}(\vec{x};t)=\Phi_{g/n}(\vec{x})\,\mathrm{e}^{-iE_{g/n}t/\hbar}
+    \ket{\Psi_j(t)}=\mathrm{e}^{-\mathrm{i}E_jt/\hbar}\ket{\Phi_j},
+    \qquad j\in\{g,n\}
 \label{time_dep_eigenstate}
 \end{equation}
 
-Therefore, the one-body transition density leads to the following time-dependent form:
+here, $\ket{\Phi_j}$ is the time-independent many-body eigenstate with energy $E_j$.
+Substituting these states into equation~\eqref{one_body_transition_quantity_compact},
+we obtain:
 
 \begin{equation}
-\begin{aligned}
-    & f_n^\mathrm{eh}(x_1,t)\\
-    =& \mathrm{e}^{-i(E_n-E_g)t}\iint\cdots\int\dif{x_2}\,\dif{x_3}\cdots\dif{x_N}\,\Psi_g^*(x_1,x_2,\cdots,x_N;t)\,\Psi_n(x_1,x_2,\cdots,x_N;t)
-\end{aligned}
+    f_n^\mathrm{eh}(x_1,t)
+    =\mathrm{e}^{-\mathrm{i}\omega_{ng}t}f_n^\mathrm{eh}(x_1,0)
 \label{mod_transition_one-body}
 \end{equation}
 
-here, the phase-independent part of the one-body transition density follows as:
+here, the phase-independent part follows from the coordinate projections of the stationary states:
 
 \begin{equation}
-    \iint\cdots\int\dif{x_2}\,\dif{x_3}\cdots\dif{x_N}\,\Psi_g^*(x_1,x_2,\cdots,x_N;t)\,\Psi_n(x_1,x_2,\cdots,x_N;t)
+    f_n^\mathrm{eh}(x_1,0)
+    =\int\braket{\Phi_g|\vec{x}}\braket{\vec{x}|\Phi_n}
+    \prod_{j=2}^{N}\dif{x_j}
 \label{transition_amplitude}
 \end{equation}
+
+The time dependence is therefore contained in a single phase factor,
+while the transition amplitude is determined by the stationary states.
 
 Subsequently, we recall a one-body operator $\hat{\Omega}^{(1)}$ with kernel $\Omega_1(x_1)$,
 the one-body density $n(x_1)$,
@@ -1741,9 +1748,6 @@ Using the electron-electron Coulomb repulsion~\eqref{electrons_Coulomb}, we intr
 
 here, $E_{\Delta\mathrm{int}}[n]$ collects the nonclassical part of the interaction energy beyond the Hartree term.
 In the Hartree approximation, we set $E_{\Delta\mathrm{int}}[n]=0$.
-
-We next approximate the interaction energy functional by the classical Coulomb energy associated with the density distribution.
-Using the electron-electron Coulomb repulsion~\eqref{electrons_Coulomb}, we introduce the Hartree term:
 
 Therefore, we introduce a Hartree approximation at the level of the interaction energy by replacing $E_\mathrm{int}[n]$ with its classical counterpart $E_\mathrm{H}[n]$:
 
@@ -2769,7 +2773,7 @@ here, the external potential $v_\mathrm{ext}(\vec{r}\,)$ is fixed by the ionic s
 The Hartree potential $v_\mathrm{H}([n];\vec{r}\,)$ is a known functional of the density.
 The main difficulty lies in the exchange-correlation potential $v_\mathrm{xc}([n];\vec{r}\,)$.
 
-Moreover, the exchange-correlation potential $v_\mathrm{xc}([n];\vec{r}\,)$ is a static and local potential.
+In the local Kohn--Sham formulation considered here, the exchange-correlation potential $v_\mathrm{xc}([n];\vec{r}\,)$ is a static and local potential.
 In coordinate representation, it acts as a multiplicative operator.
 Nevertheless, its functional dependence on the density can be highly nontrivial.
 Therefore, practical density functional theory relies on approximations for the exchange-correlation energy functional $E_\mathrm{xc}[n]$,
@@ -3002,7 +3006,7 @@ the main difficulty lies in the construction of the exchange-correlation functio
 Thereafter, we introduce several widely used approximations for the exchange-correlation energy functional $E_\mathrm{xc}[n]$~\cite{martin2020electronic}.
 They differ in how much information about the density is retained.
 The simplest approximation depends only on the local value of the density.
-More accurate semilocal approximations also include the density gradient.
+Semilocal approximations also include the density gradient.
 Beyond them, hybrid functionals incorporate a fraction of exact exchange.
 
 \subsection{Local density and generalized gradient approximations}
@@ -3021,7 +3025,7 @@ here, $\varepsilon_\mathrm{xc}^\mathrm{HEG}(n)$ refers to the exchange-correlati
 
 The local density approximation is simple and computationally efficient~\cite{jones2015density,stampfl1999density}.
 For many bulk solids, it already gives a reasonable description.
-However, it neglects the inhomogeneity of the density.
+However, it does not depend explicitly on the density gradient.
 Therefore, it may become insufficient in systems where the density varies strongly in space,
 for instance in molecules, surfaces, and low-dimensional systems~\cite{martin2020electronic,li2003insights}.
 
@@ -3115,6 +3119,10 @@ $E_x^{\mathrm{PBE},\mathrm{SR}}[n;\omega]$ and $E_x^{\mathrm{PBE},\mathrm{LR}}[n
 and $E_c^\mathrm{PBE}[n]$ refers to the PBE correlation functional.
 Moreover, $a$ refers to the mixing parameter that determines the fraction of exact exchange.
 
+The Hartree--Fock exchange term depends explicitly on the occupied orbitals.
+In the generalized Kohn--Sham treatment used for hybrid functionals,
+its orbital variation gives a non-local exchange operator.
+
 In the standard HSE06 functional,
 one usually takes $a=0.25$.
 The screening parameter is typically chosen as $\omega=0.11\,\mathrm{bohr}^{-1}$~\cite{krukau2006influence}.
@@ -3130,7 +3138,9 @@ These advantages make the Heyd--Scuseria--Ernzerhof functional one of the most w
 
 In the present work,
 we use PBE and HSE06 to examine how the electronic properties depend on the exchange-correlation approximation.
-The screened exchange contribution in equation~\eqref{HSE_exchange_correlation_functional} can change the localization of electronic states and the predicted band gap.
+The screened exchange contribution in equation~\eqref{HSE_exchange_correlation_functional}
+can reduce self-interaction and delocalisation errors,
+thereby changing the localization of electronic states and the predicted band gap.
 However, HSE06 remains an approximation.
 A larger band gap does not by itself imply a more accurate result.
 Therefore, when comparing the results in chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron},
@@ -3188,6 +3198,8 @@ Therefore, the forces follow from the complete Born--Oppenheimer energy:
 here, $\vec{R}_I$ and $\vec{F}_I$ denote the position and force of nucleus $I$.
 The electronic energy is evaluated self-consistently at each nuclear configuration.
 The force therefore connects the electronic problem in equation~\eqref{BO_SE_with_ENN} to the motion of the nuclei.
+When an empirical dispersion correction is included,
+it must also enter the energy and its derivatives used for relaxation.
 
 We then update the atomic positions and the lattice parameters allowed to vary.
 For example, the electronic and force convergence criteria can be expressed as:
@@ -3214,7 +3226,7 @@ For two-dimensional structures, the vacuum separation also controls the interact
 The treatment of dispersion interactions is particularly relevant to the interlayer geometry in chapter~\ref{cha:project_bilayers}.
 The actual stopping criteria and numerical settings are given with the calculations in chapters~\ref{cha:project_bilayers}, \ref{cha:project_boron}, and~\ref{cha:project_beryllene}.
 
-\subsection{Brillouin-zone sampling}
+\subsection{Periodic states and Brillouin-zone sampling}
 \label{subsec:method_kpoints}
 
 Next, we consider the periodic electronic problem.
@@ -3222,6 +3234,79 @@ We label a Bloch state $\ket{\psi_{n\vec{k}}}$ by its band index $n$ and wave ve
 and denote its one-particle energy by $E_{n\vec{k}}$.
 This is the periodic-system notation for the Kohn--Sham eigenvalue $\lambda_i$ in equation~\eqref{KS_equation_diagonal_dirac}.
 It is also the band-energy notation used in chapter~\ref{cha:fundamentals_b}.
+
+For a lattice translation $\vec{L}$, the periodicity of the one-particle operator allows us to write~\cite{martin2020electronic}:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \ket{\psi_{n\vec{k}}}
+    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}} \\
+    \braket{\vec{r}+\vec{L}|u_{n\vec{k}}}
+    &=\braket{\vec{r}\,|u_{n\vec{k}}}
+\end{aligned}\right.
+\label{bloch_state_cell_periodic_method}
+\end{equation}
+
+here, $\ket{u_{n\vec{k}}}$ is the cell-periodic part of the Bloch state,
+and $\hat{\vec{r}}$ is the position operator.
+The Bloch phase carries the change between cells, while the cell-periodic part contains the variation within a cell.
+We normalize $\ket{u_{n\vec{k}}}$ over one unit cell;
+the corresponding Bloch state has the same cell normalization.
+This convention is also used for the electron-phonon matrix elements below.
+
+To solve this periodic problem numerically, we need a finite basis.
+In a plane-wave calculation, the rapidly varying orbitals near the nuclei are treated through a core-valence description.
+The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}}$ can then be expanded as:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \ket{\widetilde{\psi}_{n\vec{k}}}
+    &=\sum_{\vec{G}}C_{n\vec{k}}(\vec{G})\ket{\vec{k}+\vec{G}} \\
+    \braket{\vec{r}\,|\vec{k}+\vec{G}}
+    &=\frac{1}{\sqrt{\Omega_\mathrm{cell}}}
+    \mathrm{e}^{\mathrm{i}(\vec{k}+\vec{G})\cdot\vec{r}}
+\end{aligned}\right.
+\label{plane_wave_expansion_method}
+\end{equation}
+
+here, $\vec{G}$ is a reciprocal-lattice vector,
+$\Omega_\mathrm{cell}$ is the unit-cell volume,
+and $C_{n\vec{k}}(\vec{G})$ is the expansion coefficient.
+The plane waves form the basis; an individual Bloch state is generally a superposition of them.
+In Hartree atomic units, we retain only the components satisfying:
+
+\begin{equation}
+    \frac{1}{2}|\vec{k}+\vec{G}|^2\leq E_\mathrm{cut}
+\label{plane_wave_cutoff_method}
+\end{equation}
+
+here, $E_\mathrm{cut}$ is the plane-wave kinetic-energy cutoff.
+Increasing it enlarges the basis at each k point.
+This is different from increasing the number of k points,
+which improves the integration over the Brillouin zone.
+
+For the VASP calculations, the projector augmented wave (PAW) method connects the smooth auxiliary state to the reconstructed all-electron valence state~\cite{blochl1994projector,kresse1999ultrasoft}:
+
+\begin{equation}
+\begin{aligned}
+    \ket{\psi_{n\vec{k}}}
+    &=\ket{\widetilde{\psi}_{n\vec{k}}} \\
+    &\quad+
+    \sum_a\left(\ket{\phi_a}-\ket{\widetilde{\phi}_a}\right)
+    \braket{\widetilde{p}_a|\widetilde{\psi}_{n\vec{k}}}
+\end{aligned}
+\label{PAW_reconstruction_method}
+\end{equation}
+
+here, $a$ labels an atomic site and a partial-wave channel,
+$\ket{\phi_a}$ and $\ket{\widetilde{\phi}_a}$ are the all-electron and smooth partial waves,
+and $\bra{\widetilde{p}_a}$ is the corresponding projector.
+The correction restores the rapidly varying part inside the augmentation regions;
+outside these regions, the two partial waves coincide.
+The implemented calculation uses a frozen-core approximation and a finite partial-wave representation.
+The smooth auxiliary density alone is therefore not the reconstructed all-electron density.
+The Quantum ESPRESSO calculations for superconductivity in section~\ref{2_methods} instead use norm-conserving pseudopotentials~\cite{hamann2013optimized}.
+The datasets and their convergence settings must be specified for each calculation.
 
 Electronic quantities require integration over the Brillouin zone.
 For a quantity $A(\vec{k})$, we approximate its Brillouin-zone average by:
@@ -3239,11 +3324,15 @@ here, $\Omega_\mathrm{BZ}$ denotes the Brillouin-zone volume of the periodic cal
 and $w_{\vec{k}}$ denotes the normalized weight of each sampled point.
 For a slab supercell, the in-plane mesh is refined while the sampling along the vacuum direction is usually restricted to one point.
 The required mesh depends on the reciprocal-cell dimensions and the quantity of interest.
+For a metal, the occupation changes near the Fermi energy make this integration more sensitive to the mesh and occupation broadening.
+We therefore check their effect on the quantity of interest together.
+A high-symmetry path used to display a band structure does not replace this integration mesh.
 
 By increasing the sampling density, we examine the numerical accuracy of equation~\eqref{brillouin_zone_quadrature}.
 However, a mesh that gives a converged total energy may still be insufficient for an optical spectrum.
 In equation~\eqref{independent_particle_imaginary_dielectric_tensor} of chapter~\ref{cha:fundamentals_b},
-the integrand also contains transition matrix elements and the energy difference $E_{c\vec{k}}-E_{v\vec{k}}$.
+the integrand also contains occupation factors, transition matrix elements,
+and the energy difference $E_{m\vec{k}}-E_{n\vec{k}}$.
 Therefore, optical convergence depends on the k-point mesh, the number of bands included, and the broadening of the transitions.
 The research chapters discuss the meshes used for structural and optical calculations separately.
 
@@ -3269,10 +3358,47 @@ here, the subscript $0$ denotes the relaxed reference structure.
 The force constants describe the curvature of the same energy surface used for structural relaxation.
 They can be obtained from finite-displacement calculations or density-functional perturbation theory~\cite{baroni2001phonons}.
 
+At a stationary reference structure, the first derivative of the energy vanishes.
+Keeping the terms up to second order in the displacements, we obtain:
+
+\begin{equation}
+\left\{\begin{aligned}
+    E_\mathrm{BO}(\{u_{I\alpha}\})
+    &\approx E_\mathrm{BO}(0)
+    +\frac{1}{2}\sum_{I\alpha,J\beta}
+    \Phi_{I\alpha,J\beta}u_{I\alpha}u_{J\beta} \\
+    M_I\frac{\dif^2u_{I\alpha}}{\dif t^2}
+    &=-\sum_{J\beta}\Phi_{I\alpha,J\beta}u_{J\beta}
+\end{aligned}\right.
+\label{harmonic_energy_and_motion_method}
+\end{equation}
+
+here, $M_I$ is the nuclear mass.
+The second relation follows from the force as the negative energy gradient.
+It shows that the force constants couple the displacements of different atoms.
+
 For a periodic crystal, we write the nuclear index as $I=(l,\kappa)$,
 where $l$ labels the cell and $\kappa$ labels the atom within the cell.
-Using the cell-phase convention $\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{L}_l}$,
-we construct the dynamical matrix and its eigenvalue equation:
+We seek a collective displacement with a definite wave vector and frequency:
+
+\begin{equation}
+    u_{l\kappa\alpha}(t)
+    =\mathrm{Re}\left[
+    \frac{Q_{\vec{q}s}}{\sqrt{M_\kappa}}
+    e_{\kappa\alpha,s}(\vec{q})
+    \mathrm{e}^{\mathrm{i}(\vec{q}\cdot\vec{L}_l-\omega_{\vec{q}s}t)}
+    \right]
+\label{phonon_normal_mode_method}
+\end{equation}
+
+here, $\vec{L}_l$ is the cell translation, $M_\kappa$ is the nuclear mass,
+$\vec{q}$ is the phonon wave vector, and $s$ labels the mode.
+The quantity $Q_{\vec{q}s}$ is the mass-weighted mode amplitude.
+The factor $M_\kappa^{-1/2}$ separates the mass from the dimensionless eigenvector.
+The real part gives the physical displacement.
+Substituting this form into equation~\eqref{harmonic_energy_and_motion_method}
+and using lattice translational symmetry,
+we obtain the dynamical matrix and its eigenvalue equation:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -3289,11 +3415,7 @@ we construct the dynamical matrix and its eigenvalue equation:
 \label{phonon_dynamical_matrix_method}
 \end{equation}
 
-here, $\vec{L}_l$ denotes a lattice translation,
-$M_\kappa$ denotes the nuclear mass,
-$\vec{q}$ denotes the phonon wave vector,
-and $s$ labels a phonon branch.
-The eigenvector components $e_{\kappa\alpha,s}(\vec{q})$ describe the mass-weighted displacement pattern,
+here, the eigenvector components $e_{\kappa\alpha,s}(\vec{q})$ describe the mass-weighted displacement pattern,
 with normalization $\sum_{\kappa\alpha}|e_{\kappa\alpha,s}(\vec{q})|^2=1$.
 The quantity $\omega_{\vec{q}s}$ is an angular frequency;
 the ordinary frequency is $\omega_{\vec{q}s}/(2\pi)$.
@@ -3424,10 +3546,51 @@ The matrix element $g_{mn,s}(\vec{k},\vec{q})$ has the dimension of energy.
 Zero-frequency rigid translations are excluded from this mode expression.
 The matrix element therefore describes the scattering of an electron from $\ket{\psi_{n\vec{k}}}$ to $\ket{\psi_{m,\vec{k}+\vec{q}}}$ by the phonon $(\vec{q},s)$.
 Direct evaluation on dense reciprocal-space grids is expensive.
-We therefore transform the electronic states and perturbation matrix elements to a localized Wannier representation.
-The localized quantities are then interpolated back to finer electronic and phonon meshes in EPW~\cite{pizzi2020wannier90,ponce2016epw}.
+We therefore first express the selected electronic subspace in a localized Wannier representation~\cite{pizzi2020wannier90}.
+For a uniform mesh of $N_\mathrm{k}$ points in the full Brillouin zone, the transformation is:
 
-For a spin-degenerate reference state, we use the density of states per unit cell and per spin at the Fermi energy.
+\begin{equation}
+    \ket{w_{a\vec{L}}}
+    =\frac{1}{N_\mathrm{k}}\sum_{\vec{k}}
+    \mathrm{e}^{-\mathrm{i}\vec{k}\cdot\vec{L}}
+    \sum_n U_{na}(\vec{k})\ket{\psi_{n\vec{k}}}
+\label{wannier_transformation_method}
+\end{equation}
+
+here, $a$ labels a Wannier orbital and $\vec{L}$ labels its cell.
+The matrices $U(\vec{k})$ mix the chosen Bloch states to obtain a smooth, localized representation.
+For an isolated set of bands, this mixing is unitary within that set.
+For entangled bands, a subspace must first be selected within the chosen energy windows.
+The factor $1/N_\mathrm{k}$ follows from the cell-normalized Bloch states introduced in equation~\eqref{bloch_state_cell_periodic_method};
+the Wannier states are normalized over the corresponding $N_\mathrm{k}$-cell Born--von Karman supercell.
+
+We can then express the one-particle operator by matrix elements between localized orbitals:
+
+\begin{equation}
+\left\{\begin{aligned}
+    h_{ab}(\vec{L})
+    &=\bra{w_{a\vec{0}}}\hat{h}_\mathrm{KS}\ket{w_{b\vec{L}}} \\
+    h_{ab}^{\mathrm{W}}(\vec{k})
+    &=\sum_{\vec{L}}\mathrm{e}^{\mathrm{i}\vec{k}\cdot\vec{L}}h_{ab}(\vec{L})
+\end{aligned}\right.
+\label{wannier_hamiltonian_interpolation_method}
+\end{equation}
+
+here, $h_{ab}(\vec{L})$ couples orbitals separated by a lattice translation,
+and $h_{ab}^{\mathrm{W}}(\vec{k})$ is the interpolated matrix in the Wannier basis.
+When the real-space matrix elements are sufficiently localized,
+this Fourier sum can be evaluated on a finer mesh.
+Diagonalizing it gives the interpolated band energies and the transformation back to the band basis.
+The interpolation must be checked against direct calculations in the energy range of interest.
+
+The electron-phonon perturbation also carries the phonon wave vector $\vec{q}$.
+Its matrix elements therefore require Fourier transformations with respect to both $\vec{k}$ and $\vec{q}$,
+together with the phonon eigenvectors and the electronic band rotations~\cite{giustino2007electron}.
+EPW uses this localized representation to obtain the matrix elements on finer electronic and phonon meshes~\cite{ponce2016epw}.
+Interpolating the band energies alone would not provide the coupling in equation~\eqref{electron_phonon_matrix_element_method}.
+
+For a spin-degenerate metallic normal state with $N(E_\mathrm{F})>0$,
+we use the density of states per unit cell and per spin at the Fermi energy.
 With independently normalized weights $\sum_{\vec{k}}w_{\vec{k}}=\sum_{\vec{q}}w_{\vec{q}}=1$,
 the Fermi-surface average gives the Eliashberg spectral function:
 
