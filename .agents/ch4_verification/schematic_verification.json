@@ -67,15 +67,47 @@
       }
     },
     "palette": [
-      "#5082FF",
-      "#50AFAF",
-      "#FAA03C",
-      "#B95FF5"
+      "#1478E1",
+      "#19A0A0",
+      "#FA8C00",
+      "#8C64E1"
     ],
-    "inline_dpi": 160,
+    "canvas_inches": {
+      "band": [
+        10,
+        8
+      ],
+      "trim": [
+        10,
+        5
+      ]
+    },
+    "canvas_dpi": {
+      "band": 196,
+      "trim": 196
+    },
+    "style_source": "figures_ch4/figures_ch4.ipynb",
+    "font_settings": {
+      "text.usetex": false,
+      "font.family": "serif",
+      "mathtext.fontset": "cm",
+      "axes.titlesize": 20,
+      "axes.labelsize": 16,
+      "xtick.labelsize": 14,
+      "ytick.labelsize": 14,
+      "legend.fontsize": 12,
+      "figure.facecolor": "w",
+      "lines.linewidth": 1.5,
+      "lines.solid_capstyle": "round",
+      "lines.dash_capstyle": "round",
+      "lines.solid_joinstyle": "round",
+      "lines.dash_joinstyle": "round"
+    },
+    "subtitle_fontsize": 18,
+    "line_width": 1.5,
     "pdf_sha256": {
-      "4.1_band_subspace.pdf": "2c92108e545294f530da33d6cc6979d83edffe6f7615286aa6c031b937426a07",
-      "4.2_trim.pdf": "a1be40321964bb2380a43044144ac6e0fc28968bd147c6c0bb40d3b4208687c8"
+      "4.1_band_subspace.pdf": "bf70221404dd540aa7a4a0bd674c7ed18e06fee052833e3f09aba7fd53d63b3b",
+      "4.2_trim.pdf": "a97687665b8d04bfbf05565aa189c1f7d87af61432e2980437c418bef2482624"
     }
   },
   "figures_folder": {
@@ -146,21 +178,86 @@
       }
     },
     "palette": [
-      "#5082FF",
-      "#50AFAF",
-      "#FAA03C",
-      "#B95FF5"
+      "#1478E1",
+      "#19A0A0",
+      "#FA8C00",
+      "#8C64E1"
     ],
-    "inline_dpi": 160,
+    "canvas_inches": {
+      "band": [
+        10,
+        8
+      ],
+      "trim": [
+        10,
+        5
+      ]
+    },
+    "canvas_dpi": {
+      "band": 196,
+      "trim": 196
+    },
+    "style_source": "figures_ch4/figures_ch4.ipynb",
+    "font_settings": {
+      "text.usetex": false,
+      "font.family": "serif",
+      "mathtext.fontset": "cm",
+      "axes.titlesize": 20,
+      "axes.labelsize": 16,
+      "xtick.labelsize": 14,
+      "ytick.labelsize": 14,
+      "legend.fontsize": 12,
+      "figure.facecolor": "w",
+      "lines.linewidth": 1.5,
+      "lines.solid_capstyle": "round",
+      "lines.dash_capstyle": "round",
+      "lines.solid_joinstyle": "round",
+      "lines.dash_joinstyle": "round"
+    },
+    "subtitle_fontsize": 18,
+    "line_width": 1.5,
     "pdf_sha256": {
-      "4.1_band_subspace.pdf": "2c92108e545294f530da33d6cc6979d83edffe6f7615286aa6c031b937426a07",
-      "4.2_trim.pdf": "a1be40321964bb2380a43044144ac6e0fc28968bd147c6c0bb40d3b4208687c8"
+      "4.1_band_subspace.pdf": "bf70221404dd540aa7a4a0bd674c7ed18e06fee052833e3f09aba7fd53d63b3b",
+      "4.2_trim.pdf": "a97687665b8d04bfbf05565aa189c1f7d87af61432e2980437c418bef2482624"
     }
   },
   "pdfs_identical_between_working_directories": true,
-  "unchanged_trim_retained": {
-    "path": "figures_ch4/4.2_trim.pdf",
-    "sha256": "3b0cba0a3146a7ef5c3b8656abe73f38a727c84e6772b1c7777140e02e50c040",
-    "note": "The fresh-kernel checks regenerated both figures. The unchanged TRIM PDF and its notebook cell were then restored to their existing version; the band-subspace PDF retains the verified export."
+  "style_alignment": {
+    "implementation": "Inline Matplotlib parameters in the notebook",
+    "runtime_imports": [
+      "pathlib",
+      "numpy",
+      "matplotlib"
+    ],
+    "custom_functions": 0,
+    "independent_execution": {
+      "fresh_kernel": true,
+      "separate_directory": true,
+      "vmatplot_imported": false,
+      "physics_checks_passed": true,
+      "pdfs_identical_to_repository": true
+    },
+    "visual_review": "Both figures and their final main-thesis pages inspected."
+  },
+  "main_thesis": {
+    "path": ".output/thesis.pdf",
+    "sha256": "d0fe8402f481c7fa0bd8413df0ef9610e0ffbeeb440c7a75114c30c04844ed8b",
+    "pages": 312,
+    "chapter_4": {
+      "pdf_page": 163,
+      "page_label": "133"
+    },
+    "figures": {
+      "4.1": {
+        "pdf_page": 167,
+        "page_label": "137"
+      },
+      "4.2": {
+        "pdf_page": 173,
+        "page_label": "143"
+      }
+    },
+    "undefined_or_duplicate_references": false,
+    "new_build_warnings": false
   }
 }

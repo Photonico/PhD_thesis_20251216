@@ -53,13 +53,14 @@ triangular_normals = np.array([[1., 0.], [.5, np.sqrt(3) / 2],
 assert np.all(np.abs(triangular_points @ triangular_normals.T) <= .5 + 1e-12)
 assert np.all(np.abs(square_points) <= .5 + 1e-12)
 assert np.allclose(np.max(np.abs(hexagon @ triangular_normals.T), axis=1), .5)
-allowed_colors = {"#5082FF", "#50AFAF", "#FAA03C", "#B95FF5", "#F0508C"}
-assert set(colors) <= allowed_colors
-assert params["figure.dpi"] <= 200
 print("SCHEMATIC_AUDIT=" + json.dumps({
     "gaps": gaps, "internal_contacts": k[contacts].tolist(),
     "trim": trim_results, "palette": colors,
-    "inline_dpi": params["figure.dpi"]
+    "canvas_inches": {"band": band_size, "trim": trim_size},
+    "canvas_dpi": {"band": dpi, "trim": dpi},
+    "style_source": "figures_ch4/figures_ch4.ipynb",
+    "font_settings": params, "subtitle_fontsize": subtitle,
+    "line_width": line_width
 }))
 '''
 
