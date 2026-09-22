@@ -124,14 +124,6 @@
 %%%% Units
 \DeclareSIUnit{\angstromunit}{\text{\AA}}
 
-% %%%% Force each chapter to start on an odd page
-% \makeatletter
-% \def\chapter{%
-%   \cleardoublepage
-%   \thispagestyle{plain}\global\@topnum\z@
-%   \@afterindenttrue \secdef\@chapter\@schapter}
-% \makeatother
-
 %%%% Section/subsection references
 \newcommand{\secref}[1]{section~\ref{#1}}
 \newcommand{\subsecref}[1]{subsection~\ref{#1}}
@@ -333,7 +325,7 @@
 \linespread{1.25}\selectfont
 % \onehalfspacing
 % intro pages
-\clearpage
+\cleardoublepage
 \input{src/statement.tex} % done!
 \cleardoublepage
 \clearpage

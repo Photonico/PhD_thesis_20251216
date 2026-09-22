@@ -54,9 +54,9 @@
 \numberwithin{section}{chapter}
 \numberwithin{equation}{chapter}
 
-% chapters don't need to start on the left hand page
+% All chapters, including unnumbered chapters, start on odd pages.
 \def\chapter{%
-  \clearpage
+  \cleardoublepage
   \thispagestyle{plain}\global\@topnum\z@
   \@afterindenttrue \secdef\@chapter\@schapter}
 
