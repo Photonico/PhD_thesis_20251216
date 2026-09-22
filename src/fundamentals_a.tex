@@ -262,13 +262,13 @@ Subsequently, we explicitly express each physical contribution to the many-body 
 \begin{align}
 \text{Electron kinetic energy:}\qquad & \hat{T}_\mathrm{e} = -\frac{1}{2}\sum_i\nabla_i^2
 \label{electrons_kinetic} \\
-\text{Electron-nucleus Coulomb attraction:}\qquad & \hat{V}_\mathrm{eN}=-\sum_{i,I}\frac{Z_I}{|\vec{r}_i-\vec{R}_I|}
+\text{Electron-nucleus Coulomb attraction:}\qquad & \hat{V}_\mathrm{eN}=-\sum_{i,I}\frac{Z_I}{|\vec{r}_i-\vec{R}_I\,|}
 \label{electrons_nucleus_Coulomb} \\
-\text{Electron-electron Coulomb repulsion:}\qquad & \hat{V}_\mathrm{ee}=\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j|}
+\text{Electron-electron Coulomb repulsion:}\qquad & \hat{V}_\mathrm{ee}=\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
 \label{electrons_Coulomb} \\
 \text{Nuclear kinetic energy:}\qquad & \hat{T}_\mathrm{N} = -\sum_I\frac{1}{2M_I}\nabla_I^2
 \label{nucleus_kinetic} \\
-\text{Nucleus-nucleus Coulomb repulsion:}\qquad & \hat{V}_\mathrm{NN} = \sum_{I<J}\frac{Z_I\,Z_J}{|\vec{R}_I-\vec{R}_J|}
+\text{Nucleus-nucleus Coulomb repulsion:}\qquad & \hat{V}_\mathrm{NN} = \sum_{I<J}\frac{Z_I\,Z_J}{|\vec{R}_I-\vec{R}_J\,|}
 \label{nucleus_interaction}
 \end{align}
 
@@ -276,10 +276,10 @@ Summing all these terms, we arrive at the full many-body hamiltonian:
 
 \begin{equation}
     \hat{H}=-\frac{1}{2}\sum_i\nabla_i^2
-    -\sum_{i,I}\frac{Z_I}{|\vec{r}_i-\vec{R}_I|}
-    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j|}
+    -\sum_{i,I}\frac{Z_I}{|\vec{r}_i-\vec{R}_I\,|}
+    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
     -\sum_I\frac{\nabla_I^2}{2M_I}
-    +\sum_{I<J}\frac{Z_I\,Z_J}{|\vec{R}_I-\vec{R}_J|}    
+    +\sum_{I<J}\frac{Z_I\,Z_J}{|\vec{R}_I-\vec{R}_J\,|}
 \label{full_many-body_hamiltonian}
 \end{equation}
 
@@ -304,11 +304,11 @@ The corresponding hamiltonian can then be rewritten as:
 \begin{aligned}
 \hat{H}
     &=-\frac{1}{2}\sum_i\nabla_i^2
-    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j|}
-    +\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i)+\hat{V}_\mathrm{NN}(\{\vec{R}_I\}) \\
+    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
+    +\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)+\hat{V}_\mathrm{NN}(\{\vec{R}_I\}) \\
     &=-\frac{1}{2}\sum_i\nabla_i^2
-    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j|}
-    +\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i)+E_\mathrm{NN}
+    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
+    +\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)+E_\mathrm{NN}
 \end{aligned}
 \label{clamped_nuclei_many_body_hamiltonian}
 \end{equation}
@@ -319,18 +319,18 @@ At this stage, it is convenient to collect all one-body terms acting on the elec
 We define the external potential as:
 
 \begin{equation}
-    v_\mathrm{ext}(\vec{r}\,)\coloneqq -\sum_{I}\frac{Z_I}{|\vec{r}-\vec{R}_I|}
+    v_\mathrm{ext}(\vec{r}\,)\coloneqq -\sum_{I}\frac{Z_I}{|\vec{r}-\vec{R}_I\,|}
 \label{one-body_Electron-nucleus}
 \end{equation}
 
 For fixed nuclear positions $\{\vec{R}_I\}$, the electron-nucleus Coulomb attraction term $\hat{V}_\mathrm{eN}$ can be rewritten in the one-body form:
 
 \begin{equation}
-    \hat{V}_\mathrm{eN}=\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i)
+    \hat{V}_\mathrm{eN}=\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)
 \label{Electron-nucleus_one-body_form}
 \end{equation}
 
-In what follows, we denote the corresponding operator by $\hat{V}_\mathrm{ext}=\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i)$.
+In what follows, we denote the corresponding operator by $\hat{V}_\mathrm{ext}=\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)$.
 
 More generally, $v_\mathrm{ext}(\vec{r}\,)$ may also include any additional applied one-body fields, so that all system-specific information enters through $v_\mathrm{ext}$.
 
@@ -448,7 +448,7 @@ In what follows, we review its precise definition:
 \begin{equation}
     n(\vec{r}\,)
     = \bra{\psi}\,\hat{n}(\vec{r}\,)\ket{\psi}
-    = \bra{\psi}\sum_i\delta(\vec{r} - \hat{\vec{r}}_i)\ket{\psi}
+    = \bra{\psi}\sum_i\delta(\vec{r} - \hat{\vec{r}}_i\,)\ket{\psi}
 \label{particle_density_operator_definition}
 \end{equation}
 
@@ -464,7 +464,7 @@ We first define the particle density operator in the Schrödinger-picture as:
 
 \begin{equation}
     \hat{n}(\vec{r}\,)
-    = \sum_i \delta(\vec{r}-\hat{\vec{r}}_i)
+    = \sum_i \delta(\vec{r}-\hat{\vec{r}}_i\,)
 \label{Schrodinger-picture_density_operator}
 \end{equation}
 
@@ -510,7 +510,7 @@ The Heisenberg-picture current operator can now be introduced:
 
 \begin{equation}
     \hat{\vec{j}}_\mathrm{H}(\vec{r},t)
-    = \frac{1}{2m_\mathrm{e}}\sum_i\left[\hat{\vec{p}}_i\,\delta(\vec{r}-\hat{\vec{r}}_i)+\delta(\vec{r}-\hat{\vec{r}}_i)\,\hat{\vec{p}}_i\right]_\mathrm{H}
+    = \frac{1}{2m_\mathrm{e}}\sum_i\left[\hat{\vec{p}}_i\,\delta(\vec{r}-\hat{\vec{r}}_i\,)+\delta(\vec{r}-\hat{\vec{r}}_i\,)\,\hat{\vec{p}}_i\right]_\mathrm{H}
 \label{heisenberg-picture_current_operator}
 \end{equation}
 
@@ -629,8 +629,8 @@ we work at the fixed nuclear coordinates $\{\vec{R}_I\}$ and write the clamped n
 \begin{equation}
     \hat{H}_\mathrm{BO}(\{\vec{R}_I\})
     = -\frac{1}{2}\sum_i\nabla_i^2
-    + \sum_i v_{\mathrm{ext}}(\hat{\vec{r}}_i)
-    + \sum_{i<j}\frac{1}{|\vec{r}_i - \vec{r}_j|}
+    + \sum_i v_{\mathrm{ext}}(\hat{\vec{r}}_i\,)
+    + \sum_{i<j}\frac{1}{|\vec{r}_i - \vec{r}_j\,|}
     + E_\mathrm{NN}(\{\vec{R}_I\})
 \label{BO_hamiltonian}
 \end{equation}
@@ -643,9 +643,9 @@ and the external potential acting on the electrons is the attractive electron-nu
 \begin{equation}
 \begin{aligned}
     \hat{V}_\mathrm{int} &\coloneqq \hat{V}_{\mathrm{ee}}
-    = \sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j|} \\
+    = \sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|} \\
     \hat{V}_\mathrm{ext} &\coloneqq \hat{V}_{\mathrm{eN}}
-    =\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i)
+    =\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)
 \end{aligned}
 \label{reduced_operator_definition}
 \end{equation}
@@ -656,8 +656,8 @@ Using the expression for the electron kinetic energy operator in equation~\eqref
 \begin{aligned}
     \bra{\Psi}\hat{H}\ket{\Psi} &= \bra{\Psi}\hat{T}\ket{\Psi} + \bra{\Psi}\hat{V}_\mathrm{ext}\ket{\Psi} + \bra{\Psi}\hat{V}_\mathrm{int}\ket{\Psi} \\
     &= \bra{\Psi}-\frac{1}{2}\sum_i\nabla_i^2\ket{\Psi}
-    + \bra{\Psi}\sum_i v_{\mathrm{ext}}(\vec{r}_i)\ket{\Psi}
-    + \bra{\Psi}\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j|}\ket{\Psi}
+    + \bra{\Psi}\sum_i v_{\mathrm{ext}}(\vec{r}_i\,)\ket{\Psi}
+    + \bra{\Psi}\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}\ket{\Psi}
 \end{aligned}
 \label{approx}
 \end{equation}
@@ -824,8 +824,8 @@ Next, consider the expectation value of the electron-electron Coulomb interactio
 \begin{equation}
 \begin{aligned}
     \braket{\hat{V}_\mathrm{ee}}
-    &= \iint\cdots\int \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\sum_{i,j>i}\frac{1}{|\vec{r}_i-\vec{r}_j|}\Psi(x_1,x_2,\cdots,x_N) \\
-    &= \int\mathrm{d}x_1\mathrm{d}x_2\,\frac{1}{2|\vec{r}_1-\vec{r}_2|}N(N-1)\int\mathrm{d}x_3\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\Psi(x_1,x_2,\cdots,x_N)
+    &= \iint\cdots\int \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\sum_{i,j>i}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}\Psi(x_1,x_2,\cdots,x_N) \\
+    &= \int\mathrm{d}x_1\mathrm{d}x_2\,\frac{1}{2|\vec{r}_1-\vec{r}_2\,|}N(N-1)\int\mathrm{d}x_3\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\Psi(x_1,x_2,\cdots,x_N)
 \end{aligned}
 \label{coulomb_interaction_energy}
 \end{equation}
@@ -841,7 +841,7 @@ So that the expectation value of the Coulomb interaction energy reduces to:
 
 \begin{equation}
     \braket{\hat{V}_\mathrm{ee}}=\frac{1}{2}\int\mathrm{d}x_1\mathrm{d}x_2\,
-    \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2|}
+    \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2\,|}
 \label{observables_two-body_density}
 \end{equation}
 
@@ -939,7 +939,7 @@ here, the phase-independent part follows from the coordinate projections of the 
 
 \begin{equation}
     f_n^\mathrm{eh}(x_1,0)
-    =\int\braket{\Phi_g|\vec{x}}\braket{\vec{x}|\Phi_n}
+    =\int\braket{\Phi_g|\vec{x}\,}\braket{\vec{x}\,|\Phi_n}
     \prod_{j=2}^{N}\dif{x_j}
 \label{transition_amplitude}
 \end{equation}
@@ -959,7 +959,7 @@ Then, the spatial parts are contained in $x_1,x_2$:
     T &= -\frac{1}{2}\int \mathrm{d}x_1\,
     \left[\nabla_{x'_1}^{2}\,\rho(x_1,x'_1)\right]_{x'_1=x_1}\\
     \braket{\hat{V}_\mathrm{ee}} &= \frac{1}{2}\int \mathrm{d}x_1\,\mathrm{d}x_2\,
-    \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2|}
+    \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2\,|}
 \end{aligned}
 \label{one-body_operator_with_kernel}
 \end{equation}
@@ -974,7 +974,7 @@ Its expectation value then follows as:
     &\quad - \frac{1}{2}\int \mathrm{d}x_1\,
     \left[\nabla_{x'_1}^{2}\,\rho(x_1,x'_1)\right]_{x'_1=x_1} \\
     &\quad + \frac{1}{2}\int \mathrm{d}x_1\,\mathrm{d}x_2\,
-    \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2|}
+    \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2\,|}
 \end{aligned}
 \label{mod_obs_1}
 \end{equation}
@@ -1054,7 +1054,7 @@ For example, in condensed matter physics, it often appears as a map from electro
 It also often appears that we use a non-local functional to describe the classical electrostatic term or the Hartree term:
 
 \begin{equation}
-    E_\mathrm{H}[n]=\frac{1}{2}\int\mathrm{d}\vec{r}_i\,\mathrm{d}\vec{r}_j\,\frac{n(\vec{r}_i)n(\vec{r}_j)}{|\vec{r}_i-\vec{r}_j|}
+    E_\mathrm{H}[n]=\frac{1}{2}\int\mathrm{d}\vec{r}_i\,\mathrm{d}\vec{r}_j\,\frac{n(\vec{r}_i\,)n(\vec{r}_j\,)}{|\vec{r}_i-\vec{r}_j\,|}
 \label{hartree_functional}
 \end{equation}
 
@@ -1094,7 +1094,7 @@ Therefore, we can realize that a functional takes the density $n(\vec{r}\,)$ as 
 To describe this process, we first introduce the density operator:
 
 \begin{equation}
-    \hat{n}(\vec{r}\,) = \sum_{i=1}^N \delta(\vec{r}-\hat{\vec{r}}_i)
+    \hat{n}(\vec{r}\,) = \sum_{i=1}^N \delta(\vec{r}-\hat{\vec{r}}_i\,)
 \label{density_operator}
 \end{equation}
 
@@ -1135,7 +1135,7 @@ Accordingly, any ground-state observable may be written as a functional of the d
 \label{ground_state_observable_density_functional}
 \end{equation}
 
-This is not merely a change of notation; it marks the conceptual compression from a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N)$, to a function of only three spatial variables, $n(\vec{r}\,)$, which is the cornerstone of the practical formulation of DFT.
+This is not merely a change of notation; it marks the conceptual compression from a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$, to a function of only three spatial variables, $n(\vec{r}\,)$, which is the cornerstone of the practical formulation of DFT.
 Historically, the density functional formalism was established in the 1960s through the pioneering work of Hohenberg and Kohn, and was later made computationally practical by the Kohn--Sham scheme~\cite{kohn1965self}.
 
 Since the many-body wave function $\Psi$ encodes the full complexity of the system, a natural question is the following: what is the ingredient that actually distinguishes one many-electron system from another?
@@ -1174,7 +1174,7 @@ A central example is the electron density, for an arbitrary state $\ket{\Psi}$, 
 \begin{equation}
 \begin{aligned}
    n(\vec{r}\,)&=\bra{\Psi}\hat{n}(\vec{r}\,)\ket{\Psi} \\
-   &=\bra{\Psi}\sum_i \delta(\vec{r}-\hat{\vec{r}}_i)\ket{\Psi}
+   &=\bra{\Psi}\sum_i \delta(\vec{r}-\hat{\vec{r}}_i\,)\ket{\Psi}
 \end{aligned}
 \label{electron_densit_via_expectation}
 \end{equation}
@@ -1182,7 +1182,7 @@ A central example is the electron density, for an arbitrary state $\ket{\Psi}$, 
 Consider a fixed form of interaction, the external potential $v_\mathrm{ext}(\vec{r}\,)$ specifies the corresponding hamiltonian and therefore the ground-state structure.
 Here $v_\mathrm{ext}(\vec{r}\,)$ is a scalar potential field in real space, whereas $\hat{V}_\mathrm{ext}$ is the associated many-body operator acting on the $N$-electron wave function.
 
-Given definition of external potential operator~\eqref{reduced_operator_definition}, in coordinate representation, $\hat{V}_\mathrm{ext}$ acts by multiplication with $\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i)$. 
+Given definition of external potential operator~\eqref{reduced_operator_definition}, in coordinate representation, $\hat{V}_\mathrm{ext}$ acts by multiplication with $\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)$.
 
 For later convenience, we introduce the particle-density operator in the Schrödinger picture~\eqref{Schrodinger-picture_density_operator} and express the same operator in terms of it.
 Since $v_\mathrm{ext}(\vec{r}\,)$ then couples locally to the density operator $\hat{n}(\vec{r}\,)$, we obtain:
@@ -1255,22 +1255,22 @@ Therefore, for an $N$-electron system, we have:
 
 \begin{equation}
 \begin{aligned}
-    \sum_{i=1}^N\left[v_\mathrm{ext}^{(1)}(\vec{r}_i)-v_\mathrm{ext}^{(2)}(\vec{r}_i)\right]\ket{\Psi_0}
+    \sum_{i=1}^N\left[v_\mathrm{ext}^{(1)}(\vec{r}_i\,)-v_\mathrm{ext}^{(2)}(\vec{r}_i\,)\right]\ket{\Psi_0}
     &= (\hat{V}_\mathrm{ext}^{(1)}-\hat{V}_\mathrm{ext}^{(2)})\ket{\Psi_0} \\
     &= (E_1-E_2)\ket{\Psi_0}
 \end{aligned}
 \label{energy_difference}
 \end{equation}
 
-Whenever the wave function $\Psi_0(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)\neq 0$, we can divide both sides by $\Psi_0$ and obtain:
+Whenever the wave function $\Psi_0(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)\neq 0$, we can divide both sides by $\Psi_0$ and obtain:
 
 \begin{equation}
-    \sum_{i=1}^N\left[v_\mathrm{ext}^{(1)}(\vec{r}_i)-v_\mathrm{ext}^{(2)}(\vec{r}_i)\right]=E_1-E_2
+    \sum_{i=1}^N\left[v_\mathrm{ext}^{(1)}(\vec{r}_i\,)-v_\mathrm{ext}^{(2)}(\vec{r}_i\,)\right]=E_1-E_2
 \label{difference_energy_nowave}
 \end{equation}
 
-The equality above implies that, for any configuration $(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)$ where the wave function $\Psi_0(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)\neq 0$, the factor multiplying $\Psi_0$ must be constant.
-Dividing both sides by $\Psi_0$ wherever the ground-state wave function $\Psi_0(\vec{r}_1,\ldots,\vec{r}_N)$ is nonzero, we obtain a constraint on the difference between the two external potentials.
+The equality above implies that, for any configuration $(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)$ where the wave function $\Psi_0(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)\neq 0$, the factor multiplying $\Psi_0$ must be constant.
+Dividing both sides by $\Psi_0$ wherever the ground-state wave function $\Psi_0(\vec{r}_1,\ldots,\vec{r}_N\,)$ is nonzero, we obtain a constraint on the difference between the two external potentials.
 
 To make this explicit, we define the potential shift function:
 
@@ -1282,27 +1282,27 @@ To make this explicit, we define the potential shift function:
 Then, we can rewrite the previous relation as:
 
 \begin{equation}
-    g(\vec{r}_1)+g(\vec{r}_2)+\cdots+g(\vec{r}_N)=E_1-E_2
+    g(\vec{r}_1\,)+g(\vec{r}_2\,)+\cdots+g(\vec{r}_N\,)=E_1-E_2
 \label{N-body_shift_potential}
 \end{equation}
 
-for all configurations on which the wave function $\Psi_0(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)$ is nonzero.
+for all configurations on which the wave function $\Psi_0(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)$ is nonzero.
 
-Now, we pick any set of coordinates $(\vec{r}_2,\cdots,\vec{r}_N)$ such that the wave function does not vanish, and keep them fixed.
+Now, we pick any set of coordinates $(\vec{r}_2,\cdots,\vec{r}_N\,)$ such that the wave function does not vanish, and keep them fixed.
 With these coordinates held fixed, the sum of the last $N-1$ terms,
-$g(\vec{r}_2)+\cdots+g(\vec{r}_N)$, is just a scalar.
+$g(\vec{r}_2\,)+\cdots+g(\vec{r}_N\,)$, is just a scalar.
 The equation then reduces to:
 
 \begin{equation}
-    g(\vec{r}_1)= (E_1-E_2)-\left[g(\vec{r}_2)+\cdots+g(\vec{r}_N)\right]
+    g(\vec{r}_1\,)= (E_1-E_2)-\left[g(\vec{r}_2\,)+\cdots+g(\vec{r}_N\,)\right]
 \label{fixed_N-body_shift_potential}
 \end{equation}
 
-which shows that $g(\vec{r}_1)$ cannot change as $\vec{r}_1$ varies within any region where the wave function remains nonzero.
+which shows that $g(\vec{r}_1\,)$ cannot change as $\vec{r}_1$ varies within any region where the wave function remains nonzero.
 Otherwise the left-hand side would vary with $\vec{r}_1$, while the right-hand side remains fixed.
 
 Since the same argument applies when we vary any other particle coordinate $\vec{r}_j$ with the remaining coordinates fixed,
-we conclude that $g(\vec{r}\,)$ must be a constant almost everywhere on the set where $\Psi_0(\vec{r}_1,\ldots,\vec{r}_N)$ is nonzero.
+we conclude that $g(\vec{r}\,)$ must be a constant almost everywhere on the set where $\Psi_0(\vec{r}_1,\ldots,\vec{r}_N\,)$ is nonzero.
 Thus, we arrive at the following relation:
 
 \begin{equation}
@@ -1344,7 +1344,7 @@ Equivalently, $\left[v_\mathrm{ext}(\vec{r}\,)\right]$ and $\left[\ket{\Psi_0}\r
 Moreover, the wave function is directly related to the density through the standard marginalization over the remaining $N-1$ particles. As a result, we obtain a unique ground-state density, given by the usual marginalization of the squared modulus of the wave function over all but one space variables:
 
 \begin{equation}
-    n(\vec{r}\,)=N\int \mathrm{d}\vec{r}_2\cdots\mathrm{d}\vec{r}_N\,\left|\Psi(\vec{r},\vec{r}_2,\cdots,\vec{r}_N)\right|^2
+    n(\vec{r}\,)=N\int \mathrm{d}\vec{r}_2\cdots\mathrm{d}\vec{r}_N\,\left|\Psi(\vec{r},\vec{r}_2,\cdots,\vec{r}_N\,)\right|^2
 \label{density_function}
 \end{equation}
 
@@ -1916,7 +1916,7 @@ To derive a differential form, we use the Poisson equation.
 For the nuclear external potential, we have:
 
 \begin{equation}
-    \nabla^2 v_\mathrm{ext}(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\right)
+    \nabla^2 v_\mathrm{ext}(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)
 \label{Poisson_external_potential}
 \end{equation}
 
@@ -1930,14 +1930,14 @@ For the Hartree potential, we have:
 Combining equations~\eqref{effective_potential_definition}, \eqref{Poisson_external_potential}, and \eqref{Poisson_Hartree_potential}, we find:
 
 \begin{equation}
-    \nabla^2 v(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\right)-4\pi n(\vec{r}\,)
+    \nabla^2 v(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-4\pi n(\vec{r}\,)
 \label{Poisson_effective_potential}
 \end{equation}
 
 Substituting equation~\eqref{density_TF_from_potential} into equation~\eqref{Poisson_effective_potential}, we arrive at the differential form of the Thomas--Fermi equation:
 
 \begin{equation}
-    \nabla^2 v(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\right)-\frac{4}{3\pi}\left[2\left(\lambda-v(\vec{r}\,)\right)\right]^{\frac{3}{2}}
+    \nabla^2 v(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-\frac{4}{3\pi}\left[2\left(\lambda-v(\vec{r}\,)\right)\right]^{\frac{3}{2}}
 \label{differential_form_Thomas_Fermi_equation}
 \end{equation}
 
@@ -2187,8 +2187,8 @@ with this convention, the Schrödinger equation in the coordinate representation
 
 \begin{equation}
     \left(-\frac{1}{2}\sum_i\nabla_i^2
-    + \sum_i v_{\mathrm{ext}}(\hat{\vec{r}}_i)
-    + \sum_{i<j}\frac{1}{|\vec{r}_i - \vec{r}_j|}\right)\Psi(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)= E\,\Psi(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)
+    + \sum_i v_{\mathrm{ext}}(\hat{\vec{r}}_i\,)
+    + \sum_{i<j}\frac{1}{|\vec{r}_i - \vec{r}_j\,|}\right)\Psi(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)= E\,\Psi(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)
 \label{BO_hamiltonian_SE}
 \end{equation}
 
@@ -2201,7 +2201,7 @@ and compensating for its effect through a tuned one-body potential $v_\mathrm{au
 
 \begin{equation}
     \left(-\frac{1}{2}\sum_i\nabla_i^2
-    + \sum_i v_\mathrm{aux}(\hat{\vec{r}}_i)\right)\Psi_\mathrm{aux}(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)= E_\mathrm{aux}\Psi_\mathrm{aux}(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N)
+    + \sum_i v_\mathrm{aux}(\hat{\vec{r}}_i\,)\right)\Psi_\mathrm{aux}(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)= E_\mathrm{aux}\Psi_\mathrm{aux}(\vec{r}_1,\vec{r}_2,\cdots,\vec{r}_N\,)
 \label{BO_hamiltonian_aux}
 \end{equation}
 
@@ -2212,7 +2212,7 @@ The density of the auxiliary system is obtained by integrating out $N-1$ coordin
 \begin{equation}
     n_\mathrm{aux}(\vec{r}\,)\coloneqq
     N\iint\cdots\int\dif{\vec{r}_2}\,\dif{\vec{r}_3}\cdots\dif{\vec{r}_N}\,
-    \left|\Psi_\mathrm{aux}(\vec{r},\vec{r}_2,\cdots,\vec{r}_N)\right|^2
+    \left|\Psi_\mathrm{aux}(\vec{r},\vec{r}_2,\cdots,\vec{r}_N\,)\right|^2
 \label{density_aux}
 \end{equation}
 
@@ -3211,7 +3211,7 @@ For example, the electronic and force convergence criteria can be expressed as:
 \left\{\begin{aligned}
     \left|E_\mathrm{SCF}^{(j)}-E_\mathrm{SCF}^{(j-1)}\right|
     &<\eta_E \\
-    \max_I|\vec{F}_I|&<\eta_F
+    \max_I|\vec{F}_I\,|&<\eta_F
 \end{aligned}\right.
 \label{electronic_and_force_convergence}
 \end{equation}
@@ -3233,7 +3233,7 @@ The actual stopping criteria and numerical settings are given with the calculati
 \label{subsec:method_kpoints}
 
 Next, we consider the periodic electronic problem.
-We label a Bloch state $\ket{\psi_{n\vec{k}}}$ by its band index $n$ and wave vector $\vec{k}$,
+We label a Bloch state $\ket{\psi_{n\vec{k}}\,}$ by its band index $n$ and wave vector $\vec{k}$,
 and denote its one-particle energy by $E_{n\vec{k}}$.
 This is the periodic-system notation for the Kohn--Sham eigenvalue $\lambda_i$ in equation~\eqref{KS_equation_diagonal_dirac}.
 It is also the band-energy notation used in chapter~\ref{cha:fundamentals_b}.
@@ -3242,28 +3242,28 @@ For a lattice translation $\vec{L}$, the periodicity of the one-particle operato
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\psi_{n\vec{k}}}
-    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}} \\
-    \braket{\vec{r}+\vec{L}|u_{n\vec{k}}}
-    &=\braket{\vec{r}\,|u_{n\vec{k}}}
+    \ket{\psi_{n\vec{k}}\,}
+    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}\,} \\
+    \braket{\vec{r}+\vec{L}\,|u_{n\vec{k}}\,}
+    &=\braket{\vec{r}\,|u_{n\vec{k}}\,}
 \end{aligned}\right.
 \label{bloch_state_cell_periodic_method}
 \end{equation}
 
-here, $\ket{u_{n\vec{k}}}$ is the cell-periodic part of the Bloch state,
+here, $\ket{u_{n\vec{k}}\,}$ is the cell-periodic part of the Bloch state,
 and $\hat{\vec{r}}$ is the position operator.
 The Bloch phase carries the change between cells, while the cell-periodic part contains the variation within a cell.
-We normalize $\ket{u_{n\vec{k}}}$ over one unit cell;
+We normalize $\ket{u_{n\vec{k}}\,}$ over one unit cell;
 the corresponding Bloch state has the same cell normalization.
 This convention is also used for the electron-phonon matrix elements below.
 
 To solve this periodic problem numerically, we need a finite basis.
 In a plane-wave calculation, the rapidly varying orbitals near the nuclei are treated through a core-valence description.
-The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}}$ can then be expanded as:
+The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}\,}$ can then be expanded as:
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\widetilde{\psi}_{n\vec{k}}}
+    \ket{\widetilde{\psi}_{n\vec{k}}\,}
     &=\sum_{\vec{G}}C_{n\vec{k}}(\vec{G}\,)\ket{\vec{k}+\vec{G}\,} \\
     \braket{\vec{r}\,|\vec{k}+\vec{G}\,}
     &=\frac{1}{\sqrt{\Omega_\mathrm{cell}}}
@@ -3275,7 +3275,7 @@ The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}}$ can then be expan
 
 here, $\vec{G}$ is a reciprocal-lattice vector,
 $\Omega_\mathrm{cell}$ is the unit-cell volume,
-and $C_{n\vec{k}}(\vec{G})$ is the expansion coefficient.
+and $C_{n\vec{k}}(\vec{G}\,)$ is the expansion coefficient.
 The plane waves form the basis; an individual Bloch state is generally a superposition of them.
 In Hartree atomic units, we retain only the components satisfying:
 
@@ -3293,11 +3293,11 @@ For the VASP calculations, the projector augmented wave (PAW) method connects th
 
 \begin{equation}
 \begin{aligned}
-    \ket{\psi_{n\vec{k}}}
-    &=\ket{\widetilde{\psi}_{n\vec{k}}} \\
+    \ket{\psi_{n\vec{k}}\,}
+    &=\ket{\widetilde{\psi}_{n\vec{k}}\,} \\
     &\quad+
     \sum_a\left(\ket{\phi_a}-\ket{\widetilde{\phi}_a}\right)
-    \braket{\widetilde{p}_a|\widetilde{\psi}_{n\vec{k}}}
+    \braket{\widetilde{p}_a|\widetilde{\psi}_{n\vec{k}}\,}
 \end{aligned}
 \label{PAW_reconstruction_method}
 \end{equation}
@@ -3313,7 +3313,7 @@ The Quantum ESPRESSO calculations for superconductivity in section~\ref{2_method
 The datasets and their convergence settings must be specified for each calculation.
 
 Electronic quantities require integration over the Brillouin zone.
-For a quantity $A(\vec{k})$, we approximate its Brillouin-zone average by:
+For a quantity $A(\vec{k}\,)$, we approximate its Brillouin-zone average by:
 
 \begin{equation}
     \frac{1}{\Omega_\mathrm{BZ}}
@@ -3389,7 +3389,7 @@ We seek a collective displacement with a definite wave vector and frequency:
     u_{l\kappa\alpha}(t)
     =\mathrm{Re}\left[
     \frac{Q_{\vec{q}s}}{\sqrt{M_\kappa}}
-    e_{\kappa\alpha,s}(\vec{q})
+    e_{\kappa\alpha,s}(\vec{q}\,)
     \mathrm{e}^{\mathrm{i}(\vec{q}\cdot\vec{L}_l-\omega_{\vec{q}s}t)}
     \right]
 \label{phonon_normal_mode_method}
@@ -3406,21 +3406,21 @@ we obtain the dynamical matrix and its eigenvalue equation:
 
 \begin{equation}
 \left\{\begin{aligned}
-    D_{\kappa\alpha,\kappa'\beta}(\vec{q})
+    D_{\kappa\alpha,\kappa'\beta}(\vec{q}\,)
     &=
     \frac{1}{\sqrt{M_\kappa M_{\kappa'}}}
     \sum_l\Phi_{0\kappa\alpha,l\kappa'\beta}
     \,\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{L}_l} \\
     \sum_{\kappa'\beta}
-    D_{\kappa\alpha,\kappa'\beta}(\vec{q})
-    e_{\kappa'\beta,s}(\vec{q})
-    &=\omega_{\vec{q}s}^{2}e_{\kappa\alpha,s}(\vec{q})
+    D_{\kappa\alpha,\kappa'\beta}(\vec{q}\,)
+    e_{\kappa'\beta,s}(\vec{q}\,)
+    &=\omega_{\vec{q}s}^{2}e_{\kappa\alpha,s}(\vec{q}\,)
 \end{aligned}\right.
 \label{phonon_dynamical_matrix_method}
 \end{equation}
 
-here, the eigenvector components $e_{\kappa\alpha,s}(\vec{q})$ describe the mass-weighted displacement pattern,
-with normalization $\sum_{\kappa\alpha}|e_{\kappa\alpha,s}(\vec{q})|^2=1$.
+here, the eigenvector components $e_{\kappa\alpha,s}(\vec{q}\,)$ describe the mass-weighted displacement pattern,
+with normalization $\sum_{\kappa\alpha}|e_{\kappa\alpha,s}(\vec{q}\,)|^2=1$.
 The quantity $\omega_{\vec{q}s}$ is an angular frequency;
 the ordinary frequency is $\omega_{\vec{q}s}/(2\pi)$.
 Here, $\omega$ denotes a frequency, rather than the range-separation parameter used in section~\ref{sec:exchange_correlation_functional}.
@@ -3526,43 +3526,43 @@ describe the atomic displacement associated with this perturbation.
 Density-functional perturbation theory gives both the phonon response and the first-order change in the self-consistent potential~\cite{baroni2001phonons}.
 
 We now restore $\hbar$ explicitly, and keep $\omega_{\vec{q}s}$ as an angular frequency.
-Using the cell-periodic parts $\ket{u_{n\vec{k}}}$ of the Bloch states, normalized over a unit cell,
+Using the cell-periodic parts $\ket{u_{n\vec{k}}\,}$ of the Bloch states, normalized over a unit cell,
 we write the electron-phonon matrix element as~\cite{giustino2017electron}:
 
 \begin{equation}
-    g_{mn,s}(\vec{k},\vec{q})
+    g_{mn,s}(\vec{k},\vec{q}\,)
     =
     \sum_{\kappa\alpha}
     \left(\frac{\hbar}{2M_\kappa\omega_{\vec{q}s}}\right)^{1/2}
-    e_{\kappa\alpha,s}(\vec{q})
-    \bra{u_{m,\vec{k}+\vec{q}}}
+    e_{\kappa\alpha,s}(\vec{q}\,)
+    \bra{u_{m,\vec{k}+\vec{q}}\,}
     \partial_{\vec{q}\kappa\alpha}\hat{v}_\mathrm{KS}
-    \ket{u_{n\vec{k}}}_\mathrm{cell}
+    \ket{u_{n\vec{k}}\,}_\mathrm{cell}
 \label{electron_phonon_matrix_element_method}
 \end{equation}
 
 here, $\partial_{\vec{q}\kappa\alpha}\hat{v}_\mathrm{KS}$ denotes the cell-periodic part of the self-consistent perturbation operator generated by a unit-amplitude displacement of sublattice $\kappa$ along $\alpha$,
 with cell dependence $\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{L}_l}$.
 The factor $\mathrm{e}^{\mathrm{i}\vec{q}\cdot\vec{r}}$ is removed from the perturbation before taking the cell matrix element.
-Together with $e_{\kappa\alpha,s}(\vec{q})$,
+Together with $e_{\kappa\alpha,s}(\vec{q}\,)$,
 the mass-dependent prefactor sets the zero-point displacement scale for that atom and mode.
-The matrix element $g_{mn,s}(\vec{k},\vec{q})$ has the dimension of energy.
+The matrix element $g_{mn,s}(\vec{k},\vec{q}\,)$ has the dimension of energy.
 Zero-frequency rigid translations are excluded from this mode expression.
-The matrix element therefore describes the scattering of an electron from $\ket{\psi_{n\vec{k}}}$ to $\ket{\psi_{m,\vec{k}+\vec{q}}}$ by the phonon $(\vec{q},s)$.
+The matrix element therefore describes the scattering of an electron from $\ket{\psi_{n\vec{k}}\,}$ to $\ket{\psi_{m,\vec{k}+\vec{q}}\,}$ by the phonon $(\vec{q},s)$.
 Direct evaluation on dense reciprocal-space grids is expensive.
 We therefore first express the selected electronic subspace in a localized Wannier representation~\cite{pizzi2020wannier90}.
 For a uniform mesh of $N_\mathrm{k}$ points in the full Brillouin zone, the transformation is:
 
 \begin{equation}
-    \ket{w_{a\vec{L}}}
+    \ket{w_{a\vec{L}}\,}
     =\frac{1}{N_\mathrm{k}}\sum_{\vec{k}}
     \mathrm{e}^{-\mathrm{i}\vec{k}\cdot\vec{L}}
-    \sum_n U_{na}(\vec{k})\ket{\psi_{n\vec{k}}}
+    \sum_n U_{na}(\vec{k}\,)\ket{\psi_{n\vec{k}}\,}
 \label{wannier_transformation_method}
 \end{equation}
 
 here, $a$ labels a Wannier orbital and $\vec{L}$ labels its cell.
-The matrices $U(\vec{k})$ mix the chosen Bloch states to obtain a smooth, localized representation.
+The matrices $U(\vec{k}\,)$ mix the chosen Bloch states to obtain a smooth, localized representation.
 For an isolated set of bands, this mixing is unitary within that set.
 For entangled bands, a subspace must first be selected within the chosen energy windows.
 The factor $1/N_\mathrm{k}$ follows from the cell-normalized Bloch states introduced in equation~\eqref{bloch_state_cell_periodic_method};
@@ -3572,16 +3572,16 @@ We can then express the one-particle operator by matrix elements between localiz
 
 \begin{equation}
 \left\{\begin{aligned}
-    h_{ab}(\vec{L})
-    &=\bra{w_{a\vec{0}}}\hat{h}_\mathrm{KS}\ket{w_{b\vec{L}}} \\
-    h_{ab}^{\mathrm{W}}(\vec{k})
-    &=\sum_{\vec{L}}\mathrm{e}^{\mathrm{i}\vec{k}\cdot\vec{L}}h_{ab}(\vec{L})
+    h_{ab}(\vec{L}\,)
+    &=\bra{w_{a\vec{0}}\,}\hat{h}_\mathrm{KS}\ket{w_{b\vec{L}}\,} \\
+    h_{ab}^{\mathrm{W}}(\vec{k}\,)
+    &=\sum_{\vec{L}}\mathrm{e}^{\mathrm{i}\vec{k}\cdot\vec{L}}h_{ab}(\vec{L}\,)
 \end{aligned}\right.
 \label{wannier_hamiltonian_interpolation_method}
 \end{equation}
 
-here, $h_{ab}(\vec{L})$ couples orbitals separated by a lattice translation,
-and $h_{ab}^{\mathrm{W}}(\vec{k})$ is the interpolated matrix in the Wannier basis.
+here, $h_{ab}(\vec{L}\,)$ couples orbitals separated by a lattice translation,
+and $h_{ab}^{\mathrm{W}}(\vec{k}\,)$ is the interpolated matrix in the Wannier basis.
 When the real-space matrix elements are sufficiently localized,
 this Fourier sum can be evaluated on a finer mesh.
 Diagonalizing it gives the interpolated band energies and the transformation back to the band basis.
@@ -3604,8 +3604,8 @@ the Fermi-surface average gives the Eliashberg spectral function:
     &=
     \frac{1}{N(E_\mathrm{F})}
     \sum_{mn,s}\sum_{\vec{k},\vec{q}}
-    w_{\vec{k}}w_{\vec{q}}
-    |g_{mn,s}(\vec{k},\vec{q})|^2 \\
+    w_{\vec{k}}w_{\vec{q}}\,
+    |g_{mn,s}(\vec{k},\vec{q}\,)|^2 \\
     &\quad\times
     \delta(E_{n\vec{k}}-E_\mathrm{F})
     \delta(E_{m,\vec{k}+\vec{q}}-E_\mathrm{F})
