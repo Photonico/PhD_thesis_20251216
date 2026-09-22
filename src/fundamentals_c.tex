@@ -29,6 +29,7 @@ The topological problem instead compares states at different wave vectors.
 Before making this comparison, we therefore need to identify both the states and the subspace that they form.
 
 \subsection{From band energies to electronic states}
+\label{subsec:method_topology}
 
 We begin with the Bloch representation introduced in equation~\eqref{bloch_state_cell_periodic_method}.
 For a periodic one-particle hamiltonian $\hat{h}$, we write:
@@ -53,6 +54,30 @@ normalized over one unit cell as in chapter~\ref{cha:fundamentals_a}.
 In this chapter, inner products between cell-periodic states use this cell normalization.
 The operator $\hat{h}$ denotes the effective electronic hamiltonian,
 including spin-orbit coupling when we consider the spinful topological classification below.
+
+We now make this spin dependence explicit by returning to the Kohn--Sham equation~\eqref{KS_equation_diagonal_dirac}.
+In the collinear treatment of subsection~\ref{subsec:method_magnetism}, the two spin channels are treated separately.
+With spin-orbit coupling, these components can mix, so the spatial and spin parts of an electronic state need not separate.
+We therefore write the electronic state as a spinor:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \ket{\psi_{n\vec{k}}}
+    &=
+    \ket{\psi_{n\vec{k},\uparrow}}\otimes\ket{\uparrow}
+    +
+    \ket{\psi_{n\vec{k},\downarrow}}\otimes\ket{\downarrow} \\
+    \hat{h}_\mathrm{KS}^\mathrm{SOC}\ket{\psi_{n\vec{k}}}
+    &=E_{n\vec{k}}\ket{\psi_{n\vec{k}}}
+\end{aligned}\right.
+\label{KS_spinor_equation_method}
+\end{equation}
+
+here, $\ket{\psi_{n\vec{k},\uparrow}}$ and $\ket{\psi_{n\vec{k},\downarrow}}$ denote the spatial components,
+while $\ket{\uparrow}$ and $\ket{\downarrow}$ form an orthonormal spin basis.
+The operator $\hat{h}_\mathrm{KS}^\mathrm{SOC}$ includes spin-orbit coupling and supplies the effective hamiltonian $\hat{h}$ for this calculation.
+The eigenvalues $E_{n\vec{k}}$ retain the band-energy notation introduced in subsection~\ref{subsec:method_kpoints}.
+This spinor description provides the states used in the parity analysis.
 
 Before comparing states across the Brillouin zone, we recall why its boundary points can represent the same crystal momentum.
 For any lattice translation $\vec{L}$, a reciprocal-lattice vector $\vec{G}$ satisfies
@@ -153,7 +178,6 @@ we require a positive direct separation at every wave vector:
 \label{minimum_direct_gap_topology}
 \end{equation}
 
-This is the separation introduced in equation~\eqref{isolated_band_subspace_method}.
 The condition concerns the boundary between the selected and excluded bands.
 Degeneracies wholly inside the selected subspace do not close this separation.
 For a smooth periodic hamiltonian, the separation allows the spectral projector
@@ -192,28 +216,33 @@ At the corresponding filling, this overlap can produce electron and hole pockets
 The states below $E_\mathrm{F}$ are consequently not the same fixed-rank subspace at every wave vector.
 We must therefore specify the band count when assigning a topological index to such a subspace.
 
+Figure~\ref{fig:band_subspace_and_insulating_gap} compares four schematic one-dimensional cuts through a band structure.
+The model dispersions use arbitrary energy units and a dimensionless periodic coordinate $k$;
+they are not calculated beryllene bands.
+The solid blue and teal curves represent the boundary bands $E_{2N_\mathrm{p},\vec{k}}$ and $E_{2N_\mathrm{p}+1,\vec{k}}$, respectively.
+In (d), the dashed blue curve represents $E_{2N_\mathrm{p}-2,\vec{k}}$ for $N_\mathrm{p}\geq2$;
+coincident partners of the two selected pairs are not drawn separately.
+The grey dashed line denotes the illustrative Fermi level $E_\mathrm{F}=0$.
+
+Orange arrows compare energies at the same wave vector, while purple arrows and dotted extrema indicate the indirect separation.
+The purple shading in (b) marks the indirect energy overlap.
+Orange circles identify the contacts in (c) and (d).
+
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.8\textwidth]{figures_ch4/4.1_band_subspace.pdf}
 \caption{Schematic distinction between an isolated band subspace and an insulating gap.
-The solid blue and teal curves represent the boundary bands $E_{2N_\mathrm{p},\vec{k}}$ and $E_{2N_\mathrm{p}+1,\vec{k}}$, respectively.
-(a) Positive direct and indirect gaps permit an insulating filling.
-(b) The direct separation remains positive despite an indirect energy overlap, shaded in purple.
-(c) A band touching closes the separation of the selected subspace.
-(d) A crossing wholly inside the selected subspace leaves its separation from the excluded bands open.
-The dashed blue curve represents $E_{2N_\mathrm{p}-2,\vec{k}}$ for $N_\mathrm{p}\geq2$; coincident partners of the two selected pairs are not drawn separately.
-Orange arrows compare energies at the same wave vector; purple arrows and dotted extrema indicate the indirect separation.
-Orange circles mark the contacts in (c) and (d).
-The grey dashed line denotes the illustrative Fermi level $E_\mathrm{F}=0$.
-The model dispersions use arbitrary energy units and a dimensionless periodic coordinate $k$.
-They are schematic one-dimensional cuts, not calculated beryllene bands; isolation over the full two-dimensional Brillouin zone requires a separate check.}
+(a) Global gap, (b) indirect energy overlap, (c) contact between selected and excluded bands,
+and (d) crossing within the selected subspace.}
 \label{fig:band_subspace_and_insulating_gap}
 \end{figure}
 
-Figure~\ref{fig:band_subspace_and_insulating_gap} separates these four situations.
-The first two permit a smooth fixed-rank projector, provided the direct separation holds over the full Brillouin zone.
-The third loses the spectral separation at the boundary of the chosen subspace.
-In the fourth, both crossing pairs belong to the selected subspace on either side of the crossing.
+In figure~\ref{fig:band_subspace_and_insulating_gap}(a), positive direct and indirect gaps permit an insulating filling.
+In (b), the direct separation remains positive despite the indirect energy overlap.
+Both situations permit a smooth fixed-rank projector, provided the direct separation holds over the full two-dimensional Brillouin zone.
+This isolation requires a separate check beyond the illustrated cuts.
+In (c), a band touching closes the separation between the selected and excluded bands.
+In (d), both crossing pairs belong to the selected subspace on either side of the crossing.
 The two pairs exchange their order in energy, but both remain included in the projector.
 Since the direct separation remains positive, this internal degeneracy does not prevent the selected subspace from varying smoothly.
 We can now discuss how the states within an isolated subspace are connected,
@@ -400,8 +429,9 @@ Together, these two symmetries provide the information used in the parity criter
 
 \subsection{Spinor states and time reversal}
 
-With spin-orbit coupling, the spatial and spin parts of an electronic state need not separate.
-Following equation~\eqref{KS_spinor_equation_method}, we express the cell-periodic state as:
+Equation~\eqref{KS_spinor_equation_method} describes the full electronic spinor.
+Using the Bloch representation in equation~\eqref{bloch_hamiltonian_topology},
+we now express the corresponding cell-periodic state as:
 
 \begin{equation}
     \ket{u_{n\vec{k}}}
@@ -515,19 +545,19 @@ Only the even or odd choice of each coefficient matters, leaving $2\times2=4$ in
 Their names depend on the reciprocal lattice.
 For the hexagonal Brillouin zone of a triangular lattice,
 they are $\Gamma$ and three inequivalent $\mathrm{M}$ points.
-For a square lattice, they are $\Gamma$, two edge-centre points, and a corner point.
+For a square lattice, they are $\Gamma$, two edge-centre points, and the corner point $\mathrm{M}$.
 We label the two edge-centre representatives as $\mathrm{X}$ and $\mathrm{Y}$
 to keep all four points explicit before using any additional rotational symmetry.
+Figure~\ref{fig:four_trim_two_dimensions} shows these two Brillouin zones.
+The representatives follow equation~\eqref{four_trim_two_dimensions_topology},
+with reciprocal-lattice translations used where necessary to place them in the displayed zones.
+The diagrams indicate momentum locations only; they contain no calculated parity eigenvalues.
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.8\textwidth]{figures_ch4/4.2_trim.pdf}
-\caption{Time-reversal invariant momenta in schematic two-dimensional Brillouin zones.
-(a) A triangular lattice has $\Gamma$ and three inequivalent $\mathrm{M}$ points in its hexagonal Brillouin zone.
-(b) A square lattice has $\Gamma$, $\mathrm{X}$, $\mathrm{Y}$, and $\mathrm{M}$ as four representatives.
-Filled points identify one representative of each TRIM, while open points mark periodic copies on the boundary.
-The points satisfy equation~\eqref{four_trim_two_dimensions_topology}, with representatives translated by reciprocal-lattice vectors where necessary.
-The diagrams indicate momentum locations only; they contain no calculated parity eigenvalues.}
+\caption{Time-reversal invariant momenta in schematic Brillouin zones of (a) triangular and (b) square lattices.
+Filled points identify inequivalent TRIM; open points mark periodic boundary copies.}
 \label{fig:four_trim_two_dimensions}
 \end{figure}
 
@@ -555,7 +585,7 @@ For an inversion-symmetric hamiltonian, we have:
 \begin{equation}
 \left\{\begin{aligned}
     \hat{\mathcal{I}}^2&=\hat{I} \\
-    \hat{\mathcal{I}}\hat{h}(\vec{k})\hat{\mathcal{I}}^{-1}
+    \hat{\mathcal{I}}\hat{h}(\vec{k}\,)\hat{\mathcal{I}}^{-1}
     &=\hat{h}(-\vec{k}\,) \\
     [\hat{\mathcal{I}},\hat{\Theta}]&=0
 \end{aligned}\right.
@@ -756,8 +786,11 @@ The small atomic number of an element does not justify omitting spin-orbit coupl
 a small coupling may still affect a band crossing or a small separation relevant to the selected subspace.
 
 We then select the fixed number $2N_\mathrm{p}$ of bands and examine
-$\Delta_\mathrm{dir}(\vec{k})$ from equation~\eqref{minimum_direct_gap_topology}.
-For an insulator, this selection can coincide with all the occupied spinor bands.
+$\Delta_\mathrm{dir}(\vec{k}\,)$ from equation~\eqref{minimum_direct_gap_topology}.
+For an insulator whose occupied bands form this subspace, $2N_\mathrm{p}=N_\mathrm{occ}$,
+where $N_\mathrm{occ}$ counts occupied spinor bands rather than Kramers pairs.
+Equations~\eqref{parity_product_at_trim_topology} and~\eqref{fu_kane_index_topology}
+then have the same counting as equations~\eqref{eq:proj3_parity_product} and~\eqref{eq:proj3_z2_index} in chapter~\ref{cha:project_beryllene}.
 For a metal, the number of states below $E_\mathrm{F}$ can change with $\vec{k}$,
 so the phrase ``occupied bands'' alone does not identify the subspace.
 Numerical smearing of the occupations also does not define a fixed-rank projector.

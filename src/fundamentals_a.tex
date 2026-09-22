@@ -3167,7 +3167,9 @@ The previous sections established the density functional theory framework used i
 We now connect this framework to the calculations in the research chapters.
 We start from the total energy and its derivatives,
 which determine structural relaxation, lattice vibrations, and atomic motion.
-We then introduce spin polarization, electron-phonon coupling, and band topology.
+We then introduce spin polarization and electron-phonon coupling.
+Spin-orbit coupling and band topology are developed in chapter~\ref{cha:fundamentals_c},
+where we examine the symmetry and connection of the electronic states.
 The settings for individual systems are discussed in sections~\ref{1_calculation_methods}, \ref{2_methods}, and~\ref{3_methods}.
 
 We retain the Hartree atomic units introduced in section~\ref{sec:manybody_schrodinger_equation}.
@@ -3262,10 +3264,11 @@ The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}}$ can then be expan
 \begin{equation}
 \left\{\begin{aligned}
     \ket{\widetilde{\psi}_{n\vec{k}}}
-    &=\sum_{\vec{G}}C_{n\vec{k}}(\vec{G})\ket{\vec{k}+\vec{G}} \\
-    \braket{\vec{r}\,|\vec{k}+\vec{G}}
+    &=\sum_{\vec{G}}C_{n\vec{k}}(\vec{G}\,)\ket{\vec{k}+\vec{G}\,} \\
+    \braket{\vec{r}\,|\vec{k}+\vec{G}\,}
     &=\frac{1}{\sqrt{\Omega_\mathrm{cell}}}
-    \mathrm{e}^{\mathrm{i}(\vec{k}+\vec{G})\cdot\vec{r}}
+    \mathrm{e}^{\mathrm{i}(\vec{k}+\vec{G}
+    ,)\cdot\vec{r}}
 \end{aligned}\right.
 \label{plane_wave_expansion_method}
 \end{equation}
@@ -3277,7 +3280,7 @@ The plane waves form the basis; an individual Bloch state is generally a superpo
 In Hartree atomic units, we retain only the components satisfying:
 
 \begin{equation}
-    \frac{1}{2}|\vec{k}+\vec{G}|^2\leq E_\mathrm{cut}
+    \frac{1}{2}|\vec{k}+\vec{G}\,|^2\leq E_\mathrm{cut}
 \label{plane_wave_cutoff_method}
 \end{equation}
 
@@ -3314,8 +3317,8 @@ For a quantity $A(\vec{k})$, we approximate its Brillouin-zone average by:
 
 \begin{equation}
     \frac{1}{\Omega_\mathrm{BZ}}
-    \int_\mathrm{BZ}\dif^3{k}\,A(\vec{k})
-    \approx \sum_{\vec{k}}w_{\vec{k}}A(\vec{k}),
+    \int_\mathrm{BZ}\dif^3{k}\,A(\vec{k}\,)
+    \approx \sum_{\vec{k}}w_{\vec{k}}A(\vec{k}\,),
     \qquad
     \sum_{\vec{k}}w_{\vec{k}}=1
 \label{brillouin_zone_quadrature}
@@ -3678,73 +3681,7 @@ Chapter~\ref{cha:project_boron} compares bulk, monolayer, and hydrogen-terminate
 Section~\ref{2_superconducting} reports the coupling strengths and transition temperatures.
 The electronic reference state, fine meshes, spectral integration, Coulomb pseudopotential, and form of the transition-temperature estimate must be identified with those results.
 
-\subsection{Spin-orbit coupling and band topology}
-\label{subsec:method_topology}
-
-We finally return to the one-particle description in equation~\eqref{KS_equation_diagonal_dirac}.
-In the collinear treatment above, the two spin channels are treated separately.
-With spin-orbit coupling, these components can mix.
-We therefore write the electronic state as a spinor:
-
-\begin{equation}
-\left\{\begin{aligned}
-    \ket{\psi_{n\vec{k}}}
-    &=
-    \ket{\psi_{n\vec{k},\uparrow}}\otimes\ket{\uparrow}
-    +
-    \ket{\psi_{n\vec{k},\downarrow}}\otimes\ket{\downarrow} \\
-    \hat{h}_\mathrm{KS}^\mathrm{SOC}\ket{\psi_{n\vec{k}}}
-    &=E_{n\vec{k}}\ket{\psi_{n\vec{k}}}
-\end{aligned}\right.
-\label{KS_spinor_equation_method}
-\end{equation}
-
-here, $\ket{\psi_{n\vec{k},\uparrow}}$ and $\ket{\psi_{n\vec{k},\downarrow}}$ denote the spatial components,
-while $\ket{\uparrow}$ and $\ket{\downarrow}$ form an orthonormal spin basis.
-The operator $\hat{h}_\mathrm{KS}^\mathrm{SOC}$ includes spin-orbit coupling.
-The eigenvalues $E_{n\vec{k}}$ retain the band-energy notation introduced in subsection~\ref{subsec:method_kpoints}.
-This spinor description provides the states used in the parity analysis.
-
-For a two-dimensional system with time-reversal and inversion symmetry,
-consider a subspace formed by the lowest $2N_\mathrm{p}$ spinor bands.
-Here, $N_\mathrm{p}$ denotes the number of Kramers pairs.
-For this subspace to remain separated from the remaining bands,
-we require:
-
-\begin{equation}
-    E_{2N_\mathrm{p}+1,\vec{k}}-E_{2N_\mathrm{p},\vec{k}}>0,
-    \qquad \vec{k}\in\mathrm{BZ}
-\label{isolated_band_subspace_method}
-\end{equation}
-
-This is a direct-gap condition throughout the Brillouin zone.
-It cannot be established only from the time-reversal invariant momenta or from the plotted high-symmetry path.
-It also does not exclude an indirect overlap between energies at different k points.
-Therefore, an isolated band subspace can exist without an insulating state at the Fermi level.
-
-At each of the four time-reversal invariant momenta $\Lambda_i$,
-the two states in a Kramers pair have the same parity.
-The Fu--Kane criterion therefore takes one parity eigenvalue from each pair~\cite{fu2007topological}:
-
-\begin{equation}
-\left\{\begin{aligned}
-    \delta_i&=\prod_{m=1}^{N_\mathrm{p}}\xi_{2m}(\Lambda_i) \\
-    (-1)^\nu&=\prod_{i=1}^{4}\delta_i
-\end{aligned}\right.
-\label{Fu_Kane_parity_criterion_method}
-\end{equation}
-
-here, $\Lambda_i=-\Lambda_i+\vec{G}_i$ for a reciprocal-lattice vector $\vec{G}_i$,
-and $\xi_{2m}(\Lambda_i)=\pm1$ denotes the parity eigenvalue of one state in the $m$th Kramers pair.
-The values $\nu=0$ and $\nu=1$ describe trivial and non-trivial $Z_2$ topology of the specified subspace, respectively.
-
-For an insulator whose occupied bands form this subspace,
-$2N_\mathrm{p}=N_\mathrm{occ}$.
-Equation~\eqref{Fu_Kane_parity_criterion_method} then has the same counting as equations~\eqref{eq:proj3_parity_product} and~\eqref{eq:proj3_z2_index} in chapter~\ref{cha:project_beryllene}.
-For the metallic beryllene systems, the chosen subspace and the separation in equation~\eqref{isolated_band_subspace_method} must be checked before interpreting the parity product.
-A non-trivial product alone does not establish a topological insulator.
-
-At this stage, we have connected the electronic ground-state framework to structural, vibrational, magnetic, superconducting, and topological calculations.
+At this stage, we have connected the electronic ground-state framework to structural, vibrational, magnetic, and superconducting calculations.
 We now turn to chapter~\ref{cha:fundamentals_b},
 where the same electronic states enter the response to an external electromagnetic field.
 The transition matrix elements and energy-conservation condition in equations~\eqref{independent_particle_imaginary_dielectric_tensor} and~\eqref{dirac_energy_conservation_condition}
