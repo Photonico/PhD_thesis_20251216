@@ -36,20 +36,20 @@ For a periodic one-particle hamiltonian $\hat{h}$, we write:
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\psi_{n\vec{k}}}
-    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}} \\
-    \hat{h}(\vec{k})
+    \ket{\psi_{n\vec{k}}\,}
+    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}\,} \\
+    \hat{h}(\vec{k}\,)
     &\coloneqq\mathrm{e}^{-\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}
     \hat{h}\,\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}} \\
-    \hat{h}(\vec{k})\ket{u_{n\vec{k}}}
-    &=E_{n\vec{k}}\ket{u_{n\vec{k}}}
+    \hat{h}(\vec{k}\,)\ket{u_{n\vec{k}}\,}
+    &=E_{n\vec{k}}\ket{u_{n\vec{k}}\,}
 \end{aligned}\right.
 \label{bloch_hamiltonian_topology}
 \end{equation}
 
 here, $n$ denotes the band index, $\vec{k}$ denotes the crystal wave vector,
 and $\hat{\vec{r}}$ is the position operator.
-The state $\ket{u_{n\vec{k}}}$ is the cell-periodic part of the Bloch state,
+The state $\ket{u_{n\vec{k}}\,}$ is the cell-periodic part of the Bloch state,
 normalized over one unit cell as in chapter~\ref{cha:fundamentals_a}.
 In this chapter, inner products between cell-periodic states use this cell normalization.
 The operator $\hat{h}$ denotes the effective electronic hamiltonian,
@@ -62,13 +62,13 @@ We therefore write the electronic state as a spinor:
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\psi_{n\vec{k}}}
+    \ket{\psi_{n\vec{k}}\,}
     &=
     \ket{\psi_{n\vec{k},\uparrow}}\otimes\ket{\uparrow}
     +
     \ket{\psi_{n\vec{k},\downarrow}}\otimes\ket{\downarrow} \\
-    \hat{h}_\mathrm{KS}^\mathrm{SOC}\ket{\psi_{n\vec{k}}}
-    &=E_{n\vec{k}}\ket{\psi_{n\vec{k}}}
+    \hat{h}_\mathrm{KS}^\mathrm{SOC}\ket{\psi_{n\vec{k}}\,}
+    &=E_{n\vec{k}}\ket{\psi_{n\vec{k}}\,}
 \end{aligned}\right.
 \label{KS_spinor_equation_method}
 \end{equation}
@@ -88,9 +88,9 @@ For corresponding representatives of the same Bloch state, we choose~\cite{fu200
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\psi_{n,\vec{k}+\vec{G}}}&=\ket{\psi_{n\vec{k}}} \\
-    \ket{u_{n,\vec{k}+\vec{G}}}
-    &=\mathrm{e}^{-\mathrm{i}\vec{G}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}}
+    \ket{\psi_{n,\vec{k}+\vec{G}}\,}&=\ket{\psi_{n\vec{k}}\,} \\
+    \ket{u_{n,\vec{k}+\vec{G}}\,}
+    &=\mathrm{e}^{-\mathrm{i}\vec{G}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}\,}
 \end{aligned}\right.
 \label{reciprocal_lattice_identification_topology}
 \end{equation}
@@ -108,16 +108,16 @@ As we move through the Brillouin zone, these overlaps describe how the electroni
 Band topology concerns the global structure of this connection.
 
 There is already a freedom in specifying an individual normalized state.
-For any real phase $\phi_n(\vec{k})$, we can replace it by:
+For any real phase $\phi_n(\vec{k}\,)$, we can replace it by:
 
 \begin{equation}
-    \ket{u'_{n\vec{k}}}
-    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k})}\ket{u_{n\vec{k}}}
+    \ket{u'_{n\vec{k}}\,}
+    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}\,}
 \label{bloch_phase_freedom_topology}
 \end{equation}
 
 This replacement changes neither the band energy nor the projector
-$\ket{u_{n\vec{k}}}\bra{u_{n\vec{k}}}$.
+$\ket{u_{n\vec{k}}\,}\bra{u_{n\vec{k}}\,}$.
 It therefore represents the same physical state.
 However, a derivative with respect to $\vec{k}$ also differentiates the chosen phase.
 Consequently, we must account for this freedom when connecting states at different wave vectors.
@@ -136,9 +136,9 @@ We therefore retain a space of possible one-electron states, rather than choosin
 The projector onto the selected subspace is then:
 
 \begin{equation}
-    \hat{\mathcal{P}}(\vec{k})
+    \hat{\mathcal{P}}(\vec{k}\,)
     \coloneqq\sum_{n=1}^{2N_\mathrm{p}}
-    \ket{u_{n\vec{k}}}\bra{u_{n\vec{k}}}
+    \ket{u_{n\vec{k}}\,}\bra{u_{n\vec{k}}\,}
 \label{band_subspace_projector_topology}
 \end{equation}
 
@@ -146,19 +146,19 @@ here, the rank is the number of independent states spanning the subspace.
 Its value $2N_\mathrm{p}$ is fixed throughout the Brillouin zone.
 The projector specifies which states belong to the subspace,
 without selecting a particular basis within it.
-To see its action, we apply it to a cell-periodic state $\ket{v_{\vec{k}}}$ at the same wave vector:
+To see its action, we apply it to a cell-periodic state $\ket{v_{\vec{k}}\,}$ at the same wave vector:
 
 \begin{equation}
-    \hat{\mathcal{P}}(\vec{k})\ket{v_{\vec{k}}}
+    \hat{\mathcal{P}}(\vec{k}\,)\ket{v_{\vec{k}}\,}
     =\sum_{n=1}^{2N_\mathrm{p}}
-    \ket{u_{n\vec{k}}}\braket{u_{n\vec{k}}|v_{\vec{k}}}
+    \ket{u_{n\vec{k}}\,}\braket{u_{n\vec{k}}\,|v_{\vec{k}}\,}
 \label{band_projector_action_topology}
 \end{equation}
 
 Each overlap gives the component along one selected basis state.
 The projector keeps these components and removes those orthogonal to the selected subspace.
 Consequently, it leaves a state inside the subspace unchanged, and applying it twice gives
-$\hat{\mathcal{P}}^2(\vec{k})=\hat{\mathcal{P}}(\vec{k})$.
+$\hat{\mathcal{P}}^2(\vec{k}\,)=\hat{\mathcal{P}}(\vec{k}\,)$.
 In this sense, the projector describes the whole selected space independently of how its basis states are labelled.
 
 This distinction becomes useful when bands inside the selected subspace cross or become degenerate.
@@ -170,10 +170,10 @@ we require a positive direct separation at every wave vector:
 
 \begin{equation}
 \left\{\begin{aligned}
-    \Delta_\mathrm{dir}(\vec{k})
+    \Delta_\mathrm{dir}(\vec{k}\,)
     &\coloneqq E_{2N_\mathrm{p}+1,\vec{k}}-E_{2N_\mathrm{p},\vec{k}} \\
     \Delta_\mathrm{dir}^\mathrm{min}
-    &\coloneqq\min_{\vec{k}\in\mathrm{BZ}}\Delta_\mathrm{dir}(\vec{k})>0
+    &\coloneqq\min_{\vec{k}\in\mathrm{BZ}}\Delta_\mathrm{dir}(\vec{k}\,)>0
 \end{aligned}\right.
 \label{minimum_direct_gap_topology}
 \end{equation}
@@ -181,7 +181,7 @@ we require a positive direct separation at every wave vector:
 The condition concerns the boundary between the selected and excluded bands.
 Degeneracies wholly inside the selected subspace do not close this separation.
 For a smooth periodic hamiltonian, the separation allows the spectral projector
-$\hat{\mathcal{P}}(\vec{k})$ to vary smoothly across the Brillouin zone.
+$\hat{\mathcal{P}}(\vec{k}\,)$ to vary smoothly across the Brillouin zone.
 The choice of basis for that projector may still require different local phase conventions.
 
 We next ask whether the same condition also makes the system insulating.
@@ -266,11 +266,11 @@ This simpler case allows us to identify the phase information before returning t
 For a small displacement $\dif\vec{k}$, the overlap between neighbouring cell-periodic states is:
 
 \begin{equation}
-    \braket{u_{n\vec{k}}|u_{n,\vec{k}+\dif\vec{k}}}
+    \braket{u_{n\vec{k}}\,|u_{n,\vec{k}+\dif\vec{k}}\,}
     =1+
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}
+    \bra{u_{n\vec{k}}\,}\nabla_{\vec{k}}\ket{u_{n\vec{k}}\,}
     \cdot\dif\vec{k}
-    +\mathcal{O}(|\dif\vec{k}|^2)
+    +\mathcal{O}(|\dif\vec{k}\,|^2)
 \label{neighbouring_bloch_overlap_topology}
 \end{equation}
 
@@ -278,25 +278,25 @@ To identify this first-order change, we differentiate the normalization conditio
 
 \begin{equation}
 \begin{aligned}
-    0&=\nabla_{\vec{k}}\braket{u_{n\vec{k}}|u_{n\vec{k}}} \\
-    &=\bigl(\nabla_{\vec{k}}\bra{u_{n\vec{k}}}\bigr)\ket{u_{n\vec{k}}}
-    +\bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}} \\
+    0&=\nabla_{\vec{k}}\braket{u_{n\vec{k}}\,|u_{n\vec{k}}\,} \\
+    &=\bigl(\nabla_{\vec{k}}\bra{u_{n\vec{k}}\,}\bigr)\ket{u_{n\vec{k}}\,}
+    +\bra{u_{n\vec{k}}\,}\nabla_{\vec{k}}\ket{u_{n\vec{k}}\,} \\
     &=2\operatorname{Re}\!\left[
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}\right]
+    \bra{u_{n\vec{k}}\,}\nabla_{\vec{k}}\ket{u_{n\vec{k}}\,}\right]
 \end{aligned}
 \label{normalization_derivative_topology}
 \end{equation}
 
 The two derivative terms are complex conjugates of each other.
 Their sum therefore requires the real part of
-$\bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}$ to vanish.
+$\bra{u_{n\vec{k}}\,}\nabla_{\vec{k}}\ket{u_{n\vec{k}}\,}$ to vanish.
 The first-order change of the overlap therefore carries a phase.
 We describe this phase variation by introducing the Berry connection~\cite{berry1984quantal}:
 
 \begin{equation}
-    \vec{\mathcal{A}}_n(\vec{k})
+    \vec{\mathcal{A}}_n(\vec{k}\,)
     \coloneqq\mathrm{i}\,
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}
+    \bra{u_{n\vec{k}}\,}\nabla_{\vec{k}}\ket{u_{n\vec{k}}\,}
 \label{berry_connection_topology}
 \end{equation}
 
@@ -311,11 +311,11 @@ Differentiating both the phase factor and the state gives:
 
 \begin{equation}
 \begin{aligned}
-    \vec{\mathcal{A}}'_n(\vec{k})
-    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k})}
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}
-    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k})}\ket{u_{n\vec{k}}}\right] \\
-    &=\vec{\mathcal{A}}_n(\vec{k})-\nabla_{\vec{k}}\phi_n(\vec{k})
+    \vec{\mathcal{A}}'_n(\vec{k}\,)
+    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k}\,)}
+    \bra{u_{n\vec{k}}\,}\nabla_{\vec{k}}
+    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}\,}\right] \\
+    &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\phi_n(\vec{k}\,)
 \end{aligned}
 \label{berry_connection_gauge_transformation_topology}
 \end{equation}
@@ -331,7 +331,7 @@ For a smooth gauge that is single-valued around this path, the Berry phase is:
 
 \begin{equation}
     \gamma_n(C)
-    =\oint_C\vec{\mathcal{A}}_n(\vec{k})\cdot\dif\vec{k}
+    =\oint_C\vec{\mathcal{A}}_n(\vec{k}\,)\cdot\dif\vec{k}
     \qquad (\mathrm{mod}\ 2\pi)
 \label{berry_phase_closed_path_topology}
 \end{equation}
@@ -349,7 +349,7 @@ With the endpoint identified with the starting point, we write:
     \gamma_n(C)
     =-\lim_{M\rightarrow\infty}\arg
     \prod_{j=0}^{M-1}
-    \braket{u_{n\vec{k}_j}|u_{n\vec{k}_{j+1}}}
+    \braket{u_{n\vec{k}_j}\,|u_{n\vec{k}_{j+1}}\,}
     \qquad (\mathrm{mod}\ 2\pi)
 \label{berry_phase_overlap_product_topology}
 \end{equation}
@@ -379,17 +379,17 @@ Within its $2N_\mathrm{p}$-dimensional subspace, we may choose a different ortho
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{u'_{a\vec{k}}}
+    \ket{u'_{a\vec{k}}\,}
     &=\sum_{n=1}^{2N_\mathrm{p}}
-    \ket{u_{n\vec{k}}}U_{na}(\vec{k}) \\
-    U^\dagger(\vec{k})U(\vec{k})&=I \\
-    \sum_{a=1}^{2N_\mathrm{p}}\ket{u'_{a\vec{k}}}\bra{u'_{a\vec{k}}}
-    &=\hat{\mathcal{P}}(\vec{k})
+    \ket{u_{n\vec{k}}\,}U_{na}(\vec{k}\,) \\
+    U^\dagger(\vec{k}\,)U(\vec{k}\,)&=I \\
+    \sum_{a=1}^{2N_\mathrm{p}}\ket{u'_{a\vec{k}}\,}\bra{u'_{a\vec{k}}\,}
+    &=\hat{\mathcal{P}}(\vec{k}\,)
 \end{aligned}\right.
 \label{band_subspace_basis_transformation_topology}
 \end{equation}
 
-here, $U(\vec{k})$ is a unitary matrix and $I$ is the identity matrix within the selected subspace.
+here, $U(\vec{k}\,)$ is a unitary matrix and $I$ is the identity matrix within the selected subspace.
 The transformed basis need not diagonalize the hamiltonian when it mixes states of different energies.
 Nevertheless, it describes the same projector and therefore the same band subspace.
 This is the multi-state counterpart of the phase freedom introduced earlier.
@@ -399,17 +399,17 @@ Applying the same derivative as in equation~\eqref{berry_connection_topology} to
 
 \begin{equation}
 \left\{\begin{aligned}
-    [\vec{\mathcal{A}}(\vec{k})]_{mn}
-    &=\mathrm{i}\bra{u_{m\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}} \\
-    \vec{\mathcal{A}}'(\vec{k})
-    &=U^\dagger(\vec{k})\vec{\mathcal{A}}(\vec{k})U(\vec{k})
-    +\mathrm{i}\,U^\dagger(\vec{k})\nabla_{\vec{k}}U(\vec{k})
+    [\vec{\mathcal{A}}(\vec{k}\,)]_{mn}
+    &=\mathrm{i}\bra{u_{m\vec{k}}\,}\nabla_{\vec{k}}\ket{u_{n\vec{k}}\,} \\
+    \vec{\mathcal{A}}'(\vec{k}\,)
+    &=U^\dagger(\vec{k}\,)\vec{\mathcal{A}}(\vec{k}\,)U(\vec{k}\,)
+    +\mathrm{i}\,U^\dagger(\vec{k}\,)\nabla_{\vec{k}}U(\vec{k}\,)
 \end{aligned}\right.
 \label{band_subspace_connection_topology}
 \end{equation}
 
 here, $m$ and $n$ run over the selected basis states.
-The second relation follows by differentiating both the original basis and the matrix $U(\vec{k})$.
+The second relation follows by differentiating both the original basis and the matrix $U(\vec{k}\,)$.
 For a single state, it reduces to equation~\eqref{berry_connection_gauge_transformation_topology}.
 The off-diagonal elements describe the mixing of basis states as $\vec{k}$ changes.
 Consequently, assigning independent single-band phases to arbitrary members of a degenerate pair does not characterize the whole subspace.
@@ -434,7 +434,7 @@ Using the Bloch representation in equation~\eqref{bloch_hamiltonian_topology},
 we now express the corresponding cell-periodic state as:
 
 \begin{equation}
-    \ket{u_{n\vec{k}}}
+    \ket{u_{n\vec{k}}\,}
     =\ket{u_{n\vec{k},\uparrow}}\otimes\ket{\uparrow}
     +\ket{u_{n\vec{k},\downarrow}}\otimes\ket{\downarrow}
 \label{cell_periodic_spinor_topology}
@@ -451,8 +451,8 @@ For spin-$1/2$ electrons, we choose the time-reversal operator as:
 \left\{\begin{aligned}
     \hat{\Theta}&=\mathrm{i}\hat{\sigma}_y\hat{K} \\
     \hat{\Theta}^2&=-\hat{I} \\
-    \hat{\Theta}\hat{h}(\vec{k})\hat{\Theta}^{-1}
-    &=\hat{h}(-\vec{k})
+    \hat{\Theta}\hat{h}(\vec{k}\,)\hat{\Theta}^{-1}
+    &=\hat{h}(-\vec{k}\,)
 \end{aligned}\right.
 \label{spinful_time_reversal_topology}
 \end{equation}
@@ -574,8 +574,8 @@ so inversion changes $\vec{r}$ to $-\vec{r}$ and leaves spin unchanged.
 Its action on a Bloch state can be expressed through a position projection:
 
 \begin{equation}
-    \bra{\vec{r}\,}\hat{\mathcal{I}}\ket{\psi_{n\vec{k}}}
-    =\braket{-\vec{r}\,|\psi_{n\vec{k}}}
+    \bra{\vec{r}\,}\hat{\mathcal{I}}\ket{\psi_{n\vec{k}}\,}
+    =\braket{-\vec{r}\,|\psi_{n\vec{k}}\,}
 \label{inversion_position_projection_topology}
 \end{equation}
 
@@ -603,14 +603,14 @@ At a TRIM, inversion maps a Bloch state to the same crystal momentum modulo a re
 We can therefore choose the full Bloch states with definite inversion parity and write:
 
 \begin{equation}
-    \hat{\mathcal{I}}\ket{\psi_{n\vec{\Lambda}_i}}
-    =\xi_n(\vec{\Lambda}_i)\ket{\psi_{n\vec{\Lambda}_i}},
-    \qquad \xi_n(\vec{\Lambda}_i)=\pm1
+    \hat{\mathcal{I}}\ket{\psi_{n\vec{\Lambda}_i}\,}
+    =\xi_n(\vec{\Lambda}_i\,)\ket{\psi_{n\vec{\Lambda}_i}\,},
+    \qquad \xi_n(\vec{\Lambda}_i\,)=\pm1
 \label{parity_eigenvalue_topology}
 \end{equation}
 
 here, $\xi_n$ is the parity eigenvalue.
-Applying inversion twice gives $\xi_n^2\ket{\psi_{n\vec{\Lambda}_i}}=\ket{\psi_{n\vec{\Lambda}_i}}$,
+Applying inversion twice gives $\xi_n^2\ket{\psi_{n\vec{\Lambda}_i}\,}=\ket{\psi_{n\vec{\Lambda}_i}\,}$,
 so the eigenvalue can only be $+1$ or $-1$.
 The values $+1$ and $-1$ describe even and odd inversion parity, respectively.
 An even state is unchanged under inversion, while an odd state changes sign.
@@ -623,10 +623,10 @@ Since inversion commutes with time reversal and $\xi_n$ is real, we obtain:
 
 \begin{equation}
 \begin{aligned}
-    \hat{\mathcal{I}}\hat{\Theta}\ket{\psi_{n\vec{\Lambda}_i}}
-    &=\hat{\Theta}\hat{\mathcal{I}}\ket{\psi_{n\vec{\Lambda}_i}} \\
-    &=\xi_n(\vec{\Lambda}_i)
-    \hat{\Theta}\ket{\psi_{n\vec{\Lambda}_i}}
+    \hat{\mathcal{I}}\hat{\Theta}\ket{\psi_{n\vec{\Lambda}_i}\,}
+    &=\hat{\Theta}\hat{\mathcal{I}}\ket{\psi_{n\vec{\Lambda}_i}\,} \\
+    &=\xi_n(\vec{\Lambda}_i\,)
+    \hat{\Theta}\ket{\psi_{n\vec{\Lambda}_i}\,}
 \end{aligned}
 \label{equal_parity_kramers_pair_topology}
 \end{equation}
@@ -682,7 +682,7 @@ For each TRIM $\vec{\Lambda}_i$, we first multiply one parity eigenvalue from ea
 
 \begin{equation}
     \delta_i
-    \coloneqq\prod_{m=1}^{N_\mathrm{p}}\xi_{2m}(\vec{\Lambda}_i)
+    \coloneqq\prod_{m=1}^{N_\mathrm{p}}\xi_{2m}(\vec{\Lambda}_i\,)
 \label{parity_product_at_trim_topology}
 \end{equation}
 
