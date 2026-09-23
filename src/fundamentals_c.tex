@@ -49,6 +49,7 @@ For a periodic one-particle hamiltonian $\hat{h}$, we write:
 
 here, $n$ denotes the band index, $\vec{k}$ denotes the crystal wave vector,
 and $\hat{\vec{r}}$ is the position operator.
+The crystal momentum associated with $\vec{k}$ is $\hbar\vec{k}$.
 The state $\ket{u_{n\vec{k}}}$ is the cell-periodic part of the Bloch state,
 normalized over one unit cell as in chapter~\ref{cha:fundamentals_a}.
 In this chapter, inner products between cell-periodic states use this cell normalization.
@@ -79,11 +80,11 @@ The operator $\hat{h}_\mathrm{KS}^\mathrm{SOC}$ includes spin-orbit coupling and
 The eigenvalues $E_{n\vec{k}}$ retain the band-energy notation introduced in subsection~\ref{subsec:method_kpoints}.
 This spinor description provides the states used in the parity analysis.
 
-Before comparing states across the Brillouin zone, we recall why its boundary points can represent the same crystal momentum.
+Before comparing states across the Brillouin zone, we recall why its boundary points can represent equivalent crystal wave vectors.
 For any lattice translation $\vec{L}$, a reciprocal-lattice vector $\vec{G}$ satisfies
 $\mathrm{e}^{\mathrm{i}\vec{G}\cdot\vec{L}}=1$.
 Consequently, $\vec{k}$ and $\vec{k}+\vec{G}$ give the same Bloch phase between cells.
-The Brillouin zone contains one set of inequivalent crystal momenta, with opposite boundaries identified by these reciprocal-lattice translations.
+The Brillouin zone contains one set of inequivalent wave vectors, with opposite boundaries identified by these reciprocal-lattice translations.
 For corresponding representatives of the same Bloch state, we choose~\cite{fu2007topological}:
 
 \begin{equation}
@@ -98,7 +99,7 @@ For corresponding representatives of the same Bloch state, we choose~\cite{fu200
 The second relation follows by substituting the first into equation~\eqref{bloch_hamiltonian_topology}.
 The cell-periodic states therefore need not be identical at the two representatives;
 the additional factor compensates for the change in the Bloch phase.
-We will use this identification when closing a path across the zone boundary and when identifying the momenta fixed by time reversal.
+We will use this identification when closing a path across the zone boundary and when identifying the wave vectors fixed by time reversal.
 
 The eigenvalues $E_{n\vec{k}}$ provide the band dispersion.
 However, the eigenvalue equation also provides an electronic state at each $\vec{k}$.
@@ -211,7 +212,7 @@ At zero temperature, this requires:
 
 In contrast, $\Delta_\mathrm{dir}^\mathrm{min}>0$ can coexist with $\Delta_\mathrm{ind}<0$.
 The selected subspace then remains separated at every individual $\vec{k}$,
-while its energy range overlaps that of the excluded bands.
+while its energy range overlaps that of the excluded bands~\cite{fu2007topological}.
 At the corresponding filling, this overlap can produce electron and hole pockets.
 The states below $E_\mathrm{F}$ are consequently not the same fixed-rank subspace at every wave vector.
 We must therefore specify the band count when assigning a topological index to such a subspace.
@@ -220,20 +221,22 @@ Figure~\ref{fig:band_subspace_and_insulating_gap} compares four schematic one-di
 The model dispersions use arbitrary energy units and a dimensionless periodic coordinate $k$;
 they are not calculated beryllene bands.
 The solid blue and teal curves represent the boundary bands $E_{2N_\mathrm{p},\vec{k}}$ and $E_{2N_\mathrm{p}+1,\vec{k}}$, respectively.
-In (d), the dashed blue curve represents $E_{2N_\mathrm{p}-2,\vec{k}}$ for $N_\mathrm{p}\geq2$;
-coincident partners of the two selected pairs are not drawn separately.
+In (d), the dashed blue curve represents $E_{2N_\mathrm{p}-2,\vec{k}}$ for $N_\mathrm{p}\geq2$.
+Each displayed curve represents one member of a degenerate pair;
+the coincident partner is not drawn separately.
 The grey dashed line denotes the illustrative Fermi level $E_\mathrm{F}=0$.
 
 Orange arrows compare energies at the same wave vector, while purple arrows and dotted extrema indicate the indirect separation.
 The purple shading in (b) marks the indirect energy overlap.
-Orange circles identify the contacts in (c) and (d).
+Orange circles mark the boundary contact in (c),
+while orange diamonds mark the internal degeneracies in (d).
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.8\textwidth]{figures_ch4/4.1_band_subspace.pdf}
 \caption{Schematic distinction between an isolated band subspace and an insulating gap.
 (a) Global gap, (b) indirect energy overlap, (c) contact between selected and excluded bands,
-and (d) crossing within the selected subspace.}
+and (d) degeneracy within the selected subspace.}
 \label{fig:band_subspace_and_insulating_gap}
 \end{figure}
 
@@ -242,8 +245,10 @@ In (b), the direct separation remains positive despite the indirect energy overl
 Both situations permit a smooth fixed-rank projector, provided the direct separation holds over the full two-dimensional Brillouin zone.
 This isolation requires a separate check beyond the illustrated cuts.
 In (c), a band touching closes the separation between the selected and excluded bands.
-In (d), both crossing pairs belong to the selected subspace on either side of the crossing.
-The two pairs exchange their order in energy, but both remain included in the projector.
+In (d), both pairs belong to the selected subspace on either side of the degeneracy.
+The plotted energies remain ordered, so $E_{2N_\mathrm{p}-2,\vec{k}}\leq E_{2N_\mathrm{p},\vec{k}}$ throughout the cut.
+Following this energy order through a crossing can give a cusp in the plotted eigenvalues,
+although the hamiltonian and the projector onto both pairs remain smooth.
 Since the direct separation remains positive, this internal degeneracy does not prevent the selected subspace from varying smoothly.
 We can now discuss how the states within an isolated subspace are connected,
 while keeping the separate question of the physical Fermi level explicit.
@@ -263,6 +268,7 @@ This provides the geometric starting point for discussing band topology.
 
 We first consider a single normalized band that is non-degenerate along a path.
 This simpler case allows us to identify the phase information before returning to a group of bands.
+We choose a local gauge in which the state varies smoothly with $\vec{k}$.
 For a small displacement $\dif\vec{k}$, the overlap between neighbouring cell-periodic states is:
 
 \begin{equation}
@@ -311,7 +317,7 @@ Differentiating both the phase factor and the state gives:
 
 \begin{equation}
 \begin{aligned}
-    \vec{\mathcal{A}}'_n(\vec{k}\,)
+    \vec{\mathcal{A}}\,'_n(\vec{k}\,)
     &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k}\,)}
     \bra{u_{n\vec{k}}}\nabla_{\vec{k}}
     \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}\right] \\
@@ -364,8 +370,9 @@ The Berry phase describes the geometry of the electronic states along a chosen l
 Here, following the loop means comparing stationary states at successive wave vectors;
 we do not need to prescribe an actual time evolution of the electron.
 Changing the arbitrary phase of each state leaves the closed-loop result unchanged,
-whereas changing the hamiltonian or the loop can change that result continuously.
-It is not generally restricted to $0$ or $\pi$,
+whereas a smooth change of the hamiltonian or the loop can change $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ continuously,
+provided the band remains non-degenerate along the loop.
+The phase $\gamma_n(C)$ is not generally restricted to $0$ or $\pi$,
 and a Berry phase on an arbitrary loop is not by itself the two-dimensional $Z_2$ index.
 The additional structure needed for that index comes from time-reversal symmetry and the full selected band subspace.
 
@@ -373,7 +380,10 @@ The additional structure needed for that index comes from time-reversal symmetry
 
 The single-band discussion assumes that the state can be followed separately from all other states along the path.
 For spinful time-reversal-symmetric systems, degeneracies are instead part of the problem.
-We therefore return to the projector in equation~\eqref{band_subspace_projector_topology}.
+Within a degenerate group, the hamiltonian alone does not select a unique state to follow.
+Different choices can mix these states, rather than merely change their individual phases.
+An individual-band Berry phase is therefore not fixed by the degenerate subspace alone.
+We return to the projector in equation~\eqref{band_subspace_projector_topology}.
 
 Within its $2N_\mathrm{p}$-dimensional subspace, we may choose a different orthonormal basis:
 
@@ -401,7 +411,7 @@ Applying the same derivative as in equation~\eqref{berry_connection_topology} to
 \left\{\begin{aligned}
     [\vec{\mathcal{A}}(\vec{k}\,)]_{mn}
     &=\mathrm{i}\bra{u_{m\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}} \\
-    \vec{\mathcal{A}}'(\vec{k}\,)
+    \vec{\mathcal{A}}\,'(\vec{k}\,)
     &=U^\dagger(\vec{k}\,)\vec{\mathcal{A}}(\vec{k}\,)U(\vec{k}\,)
     +\mathrm{i}\,U^\dagger(\vec{k}\,)\nabla_{\vec{k}}U(\vec{k}\,)
 \end{aligned}\right.
@@ -413,8 +423,11 @@ The second relation follows by differentiating both the original basis and the m
 For a single state, it reduces to equation~\eqref{berry_connection_gauge_transformation_topology}.
 The off-diagonal elements describe the mixing of basis states as $\vec{k}$ changes.
 Consequently, assigning independent single-band phases to arbitrary members of a degenerate pair does not characterize the whole subspace.
-In the present work, inversion symmetry provides a way to determine the required $Z_2$ index directly from parity eigenvalues.
-Before introducing that criterion, we need to establish how time reversal and inversion act on the same states.
+We must now ask whether these local choices of basis can be joined over the whole Brillouin zone
+while respecting time-reversal pairing.
+This is a constraint on the full subspace, beyond the phase accumulated around one loop.
+Inversion symmetry will allow us to evaluate the corresponding $Z_2$ index from parity eigenvalues.
+We first establish how these two symmetries act on the same states.
 
 \newpage
 \section{Time-reversal and inversion symmetry}
@@ -424,7 +437,7 @@ Before introducing that criterion, we need to establish how time reversal and in
 The previous section showed why the phase convention of an individual state cannot determine the topology of a band subspace.
 We now impose the symmetries relevant to the beryllene parity analysis.
 Time reversal connects states at opposite wave vectors and determines their Kramers pairing.
-Inversion also reverses the wave vector, while assigning a parity at the momenta where the state returns to the same crystal momentum.
+Inversion also reverses the wave vector, while assigning a parity at the points where the state returns to an equivalent wave vector.
 Together, these two symmetries provide the information used in the parity criterion.
 
 \subsection{Spinor states and time reversal}
@@ -485,8 +498,9 @@ The two components of one spinor should consequently be distinguished from its t
 The operator $\hat{\Theta}$ preserves norms while conjugating inner products, and is therefore antiunitary.
 For any two states, it satisfies
 $\braket{\hat{\Theta}a|\hat{\Theta}b}=\braket{b|a}$.
-To apply this relation at a time-reversal invariant momentum (TRIM), we use a full Bloch state $\ket{\psi}$,
-so equivalent crystal momenta belong to the same translation sector.
+To apply this relation at a time-reversal invariant momentum (TRIM), we use a full Bloch state $\ket{\psi}$.
+At such a point, the reversed wave vector differs from the original by a reciprocal-lattice vector,
+so both states have the same phases under lattice translations.
 Taking $\ket{a}=\ket{\psi}$ and $\ket{b}=\hat{\Theta}\ket{\psi}$ gives:
 
 \begin{equation}
@@ -508,16 +522,18 @@ If $\hat{h}\ket{\psi}=E\ket{\psi}$, its partner therefore satisfies:
 \end{equation}
 
 here, the energy $E$ is real because $\hat{h}$ is Hermitian.
-At a momentum equivalent to its negative, $\ket{\psi}$ and $\hat{\Theta}\ket{\psi}$
-therefore represent orthogonal states with the same energy and crystal momentum.
+At a wave vector equivalent to its negative, $\ket{\psi}$ and $\hat{\Theta}\ket{\psi}$
+therefore represent orthogonal states with the same energy and wave vector.
 These states form a Kramers pair.
-At a general momentum, time reversal instead relates a state at $\vec{k}$ to a state at $-\vec{k}$.
+Removing the same Bloch factor from both states preserves their orthogonality,
+so the pairing also supplies two orthogonal cell-periodic states at this representative wave vector.
+At a general wave vector, time reversal instead relates a state at $\vec{k}$ to an equal-energy state at $-\vec{k}$.
 
 \subsection{Time-reversal invariant momenta}
 \label{subsec:trim_topology}
 
-We now identify the momenta at which Kramers pairing occurs at the same point of the Brillouin zone.
-Crystal momentum is defined modulo a reciprocal-lattice vector.
+We now identify the wave vectors at which Kramers pairing occurs at the same point of the Brillouin zone.
+The wave vector is defined modulo a reciprocal-lattice vector.
 A time-reversal invariant momentum, abbreviated as TRIM, therefore satisfies:
 
 \begin{equation}
@@ -539,7 +555,7 @@ the four inequivalent solutions can be represented as:
 To understand why there are only four, we rewrite equation~\eqref{trim_condition_topology} as $2\vec{\Lambda}_i=\vec{G}_i$.
 The two coefficients of $\vec{G}_i$ in the reciprocal basis are integers.
 Increasing either integer by two changes $\vec{\Lambda}_i$ by a full reciprocal-lattice vector,
-so it gives an equivalent momentum.
+so it gives an equivalent wave vector.
 Only the even or odd choice of each coefficient matters, leaving $2\times2=4$ inequivalent points.
 
 Their names depend on the reciprocal lattice.
@@ -551,7 +567,9 @@ to keep all four points explicit before using any additional rotational symmetry
 Figure~\ref{fig:four_trim_two_dimensions} shows these two Brillouin zones.
 The representatives follow equation~\eqref{four_trim_two_dimensions_topology},
 with reciprocal-lattice translations used where necessary to place them in the displayed zones.
-The diagrams indicate momentum locations only; they contain no calculated parity eigenvalues.
+The diagrams indicate wave-vector locations only; they contain no calculated parity eigenvalues.
+Each colour identifies one inequivalent TRIM and its periodic copies within a panel;
+it does not indicate a parity or a topological class.
 
 \begin{figure}[htbp]
 \centering
@@ -562,7 +580,7 @@ Filled points identify inequivalent TRIM; open points mark periodic boundary cop
 \end{figure}
 
 The boundary copies in figure~\ref{fig:four_trim_two_dimensions} do not provide additional independent factors in the parity product.
-They represent the same crystal momenta after a reciprocal-lattice translation.
+They represent equivalent wave vectors related by a reciprocal-lattice translation.
 Likewise, the corners conventionally denoted by $\mathrm{K}$ in the hexagonal Brillouin zone are not TRIM:
 time reversal exchanges the two inequivalent corners rather than returning either one to itself.
 
@@ -592,14 +610,14 @@ For an inversion-symmetric hamiltonian, we have:
 \label{inversion_symmetry_relations_topology}
 \end{equation}
 
-Both inversion and time reversal reverse the crystal momentum.
+Both inversion and time reversal reverse the wave vector.
 Their combination consequently leaves $\vec{k}$ unchanged.
 Since $(\hat{\mathcal{I}}\hat{\Theta})^2=-\hat{I}$,
 the same antiunitary argument used above gives a twofold degeneracy at every $\vec{k}$
 when both symmetries are present.
 At the TRIM, we can additionally choose the states to diagonalize inversion.
 
-At a TRIM, inversion maps a Bloch state to the same crystal momentum modulo a reciprocal-lattice vector.
+At a TRIM, inversion maps a Bloch state to an equivalent wave vector modulo a reciprocal-lattice vector.
 We can therefore choose the full Bloch states with definite inversion parity and write:
 
 \begin{equation}
@@ -617,6 +635,27 @@ An even state is unchanged under inversion, while an odd state changes sign.
 This sign describes the transformation of the state, not the sign of its probability density, which is unchanged in both cases.
 Within a degenerate eigenspace, the states can be chosen as simultaneous energy and parity eigenstates.
 An arbitrary numerical basis of that eigenspace need not already have this form.
+
+We can also express the same parity relation using the cell-periodic states.
+Inversion changes the sign in the Bloch factor of equation~\eqref{bloch_hamiltonian_topology}.
+Substituting this factor into equation~\eqref{parity_eigenvalue_topology}, with $\vec{G}_i=2\vec{\Lambda}_i$, gives:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \hat{\mathcal{I}}\ket{u_{n\vec{\Lambda}_i}}
+    &=\xi_n(\vec{\Lambda}_i\,)
+    \mathrm{e}^{\mathrm{i}\vec{G}_i\cdot\hat{\vec{r}}}\ket{u_{n\vec{\Lambda}_i}} \\
+    \mathrm{e}^{-\mathrm{i}\vec{G}_i\cdot\hat{\vec{r}}}
+    \hat{\mathcal{I}}\ket{u_{n\vec{\Lambda}_i}}
+    &=\xi_n(\vec{\Lambda}_i\,)\ket{u_{n\vec{\Lambda}_i}}
+\end{aligned}\right.
+\label{cell_periodic_parity_topology}
+\end{equation}
+
+here, the reciprocal-lattice factor returns the inverted state to the chosen representative of the TRIM.
+At $\Gamma$, this factor is unity.
+At a non-zero TRIM, it must be included when extracting the full Bloch-state parity from a cell-periodic representation.
+Thus the two representations give the same $\xi_n$ when their boundary identification is treated consistently.
 
 We now apply inversion to the time-reversed partner.
 Since inversion commutes with time reversal and $\xi_n$ is real, we obtain:
@@ -646,7 +685,7 @@ The two-dimensional $Z_2$ index distinguishes two possibilities for this spinful
 Inversion symmetry then allows us to evaluate that index using the parity information at the four TRIM.
 Time reversal is the symmetry that protects this $Z_2$ classification;
 inversion supplies the simpler route for evaluating it.
-If inversion is removed while time reversal and the band separation are preserved,
+If inversion is removed along a continuous change that preserves time reversal and the band separation,
 the index remains unchanged, although the parity criterion is no longer available.
 
 \subsection{The two topological classes}
@@ -658,7 +697,8 @@ its $Z_2$ index cannot change.
 We denote the two possible values by $\nu=0$ and $\nu=1$.
 The former is trivial with respect to this index, while the latter is non-trivial.
 
-In terms of electronic states, the distinction concerns whether a globally smooth basis can be chosen
+In terms of electronic states, we return to the basis freedom in equation~\eqref{band_subspace_basis_transformation_topology}.
+The distinction concerns whether a globally smooth basis can be chosen
 with a consistent time-reversal pairing and the reciprocal-lattice identification introduced above.
 Here, a local choice covers only a neighbourhood of one wave vector.
 A global choice must join these local choices over the whole Brillouin zone, including its identified boundaries,
@@ -670,7 +710,7 @@ The constraint comes from requiring the basis to satisfy the time-reversal pairi
 
 For an insulating filling, this distinction has a physical consequence at an interface with a topologically trivial insulator.
 Within the non-interacting description and with time-reversal symmetry preserved at the boundary,
-the non-trivial phase supports an odd number of Kramers pairs of edge modes connecting the bulk bands.
+the non-trivial phase supports an odd number of Kramers pairs of edge modes connecting the bulk bands~\cite{kane2005z2}.
 This explains why a bulk wave-function property is of physical interest.
 For a metallic filling, however, the same interpretation cannot be inferred from a parity sign alone,
 because bulk states can remain at the Fermi level.
@@ -686,8 +726,10 @@ For each TRIM $\vec{\Lambda}_i$, we first multiply one parity eigenvalue from ea
 \label{parity_product_at_trim_topology}
 \end{equation}
 
-here, the indices $(2m-1,2m)$ label the members of a Kramers pair,
-chosen so that both states have the same parity according to equation~\eqref{equal_parity_kramers_pair_topology}.
+here, the indices $(2m-1,2m)$ label two states related by time reversal within the $m$th Kramers pair.
+Their equal parity follows from equation~\eqref{equal_parity_kramers_pair_topology}.
+If several pairs share the same energy, we resolve inversion within that eigenspace and pair its states by time reversal;
+energy ordering alone does not specify these partners.
 The subspace contains $2N_\mathrm{p}$ spinor states, but the product contains $N_\mathrm{p}$ factors.
 The use of $2m$ selects one representative from each pair.
 
@@ -715,18 +757,19 @@ If a second product changes from $+1$ to $-1$, the total becomes $+1$ and $\nu=0
 These illustrative signs show why the index records an even or odd count;
 they are not parity results for a particular material.
 
-This criterion supplies the connection between inversion eigenvalues and the global time-reversal classification.
-The equality of the two parities in each pair explains the counting in equation~\eqref{parity_product_at_trim_topology};
-the identification of the four-point product with $(-1)^\nu$ is the additional topological result.
-It is not obtained by counting degeneracies alone.
+The equality of the two parities in each pair explains the counting in equation~\eqref{parity_product_at_trim_topology}.
+Identifying the four-point product with $(-1)^\nu$ is an additional topological result, not a consequence of degeneracy counting.
+Fu and Kane derive this identification from the symmetry transformation of the Bloch basis~\cite[sections II and III]{fu2007topological}.
+The criterion evaluates the global time-reversal obstruction;
+it does not equate an arbitrary-loop single-band Berry phase with $\pi\nu$.
 
-The result also explains why the parity of a single state or the ordering at one momentum is insufficient.
+The result also explains why the parity of a single state or the ordering at one wave vector is insufficient.
 Every selected Kramers pair contributes at each of the four TRIM.
 If one selected pair exchanges with an excluded pair of opposite parity at a TRIM,
 that exchange changes the local product when the gap reopens.
 An odd number of such sign changes changes the global product,
 whereas an even number leaves it unchanged.
-The exchange must pass through a closure of the separation between the two subspaces.
+If inversion is preserved throughout the exchange, the separation between the two subspaces must close at that TRIM.
 An exchange wholly within the selected subspace instead preserves the product because neither pair leaves the count.
 
 \subsection{Using additional crystal symmetry}
@@ -757,13 +800,14 @@ we similarly retain all four representatives first:
 If the actual structure relates $\mathrm{X}$ and $\mathrm{Y}$ with equal parity products,
 then $\delta_\mathrm{X}\delta_\mathrm{Y}=(\delta_\mathrm{X})^2=1$,
 and the same reduced expression follows.
+A fourfold rotation about the chosen inversion centre can give this equality;
+the two symmetry-equivalent representatives may then both be called $\mathrm{X}$ points.
 The equality of the final expressions does not make the two Brillouin zones equivalent.
 It results from different symmetry relations among their four TRIM.
 
-These reductions require the symmetry of the calculated structure and a consistent inversion centre.
-The appearance of a high-symmetry path alone does not establish the equality of the omitted products.
-Keeping all four factors until their relation has been checked makes the reduction explicit
-and connects the numerical parity data to the general criterion in equation~\eqref{fu_kane_index_topology}.
+We therefore retain all four factors in equation~\eqref{fu_kane_index_topology} until the symmetry of the calculated structure
+and the inversion convention establish these equalities.
+A high-symmetry path alone does not justify the reduction.
 
 \newpage
 \section{From the parity criterion to the calculation}
@@ -789,8 +833,8 @@ We then select the fixed number $2N_\mathrm{p}$ of bands and examine
 $\Delta_\mathrm{dir}(\vec{k}\,)$ from equation~\eqref{minimum_direct_gap_topology}.
 For an insulator whose occupied bands form this subspace, $2N_\mathrm{p}=N_\mathrm{occ}$,
 where $N_\mathrm{occ}$ counts occupied spinor bands rather than Kramers pairs.
-Equations~\eqref{parity_product_at_trim_topology} and~\eqref{fu_kane_index_topology}
-then have the same counting as equations~\eqref{eq:proj3_parity_product} and~\eqref{eq:proj3_z2_index} in chapter~\ref{cha:project_beryllene}.
+In this insulating case, equations~\eqref{parity_product_at_trim_topology} and~\eqref{fu_kane_index_topology}
+have the occupied-band counting used in equations~\eqref{eq:proj3_parity_product} and~\eqref{eq:proj3_z2_index} of chapter~\ref{cha:project_beryllene}.
 For a metal, the number of states below $E_\mathrm{F}$ can change with $\vec{k}$,
 so the phrase ``occupied bands'' alone does not identify the subspace.
 Numerical smearing of the occupations also does not define a fixed-rank projector.
@@ -806,6 +850,7 @@ A near-zero separation requires particular care because an unresolved touching p
 At each TRIM, the parity eigenvalues can be obtained from the symmetry representation of the spinor states.
 The \texttt{irvsp} method used in chapter~\ref{cha:project_beryllene}
 extracts such symmetry information from VASP wave functions~\cite{gao2021irvsp}.
+Equation~\eqref{cell_periodic_parity_topology} explains the reciprocal-lattice identification required by a cell-periodic representation.
 For a degenerate group, the inversion representation must be resolved within that group,
 so an arbitrary numerical mixture is not mistaken for a parity eigenstate.
 We then identify complete Kramers pairs, count one parity from each pair,
@@ -813,8 +858,9 @@ and evaluate the four factors in equation~\eqref{parity_product_at_trim_topology
 
 \subsection{Interpreting the resulting index}
 
-Once the subspace and symmetries have been established, the parity product assigns $\nu$ to that specified subspace.
-We next compare its energy range with the physical Fermi level.
+A parity product alone does not establish a $Z_2$ invariant if the selected spectral subspace has not been shown to be isolated.
+Once its isolation and symmetries have been established, the parity criterion classifies this subspace.
+We then compare its energy range with the physical Fermi level.
 If equation~\eqref{insulating_fermi_level_topology} holds,
 the subspace is the occupied space of a band insulator,
 and $\nu=1$ identifies the non-trivial two-dimensional time-reversal phase within the band description.
@@ -836,9 +882,8 @@ The optical spectrum therefore resolves the allowed electronic excitations,
 while the parity product classifies the symmetry-constrained connection of the selected states.
 The Fermi-level condition determines whether this classification describes an insulating phase.
 
-At this stage, we have connected the Bloch-state description to the symmetry analysis used in the beryllene project.
 Chapter~\ref{cha:fundamentals_a} supplies the electronic structure,
 chapter~\ref{cha:fundamentals_b} connects that structure to its linear optical response,
 and the present chapter explains the band-subspace and symmetry conditions required for the topological classification.
-The material-specific band selection, gap evidence, and parity eigenvalues belong to the corresponding research calculation.
-These quantities determine which of the interpretations developed here applies to each system.
+The material-specific band selection, gap evidence, and parity eigenvalues in the research calculation
+determine which interpretation applies to each system.
