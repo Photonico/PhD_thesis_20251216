@@ -711,8 +711,26 @@ The constraint comes from requiring the basis to satisfy the time-reversal pairi
 For an insulating filling, this distinction has a physical consequence at an interface with a topologically trivial insulator.
 Within the non-interacting description and with time-reversal symmetry preserved at the boundary,
 the non-trivial phase supports an odd number of Kramers pairs of edge modes connecting the bulk bands~\cite{kane2005z2}.
-This explains why a bulk wave-function property is of physical interest.
-For a metallic filling, however, the same interpretation cannot be inferred from a parity sign alone,
+These edge states are helical:
+time-reversed partners propagate in opposite directions and have opposite spin expectation values.
+This relation does not require a conserved spin component.
+
+For a single pair, we consider a static one-electron perturbation $\hat{V}$ that is Hermitian and preserves time reversal.
+The same antiunitary relation used in equation~\eqref{kramers_orthogonality_topology} gives:
+
+\begin{equation}
+    \bra{\hat{\Theta}\psi}\hat{V}\ket{\psi}=0,
+    \qquad
+    \hat{V}^{\dagger}=\hat{V},\quad
+    [\hat{V},\hat{\Theta}]=0
+\label{helical_edge_backscattering_topology}
+\end{equation}
+
+here, $\ket{\psi}$ and $\hat{\Theta}\ket{\psi}$ are the two time-reversed edge states.
+Thus this perturbation cannot produce elastic backscattering between the partners~\cite{kane2005z2}.
+The statement concerns a single edge within the one-electron description;
+it does not establish dissipationless transport in the presence of bulk conduction or inelastic processes.
+For a metallic filling, the same insulating-edge interpretation cannot be inferred from a parity sign alone,
 because bulk states can remain at the Fermi level.
 
 \subsection{The Fu--Kane parity product}
@@ -841,7 +859,7 @@ Numerical smearing of the occupations also does not define a fixed-rank projecto
 The band count must instead refer to the selected spectral subspace at every wave vector.
 
 The direct separation has to be checked over the two-dimensional Brillouin zone.
-A band plot along a high-symmetry path samples only part of that zone.
+Its positivity at the four TRIM or along a plotted high-symmetry path does not establish the condition throughout that zone.
 In practice, a converged two-dimensional sampling, with refinement near the smallest separations,
 provides evidence for the gap condition within the numerical accuracy of the calculation.
 If interpolation is used, its accuracy near those separations must be checked against direct calculations.
@@ -882,8 +900,6 @@ The optical spectrum therefore resolves the allowed electronic excitations,
 while the parity product classifies the symmetry-constrained connection of the selected states.
 The Fermi-level condition determines whether this classification describes an insulating phase.
 
-Chapter~\ref{cha:fundamentals_a} supplies the electronic structure,
-chapter~\ref{cha:fundamentals_b} connects that structure to its linear optical response,
-and the present chapter explains the band-subspace and symmetry conditions required for the topological classification.
-The material-specific band selection, gap evidence, and parity eigenvalues in the research calculation
-determine which interpretation applies to each system.
+Chapters~\ref{cha:fundamentals_a} and~\ref{cha:fundamentals_b} supply the electronic structure and its linear optical response, respectively.
+The present chapter establishes the band-subspace and symmetry conditions for topology.
+The material-specific band selection, gap evidence, and parity eigenvalues determine which interpretation applies to each system.

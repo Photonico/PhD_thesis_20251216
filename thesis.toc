@@ -1,0 +1,138 @@
+\babel@toc {UKenglish}{}\relax 
+\contentsline {chapter}{\tocchapter {}{}{Abstract}}{v}{chapter*.1}%
+\contentsline {chapter}{\tocchapter {}{}{List of Publications}}{vii}{chapter*.2}%
+\contentsline {chapter}{\tocchapter {}{}{Acknowledgements}}{ix}{chapter*.3}%
+\contentsline {chapter}{\tocchapter {}{}{Statement on the Use of Generative Artificial Intelligence}}{xiii}{chapter*.4}%
+\contentsline {chapter}{Contents}{xv}{section*.5}%
+\contentsline {chapter}{\tocchapter {}{}{Lists of Figures, Tables, Abbreviations and Symbols}}{xvii}{chapter*.6}%
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background and research scope}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Literature review}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Boron-based materials and graphene heterostructures}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Beryllene and hydrogen functionalization}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Computational approaches and their limitations}{6}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Experimental evidence and theoretical models}{8}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Motivation for optical and topological analysis}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Optical response as a probe of electronic structure}{9}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Physical significance of band topology}{11}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Research questions and scope of the thesis}{11}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Thesis organisation}{13}{section.1.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Fundamentals \MakeUppercase []{i}: Many-Body Quantum Physics and DFT}}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}A story starts with time evolution quantum mechanics}{16}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Time-dependent Schrödinger equation}{16}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Time evolution operator}{17}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Many-body Schrödinger equation}{20}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}From Schrödinger picture to Heisenberg picture}{23}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}From Heisenberg picture to the continuity equation}{25}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Toward the many-body problem}{28}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}An introduction to grand canonical ensemble}{28}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}From wave function to practical functionals}{29}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}An introduction to density functionals}{39}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}What is the functional?}{39}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Density functional in quantum mechanics}{40}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}The Hohenberg--Kohn theorem}{44}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}The Thomas--Fermi approach}{55}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Limitations of the Thomas--Fermi approach}{61}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}From density functional to Kohn--Sham theory}{64}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Auxiliary system}{64}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}The framework of the Kohn--Sham equations}{68}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}From variational derivation to the Kohn--Sham equations}{73}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Variational construction of the Kohn--Sham scheme}{76}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Remarks on the Kohn--Sham solutions}{78}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Structure and construction of the Kohn--Sham potential}{79}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}The Hartree equations}{82}{subsection.2.4.7}%
+\contentsline {section}{\numberline {2.5}Exchange-correlation functional}{84}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Local density and generalized gradient approximations}{84}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Hybrid functionals and Heyd--Scuseria--Ernzerhof functional}{86}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}From density functional theory to practical calculations}{88}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Structural relaxation and convergence}{88}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Periodic states and Brillouin-zone sampling}{89}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Phonons and molecular dynamics}{91}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Spin polarization and magnetic ordering}{93}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}Electron-phonon coupling and superconductivity}{94}{subsection.2.6.5}%
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Fundamentals \MakeUppercase []{ii}: Linear Optical Response}}{99}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Toward electromagnetic response in matter}{100}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Maxwell equations in matter}{100}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Polarization, electric displacement, and constitutive relations}{102}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Anisotropy and the dielectric tensor}{105}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}From electronic response to the dielectric function}{108}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}From polarization response to the complex dielectric function}{108}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Microscopic origin of the imaginary part}{110}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Dielectric response in anisotropic media}{112}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Causality and the Kramers--Kronig relations}{114}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Causality and analytic structure of response functions}{115}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Kramers--Kronig relations for the dielectric function}{117}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Static limit and physical interpretation}{118}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}From the dielectric function to optical properties}{120}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Absorption coefficient}{120}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Refractive index and extinction coefficient}{123}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Reflectivity}{126}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Energy-loss spectrum}{128}{subsection.3.4.4}%
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Fundamentals \MakeUppercase []{iii}: Band Topology}}{131}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Toward the topology of Bloch states}{132}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}From band energies to electronic states}{132}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}An isolated band subspace}{134}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}From phase freedom to the Berry phase}{137}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Connecting neighbouring states}{137}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Closing the path}{138}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}From an individual band to a band subspace}{139}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Time-reversal and inversion symmetry}{141}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Spinor states and time reversal}{141}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Time-reversal invariant momenta}{143}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Inversion and the parity of a Kramers pair}{144}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}From parity eigenvalues to the two-dimensional $Z_2$ index}{146}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}The two topological classes}{146}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}The Fu--Kane parity product}{147}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Using additional crystal symmetry}{148}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}From the parity criterion to the calculation}{149}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Identifying the states used in the product}{149}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Interpreting the resulting index}{150}{subsection.4.5.2}%
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Optoelectronic Properties of Heterostructure Bilayers}}{151}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Abstract}{151}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Introduction}{152}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Calculation methods}{154}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Results and discussion}{155}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Monolayer properties}{155}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Heterostructure}{156}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}Structural properties}{156}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}Charge density difference}{159}{subsubsection.5.4.2.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}Band structure and density of states}{160}{subsubsection.5.4.2.3}%
+\contentsline {subsubsection}{\numberline {5.4.2.4}Schottky barrier height}{162}{subsubsection.5.4.2.4}%
+\contentsline {subsection}{\numberline {5.4.3}Dielectric function}{162}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Derived optical properties}{167}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Conclusions}{171}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Data availability statement}{173}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Supplementary information}{173}{section.5.7}%
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Functional Properties of Penta-Bipyramid Boron Phases}}{187}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Abstract}{187}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Introduction}{188}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Computation methods}{191}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Results and discussion}{195}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Bulk o-\ce {B14}: atomic and electronic structure}{195}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Xene o-\ce {B14}: atomic and electronic structure}{198}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}Structural properties}{198}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}Dynamic stability: phonon dispersion}{199}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}Electronic properties}{200}{subsubsection.6.4.2.3}%
+\contentsline {subsection}{\numberline {6.4.3}Superconducting properties}{203}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Optical properties}{204}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Conclusions}{209}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Data availability statement}{210}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Supplementary information}{210}{section.6.7}%
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Topological and Optical Properties of Beryllene Phases}}{223}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Abstract}{223}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Introduction}{224}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Computation methods}{227}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Results and discussion}{229}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Atomic structure}{229}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Dynamical stability and phonon dispersion}{231}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Electronic properties}{234}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Topological properties}{236}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Optical properties}{238}{subsection.7.4.5}%
+\contentsline {subsubsection}{\numberline {7.4.5.1}Pristine $\alpha $- and $\beta $-beryllene}{238}{subsubsection.7.4.5.1}%
+\contentsline {subsubsection}{\numberline {7.4.5.2}Bulk hcp, bulk bcc, and cubic trilayer beryllene}{241}{subsubsection.7.4.5.2}%
+\contentsline {subsubsection}{\numberline {7.4.5.3}Hydrogen-functionalized beryllene structures}{243}{subsubsection.7.4.5.3}%
+\contentsline {section}{\numberline {7.5}Conclusions}{245}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Data availability statement}{247}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Supplementary information}{247}{section.7.7}%
+\contentsline {chapter}{\tocchapter {Chapter}{8}{Conclusion and Outlook}}{259}{chapter.8}%
+\contentsline {chapter}{\tocchapter {}{}{Appendix}}{263}{chapter*.125}%

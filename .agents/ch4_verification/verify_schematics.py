@@ -23,6 +23,7 @@ for lower, upper in models:
     assert np.allclose([lower[0], upper[0]], [lower[-1], upper[-1]])
     gaps.append((direct_min, indirect))
 assert np.allclose(gaps, [(1.20, .76), (.70, -.90), (0., 0.), (.85, .85)], atol=1e-12)
+internal_pair = -.65 - .35 * np.abs(np.cos(k))
 assert np.all(internal_pair <= models[3][0])
 contacts = np.flatnonzero(np.isclose(internal_pair, models[3][0], atol=1e-12))
 assert np.allclose(k[contacts], [-np.pi / 2, np.pi / 2])

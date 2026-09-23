@@ -1,0 +1,313 @@
+{
+  "source_npz": "figures_proj1/optics_data.npz",
+  "source_sha256": "7ba37cb7ab1c095ca18f50423ee2829ce182377c4ad149f956fa8456c2842bc3",
+  "source_provenance": "figures_proj1/optics_sources.json",
+  "functional": "HSE06",
+  "array_layout": "epsilon[cartesian_i, cartesian_j, energy_index, part], part 0 = real; part 1 = imaginary",
+  "units": {
+    "energy": "eV",
+    "epsilon": "dimensionless",
+    "loss": "dimensionless",
+    "absorption": "nm^-1"
+  },
+  "formulas": {
+    "loss": "epsilon2 / (epsilon1**2 + epsilon2**2)",
+    "extinction": "sqrt((hypot(epsilon1, epsilon2) - epsilon1) / 2)",
+    "absorption": "2 * energy * extinction / (hbar * c)"
+  },
+  "constants": {
+    "hbar_eV_s": 6.582119569e-16,
+    "c_nm_per_s": 2.99792458e+17
+  },
+  "method": {
+    "sub_eV_peaks": "scipy.signal.find_peaks on the full xx loss array, prominence >= 0.01 and minimum separation approximately 0.1 eV; retain 0 <= energy < 1 eV",
+    "dominant_out_of_plane_peak": "argmax of zz loss on 14 <= energy <= 20 eV",
+    "absorption_maximum": "argmax of xx absorption on 0 <= energy <= 24 eV",
+    "negative_intervals": "contiguous epsilon1 < 0 regions; endpoints are linearly interpolated between the adjoining raw energy samples",
+    "low_energy_absorption_examples": "linear interpolation of xx absorption at 1, 2, 2.5, 3.5, 5, 8 and 15 eV; no smoothing"
+  },
+  "scope": [
+    "Only the existing HSE06 diagonal xx and zz data are checked; no new electronic-structure calculation is performed.",
+    "The loss expression reproduces the scalar diagonal approximation displayed in the figures; this check is not a full-tensor mode analysis.",
+    "A local loss peak or a negative real dielectric function alone does not establish a weakly damped plasmon.",
+    "No microscopic transition, Dirac-plasmon, pi-plasmon, finite-wave-vector dispersion, or lifetime assignment is inferred from this numerical audit.",
+    "The absorption coefficients retain the original supercell dielectric convention and are not newly normalized to an intrinsic sheet quantity."
+  ],
+  "systems": {
+    "Graphene-BC3": {
+      "npz_keys": {
+        "energy": "E_Graphene-BC3_HSE_K17_energy",
+        "epsilon": "E_Graphene-BC3_HSE_K17_epsilon"
+      },
+      "energy_grid_spacing_eV": 0.014926651881262704,
+      "sub_eV_xx_loss_peaks": [
+        {
+          "energy_eV": 0.7761858978256606,
+          "loss": 0.17251842299987433,
+          "epsilon1": 2.6570794515440683,
+          "epsilon2": 4.055708599353169
+        }
+      ],
+      "dominant_zz_loss_peak_14_to_20_eV": {
+        "energy_eV": 17.88212895375272,
+        "loss": 2.8156408120428478
+      },
+      "xx_absorption_maximum_0_to_24_eV": {
+        "energy_eV": 15.090845051956594,
+        "absorption_nm_inverse": 0.2023798113948674
+      },
+      "xx_absorption_at_selected_energies": [
+        {
+          "energy_eV": 1,
+          "absorption_nm_inverse": 0.004252338876461808
+        },
+        {
+          "energy_eV": 2,
+          "absorption_nm_inverse": 0.01630501974409536
+        },
+        {
+          "energy_eV": 2.5,
+          "absorption_nm_inverse": 0.04497846831548513
+        },
+        {
+          "energy_eV": 3.5,
+          "absorption_nm_inverse": 0.03763124137225627
+        },
+        {
+          "energy_eV": 5,
+          "absorption_nm_inverse": 0.05319395302766526
+        },
+        {
+          "energy_eV": 8,
+          "absorption_nm_inverse": 0.016681640171525056
+        },
+        {
+          "energy_eV": 15,
+          "absorption_nm_inverse": 0.19709589956319698
+        }
+      ],
+      "xx_epsilon1_negative_intervals_eV": [
+        [
+          3.189701680210941,
+          3.2731259026555537
+        ],
+        [
+          15.07330578702606,
+          15.205803392532586
+        ],
+        [
+          15.575798692260758,
+          15.828611961368681
+        ],
+        [
+          16.356588262981756,
+          16.587173186108853
+        ],
+        [
+          17.34976467172078,
+          17.637553109534032
+        ],
+        [
+          18.595152542838946,
+          19.172178029388398
+        ],
+        [
+          19.894860959957093,
+          20.193439807676924
+        ]
+      ],
+      "xx_epsilon1_minimum_0_to_24_eV": {
+        "energy_eV": 17.464182701077362,
+        "epsilon1": -0.3789768717240962
+      }
+    },
+    "Graphene-Borophene": {
+      "npz_keys": {
+        "energy": "F_Graphene-Borophene_HSE_K65_Accurate_energy",
+        "epsilon": "F_Graphene-Borophene_HSE_K65_Accurate_epsilon"
+      },
+      "energy_grid_spacing_eV": 0.01506662304544333,
+      "sub_eV_xx_loss_peaks": [],
+      "dominant_zz_loss_peak_14_to_20_eV": {
+        "energy_eV": 18.079947654531995,
+        "loss": 2.7853793068989687
+      },
+      "xx_absorption_maximum_0_to_24_eV": {
+        "energy_eV": 15.548754982897517,
+        "absorption_nm_inverse": 0.16647428911601134
+      },
+      "xx_absorption_at_selected_energies": [
+        {
+          "energy_eV": 1,
+          "absorption_nm_inverse": 0.015131737990212711
+        },
+        {
+          "energy_eV": 2,
+          "absorption_nm_inverse": 0.05349913950914401
+        },
+        {
+          "energy_eV": 2.5,
+          "absorption_nm_inverse": 0.046687347021208275
+        },
+        {
+          "energy_eV": 3.5,
+          "absorption_nm_inverse": 0.041533610562878215
+        },
+        {
+          "energy_eV": 5,
+          "absorption_nm_inverse": 0.06977422231422357
+        },
+        {
+          "energy_eV": 8,
+          "absorption_nm_inverse": 0.039188146453831785
+        },
+        {
+          "energy_eV": 15,
+          "absorption_nm_inverse": 0.10844112671146938
+        }
+      ],
+      "xx_epsilon1_negative_intervals_eV": [
+        [
+          1.4847872443268637,
+          2.968271551336213
+        ],
+        [
+          4.968667290253943,
+          6.162896347433866
+        ],
+        [
+          15.86892295034701,
+          15.967657322601234
+        ],
+        [
+          15.985947679590005,
+          16.077555174734233
+        ]
+      ],
+      "xx_epsilon1_minimum_0_to_24_eV": {
+        "energy_eV": 1.7627948963168698,
+        "epsilon1": -5.213237273037183
+      },
+      "xx_loss_peaks_below_8_eV": [
+        {
+          "energy_eV": 3.1489242164976563,
+          "loss": 0.3054560800789127,
+          "epsilon1": 0.3817300175759678,
+          "epsilon2": 3.2286604871966897
+        },
+        {
+          "energy_eV": 3.826922253542606,
+          "loss": 0.2876536069702864,
+          "epsilon1": 0.7652584347478365,
+          "epsilon2": 3.2988826213708182
+        },
+        {
+          "energy_eV": 4.700786390178319,
+          "loss": 0.30280395963272766,
+          "epsilon1": 0.5339800609560879,
+          "epsilon2": 3.2137431712814277
+        },
+        {
+          "energy_eV": 7.0361129622220355,
+          "loss": 0.7630777502219163,
+          "epsilon1": 0.4103651031657005,
+          "epsilon2": 1.1660656034082242
+        }
+      ]
+    },
+    "Graphene-B4C3": {
+      "npz_keys": {
+        "energy": "G_Graphene-B4C3_HSE_K17_energy",
+        "epsilon": "G_Graphene-B4C3_HSE_K17_epsilon"
+      },
+      "energy_grid_spacing_eV": 0.015613456809805899,
+      "sub_eV_xx_loss_peaks": [
+        {
+          "energy_eV": 0.8587401245393245,
+          "loss": 0.1919000517990202,
+          "epsilon1": 2.469134352705953,
+          "epsilon2": 3.437463923200588
+        }
+      ],
+      "dominant_zz_loss_peak_14_to_20_eV": {
+        "energy_eV": 18.611240517288632,
+        "loss": 2.704603897164553
+      },
+      "xx_absorption_maximum_0_to_24_eV": {
+        "energy_eV": 17.252869774835517,
+        "absorption_nm_inverse": 0.17403254357038395
+      },
+      "xx_absorption_at_selected_energies": [
+        {
+          "energy_eV": 1,
+          "absorption_nm_inverse": 0.00375453301887145
+        },
+        {
+          "energy_eV": 2,
+          "absorption_nm_inverse": 0.009341979999230164
+        },
+        {
+          "energy_eV": 2.5,
+          "absorption_nm_inverse": 0.008386404711408934
+        },
+        {
+          "energy_eV": 3.5,
+          "absorption_nm_inverse": 0.06418414939158189
+        },
+        {
+          "energy_eV": 5,
+          "absorption_nm_inverse": 0.058815688284754676
+        },
+        {
+          "energy_eV": 8,
+          "absorption_nm_inverse": 0.03382245580931746
+        },
+        {
+          "energy_eV": 15,
+          "absorption_nm_inverse": 0.0929128899975348
+        }
+      ],
+      "xx_epsilon1_negative_intervals_eV": [
+        [
+          3.6951170575989805,
+          3.8575322851024834
+        ],
+        [
+          4.356488550051367,
+          4.67762904213711
+        ],
+        [
+          5.347580074477975,
+          6.060646898336512
+        ],
+        [
+          16.774448071095524,
+          16.897269800830156
+        ],
+        [
+          17.16882633151795,
+          17.47981013642525
+        ],
+        [
+          18.002305868621196,
+          18.322914997884826
+        ],
+        [
+          19.172802591484448,
+          19.222094391046337
+        ]
+      ],
+      "xx_epsilon1_minimum_0_to_24_eV": {
+        "energy_eV": 5.4803233402418705,
+        "epsilon1": -0.656449889165893
+      }
+    }
+  },
+  "conclusions": [
+    "The sharp sub-eV in-plane loss features in Graphene-BC3 and Graphene-B4C3 are distinct from the approximately 2 and 5 eV negative-real-dielectric-response features discussed for Graphene-Borophene.",
+    "Graphene-Borophene has no corresponding sub-eV local loss peak under the stated peak-selection settings; it does have broader loss features at higher energies.",
+    "The three dominant out-of-plane loss peaks lie at approximately 17.88, 18.08 and 18.61 eV, within the approximate 17--19 eV description.",
+    "Graphene-Borophene is not the strongest absorber over the full displayed spectrum; a claim of stronger absorption must be restricted to the low-energy onset region.",
+    "Graphene-BC3 epsilon1_xx is not positive over the entire plotted energy range; small negative intervals are present."
+  ]
+}

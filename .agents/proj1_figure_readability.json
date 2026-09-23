@@ -1,0 +1,3773 @@
+{
+  "created_utc": "2026-09-23T10:34:48.319839+00:00",
+  "pdf": ".output/thesis.pdf",
+  "pdf_sha256": "877334b84e7b006ed5e25970596e8100d148458fa44ee8bd056ba17e3768a049",
+  "chapter_title": "Optoelectronic Properties of Heterostructure Bilayers",
+  "chapter_physical_pages": [
+    185,
+    230
+  ],
+  "chapter_printed_pages": [
+    "151",
+    "196"
+  ],
+  "threshold_pt": 7.0,
+  "method": [
+    "Chapter boundaries come from level-1 PDF bookmarks matching the current TeX short chapter title; printed page numbers use PDF PageLabels, with no fixed offsets.",
+    "Each PDF inclusion is recorded separately from its actual q/cm/Q/Do transformation, including the Form Matrix and nested clipping-wrapper forms. Repeated and cropped assets retain every occurrence and their scale/page ranges.",
+    "Printed point sizes are source PDF span sizes multiplied by the accumulated form scale. Tick minima use numeric/K-path text immediately outside the plot rectangle; a modal fallback is labelled explicitly.",
+    "Regular-label minima use nonnumeric spans of at least three characters, normally legends/axis labels/titles. Isolated chemical subscripts are excluded; examples and complete source-size counts are retained for review.",
+    "The threshold is a quantitative type-size check, not a substitute for rendered-page inspection. Text converted to vector outlines or embedded in raster images is explicitly sent for manual review.",
+    "All figure environments, including ContinuedFloat environments without independent labels, are included in the TeX inventory."
+  ],
+  "counts": {
+    "distinct_assets": 49,
+    "extractable_text_assets": 46,
+    "manual_raster_or_outlined_assets": 3,
+    "vector_plot_assets": 43,
+    "native_annotated_raster_assets": 3,
+    "figure_environments_including_continued": 39,
+    "actual_pdf_inclusions": 57
+  },
+  "summary": {
+    "below_7pt": [],
+    "missing_compiled_inclusions": [],
+    "manual_raster_or_outlined_files": [
+      "figures_proj1/S1.4.pdf",
+      "figures_proj1/S1.5.pdf",
+      "figures_proj1/S1.6.pdf"
+    ]
+  },
+  "change_scope": {
+    "readability_changes": "Font and panel-layout changes preserve the existing plotted datasets, polarizations, colors and line styles; numerical extraction/source checks are documented in the associated reproduction and source files.",
+    "scientific_corrections_separate_from_readability": [
+      "Three absorption figures (proj1.12a, S1.14a, S1.20) correct the verified E/h vs E/hbar factor of 2*pi and explicitly report nm^-1.",
+      "The monolayer reflectivity inclusion switches from old S1.14d.pdf to the existing S1.14d_correct.pdf, whose twelve curves match the same NPZ sources and standard formula; the old PDF remains untouched.",
+      "Scalar-derived off-diagonal optical panels are removed because the scalar formulas do not define independent off-diagonal observables; complete original dielectric-tensor components remain displayed with their scientific limitation stated."
+    ],
+    "numerical_optics_evidence": "figures_proj1/optics_sources.json records 291 old-reference and 291 revised-figure curve checks against source data, plus the separate failed old reflectivity-reference checks."
+  },
+  "figures": [
+    {
+      "figure": "5.1",
+      "label": "fig1.1",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 184,
+      "caption_anchor_printed_page": "157",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/proj1.1.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.2",
+      "label": "fig1.2_monolayers_bs",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 247,
+      "caption_anchor_printed_page": "158",
+      "inclusions": [
+        {
+          "options": "width=0.40\\linewidth",
+          "file": "figures_proj1/proj1.3a.pdf"
+        },
+        {
+          "options": "width=0.40\\linewidth",
+          "file": "figures_proj1/proj1.3b.pdf"
+        },
+        {
+          "options": "width=0.40\\linewidth",
+          "file": "figures_proj1/proj1.3c.pdf"
+        },
+        {
+          "options": "width=0.40\\linewidth",
+          "file": "figures_proj1/proj1.3d.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.3",
+      "label": "fig1.3",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 284,
+      "caption_anchor_printed_page": "159",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/proj1.3.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.4",
+      "label": "fig1.4_cdd",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 365,
+      "caption_anchor_printed_page": "160",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/proj1.4.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.5",
+      "label": "fig1.5",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 408,
+      "caption_anchor_printed_page": "162",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/proj1.5.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.6",
+      "label": "fig1.6",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 415,
+      "caption_anchor_printed_page": "162",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/proj1.6.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.7",
+      "label": "fig1.7",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 422,
+      "caption_anchor_printed_page": "163",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/proj1.7.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.8",
+      "label": "fig1.8",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 460,
+      "caption_anchor_printed_page": "164",
+      "inclusions": [
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/proj1.8a.pdf"
+        },
+        {
+          "options": "width=0.70\\linewidth",
+          "file": "figures_proj1/proj1.8b.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.9",
+      "label": "fig1.9",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 538,
+      "caption_anchor_printed_page": "167",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/proj1.9.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.10",
+      "label": "fig1.10",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 585,
+      "caption_anchor_printed_page": "169",
+      "inclusions": [
+        {
+          "options": "width=1.0\\textwidth",
+          "file": "figures_proj1/proj1.10_diff.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.11",
+      "label": "fig1.11",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 622,
+      "caption_anchor_printed_page": "170",
+      "inclusions": [
+        {
+          "options": "width=1.0\\textwidth",
+          "file": "figures_proj1/proj1.11_diff.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.12",
+      "label": "fig1.12",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 649,
+      "caption_anchor_printed_page": "171",
+      "inclusions": [
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/proj1.12a.pdf"
+        },
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/proj1.12b.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.13",
+      "label": "fig1.13",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 685,
+      "caption_anchor_printed_page": "173",
+      "inclusions": [
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/proj1.13a_cor.pdf"
+        },
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/proj1.13b.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.14",
+      "label": "fig1.14",
+      "continued": false,
+      "tex_file": "src/project_1_main.tex",
+      "tex_line": 716,
+      "caption_anchor_printed_page": "174",
+      "inclusions": [
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/proj1.14_cor.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.15",
+      "label": "S1.1",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 14,
+      "caption_anchor_printed_page": "175",
+      "inclusions": [
+        {
+          "options": "width=0.6\\textwidth",
+          "file": "figures_proj1/S1.1.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.16",
+      "label": "S1.2",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 21,
+      "caption_anchor_printed_page": "176",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/S1.2.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.17",
+      "label": "S1.3",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 29,
+      "caption_anchor_printed_page": "177",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.3.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.18",
+      "label": "S1.4",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 41,
+      "caption_anchor_printed_page": "178",
+      "inclusions": [
+        {
+          "options": "width=0.85\\linewidth,trim={0 0 2298 60},clip",
+          "file": "figures_proj1/S1.4.pdf"
+        },
+        {
+          "options": "width=0.85\\linewidth,trim={1161 0 1161 60},clip",
+          "file": "figures_proj1/S1.4.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.18",
+      "label": "S1.4",
+      "continued": true,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 50,
+      "caption_anchor_printed_page": "178",
+      "inclusions": [
+        {
+          "options": "width=0.85\\linewidth,trim={2322 0 0 60},clip",
+          "file": "figures_proj1/S1.4.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.19",
+      "label": "S1.5",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 57,
+      "caption_anchor_printed_page": "180",
+      "inclusions": [
+        {
+          "options": "width=0.80\\linewidth,trim={0 873 1117.5 60},clip",
+          "file": "figures_proj1/S1.5.pdf"
+        },
+        {
+          "options": "width=0.80\\linewidth,trim={1190 873 0 60},clip",
+          "file": "figures_proj1/S1.5.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.19",
+      "label": "S1.5",
+      "continued": true,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 66,
+      "caption_anchor_printed_page": "180",
+      "inclusions": [
+        {
+          "options": "width=0.80\\linewidth,trim={0 0 1117.5 897.75},clip",
+          "file": "figures_proj1/S1.5.pdf"
+        },
+        {
+          "options": "width=0.80\\linewidth,trim={1190 0 0 897.75},clip",
+          "file": "figures_proj1/S1.5.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.20",
+      "label": "S1.6",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 75,
+      "caption_anchor_printed_page": "182",
+      "inclusions": [
+        {
+          "options": "width=0.80\\linewidth,trim={0 873 1117.5 60},clip",
+          "file": "figures_proj1/S1.6.pdf"
+        },
+        {
+          "options": "width=0.80\\linewidth,trim={1190 873 0 60},clip",
+          "file": "figures_proj1/S1.6.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.20",
+      "label": "S1.6",
+      "continued": true,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 84,
+      "caption_anchor_printed_page": "182",
+      "inclusions": [
+        {
+          "options": "width=0.80\\linewidth,trim={0 0 1117.5 897.75},clip",
+          "file": "figures_proj1/S1.6.pdf"
+        },
+        {
+          "options": "width=0.80\\linewidth,trim={1190 0 0 897.75},clip",
+          "file": "figures_proj1/S1.6.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.21",
+      "label": "S1.9",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 201,
+      "caption_anchor_printed_page": "184",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.9.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.22",
+      "label": "S1.10",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 208,
+      "caption_anchor_printed_page": "185",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/S1.10.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.23",
+      "label": "S1.11",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 215,
+      "caption_anchor_printed_page": "185",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/S1.11.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.24",
+      "label": "S1.12",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 222,
+      "caption_anchor_printed_page": "186",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/S1.12_alt.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.25",
+      "label": "S1.13",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 231,
+      "caption_anchor_printed_page": "187",
+      "inclusions": [
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/S1.13a.pdf"
+        },
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/S1.13b.pdf"
+        },
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/S1.13c.pdf"
+        },
+        {
+          "options": "width=1.00\\linewidth",
+          "file": "figures_proj1/S1.13d.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.26",
+      "label": "S1.14",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 250,
+      "caption_anchor_printed_page": "188",
+      "inclusions": [
+        {
+          "options": "width=1.0\\linewidth",
+          "file": "figures_proj1/S1.14a.pdf"
+        },
+        {
+          "options": "width=1.0\\linewidth",
+          "file": "figures_proj1/S1.14b.pdf"
+        },
+        {
+          "options": "width=1.0\\linewidth",
+          "file": "figures_proj1/S1.14c.pdf"
+        },
+        {
+          "options": "width=1.0\\linewidth",
+          "file": "figures_proj1/S1.14d_correct.pdf"
+        },
+        {
+          "options": "width=1.0\\linewidth",
+          "file": "figures_proj1/S1.14e_correct.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.27",
+      "label": "S1.15",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 266,
+      "caption_anchor_printed_page": "189",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/S1.15.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.28",
+      "label": "S1.16",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 275,
+      "caption_anchor_printed_page": "190",
+      "inclusions": [
+        {
+          "options": "width=0.80\\textwidth",
+          "file": "figures_proj1/S1.16_alt.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.29",
+      "label": "S1.17",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 299,
+      "caption_anchor_printed_page": "191",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.17_alt.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.30",
+      "label": "S1.18",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 310,
+      "caption_anchor_printed_page": "192",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.18.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.31",
+      "label": "S1.19",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 323,
+      "caption_anchor_printed_page": "193",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.19.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.32",
+      "label": "S1.20",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 336,
+      "caption_anchor_printed_page": "194",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.20.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.33",
+      "label": "S1.21",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 346,
+      "caption_anchor_printed_page": "194",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.21.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.34",
+      "label": "S1.22",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 356,
+      "caption_anchor_printed_page": "195",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.22.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.35",
+      "label": "S1.23",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 366,
+      "caption_anchor_printed_page": "195",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.23_correct.pdf"
+        }
+      ]
+    },
+    {
+      "figure": "5.36",
+      "label": "S1.24",
+      "continued": false,
+      "tex_file": "src/project_1_SI.tex",
+      "tex_line": 376,
+      "caption_anchor_printed_page": "196",
+      "inclusions": [
+        {
+          "options": "width=1.00\\textwidth",
+          "file": "figures_proj1/S1.24_correct.pdf"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "file": "figures_proj1/S1.1.pdf",
+      "sha256": "a90d44d19a6c2554f98744f6c242169cfd01190762bbfc29fae9de62094cd535",
+      "source_page_size_pt": [
+        345.6000061035156,
+        237.60000610351562
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 13.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 1,
+      "minimum_regular_label_examples": [
+        "-point mesh (",
+        "Energy (eV)",
+        "Graphene-BC",
+        " (Hollow)",
+        "Total-energy convergence"
+      ],
+      "minimum_tick_examples": [
+        "9",
+        "11",
+        "17",
+        "23",
+        "25",
+        "27",
+        "29",
+        "31",
+        "33",
+        "35"
+      ],
+      "source_text_size_counts": {
+        "9.1": 1,
+        "11.5": 13,
+        "12.0": 7,
+        "13.0": 12
+      },
+      "placements": [
+        {
+          "physical_page": 209,
+          "printed_page": "175",
+          "page_figure_occurrence": 1,
+          "xobject": "Im34",
+          "scale_x": 0.75182,
+          "scale_y": 0.75182,
+          "font_scale": 0.75182,
+          "form_bbox": "[0 0 345.6 237.6]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.646,
+          "minimum_regular_label_pt": 9.774
+        }
+      ],
+      "scale_range": [
+        0.75182,
+        0.75182
+      ],
+      "physical_page_range": [
+        209,
+        209
+      ],
+      "minimum_printed_type_pt": 8.646,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.10.pdf",
+      "sha256": "aacfd298f5714897e75af9b189f72ebacd609602cad893099fdc6f2a01de6de6",
+      "source_page_size_pt": [
+        504.0,
+        374.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "(a) Total PDoS",
+        "(b) Carbon in Graphene",
+        "(c) Boron in BC",
+        "(d) Carbon in BC",
+        "Fermi energy: -0.940 eV",
+        "Total PDoS",
+        "Fermi energy"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "0.0",
+        "0.5",
+        "1.0",
+        "1.5"
+      ],
+      "source_text_size_counts": {
+        "8.05": 5,
+        "9.8": 1,
+        "11.5": 52,
+        "12.5": 3,
+        "14.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 219,
+          "printed_page": "185",
+          "page_figure_occurrence": 1,
+          "xobject": "Im41",
+          "scale_x": 0.68735,
+          "scale_y": 0.68735,
+          "font_scale": 0.68735,
+          "form_bbox": "[0 0 504 374.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 7.905,
+          "minimum_regular_label_pt": 7.905
+        }
+      ],
+      "scale_range": [
+        0.68735,
+        0.68735
+      ],
+      "physical_page_range": [
+        219,
+        219
+      ],
+      "minimum_printed_type_pt": 7.905,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.11.pdf",
+      "sha256": "a7c4255ee2e44d31de89c54703eaba29307674575aafa5bb6a6c2df93d21ca00",
+      "source_page_size_pt": [
+        504.0,
+        374.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "(a) Total PDoS",
+        "(b) Carbon in Graphene",
+        "(c) Boron in B",
+        "(d) Carbon in B",
+        "Fermi energy: -0.378 eV",
+        "Total PDoS",
+        "Fermi energy"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "0.0",
+        "0.5",
+        "1.0",
+        "1.5"
+      ],
+      "source_text_size_counts": {
+        "8.05": 7,
+        "9.8": 2,
+        "11.5": 51,
+        "12.5": 3,
+        "14.0": 3
+      },
+      "placements": [
+        {
+          "physical_page": 219,
+          "printed_page": "185",
+          "page_figure_occurrence": 2,
+          "xobject": "Im42",
+          "scale_x": 0.68735,
+          "scale_y": 0.68735,
+          "font_scale": 0.68735,
+          "form_bbox": "[0 0 504 374.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 7.905,
+          "minimum_regular_label_pt": 7.905
+        }
+      ],
+      "scale_range": [
+        0.68735,
+        0.68735
+      ],
+      "physical_page_range": [
+        219,
+        219
+      ],
+      "minimum_printed_type_pt": 7.905,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.12_alt.pdf",
+      "sha256": "9717ee02543afdd34954c393a9cadea650ebda684352d84c70be6b1ef5e2370d",
+      "source_page_size_pt": [
+        489.6000061035156,
+        439.20001220703125
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "Line colours: real / imaginary",
+        "33 k-points",
+        "65 k-points",
+        "129 k-points (Exact)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "8",
+        "12",
+        "16",
+        "10"
+      ],
+      "source_text_size_counts": {
+        "11.5": 4,
+        "12.0": 48,
+        "13.0": 3,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 220,
+          "printed_page": "186",
+          "page_figure_occurrence": 1,
+          "xobject": "Im43",
+          "scale_x": 0.70758,
+          "scale_y": 0.70758,
+          "font_scale": 0.70758,
+          "form_bbox": "[0 0 489.6 439.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.491,
+          "minimum_regular_label_pt": 8.137
+        }
+      ],
+      "scale_range": [
+        0.70758,
+        0.70758
+      ],
+      "physical_page_range": [
+        220,
+        220
+      ],
+      "minimum_printed_type_pt": 8.137,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.13a.pdf",
+      "sha256": "a391cbbfe4862653698daee8f5f52c02b2f048a09e4fe7cf0bd7f7cdca58dd41",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Dielectric function"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "5",
+        "2"
+      ],
+      "source_text_size_counts": {
+        "9.8": 1,
+        "11.0": 16,
+        "12.0": 3,
+        "13.0": 4,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 221,
+          "printed_page": "187",
+          "page_figure_occurrence": 1,
+          "xobject": "Im44",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        221,
+        221
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.13b.pdf",
+      "sha256": "7082b4fceae8391dd888849636e7bff8b4e1a61c50e3be15cf11965c22b94e3b",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Dielectric function"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "20",
+        "2",
+        "4"
+      ],
+      "source_text_size_counts": {
+        "11.0": 17,
+        "12.0": 3,
+        "13.0": 4,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 221,
+          "printed_page": "187",
+          "page_figure_occurrence": 2,
+          "xobject": "Im45",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        221,
+        221
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.13c.pdf",
+      "sha256": "47560bab0ede868e873f3f04b281a3473350bec216051454e4e2232132bc67df",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Dielectric function"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "5",
+        "1",
+        "2"
+      ],
+      "source_text_size_counts": {
+        "9.8": 2,
+        "11.0": 17,
+        "12.0": 3,
+        "13.0": 4,
+        "14.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 221,
+          "printed_page": "187",
+          "page_figure_occurrence": 3,
+          "xobject": "Im46",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        221,
+        221
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.13d.pdf",
+      "sha256": "6a7ddd6acf3ea7822ff74942d5eacb16e9bce5ede271268debaa0e76a5291c33",
+      "source_page_size_pt": [
+        576.0,
+        180.0
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Dielectric function",
+        "Real part",
+        "Imaginary part"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "5",
+        "10",
+        "2"
+      ],
+      "source_text_size_counts": {
+        "11.0": 17,
+        "12.0": 5,
+        "13.0": 4,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 221,
+          "printed_page": "187",
+          "page_figure_occurrence": 4,
+          "xobject": "Im47",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 180]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        221,
+        221
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.14a.pdf",
+      "sha256": "86a3fdff4eda43f85f046f5641c2f4fb11b2375989ac1911d0e2727844c65af6",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        " (nm"
+      ],
+      "minimum_tick_examples": [
+        "0.00",
+        "0.05",
+        "0.10"
+      ],
+      "source_text_size_counts": {
+        "8.4": 2,
+        "11.0": 27,
+        "12.0": 6,
+        "13.0": 6,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 222,
+          "printed_page": "188",
+          "page_figure_occurrence": 1,
+          "xobject": "Im48",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        222,
+        222
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.14b.pdf",
+      "sha256": "22b6aaf40cce361568b234611a16d6dc4ae8d51bc2a16c0e8454fd3a593ccfe1",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)"
+      ],
+      "minimum_tick_examples": [
+        "0.0",
+        "0.5",
+        "1.0",
+        "0",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "11.0": 26,
+        "12.0": 4,
+        "13.0": 6,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 222,
+          "printed_page": "188",
+          "page_figure_occurrence": 2,
+          "xobject": "Im49",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        222,
+        222
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.14c.pdf",
+      "sha256": "49592e6bf6a8319eee37e4f863f89d95ad75b98f28aede9f20a70e53fedd31b4",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "11.0": 27,
+        "12.0": 4,
+        "13.0": 6,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 222,
+          "printed_page": "188",
+          "page_figure_occurrence": 3,
+          "xobject": "Im50",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        222,
+        222
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.14d_correct.pdf",
+      "sha256": "639ad0e1bbb76c73fcf1c015ec4488dd1517abaee2fc1fe0bfed6114b11d40b4",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)"
+      ],
+      "minimum_tick_examples": [
+        "0.00",
+        "0.25",
+        "0.50",
+        "0.0",
+        "0.2"
+      ],
+      "source_text_size_counts": {
+        "11.0": 26,
+        "12.0": 4,
+        "13.0": 6,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 222,
+          "printed_page": "188",
+          "page_figure_occurrence": 4,
+          "xobject": "Im51",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        222,
+        222
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.14e_correct.pdf",
+      "sha256": "43f3f27d6f20bc390722f22fd6b59b1841a2749c3dd9616e4a34ad076df80bd0",
+      "source_page_size_pt": [
+        576.0,
+        151.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Borophene",
+        "Graphene"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 24,
+        "12.0": 8,
+        "13.0": 6,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 222,
+          "printed_page": "188",
+          "page_figure_occurrence": 5,
+          "xobject": "Im52",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 151.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        222,
+        222
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.15.pdf",
+      "sha256": "92ba9ffe6022d2687755ddee3fa790653dd0f5837fa4a3a238a1522c65c74d69",
+      "source_page_size_pt": [
+        489.6000061035156,
+        439.20001220703125
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "Line colours: real / imaginary",
+        "32 bands",
+        "64 bands",
+        "128 bands",
+        "256 bands",
+        "512 bands"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "5",
+        "10",
+        "15",
+        "20",
+        "25",
+        "4",
+        "8",
+        "12",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "9.8": 2,
+        "11.5": 6,
+        "12.0": 47,
+        "13.0": 3,
+        "14.0": 3
+      },
+      "placements": [
+        {
+          "physical_page": 223,
+          "printed_page": "189",
+          "page_figure_occurrence": 1,
+          "xobject": "Im53",
+          "scale_x": 0.70758,
+          "scale_y": 0.70758,
+          "font_scale": 0.70758,
+          "form_bbox": "[0 0 489.6 439.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.491,
+          "minimum_regular_label_pt": 8.137
+        }
+      ],
+      "scale_range": [
+        0.70758,
+        0.70758
+      ],
+      "physical_page_range": [
+        223,
+        223
+      ],
+      "minimum_printed_type_pt": 8.137,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.16_alt.pdf",
+      "sha256": "9fb94d4f23ea96dfbe6a44056fbc6e759d397dffb1951e8eae41968a88363038",
+      "source_page_size_pt": [
+        489.6000061035156,
+        439.20001220703125
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "Line colours: real / imaginary",
+        "PBE",
+        "HSE06, ",
+        "HSE06, EDIFF="
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "10",
+        "20",
+        "30",
+        "12",
+        "13"
+      ],
+      "source_text_size_counts": {
+        "8.05": 6,
+        "11.5": 14,
+        "12.0": 41,
+        "13.0": 3,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 224,
+          "printed_page": "190",
+          "page_figure_occurrence": 1,
+          "xobject": "Im54",
+          "scale_x": 0.70758,
+          "scale_y": 0.70758,
+          "font_scale": 0.70758,
+          "form_bbox": "[0 0 489.6 439.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.491,
+          "minimum_regular_label_pt": 8.137
+        }
+      ],
+      "scale_range": [
+        0.70758,
+        0.70758
+      ],
+      "physical_page_range": [
+        224,
+        224
+      ],
+      "minimum_printed_type_pt": 8.137,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.17_alt.pdf",
+      "sha256": "ab4a5456f5f246ff68826e023e0d3776a7a240b04ee77e585c7fac012ceccec8",
+      "source_page_size_pt": [
+        576.0,
+        475.20001220703125
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 9,
+      "minimum_regular_label_examples": [
+        "Dielectric function",
+        "Photon energy (eV)",
+        "Real part (PBE)",
+        "Imaginary part (PBE)",
+        "Real part (HSE06)",
+        "Imaginary part (HSE06)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "20",
+        "2",
+        "0.0",
+        "0.2",
+        "0.4"
+      ],
+      "source_text_size_counts": {
+        "11.0": 78,
+        "12.0": 10,
+        "13.0": 12,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 225,
+          "printed_page": "191",
+          "page_figure_occurrence": 1,
+          "xobject": "Im55",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 475.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        225,
+        225
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.18.pdf",
+      "sha256": "1d89b9d1a7e0e9a2557ba2c079b240c7216738a9a8ecc4f0e2ec0e16abb1e6e3",
+      "source_page_size_pt": [
+        576.0,
+        475.20001220703125
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 9,
+      "minimum_regular_label_examples": [
+        "Dielectric function",
+        "Photon energy (eV)",
+        "Real part (PBE)",
+        "Imaginary part (PBE)",
+        "Real part (HSE06)",
+        "Imaginary part (HSE06)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "10",
+        "20",
+        "2",
+        "4",
+        "0.0",
+        "0.5",
+        "0.2",
+        "0.4",
+        "-4"
+      ],
+      "source_text_size_counts": {
+        "11.0": 78,
+        "11.2": 1,
+        "12.0": 10,
+        "13.0": 12,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 226,
+          "printed_page": "192",
+          "page_figure_occurrence": 1,
+          "xobject": "Im56",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 475.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        226,
+        226
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.19.pdf",
+      "sha256": "bfadd6e965948eaa592769da6cbce3e79aa104aa91bcc0f9ed818cba8f1f0577",
+      "source_page_size_pt": [
+        576.0,
+        475.20001220703125
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 9,
+      "minimum_regular_label_examples": [
+        "Dielectric function",
+        "Photon energy (eV)",
+        "Real part (PBE)",
+        "Imaginary part (PBE)",
+        "Real part (HSE06)",
+        "Imaginary part (HSE06)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "10",
+        "20",
+        "2",
+        "4",
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "0.2",
+        "0.1"
+      ],
+      "source_text_size_counts": {
+        "11.0": 77,
+        "11.2": 2,
+        "12.0": 10,
+        "13.0": 12,
+        "16.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 227,
+          "printed_page": "193",
+          "page_figure_occurrence": 1,
+          "xobject": "Im57",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 475.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        227,
+        227
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.2.pdf",
+      "sha256": "3f70721d696748352b8ddd307d6091cc20cbeb16eefe252b6319f500ac7ffcab",
+      "source_page_size_pt": [
+        489.6000061035156,
+        410.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "Fitted curve",
+        "Source data"
+      ],
+      "minimum_tick_examples": [
+        "5.10",
+        "5.13",
+        "5.16",
+        "5.19",
+        "-67.90",
+        "-67.88",
+        "-67.86",
+        "-67.84",
+        "-67.82",
+        "5.01"
+      ],
+      "source_text_size_counts": {
+        "9.1": 3,
+        "11.5": 2,
+        "12.0": 35,
+        "13.0": 12
+      },
+      "placements": [
+        {
+          "physical_page": 210,
+          "printed_page": "176",
+          "page_figure_occurrence": 1,
+          "xobject": "Im35",
+          "scale_x": 0.70758,
+          "scale_y": 0.70758,
+          "font_scale": 0.70758,
+          "form_bbox": "[0 0 489.6 410.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.491,
+          "minimum_regular_label_pt": 8.137
+        }
+      ],
+      "scale_range": [
+        0.70758,
+        0.70758
+      ],
+      "physical_page_range": [
+        210,
+        210
+      ],
+      "minimum_printed_type_pt": 8.137,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.20.pdf",
+      "sha256": "4752ffebe9879d72c03b6f731e261b2983699132227a66b293fedca31ed019b2",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Absorption coefficient (nm",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0.0",
+        "0.1",
+        "0.2",
+        "0.00",
+        "0.05",
+        "0.10",
+        "0.15"
+      ],
+      "source_text_size_counts": {
+        "8.4": 5,
+        "11.0": 28,
+        "12.0": 9,
+        "13.0": 6,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 228,
+          "printed_page": "194",
+          "page_figure_occurrence": 1,
+          "xobject": "Im58",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        228,
+        228
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.21.pdf",
+      "sha256": "ac2191e7e8a42bf25517dd2ba24cd8d097d250d799f7599d9aa5da865f2f51b9",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Energy-loss spectrum",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "1",
+        "2"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 27,
+        "12.0": 8,
+        "13.0": 6,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 228,
+          "printed_page": "194",
+          "page_figure_occurrence": 2,
+          "xobject": "Im59",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        228,
+        228
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.22.pdf",
+      "sha256": "2c6f1c4163573e51c4d088d3f695f061ffefff57a8fce612309753532b6dcf6e",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Refractive index",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 27,
+        "12.0": 8,
+        "13.0": 6,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 229,
+          "printed_page": "195",
+          "page_figure_occurrence": 1,
+          "xobject": "Im60",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        229,
+        229
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.23_correct.pdf",
+      "sha256": "367dae70dfa761fd1a0e403739a9dff3912268b743277f8823a581bcdb62ae8e",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Reflectivity",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0.0",
+        "0.2",
+        "0.4",
+        "0.6",
+        "0.1",
+        "0.3"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 30,
+        "12.0": 8,
+        "13.0": 6,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 229,
+          "printed_page": "195",
+          "page_figure_occurrence": 2,
+          "xobject": "Im61",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        229,
+        229
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.24_correct.pdf",
+      "sha256": "80ceb176a8ff574a5a85eebc85e8c8d115e5178f0cd7fa5a4565fc958e4aa6ba",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Extinction coefficient",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 29,
+        "12.0": 8,
+        "13.0": 6,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 230,
+          "printed_page": "196",
+          "page_figure_occurrence": 1,
+          "xobject": "Im62",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        230,
+        230
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.3.pdf",
+      "sha256": "432b9284db171c7617ce8b741e8eea135b471e1b7090b51c5d16cd6a6fc69465",
+      "source_page_size_pt": [
+        489.6000061035156,
+        410.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "Top",
+        "Bridge",
+        "Hollow (BC",
+        "Hollow 1 (others)",
+        "Hollow 2"
+      ],
+      "minimum_tick_examples": [
+        "5.020",
+        "5.035",
+        "5.050",
+        "-142.29",
+        "-142.28",
+        "-142.27",
+        "-142.26",
+        "-142.25",
+        "4.960",
+        "4.975"
+      ],
+      "source_text_size_counts": {
+        "8.05": 1,
+        "8.75": 3,
+        "11.5": 6,
+        "12.0": 24,
+        "12.5": 4,
+        "13.0": 10
+      },
+      "placements": [
+        {
+          "physical_page": 211,
+          "printed_page": "177",
+          "page_figure_occurrence": 1,
+          "xobject": "Im36",
+          "scale_x": 0.88448,
+          "scale_y": 0.88448,
+          "font_scale": 0.88448,
+          "form_bbox": "[0 0 489.6 410.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 10.614,
+          "minimum_regular_label_pt": 10.172
+        }
+      ],
+      "scale_range": [
+        0.88448,
+        0.88448
+      ],
+      "physical_page_range": [
+        211,
+        211
+      ],
+      "minimum_printed_type_pt": 10.172,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/S1.4.pdf",
+      "sha256": "ec8eb1a0a9f07b318dd749ab9ed0449087199b4180f6eb314fd159f15f3684d0",
+      "source_page_size_pt": [
+        3483.0,
+        888.75
+      ],
+      "source_text_available": false,
+      "source_minimum_tick_pt": null,
+      "source_minimum_regular_label_pt": null,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [],
+      "minimum_tick_examples": [],
+      "source_text_size_counts": {},
+      "placements": [
+        {
+          "physical_page": 212,
+          "printed_page": "178",
+          "page_figure_occurrence": 1,
+          "xobject": "Im37",
+          "scale_x": 0.31061,
+          "scale_y": 0.31061,
+          "font_scale": 0.31061,
+          "form_bbox": "[0 0 3483 888.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm1",
+              "bbox": "[0 0 1184.992 828.748]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 212,
+          "printed_page": "178",
+          "page_figure_occurrence": 2,
+          "xobject": "Im37",
+          "scale_x": 0.31702,
+          "scale_y": 0.31702,
+          "font_scale": 0.31702,
+          "form_bbox": "[0 0 3483 888.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm2",
+              "bbox": "[0 0 1160.992 828.748]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 213,
+          "printed_page": "179",
+          "page_figure_occurrence": 1,
+          "xobject": "Im37",
+          "scale_x": 0.31702,
+          "scale_y": 0.31702,
+          "font_scale": 0.31702,
+          "form_bbox": "[0 0 3483 888.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm3",
+              "bbox": "[0 0 1160.992 828.748]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        }
+      ],
+      "scale_range": [
+        0.31061,
+        0.31702
+      ],
+      "physical_page_range": [
+        212,
+        213
+      ],
+      "minimum_printed_type_pt": null,
+      "automatic_status": "manual_visual_review_required",
+      "manual_review": {
+        "status": "passed_manual_review_by_root_and_proj1_agent",
+        "scope": "All three original energy-landscape panels, now separately cropped into continued figures, have been checked in final thesis for legible axes/color bars and no cropping of data or labels."
+      }
+    },
+    {
+      "file": "figures_proj1/S1.5.pdf",
+      "sha256": "5609f34864f1aa03531e9e9c44479d8654ccf6096b2887be7686036df2d42592",
+      "source_page_size_pt": [
+        2317.5,
+        1770.75
+      ],
+      "source_text_available": false,
+      "source_minimum_tick_pt": null,
+      "source_minimum_regular_label_pt": null,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [],
+      "minimum_tick_examples": [],
+      "source_text_size_counts": {},
+      "placements": [
+        {
+          "physical_page": 214,
+          "printed_page": "180",
+          "page_figure_occurrence": 1,
+          "xobject": "Im38",
+          "scale_x": 0.28868,
+          "scale_y": 0.28868,
+          "font_scale": 0.28868,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm4",
+              "bbox": "[0 0 1199.994 837.746]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 214,
+          "printed_page": "180",
+          "page_figure_occurrence": 2,
+          "xobject": "Im38",
+          "scale_x": 0.30724,
+          "scale_y": 0.30724,
+          "font_scale": 0.30724,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm5",
+              "bbox": "[0 0 1127.494 837.746]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 215,
+          "printed_page": "181",
+          "page_figure_occurrence": 1,
+          "xobject": "Im38",
+          "scale_x": 0.28868,
+          "scale_y": 0.28868,
+          "font_scale": 0.28868,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm6",
+              "bbox": "[0 0 1199.994 872.996]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 215,
+          "printed_page": "181",
+          "page_figure_occurrence": 2,
+          "xobject": "Im38",
+          "scale_x": 0.30724,
+          "scale_y": 0.30724,
+          "font_scale": 0.30724,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm7",
+              "bbox": "[0 0 1127.494 872.996]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        }
+      ],
+      "scale_range": [
+        0.28868,
+        0.30724
+      ],
+      "physical_page_range": [
+        214,
+        215
+      ],
+      "minimum_printed_type_pt": null,
+      "automatic_status": "manual_visual_review_required",
+      "manual_review": {
+        "status": "passed_manual_review_by_root_and_proj1_agent",
+        "scope": "All four original energy-landscape panels, now separately cropped into continued figures, have been checked in final thesis for legible axes/color bars and no cropping of data or labels."
+      }
+    },
+    {
+      "file": "figures_proj1/S1.6.pdf",
+      "sha256": "b026861dc29024de06966d794e9f21fe61fa361d728a86efa1675fc5109ba956",
+      "source_page_size_pt": [
+        2317.5,
+        1770.75
+      ],
+      "source_text_available": false,
+      "source_minimum_tick_pt": null,
+      "source_minimum_regular_label_pt": null,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [],
+      "minimum_tick_examples": [],
+      "source_text_size_counts": {},
+      "placements": [
+        {
+          "physical_page": 216,
+          "printed_page": "182",
+          "page_figure_occurrence": 1,
+          "xobject": "Im39",
+          "scale_x": 0.28868,
+          "scale_y": 0.28868,
+          "font_scale": 0.28868,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm8",
+              "bbox": "[0 0 1199.994 837.746]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 216,
+          "printed_page": "182",
+          "page_figure_occurrence": 2,
+          "xobject": "Im39",
+          "scale_x": 0.30724,
+          "scale_y": 0.30724,
+          "font_scale": 0.30724,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm9",
+              "bbox": "[0 0 1127.494 837.746]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 217,
+          "printed_page": "183",
+          "page_figure_occurrence": 1,
+          "xobject": "Im39",
+          "scale_x": 0.28868,
+          "scale_y": 0.28868,
+          "font_scale": 0.28868,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm10",
+              "bbox": "[0 0 1199.994 872.996]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        },
+        {
+          "physical_page": 217,
+          "printed_page": "183",
+          "page_figure_occurrence": 2,
+          "xobject": "Im39",
+          "scale_x": 0.30724,
+          "scale_y": 0.30724,
+          "font_scale": 0.30724,
+          "form_bbox": "[0 0 2317.5 1770.75]",
+          "clipping_wrapper_chain": [
+            {
+              "xobject": "Fm11",
+              "bbox": "[0 0 1127.494 872.996]"
+            }
+          ],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": null
+        }
+      ],
+      "scale_range": [
+        0.28868,
+        0.30724
+      ],
+      "physical_page_range": [
+        216,
+        217
+      ],
+      "minimum_printed_type_pt": null,
+      "automatic_status": "manual_visual_review_required",
+      "manual_review": {
+        "status": "passed_manual_review_by_root_and_proj1_agent",
+        "scope": "All four original energy-landscape panels, now separately cropped into continued figures, have been checked in final thesis for legible axes/color bars and no cropping of data or labels."
+      }
+    },
+    {
+      "file": "figures_proj1/S1.9.pdf",
+      "sha256": "82aacc24ae7b87de0e14532e40b2a92fb4abf06d79aceff76513ce5777c19e9a",
+      "source_page_size_pt": [
+        504.0,
+        374.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 3,
+      "minimum_regular_label_examples": [
+        "(a) Total PDoS",
+        "(b) Carbon in Graphene",
+        "(c) Boron in Borophene",
+        "Total PDoS",
+        "Fermi energy",
+        "Fermi energy: -0.343 eV"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "−6",
+        "−4",
+        "−2",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "8.05": 3,
+        "11.5": 40,
+        "12.5": 3,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 218,
+          "printed_page": "184",
+          "page_figure_occurrence": 1,
+          "xobject": "Im40",
+          "scale_x": 0.85919,
+          "scale_y": 0.85919,
+          "font_scale": 0.85919,
+          "form_bbox": "[0 0 504 374.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 9.881,
+          "minimum_regular_label_pt": 9.881
+        }
+      ],
+      "scale_range": [
+        0.85919,
+        0.85919
+      ],
+      "physical_page_range": [
+        218,
+        218
+      ],
+      "minimum_printed_type_pt": 9.881,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.1.pdf",
+      "sha256": "6eb2757a38c0504cf81e92d97d3c5ab5322c2c993bffa196f2a4a895c2b26237",
+      "source_page_size_pt": [
+        460.79998779296875,
+        316.79998779296875
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": null,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "fallback modal numeric/k-path size excluding reduced-size chemical subscripts; inspect source text samples",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [
+        "Borophene",
+        "Graphene"
+      ],
+      "minimum_tick_examples": [],
+      "source_text_size_counts": {
+        "8.05": 3,
+        "11.5": 5,
+        "13.5": 1
+      },
+      "placements": [
+        {
+          "physical_page": 191,
+          "printed_page": "157",
+          "page_figure_occurrence": 1,
+          "xobject": "Im14",
+          "scale_x": 0.75182,
+          "scale_y": 0.75182,
+          "font_scale": 0.75182,
+          "form_bbox": "[0 0 460.8 316.8]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": 8.646
+        }
+      ],
+      "scale_range": [
+        0.75182,
+        0.75182
+      ],
+      "physical_page_range": [
+        191,
+        191
+      ],
+      "minimum_printed_type_pt": 8.646,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": {
+        "status": "passed_by_root_and_independent_final_render_review",
+        "scope": "Original atomic-structure raster retained; native material and view labels added and visually checked at thesis width.",
+        "physical_page": 191,
+        "printed_page": 157,
+        "independent_review": "Rendered final thesis page at 108 dpi. Native material/view headings are clear, original atoms/bonds/charge-density rasters are preserved, and no new labels overlap panels or captions."
+      }
+    },
+    {
+      "file": "figures_proj1/proj1.10_diff.pdf",
+      "sha256": "3b2b26a7993956c9d0cd50f06c0d9cdc17a8c5a4b656b539ad6de8a81a5b489e",
+      "source_page_size_pt": [
+        576.0,
+        374.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 6,
+      "minimum_regular_label_examples": [
+        "Real part, ",
+        "Photon energy (eV)",
+        "Imaginary part, ",
+        "Real part (PBE)",
+        "Real part (HSE06)",
+        "Imaginary part (PBE)",
+        "Imaginary part (HSE06)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "10",
+        "20",
+        "2",
+        "4",
+        "5",
+        "1",
+        "3"
+      ],
+      "source_text_size_counts": {
+        "8.4": 2,
+        "11.0": 41,
+        "11.2": 1,
+        "12.0": 11,
+        "13.0": 5,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 203,
+          "printed_page": "169",
+          "page_figure_occurrence": 1,
+          "xobject": "Im27",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 374.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        203,
+        203
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.11_diff.pdf",
+      "sha256": "5792f5b88b23565af60a8293a6b9af347a6ca0223dd7112dcc17850470540936",
+      "source_page_size_pt": [
+        576.0,
+        374.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 6,
+      "minimum_regular_label_examples": [
+        "Real part, ",
+        "Photon energy (eV)",
+        "Imaginary part, ",
+        "Real part (PBE)",
+        "Real part (HSE06)",
+        "Imaginary part (PBE)",
+        "Imaginary part (HSE06)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "10",
+        "20",
+        "2",
+        "4",
+        "-1.0",
+        "-0.5",
+        "0.0",
+        "5",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "8.4": 2,
+        "11.0": 39,
+        "11.2": 2,
+        "12.0": 11,
+        "13.0": 5,
+        "16.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 204,
+          "printed_page": "170",
+          "page_figure_occurrence": 1,
+          "xobject": "Im28",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 374.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        204,
+        204
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.12a.pdf",
+      "sha256": "23e65627b836f68e3b340f637a2bd89e5fea91b435c3058be14ad26868e9839d",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Absorption coefficient (nm",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0.0",
+        "0.1",
+        "0.2",
+        "0.00",
+        "0.05",
+        "0.10",
+        "0.15"
+      ],
+      "source_text_size_counts": {
+        "8.4": 5,
+        "11.0": 19,
+        "12.0": 8,
+        "13.0": 4,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 205,
+          "printed_page": "171",
+          "page_figure_occurrence": 1,
+          "xobject": "Im29",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        205,
+        205
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.12b.pdf",
+      "sha256": "938f6bf1caa4532a49aae42ea6b9ee0a4f97b288f1a0440f9ad8d8e3d10262f9",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Energy-loss spectrum",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "1",
+        "2"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 18,
+        "12.0": 7,
+        "13.0": 4,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 205,
+          "printed_page": "171",
+          "page_figure_occurrence": 2,
+          "xobject": "Im30",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        205,
+        205
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.13a_cor.pdf",
+      "sha256": "12f717d3693c8e8ccfc2636ddbb9d647a7480cd3cebf5c653a738fec6c2f8b38",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Reflectivity",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0.0",
+        "0.2",
+        "0.4",
+        "0.6",
+        "0.1",
+        "0.3"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 20,
+        "12.0": 7,
+        "13.0": 4,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 207,
+          "printed_page": "173",
+          "page_figure_occurrence": 1,
+          "xobject": "Im31",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        207,
+        207
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.13b.pdf",
+      "sha256": "2ff4a1ca1602eaffce1f1619f9ddec077591ac6c0ecc805b58dd40392614fbe6",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Refractive index",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "2",
+        "4",
+        "1"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 18,
+        "12.0": 7,
+        "13.0": 4,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 207,
+          "printed_page": "173",
+          "page_figure_occurrence": 2,
+          "xobject": "Im32",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        207,
+        207
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.14_cor.pdf",
+      "sha256": "b736df574a7b3d59dbf9a9f2cab9d139a2fd66bcbd2b321e82ee1fd719cbee34",
+      "source_page_size_pt": [
+        576.0,
+        223.1999969482422
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Photon energy (eV)",
+        "Extinction coefficient",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "0.0",
+        "0.5",
+        "1.0"
+      ],
+      "source_text_size_counts": {
+        "8.4": 3,
+        "11.0": 19,
+        "12.0": 7,
+        "13.0": 4,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 208,
+          "printed_page": "174",
+          "page_figure_occurrence": 1,
+          "xobject": "Im33",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 223.2]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        208,
+        208
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.3.pdf",
+      "sha256": "9021072367daf94ea6ec97c12eb2e1d636308cb5bb1c5f2761f1adf2949cc074",
+      "source_page_size_pt": [
+        518.4000244140625,
+        136.8000030517578
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": null,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "fallback modal numeric/k-path size excluding reduced-size chemical subscripts; inspect source text samples",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B"
+      ],
+      "minimum_tick_examples": [],
+      "source_text_size_counts": {
+        "8.05": 3,
+        "11.5": 4,
+        "13.5": 1
+      },
+      "placements": [
+        {
+          "physical_page": 193,
+          "printed_page": "159",
+          "page_figure_occurrence": 1,
+          "xobject": "Im19",
+          "scale_x": 0.83534,
+          "scale_y": 0.83534,
+          "font_scale": 0.83534,
+          "form_bbox": "[0 0 518.4 136.8]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": 9.606
+        }
+      ],
+      "scale_range": [
+        0.83534,
+        0.83534
+      ],
+      "physical_page_range": [
+        193,
+        193
+      ],
+      "minimum_printed_type_pt": 9.606,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": {
+        "status": "passed_by_root_and_independent_final_render_review",
+        "scope": "Original atomic-structure raster retained; native material and view labels added and visually checked at thesis width.",
+        "physical_page": 193,
+        "printed_page": 159,
+        "independent_review": "Rendered final thesis page at 108 dpi. Native material/view headings are clear, original atoms/bonds/charge-density rasters are preserved, and no new labels overlap panels or captions."
+      }
+    },
+    {
+      "file": "figures_proj1/proj1.3a.pdf",
+      "sha256": "35526563f59a9ed9623bdc8a30f208969c3cd5e4e853d26cf2865de7177cad13",
+      "source_page_size_pt": [
+        230.39999389648438,
+        216.0
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 1,
+      "minimum_regular_label_examples": [
+        "PBE conduction",
+        "PBE valence",
+        "Fermi energy",
+        "HSE06 conduction",
+        "HSE06 valence"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "source_text_size_counts": {
+        "10.5": 5,
+        "12.0": 11,
+        "13.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 192,
+          "printed_page": "158",
+          "page_figure_occurrence": 1,
+          "xobject": "Im15",
+          "scale_x": 0.7518,
+          "scale_y": 0.7518,
+          "font_scale": 0.7518,
+          "form_bbox": "[0 0 230.4 216]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 9.022,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.7518,
+        0.7518
+      ],
+      "physical_page_range": [
+        192,
+        192
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.3b.pdf",
+      "sha256": "7e9f810472238076114c2caa67102db051bf29131189d969190d9225641e5e6f",
+      "source_page_size_pt": [
+        230.39999389648438,
+        216.0
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 1,
+      "minimum_regular_label_examples": [
+        "PBE conduction",
+        "PBE valence",
+        "Fermi energy",
+        "HSE06 conduction",
+        "HSE06 valence"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "source_text_size_counts": {
+        "10.5": 5,
+        "12.0": 11,
+        "13.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 192,
+          "printed_page": "158",
+          "page_figure_occurrence": 2,
+          "xobject": "Im16",
+          "scale_x": 0.7518,
+          "scale_y": 0.7518,
+          "font_scale": 0.7518,
+          "form_bbox": "[0 0 230.4 216]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 9.022,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.7518,
+        0.7518
+      ],
+      "physical_page_range": [
+        192,
+        192
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.3c.pdf",
+      "sha256": "6a7375de451537d06e3930bb136c5eb37504812a4825724ba130703006394a2a",
+      "source_page_size_pt": [
+        230.39999389648438,
+        216.0
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 1,
+      "minimum_regular_label_examples": [
+        "PBE conduction",
+        "PBE valence",
+        "Fermi energy",
+        "HSE06 conduction",
+        "HSE06 valence"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "source_text_size_counts": {
+        "9.1": 1,
+        "10.5": 5,
+        "12.0": 11,
+        "13.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 192,
+          "printed_page": "158",
+          "page_figure_occurrence": 3,
+          "xobject": "Im17",
+          "scale_x": 0.7518,
+          "scale_y": 0.7518,
+          "font_scale": 0.7518,
+          "form_bbox": "[0 0 230.4 216]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 9.022,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.7518,
+        0.7518
+      ],
+      "physical_page_range": [
+        192,
+        192
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.3d.pdf",
+      "sha256": "6ff14db79350fc524be852ac183fdecfe73b99d88cad62b1da7e007d6eacde88",
+      "source_page_size_pt": [
+        230.39999389648438,
+        216.0
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 12.0,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 1,
+      "minimum_regular_label_examples": [
+        "PBE conduction",
+        "PBE valence",
+        "Fermi energy",
+        "HSE06 conduction",
+        "HSE06 valence"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "source_text_size_counts": {
+        "9.1": 2,
+        "10.5": 5,
+        "12.0": 11,
+        "13.0": 3
+      },
+      "placements": [
+        {
+          "physical_page": 192,
+          "printed_page": "158",
+          "page_figure_occurrence": 4,
+          "xobject": "Im18",
+          "scale_x": 0.7518,
+          "scale_y": 0.7518,
+          "font_scale": 0.7518,
+          "form_bbox": "[0 0 230.4 216]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 9.022,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.7518,
+        0.7518
+      ],
+      "physical_page_range": [
+        192,
+        192
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.4.pdf",
+      "sha256": "4dea9e770015e03c8449198273428a457cf27cee3baf4813dbac2fdf5ea19c77",
+      "source_page_size_pt": [
+        518.4000244140625,
+        338.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": null,
+      "source_minimum_regular_label_pt": 11.5,
+      "tick_detection": "fallback modal numeric/k-path size excluding reduced-size chemical subscripts; inspect source text samples",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [
+        "Top view",
+        "Graphene-BC",
+        "Graphene-Borophene",
+        "Graphene-B",
+        "Side view",
+        "Bottom view"
+      ],
+      "minimum_tick_examples": [],
+      "source_text_size_counts": {
+        "8.05": 3,
+        "11.5": 7,
+        "13.5": 1
+      },
+      "placements": [
+        {
+          "physical_page": 194,
+          "printed_page": "160",
+          "page_figure_occurrence": 1,
+          "xobject": "Im20",
+          "scale_x": 0.83534,
+          "scale_y": 0.83534,
+          "font_scale": 0.83534,
+          "form_bbox": "[0 0 518.4 338.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": null,
+          "minimum_regular_label_pt": 9.606
+        }
+      ],
+      "scale_range": [
+        0.83534,
+        0.83534
+      ],
+      "physical_page_range": [
+        194,
+        194
+      ],
+      "minimum_printed_type_pt": 9.606,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": {
+        "status": "passed_by_root_and_independent_final_render_review",
+        "scope": "Original charge-density-difference raster retained; native material and view labels added and visually checked at thesis width.",
+        "physical_page": 194,
+        "printed_page": 160,
+        "independent_review": "Rendered final thesis page at 108 dpi. Native material/view headings are clear, original atoms/bonds/charge-density rasters are preserved, and no new labels overlap panels or captions."
+      }
+    },
+    {
+      "file": "figures_proj1/proj1.5.pdf",
+      "sha256": "d093dc2909dcebf5d5e8b82ebd086be74cec3c8e870d7404d039e9413ecb394f",
+      "source_page_size_pt": [
+        460.79998779296875,
+        302.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Conduction bands (PBE)",
+        "Valence bands (PBE)",
+        "Conduction bands (HSE06)",
+        "Valence bands (HSE06)",
+        "Fermi energy"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6",
+        "5"
+      ],
+      "source_text_size_counts": {
+        "9.8": 1,
+        "10.5": 5,
+        "11.5": 14,
+        "12.0": 2,
+        "12.5": 1,
+        "14.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 196,
+          "printed_page": "162",
+          "page_figure_occurrence": 1,
+          "xobject": "Im21",
+          "scale_x": 0.75182,
+          "scale_y": 0.75182,
+          "font_scale": 0.75182,
+          "form_bbox": "[0 0 460.8 302.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.646,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.75182,
+        0.75182
+      ],
+      "physical_page_range": [
+        196,
+        196
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.6.pdf",
+      "sha256": "5b4889f937f7fa23d440f9abe1491846f2ddd6f4f79e6cf980a04a29ae7e69f5",
+      "source_page_size_pt": [
+        460.79998779296875,
+        302.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Conduction bands (PBE)",
+        "Valence bands (PBE)",
+        "Conduction bands (HSE06)",
+        "Valence bands (HSE06)",
+        "Fermi energy"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6",
+        "5"
+      ],
+      "source_text_size_counts": {
+        "10.5": 5,
+        "11.5": 14,
+        "12.0": 2,
+        "12.5": 1,
+        "14.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 196,
+          "printed_page": "162",
+          "page_figure_occurrence": 2,
+          "xobject": "Im22",
+          "scale_x": 0.75182,
+          "scale_y": 0.75182,
+          "font_scale": 0.75182,
+          "form_bbox": "[0 0 460.8 302.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.646,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.75182,
+        0.75182
+      ],
+      "physical_page_range": [
+        196,
+        196
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.7.pdf",
+      "sha256": "74e8d4d493eef8dd3859782ef183c5eabe951bc3fb74b4e0ebfc3c2ce7202751",
+      "source_page_size_pt": [
+        460.79998779296875,
+        302.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 10.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 2,
+      "minimum_regular_label_examples": [
+        "Conduction bands (PBE)",
+        "Valence bands (PBE)",
+        "Conduction bands (HSE06)",
+        "Valence bands (HSE06)",
+        "Fermi energy"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−6",
+        "−4",
+        "−2",
+        "0",
+        "2",
+        "4",
+        "6",
+        "5"
+      ],
+      "source_text_size_counts": {
+        "9.8": 2,
+        "10.5": 5,
+        "11.5": 14,
+        "12.0": 2,
+        "12.5": 1,
+        "14.0": 3
+      },
+      "placements": [
+        {
+          "physical_page": 197,
+          "printed_page": "163",
+          "page_figure_occurrence": 1,
+          "xobject": "Im23",
+          "scale_x": 0.75182,
+          "scale_y": 0.75182,
+          "font_scale": 0.75182,
+          "form_bbox": "[0 0 460.8 302.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.646,
+          "minimum_regular_label_pt": 7.894
+        }
+      ],
+      "scale_range": [
+        0.75182,
+        0.75182
+      ],
+      "physical_page_range": [
+        197,
+        197
+      ],
+      "minimum_printed_type_pt": 7.894,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.8a.pdf",
+      "sha256": "f16b7e816c7bd2ed81dbd74b1a0d6bfa804b862119393f6a43900639df564996",
+      "source_page_size_pt": [
+        460.79998779296875,
+        158.39999389648438
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 13.0,
+      "source_minimum_regular_label_pt": 13.0,
+      "tick_detection": "fallback modal numeric/k-path size excluding reduced-size chemical subscripts; inspect source text samples",
+      "source_axis_rectangles_detected": 0,
+      "minimum_regular_label_examples": [
+        "  n-type SB",
+        "  p-type SB",
+        "  Ohmic contact"
+      ],
+      "minimum_tick_examples": [
+        " 0"
+      ],
+      "source_text_size_counts": {
+        "9.1": 6,
+        "12.6": 5,
+        "13.0": 14,
+        "18.0": 5
+      },
+      "placements": [
+        {
+          "physical_page": 198,
+          "printed_page": "164",
+          "page_figure_occurrence": 1,
+          "xobject": "Im24",
+          "scale_x": 0.93976,
+          "scale_y": 0.93976,
+          "font_scale": 0.93976,
+          "form_bbox": "[0 0 460.8 158.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 12.217,
+          "minimum_regular_label_pt": 12.217
+        }
+      ],
+      "scale_range": [
+        0.93976,
+        0.93976
+      ],
+      "physical_page_range": [
+        198,
+        198
+      ],
+      "minimum_printed_type_pt": 12.217,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.8b.pdf",
+      "sha256": "33fad6583127ebdda02bac125a76376dce40cbeee75513272914a3c471b1989b",
+      "source_page_size_pt": [
+        345.6000061035156,
+        244.8000030517578
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.5,
+      "source_minimum_regular_label_pt": 12.5,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 1,
+      "minimum_regular_label_examples": [
+        "Energy (eV)"
+      ],
+      "minimum_tick_examples": [
+        "K",
+        "M",
+        "−3",
+        "−2",
+        "−1",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "source_text_size_counts": {
+        "9.1": 2,
+        "11.5": 11,
+        "11.9": 2,
+        "12.5": 1,
+        "13.0": 3,
+        "17.0": 2
+      },
+      "placements": [
+        {
+          "physical_page": 198,
+          "printed_page": "164",
+          "page_figure_occurrence": 2,
+          "xobject": "Im25",
+          "scale_x": 0.8771,
+          "scale_y": 0.8771,
+          "font_scale": 0.8771,
+          "form_bbox": "[0 0 345.6 244.8]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 10.087,
+          "minimum_regular_label_pt": 10.964
+        }
+      ],
+      "scale_range": [
+        0.8771,
+        0.8771
+      ],
+      "physical_page_range": [
+        198,
+        198
+      ],
+      "minimum_printed_type_pt": 10.087,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    },
+    {
+      "file": "figures_proj1/proj1.9.pdf",
+      "sha256": "f87cdfc93327670834a482d2869d36565e73dac7dee1f9812aa903704c302cbd",
+      "source_page_size_pt": [
+        576.0,
+        374.3999938964844
+      ],
+      "source_text_available": true,
+      "source_minimum_tick_pt": 11.0,
+      "source_minimum_regular_label_pt": 12.0,
+      "tick_detection": "numeric and k-path spans immediately outside identified axis rectangles",
+      "source_axis_rectangles_detected": 4,
+      "minimum_regular_label_examples": [
+        "Real part, ",
+        "Photon energy (eV)",
+        "Imaginary part, ",
+        "Real part (PBE)",
+        "Real part (HSE06)",
+        "Imaginary part (PBE)",
+        "Imaginary part (HSE06)"
+      ],
+      "minimum_tick_examples": [
+        "0",
+        "20",
+        "2",
+        "10",
+        "30",
+        "1",
+        "3"
+      ],
+      "source_text_size_counts": {
+        "8.4": 2,
+        "11.0": 36,
+        "12.0": 10,
+        "13.0": 4,
+        "16.0": 1
+      },
+      "placements": [
+        {
+          "physical_page": 201,
+          "printed_page": "167",
+          "page_figure_occurrence": 1,
+          "xobject": "Im26",
+          "scale_x": 0.75177,
+          "scale_y": 0.75177,
+          "font_scale": 0.75177,
+          "form_bbox": "[0 0 576 374.4]",
+          "clipping_wrapper_chain": [],
+          "minimum_tick_pt": 8.269,
+          "minimum_regular_label_pt": 9.021
+        }
+      ],
+      "scale_range": [
+        0.75177,
+        0.75177
+      ],
+      "physical_page_range": [
+        201,
+        201
+      ],
+      "minimum_printed_type_pt": 8.269,
+      "automatic_status": "passes_7pt_type_threshold",
+      "manual_review": null
+    }
+  ]
+}

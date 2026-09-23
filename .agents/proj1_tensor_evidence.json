@@ -1,0 +1,517 @@
+{
+  "proj1_tensor_raw_audit.json": [
+    {
+      "file": "E_Graphene-BC3_HSE_K17.h5",
+      "version": "6.3.2",
+      "density_density": {
+        "offdiag_max": 1.5739987471200796,
+        "symmetric_residual": 3.121873080118643,
+        "antisymmetric_residual": 0.15636783344509964,
+        "first_xy": [
+          [
+            1.5739987471200796,
+            0.0
+          ],
+          [
+            1.5392211045672335,
+            0.23758324858356294
+          ],
+          [
+            1.4434158020337269,
+            0.4466133868491364
+          ]
+        ],
+        "first_yx": [
+          [
+            -1.5478743329985634,
+            0.0
+          ],
+          [
+            -1.513077316691962,
+            -0.2372862511601586
+          ],
+          [
+            -1.4172137690452808,
+            -0.44601704114340496
+          ]
+        ]
+      },
+      "current_current": {
+        "offdiag_max": 10.204791965808367,
+        "symmetric_residual": 20.06924698985616,
+        "antisymmetric_residual": 0.34033694176057416,
+        "first_xy": [
+          [
+            -0.08323013450237732,
+            10.204791965808367
+          ],
+          [
+            -0.08323013450237732,
+            10.204791965808367
+          ],
+          [
+            -0.08343115170813074,
+            5.108768266634073
+          ]
+        ],
+        "first_yx": [
+          [
+            0.1047338097918056,
+            -9.864455024047793
+          ],
+          [
+            0.1047338097918056,
+            -9.864455024047793
+          ],
+          [
+            0.10497617408586443,
+            -4.9377837712178145
+          ]
+        ]
+      },
+      "h5attrs": "{}"
+    },
+    {
+      "file": "E_Graphene-BC3_PBE_K65_Normal.h5",
+      "version": "6.3.2",
+      "density_density": {
+        "offdiag_max": 4.253627375810863,
+        "symmetric_residual": 8.236685868174902,
+        "antisymmetric_residual": 0.27613451939168776,
+        "first_xy": [
+          [
+            4.253627375810863,
+            0.0
+          ],
+          [
+            4.13773257782883,
+            0.8523331958532645
+          ],
+          [
+            3.8090012375670144,
+            1.6261295894037637
+          ]
+        ],
+        "first_yx": [
+          [
+            -3.983058492364039,
+            0.0
+          ],
+          [
+            -3.868854858994008,
+            -0.8167003738082232
+          ],
+          [
+            -3.5454679930334922,
+            -1.5543119958097278
+          ]
+        ]
+      },
+      "current_current": {
+        "offdiag_max": 14.31507676541903,
+        "symmetric_residual": 26.551681359184457,
+        "antisymmetric_residual": 2.078472171653603,
+        "first_xy": [
+          [
+            -2.1379494210317365,
+            14.31507676541903
+          ],
+          [
+            -2.1379494210317365,
+            14.31507676541903
+          ],
+          [
+            -2.1428845553923037,
+            6.988277407436393
+          ]
+        ],
+        "first_yx": [
+          [
+            1.9566838531060515,
+            -12.236604593765428
+          ],
+          [
+            1.9566838531060515,
+            -12.236604593765428
+          ],
+          [
+            1.9559177324055468,
+            -5.944308012707612
+          ]
+        ]
+      },
+      "h5attrs": "{}"
+    },
+    {
+      "file": "F_Graphene-Borophene_HSE_K65_Accurate.h5",
+      "version": "6.3.2",
+      "density_density": {
+        "offdiag_max": 1.6401852324745312e-16,
+        "symmetric_residual": 1.0421539775612315e-16,
+        "antisymmetric_residual": 3.1719353876525113e-16,
+        "first_xy": [
+          [
+            2.8795069514034135e-17,
+            0.0
+          ],
+          [
+            2.8816937888005016e-17,
+            3.817781967553973e-19
+          ],
+          [
+            2.888267620111107e-17,
+            7.662355653303765e-19
+          ]
+        ],
+        "first_yx": [
+          [
+            -5.27548577218787e-18,
+            0.0
+          ],
+          [
+            -4.48233803634529e-18,
+            -4.8181265928434566e-18
+          ],
+          [
+            -2.29506409831308e-18,
+            -8.995664319251977e-18
+          ]
+        ]
+      },
+      "current_current": {
+        "offdiag_max": 3.500275614756886e-16,
+        "symmetric_residual": 4.698250232237006e-16,
+        "antisymmetric_residual": 2.302300997276766e-16,
+        "first_xy": [
+          [
+            7.558759084689321e-18,
+            3.500275614756886e-16
+          ],
+          [
+            7.558759084689321e-18,
+            3.500275614756886e-16
+          ],
+          [
+            7.557240548941696e-18,
+            1.7509471704220744e-16
+          ]
+        ],
+        "first_yx": [
+          [
+            9.652838129812508e-18,
+            -1.19797461748012e-16
+          ],
+          [
+            9.652838129812508e-18,
+            -1.19797461748012e-16
+          ],
+          [
+            9.657012658297272e-18,
+            -5.994888029310111e-17
+          ]
+        ]
+      },
+      "h5attrs": "{}"
+    },
+    {
+      "file": "F_Graphene-Borophene_PBE_K65_Normal.h5",
+      "version": "6.3.2",
+      "density_density": {
+        "offdiag_max": 6.937815408859502e-17,
+        "symmetric_residual": 1.3859958157576282e-16,
+        "antisymmetric_residual": 1.2326863914109384e-16,
+        "first_xy": [
+          [
+            -9.619684250214258e-18,
+            0.0
+          ],
+          [
+            -9.629957306722899e-18,
+            -2.169886828754176e-19
+          ],
+          [
+            -9.660816510772235e-18,
+            -4.36755342161921e-19
+          ]
+        ],
+        "first_yx": [
+          [
+            5.98168840773042e-17,
+            0.0
+          ],
+          [
+            5.86317818514786e-17,
+            8.731343226283043e-18
+          ],
+          [
+            5.530371508476778e-17,
+            1.6593995352473478e-17
+          ]
+        ]
+      },
+      "current_current": {
+        "offdiag_max": 9.812514947819467e-16,
+        "symmetric_residual": 3.6425470573477374e-16,
+        "antisymmetric_residual": 1.5982482838291196e-15,
+        "first_xy": [
+          [
+            -2.998333922207437e-17,
+            -9.812514947819467e-16
+          ],
+          [
+            -2.998333922207437e-17,
+            -9.812514947819467e-16
+          ],
+          [
+            -2.9826812667085075e-17,
+            -4.934697892035191e-16
+          ]
+        ],
+        "first_yx": [
+          [
+            -3.12641524645321e-17,
+            -6.169967890471729e-16
+          ],
+          [
+            -3.12641524645321e-17,
+            -6.169967890471729e-16
+          ],
+          [
+            -3.110926882278617e-17,
+            -3.1126228872706834e-16
+          ]
+        ]
+      },
+      "h5attrs": "{}"
+    },
+    {
+      "file": "G_Graphene-B4C3_HSE_K17.h5",
+      "version": "6.3.2",
+      "density_density": {
+        "offdiag_max": 1.0897864534641357,
+        "symmetric_residual": 2.186814468063034,
+        "antisymmetric_residual": 0.05341443872103385,
+        "first_xy": [
+          [
+            -1.0897864534641357,
+            0.0
+          ],
+          [
+            -1.0639132034604561,
+            -0.16484802251295938
+          ],
+          [
+            -0.9931919067503682,
+            -0.3076019183496016
+          ]
+        ],
+        "first_yx": [
+          [
+            1.0970280145988984,
+            0.0
+          ],
+          [
+            1.071159844590892,
+            0.16492061898864938
+          ],
+          [
+            1.000453818769942,
+            0.30774763374701236
+          ]
+        ]
+      },
+      "current_current": {
+        "offdiag_max": 7.030707050729332,
+        "symmetric_residual": 14.151920307186746,
+        "antisymmetric_residual": 0.09050620572808121,
+        "first_xy": [
+          [
+            -0.013629942970958927,
+            -7.030707050729332
+          ],
+          [
+            -0.013629942970958927,
+            -7.030707050729332
+          ],
+          [
+            -0.013670967846087841,
+            -3.514157417347612
+          ]
+        ],
+        "first_yx": [
+          [
+            0.01977785731921898,
+            7.1212132564574135
+          ],
+          [
+            0.01977785731921898,
+            7.1212132564574135
+          ],
+          [
+            0.01983056805710208,
+            3.559613749944051
+          ]
+        ]
+      },
+      "h5attrs": "{}"
+    },
+    {
+      "file": "G_Graphene-B4C3_PBE_K65_Normal.h5",
+      "version": "6.3.2",
+      "density_density": {
+        "offdiag_max": 0.8918641006664081,
+        "symmetric_residual": 1.7640645336733707,
+        "antisymmetric_residual": 0.11958745847059647,
+        "first_xy": [
+          [
+            -0.624551186297414,
+            0.0
+          ],
+          [
+            -0.6251801709998495,
+            0.0007593062106325231
+          ],
+          [
+            -0.6280318575291209,
+            0.003324951226202688
+          ]
+        ],
+        "first_yx": [
+          [
+            0.7427732016106225,
+            0.0
+          ],
+          [
+            0.7428505089814997,
+            0.013401605585801352
+          ],
+          [
+            0.7439374485306434,
+            0.02529166592187497
+          ]
+        ]
+      },
+      "current_current": {
+        "offdiag_max": 9.249146851936786,
+        "symmetric_residual": 19.479464684393726,
+        "antisymmetric_residual": 0.9811709805201563,
+        "first_xy": [
+          [
+            -0.6073864343513751,
+            -9.249146851936786
+          ],
+          [
+            -0.6073864343513751,
+            -9.249146851936786
+          ],
+          [
+            -0.6104033295573225,
+            -4.668115756427767
+          ]
+        ],
+        "first_yx": [
+          [
+            0.5449970570292993,
+            10.230317832456942
+          ],
+          [
+            0.5449970570292993,
+            10.230317832456942
+          ],
+          [
+            0.5455295188828988,
+            5.163124743086233
+          ]
+        ]
+      },
+      "h5attrs": "{}"
+    }
+  ],
+  "proj1_tensor_xml_audit.json": [
+    {
+      "name": "E_Graphene-BC3_HSE_K17",
+      "kind": "density_density",
+      "part": "real",
+      "count": 4000,
+      "energy_diff_max": 4.998479923656873e-05,
+      "lower_match_max": 4.999922401022978e-05,
+      "upper_match_max": 3.1218987471200794,
+      "average_match_max": 1.5609622070607583
+    },
+    {
+      "name": "E_Graphene-BC3_HSE_K17",
+      "kind": "density_density",
+      "part": "imag",
+      "count": 4000,
+      "energy_diff_max": 4.998479923656873e-05,
+      "lower_match_max": 4.9994187841886396e-05,
+      "upper_match_max": 1.659607238211928,
+      "average_match_max": 0.8298080004730986
+    },
+    {
+      "name": "E_Graphene-BC3_HSE_K17",
+      "kind": "current_current",
+      "part": "real",
+      "count": 4000,
+      "energy_diff_max": 4.998479923656873e-05,
+      "lower_match_max": 4.9997557798204736e-05,
+      "upper_match_max": 1.3180996321391247,
+      "average_match_max": 0.659034621981132
+    },
+    {
+      "name": "E_Graphene-BC3_HSE_K17",
+      "kind": "current_current",
+      "part": "imag",
+      "count": 4000,
+      "energy_diff_max": 4.998479923656873e-05,
+      "lower_match_max": 4.999919995241823e-05,
+      "upper_match_max": 20.069291965808368,
+      "average_match_max": 10.034668470880288
+    },
+    {
+      "name": "G_Graphene-B4C3_HSE_K17",
+      "kind": "density_density",
+      "part": "real",
+      "count": 4000,
+      "energy_diff_max": 4.999202861100116e-05,
+      "lower_match_max": 4.9999351250384905e-05,
+      "upper_match_max": 2.1867864534641357,
+      "average_match_max": 1.0933792194326186
+    },
+    {
+      "name": "G_Graphene-B4C3_HSE_K17",
+      "kind": "density_density",
+      "part": "imag",
+      "count": 4000,
+      "energy_diff_max": 4.999202861100116e-05,
+      "lower_match_max": 4.9999231372277464e-05,
+      "upper_match_max": 1.0745319711984285,
+      "average_match_max": 0.5372728266840417
+    },
+    {
+      "name": "G_Graphene-B4C3_HSE_K17",
+      "kind": "current_current",
+      "part": "real",
+      "count": 4000,
+      "energy_diff_max": 4.999202861100116e-05,
+      "lower_match_max": 4.99944916993178e-05,
+      "upper_match_max": 0.7227367941227485,
+      "average_match_max": 0.3613681349655069
+    },
+    {
+      "name": "G_Graphene-B4C3_HSE_K17",
+      "kind": "current_current",
+      "part": "imag",
+      "count": 4000,
+      "energy_diff_max": 4.999202861100116e-05,
+      "lower_match_max": 4.9999740500959596e-05,
+      "upper_match_max": 14.151907050729331,
+      "average_match_max": 7.075946897135959
+    }
+  ],
+  "interpretation": "The raw VASP off-diagonal arrays already show approximately opposite signs. Original XML/OUTCAR use the lower-triangular entries. py4vasp plotting instead averages transposed entries; that operation does not establish the origin of the raw discrepancy. The thesis retains raw plots and withdraws the optical-activity inference.",
+  "py4vasp_sources": [
+    "https://github.com/vasp-dev/py4vasp/blob/v0.4/src/py4vasp/data/dielectric_function.py#L186",
+    "https://github.com/vasp-dev/py4vasp/blob/v0.9.0/src/py4vasp/calculation/_dielectric_function.py#L126"
+  ]
+}

@@ -13,7 +13,7 @@ It also provides k-point mesh convergence tests, projected densities of states, 
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.6\textwidth]{figures_proj1/S1.1.pdf}
+    \includegraphics[width=0.60\textwidth]{figures_proj1/S1.1.pdf}
     \caption{Total energy versus the k-point mesh used to sample the Brillouin zone for the Graphene-\ce{BC3} bilayer; here, $\mathrm{X}$ denotes an $\mathrm{X} \times \mathrm{X} \times 1$~k-point mesh.}
 \label{S1.1}
 \end{figure}
@@ -21,28 +21,31 @@ It also provides k-point mesh convergence tests, projected densities of states, 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\textwidth]{figures_proj1/S1.2.pdf}
-\caption{Total energy versus lattice constant for the four monolayer systems: graphene, borophene, \ce{BC3}, and \ce{B4C3}.
+\caption{Total energy versus lattice constant for (a) \ce{BC3}, (b) borophene, (c) \ce{B4C3}, and (d) graphene.
 The lattice constant yielding the lowest total energy is shown by the full circle in each plot.}
 \label{S1.2}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1.00\textwidth]{figures_proj1/S1.3.pdf}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/S1.3.pdf}
 \caption{Total energy versus lattice constant for each bilayer system for the various stacking positions considered.
 The lines are fitted curves, with the full circle indicating the lowest-energy structure.}
 \label{S1.3}
 \end{figure}
 
 Figures~\ref{S1.4}--\ref{S1.6} show the total energy versus the lattice constant and interlayer distance for the various lateral positions considered.
-In each figure, the equilibrium geometry is indicated by the ``Extrema of fitted data'' result.
+The horizontal and vertical axes give the lattice constant and interlayer spacing, respectively, both in \si{\angstrom}; the colour scale gives the total energy in \unit{\electronvolt}.
+The marker in each panel identifies the lowest-energy sampled geometry; the colour field interpolates the sampled energies.
+These sampled minima are distinct from the relaxed structural parameters listed in table~\ref{tab:1.2_heterostructure}.
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1.00\textwidth]{figures_proj1/S1.4.pdf}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/S1.4.pdf}
 \caption{Total-energy landscape of the Graphene-\ce{BC3} bilayer.}
 \label{S1.4}
 \end{figure}
+
 
 \begin{figure}[!htbp]
 \centering
@@ -51,12 +54,14 @@ In each figure, the equilibrium geometry is indicated by the ``Extrema of fitted
 \label{S1.5}
 \end{figure}
 
+
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\textwidth]{figures_proj1/S1.6.pdf}
 \caption{Total-energy landscape of the Graphene-\ce{B4C3} bilayer.}
 \label{S1.6}
 \end{figure}
+
 
 \begin{table}[!htbp]
 \centering
@@ -168,7 +173,7 @@ In addition, figures~\ref{S1.9}--\ref{S1.11} show the projected densities of sta
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1.00\textwidth]{figures_proj1/S1.9.pdf}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/S1.9.pdf}
 \caption{Projected density of states of Graphene-Borophene calculated using the HSE06 functional.}
 \label{S1.9}
 \end{figure}
@@ -198,45 +203,29 @@ $33$ denotes a $33 \times 33 \times 1$ k-point mesh.}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\linewidth]{figures_proj1/S1.13a.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=0.80\linewidth]{figures_proj1/S1.13b.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=0.80\linewidth]{figures_proj1/S1.13c.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=0.80\linewidth]{figures_proj1/S1.13d.pdf}
+    \includegraphics[width=0.80\textwidth]{figures_proj1/S1.13_dielectric.pdf}
 \caption{Real and imaginary parts of the dielectric function
 for the four monolayers as calculated using the PBE functional with a
 $129\times 129\times 1$
 k-point mesh for graphene,
 and a $65\times 65\times 1$
-k-point mesh for the borophene and boron-carbide monolayers..}
+k-point mesh for the borophene and boron-carbide monolayers.
+Solid and dashed lines denote the real and imaginary parts, respectively.}
 \label{S1.13}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1.0\linewidth]{figures_proj1/S1.14a.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=1.0\linewidth]{figures_proj1/S1.14b.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=1.0\linewidth]{figures_proj1/S1.14c.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=1.0\linewidth]{figures_proj1/S1.14d.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=1.0\linewidth]{figures_proj1/S1.14e_correct.pdf}
-\caption{Optical properties for the four monolayers as calculated using the PBE functional with a
-$129\times 129\times 1$
-k-point mesh for graphene,
-and a $65\times 65\times 1$
-k-point mesh for the borophene and boron-carbide monolayers.}
+    \includegraphics[width=1.00\textwidth]{figures_proj1/S1.14_optics.pdf}
+\caption{Optical properties of the four monolayers calculated using PBE with the k-point meshes specified in figure~\ref{S1.13}.
+The absorption coefficient is given in \si{\per\nano\metre}; the other quantities are dimensionless.}
 \label{S1.14}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\textwidth]{figures_proj1/S1.15.pdf}
-\caption{Convergence test of the dielectric function of Graphene-\ce{B4C3} with respect to the number of unoccupied bands, calculated using PBE.}
+\caption{Convergence test of the dielectric function of Graphene-\ce{B4C3} with respect to the total number of bands, including unoccupied states, calculated using PBE.}
 \label{S1.15}
 \end{figure}
 
@@ -245,7 +234,8 @@ Figure~\ref{S1.16} also shows the effect of the energy convergence criterion \te
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\textwidth]{figures_proj1/S1.16_alt.pdf}
-\caption{Dielectric function of the Graphene-Borophene bilayer comparing PBE and HSE06 results, HSE06 k-point meshes of $17 \times 17 \times 1$ and $65 \times 65 \times 1$, and HSE06 energy convergence criteria \texttt{EDIFF} = $10^{-4}$, $10^{-5}$, and $10^{-6}$.}
+\caption[Dielectric-function convergence tests for the Graphene-Borophene bilayer.]{Dielectric function of the Graphene-Borophene bilayer comparing PBE and HSE06 results, HSE06 k-point meshes of $17 \times 17 \times 1$ and $65 \times 65 \times 1$, and HSE06 energy convergence criteria \texttt{EDIFF} = $10^{-4}$, $10^{-5}$, and $10^{-6}$.
+The $10^{-4}$ and $10^{-5}$ calculations use \texttt{PREC=Normal}, while the $10^{-6}$ calculation uses \texttt{PREC=Accurate}.}
 \label{S1.16}
 \end{figure}
 
@@ -253,69 +243,102 @@ Figures~\ref{S1.17}--\ref{S1.19} show the full dielectric-function tensor compon
 as calculated using both the PBE and HSE06 functionals.
 The diagonal components describe the dominant in-plane and out-of-plane optical responses,
 whereas the off-diagonal components describe the coupling between different Cartesian directions.
-These off-diagonal components are negligible for Graphene-Borophene,
+The displayed off-diagonal components are negligible for Graphene-Borophene,
 but remain finite for Graphene-\ce{BC3} and Graphene-\ce{B4C3}.
-They satisfy the antisymmetric relations
-$\varepsilon_{yx}=-\varepsilon_{xy}$,
-$\varepsilon_{yz}=-\varepsilon_{zy}$,
-and $\varepsilon_{zx}=-\varepsilon_{xz}$.
+Their opposite-sign pairs require the tensor-symmetry check discussed in the main text;
+they are retained here to identify the original calculated spectra and are not evidence of optical activity.
 
-In addition, figures~\ref{S1.20}--\ref{S1.24} show the optical properties derived from the dielectric function for the three bilayer heterostructures,
-also calculated using both the PBE and HSE06 functionals.
-These properties include the absorption coefficient, energy-loss spectrum, reflectivity, refractive index, and extinction coefficient.
+In addition, figures~\ref{S1.20}--\ref{S1.24} compare the optical properties derived from the diagonal HSE06 dielectric components for the three bilayer heterostructures.
+These properties include the absorption coefficient, energy-loss spectrum, refractive index, reflectivity, and extinction coefficient.
+The $xx$ and $yy$ components correspond to electric-field polarizations within the layers,
+whereas $zz$ corresponds to polarization perpendicular to the layers.
+The scalar relations introduced in chapter~\ref{cha:fundamentals_b} do not define separate optical observables for the off-diagonal elements.
+The diagonal results below use an effective principal-axis description;
+for the tensors with finite off-diagonal components, this remains conditional on resolving the tensor-symmetry issue.
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.85\textwidth]{figures_proj1/S1.17_alt.pdf}
-\caption{Dielectric function components of Graphene-Borophene.}
+    \includegraphics[width=0.90\textwidth]{figures_proj1/S1.17_alt.pdf}
+\caption[Dielectric tensor of Graphene-Borophene calculated using PBE and HSE06.]{Dimensionless dielectric tensor components of Graphene-Borophene versus photon energy $\hbar\omega$ in \unit{\electronvolt}.
+From left to right, the rows show $xx,yy,zz$; $xy,yz,zx$; and $yx,zy,xz$.
+The $xx$ and $yy$ directions lie within the layers, while $zz$ is perpendicular to them.
+Green and orange curves denote PBE and HSE06, respectively; solid and dashed lines denote real and imaginary parts.
+The off-diagonal components are negligible on the plotted scale.}
 \label{S1.17}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.85\textwidth]{figures_proj1/S1.18.pdf}
-\caption{Dielectric function components of Graphene-\ce{BC3}.}
+    \includegraphics[width=0.90\textwidth]{figures_proj1/S1.18.pdf}
+\caption[Dielectric tensor of Graphene-\ce{BC3} calculated using PBE and HSE06.]{Dimensionless dielectric tensor components of Graphene-\ce{BC3} versus photon energy $\hbar\omega$ in \unit{\electronvolt}.
+From left to right, the rows show $xx,yy,zz$; $xy,yz,zx$; and $yx,zy,xz$.
+The $xx$ and $yy$ directions lie within the layers, while $zz$ is perpendicular to them.
+Blue and orange curves denote PBE and HSE06, respectively; solid and dashed lines denote real and imaginary parts.
+The HSE06 mesh is $17\times17\times1$.
+The displayed off-diagonal response is concentrated at low photon energies.
+These entries are shown as exported and remain subject to the tensor-symmetry check described in the text.}
 \label{S1.18}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.85\textwidth]{figures_proj1/S1.19.pdf}
-\caption{Dielectric function components of Graphene-\ce{B4C3}.}
+    \includegraphics[width=0.90\textwidth]{figures_proj1/S1.19.pdf}
+\caption[Dielectric tensor of Graphene-\ce{B4C3} calculated using PBE and HSE06.]{Dimensionless dielectric tensor components of Graphene-\ce{B4C3} versus photon energy $\hbar\omega$ in \unit{\electronvolt}.
+From left to right, the rows show $xx,yy,zz$; $xy,yz,zx$; and $yx,zy,xz$.
+The $xx$ and $yy$ directions lie within the layers, while $zz$ is perpendicular to them.
+Purple and orange curves denote PBE and HSE06, respectively; solid and dashed lines denote real and imaginary parts.
+The HSE06 mesh is $17\times17\times1$.
+The displayed off-diagonal response extends beyond the low-energy region.
+These entries are shown as exported and remain subject to the tensor-symmetry check described in the text.}
 \label{S1.19}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.85\textwidth]{figures_proj1/S1.20.pdf}
-\caption{Absorption coefficient.}
+\caption[HSE06 diagonal absorption spectra of the three heterostructure bilayers.]{HSE06 absorption coefficients in \si{\per\nano\metre} for Graphene-\ce{BC3} (blue), Graphene-Borophene (green), and Graphene-\ce{B4C3} (purple).
+Panels~(a), (b), and (c) show the diagonal $xx$, $yy$, and $zz$ responses, corresponding to two in-plane polarizations and the out-of-plane polarization, respectively.
+All curves are solid and are plotted against photon energy $\hbar\omega$ in \unit{\electronvolt}.
+The in-plane response extends into the visible region, while the strongest out-of-plane features occur in the ultraviolet region.}
 \label{S1.20}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.85\textwidth]{figures_proj1/S1.21.pdf}
-\caption{Energy-loss spectrum.}
+\caption[HSE06 diagonal energy-loss spectra of the three heterostructure bilayers.]{Dimensionless HSE06 energy-loss spectra of Graphene-\ce{BC3} (blue), Graphene-Borophene (green), and Graphene-\ce{B4C3} (purple).
+Panels~(a), (b), and (c) show the diagonal $xx$, $yy$, and $zz$ responses, corresponding to two in-plane directions and the out-of-plane direction.
+All curves are solid and are plotted against photon energy $\hbar\omega$ in \unit{\electronvolt}.
+The strongest out-of-plane loss features occur around \qtyrange{17}{19}{\electronvolt}.}
 \label{S1.21}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.85\textwidth]{figures_proj1/S1.22.pdf}
-\caption{Refractive index.}
+\caption[HSE06 diagonal refractive indices of the three heterostructure bilayers.]{Dimensionless HSE06 refractive indices of Graphene-\ce{BC3} (blue), Graphene-Borophene (green), and Graphene-\ce{B4C3} (purple).
+Panels~(a), (b), and (c) show the diagonal $xx$, $yy$, and $zz$ responses, corresponding to two in-plane polarizations and the out-of-plane polarization.
+All curves are solid and are plotted against photon energy $\hbar\omega$ in \unit{\electronvolt}.
+The largest in-plane indices occur at low photon energies; the out-of-plane maxima occur at higher energies.}
 \label{S1.22}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.85\textwidth]{figures_proj1/S1.23_correct.pdf}
-\caption{Reflectivity.}
+\caption[HSE06 diagonal reflectivities of the three heterostructure bilayers.]{Dimensionless HSE06 reflectivities of Graphene-\ce{BC3} (blue), Graphene-Borophene (green), and Graphene-\ce{B4C3} (purple), evaluated in the principal-axis effective-medium description.
+Panels~(a), (b), and (c) show the diagonal $xx$, $yy$, and $zz$ responses, corresponding to two in-plane polarizations and the out-of-plane polarization.
+All curves are solid and are plotted against photon energy $\hbar\omega$ in \unit{\electronvolt}.
+The out-of-plane peaks occur in the ultraviolet region.}
 \label{S1.23}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.85\textwidth]{figures_proj1/S1.24_correct.pdf}
-\caption{Extinction coefficient.}
+\caption[HSE06 diagonal extinction coefficients of the three heterostructure bilayers.]{Dimensionless HSE06 extinction coefficients of Graphene-\ce{BC3} (blue), Graphene-Borophene (green), and Graphene-\ce{B4C3} (purple).
+Panels~(a), (b), and (c) show the diagonal $xx$, $yy$, and $zz$ responses, corresponding to two in-plane polarizations and the out-of-plane polarization.
+All curves are solid and are plotted against photon energy $\hbar\omega$ in \unit{\electronvolt}.
+The principal in-plane features occur at lower energies than the broad out-of-plane peaks.}
 \label{S1.24}
 \end{figure}

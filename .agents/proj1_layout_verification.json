@@ -1,0 +1,456 @@
+{
+  "electronic": {
+    "proj1.5": {
+      "visible_vertices_verified": 3964,
+      "max_coordinate_error": 2.9588027995446384e-06,
+      "min_regular_font_pt": 10.5,
+      "pdf_inches": [
+        6.399999830457899,
+        4.1999999152289496
+      ],
+      "original_git_blob": "a02ce41f38bf54240c4cb1c57aace7d270e22493"
+    },
+    "proj1.6": {
+      "visible_vertices_verified": 4457,
+      "max_coordinate_error": 2.725887904860703e-06,
+      "min_regular_font_pt": 10.5,
+      "pdf_inches": [
+        6.399999830457899,
+        4.1999999152289496
+      ],
+      "original_git_blob": "686c540bf261c55c80da23ade84316c4d896db4f"
+    },
+    "proj1.7": {
+      "visible_vertices_verified": 4067,
+      "max_coordinate_error": 2.590899848055436e-06,
+      "min_regular_font_pt": 10.5,
+      "pdf_inches": [
+        6.399999830457899,
+        4.1999999152289496
+      ],
+      "original_git_blob": "061bfc33880f90989d773a7319a91b5b048f6660"
+    },
+    "S1.9": {
+      "visible_vertices_verified": 6044,
+      "max_coordinate_error": 1.9117939563546533e-06,
+      "min_regular_font_pt": 11.5,
+      "pdf_inches": [
+        7.0,
+        5.1999999152289496
+      ],
+      "original_git_blob": "72e6de6b5ad0371970aa611943f43800df2f6231"
+    },
+    "S1.10": {
+      "visible_vertices_verified": 6553,
+      "max_coordinate_error": 2.084388301553569e-06,
+      "min_regular_font_pt": 11.5,
+      "pdf_inches": [
+        7.0,
+        5.1999999152289496
+      ],
+      "original_git_blob": "d73f625aab2a3f4586c4962b9030119619248111"
+    },
+    "S1.11": {
+      "visible_vertices_verified": 6265,
+      "max_coordinate_error": 2.3028869511997374e-06,
+      "min_regular_font_pt": 11.5,
+      "pdf_inches": [
+        7.0,
+        5.1999999152289496
+      ],
+      "original_git_blob": "204f1c12ccbf07861210d78f14d513c80aa3ad40"
+    }
+  },
+  "schottky": {
+    "bands": 14,
+    "visible_vertices_verified": 397,
+    "max_coordinate_error": 4.82126877047372e-07,
+    "barrier_lines": {
+      "conduction_line": {
+        "energy_eV": 1.4199997898757544,
+        "pdf_error": 1.0402730943326333e-07
+      },
+      "valence_line": {
+        "energy_eV": -0.8700000689470175,
+        "pdf_error": 3.473829202071954e-08
+      }
+    },
+    "original_git_blobs": {
+      "proj1.8a": "b66edc6211a327d424f139c0d0621e4db9e379d5",
+      "proj1.8b": "38ad9b5a03bab57459abe6098b0bd858d829c2bc"
+    }
+  },
+  "readability": {
+    "proj1.3a": {
+      "original_git_blob": "22e350e198d538928eb609738f75724d3f303a31",
+      "curve_count": 13,
+      "marker_paths": 0,
+      "data_units": [
+        "normalized reciprocal-path position",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 0.0,
+      "max_source_affine_roundtrip_error_pdf_pt": 1.1368683772161603e-13,
+      "replot_validation": {
+        "curves": 13,
+        "markers": 0,
+        "max_curve_error_xy": [
+          7.502824306282463e-08,
+          2.283585541995592e-06
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          230.39999389648438,
+          216.0
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "proj1.3b": {
+      "original_git_blob": "1d824367846ef6e31e68fccb248ae0b83afd9b18",
+      "curve_count": 41,
+      "marker_paths": 0,
+      "data_units": [
+        "normalized reciprocal-path position",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 0.0,
+      "max_source_affine_roundtrip_error_pdf_pt": 1.1368683772161603e-13,
+      "replot_validation": {
+        "curves": 41,
+        "markers": 0,
+        "max_curve_error_xy": [
+          7.658508949237586e-08,
+          2.2590495278862477e-06
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          230.39999389648438,
+          216.0
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "proj1.3c": {
+      "original_git_blob": "e69aebc278e185401baea6ea60284316972973c4",
+      "curve_count": 33,
+      "marker_paths": 0,
+      "data_units": [
+        "normalized reciprocal-path position",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 0.0,
+      "max_source_affine_roundtrip_error_pdf_pt": 1.1368683772161603e-13,
+      "replot_validation": {
+        "curves": 33,
+        "markers": 0,
+        "max_curve_error_xy": [
+          7.658508949237586e-08,
+          2.35142206239658e-06
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          230.39999389648438,
+          216.0
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "proj1.3d": {
+      "original_git_blob": "7d8495967a73ed827354ef87eb4f552ce707984c",
+      "curve_count": 36,
+      "marker_paths": 0,
+      "data_units": [
+        "normalized reciprocal-path position",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 0.0,
+      "max_source_affine_roundtrip_error_pdf_pt": 1.1368683772161603e-13,
+      "replot_validation": {
+        "curves": 36,
+        "markers": 0,
+        "max_curve_error_xy": [
+          7.502824306282463e-08,
+          2.2611624812540754e-06
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          230.39999389648438,
+          216.0
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "S1.1": {
+      "original_git_blob": "c496edd662a18f6cfcfc9a6e21008c68b671667b",
+      "curve_count": 1,
+      "marker_paths": 26,
+      "data_units": [
+        "mesh count X",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 1.962804594768386e-05,
+      "max_source_affine_roundtrip_error_pdf_pt": 6.269260666158516e-10,
+      "replot_validation": {
+        "curves": 1,
+        "markers": 26,
+        "max_curve_error_xy": [
+          2.906481896047808e-06,
+          6.385505457728868e-10
+        ],
+        "max_marker_error_xy": [
+          1.481440335737716e-06,
+          5.580034212471219e-10
+        ],
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          345.6000061035156,
+          237.60000610351562
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "S1.2": {
+      "original_git_blob": "6fcae4af405ea843fab7dd586218aeab6baa5652",
+      "curve_count": 4,
+      "marker_paths": 48,
+      "data_units": [
+        "Angstrom",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 5.929130043114128e-05,
+      "max_source_affine_roundtrip_error_pdf_pt": 2.7846169814438326e-11,
+      "replot_validation": {
+        "curves": 4,
+        "markers": 48,
+        "max_curve_error_xy": [
+          2.0057985494759123e-08,
+          3.142303484082731e-08
+        ],
+        "max_marker_error_xy": [
+          1.6006202585572282e-08,
+          2.4712655033454212e-08
+        ],
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          489.6000061035156,
+          410.3999938964844
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "S1.3": {
+      "original_git_blob": "ed0d7ae4ff3bcfaf4b044db57e7e6473655cfff4",
+      "curve_count": 11,
+      "marker_paths": 132,
+      "data_units": [
+        "Angstrom",
+        "eV"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 3.6621106573875295e-05,
+      "max_source_affine_roundtrip_error_pdf_pt": 1.0615508472255897e-10,
+      "replot_validation": {
+        "curves": 11,
+        "markers": 132,
+        "max_curve_error_xy": [
+          7.305875904251025e-09,
+          1.0890786938944075e-08
+        ],
+        "max_marker_error_xy": [
+          5.4425468576368985e-09,
+          8.801976036920678e-09
+        ],
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          489.6000061035156,
+          410.3999938964844
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "S1.12_alt": {
+      "original_git_blob": "b7c9f5d6f2452d623d680aadf00fa75dd492b6b3",
+      "curve_count": 12,
+      "marker_paths": 0,
+      "data_units": [
+        "eV",
+        "dimensionless dielectric function"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 3.9236892234839615e-05,
+      "max_source_affine_roundtrip_error_pdf_pt": 2.2737367544323206e-13,
+      "replot_validation": {
+        "curves": 12,
+        "markers": 0,
+        "max_curve_error_xy": [
+          8.007063581061402e-07,
+          4.247155494851995e-06
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          489.6000061035156,
+          439.20001220703125
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "S1.15": {
+      "original_git_blob": "28ca82fa0183d0779ee1484a3a7477443f276cd5",
+      "curve_count": 20,
+      "marker_paths": 0,
+      "data_units": [
+        "eV",
+        "dimensionless dielectric function"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 2.732049904352607e-05,
+      "max_source_affine_roundtrip_error_pdf_pt": 1.1368683772161603e-13,
+      "replot_validation": {
+        "curves": 20,
+        "markers": 0,
+        "max_curve_error_xy": [
+          3.903996010024002e-06,
+          3.827355307350899e-06
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          489.6000061035156,
+          439.20001220703125
+        ],
+        "outside_legend_frames": []
+      }
+    },
+    "S1.16_alt": {
+      "original_git_blob": "3ba5b4d90fcf824519186857687401696221400c",
+      "curve_count": 20,
+      "marker_paths": 0,
+      "data_units": [
+        "eV",
+        "dimensionless dielectric function"
+      ],
+      "max_source_tick_fit_error_pdf_pt": 4.359653780738881e-05,
+      "max_source_affine_roundtrip_error_pdf_pt": 2.2737367544323206e-13,
+      "replot_validation": {
+        "curves": 20,
+        "markers": 0,
+        "max_curve_error_xy": [
+          4.784899445553492e-07,
+          1.1780951041373555e-05
+        ],
+        "max_marker_error_xy": null,
+        "outside_text": [],
+        "page_size_pt": [
+          0.0,
+          0.0,
+          489.6000061035156,
+          439.20001220703125
+        ],
+        "outside_legend_frames": []
+      }
+    }
+  },
+  "energy_landscape_panels": {
+    "files": [
+      "S1.4.pdf",
+      "S1.5.pdf",
+      "S1.6.pdf"
+    ],
+    "panels": 11,
+    "method": "Original PDF assets unchanged; lossless TeX clip rectangles; continued figure numbers retained. Original axes, colorbars, extrema markers and legends checked visually."
+  },
+  "structure_pixels": {
+    "proj1.1": {
+      "source_pixels_unchanged": true,
+      "all_panels_pixels_identical_after_PDF_storage_y_flip": true,
+      "panels": 4,
+      "native_regular_font_pt": 11.5,
+      "pdf_size_bytes": 5492841,
+      "original_git_blob": "ec305baf4c6ac4b2ad22373666597e81f1510314",
+      "text_bbox_check": [],
+      "native_text": [
+        "BC",
+        "3",
+        "Borophene",
+        "B",
+        "4",
+        "C",
+        "3",
+        "Graphene",
+        "Structures of monolayers"
+      ]
+    },
+    "proj1.3": {
+      "source_pixels_unchanged": true,
+      "all_panels_pixels_identical_after_PDF_storage_y_flip": true,
+      "panels": 3,
+      "native_regular_font_pt": 11.5,
+      "pdf_size_bytes": 7318087,
+      "original_git_blob": "ca09ffc31ac2a69f4294c89b7d8187c2d249333d",
+      "text_bbox_check": [
+        {
+          "text": "Structures of bilayers",
+          "bbox": [
+            184.7546844482422,
+            -0.9234962463378906,
+            333.6596984863281,
+            14.804003715515137
+          ]
+        }
+      ],
+      "native_text": [
+        "Graphene-BC",
+        "3",
+        "Graphene-Borophene",
+        "Graphene-B",
+        "4",
+        "C",
+        "3",
+        "Structures of bilayers"
+      ]
+    },
+    "proj1.4": {
+      "source_pixels_unchanged": true,
+      "all_panels_pixels_identical_after_PDF_storage_y_flip": true,
+      "panels": 9,
+      "native_regular_font_pt": 11.5,
+      "pdf_size_bytes": 12768380,
+      "original_git_blob": "f27308b91014cc0e03ad4738b1e5d32218fb16a8",
+      "text_bbox_check": [],
+      "native_text": [
+        "Top view",
+        "Graphene-BC",
+        "3",
+        "Graphene-Borophene",
+        "Graphene-B",
+        "4",
+        "C",
+        "3",
+        "Side view",
+        "Bottom view",
+        "Charge density differences"
+      ]
+    }
+  }
+}

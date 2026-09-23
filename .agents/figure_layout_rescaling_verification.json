@@ -1,0 +1,1107 @@
+{
+  "verified_utc": "2026-09-23T16:26:08.111478+00:00",
+  "started_utc": "2026-09-23T15:56:16.830333+00:00",
+  "figure_count": 66,
+  "changed_figure_count": 60,
+  "figures": [
+    {
+      "file": "figures_ch4/4.1_band_subspace.pdf",
+      "sha256": "0aa00f50ee5cf3d571f3e7e7b47656b2b14bd279994a5844025f2984bdfeb87b",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true
+    },
+    {
+      "file": "figures_ch4/4.2_trim.pdf",
+      "sha256": "c9ec98aaba84e1ffd0d9b3c63aa753b1218932d2414f154bf0704376cec7b7f3",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        3.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true
+    },
+    {
+      "file": "figures_proj1/proj1.1.pdf",
+      "sha256": "ef36cf3318753134812d851c52e3b11b0d841fb73c4563c83f16772fbd9079d2",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.1.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.3_bands.pdf",
+      "sha256": "b5268baf6eb8bbd8669886a5b51c568901e6fed014d37b05873a8322252825a3",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        5.1999999152289496
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.3_bands.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.3.pdf",
+      "sha256": "660a498b56a3bb6e2796d7e94fb335e39de374c218e1090bcdf9a21f4fa4c218",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.3.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.4.pdf",
+      "sha256": "e5864584833e0f2124c305e2e80c6910c5784be509ea2a8808d6405074031149",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        6.100000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": false,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.4.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.5.pdf",
+      "sha256": "2787fb4c30face5d857ca7f30922f54a12b9cc3427dc469344bd9fe15d1caebb",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.5.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.6.pdf",
+      "sha256": "099830a01c4e8407cfae2e9a09f4234eeb9c009a99c6bfce317c83aaa302da29",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.6.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.7.pdf",
+      "sha256": "e5d2be1f173170729bc046782b79254a9f6a28d0df0ead8a37742db9be12a11e",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.7.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.8_schottky.pdf",
+      "sha256": "334532892dbccdf5178fe645228bb7540759725a0d7688930306198ebdc645f4",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.8_schottky.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.9.pdf",
+      "sha256": "aca94711c75de6e3ccd337d71b63d2e3b7a767a9c1e14b513ddf07dc87817618",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.9.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.10_diff.pdf",
+      "sha256": "a4384e13cd14ce0e48ea96874469ae6da49b5b4ba641a13dbea5a1d36a8d6dfd",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.10_diff.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.11_diff.pdf",
+      "sha256": "7abd49f8e5e6a6629f978bb84c08db1adf30e2872809a2e52d4c6d068a0ad962",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.11_diff.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.12_optics.pdf",
+      "sha256": "e03bae2dfc8b076b8c4f1919324580f558623d0c56b6d176eab02d3c2dc1e067",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.12_optics.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.13_optics.pdf",
+      "sha256": "b7cb619154ccc22f4be8d970ef563da580cdba54580b68a8d8a82e967f48b2e2",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        4.8000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.13_optics.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/proj1.14_cor.pdf",
+      "sha256": "086a8d60bff6b38b4500d26c1df830f1193b6710d9ee737c37f01d733e1b1f7c",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        3.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/proj1.14_cor.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.1.pdf",
+      "sha256": "204067328c171e06a27aa9c627561b6d90102692dfd9da4ea9d65b7e4e03b020",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.1.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.2.pdf",
+      "sha256": "43772dfee95abc5e7b0c67e353f0875848cefd905401285d3843d53ced7d7ca1",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.2.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.3.pdf",
+      "sha256": "e6826907e7161cdb26dc9b5ef8bcb70eb84d5bb15319f4af14104f43fa36bfcd",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.3.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.4.pdf",
+      "sha256": "906d7d5d266b863910c62c220711f920f94b6eb2840ee548001b8e6f20e7b85a",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.4.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.5.pdf",
+      "sha256": "75fa2518505d0225cfcff8f939298dec15320e03ea2e2590ce0d82dcf400d03d",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.1999999152289496
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.5.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.6.pdf",
+      "sha256": "a9ed173c52c4b48f837973df8400cc917fbe2aadeaf92243f996f5d07e3407e4",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.1999999152289496
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.6.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.9.pdf",
+      "sha256": "eaf07b55bb4c8968a1a418af6009b46264dee222106137b79a8d306a99d9b42e",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.9.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.10.pdf",
+      "sha256": "6b8982087d1e742b469b956c4ac6a7338c7c49c9234a15302c3e592c9d970c54",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.10.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.11.pdf",
+      "sha256": "66f8b2da53dec49c35866aaf7be0d1737ed5cfb8c3b58a3a73440c569ea386de",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.11.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.12_alt.pdf",
+      "sha256": "6f264d9707e532ef2c3198401ca9b08aa5f4799117cbc9d67695eb15a42196c0",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.12_alt.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.13_dielectric.pdf",
+      "sha256": "1e107f22cc9e5881ef13de0ac3f09494cc59d15048078e6accc02dacb82f2e06",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        7.5
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.13_dielectric.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.14_optics.pdf",
+      "sha256": "1ea09efc0ca254fef737de1b70c975afd5facad3fa60184cb640d0128baf70a0",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        8.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.14_optics.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.15.pdf",
+      "sha256": "f2f5f26bffde01371e256b66eabcccc5a61cf7eb428b74938aa1b8363dc5d7da",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.15.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.16_alt.pdf",
+      "sha256": "4986e81bc6fa016a1d2b76876ddd095b53a329b0d0feaa8930b9547dfa77a557",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.16_alt.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.17_alt.pdf",
+      "sha256": "43b731ecd3a1126d46f4329cae677f1f5db245be8e4dc22ddb49fcd2036e980f",
+      "tex_fraction": 0.9,
+      "canvas_inches": [
+        9.0,
+        6.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.17_alt.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.18.pdf",
+      "sha256": "cfce13dc33bdbd5857daded46f0edee4da8d6a105a460d7168697cbeaddff7e1",
+      "tex_fraction": 0.9,
+      "canvas_inches": [
+        9.0,
+        6.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.18.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.19.pdf",
+      "sha256": "7bb787ef715b7d2eab2fecade287c739c820ba7f758fb2bd6333ae757a803da3",
+      "tex_fraction": 0.9,
+      "canvas_inches": [
+        9.0,
+        6.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.19.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.20.pdf",
+      "sha256": "48c884952fb1b07e0713dc9dcd7686045685331db8229909c2cb50a20822d275",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        4.899999830457899
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.20.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.21.pdf",
+      "sha256": "5855e20b19ea74cd8a35c080ec0ed37a43ad946eb44981628b3dd3fd9ace4e6d",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        4.899999830457899
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.21.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.22.pdf",
+      "sha256": "e2dd5d4a0f1fbe1f60590bc63d9a27321516cd325873f18ec1fb1f88e315e82d",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        4.899999830457899
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.22.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.23_correct.pdf",
+      "sha256": "9eb9126109f0b49aa2b5363a4ce3772056ce24876b04b6025df46d7de0b05394",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        4.899999830457899
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.23_correct.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj1/S1.24_correct.pdf",
+      "sha256": "c4aeb50a5a03ac79307b7be1c6ee2ff87ba1297394b21b0b152604af5826393a",
+      "tex_fraction": 0.85,
+      "canvas_inches": [
+        8.5,
+        4.899999830457899
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/S1.24_correct.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.1.pdf",
+      "sha256": "af55ae96e7755a8ff5151dd03658cbe5f6588763e70f80cf7b120511084aed2c",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        10.666666666666666
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": false,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.1.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.2.pdf",
+      "sha256": "8bce96c93e0706d3c71009650f14fdf885afeb99e6101ef85d34aff3fbfbbb8a",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        6.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.2.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.3.pdf",
+      "sha256": "ded27bbcb5b8d0c1620d91316841473b5dd52f85f14dd3247688942e2e31232a",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        7.200000339084202
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": false,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.3.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.5.pdf",
+      "sha256": "40d2a3dd584a32feb31c4136212cd9a8fad8372d2325867db8d516626162b867",
+      "tex_fraction": 0.7,
+      "canvas_inches": [
+        7.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.5.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.4.pdf",
+      "sha256": "243ba3a3e1eacb720e091e91078a07ca462315d2f117746be2eecc98a58a340d",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        8.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": false,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.4.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.6.pdf",
+      "sha256": "5721bec3acf1fd12e8664cbbb333953348019ce491f756aeab56536035c26901",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.6.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.7.pdf",
+      "sha256": "43c3a7c9b2a573ff1d32af011855db6b1fab179fa68f42379c6162dc7323d61e",
+      "tex_fraction": 0.75,
+      "canvas_inches": [
+        7.5,
+        4.076695336235894
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": false,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.7.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.8.pdf",
+      "sha256": "7c39c44948da10479d851b4f05bd4a68bacb3e230f7a002957e9c7a0f566643e",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        4.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.8.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.9.pdf",
+      "sha256": "56e7cb55a9f905f59c410cd333e06f755773201ba2888eb34ab41ebb2bf40bfc",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        4.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.9.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.10.pdf",
+      "sha256": "4ef817c15281d2974cba00e7f1bc107f826be3e3e9546701287574b2551093d0",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.10.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.11.pdf",
+      "sha256": "4cccaca710e0fc7b806838a2a3501f8b04d8eb65b9d16d260dad19d7c05cd263",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        5.3000000847710504
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.11.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/fig2.12.pdf",
+      "sha256": "38eeddbdc6b6b30b2fcdea35f9c918bc3786e4a9557bdc1161b282ddd3de37eb",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/fig2.12.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.1.pdf",
+      "sha256": "bb1121bd96fdb7c5e6390260137510171cdd1be1a65228187c7247870c328c59",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        6.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.1.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.2.pdf",
+      "sha256": "fc069b39fa2566177d6eb80cd016a9cb06f0b9120d22fab34025b7624aea41df",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        4.5
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.2.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.3.pdf",
+      "sha256": "6745529146cd7807d10734ef3fabd8a9230b077c81a2d7b3ade52dbc5e3113c7",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.3.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.4.pdf",
+      "sha256": "8ab8cea8d2384081277f106b3f6c2662c4c18757a14a29fc9e25bcd13034a267",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.4.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.5.pdf",
+      "sha256": "5e5e20a967d365156e61a880ae50232633a690f3466cf839fc95398f1d4dd590",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        5.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.5.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.8.pdf",
+      "sha256": "81ce950be3bc88ecc2c6deb3a6d14aa17ef2b2068690860e921b61c9afeefbb0",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.8.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.9.pdf",
+      "sha256": "825b136f4594fc79aa7a2d94626e4f9708c0373f821e32755a0d400f522d3f57",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        3.4000000423855252
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.9.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.10.pdf",
+      "sha256": "e968da68c6de6eca3e9d37e1521627d7ec37c299541729ce54f0eb6a18c7cd69",
+      "tex_fraction": 1.0,
+      "canvas_inches": [
+        10.0,
+        4.5
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.10.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.11.pdf",
+      "sha256": "ef2c36cac61a4b0c6e4061be95c29a3dd6a6575714afa7e3c5645f09a03c5f34",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        3.4000000423855252
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.11.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.12.pdf",
+      "sha256": "47b5e8743be8a97fbae55ed279876351361d1b1845dfc8cec96b53fc505480cf",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.12.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.13.pdf",
+      "sha256": "a64b486ca93b4ecc8d77a04e7478bf3838392a1a97eaddf296501c1801517b0d",
+      "tex_fraction": 0.7,
+      "canvas_inches": [
+        7.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.13.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.14.pdf",
+      "sha256": "1f6431434e9de62c48a10d08c26fb143bf15117f977ceb902fe5c9c9b321fac2",
+      "tex_fraction": 0.7,
+      "canvas_inches": [
+        7.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.14.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.15.pdf",
+      "sha256": "c03b08b43fcbfd717537fe118ceb3033109314fecd4a900f3ec15300c1534746",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        3.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.15.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.16.pdf",
+      "sha256": "16361bebf5664cc06eddcf89d0c8879210b773552449dff7403b3f443657ebbf",
+      "tex_fraction": 0.6,
+      "canvas_inches": [
+        6.0,
+        6.0
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.16.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.17.pdf",
+      "sha256": "9d8110796d4778e158d7430d8886eb37dffe2f8f9db87f8cef513ed300c5b5c1",
+      "tex_fraction": 0.75,
+      "canvas_inches": [
+        7.5,
+        3.864166259765625
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": false,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.17.pdf",
+      "source_matches": true
+    },
+    {
+      "file": "figures_proj2/S2.18.pdf",
+      "sha256": "f348575f9c235f2c30355afb595c3761d087c0f00c8c001ed1ffb79712530b5a",
+      "tex_fraction": 0.8,
+      "canvas_inches": [
+        8.0,
+        5.600000169542101
+      ],
+      "text_outside_canvas": [],
+      "changed_this_pass": true,
+      "source": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/S2.18.pdf",
+      "source_matches": true
+    }
+  ],
+  "font_pt": {
+    "axis": 13,
+    "ticks": 11,
+    "legend": 11,
+    "panel_title": 11
+  },
+  "canvas_tex_scaling": "Canvas width in inches equals 10 times the TeX text-width fraction, preserving printed typography while restoring different figure sizes.",
+  "notebooks": [
+    {
+      "path": "/Users/lu/Repos/PhD_thesis_20251216/figures_ch4/figures_ch4.ipynb",
+      "sha256": "3959bac68944da8870becc58264215fa13b553cfc7f00986937d60ff958451cd",
+      "code_cells": 3,
+      "syntax_valid": true,
+      "saved_outputs": 0
+    },
+    {
+      "path": "/Users/lu/Repos/Graphene-BC_20230622/figures_for_thesis/figures_for_thesis.ipynb",
+      "sha256": "7614e59f584f82fb80a7fb073aa2a6b729d846217318f2eb6d3d9ec61409d0cc",
+      "code_cells": 21,
+      "syntax_valid": true,
+      "saved_outputs": 0
+    },
+    {
+      "path": "/Users/lu/Repos/o-B14_20241024/figures_for_thesis/figures_for_thesis.ipynb",
+      "sha256": "217a158a684b6b1b521fd9805545cf2f9a6b06f97c3a75f1001cd10cce2c3e2b",
+      "code_cells": 28,
+      "syntax_valid": true,
+      "saved_outputs": 0
+    }
+  ],
+  "scientific_functions": [
+    {
+      "repo": "Graphene-BC_20230622",
+      "file": "electronic.py",
+      "function": "bands",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "Graphene-BC_20230622",
+      "file": "electronic.py",
+      "function": "dos",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "Graphene-BC_20230622",
+      "file": "optics.py",
+      "function": "dielectric",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "Graphene-BC_20230622",
+      "file": "optics.py",
+      "function": "values",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "Graphene-BC_20230622",
+      "file": "energies.py",
+      "function": "table",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "o-B14_20241024",
+      "file": "electronic_data.py",
+      "function": "bands",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "o-B14_20241024",
+      "file": "electronic_data.py",
+      "function": "dos",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "o-B14_20241024",
+      "file": "optics.py",
+      "function": "dielectric",
+      "unchanged_from_HEAD": true
+    },
+    {
+      "repo": "o-B14_20241024",
+      "file": "optics.py",
+      "function": "quantity",
+      "unchanged_from_HEAD": true
+    }
+  ],
+  "source_tex_checks": [
+    {
+      "file": "src/fundamentals_c.tex",
+      "sha256": "4aac7c1f61ec17fc169d1578203ae062bccf488665d99d699ee4df313a990c39",
+      "only_scaling_and_S2_2_caption_changed": true
+    },
+    {
+      "file": "src/project_1_main.tex",
+      "sha256": "1ad6abe488cf0ac3d747ab3caa90b35939d67a245ec02e4dd1a3830aca6a7b55",
+      "only_scaling_and_S2_2_caption_changed": true
+    },
+    {
+      "file": "src/project_1_SI.tex",
+      "sha256": "5930ea2712ea5a478f0c90cdd9a16d1d27718d9adfe8c23c9cef6c1787af59d9",
+      "only_scaling_and_S2_2_caption_changed": true
+    },
+    {
+      "file": "src/project_2_main.tex",
+      "sha256": "5a27b32673518f55cb1d5c80369ea2ce23d709de46d5bdf1d1732bff8541e782",
+      "only_scaling_and_S2_2_caption_changed": true
+    },
+    {
+      "file": "src/project_2_SI.tex",
+      "sha256": "e7e64ee9759d33cc57e46fdf3482dd1e30387b4c22884f978357984459c2ebc7",
+      "only_scaling_and_S2_2_caption_changed": true
+    }
+  ],
+  "thesis": {
+    "pages": 324,
+    "sha256": "1944d09c69fb061d7dcf9b05b3ec94d302d8ab60915967a6cfef516b80a97a12",
+    "chapter_bookmarks": [
+      [
+        1,
+        "Abstract",
+        5
+      ],
+      [
+        1,
+        "List of Publications",
+        7
+      ],
+      [
+        1,
+        "Acknowledgements",
+        9
+      ],
+      [
+        1,
+        "Statement on the Use of Generative Artificial Intelligence",
+        13
+      ],
+      [
+        1,
+        "Contents",
+        15
+      ],
+      [
+        1,
+        "Lists of Figures, Tables, Abbreviations and Symbols",
+        19
+      ],
+      [
+        1,
+        "Chapter 1. Introduction",
+        35
+      ],
+      [
+        1,
+        "Chapter 2. Fundamentals I: Many-Body Quantum Physics and DFT",
+        49
+      ],
+      [
+        1,
+        "Chapter 3. Fundamentals II: Linear Optical Response",
+        133
+      ],
+      [
+        1,
+        "Chapter 4. Fundamentals III: Band Topology",
+        165
+      ],
+      [
+        1,
+        "Chapter 5. Optoelectronic Properties of Heterostructure Bilayers",
+        187
+      ],
+      [
+        1,
+        "Chapter 6. Functional Properties of Penta-Bipyramid Boron Phases",
+        227
+      ],
+      [
+        1,
+        "Chapter 7. Topological and Optical Properties of Beryllene Phases",
+        263
+      ],
+      [
+        1,
+        "Chapter 8. Conclusion and Outlook",
+        299
+      ],
+      [
+        1,
+        "References",
+        303
+      ],
+      [
+        1,
+        "Appendix",
+        323
+      ]
+    ],
+    "all_chapter_starts_odd": true,
+    "ch4_pages_including_transition": 22
+  },
+  "build": {
+    "successful": true,
+    "undefined_references_or_citations": false,
+    "overfull_hbox": [
+      "Overfull \\hbox (15.42088pt too wide) detected at line 831",
+      "Overfull \\hbox (4.24358pt too wide) in paragraph at lines 1487--1491",
+      "Overfull \\hbox (4.03809pt too wide) in paragraph at lines 3007--3012",
+      "Overfull \\hbox (25.94962pt too wide) in paragraph at lines 1--1",
+      "Overfull \\hbox (5.28813pt too wide) in paragraph at lines 397--397",
+      "Overfull \\hbox (13.97218pt too wide) in paragraph at lines 397--397",
+      "Overfull \\hbox (27.27335pt too wide) in paragraph at lines 397--397",
+      "Overfull \\hbox (8.13083pt too wide) in paragraph at lines 397--397",
+      "Overfull \\hbox (5.24617pt too wide) in paragraph at lines 397--397"
+    ],
+    "overfull_hbox_unchanged_from_preceding_pass": true
+  },
+  "visual_review": {
+    "independent_review": {
+      "project_1_figures": 36,
+      "project_2_numeric_figures": 23,
+      "chapter_4_figures": 2,
+      "remaining_required_fixes": []
+    },
+    "full_thesis_pages_reviewed": [
+      170,
+      198,
+      210,
+      217,
+      254,
+      258,
+      261
+    ],
+    "final_local_title_adjustments_reviewed": [
+      "fig2.11.pdf",
+      "fig2.12.pdf",
+      "S2.4.pdf",
+      "S2.5.pdf"
+    ]
+  },
+  "git_diff_check": {
+    "PhD_thesis_20251216": true,
+    "Graphene-BC_20230622": true,
+    "o-B14_20241024": true
+  }
+}

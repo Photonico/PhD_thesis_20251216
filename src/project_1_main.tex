@@ -1,6 +1,14 @@
 \chapter[Optoelectronic Properties of Heterostructure Bilayers]{Electronic and Optical Properties of 2D Heterostructure Bilayers of Graphene, Borophene and 2D Boron Carbides from First-Principles}
 \label{cha:project_bilayers}
 
+This chapter is based on the article by L.~Niu, O.~J.~Conquest, C.~Verdi, and C.~Stampfl,
+published in \textit{Nanomaterials} \textbf{14}, 1659 (2024)~\cite{niu2024electronic}.
+The candidate performed the investigation, formal analysis, software development, data curation, and visualization.
+Catherine Stampfl conceived the study and provided the computational resources.
+All four authors contributed to the methodology and the original manuscript;
+the candidate, Oliver James Conquest, and Carla Verdi performed the validation.
+Catherine Stampfl, Carla Verdi, and Oliver James Conquest supervised and administered the project, and reviewed and edited the manuscript.
+
 \section{Abstract}
 \label{1_abstract}
 
@@ -14,10 +22,10 @@ with band gaps of \qty{1.822}{\electronvolt} and \qty{2.381}{\electronvolt} as o
 The Graphene-\ce{BC3} and Graphene-\ce{B4C3} bilayer heterojunction systems maintain the Dirac point of graphene at the $\mathrm{K}$ point and are semimetals,
 while Graphene-Borophene is metallic.
 All bilayer heterostructure systems exhibit absorption in the visible region, where the resonance frequency and resonance absorption peak intensity vary between structures.
-In addition, all heterojunctions support plasmons within the range \qtyrange{16.5}{18.5}{\electronvolt}, while Graphene-\ce{B4C3} and Graphene-Borophene exhibit a $\pi$-type plasmon within the region \qtyrange{4}{6}{\electronvolt},
-with the latter possessing an additional plasmon at the lower energy of \qtyrange{1.5}{3}{\electronvolt}.
-The dielectric tensor for Graphene-\ce{B4C3} exhibits complex off-diagonal elements due to the lower $\mathrm{P}3$ space-group symmetry, indicating anisotropic dielectric properties and possible optically active (chiral) effects.
-The heterostructures show visible-light absorption and plasmon modes that shift with the boron-based monolayer, indicating tunable optoelectronic behavior.
+In addition, all heterojunctions show spectral features consistent with plasmon resonances at approximately \qtyrange{17}{19}{\electronvolt}, while Graphene-\ce{B4C3} and Graphene-Borophene show low-energy features in the in-plane dielectric response within the region \qtyrange{4}{6}{\electronvolt},
+with the latter possessing an additional feature at the lower energy of \qtyrange{1.5}{3}{\electronvolt}.
+The dielectric response differs strongly between in-plane and out-of-plane polarizations.
+The heterostructures show visible-light absorption and plasmon-related features that shift with the boron-based monolayer, indicating tunable optoelectronic behavior.
 
 \clearpage
 \section{Introduction}
@@ -76,8 +84,9 @@ and the exploration of novel applications will be key focal points.
 To date, little is known about the physical properties of graphene-based bilayer heterojunctions with borophene and boron-carbide materials.
 This motivates the present chapter to gain an understanding of these heterojunctions
 through the study of their electronic and optical properties on the basis of first-principles calculations.
-Such understanding is crucial for their future technological application,
-where the unique properties of these materials can be harnessed.
+The comparison with the constituent monolayers identifies how stacking changes the band alignment, charge redistribution, and polarization-dependent optical response.
+These structure-property relationships provide the main contribution of this chapter;
+the calculations do not establish the performance of a fabricated device.
 
 This chapter is organised as follows:
 In section~\ref{1_calculation_methods}, the calculation method is described,
@@ -102,19 +111,27 @@ we use the Gaussian smearing method implemented in VASP.
 For the calculation of electronic properties,
 the PBE exchange-correlation functional is known to underestimate band gap energies.
 Therefore, we also use the screened hybrid exchange-correlation functional of Heyd, Scuseria, and Ernzerhof (HSE06),
-which gives more accurate band gap energies~\cite{sassnick2021electronic, heyd2003hybrid, krukau2006influence}.
+which can improve the description of band gap energies relative to PBE~\cite{sassnick2021electronic, heyd2003hybrid, krukau2006influence}.
 
-All density of states (DoS) calculations use a $\Gamma$-centered k-point sampling mesh of $33 \times 33 \times 1$,
-with smearing at the Fermi level calculated using the Gaussian method and a broadening value of \qty{0.1}{\electronvolt}.
+For the total density of states (DoS) shown with the band structures,
+we use a $\Gamma$-centered k-point sampling mesh of $33 \times 33 \times 1$.
+The atom- and orbital-projected HSE06 densities of states use the $17 \times 17 \times 1$ mesh,
+with the total and projected contributions referred to the same Fermi energy for each calculation.
+Both use Gaussian smearing with a broadening value of \qty{0.1}{\electronvolt}.
 The HSE06 exchange-correlation functional is also used for the calculation of optical properties,
 in particular, the frequency-dependent dielectric function with $\Gamma$-centered k-point sampling meshes of $17 \times 17 \times 1$ and $65 \times 65 \times 1$.
 The complex frequency-dependent dielectric function, $\varepsilon(\omega)$,
 is given by equation~\ref{complex_dielectric_function_definition};
-here, $\varepsilon_{1}(\omega)$ and $\varepsilon_{2}(\omega)$ are the real and imaginary parts, respectively, and $\omega$ denotes the photon energy in \unit{\electronvolt}.
+here, $\varepsilon_{1}(\omega)$ and $\varepsilon_{2}(\omega)$ are the real and imaginary parts, respectively, and $\omega$ denotes the angular frequency.
+The spectra are plotted against the photon energy $\hbar\omega$ in \unit{\electronvolt}.
 
 We then use the dielectric function to calculate the absorption coefficient,
 refractive index, extinction coefficient, reflectivity, and energy-loss spectrum,
 following the relations introduced in section~\ref{sec:from_dielectric_function_to_optical_properties}.
+These scalar relations apply to the diagonal response along a principal direction.
+Applying them separately to an off-diagonal tensor element does not give an independent absorption coefficient, refractive index, or reflectivity.
+The diagonal spectra are used below in an effective principal-axis description,
+subject to the tensor-symmetry check discussed with the off-diagonal components.
 
 The interlayer binding energy $E_{\mathrm{b}}$ follows as:
 
@@ -138,8 +155,8 @@ Afterwards, the charge density difference $\Delta \rho(\vec{r}\,)$ takes the for
 \label{charge_density_difference}
 \end{equation}
 
-here, $\rho_{\mathrm{AB}}(\vec{r},)$ denotes the total charge density of the heterostructure.
-The terms $\rho_{\mathrm{A}}(\vec{r},)$ and $\rho_{\mathrm{B}}(\vec{r},)$ represent the charge densities of the isolated monolayers forming the heterostructure.
+here, $\rho_{\mathrm{AB}}(\vec{r}\,)$ denotes the total charge density of the heterostructure.
+The terms $\rho_{\mathrm{A}}(\vec{r}\,)$ and $\rho_{\mathrm{B}}(\vec{r}\,)$ represent the charge densities of the isolated monolayers forming the heterostructure.
 
 \section{Results and discussion}
 \label{1_results}
@@ -232,11 +249,7 @@ values in brackets are from previous theoretical studies. ``Nature'' indicates t
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.40\linewidth]{figures_proj1/proj1.3a.pdf}%
-\includegraphics[width=0.40\linewidth]{figures_proj1/proj1.3b.pdf}%
-\par\nointerlineskip
-\includegraphics[width=0.40\linewidth]{figures_proj1/proj1.3c.pdf}%
-\includegraphics[width=0.40\linewidth]{figures_proj1/proj1.3d.pdf}%
+    \includegraphics[width=0.85\textwidth]{figures_proj1/proj1.3_bands.pdf}
 \caption{Band structures of graphene, borophene, \ce{BC3}, and \ce{B4C3} calculated using PBE (blue) and HSE06 (orange).}
 \label{fig1.2_monolayers_bs}
 \end{figure}
@@ -269,7 +282,7 @@ However, the converse does not hold, because not every hexagon center in graphen
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=1.00\textwidth]{figures_proj1/proj1.3.pdf}
+\includegraphics[width=0.80\textwidth]{figures_proj1/proj1.3.pdf}
 \caption{Top views of the optimized atomic structures of Graphene-\ce{BC3}, Graphene-Borophene, and Graphene-\ce{B4C3}.
 Green and brown spheres denote boron and carbon atoms, respectively.
 The orange parallelogram indicates the unit cell.}
@@ -380,7 +393,8 @@ The corresponding atom-projected (or partial) PDoS are presented in figures~\ref
 
 The Graphene-\ce{BC3} heterojunction exhibits a sizeable density of states just above the Fermi level, as shown in figure~\ref{S1.10},
 which is related to the relatively flat band near the $\mathrm{M}$ point and along the $\mathrm{K}$--$\Gamma$ path in the Brillouin zone.
-The Graphene-Borophene system exhibits metallic behaviour due to the small occupation of states at the $\mathrm{K}$ point; these states are mainly carbon-related, as shown by the PDoS in figure~\ref{S1.9}.
+The Graphene-Borophene system exhibits metallic behaviour,
+with contributions from both constituent layers near the Fermi level, as shown by the PDoS in figure~\ref{S1.9}.
 The Graphene-\ce{B4C3} bilayer exhibits essentially semimetallic behaviour, with the \ce{B4C3}-derived states located away from the Fermi level, mainly above approximately \qty{1.2}{\electronvolt} and below approximately \qty{-0.8}{\electronvolt}, as shown by the PDoS in figure~\ref{S1.11}.
 
 Across these three bilayers,
@@ -393,21 +407,21 @@ In each figure, the PBE and HSE06 results are shown in blue and orange, respecti
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.5.pdf}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/proj1.5.pdf}
 \caption{Band structure and total DoS of Graphene-\ce{BC3}.}
 \label{fig1.5}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.6.pdf}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/proj1.6.pdf}
 \caption{Band structure and total DoS of Graphene-Borophene.}
 \label{fig1.6}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.7.pdf}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/proj1.7.pdf}
 \caption{Band structure and total DoS of Graphene-\ce{B4C3}.}
 \label{fig1.7}
 \end{figure}
@@ -445,9 +459,8 @@ For device applications, a smaller Schottky barrier height, or even an Ohmic con
 
 \begin{figure}[!htbp]
 \centering
-    \adjustbox{valign=c}{\includegraphics[width=0.45\linewidth]{figures_proj1/proj1.8a.pdf}}%
-    \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj1/proj1.8b.pdf}}%
-\caption{The left panel shows a schematic of the Schottky--Mott model, including the valence and conduction band energies, the Fermi energy, and the $n$-type and $p$-type Schottky barriers labelled $E_V$, $E_C$, $E_F$, $\Phi_n$, and $\Phi_p$, respectively; The right panel shows an example of the HSE06-calculated Graphene-\ce{B4C3} heterojunction and the Schottky barrier height determined from the band structure.}
+    \includegraphics[width=0.85\textwidth]{figures_proj1/proj1.8_schottky.pdf}
+\caption{Panel~(a) shows a schematic of the Schottky--Mott model, including the valence and conduction band energies, the Fermi energy, and the $n$-type and $p$-type Schottky barriers labelled $E_V$, $E_C$, $E_F$, $\Phi_n$, and $\Phi_p$, respectively; panel~(b) shows an example of the HSE06-calculated Graphene-\ce{B4C3} heterojunction and the Schottky barrier height determined from the band structure.}
 \label{fig1.8}
 \end{figure}
 
@@ -461,8 +474,11 @@ from which the other optical properties can be determined, as given by equations
 ~\ref{reflectivity_from_refractive_index_and_extinction_coefficient},
 and~\ref{energy_loss_spectrum_from_inverse_dielectric_function}.
 The real part of the frequency-dependent dielectric function $\varepsilon_1(\omega)$ characterizes the strength of the dynamical screening from charge excitations,
-whereas the imaginary part $\varepsilon_2(\omega)$ describes light absorption from neutral and plasmonic charge excitations.
+whereas the imaginary part $\varepsilon_2(\omega)$ describes the absorptive response.
 A negative value of $\varepsilon_1(\omega)$ indicates metallic character in the optical response over the corresponding photon-energy range.
+A plasmon assignment further requires a corresponding peak in the energy-loss spectrum, with sufficiently weak damping near the zero crossing of $\varepsilon_1$.
+The plasmon-related features discussed below are interpreted within this long-wavelength dielectric description;
+their dispersion and lifetimes are not calculated here.
 
 It is first important to establish the appropriate k-point set to yield converged results.
 For graphene, we test a number of k-point meshes and find that a $129 \times 129 \times 1$ mesh gives converged results, as shown in figure~\ref{S1.12}, in good agreement with previous results~\cite{warmbier2016}.
@@ -477,23 +493,24 @@ which emerges for \ce{B4C3} around \qty{3}{\electronvolt},
 for \ce{BC3} around \qty{2}{\electronvolt},
 and for borophene around \qty{1}{\electronvolt}.
 It can furthermore be seen from figure~\ref{S1.13} that, for the real part of the dielectric function in the out-of-plane direction for borophene,
-a plasmon emerges at \qty{9.8}{\electronvolt}, as evidenced by the negative value that becomes positive around \qty{10.5}{\electronvolt}.
+the real part becomes negative at approximately \qty{9.8}{\electronvolt} and positive again around \qty{10.5}{\electronvolt},
+suggesting a possible plasmonic feature.
 
 As previously reported, the latter three monolayers exhibit visible-light absorption,
 which is also indicated by the in-plane imaginary part of the dielectric function shown in figure~\ref{S1.13}.
 The static dielectric constants, namely the real part of the dielectric function at zero energy,
-for \ce{BC3} are 4.0 for in-plane polarization and 1.4 for out-of-plane polarization as obtained using PBE.
+for \ce{BC3} are approximately 4.1 for in-plane polarization and 1.4 for out-of-plane polarization as obtained using PBE.
 These values can be compared with previously reported PBE values of 4.86 for in-plane polarization and 1.59 for out-of-plane polarization~\cite{mortazavi2019outstanding}.
 
-For \ce{B4C3}, the in-plane static dielectric constant is 3.9,
+For \ce{B4C3}, the in-plane static dielectric constant is approximately 3.8,
 and the out-of-plane value is calculated to be 1.5.
 We note that these values reflect the combined monolayer-vacuum system.
 Figure~\ref{S1.14} shows the corresponding optical properties for the monolayer systems.
 
 Before presenting the results for the three heterostructure bilayer systems,
-we first perform a convergence check for the number of unoccupied bands included in the calculation of the dielectric function.
-Figure~\ref{S1.15} shows that 128 bands yield well-converged results for the representative Graphene-\ce{B4C3} system,
-and we therefore use this value for all three bilayer calculations.
+we first perform a convergence check for the total number of bands, including unoccupied states, used to calculate the dielectric function.
+Figure~\ref{S1.15} shows that an input value of \texttt{NBANDS=128} yields well-converged results for the representative Graphene-\ce{B4C3} system,
+and we therefore use this input value for all three bilayer calculations.
 Further tests of the energy convergence criterion are reported in figure~\ref{S1.16}.
 
 % Graphene-Borophene
@@ -503,12 +520,12 @@ The corresponding full dielectric tensor components are provided in figure~\ref{
 Compared with the PBE results,
 HSE06 yields a blue shift of the features to higher energies.
 The real part exhibits characteristics of both graphene and borophene,
-with plasmons emerging around the same energies as those of the respective monolayers shown in figure~\ref{S1.13},
+with negative values around the same energies as those of the respective monolayers shown in figure~\ref{S1.13},
 namely around \qty{5}{\electronvolt} (\qty{4}{\electronvolt}) and \qty{2}{\electronvolt} (\qty{1}{\electronvolt}) for HSE06 (PBE), respectively.
 There is, however, a significant difference in the out-of-plane dielectric function compared with the monolayer systems.
-The borophene-related plasmon that emerges at around \qty{9.8}{\electronvolt} in the monolayer shifts to higher energies and now appears at around \qty{17}{\electronvolt} (\qty{14}{\electronvolt}) for HSE06 (PBE),
-with a plasmon resonance frequency at about \qty{18}{\electronvolt} (\qty{15}{\electronvolt}) for HSE06 (PBE),
-as determined by the energy at which the real part of the dielectric function changes from negative to positive.
+The borophene-related feature that emerges at around \qty{9.8}{\electronvolt} in the monolayer shifts to higher energies and now appears at around \qty{17}{\electronvolt} (\qty{14}{\electronvolt}) for HSE06 (PBE),
+with a corresponding zero crossing at about \qty{18}{\electronvolt} (\qty{15}{\electronvolt}) for HSE06 (PBE),
+where the real part of the dielectric function changes from negative to positive.
 In addition, a new feature with two peaks occurs around \qtyrange{2}{5}{\electronvolt} (\qtyrange{1}{4}{\electronvolt}) for HSE06 (PBE) in both the real and imaginary parts of the dielectric function.
 This feature in the imaginary part is attributed to interband transitions involving borophene- and graphene-derived states around the $\mathrm{K}$ point and along the direction towards the $\mathrm{M}$ and $\Gamma$ points.
 A similar feature appears for the other bilayer heterojunctions, although it shows only one main peak.
@@ -518,7 +535,7 @@ being related to $\pi-\sigma^*$ and $\pi^*-\sigma$ transitions.
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.8\textwidth]{figures_proj1/proj1.9.pdf}
+    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.9.pdf}
 \caption{In-plane and out-of-plane dielectric-function components of the Graphene-Borophene heterostructure.}
 \label{fig1.9}
 \end{figure}
@@ -528,11 +545,13 @@ The results for the dielectric function of the Graphene-\ce{BC3} heterostructure
 as obtained using both the PBE and HSE06 functionals.
 The corresponding full dielectric tensor components are provided in figure~\ref{S1.18}.
 Interestingly, and in contrast to Graphene-Borophene,
-the dielectric tensor for this system contains complex non-zero off-diagonal components.
-These components satisfy the antisymmetric relations
-$\varepsilon_{xy}=-\varepsilon_{yx}$,
-$\varepsilon_{xz}=-\varepsilon_{zx}$,
-and $\varepsilon_{yz}=-\varepsilon_{zy}$.
+the displayed dielectric tensor for this system contains complex non-zero off-diagonal components.
+The displayed off-diagonal pairs have approximately opposite signs:
+$\varepsilon_{xy}\approx-\varepsilon_{yx}$,
+$\varepsilon_{xz}\approx-\varepsilon_{zx}$,
+and $\varepsilon_{yz}\approx-\varepsilon_{zy}$.
+These sign relations require checking against the reciprocal, symmetric tensor described in chapter~\ref{cha:fundamentals_b};
+they are not used here as evidence of optical activity.
 The dielectric tensor describes the response of a material to an external electric field,
 or equivalently, how the polarization of the material changes under the applied electric field.
 For an incident photon,
@@ -544,16 +563,16 @@ Therefore, the following discussion focuses on the in-plane and out-of-plane dia
 which describe the dominant optical response for the polarization directions considered here.
 
 In contrast to the Graphene-Borophene system,
-the real part of the dielectric function is positive over the whole energy range considered.
+the real part of the in-plane dielectric function is predominantly positive at low photon energies,
+although small negative intervals are also present.
 There are, however, energy ranges where it approaches zero,
 namely in the region \qtyrange{2.5}{5}{\electronvolt} and from \qty{13}{\electronvolt} (\qty{15}{\electronvolt}) onwards for PBE (HSE06).
-When $\varepsilon_1$ is zero but not negative,
-this suggests that the system is close to resonance but has not fully entered the regime where strong optical reflection or plasmonic modes are dominant,
-since such modes typically require $\varepsilon_1 < 0$.
+These near-zero values must be considered together with $\varepsilon_2$ and the energy-loss spectrum;
+they do not alone determine the reflectivity or establish a plasmon resonance.
 Another difference from the Graphene-Borophene system is the sizeable in-plane value of both $\varepsilon_1$ and $\varepsilon_2$ in the region \qtyrange{10}{15}{\electronvolt}.
 Similar to the Graphene-Borophene system, however,
 the out-of-plane real part of the dielectric function becomes negative at around \qtyrange{16}{17}{\electronvolt} (\qtyrange{14}{15}{\electronvolt}) for HSE06 (PBE),
-indicating the presence of a plasmon.
+consistent with the plasmon-like loss feature discussed below.
 However, monolayer \ce{BC3} does not exhibit this feature, unlike borophene, as shown in figure~\ref{S1.13}.
 It is therefore presumably related to the $\pi-\sigma$-type plasmon present for graphene at approximately \qty{15}{\electronvolt},
 but involves transitions between states associated with both monolayers.
@@ -563,7 +582,7 @@ being related to $\pi-\sigma^*$ and $\pi^*-\sigma$ transitions.
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1.0\textwidth]{figures_proj1/proj1.10_diff.pdf}
+    \includegraphics[width=1.00\textwidth]{figures_proj1/proj1.10_diff.pdf}
 \caption{In-plane, out-of-plane, and off-diagonal $\varepsilon_{xy}$ components of the dielectric function for the Graphene-\ce{BC3} heterostructure.}
 \label{fig1.10}
 \end{figure}
@@ -576,34 +595,31 @@ The off-diagonal $\varepsilon_{xy}$ component is also included in figure~\ref{fi
 The real part of the in-plane dielectric function is negative in two regions:
 \qtyrange{5}{6}{\electronvolt} for HSE06 (\qtyrange{4}{5}{\electronvolt} for PBE)
 and \qtyrange{17}{18}{\electronvolt} for HSE06 (\qtyrange{15}{16}{\electronvolt} for PBE).
-These negative regions indicate the presence of plasmons in the ultraviolet region.
+These negative regions must likewise be considered together with the ultraviolet energy-loss features.
 The out-of-plane component also displays negative values at about \qtyrange{17}{18}{\electronvolt} for HSE06 (\qtyrange{14.5}{15.5}{\electronvolt} for PBE).
 
 Similar to Graphene-\ce{BC3},
 the first main peaks of $\varepsilon_2$ for in-plane polarization are also in the visible range.
 The broad main peaks along the out-of-plane direction occur in the energy range \qtyrange{10}{18}{\electronvolt} (\qtyrange{9}{17}{\electronvolt}) for HSE06 (PBE).
 
-The dielectric tensor for this system also contains complex non-zero off-diagonal components.
-These components satisfy the antisymmetric relations
-$\varepsilon_{xy}=-\varepsilon_{yx}$,
-$\varepsilon_{xz}=-\varepsilon_{zx}$,
-and $\varepsilon_{yz}=-\varepsilon_{zy}$, as shown in figure~\ref{S1.19}.
+The displayed dielectric tensor for this system also contains complex non-zero off-diagonal components.
+The displayed off-diagonal pairs again have approximately opposite signs,
+as shown in figure~\ref{S1.19}.
 In contrast to Graphene-\ce{BC3}, however, these components remain non-zero over a considerable energy range,
 namely from \qtyrange{0}{5}{\electronvolt} and from \qtyrange{10}{15}{\electronvolt}.
-This behaviour is consistent with the lower symmetry of Graphene-\ce{B4C3}.
-The system has a $\mathrm{P}3$ space group,
+The original study assigns the system to the $\mathrm{P}3$ space group,
 with threefold rotational symmetry along the $c$ axis, corresponding to the $z$ direction.
 It also lacks mirror-symmetry planes perpendicular to this axis or within the $a,b$ plane,
 corresponding to the $x,y$ plane.
-This lower symmetry allows the presence of off-diagonal elements in the dielectric tensor.
-Therefore, the dielectric response of this material can exhibit anisotropic coupling between different crystallographic directions.
-The presence of complex off-diagonal elements in the dielectric tensor of a material with the $\mathrm{P}3$ space group indicates anisotropic and possibly chiral optical properties,
-which could lead to effects such as optical activity.
-It also indicates that Graphene-\ce{B4C3} dissipates energy differently depending on the direction of the electric field.
+However, the absence of these mirror planes does not establish optical activity.
+For the reciprocal response in the local limit, threefold rotation about $z$ gives equal diagonal in-plane components and vanishing off-diagonal components~\cite{nye1985physical}.
+The off-diagonal spectra displayed in figure~\ref{S1.19} therefore require verification of the tensor extraction and numerical symmetry before they can be assigned a physical origin.
+Natural optical activity requires a treatment of spatial dispersion, which is not supplied by the present spectra.
+The difference between the diagonal in-plane and out-of-plane components nevertheless shows that Graphene-\ce{B4C3} dissipates energy differently for these two polarizations.
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=1.0\textwidth]{figures_proj1/proj1.11_diff.pdf}
+    \includegraphics[width=1.00\textwidth]{figures_proj1/proj1.11_diff.pdf}
 \caption{In-plane, out-of-plane, and off-diagonal $\varepsilon_{xy}$ components of the dielectric function for the Graphene-\ce{B4C3} heterostructure.}
 \label{fig1.11}
 \end{figure}
@@ -614,14 +630,15 @@ To further examine the optical properties of the heterostructure bilayers,
 we calculate the absorption coefficient, energy-loss spectrum, reflectivity, refractive index, and extinction coefficient.
 
 Figure~\ref{fig1.12} shows the HSE06 absorption coefficients and energy-loss spectra of the three systems for in-plane and out-of-plane polarizations.
-The corresponding component-resolved PBE and HSE06 results are provided in figures~\ref{S1.20}--\ref{S1.24}.
+The corresponding component-resolved HSE06 results are provided in figures~\ref{S1.20}--\ref{S1.24}.
 
-The absorption threshold corresponds to the first peak of $\varepsilon_2(\omega)$.
+The absorption threshold is determined by the onset of optically allowed transitions;
+it need not coincide with the first maximum of $\varepsilon_2(\omega)$.
 For all systems, the absorption coefficient starts from a very small value and increases with photon energy,
 consistent with the lowest direct transition energies in the band structure.
 All three systems absorb in the visible region, \qtyrange{1.7}{3.3}{\electronvolt}.
-The Graphene-Borophene heterostructure shows a significantly larger absorption coefficient than the other two systems,
-with a sharp rise around \qty{1}{\electronvolt}.
+Around \qty{1}{\electronvolt}, the Graphene-Borophene heterostructure shows a sharp rise
+and a larger absorption coefficient than the other two systems.
 This feature can be attributed to transitions between the flat valence-band region around the $\Gamma$ point and the low-lying conduction band in the same region of the Brillouin zone.
 The Graphene-\ce{BC3} heterostructure shows a similar sharp rise at a slightly higher energy, around \qty{2.5}{\electronvolt},
 followed by Graphene-\ce{B4C3} at around \qty{3.5}{\electronvolt}.
@@ -629,24 +646,23 @@ These latter features arise from transitions between relatively flat valence and
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\linewidth]{figures_proj1/proj1.12a.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=0.80\linewidth]{figures_proj1/proj1.12b.pdf}
-\caption{In-plane and out-of-plane absorption coefficients and energy-loss spectra of the three heterostructure bilayers.}
+    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.12_optics.pdf}
+\caption{In-plane and out-of-plane HSE06 absorption coefficients in \si{\per\nano\metre} (upper panels)
+and dimensionless energy-loss spectra (lower panels) of the three heterostructure bilayers.}
 \label{fig1.12}
 \end{figure}
 
-The energy-loss spectrum in figure~\ref{fig1.12} shows a sharp low-energy feature for Graphene-\ce{BC3} and Graphene-\ce{B4C3},
+The energy-loss spectrum in figure~\ref{fig1.12} shows a sharp in-plane loss feature below \qty{1}{\electronvolt} for Graphene-\ce{BC3} and Graphene-\ce{B4C3},
 which is absent for Graphene-Borophene.
-This feature is related to Dirac-like plasmons.
-The broader features between \qtyrange{3}{8}{\electronvolt} can be attributed to $\pi$-like plasmons.
+This feature may be related to Dirac-like plasmons.
+The broader features between \qtyrange{3}{8}{\electronvolt} may be associated with $\pi$-like plasmons.
 Individual interband transitions presumably coexist with these plasmons and form a broad background.
 When interband transitions and plasmons occur in the same energy range,
 the two types of excitations can couple,
 giving finite plasmon lifetimes as well as interband-transition character.
 The features around \qty{15}{\electronvolt}, where a sharp increase begins, may be associated with $\pi-\sigma$-type plasmons.
 This assignment is consistent with the negative real part of the out-of-plane dielectric-function component,
-which indicates a plasmon around this energy for all three bilayer heterostructures.
+although the negative real part alone does not establish a plasmon resonance.
 
 Figure~\ref{fig1.13} shows the reflectivity and refractive index of the three heterostructures,
 as obtained using the HSE06 functional for in-plane and out-of-plane polarizations.
@@ -664,9 +680,7 @@ the refractive index can drop below 1 due to the strong interaction between ligh
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\linewidth]{figures_proj1/proj1.13a_cor.pdf}
-    \par\nointerlineskip
-    \includegraphics[width=0.80\linewidth]{figures_proj1/proj1.13b.pdf}
+    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.13_optics.pdf}
 \caption{In-plane and out-of-plane reflectivity and refractive index of the three heterostructure bilayers.}
 \label{fig1.13}
 \end{figure}
@@ -695,7 +709,7 @@ These energy regions therefore correspond to strong photon attenuation.
 
 \begin{figure}[!htbp]
 \centering
-    \includegraphics[width=0.80\linewidth]{figures_proj1/proj1.14_cor.pdf}
+    \includegraphics[width=0.80\textwidth]{figures_proj1/proj1.14_cor.pdf}
 \caption{In-plane and out-of-plane extinction coefficients of the three heterostructure bilayers.}
 \label{fig1.14}
 \end{figure}
@@ -713,10 +727,10 @@ The Graphene-Borophene bilayer is metallic,
 whereas the Graphene-\ce{BC3} and Graphene-\ce{B4C3} structures maintain the characteristic linear bands of graphene around the $\mathrm{K}$ point,
 with only a very small band-gap opening of \qtyrange{20}{50}{\milli\electronvolt}.
 The calculated optical properties show absorption in the visible region of the spectrum for all heterostructures,
-with Graphene-Borophene exhibiting the strongest absorption.
-All heterostructures support plasmons.
+with Graphene-Borophene showing the strongest response near its low-energy absorption onset.
+All heterostructures show features consistent with plasmon resonances in the calculated dielectric and energy-loss spectra.
 For Graphene-Borophene,
-two low-energy plasmons are observed,
-one emerging at \qty{2}{\electronvolt} and the other around \qty{5}{\electronvolt}.
-The Graphene-\ce{B4C3} bilayer heterostructure has non-negligible off-diagonal elements in the dielectric tensor over a range of energies,
-suggesting that it could exhibit optically active, possibly chiral, effects.
+the in-plane real dielectric function has low-energy negative regions around \qty{2}{\electronvolt} and \qty{5}{\electronvolt}.
+These intervals are distinct from the sub-eV loss peaks of the other two heterostructures.
+The Graphene-\ce{B4C3} bilayer heterostructure has non-negligible off-diagonal elements in the displayed dielectric tensor over a range of energies.
+Their interpretation requires a separate check of the tensor symmetry and does not establish optical activity.
