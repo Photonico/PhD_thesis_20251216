@@ -437,7 +437,7 @@ the previous equation immediately gives:
 This relation demonstrates that the imaginary part of the dielectric response directly describes the energy-absorbing part of the induced current,
 which leads to dissipation under the external field.
 
-Next, we describe this microscopic process in a periodic solid as a transition from an initial state $\ket{\psi_{n\vec{k}}\,}$ to a final state $\ket{\psi_{m\vec{k}}\,}$.
+Next, we describe this microscopic process in a periodic solid as a transition from an initial state $\ket{\psi_{n\vec{k}}}$ to a final state $\ket{\psi_{m\vec{k}}}$.
 Here, $\vec{k}$ denotes the crystal momentum in the first Brillouin zone.
 In the optical regime, the photon momentum is negligible on the scale of the Brillouin zone,
 so the transition is effectively vertical in $\vec{k}$-space~\cite{fox2010optical}.
@@ -454,10 +454,10 @@ The interband part of its imaginary component takes the form~\cite{d2016accurate
     \varepsilon_{2,\alpha\beta}^{\mathrm{inter}}(\omega)
     &\propto \frac{1}{\omega^2}\sum_{n\ne m}
     \int_{\mathrm{BZ}}\frac{\dif^3{k}}{(2\pi)^3}\,
-    \left(f_{n\vec{k}}-f_{m\vec{k}}\,\right) \\
+    \left(f_{n\vec{k}}-f_{m\vec{k}}\right) \\
     &\quad\times\mathrm{Re}\left[
-    \bra{\psi_{m\vec{k}}\,}\hat{v}_{\alpha}\ket{\psi_{n\vec{k}}\,}
-    \bra{\psi_{n\vec{k}}\,}\hat{v}_{\beta}\ket{\psi_{m\vec{k}}\,}
+    \bra{\psi_{m\vec{k}}}\hat{v}_{\alpha}\ket{\psi_{n\vec{k}}}
+    \bra{\psi_{n\vec{k}}}\hat{v}_{\beta}\ket{\psi_{m\vec{k}}}
     \right]
     \delta\left(E_{m\vec{k}}-E_{n\vec{k}}-\hbar\omega\right)
 \end{aligned}
@@ -471,7 +471,7 @@ The velocity operator $\hat{v}_{\alpha}=(\mathrm{i}/\hbar)[\hat{H},\hat{r}_{\alp
 The proportionality sign suppresses a frequency-independent prefactor.
 The state labels include spin according to the chosen electronic-structure description.
 For a diagonal component, the matrix-element product reduces to
-$\left|\bra{\psi_{m\vec{k}}\,}\hat{v}_{\alpha}\ket{\psi_{n\vec{k}}\,}\right|^2$.
+$\left|\bra{\psi_{m\vec{k}}}\hat{v}_{\alpha}\ket{\psi_{n\vec{k}}}\right|^2$.
 Meanwhile, the Dirac delta function enforces the energy-conservation condition:
 
 \begin{equation}

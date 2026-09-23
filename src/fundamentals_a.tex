@@ -3233,7 +3233,7 @@ The actual stopping criteria and numerical settings are given with the calculati
 \label{subsec:method_kpoints}
 
 Next, we consider the periodic electronic problem.
-We label a Bloch state $\ket{\psi_{n\vec{k}}\,}$ by its band index $n$ and wave vector $\vec{k}$,
+We label a Bloch state $\ket{\psi_{n\vec{k}}}$ by its band index $n$ and wave vector $\vec{k}$,
 and denote its one-particle energy by $E_{n\vec{k}}$.
 This is the periodic-system notation for the Kohn--Sham eigenvalue $\lambda_i$ in equation~\eqref{KS_equation_diagonal_dirac}.
 It is also the band-energy notation used in chapter~\ref{cha:fundamentals_b}.
@@ -3242,28 +3242,28 @@ For a lattice translation $\vec{L}$, the periodicity of the one-particle operato
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\psi_{n\vec{k}}\,}
-    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}\,} \\
-    \braket{\vec{r}+\vec{L}\,|u_{n\vec{k}}\,}
-    &=\braket{\vec{r}\,|u_{n\vec{k}}\,}
+    \ket{\psi_{n\vec{k}}}
+    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\ket{u_{n\vec{k}}} \\
+    \braket{\vec{r}+\vec{L}\,|u_{n\vec{k}}}
+    &=\braket{\vec{r}\,|u_{n\vec{k}}}
 \end{aligned}\right.
 \label{bloch_state_cell_periodic_method}
 \end{equation}
 
-here, $\ket{u_{n\vec{k}}\,}$ is the cell-periodic part of the Bloch state,
+here, $\ket{u_{n\vec{k}}}$ is the cell-periodic part of the Bloch state,
 and $\hat{\vec{r}}$ is the position operator.
 The Bloch phase carries the change between cells, while the cell-periodic part contains the variation within a cell.
-We normalize $\ket{u_{n\vec{k}}\,}$ over one unit cell;
+We normalize $\ket{u_{n\vec{k}}}$ over one unit cell;
 the corresponding Bloch state has the same cell normalization.
 This convention is also used for the electron-phonon matrix elements below.
 
 To solve this periodic problem numerically, we need a finite basis.
 In a plane-wave calculation, the rapidly varying orbitals near the nuclei are treated through a core-valence description.
-The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}\,}$ can then be expanded as:
+The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}}$ can then be expanded as:
 
 \begin{equation}
 \left\{\begin{aligned}
-    \ket{\widetilde{\psi}_{n\vec{k}}\,}
+    \ket{\widetilde{\psi}_{n\vec{k}}}
     &=\sum_{\vec{G}}C_{n\vec{k}}(\vec{G}\,)\ket{\vec{k}+\vec{G}\,} \\
     \braket{\vec{r}\,|\vec{k}+\vec{G}\,}
     &=\frac{1}{\sqrt{\Omega_\mathrm{cell}}}
@@ -3293,11 +3293,11 @@ For the VASP calculations, the projector augmented wave (PAW) method connects th
 
 \begin{equation}
 \begin{aligned}
-    \ket{\psi_{n\vec{k}}\,}
-    &=\ket{\widetilde{\psi}_{n\vec{k}}\,} \\
+    \ket{\psi_{n\vec{k}}}
+    &=\ket{\widetilde{\psi}_{n\vec{k}}} \\
     &\quad+
     \sum_a\left(\ket{\phi_a}-\ket{\widetilde{\phi}_a}\right)
-    \braket{\widetilde{p}_a|\widetilde{\psi}_{n\vec{k}}\,}
+    \braket{\widetilde{p}_a|\widetilde{\psi}_{n\vec{k}}}
 \end{aligned}
 \label{PAW_reconstruction_method}
 \end{equation}
@@ -3526,7 +3526,7 @@ describe the atomic displacement associated with this perturbation.
 Density-functional perturbation theory gives both the phonon response and the first-order change in the self-consistent potential~\cite{baroni2001phonons}.
 
 We now restore $\hbar$ explicitly, and keep $\omega_{\vec{q}s}$ as an angular frequency.
-Using the cell-periodic parts $\ket{u_{n\vec{k}}\,}$ of the Bloch states, normalized over a unit cell,
+Using the cell-periodic parts $\ket{u_{n\vec{k}}}$ of the Bloch states, normalized over a unit cell,
 we write the electron-phonon matrix element as~\cite{giustino2017electron}:
 
 \begin{equation}
@@ -3535,9 +3535,9 @@ we write the electron-phonon matrix element as~\cite{giustino2017electron}:
     \sum_{\kappa\alpha}
     \left(\frac{\hbar}{2M_\kappa\omega_{\vec{q}s}}\right)^{1/2}
     e_{\kappa\alpha,s}(\vec{q}\,)
-    \bra{u_{m,\vec{k}+\vec{q}}\,}
+    \bra{u_{m,\vec{k}+\vec{q}}}
     \partial_{\vec{q}\kappa\alpha}\hat{v}_\mathrm{KS}
-    \ket{u_{n\vec{k}}\,}_\mathrm{cell}
+    \ket{u_{n\vec{k}}}_\mathrm{cell}
 \label{electron_phonon_matrix_element_method}
 \end{equation}
 
@@ -3548,16 +3548,16 @@ Together with $e_{\kappa\alpha,s}(\vec{q}\,)$,
 the mass-dependent prefactor sets the zero-point displacement scale for that atom and mode.
 The matrix element $g_{mn,s}(\vec{k},\vec{q}\,)$ has the dimension of energy.
 Zero-frequency rigid translations are excluded from this mode expression.
-The matrix element therefore describes the scattering of an electron from $\ket{\psi_{n\vec{k}}\,}$ to $\ket{\psi_{m,\vec{k}+\vec{q}}\,}$ by the phonon $(\vec{q},s)$.
+The matrix element therefore describes the scattering of an electron from $\ket{\psi_{n\vec{k}}}$ to $\ket{\psi_{m,\vec{k}+\vec{q}}}$ by the phonon $(\vec{q},s)$.
 Direct evaluation on dense reciprocal-space grids is expensive.
 We therefore first express the selected electronic subspace in a localized Wannier representation~\cite{pizzi2020wannier90}.
 For a uniform mesh of $N_\mathrm{k}$ points in the full Brillouin zone, the transformation is:
 
 \begin{equation}
-    \ket{w_{a\vec{L}}\,}
+    \ket{w_{a\vec{L}}}
     =\frac{1}{N_\mathrm{k}}\sum_{\vec{k}}
     \mathrm{e}^{-\mathrm{i}\vec{k}\cdot\vec{L}}
-    \sum_n U_{na}(\vec{k}\,)\ket{\psi_{n\vec{k}}\,}
+    \sum_n U_{na}(\vec{k}\,)\ket{\psi_{n\vec{k}}}
 \label{wannier_transformation_method}
 \end{equation}
 
@@ -3573,7 +3573,7 @@ We can then express the one-particle operator by matrix elements between localiz
 \begin{equation}
 \left\{\begin{aligned}
     h_{ab}(\vec{L}\,)
-    &=\bra{w_{a\vec{0}}\,}\hat{h}_\mathrm{KS}\ket{w_{b\vec{L}}\,} \\
+    &=\bra{w_{a\vec{0}}}\hat{h}_\mathrm{KS}\ket{w_{b\vec{L}}} \\
     h_{ab}^{\mathrm{W}}(\vec{k}\,)
     &=\sum_{\vec{L}}\mathrm{e}^{\mathrm{i}\vec{k}\cdot\vec{L}}h_{ab}(\vec{L}\,)
 \end{aligned}\right.
