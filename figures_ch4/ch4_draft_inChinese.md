@@ -16,30 +16,30 @@
 
 $$
 \left\{\begin{aligned}
-    \lvert \psi_{n\vec{k}}\,\rangle
-    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\lvert u_{n\vec{k}}\,\rangle \\
+    \lvert \psi_{n\vec{k}}\rangle
+    &=\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}\lvert u_{n\vec{k}}\rangle \\
     \hat{h}(\vec{k}\,)
     &\mathrel{:=}\mathrm{e}^{-\mathrm{i}\vec{k}\cdot\hat{\vec{r}}}
     \hat{h}\,\mathrm{e}^{\mathrm{i}\vec{k}\cdot\hat{\vec{r}}} \\
-    \hat{h}(\vec{k}\,)\lvert u_{n\vec{k}}\,\rangle
-    &=E_{n\vec{k}}\lvert u_{n\vec{k}}\,\rangle
+    \hat{h}(\vec{k}\,)\lvert u_{n\vec{k}}\rangle
+    &=E_{n\vec{k}}\lvert u_{n\vec{k}}\rangle
 \end{aligned}\right.
 \tag{4.1}
 $$
 
-这里，$n$ 表示能带指标，$\vec{k}$ 表示晶体波矢，$\hat{\vec{r}}$ 是位置算符。$\lvert u_{n\vec{k}}\,\rangle$ 是 Bloch 态的晶胞周期部分，按照第 2 章的约定在一个晶胞内归一化。本章中，晶胞周期态之间的内积均采用这一归一化方式。$\hat{h}$ 表示有效电子哈密顿算符；在下文讨论含自旋的拓扑分类时，它包含自旋–轨道耦合。
+这里，$n$ 表示能带指标，$\vec{k}$ 表示晶体波矢，$\hat{\vec{r}}$ 是位置算符。$\lvert u_{n\vec{k}}\rangle$ 是 Bloch 态的晶胞周期部分，按照第 2 章的约定在一个晶胞内归一化。本章中，晶胞周期态之间的内积均采用这一归一化方式。$\hat{h}$ 表示有效电子哈密顿算符；在下文讨论含自旋的拓扑分类时，它包含自旋–轨道耦合。
 
 现在回到 Kohn–Sham 方程 (2.234)，将自旋依赖性明确写出。在第 2.6.4 小节的共线处理中，两个自旋通道分别处理。加入自旋–轨道耦合后，这些分量可以混合，因此电子态的空间部分与自旋部分不一定能够分离。于是，我们将电子态写成旋量：
 
 $$
 \left\{\begin{aligned}
-    \lvert \psi_{n\vec{k}}\,\rangle
+    \lvert \psi_{n\vec{k}}\rangle
     &=
     \lvert \psi_{n\vec{k},\uparrow}\rangle\otimes\lvert \uparrow\rangle
     +
     \lvert \psi_{n\vec{k},\downarrow}\rangle\otimes\lvert \downarrow\rangle \\
-    \hat{h}_\mathrm{KS}^\mathrm{SOC}\lvert \psi_{n\vec{k}}\,\rangle
-    &=E_{n\vec{k}}\lvert \psi_{n\vec{k}}\,\rangle
+    \hat{h}_\mathrm{KS}^\mathrm{SOC}\lvert \psi_{n\vec{k}}\rangle
+    &=E_{n\vec{k}}\lvert \psi_{n\vec{k}}\rangle
 \end{aligned}\right.
 \tag{4.2}
 $$
@@ -50,9 +50,9 @@ $$
 
 $$
 \left\{\begin{aligned}
-    \lvert \psi_{n,\vec{k}+\vec{G}}\,\rangle&=\lvert \psi_{n\vec{k}}\,\rangle \\
-    \lvert u_{n,\vec{k}+\vec{G}}\,\rangle
-    &=\mathrm{e}^{-\mathrm{i}\vec{G}\cdot\hat{\vec{r}}}\lvert u_{n\vec{k}}\,\rangle
+    \lvert \psi_{n,\vec{k}+\vec{G}}\rangle&=\lvert \psi_{n\vec{k}}\rangle \\
+    \lvert u_{n,\vec{k}+\vec{G}}\rangle
+    &=\mathrm{e}^{-\mathrm{i}\vec{G}\cdot\hat{\vec{r}}}\lvert u_{n\vec{k}}\rangle
 \end{aligned}\right.
 \tag{4.3}
 $$
@@ -64,12 +64,12 @@ $$
 即使对于一个归一化的态，其表示也已经存在自由度。对于任意实相位 $\phi_n(\vec{k}\,)$，我们都可以作如下替换：
 
 $$
-\lvert u'_{n\vec{k}}\,\rangle
-    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\,\rangle
+\lvert u'_{n\vec{k}}\rangle
+    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\rangle
 \tag{4.4}
 $$
 
-这一替换既不改变能带能量，也不改变投影算符 $\lvert u_{n\vec{k}}\,\rangle\langle u_{n\vec{k}}\,\rvert$，因此仍表示同一物理态。但是，对 $\vec{k}$ 求导时，也会对所选的相位求导。因此，在连接不同波矢处的态时，我们必须考虑这一自由度。在明确所研究的能带子空间后，我们会回到这一问题。
+这一替换既不改变能带能量，也不改变投影算符 $\lvert u_{n\vec{k}}\rangle\langle u_{n\vec{k}}\rvert$，因此仍表示同一物理态。但是，对 $\vec{k}$ 求导时，也会对所选的相位求导。因此，在连接不同波矢处的态时，我们必须考虑这一自由度。在明确所研究的能带子空间后，我们会回到这一问题。
 
 ### 4.1.2　孤立的能带子空间
 
@@ -78,16 +78,16 @@ $$
 $$
 \hat{\mathcal{P}}(\vec{k}\,)
     \mathrel{:=}\sum_{n=1}^{2N_\mathrm{p}}
-    \lvert u_{n\vec{k}}\,\rangle\langle u_{n\vec{k}}\,\rvert
+    \lvert u_{n\vec{k}}\rangle\langle u_{n\vec{k}}\rvert
 \tag{4.5}
 $$
 
-这里，秩是张成该子空间的独立态数目。其数值 $2N_\mathrm{p}$ 在整个布里渊区内保持不变。投影算符规定哪些态属于该子空间，而不在其中指定某一组特定的基。为了理解它的作用，将它作用于同一波矢处的晶胞周期态 $\lvert v_{\vec{k}}\,\rangle$：
+这里，秩是张成该子空间的独立态数目。其数值 $2N_\mathrm{p}$ 在整个布里渊区内保持不变。投影算符规定哪些态属于该子空间，而不在其中指定某一组特定的基。为了理解它的作用，将它作用于同一波矢处的晶胞周期态 $\lvert v_{\vec{k}}\rangle$：
 
 $$
-\hat{\mathcal{P}}(\vec{k}\,)\lvert v_{\vec{k}}\,\rangle
+\hat{\mathcal{P}}(\vec{k}\,)\lvert v_{\vec{k}}\rangle
     =\sum_{n=1}^{2N_\mathrm{p}}
-    \lvert u_{n\vec{k}}\,\rangle\langle u_{n\vec{k}}\,\mid v_{\vec{k}}\,\rangle
+    \lvert u_{n\vec{k}}\rangle\langle u_{n\vec{k}}\mid v_{\vec{k}}\rangle
 \tag{4.6}
 $$
 
@@ -148,9 +148,9 @@ $$
 首先考虑沿某条路径保持非简并的单条归一化能带。这个较简单的情形使我们能够先明确相位信息，再回到一组能带的情况。对于小位移 $\mathrm{d}\vec{k}$，相邻晶胞周期态之间的重叠为：
 
 $$
-\langle u_{n\vec{k}}\,\mid u_{n,\vec{k}+\mathrm{d}\vec{k}}\,\rangle
+\langle u_{n\vec{k}}\mid u_{n,\vec{k}+\mathrm{d}\vec{k}}\rangle
     =1+
-    \langle u_{n\vec{k}}\,\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\,\rangle
+    \langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\rangle
     \cdot\mathrm{d}\vec{k}
     +\mathcal{O}(|\mathrm{d}\vec{k}\,|^2)
 \tag{4.10}
@@ -160,21 +160,21 @@ $$
 
 $$
 \begin{aligned}
-    0&=\nabla_{\vec{k}}\langle u_{n\vec{k}}\,\mid u_{n\vec{k}}\,\rangle \\
-    &=\bigl(\nabla_{\vec{k}}\langle u_{n\vec{k}}\,\rvert\bigr)\lvert u_{n\vec{k}}\,\rangle
-    +\langle u_{n\vec{k}}\,\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\,\rangle \\
+    0&=\nabla_{\vec{k}}\langle u_{n\vec{k}}\mid u_{n\vec{k}}\rangle \\
+    &=\bigl(\nabla_{\vec{k}}\langle u_{n\vec{k}}\rvert\bigr)\lvert u_{n\vec{k}}\rangle
+    +\langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\rangle \\
     &=2\operatorname{Re}\!\left[
-    \langle u_{n\vec{k}}\,\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\,\rangle\right]
+    \langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\rangle\right]
 \end{aligned}
 \tag{4.11}
 $$
 
-两个导数项互为复共轭，因此它们的和要求 $\langle u_{n\vec{k}}\,\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\,\rangle$ 的实部为零。重叠的一阶变化因而携带相位。我们引入 Berry 联络来描述这一相位变化 [Berry, 1984]：
+两个导数项互为复共轭，因此它们的和要求 $\langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\rangle$ 的实部为零。重叠的一阶变化因而携带相位。我们引入 Berry 联络来描述这一相位变化 [Berry, 1984]：
 
 $$
 \vec{\mathcal{A}}_n(\vec{k}\,)
     \mathrel{:=}\mathrm{i}\,
-    \langle u_{n\vec{k}}\,\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\,\rangle
+    \langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\rangle
 \tag{4.12}
 $$
 
@@ -186,8 +186,8 @@ $$
 \begin{aligned}
     \vec{\mathcal{A}}'_n(\vec{k}\,)
     &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k}\,)}
-    \langle u_{n\vec{k}}\,\rvert\nabla_{\vec{k}}
-    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\,\rangle\right] \\
+    \langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}
+    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\rangle\right] \\
     &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\phi_n(\vec{k}\,)
 \end{aligned}
 \tag{4.13}
@@ -214,7 +214,7 @@ $$
 \gamma_n(C)
     =-\lim_{M\rightarrow\infty}\arg
     \prod_{j=0}^{M-1}
-    \langle u_{n\vec{k}_j}\,\mid u_{n\vec{k}_{j+1}}\,\rangle
+    \langle u_{n\vec{k}_j}\mid u_{n\vec{k}_{j+1}}\rangle
     \qquad (\mathrm{mod}\ 2\pi)
 \tag{4.15}
 $$
@@ -231,11 +231,11 @@ Berry 相位描述电子态沿所选回路的几何性质。这里，沿回路�
 
 $$
 \left\{\begin{aligned}
-    \lvert u'_{a\vec{k}}\,\rangle
+    \lvert u'_{a\vec{k}}\rangle
     &=\sum_{n=1}^{2N_\mathrm{p}}
     \lvert u_{n\vec{k}}\,\rangleU_{na}(\vec{k}\,) \\
     U^\dagger(\vec{k}\,)U(\vec{k}\,)&=I \\
-    \sum_{a=1}^{2N_\mathrm{p}}\lvert u'_{a\vec{k}}\,\rangle\langle u'_{a\vec{k}}\,\rvert
+    \sum_{a=1}^{2N_\mathrm{p}}\lvert u'_{a\vec{k}}\rangle\langle u'_{a\vec{k}}\rvert
     &=\hat{\mathcal{P}}(\vec{k}\,)
 \end{aligned}\right.
 \tag{4.16}
@@ -248,7 +248,7 @@ $$
 $$
 \left\{\begin{aligned}
     [\vec{\mathcal{A}}(\vec{k}\,)]_{mn}
-    &=\mathrm{i}\langle u_{m\vec{k}}\,\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\,\rangle \\
+    &=\mathrm{i}\langle u_{m\vec{k}}\rvert\nabla_{\vec{k}}\lvert u_{n\vec{k}}\rangle \\
     \vec{\mathcal{A}}'(\vec{k}\,)
     &=U^\dagger(\vec{k}\,)\vec{\mathcal{A}}(\vec{k}\,)U(\vec{k}\,)
     +\mathrm{i}\,U^\dagger(\vec{k}\,)\nabla_{\vec{k}}U(\vec{k}\,)
@@ -267,7 +267,7 @@ $$
 式 (4.2) 描述完整的电子旋量。利用式 (4.1) 的 Bloch 表示，将相应的晶胞周期态写作：
 
 $$
-\lvert u_{n\vec{k}}\,\rangle
+\lvert u_{n\vec{k}}\rangle
     =\lvert u_{n\vec{k},\uparrow}\rangle\otimes\lvert \uparrow\rangle
     +\lvert u_{n\vec{k},\downarrow}\rangle\otimes\lvert \downarrow\rangle
 \tag{4.18}
@@ -352,8 +352,8 @@ $$
 接下来，引入空间反演算符 $\hat{\mathcal{I}}$。我们将实空间原点选在反演中心，因此空间反演把 $\vec{r}$ 变为 $-\vec{r}$，而保持自旋不变。它对 Bloch 态的作用可以通过位置投影表示为：
 
 $$
-\langle \vec{r}\,\rvert\hat{\mathcal{I}}\lvert \psi_{n\vec{k}}\,\rangle
-    =\langle -\vec{r}\,\mid \psi_{n\vec{k}}\,\rangle
+\langle \vec{r}\,\rvert\hat{\mathcal{I}}\lvert \psi_{n\vec{k}}\rangle
+    =\langle -\vec{r}\,\mid \psi_{n\vec{k}}\rangle
 \tag{4.25}
 $$
 
@@ -374,22 +374,22 @@ $$
 在 TRIM 处，空间反演将 Bloch 态映射到相差一个倒格矢的相同晶体动量。因此，可以选择具有确定反演宇称的完整 Bloch 态，并写作：
 
 $$
-\hat{\mathcal{I}}\lvert \psi_{n\vec{\Lambda}_i}\,\rangle
-    =\xi_n(\vec{\Lambda}_i\,)\lvert \psi_{n\vec{\Lambda}_i}\,\rangle,
+\hat{\mathcal{I}}\lvert \psi_{n\vec{\Lambda}_i}\rangle
+    =\xi_n(\vec{\Lambda}_i\,)\lvert \psi_{n\vec{\Lambda}_i}\rangle,
     \qquad \xi_n(\vec{\Lambda}_i\,)=\pm1
 \tag{4.27}
 $$
 
-这里，$\xi_n$ 是宇称本征值。连续施加两次空间反演，得到 $\xi_n^2\lvert \psi_{n\vec{\Lambda}_i}\,\rangle=\lvert \psi_{n\vec{\Lambda}_i}\,\rangle$，所以本征值只能是 $+1$ 或 $-1$。它们分别描述偶宇称和奇宇称。偶宇称态在空间反演下保持不变，奇宇称态则改变符号。这个符号描述的是态的变换，而不是概率密度的正负；两种情况下，概率密度都不变。在简并本征子空间内，可以将态选为能量与宇称的共同本征态。该子空间中任意的数值基不一定已经具有这种形式。
+这里，$\xi_n$ 是宇称本征值。连续施加两次空间反演，得到 $\xi_n^2\lvert \psi_{n\vec{\Lambda}_i}\rangle=\lvert \psi_{n\vec{\Lambda}_i}\rangle$，所以本征值只能是 $+1$ 或 $-1$。它们分别描述偶宇称和奇宇称。偶宇称态在空间反演下保持不变，奇宇称态则改变符号。这个符号描述的是态的变换，而不是概率密度的正负；两种情况下，概率密度都不变。在简并本征子空间内，可以将态选为能量与宇称的共同本征态。该子空间中任意的数值基不一定已经具有这种形式。
 
 现在，对时间反演伙伴施加空间反演。由于空间反演与时间反演对易，且 $\xi_n$ 为实数，得到：
 
 $$
 \begin{aligned}
-    \hat{\mathcal{I}}\hat{\Theta}\lvert \psi_{n\vec{\Lambda}_i}\,\rangle
-    &=\hat{\Theta}\hat{\mathcal{I}}\lvert \psi_{n\vec{\Lambda}_i}\,\rangle \\
+    \hat{\mathcal{I}}\hat{\Theta}\lvert \psi_{n\vec{\Lambda}_i}\rangle
+    &=\hat{\Theta}\hat{\mathcal{I}}\lvert \psi_{n\vec{\Lambda}_i}\rangle \\
     &=\xi_n(\vec{\Lambda}_i\,)
-    \hat{\Theta}\lvert \psi_{n\vec{\Lambda}_i}\,\rangle
+    \hat{\Theta}\lvert \psi_{n\vec{\Lambda}_i}\rangle
 \end{aligned}
 \tag{4.28}
 $$
