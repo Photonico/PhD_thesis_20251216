@@ -1,5 +1,7 @@
 # Project 1/2：图组合并、原数据核对与统一绘图
 
+本轮绘图样式已被用户后续决定取代：恢复原论文各图配置，当前记录见 `figure_original_style.md`。以下保留为历史记录。
+
 后续字号与布局已按用户反馈回调；当前分级缩放和图例设置见 `figure_layout_rescaling.md`，此前三面板的 2×2 排列记录见 `figure_layout_refinement.md`。下文保留前轮科学核对与历史编译记录。
 
 本轮日期：2026-09-23 至 2026-09-24（Sydney）。
