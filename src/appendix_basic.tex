@@ -1,14 +1,14 @@
-\chapter{Basic quantum mechanics and electrodynamics}
+\chapter{Theory fundamentals}
 \label{cha:appendix_basic}
 
 In this appendix, we develop the basic quantum-mechanical and electromagnetic descriptions used in chapters~\ref{cha:fundamentals_a} and~\ref{cha:fundamentals_b}.
-We first discuss quantum time evolution and the expectation values of many-body observables.
-We then examine the Thomas--Fermi construction and its extensions.
+We first discuss quantum time evolution, the many-body hamiltonian, and the expectation values of many-body observables.
+We then introduce functionals and examine the Thomas--Fermi construction and its extensions.
 Finally, we develop the electromagnetic constitutive relations and the role of causality in the optical response.
 The working density-functional and optical relations remain in the corresponding chapters.
 
 The quantum-mechanical and density-functional discussion partly draws on my notes from the Coursera course \textit{Density Functional Theory}, offered by École Polytechnique and taught by Francesco Sottile and Lucia Reining~\cite{sottile_reining_dft_coursera}.
-We retain the Hartree atomic units introduced in section~\ref{sec:manybody_schrodinger_equation}, unless constants are restored explicitly.
+We retain the Hartree atomic units introduced in subsection~\ref{sec:manybody_schrodinger_equation}, unless constants are restored explicitly.
 The electrodynamic discussion uses SI units, as in chapter~\ref{cha:fundamentals_b}.
 
 \newpage
@@ -211,8 +211,162 @@ This is required when the hamiltonians at different times do not commute:
 
 Equivalently, the hamiltonian operators evaluated at earlier times act first on the state vector.
 
-The corresponding many-body hamiltonian is introduced in section~\ref{sec:manybody_schrodinger_equation}.
-We now return to the time evolution and its representation.
+\subsection{Many-body Schrödinger equation}
+\label{sec:manybody_schrodinger_equation}
+
+Up to now, we have mainly discussed a single-particle quantum system described by the time-dependent Schrödinger equation~\eqref{time-dependent_Schrodinger_equation}.
+
+In realistic situations, quantum systems often involve many interacting particles.
+For instance, electrons in a material evolve under both external fields and their mutual Coulomb interactions.
+We therefore extend the description to a nonrelativistic many-body system including electrons, nuclei, and their interactions.
+
+To describe this larger ensemble, we generalize our single-particle state $\ket{\psi(t)}$ to a many-body state $\ket{\Psi(t)}$, an element of a larger Hilbert space constructed by the tensor product of individual particle spaces:
+
+\begin{equation}
+    \ket{\Psi(t)}\in \mathbb{H}_1\otimes\mathbb{H}_2\otimes \cdots\otimes\mathbb{H}_N=\mathbb{H}
+\label{many-body_state_vector}
+\end{equation}
+
+For identical fermions, the physical many-body states belong to the antisymmetric subspace of $\mathbb{H}$.
+
+For example, in a two-particle system, the total Hilbert space is $\mathbb{H}=\mathbb{H}_1\otimes\mathbb{H}_2$.
+It is worth noting that not every state $\ket{\Psi}$ can be factored as  $\ket{\psi_1} \otimes \ket{\psi_2}$, because many physically relevant states are entangled.
+This means that their correlations cannot be described by individual particle states alone. In the coordinate representation, we express the wave function as:
+
+\begin{equation}
+    \Psi(x_1,x_2,\cdots,x_N,t)=\braket{x_1,x_2,\cdots,x_N|\Psi(t)}
+\label{many-body_wave_function}
+\end{equation}
+
+where each $x_i$ includes both spatial and spin degrees of freedom.
+
+The dynamics are governed by a many-body hamiltonian operator $\hat{H}$ and the time evolution is still described by the Schrödinger equation~\eqref{time-dependent_Schrodinger_equation}.
+
+We work in Hartree atomic units unless stated otherwise.
+In this unit system, $\hbar=1$, $m_\mathrm{e}=1$, $e=1$, and $4\pi\varepsilon_0=1$.
+As a result, energies are measured in Hartree and lengths in the Bohr radius, and the nuclear masses $M_I$ are also given in units of the electron mass.
+
+We adopt $i$ labels the electrons and $I$ labels nuclei.
+Subsequently, we explicitly express each physical contribution to the many-body hamiltonian as a separate operator~\cite{sholl2022density}:
+
+\begin{align}
+\text{Electron kinetic energy:}\qquad & \hat{T}_\mathrm{e} = -\frac{1}{2}\sum_i\nabla_i^2
+\label{electrons_kinetic} \\
+\text{Electron-nucleus Coulomb attraction:}\qquad & \hat{V}_\mathrm{eN}=-\sum_{i,I}\frac{Z_I}{|\vec{r}_i-\vec{R}_I\,|}
+\label{electrons_nucleus_Coulomb} \\
+\text{Electron-electron Coulomb repulsion:}\qquad & \hat{V}_\mathrm{ee}=\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
+\label{electrons_Coulomb} \\
+\text{Nuclear kinetic energy:}\qquad & \hat{T}_\mathrm{N} = -\sum_I\frac{1}{2M_I}\nabla_I^2
+\label{nucleus_kinetic} \\
+\text{Nucleus-nucleus Coulomb repulsion:}\qquad & \hat{V}_\mathrm{NN} = \sum_{I<J}\frac{Z_I\,Z_J}{|\vec{R}_I-\vec{R}_J\,|}
+\label{nucleus_interaction}
+\end{align}
+
+Summing all these terms, we arrive at the full many-body hamiltonian:
+
+\begin{equation}
+    \hat{H}=-\frac{1}{2}\sum_i\nabla_i^2
+    -\sum_{i,I}\frac{Z_I}{|\vec{r}_i-\vec{R}_I\,|}
+    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
+    -\sum_I\frac{\nabla_I^2}{2M_I}
+    +\sum_{I<J}\frac{Z_I\,Z_J}{|\vec{R}_I-\vec{R}_J\,|}
+\label{full_many-body_hamiltonian}
+\end{equation}
+
+For a given nuclear configuration $\{\vec{R}_I\}$, we regard the hamiltonian as $\hat{H}(\{\vec{r}_i\};\{\vec{R}_I\})$, where the nuclear coordinates enter as external parameters.
+
+Considering the parameters in this hamiltonian, we observe that the many-body wave functions for each state $\lambda$ depend explicitly on the $3N$ spatial coordinates of the electrons and their spin degrees of freedom $\sigma_i$.
+For the fixed nuclear positions, the stationary electronic states satisfy the eigenvalue equation:
+
+\begin{equation}
+    \hat{H}\Psi_\lambda(x_1,x_2,\cdots,x_N)
+    = E_\lambda\Psi_\lambda(x_1,x_2,\cdots,x_N)
+\label{many-body_hamiltonian_argument}
+\end{equation}
+
+here, $N$ denotes the number of electrons, and $x_i\coloneqq(\vec{r}_i,\sigma_i)$.
+
+In practice, due to the significantly greater mass of nuclei compared to electrons, we commonly adopt the clamped-nuclei approximation within the Born-Oppenheimer framework.
+For fixed nuclear positions, the nucleus-nucleus repulsion contributes only an additive constant, $\hat{V}_\mathrm{NN}(\{\vec{R}_I\})$.
+The corresponding hamiltonian can then be rewritten as:
+
+\begin{equation}
+\begin{aligned}
+\hat{H}
+    &=-\frac{1}{2}\sum_i\nabla_i^2
+    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
+    +\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)+\hat{V}_\mathrm{NN}(\{\vec{R}_I\}) \\
+    &=-\frac{1}{2}\sum_i\nabla_i^2
+    +\sum_{i<j}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}
+    +\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)+E_\mathrm{NN}
+\end{aligned}
+\label{clamped_nuclei_many_body_hamiltonian}
+\end{equation}
+
+here, $E_\mathrm{NN}\coloneqq \hat{V}_\mathrm{NN}(\{\vec{R}_I\})$.
+
+At this stage, it is convenient to collect all one-body terms acting on the electrons into an external potential.
+We define the external potential as:
+
+\begin{equation}
+    v_\mathrm{ext}(\vec{r}\,)\coloneqq -\sum_{I}\frac{Z_I}{|\vec{r}-\vec{R}_I\,|}
+\label{one-body_Electron-nucleus}
+\end{equation}
+
+For fixed nuclear positions $\{\vec{R}_I\}$, the electron-nucleus Coulomb attraction term $\hat{V}_\mathrm{eN}$ can be rewritten in the one-body form:
+
+\begin{equation}
+    \hat{V}_\mathrm{eN}=\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)
+\label{Electron-nucleus_one-body_form}
+\end{equation}
+
+In what follows, we denote the corresponding operator by $\hat{V}_\mathrm{ext}=\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)$.
+
+More generally, $v_\mathrm{ext}(\vec{r}\,)$ may also include any additional applied one-body fields, so that all system-specific information enters through $v_\mathrm{ext}$.
+
+After truncating each one-particle space to a finite basis of size $d$, the many-body Hilbert space dimension scales as:
+
+\begin{equation}
+    \dim(\mathbb{H})\sim d^{N}
+\label{exponential_growth}
+\end{equation}
+
+This complexity is often called the curse of dimensionality~\cite{alhambra2023quantum}.
+It motivates approximate methods such as Hartree--Fock theory and density functional theory~\cite{pribram2015dft,jones2015density}.
+The density-functional treatment is developed in chapter~\ref{cha:fundamentals_a}.
+
+When electron interactions are completely disregarded, the problem simplifies to $N$ independent single-electron problems.
+If we further ignore fermionic antisymmetry, the many-body wave function reduces to a simple product of single-particle wave functions:
+
+\begin{equation}
+    \Psi(x_1,x_2,\cdots,x_N)=\psi_{n_1}(x_1)\psi_{n_2}(x_2)\cdots\psi_{n_N}(x_N)
+\label{independent_body_function}
+\end{equation}
+
+here, $\lambda=\{n_1,n_2,\cdots,n_N\}$ labels the states.
+
+In the coordinate representation, we can represent the antisymmetric wave function as a Slater determinant:
+
+\begin{equation}
+    \Psi = \frac{1}{\sqrt{N!}}
+    \begin{vmatrix}
+    \psi_1(\vec{r}_1,\sigma_1) & \psi_1(\vec{r}_2,\sigma_2) & \cdots & \psi_1(\vec{r}_N,\sigma_N)\\
+    \psi_2(\vec{r}_1,\sigma_1) & \psi_2(\vec{r}_2,\sigma_2) & \cdots & \psi_2(\vec{r}_N,\sigma_N)\\
+    \vdots & \vdots & \ddots & \vdots\\
+    \psi_N(\vec{r}_1,\sigma_1) & \psi_N(\vec{r}_2,\sigma_2) & \cdots & \psi_N(\vec{r}_N,\sigma_N)
+    \end{vmatrix}
+\label{slater_determinant}
+\end{equation}
+
+here, the antisymmetric $N$-electron wave function $\Psi$ is constructed from a set of single-particle spin-orbital wave functions $\{\psi_i(\vec{r},\sigma)\}$.
+
+Finally, we can describe the full time-evolution of the many-body wave function in coordinate space by the time-dependent Schrödinger equation~\eqref{time-dependent_Schrodinger_equation}:
+
+\begin{equation}
+    i\frac{\partial}{\partial t}\Psi(x_1,x_2,\cdots,x_N,t)
+    = \hat{H}\,\Psi(x_1,x_2,\cdots,x_N,t)
+\label{tdse_manybody_coord}
+\end{equation}
 
 \subsection{From Schrödinger picture to Heisenberg picture}
 
@@ -860,7 +1014,65 @@ and obtain the ground-state density from
 
 Once $n_g$ is known, all desired observables are evaluated as $\Omega_i[n_g]$; 
 for non-local one-body or two-body quantities,
-this amounts to adopting controlled approximations for kinetic energy functional $T[n]$ and interaction energy functional $E_\mathrm{int}[n]$ such as the Kohn--Sham framework, which we will introduce later.
+this amounts to adopting controlled approximations for kinetic energy functional $T[n]$ and interaction energy functional $E_\mathrm{int}[n]$ such as the Kohn--Sham framework developed in section~\ref{sec:from_density_functional_to_Kohn_Sham_theory}.
+
+\newpage
+\section{What is the functional?}
+\label{sec:appendix_functionals}
+
+The many-body problem in subsection~\ref{sec:manybody_schrodinger_equation} motivates a reduced description of the ground-state.
+We choose the particle density as the basic variable.
+The corresponding expectation values and reduced densities are developed in section~\ref{sec:toward_many_body_problem}.
+We now introduce the concept of a functional.
+This idea forms the conceptual basis of density functional theory,
+whose quantum-mechanical formulation and Hohenberg--Kohn theorem are developed in section~\ref{sec:introduction_density_functionals}.
+
+A functional is a mapping that takes a function as its input and returns a number (or sometimes another function).
+
+The reason we introduce density functional theory in condensed matter physics research is that solving the full many-body or many-electron Schrödinger equation scales hopelessly with the number of electrons~\cite{becke2014perspective}.
+DFT reformulates it as a variational problem in terms of the three-dimensional electron density
+$n(\vec{r}\,)$, making predictive calculations of structures, band structures, magnetism, and reaction energetics feasible.
+
+For example, in condensed matter physics, it often appears as a map from electron density $n(\vec{r}\,)$ to the total energy $E[n]$ given by an external potential:
+
+\begin{equation}
+    E_\mathrm{ext}[n]=\int\mathrm{d}\vec{r}\,n(\vec{r}\,)v_\mathrm{ext}(\vec{r}\,)
+\label{functional_energy_potential}
+\end{equation}
+
+It also often appears that we use a non-local functional to describe the classical electrostatic term or the Hartree term:
+
+\begin{equation}
+    E_\mathrm{H}[n]=\frac{1}{2}\int\mathrm{d}\vec{r}_i\,\mathrm{d}\vec{r}_j\,\frac{n(\vec{r}_i\,)n(\vec{r}_j\,)}{|\vec{r}_i-\vec{r}_j\,|}
+\label{hartree_functional}
+\end{equation}
+
+In this thesis, $E_\mathrm{H}[n]$ denotes the Hartree term.
+
+Next, let us consider the expression for kinetic energy in terms of a functional. Within the Thomas--Fermi approximation,
+the noninteracting kinetic energy is treated locally as that of a uniform (homogeneous) electron gas whose density equals the actual electron density $n(\vec{r}\,)$ at each point in space.
+This leads to the Thomas--Fermi kinetic energy functional:
+
+\begin{equation}
+    T_\mathrm{TF}[n]=C\int\mathrm{d}\vec{r}\,n^{5/3}(\vec{r}\,)
+\label{tf_functional}
+\end{equation}
+
+here, $C=\frac{3}{10}(3\pi^2)^{2/3}$ for a spin-degenerate electron gas in atomic units.
+This form of kinetic energy functional was introduced independently in the seminal works by L.~H.~Thomas~\cite{thomas1927calculation} and E.~Fermi~\cite{fermi1927metodo}.
+
+Moreover, to account for inhomogeneity effects beyond the purely local Thomas--Fermi form, one often adds the von Weizsäcker gradient correction to the kinetic energy functional.
+A detailed discussion can be found in the review by C.~J.~García-Cervera~\cite{garcia2007efficient}.
+In atomic units, it is generally written as:
+
+\begin{equation}
+    T_\mathrm{vW}[n] = \frac{1}{8}\int \mathrm{d}\vec{r}\,\frac{\nabla n(\vec{r}\,)\cdot\nabla n(\vec{r}\,)}{n(\vec{r}\,)}
+\label{vw_functional}
+\end{equation}
+
+It is neither possible nor necessary to enumerate all examples of functionals in condensed matter physics.
+In practice, many such functionals depend explicitly on the electron density $n(\vec{r}\,)$ and, in some cases, also on its gradient $\nabla n(\vec{r}\,)$.
+For this reason, they are commonly referred to as density functionals.
 
 \newpage
 \section{Orbital-free density functionals}
