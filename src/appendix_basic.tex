@@ -616,7 +616,7 @@ Both notations express the same idea: the spatial density is obtained by summing
 
 %%
 
-Throughout this chapter, for simplicity, when we write $\int\mathrm{d}x$, it means $\sum_{\sigma}\int\mathrm{d}\vec{r}$.
+Throughout this quantum-mechanical discussion, for simplicity, when we write $\int\mathrm{d}x$, it means $\sum_{\sigma}\int\mathrm{d}\vec{r}$.
 For spin-independent external potentials, we write $v_\mathrm{ext}(x)=v_\mathrm{ext}(\vec{r}\,)$.
 
 The density is also constrained by particle number conservation.
@@ -1245,3 +1245,449 @@ By adding this gradient correction, we arrive at the Thomas--Fermi Dirac von Wei
 
 These extensions provide early orbital free approximations beyond the Thomas--Fermi approach~\cite{lieb1981thomas}.
 They also clarify that improving the kinetic energy functional and the exchange correlation functional is essential for a quantitatively reliable description of realistic interacting electron systems.
+
+\newpage
+\section{Toward electromagnetic response in matter}
+\label{sec:toward_electromagnetic_response_in_matter}
+
+% opening paragraph
+Chapter~\ref{cha:fundamentals_a} focused on the ground-state electronic problem.
+There, the central question was how electrons arrange themselves under a given external potential.
+However, optical properties do not follow from the ground-state alone.
+When an electromagnetic field is applied,
+it drives the electrons away from their static equilibrium and triggers a series of responses.
+
+Therefore, before introducing the dielectric function, we need a language that describes both the applied field and the feedback of matter to that field.
+That language is electrodynamics.
+The present section does not aim to review a complete lecture of electrodynamics;
+instead, we only extract the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
+We begin with electromagnetic fields in matter, and then gradually move toward a frequency-dependent response function that can be connected to the electronic structure.
+
+We use SI units for the macroscopic electrodynamic equations.
+The dielectric function is dimensionless and denotes the relative dielectric response.
+We use the angular frequency $\omega$ with the time dependence $\exp(-\mathrm{i}\,\omega t)$,
+and the photon energy is $\hbar\omega$.
+
+\subsection{Maxwell equations in matter}
+
+Let us start by the universal structure of the problem.
+When an electromagnetic field enters a medium, it drives charge redistribution and induces currents inside the medium, while these induced sources further modify the field itself.
+Therefore, the optical response of matter should be described within the framework of electrodynamics~\cite{landau2013electrodynamics,griffiths2023introduction}.
+
+At this stage, we do not explore how a specific medium responds;
+instead, we first identify the general field equations that govern electromagnetic dynamics in matter.
+They provide the universal backbone of the problem, while the constitutive relations later encode the medium-specific information.
+
+Firstly, we write the macroscopic Maxwell equations for the electric field $\vec{E}(\vec{r},t)$ and magnetic field $\vec{B}(\vec{r},t)$ as:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \nabla\cdot\vec{E}(\vec{r},t) &= \frac{\rho(\vec{r},t)}{\varepsilon_0} 
+    &&\space \text{Gauss's law for electric field} \\
+    \nabla\cdot\vec{B}(\vec{r},t) &= 0 
+    &&\space \text{Gauss's law for magnetic field} \\
+    \nabla\times\vec{E}(\vec{r},t) &= -\frac{\partial}{\partial t}\vec{B}(\vec{r},t) 
+    &&\space \text{Faraday's law} \\
+    \nabla\times\vec{B}(\vec{r},t) &= \mu_0\vec{J}(\vec{r},t)+\mu_0\varepsilon_0\frac{\partial}{\partial t}\vec{E}(\vec{r},t)
+    &&\space \text{Ampère--Maxwell law}
+\end{aligned}\right.
+\label{maxwell_equations_with_total_sources}
+\end{equation}
+
+here, $\rho(\vec{r},t)$ and $\vec{J}(\vec{r},t)$ denote the total charge density and total current density, respectively.
+
+These equations already imply a local conservation law.
+More specifically, we take the divergence of the Ampère--Maxwell law,
+and use Gauss's law for the electric field to obtain the continuity equation for charge at the macroscopic level~\cite{landau2013electrodynamics}:
+
+\begin{equation}
+    \frac{\partial}{\partial t}\rho(\vec{r},t)+\nabla\cdot\vec{J}(\vec{r},t)=0
+\label{macroscopic_charge_continuity_equation}
+\end{equation}
+
+here, the conservation principle discussed in section~\ref{sec:time_evolution_quantum_mechanics} reappears in electrodynamic language.
+
+Secondly, for media, it proves useful to decompose the sources into free and bound contributions:
+
+\begin{equation}
+\begin{aligned}
+    \rho(\vec{r},t) &= \rho_\mathrm{free}(\vec{r},t)+\rho_\mathrm{bound}(\vec{r},t) \\
+    \vec{J}(\vec{r},t) &= \vec{J}_\mathrm{free}(\vec{r},t)+\vec{J}_\mathrm{bound}(\vec{r},t)
+\end{aligned}
+\label{free_and_bound_source_decomposition}
+\end{equation}
+
+here, the free part describes externally supplied or mobile macroscopic sources,
+while the bound part describes the response generated internally by the medium.
+
+For discussing the bound electric response, we introduce the polarization field $\vec{P}(\vec{r},t)$ as:
+
+\begin{equation}
+    \rho_\mathrm{bound}(\vec{r},t)\coloneqq -\nabla\cdot\vec{P}(\vec{r},t)
+\label{bound_charge_from_polarization}
+\end{equation}
+
+Accordingly, we define the electric displacement field as:
+
+\begin{equation}
+    \vec{D}(\vec{r},t)\coloneqq \varepsilon_0\vec{E}(\vec{r},t)+\vec{P}(\vec{r},t)
+\label{electric_displacement_field_definition}
+\end{equation}
+
+For the optical response considered here, we neglect magnetic-permeability effects and take the relative magnetic permeability as $\mu_{\mathrm{r}}(\omega)\approx1$.
+The electric response is then the central object, and we keep the Maxwell equations in the form:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \nabla\cdot\vec{D}(\vec{r},t) &= \rho_\mathrm{free}(\vec{r},t) 
+    &&\space \text{Gauss's law for electric displacement} \\
+    \nabla\cdot\vec{B}(\vec{r},t) &= 0 
+    &&\space \text{Gauss's law for magnetic field} \\
+    \nabla\times\vec{E}(\vec{r},t) &= -\frac{\partial}{\partial t}\vec{B}(\vec{r},t) 
+    &&\space \text{Faraday's law} \\
+    \frac{1}{\mu_0}\nabla\times\vec{B}(\vec{r},t) &= \vec{J}_\mathrm{free}(\vec{r},t)+\frac{\partial}{\partial t}\vec{D}(\vec{r},t)
+    &&\space \text{Amp\`ere--Maxwell law in matter}
+\end{aligned}\right.
+\label{maxwell_equations_in_matter}
+\end{equation}
+
+Consequently, we can now characterize the structure of the problem.
+The Maxwell equations themselves are universal,
+while the medium dependence enters through the induced polarization $\vec{P}(\vec{r},t)$, and therefore through the electric displacement field $\vec{D}(\vec{r},t)$.
+
+In many optical problems, one considers the response to an external electromagnetic perturbation in the absence of free charges and free currents inside the medium.
+Under this condition, equation~\eqref{maxwell_equations_in_matter} shows that the central issue is no longer the field equations themselves,
+but how the medium develops polarization under the applied electric field.
+Once the relation between $\vec{P}(\vec{r},t)$ and $\vec{E}(\vec{r},t)$ is specified, the electromagnetic response becomes well defined.
+This is precisely the point where macroscopic electrodynamics meets microscopic electronic structure,
+and it also provides the starting point for introducing the dielectric function~\cite{landau2013electrodynamics,lima2022usefulness,bernasconi2011first}.
+
+\subsection{Polarization, electric displacement, and constitutive relations}
+
+We have established the universal field equations in the previous subsection.
+However, those equations do not explore how matter responds to the applied field.
+To close the problem, we still need a relation that connects the induced polarization to the electric field.
+This relation is the constitutive relation, and it is here that the medium-specific information enters~\cite{landau2013electrodynamics, lima2022usefulness}.
+
+Here, the central object is the polarization field $\vec{P}(\vec{r},t)$.
+It describes how the medium rearranges its internal charges under the applied electric field.
+Once $\vec{P}(\vec{r},t)$ is known, equation~\eqref{electric_displacement_field_definition} immediately gives the electric displacement field $\vec{D}(\vec{r},t)$.
+Therefore, instead of treating $\vec{D}(\vec{r},t)$ as an independent quantity, we may regard it as a convenient way to encode the electric response of matter.
+
+Firstly, we start from the most general linear-response form.
+For any time $t$, the polarization may depend not only on the electric field at the same point,
+but also on fields acting earlier and in a surrounding spatial region.
+Therefore, before introducing the simplified form used in the present work,
+we write the constitutive relation in its general nonlocal form in space and time~\cite{royo2019first}:
+
+\begin{equation}
+    P_\alpha(\vec{r},t) =
+    \varepsilon_0\sum_\beta\int\dif^3{r'}
+    \int_{-\infty}^{t}\dif{t'}
+    \,\chi_{\alpha\beta}(\vec{r},t;\vec{r}\,',t')\,E_\beta(\vec{r}\,',t')
+\label{general_nonlocal_constitutive_relation}
+\end{equation}
+
+here, $\chi_{\alpha\beta}(\vec{r},t;\vec{r}\,',t')$ describes the contribution of the electric field acting at $(\vec{r}\,',t')$ to the polarization that develops later at $(\vec{r},t)$.
+In this sense, the medium does not have to respond only at one point and one instant;
+instead, it may spread the response over space and retain memory in time.
+At the same time, the upper limit $t$ in equation~\eqref{general_nonlocal_constitutive_relation} keeps the causal order explicit: the perturbation acts first, and the response follows.
+
+For the present work, we focus on the linear response in the long-wavelength regime.
+Under this approximation, spatial nonlocality drops out, and the constitutive relation retains only the memory of the earlier perturbation.
+Therefore, it reduces to the time-domain constitutive relation:
+
+\begin{equation}
+    P_\alpha(\vec{r},t)=
+    \varepsilon_0\sum_\beta\int_{-\infty}^{t}\dif{t'}\,\chi_{\alpha\beta}(t-t')\,E_\beta(\vec{r},t')
+\label{time_domain_constitutive_relation}
+\end{equation}
+
+here, $\chi_{\alpha\beta}(t-t')$ denotes the time-dependent susceptibility tensor.
+This expression demonstrates that the polarization does not follow the electric field instantaneously;
+instead, the medium retains a memory of the earlier perturbation.
+
+Optical experiments usually probe the response of a medium under an oscillating electromagnetic field.
+Therefore, once we enter the linear-response regime, the frequency domain provides the natural language for discussing the optical response~\cite{han2023temperature}.
+Next, we transform equation~\eqref{time_domain_constitutive_relation} to the frequency domain, and obtain:
+
+\begin{equation}
+    P_\alpha(\vec{r},\omega)=\varepsilon_0\sum_\beta\chi_{\alpha\beta}(\omega)\,E_\beta(\vec{r},\omega)
+\label{frequency_domain_polarization_susceptibility_relation}
+\end{equation}
+
+here, $\chi_{\alpha\beta}(\omega)$ denotes the frequency-dependent electric susceptibility tensor.
+This equation already shows that the susceptibility determines the linear electric response of the medium.
+
+Substituting equation~\eqref{frequency_domain_polarization_susceptibility_relation} into equation~\eqref{electric_displacement_field_definition},
+we then express the electric displacement field in terms of the electric susceptibility tensor:
+
+\begin{equation}
+\begin{aligned}
+    D_\alpha(\vec{r},\omega)
+    &=\varepsilon_0 E_\alpha(\vec{r},\omega)+P_\alpha(\vec{r},\omega) \\
+    &=\varepsilon_0\sum_\beta\left[\delta_{\alpha\beta}+\chi_{\alpha\beta}(\omega)\right]E_\beta(\vec{r},\omega)
+\end{aligned}
+\label{electric_displacement_from_susceptibility}
+\end{equation}
+
+It now shows that the combination $\delta_{\alpha\beta}+\chi_{\alpha\beta}(\omega)$ naturally enters the linear electric response.
+
+This observation directly motivates the definition of the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$:
+
+\begin{equation}
+    \varepsilon_{\alpha\beta}(\omega)
+    \coloneqq\delta_{\alpha\beta}+\chi_{\alpha\beta}(\omega)
+\label{dielectric_tensor_definition}
+\end{equation}
+
+Then, the frequency-domain constitutive relation takes the compact form:
+
+\begin{equation}
+    D_\alpha(\vec{r},\omega)
+    = \varepsilon_0\sum_\beta\varepsilon_{\alpha\beta}(\omega)E_\beta(\vec{r},\omega)
+\label{frequency_domain_constitutive_relation_with_dielectric_tensor}
+\end{equation}
+
+The dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ thus provides a compact description of the linear electric response.
+Starting from the polarization field $\vec{P}(\vec{r},t)$,
+we introduced the electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$,
+and then arrived at the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$.
+Therefore, this tensor emerges naturally from the constitutive relation that closes Maxwell electrodynamics in matter.
+
+Besides its directional dependence, the dielectric response is also dynamical.
+In linear response theory, causality constrains this dynamical character,
+which means that the polarization at a given time can only depend on the electric field applied at earlier times.
+This causal structure becomes important in section~\ref{sec:causality_derivation_basic},
+where we derive the Kramers--Kronig relations from the analytic structure of the response.
+
+\subsection{Anisotropy and the dielectric tensor}
+
+The previous subsection presented the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ as a compact description of the linear electric response.
+We now examine how symmetry constrains its form~\cite{capper2019optical}.
+When the medium responds identically along all directions, the dielectric tensor reduces to a scalar form.
+If the response changes with direction, the full tensor form must be retained.
+
+Firstly, for an isotropic medium,
+the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ reduces to a scalar dielectric function $\varepsilon(\omega)$~\cite{born2013principles}:
+
+\begin{equation}
+    \varepsilon_{\alpha\beta}(\omega)
+    = \varepsilon(\omega)\delta_{\alpha\beta}
+\label{isotropic_dielectric_tensor}
+\end{equation}
+
+here, the scalar dielectric function $\varepsilon(\omega)$ already determines the full linear electric response,
+since the isotropic medium does not distinguish one Cartesian direction from another.
+The tensor structure, therefore, no longer carries additional directional information.
+
+Secondly, crystalline media usually distinguish directions.
+In that case, anisotropy survives, and we must retain the full tensor form.
+When the crystal symmetry allows a diagonal dielectric tensor in the chosen Cartesian axes,
+the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ takes the principal-axis form~\cite{nye1985physical}:
+
+\begin{equation}
+    \left[\varepsilon_{\alpha\beta}(\omega)\right] = \begin{pmatrix}
+        \varepsilon_{xx}(\omega) & 0 & 0 \\
+        0 & \varepsilon_{yy}(\omega) & 0 \\
+        0 & 0 & \varepsilon_{zz}(\omega)
+    \end{pmatrix}
+\label{principal_axis_dielectric_tensor}
+\end{equation}
+
+here, each diagonal component describes the dielectric response along one principal axis,
+and anisotropy enters through the difference among these components.
+
+Here, this directional dependence plays a central role~\cite{slavich2024exploring}.
+In chapter~\ref{cha:fundamentals_b}, we compare the optical response within the structural plane and perpendicular to that plane.
+When the two in-plane directions are symmetry-equivalent,
+we introduce the in-plane dielectric function $\varepsilon_{\varparallel}(\omega)$ and the out-of-plane dielectric function $\varepsilon_{\perp}(\omega)$~\cite{nye1985physical,guo2021complete,matthes2016influence}:
+
+\begin{equation}
+    \left[\varepsilon_{\alpha\beta}(\omega)\right] = \begin{pmatrix}
+        \varepsilon_{\varparallel}(\omega) & 0 & 0 \\
+        0 & \varepsilon_{\varparallel}(\omega) & 0 \\
+        0 & 0 & \varepsilon_{\perp}(\omega)
+    \end{pmatrix}
+\label{inplane_outofplane_dielectric_tensor}
+\end{equation}
+
+here, the in-plane dielectric function $\varepsilon_{\varparallel}(\omega)$ describes the response to an electric field within the structural plane,
+while the out-of-plane dielectric function $\varepsilon_{\perp}(\omega)$ describes the response to an electric field normal to that plane.
+This notation directly prepares the comparison between the in-plane and out-of-plane dielectric spectra and optical properties~\cite{guo2021complete,slavich2024exploring}.
+
+This anisotropy also propagates to other optical properties derived from the dielectric tensor~\cite{sujith2023large,slavich2024exploring}.
+Once the dielectric response changes with direction, the refractive index, the extinction coefficient, the reflectivity, and the energy-loss spectrum also inherit that directional dependence.
+Therefore, the tensor structure does not only refine the notation.
+It also determines how we organize and interpret the later optical results.
+
+At this stage, the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ has been introduced as the quantity that encodes the directional linear electric response of the medium.
+When anisotropy is present, its tensor form makes this directional dependence explicit.
+
+Once the principal directions of the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ are chosen as the working axes, the electric field $\vec{E}(\omega)$ can be decomposed as:
+
+\begin{equation}
+    \vec{E}(\omega)=\sum_{\lambda}E_{\lambda}(\omega)\,\hat{e}_{\lambda}
+\label{electric_field_decomposition_principal_directions}
+\end{equation}
+
+where $\hat{e}_{\lambda}$ denotes the unit vector along the principal direction $\lambda$.
+In the same basis, the induced polarization $\vec{P}(\omega)$ takes the form:
+
+\begin{equation}
+    \vec{P}(\omega)=\varepsilon_0\sum_{\lambda}\chi_{\lambda}(\omega)\,E_{\lambda}(\omega)\,\hat{e}_{\lambda}
+\label{polarization_decomposition_principal_directions}
+\end{equation}
+
+Accordingly, we denote the dielectric response along each principal direction by $\varepsilon_{\lambda}(\omega)$ and express:
+
+\begin{equation}
+    \varepsilon_{\lambda}(\omega)=1+\chi_{\lambda}(\omega)
+\label{direction_resolved_dielectric_response}
+\end{equation}
+
+This direction-resolved form provides the natural bridge from the tensor description to the dielectric function discussed in section~\ref{sec:from_electronic_response_to_dielectric_function}.
+
+\newpage
+\section{Causality and the dielectric response}
+\label{sec:causality_derivation_basic}
+
+Section~\ref{sec:causality_and_kramers_kronig_relations} uses causality to connect the real and imaginary parts of the dielectric function.
+Here, we establish the analytic structure of the response and derive the full-frequency Kramers--Kronig relations.
+
+\subsection{Causality and analytic structure of response functions}
+
+Firstly, to express causality explicitly, 
+we start from the time-domain linear relation between
+the polarization field $P_{\alpha}(\vec{r},t)$ and
+the electric field $E_{\beta}(\vec{r}\,',t')$~\cite{dressel2002electrodynamics}:
+
+\begin{equation}
+    P_{\alpha}(\vec{r},t) = 
+    \varepsilon_0\sum_{\beta}\int_{-\infty}^{\infty}\dif{t'}
+    \int\dif^3{r'}\,\chi_{\alpha\beta}(\vec{r},\vec{r}\,',t-t')
+    E_{\beta}(\vec{r}\,',t')
+\label{general_linear_response_polarization}
+\end{equation}
+
+here, $\chi_{\alpha\beta}(\vec{r},\vec{r}\,',t-t')$ denotes the time-domain electric susceptibility tensor.
+This equation characterizes the polarization response at position $\vec{r}$ and time $t$ to an electric field applied at position $\vec{r}\,'$ and time $t'$.
+
+Therefore, causality requires that the medium responds only to earlier external driving fields~\cite{stefanski2022analytical}:
+
+\begin{equation}
+    \chi_{\alpha\beta}(\vec{r},\vec{r}\,',t-t')=0
+    \qquad \text{for $t<t'$}
+\label{causal_condition_susceptibility_kernel}
+\end{equation}
+
+This condition defines a retarded response kernel~\cite{landau2013electrodynamics}.
+It excludes any polarization response before the external electric field acts.
+
+In the present work,
+we consider the optical long-wavelength limit,
+where the spatial nonlocality of the dielectric response becomes negligible~\cite{agranovich2013crystal}.
+Afterwards, the linear response then reduces to a local frequency-dependent tensor relation~\cite{franta2023dispersion}:
+
+\begin{equation}
+    P_{\alpha}(\omega) =
+    \varepsilon_0\sum_{\beta}\chi_{\alpha\beta}(\omega)
+    \,E_{\beta}(\omega)
+\label{frequency_domain_polarization_response}
+\end{equation}
+
+here, $\chi_{\alpha\beta}(\omega)$ denotes the frequency-domain electric susceptibility tensor.
+It characterizes the response amplitude for each Cartesian component at angular frequency $\omega$.
+Meanwhile, it also describes the phase delay of the response at the same frequency~\cite{koutserimpas2024time}.
+
+We then express the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ via the electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$~\cite{franta2020symmetry}:
+
+\begin{equation}
+    \varepsilon_{\alpha\beta}(\omega) =
+    \delta_{\alpha\beta}
+    + \chi_{\alpha\beta}(\omega)
+\label{dielectric_tensor_from_susceptibility}
+\end{equation}
+
+Subsequently, the causal condition in equation~\eqref{causal_condition_susceptibility_kernel}
+gives the frequency-domain susceptibility in the form:
+
+\begin{equation}
+\chi_{\alpha\beta}(\omega) =
+    \int_{0}^{\infty}
+    \chi_{\alpha\beta}(t)
+    \,\mathrm{e}^{\,\mathrm{i}\omega t}
+    \dif{t}
+\label{frequency_domain_susceptibility_from_causality}
+\end{equation}
+
+This representation reveals the analytic structure directly.
+Since the time integral starts from $t=0$, the response function remains analytic in the upper half of the complex frequency plane~\cite{nussenzveig1972causality}.
+
+For a real time-domain response kernel, the susceptibility $\chi_{\alpha\beta}(\omega)$
+and dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ further satisfy the following condition:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \chi_{\alpha\beta}(-\omega)
+    &= \chi_{\alpha\beta}^{*}(\omega) \\
+    \varepsilon_{\alpha\beta}(-\omega)
+    &= \varepsilon_{\alpha\beta}^{*}(\omega)
+\end{aligned}\right.
+\label{reality_condition_response_functions}
+\end{equation}
+
+Therefore, in the principal-axis representation,
+for each complex dielectric component $\varepsilon_{\lambda\lambda}(\omega)$,
+the real part $\varepsilon_{1,\lambda\lambda}(\omega)$ is an even function of frequency,
+whereas the imaginary part $\varepsilon_{2,\lambda\lambda}(\omega)$ is an odd function:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \varepsilon_{1,\lambda\lambda}(-\omega)
+    &= \varepsilon_{1,\lambda\lambda}(\omega) \\
+    \varepsilon_{2,\lambda\lambda}(-\omega)
+    &= -\varepsilon_{2,\lambda\lambda}(\omega)
+\end{aligned}\right.
+\label{parity_of_dielectric_components}
+\end{equation}
+
+At this stage, the previous discussion has established the analytic structure of the dielectric response in frequency space~\cite{nussenzveig1972causality,franta2020symmetry,leon2026momentum}.
+We next derive the Kramers--Kronig relations between its real and imaginary parts.
+
+\subsection{Kramers--Kronig relations for the dielectric function}
+
+The previous subsection established the analytic structure of the dielectric response in frequency space.
+We now derive the Kramers--Kronig relations for the dielectric function~\cite{toll1956causality}.
+Firstly, the causal structure in equation~\eqref{frequency_domain_susceptibility_from_causality} and the reality condition in equation~\eqref{reality_condition_response_functions}
+establish a Hilbert-transform relation between the real and imaginary parts of the dielectric response~\cite{stefanski2022analytical,koutserimpas2024time,franta2020symmetry}.
+Here, we consider the regular electronic response without a zero-frequency conductivity pole,
+with $\varepsilon_{\alpha\beta}(\omega)\to\delta_{\alpha\beta}$ at high frequency.
+For a metal, the conductive term must be separated before applying these relations in the form below.
+The dielectric function in this derivation then denotes the remaining regular response.
+We represent the Kramers--Kronig relations in the frequency-domain form as:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \varepsilon_{1,\alpha\beta}(\omega)-\delta_{\alpha\beta} &=
+    \frac{1}{\pi}\mathcal{P}
+    \int_{-\infty}^{\infty}\dif{\omega'}\,
+    \frac{\varepsilon_{2,\alpha\beta}(\omega')}{\omega'-\omega} \\
+\varepsilon_{2,\alpha\beta}(\omega) &=
+    -\frac{1}{\pi}\mathcal{P}
+    \int_{-\infty}^{\infty}\dif{\omega'}\,
+    \frac{\varepsilon_{1,\alpha\beta}(\omega')-\delta_{\alpha\beta}}{\omega'-\omega}
+\end{aligned}\right.
+\label{kk_general_dielectric_tensor}
+\end{equation}
+
+here, $\mathcal{P}$ denotes the Cauchy principal value.
+It defines the integral through a symmetric limiting procedure around $\omega'=\omega$~\cite{stefanski2022analytical,koutserimpas2024time}.
+
+This expression identifies the physical roles of the two parts of the dielectric response.
+The imaginary part $\varepsilon_{2,\alpha\beta}(\omega)$ characterizes the absorptive channel, 
+whereas the real part $\varepsilon_{1,\alpha\beta}(\omega)$ characterizes the dispersive channel.
+Consequently, causality unifies these two channels into a single complex response function.
+
+The symmetry relations in equation~\eqref{parity_of_dielectric_components} then reduce the full-frequency integrals to the positive-frequency form in equation~\eqref{kk_positive_frequency_dielectric_component}.
+The corresponding static limit and its physical interpretation are discussed in section~\ref{sec:causality_and_kramers_kronig_relations}.
