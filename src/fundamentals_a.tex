@@ -11,7 +11,7 @@ We therefore proceed from the many-body wave function $\Psi$ to the electron den
 This chapter partly draws on my notes from the Coursera course \textit{Density Functional Theory}, offered by École Polytechnique and taught by Francesco Sottile and Lucia Reining~\cite{sottile_reining_dft_coursera}.
 
 We develop this chapter as a gradual reduction of the electronic problem.
-The many-body hamiltonian and the elementary functional definitions are given in appendix~\ref{cha:appendix_basic}.
+The many-body hamiltonian and the elementary functional definitions are given in appendix~\ref{cha:appendix_quantum}.
 We start from density functionals in quantum mechanics and establish the Hohenberg--Kohn theorem in section~\ref{sec:introduction_density_functionals}.
 With the electron density $n(\vec{r}\,)$ as the central variable, we construct the Kohn--Sham framework in section~\ref{sec:from_density_functional_to_Kohn_Sham_theory}.
 Finally, section~\ref{sec:exchange_correlation_functional} demonstrates practical exchange-correlation approximations and brings the formal theory to the working form of density functional theory.
@@ -19,7 +19,7 @@ Finally, section~\ref{sec:exchange_correlation_functional} demonstrates practica
 In section~\ref{sec:practical_computational_methods},
 we then connect these foundations to the calculations used in this thesis.
 Readers interested in the computational procedure can proceed directly to that section.
-The supporting quantum-mechanical and Thomas--Fermi derivations are collected in appendix~\ref{cha:appendix_basic}.
+The supporting quantum-mechanical and Thomas--Fermi derivations are collected in appendix~\ref{cha:appendix_quantum}.
 
 \newpage
 \section{Density functional in quantum mechanics}
@@ -29,7 +29,7 @@ In quantum mechanics, it is often convenient to shift the basic variable from th
 From this point of view, every relevant physical quantity can be expressed as a functional of the density.
 Therefore, we can realize that a functional takes the density $n(\vec{r}\,)$ as input and returns a quantum-mechanical observable as output.
 
-We use the Hartree atomic units defined in subsection~\ref{sec:manybody_schrodinger_equation} of appendix~\ref{cha:appendix_basic}:
+We use the Hartree atomic units defined in subsection~\ref{sec:manybody_schrodinger_equation} of appendix~\ref{cha:appendix_quantum}:
 $\hbar=1$, $m_\mathrm{e}=1$, $e=1$, and $4\pi\varepsilon_0=1$.
 
 To describe this process, we first introduce the density operator:
@@ -93,7 +93,7 @@ With this in mind, we review the form of hamiltonian:
 \label{hamiltonian_decomposition}
 \end{equation}
 
-In subsection~\ref{sec:manybody_schrodinger_equation} of appendix~\ref{cha:appendix_basic},
+In subsection~\ref{sec:manybody_schrodinger_equation} of appendix~\ref{cha:appendix_quantum},
 we discuss in detail the explicit forms and physical meanings of the kinetic, external potential, and interaction terms in the many-body hamiltonian.
 
 Let us return to the reduced expression for the hamiltonian in equation~\eqref{clamped_nuclei_many_body_hamiltonian}.
@@ -623,7 +623,7 @@ This motivates a reformulation in terms of a simpler basic variable.
 
 The electron density is an obvious choice.
 The Thomas--Fermi kinetic energy functional in equation~\eqref{tf_functional} provides a first purely density based model.
-Its detailed construction and limitations are discussed in section~\ref{sec:appendix_thomas_fermi} of appendix~\ref{cha:appendix_basic}.
+Its detailed construction and limitations are discussed in section~\ref{sec:appendix_thomas_fermi} of appendix~\ref{cha:appendix_quantum}.
 They show that improved treatments of the kinetic energy and the exchange correlation effects are necessary.
 
 In what follows, we introduce an auxiliary description that retains the density as the central variable and provides a practical starting point for systematic improvements.
@@ -909,7 +909,7 @@ we collect the missing contributions into an exchange-correlation functional.
 
 The interaction energy functional can be written as a Hartree term plus a remainder,
 $E_\mathrm{xc}^{\mathrm{int}}[n]\coloneqq E_\mathrm{int}[n]-E_\mathrm{H}[n]$,
-as in equation~\eqref{Exc_int_definition} of appendix~\ref{cha:appendix_basic}.
+as in equation~\eqref{Exc_int_definition} of appendix~\ref{cha:appendix_quantum}.
 
 In the Kohn--Sham construction, there is an additional correction coming from the kinetic energy, since $T[n]$ and $T_s[n]$ are not equal, and their difference is measured by $T_c[n]$ in equation~\eqref{T_decomposition}.
 

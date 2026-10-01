@@ -10,10 +10,11 @@ how they can be connected continuously across the Brillouin zone while preservin
 This connection contains information that is not specified by the band energies alone.
 
 The discussion follows the parity analysis used for the beryllene systems in chapter~\ref{cha:project_beryllene}.
-We first recall the Bloch-state description and identify the band subspace to which a topological index can be assigned.
-We then introduce phase freedom and the Berry phase to explain why comparing electronic states requires more than comparing their energies.
-Next, we consider time-reversal and inversion symmetry, which determine the pairing and parity of the spinor states.
-Finally, we use these properties to obtain the two-dimensional $Z_2$ index from the Fu--Kane parity criterion.
+The geometric phase and the general action of time reversal are developed in appendix~\ref{cha:appendix_topology}.
+Here, we start from the spinor Bloch states supplied by the electronic-structure calculation
+and identify the band subspace to which a topological index can be assigned.
+We then locate the time-reversal invariant momenta and determine how inversion acts on the Kramers pairs.
+Finally, we use their parity eigenvalues to obtain the two-dimensional $Z_2$ index and connect its interpretation to the calculated band structure.
 Throughout this discussion, we distinguish the topology of a selected band subspace from an insulating state at the Fermi level.
 This distinction is required when interpreting the metallic systems considered in the present work.
 
@@ -108,21 +109,9 @@ but also two sets of states that can be compared through their overlaps.
 As we move through the Brillouin zone, these overlaps describe how the electronic states change.
 Band topology concerns the global structure of this connection.
 
-There is already a freedom in specifying an individual normalized state.
-For any real phase $\phi_n(\vec{k}\,)$, we can replace it by:
-
-\begin{equation}
-    \ket{u'_{n\vec{k}}}
-    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}
-\label{bloch_phase_freedom_topology}
-\end{equation}
-
-This replacement changes neither the band energy nor the projector
-$\ket{u_{n\vec{k}}}\bra{u_{n\vec{k}}}$.
-It therefore represents the same physical state.
-However, a derivative with respect to $\vec{k}$ also differentiates the chosen phase.
-Consequently, we must account for this freedom when connecting states at different wave vectors.
-We return to this point after identifying the band subspace of interest.
+The phase freedom of these states and its geometric consequences are developed in section~\ref{sec:berry_phase_topology} of appendix~\ref{cha:appendix_topology}.
+For the present calculation, we must identify the whole selected subspace before assigning an index to it.
+We therefore turn from an individual band to the group of bands used in the parity analysis.
 
 \subsection{An isolated band subspace}
 \label{subsec:isolated_band_subspace_topology}
@@ -250,284 +239,36 @@ The plotted energies remain ordered, so $E_{2N_\mathrm{p}-2,\vec{k}}\leq E_{2N_\
 Following this energy order through a crossing can give a cusp in the plotted eigenvalues,
 although the hamiltonian and the projector onto both pairs remain smooth.
 Since the direct separation remains positive, this internal degeneracy does not prevent the selected subspace from varying smoothly.
-We can now discuss how the states within an isolated subspace are connected,
+We now examine the symmetries that constrain these states,
 while keeping the separate question of the physical Fermi level explicit.
-
-\newpage
-\section{From phase freedom to the Berry phase}
-\label{sec:berry_phase_topology}
-
-% opening paragraph
-The previous section identified the electronic subspace and the condition that separates it from the remaining bands.
-We now examine the connection between states at neighbouring wave vectors.
-The phase freedom in equation~\eqref{bloch_phase_freedom_topology} means that an individual overlap depends on how the states are represented.
-A closed sequence of overlaps, however, can retain information that is independent of those local phase choices.
-This provides the geometric starting point for discussing band topology.
-
-\subsection{Connecting neighbouring states}
-
-We first consider a single normalized band that is non-degenerate along a path.
-This simpler case allows us to identify the phase information before returning to a group of bands.
-We choose a local gauge in which the state varies smoothly with $\vec{k}$.
-For a small displacement $\dif\vec{k}$, the overlap between neighbouring cell-periodic states is:
-
-\begin{equation}
-    \braket{u_{n\vec{k}}|u_{n,\vec{k}+\dif\vec{k}}}
-    =1+
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}
-    \cdot\dif\vec{k}
-    +\mathcal{O}(|\dif\vec{k}\,|^2)
-\label{neighbouring_bloch_overlap_topology}
-\end{equation}
-
-To identify this first-order change, we differentiate the normalization condition:
-
-\begin{equation}
-\begin{aligned}
-    0&=\nabla_{\vec{k}}\braket{u_{n\vec{k}}|u_{n\vec{k}}} \\
-    &=\bigl(\nabla_{\vec{k}}\bra{u_{n\vec{k}}}\bigr)\ket{u_{n\vec{k}}}
-    +\bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}} \\
-    &=2\operatorname{Re}\!\left[
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}\right]
-\end{aligned}
-\label{normalization_derivative_topology}
-\end{equation}
-
-The two derivative terms are complex conjugates of each other.
-Their sum therefore requires the real part of
-$\bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}$ to vanish.
-The first-order change of the overlap therefore carries a phase.
-We describe this phase variation by introducing the Berry connection~\cite{berry1984quantal}:
-
-\begin{equation}
-    \vec{\mathcal{A}}_n(\vec{k}\,)
-    \coloneqq\mathrm{i}\,
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}
-\label{berry_connection_topology}
-\end{equation}
-
-here, $\nabla_{\vec{k}}$ differentiates the cell-periodic state with respect to the wave vector.
-With $\vec{k}$ measured in inverse length, $\vec{\mathcal{A}}_n$ has the dimension of length,
-and $\vec{\mathcal{A}}_n\cdot\dif\vec{k}$ is dimensionless.
-Equation~\eqref{neighbouring_bloch_overlap_topology} consequently takes the form
-$1-\mathrm{i}\,\vec{\mathcal{A}}_n\cdot\dif\vec{k}$ to first order.
-
-We next substitute the phase transformation in equation~\eqref{bloch_phase_freedom_topology} into this definition.
-Differentiating both the phase factor and the state gives:
-
-\begin{equation}
-\begin{aligned}
-    \vec{\mathcal{A}}\,'_n(\vec{k}\,)
-    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k}\,)}
-    \bra{u_{n\vec{k}}}\nabla_{\vec{k}}
-    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}\right] \\
-    &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\phi_n(\vec{k}\,)
-\end{aligned}
-\label{berry_connection_gauge_transformation_topology}
-\end{equation}
-
-The Berry connection therefore depends on the phase convention, also called the gauge.
-This dependence follows directly from our freedom to choose a representative for the same physical state.
-We must close the path before identifying a phase that is independent of the arbitrary choices at individual points.
-
-\subsection{Closing the path}
-
-Let $C$ be an oriented closed path on which the band remains non-degenerate.
-For a smooth gauge that is single-valued around this path, the Berry phase is:
-
-\begin{equation}
-    \gamma_n(C)
-    =\oint_C\vec{\mathcal{A}}_n(\vec{k}\,)\cdot\dif\vec{k}
-    \qquad (\mathrm{mod}\ 2\pi)
-\label{berry_phase_closed_path_topology}
-\end{equation}
-
-Under equation~\eqref{berry_connection_gauge_transformation_topology},
-the change in $\gamma_n(C)$ is the negative of the phase change accumulated around the loop.
-For a single-valued gauge transformation, this change is an integer multiple of $2\pi$.
-Thus $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ is unchanged.
-The local phase choices cancel, while the phase accumulated by connecting the states around the loop remains.
-
-The same cancellation can be seen by discretizing the path into $M$ points.
-With the endpoint identified with the starting point, we write:
-
-\begin{equation}
-    \gamma_n(C)
-    =-\lim_{M\rightarrow\infty}\arg
-    \prod_{j=0}^{M-1}
-    \braket{u_{n\vec{k}_j}|u_{n\vec{k}_{j+1}}}
-    \qquad (\mathrm{mod}\ 2\pi)
-\label{berry_phase_overlap_product_topology}
-\end{equation}
-
-here, the endpoint state is identified consistently with the initial state,
-using equation~\eqref{reciprocal_lattice_identification_topology} if the loop crosses a Brillouin-zone boundary.
-The mesh must be fine enough that successive overlaps are non-zero.
-Every local phase then appears once in a bra and once in a ket, so it cancels from the product.
-The minus sign follows from the convention in equation~\eqref{berry_connection_topology}.
-
-The Berry phase describes the geometry of the electronic states along a chosen loop.
-Here, following the loop means comparing stationary states at successive wave vectors;
-we do not need to prescribe an actual time evolution of the electron.
-Changing the arbitrary phase of each state leaves the closed-loop result unchanged,
-whereas a smooth change of the hamiltonian or the loop can change $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ continuously,
-provided the band remains non-degenerate along the loop.
-The phase $\gamma_n(C)$ is not generally restricted to $0$ or $\pi$,
-and a Berry phase on an arbitrary loop is not by itself the two-dimensional $Z_2$ index.
-The additional structure needed for that index comes from time-reversal symmetry and the full selected band subspace.
-
-\subsection{From an individual band to a band subspace}
-
-The single-band discussion assumes that the state can be followed separately from all other states along the path.
-For spinful time-reversal-symmetric systems, degeneracies are instead part of the problem.
-Within a degenerate group, the hamiltonian alone does not select a unique state to follow.
-Different choices can mix these states, rather than merely change their individual phases.
-An individual-band Berry phase is therefore not fixed by the degenerate subspace alone.
-We return to the projector in equation~\eqref{band_subspace_projector_topology}.
-
-Within its $2N_\mathrm{p}$-dimensional subspace, we may choose a different orthonormal basis:
-
-\begin{equation}
-\left\{\begin{aligned}
-    \ket{u'_{a\vec{k}}}
-    &=\sum_{n=1}^{2N_\mathrm{p}}
-    \ket{u_{n\vec{k}}}U_{na}(\vec{k}\,) \\
-    U^\dagger(\vec{k}\,)U(\vec{k}\,)&=I \\
-    \sum_{a=1}^{2N_\mathrm{p}}\ket{u'_{a\vec{k}}}\bra{u'_{a\vec{k}}}
-    &=\hat{\mathcal{P}}(\vec{k}\,)
-\end{aligned}\right.
-\label{band_subspace_basis_transformation_topology}
-\end{equation}
-
-here, $U(\vec{k}\,)$ is a unitary matrix and $I$ is the identity matrix within the selected subspace.
-The transformed basis need not diagonalize the hamiltonian when it mixes states of different energies.
-Nevertheless, it describes the same projector and therefore the same band subspace.
-This is the multi-state counterpart of the phase freedom introduced earlier.
-
-For such a basis, the connection becomes a matrix~\cite{wilczek1984appearance}.
-Applying the same derivative as in equation~\eqref{berry_connection_topology} to each pair of basis states gives:
-
-\begin{equation}
-\left\{\begin{aligned}
-    [\vec{\mathcal{A}}(\vec{k}\,)]_{mn}
-    &=\mathrm{i}\bra{u_{m\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}} \\
-    \vec{\mathcal{A}}\,'(\vec{k}\,)
-    &=U^\dagger(\vec{k}\,)\vec{\mathcal{A}}(\vec{k}\,)U(\vec{k}\,)
-    +\mathrm{i}\,U^\dagger(\vec{k}\,)\nabla_{\vec{k}}U(\vec{k}\,)
-\end{aligned}\right.
-\label{band_subspace_connection_topology}
-\end{equation}
-
-here, $m$ and $n$ run over the selected basis states.
-The second relation follows by differentiating both the original basis and the matrix $U(\vec{k}\,)$.
-For a single state, it reduces to equation~\eqref{berry_connection_gauge_transformation_topology}.
-The off-diagonal elements describe the mixing of basis states as $\vec{k}$ changes.
-Consequently, assigning independent single-band phases to arbitrary members of a degenerate pair does not characterize the whole subspace.
-We must now ask whether these local choices of basis can be joined over the whole Brillouin zone
-while respecting time-reversal pairing.
-This is a constraint on the full subspace, beyond the phase accumulated around one loop.
-Inversion symmetry will allow us to evaluate the corresponding $Z_2$ index from parity eigenvalues.
-We first establish how these two symmetries act on the same states.
 
 \newpage
 \section{Time-reversal and inversion symmetry}
 \label{sec:symmetry_and_kramers_pairs_topology}
 
 % opening paragraph
-The previous section showed why the phase convention of an individual state cannot determine the topology of a band subspace.
+The previous section identified the isolated band subspace.
+The geometric construction in appendix~\ref{cha:appendix_topology} explains why its global character involves how the states are connected across the Brillouin zone.
 We now impose the symmetries relevant to the beryllene parity analysis.
 Time reversal connects states at opposite wave vectors and determines their Kramers pairing.
 Inversion also reverses the wave vector, while assigning a parity at the points where the state returns to an equivalent wave vector.
 Together, these two symmetries provide the information used in the parity criterion.
 
-\subsection{Spinor states and time reversal}
+\subsection{Kramers pairing in the spinful calculation}
 
-Equation~\eqref{KS_spinor_equation_method} describes the full electronic spinor.
-Using the Bloch representation in equation~\eqref{bloch_hamiltonian_topology},
-we now express the corresponding cell-periodic state as:
+Equation~\eqref{KS_spinor_equation_method} supplies the spinor states used in the calculation.
+The two spin components belong to one electronic state; they are not two separate bands.
+Spin-orbit coupling can mix these components without breaking time-reversal symmetry.
+We therefore retain the full spinor when identifying the time-reversed partner.
 
-\begin{equation}
-    \ket{u_{n\vec{k}}}
-    =\ket{u_{n\vec{k},\uparrow}}\otimes\ket{\uparrow}
-    +\ket{u_{n\vec{k},\downarrow}}\otimes\ket{\downarrow}
-\label{cell_periodic_spinor_topology}
-\end{equation}
-
-here, the two spatial components form one spinor state.
-They are not two separate occupied bands.
-Spin-orbit coupling can mix these components, so spin is not generally a conserved band label.
-The time-reversal classification, however, remains applicable when the hamiltonian preserves time-reversal symmetry.
-
-For spin-$1/2$ electrons, we choose the time-reversal operator as:
-
-\begin{equation}
-\left\{\begin{aligned}
-    \hat{\Theta}&=\mathrm{i}\hat{\sigma}_y\hat{K} \\
-    \hat{\Theta}^2&=-\hat{I} \\
-    \hat{\Theta}\hat{h}(\vec{k}\,)\hat{\Theta}^{-1}
-    &=\hat{h}(-\vec{k}\,)
-\end{aligned}\right.
-\label{spinful_time_reversal_topology}
-\end{equation}
-
-here, $\hat{\sigma}_y$ is the Pauli operator in the chosen spin basis,
-$\hat{K}$ takes the complex conjugate in the position and spin representation,
-and $\hat{I}$ is the identity operator.
-The last relation states the symmetry condition on the hamiltonian.
-It applies to the non-magnetic spinful problem considered here;
-spin-orbit coupling alone does not break time-reversal symmetry.
-
-Physically, time reversal reverses both the momentum and the spin.
-The complex conjugation also means that coefficients in a linear combination are conjugated:
-
-\begin{equation}
-    \hat{\Theta}\bigl(c_a\ket{a}+c_b\ket{b}\bigr)
-    =c_a^*\hat{\Theta}\ket{a}+c_b^*\hat{\Theta}\ket{b}
-\label{time_reversal_antilinearity_topology}
-\end{equation}
-
-here, $c_a$ and $c_b$ are complex coefficients.
-This property is called antilinearity.
-In the chosen spin basis, the convention in equation~\eqref{spinful_time_reversal_topology} gives
-$\hat{\Theta}\ket{\uparrow}=-\ket{\downarrow}$ and
-$\hat{\Theta}\ket{\downarrow}=\ket{\uparrow}$.
-Applying time reversal twice therefore returns either spin state with a minus sign,
-which explains $\hat{\Theta}^2=-\hat{I}$.
-The two components of one spinor should consequently be distinguished from its time-reversed partner, which is another complete state.
-
-The operator $\hat{\Theta}$ preserves norms while conjugating inner products, and is therefore antiunitary.
-For any two states, it satisfies
-$\braket{\hat{\Theta}a|\hat{\Theta}b}=\braket{b|a}$.
-To apply this relation at a time-reversal invariant momentum (TRIM), we use a full Bloch state $\ket{\psi}$.
-At such a point, the reversed wave vector differs from the original by a reciprocal-lattice vector,
-so both states have the same phases under lattice translations.
-Taking $\ket{a}=\ket{\psi}$ and $\ket{b}=\hat{\Theta}\ket{\psi}$ gives:
-
-\begin{equation}
-    \braket{\hat{\Theta}\psi|\psi}
-    =\braket{\hat{\Theta}\psi|\hat{\Theta}^2\psi}
-    =-\braket{\hat{\Theta}\psi|\psi}
-\label{kramers_orthogonality_topology}
-\end{equation}
-
-Consequently, $\braket{\hat{\Theta}\psi|\psi}=0$.
-Time-reversal symmetry also gives $\hat{h}\hat{\Theta}=\hat{\Theta}\hat{h}$ for the full hamiltonian.
-If $\hat{h}\ket{\psi}=E\ket{\psi}$, its partner therefore satisfies:
-
-\begin{equation}
-    \hat{h}\hat{\Theta}\ket{\psi}
-    =\hat{\Theta}\hat{h}\ket{\psi}
-    =E\hat{\Theta}\ket{\psi}
-\label{kramers_equal_energy_topology}
-\end{equation}
-
-here, the energy $E$ is real because $\hat{h}$ is Hermitian.
-At a wave vector equivalent to its negative, $\ket{\psi}$ and $\hat{\Theta}\ket{\psi}$
-therefore represent orthogonal states with the same energy and wave vector.
-These states form a Kramers pair.
-Removing the same Bloch factor from both states preserves their orthogonality,
-so the pairing also supplies two orthogonal cell-periodic states at this representative wave vector.
-At a general wave vector, time reversal instead relates a state at $\vec{k}$ to an equal-energy state at $-\vec{k}$.
+For spin-$1/2$ electrons, the time-reversal operator satisfies $\hat{\Theta}^2=-\hat{I}$.
+When the hamiltonian preserves this symmetry,
+$\hat{\Theta}\hat{h}(\vec{k}\,)\hat{\Theta}^{-1}=\hat{h}(-\vec{k}\,)$.
+The operator convention and the derivation of Kramers pairing are given in section~\ref{sec:spinors_time_reversal_appendix} of appendix~\ref{cha:appendix_topology}.
+At a general wave vector, time reversal relates a state at $\vec{k}$ to an equal-energy state at $-\vec{k}$.
+At a wave vector equivalent to its negative, these are two orthogonal states at the same wave vector and form a Kramers pair.
+The parity calculation must count these complete pairs.
+We now identify the momenta at which this pairing and inversion parity can be used together.
 
 \subsection{Time-reversal invariant momenta}
 \label{subsec:trim_topology}
@@ -613,7 +354,8 @@ For an inversion-symmetric hamiltonian, we have:
 Both inversion and time reversal reverse the wave vector.
 Their combination consequently leaves $\vec{k}$ unchanged.
 Since $(\hat{\mathcal{I}}\hat{\Theta})^2=-\hat{I}$,
-the same antiunitary argument used above gives a twofold degeneracy at every $\vec{k}$
+the antiunitary argument in section~\ref{sec:spinors_time_reversal_appendix} of appendix~\ref{cha:appendix_topology}
+gives a twofold degeneracy at every $\vec{k}$
 when both symmetries are present.
 At the TRIM, we can additionally choose the states to diagonalize inversion.
 
@@ -697,7 +439,7 @@ its $Z_2$ index cannot change.
 We denote the two possible values by $\nu=0$ and $\nu=1$.
 The former is trivial with respect to this index, while the latter is non-trivial.
 
-In terms of electronic states, we return to the basis freedom in equation~\eqref{band_subspace_basis_transformation_topology}.
+In terms of electronic states, we use the basis freedom developed in equation~\eqref{band_subspace_basis_transformation_topology} of appendix~\ref{cha:appendix_topology}.
 The distinction concerns whether a globally smooth basis can be chosen
 with a consistent time-reversal pairing and the reciprocal-lattice identification introduced above.
 Here, a local choice covers only a neighbourhood of one wave vector.
@@ -716,7 +458,7 @@ time-reversed partners propagate in opposite directions and have opposite spin e
 This relation does not require a conserved spin component.
 
 For a single pair, we consider a static one-electron perturbation $\hat{V}$ that is Hermitian and preserves time reversal.
-The same antiunitary relation used in equation~\eqref{kramers_orthogonality_topology} gives:
+The antiunitary relation used in equation~\eqref{kramers_orthogonality_topology} of appendix~\ref{cha:appendix_topology} gives:
 
 \begin{equation}
     \bra{\hat{\Theta}\psi}\hat{V}\ket{\psi}=0,

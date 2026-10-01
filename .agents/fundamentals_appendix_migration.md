@@ -1,50 +1,110 @@
-# Chapters 2–3 基础内容迁移
+# Fundamentals 与理论附录的编排
 
-日期: 2026-09-26.
+更新日期: 2026-10-02.
 
-本次按用户确认的范围执行迁移. 此决定取代此前措施稿中“不移入附录”的旧范围约束.
-目标是减轻正文 fundamentals 的篇幅, 同时保留原有推导和写作内容.
+按用户最新要求, 将原 Theory fundamentals 拆成量子物理与电动力学两个附录,
+并将 Chapter 4 的通用相位几何与时间反演推导迁入第三个理论附录.
+原 Appendix A 的代码与数据说明移到最后, 编号为 Appendix D.
+本次编排取代 2026-09-26 的两个附录结构.
+
+## References 之后的顺序
+
+- Appendix A: A journey of quantum physics (`src/appendix_quantum.tex`).
+  收录原 B1–B4: 时间演化、多体 Schrödinger 方程、Heisenberg 表象与连续性方程,
+  多体统计与约化描述, 泛函定义, Thomas–Fermi 构造及其扩展.
+- Appendix B: Essential electrodynamics you needed (`src/appendix_electrodynamics.tex`).
+  收录原 B5–B6: Maxwell 方程、本构关系、各向异性基础,
+  因果性与全频率 Kramers–Kronig 推导.
+- Appendix C: A Glimpse of topology (`src/appendix_topology.tex`).
+  收录原 Chapter 4 的相位自由、Berry 相位与多带连接,
+  以及 spinor、时间反演与 Kramers 配对的一般推导.
+- Appendix D: Source code and data analysis (`src/appendix.tex`).
+  原代码附录内容保留, 编排位置后移.
+
+标题采用用户指定的写法.
+`thesis.tex` 使用 `\appendix` 顺序编入四个文件, 沿用奇数页开章规则.
+原 `src/appendix_basic.tex` 已由 A/B 两个文件替代.
+原 `cha:appendix_basic` 引用按内容分别指向
+`cha:appendix_quantum` 或 `cha:appendix_electrodynamics`;
+拓扑基础使用 `cha:appendix_topology`, 代码附录继续使用 `cha:appendix_code`.
 
 ## 正文与附录的分工
 
-- Chapter 2 从 Density functional in quantum mechanics 开始, 保留密度泛函与 Hohenberg–Kohn 主线, Kohn–Sham, 交换关联泛函, 实际计算方法.
-- 原 Chapter 2 的时间演化、多体 Schrödinger 方程与 hamiltonian、Born–Oppenheimer 近似、Heisenberg 表象、连续性方程, 多体统计与约化描述, 泛函的基本定义, Thomas–Fermi 构造及其扩展移入 Appendix B.
-- Chapter 3 保留工作本构关系, 介电函数的微观表达、带间/Drude 与二维归一化, 正频率 Kramers–Kronig 关系及静态极限, 派生光学量与全部六幅自有计算例图.
-- 原 Chapter 3 的 Maxwell 方程、本构关系的详细推导、各向异性基础, 因果性与全频率 Kramers–Kronig 推导移入 Appendix B.
-- 正文补充 Hartree 势与光学本构关系两组工作公式, 调整章首导航和因迁移失效的前后指代.
-- Introduction 的组织说明增加两个附录的入口.
+- Chapter 2 继续从 Density functional in quantum mechanics 开始,
+  保留密度泛函与 Hohenberg–Kohn 主线, Kohn–Sham, 交换关联泛函及实际计算方法.
+- Chapter 3 保留工作本构关系, 介电函数的微观表达、带间/Drude 与二维归一化,
+  正频率 Kramers–Kronig 关系及静态极限, 派生光学量与全部六幅自有计算例图.
+- Chapter 4 保留计算所需的 spinor Bloch 描述、子空间选择、直接与间接带隙条件,
+  两幅方法图、TRIM、宇称计数、Fu–Kane 判据、晶体对称性化简和实际计算解释.
+  原 Berry 推导与通用时间反演证明迁入 C, 正文保留短的工作说明和明确入口.
+- Introduction 的 thesis organisation 与 Chapters 2–4 的导航、前后指代同步更新.
 
-## 编排
+## Berry 相位的教学补充
 
-References 之后依次为:
+Appendix C 在原有公式上增加以下推导和解释:
 
-- Appendix A: Source code and data analysis (`src/appendix.tex`).
-- Appendix B: Theory fundamentals (`src/appendix_basic.tex`).
+- 绝热演化中动力学相位与几何相位的分离, 明确有限能隙与投影近似.
+- 开放路径的规范端点项, 平行输运的局部相位条件与闭路相位差.
+- 单带 Berry curvature、规范不变性与 Stokes 关系的适用范围.
+- 一个可直接计算的两分量态例子, 从归一化态算到 connection、curvature 和闭路相位.
+- 多带曲率的交换子项及其规范协变性, 衔接正文的带子空间分析.
 
-Chapter 2 的完整标题为 `Fundamentals \textRoman{1}: From Many-body physics to Density Functional Theory`, 目录短标题为 `Fundamentals \textRoman{1}: From Many-Body Physics to DFT`.
-按用户的追加要求, Many-body Schrödinger equation 接回附录的时间演化部分, What is the functional? 放在 Thomas–Fermi 部分之前.
+讲解范围参考用户指定视频 [Deriving Berry phase, Berry connection & Berry curvature](https://www.youtube.com/watch?v=6xctcmwR8wo),
+数学关系按 Berry (1984)、Wilczek–Zee (1984) 和 Xiao–Chang–Niu (2010) 核验,
+使用现有 `berry1984quantal`、`wilczek1984appearance` 并补入 `xiao2010berry`.
+叙述遵循现有正文先引入问题、再定义、推导与解释的顺序;
+保留 Dirac notation、现有符号和向量间距习惯.
 
-`thesis.tex` 使用 `\appendix` 并编入两个文件.
-沿用文档类已有的附录编号和奇数页开章规则.
-Appendix B 的 chapter label 是 `cha:appendix_basic`.
+## Appendix C 的示意图
 
-## 编译结果
+`figures_topo/figures_topo.ipynb` 独立生成三张矢量 PDF, 沿用 Chapter 4 的字体、
+颜色、线宽与半透明白色圆角标题框; notebook 仅保留设置与绘图代码及简短标题.
+画布分别为 8×3、8×4 与 5×4 inches, 正文宽度分别为 0.8、0.8 与 0.5 textwidth,
+保持相同的字体缩放比例. 解释放在正文, caption 保持简短.
+
+- C.1: 闭路上四个态的局部相位选择与重叠积不变性;
+  橙色指针只代表额外相位, 不代表自旋方向.
+- C.2: 两分量态在态球上的纬线回路与平行输运的相位因子;
+  采用 theta=pi/3, 球冠固体角为 pi, Berry 相位为 -pi/2.
+  正文补充态球坐标与 Pauli 期望值的对应, 保留原 theta=pi/2 算例.
+- C.3: 同一平面内的两套正交基与不变投影;
+  实旋转只作为酉换基的简单示意, 不将态子空间等同于晶体中的几何平面.
+
+已执行完整 notebook, 并独立数值验证闭路重叠积的规范不变性、相位终点 -i
+及两套基底给出的投影算符一致性.
+
+## 保留性与编译结果
+
+相对于本次开始时的 `5361012`, 原 Theory fundamentals 与 Chapter 4
+共 213 个内容 label 和 191 组显示公式全部保留; 原显示公式逐字保留.
+新增 14 组显示公式, 全部位于 Appendix C (包括示意图说明所需的两组公式).
+原 A/B 拆分涉及的 157 组显示公式均未改动.
+活动 TeX 文件无重复 label、未定义交叉引用或缺失的相关 citation key.
+
+全文 `latexmk` 已完成, 无未定义引用、重复 PDF 目标或过大的浮动体警告.
+沿用原文的个别 overfull hbox 提示仍存在; 新附录 C 与本次章首编排无新增此类提示.
 
 以章首至下一章章首的页码差计, 包含章节间的必要空白页:
 
-- Chapter 2: 84 页变为 52 页 (印刷页 15–66).
-- Chapter 3: 32 页变为 24 页 (印刷页 67–90).
-- 两章正文合计减少 40 页, 内容迁入附录.
-- Appendix A 从印刷页 255 开始; Appendix B 从印刷页 257 开始.
-- 完整 `.output/thesis.pdf`: 338 页.
+- Chapter 2: 52 页 (印刷页 15–66).
+- Chapter 3: 24 页 (印刷页 67–90).
+- Chapter 4: 22 页变为 16 页 (印刷页 91–106).
+- Appendix A: 印刷页 249 起, 36 页.
+- Appendix B: 印刷页 285 起, 12 页.
+- Appendix C: 印刷页 297 起, 14 页 (三张示意图及说明使本附录增加 2 页).
+- Appendix D: 印刷页 311 起.
+- 完整 `.output/thesis.pdf`: 348 页; 四个附录均为奇数页开章.
 
-相对于迁移前的 `4eb194f`, 两章原有 360 个 label、333 个显示公式块和 114 个 citation key 均保留.
-原显示公式块逐字保留; 所有活动 TeX 文件无重复 label 或未定义的正文交叉引用.
-`latexmk` 完成, 最终日志无未定义引用、重复目标或过大的图像浮动体警告.
-两个附录的印刷页和 PDF 实际页均为奇数起页.
+三图分别位于印刷页 303、306 与 307; 本次新增图文无 overfull hbox、
+未定义引用或过大浮动体警告.
+
+2026-09-26 的前次迁移已将 Chapters 2–3 从 84+32 页调整为 52+24 页,
+并保留相对于 `4eb194f` 的原有 360 个 label、333 个显示公式块和 114 个 citation key.
+本次沿用该正文范围, 将理论附录进一步按主题拆分.
 
 ## Examiner 对应
 
-回应 Examiner 1 关于 Chapters 2–3 过重、应围绕实际方法重组的意见.
+延续对 Examiner 1 关于 fundamentals 篇幅与实际方法组织的回应.
 Examiner 2 要求的光学例图来源与研究章交叉引用继续保留在 Chapter 3.
-此次仅完成内容迁移和结构衔接, 不代表全部 examiner 意见均已关闭.
+Chapter 4 中对子空间隔离、金属填充与宇称判据适用条件的说明继续保留在正文.
+此次完成内容迁移、Berry 基础补充和结构衔接, 不代表全部 examiner 意见均已关闭.
