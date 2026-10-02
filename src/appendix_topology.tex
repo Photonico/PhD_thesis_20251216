@@ -1,4 +1,4 @@
-\chapter{A Glimpse of topology}
+\chapter{A prelude into topology}
 \label{cha:appendix_topology}
 
 % opening paragraph
@@ -217,13 +217,13 @@ For a smooth gauge that is single-valued around this path, the Berry phase is:
 \begin{equation}
     \gamma_n(C)
     =\oint_C\vec{\mathcal{A}}_n(\vec{k}\,)\cdot\dif\vec{k}
-    \qquad (\mathrm{mod}\ 2\pi)
+    \qquad (\mathrm{mod}\ 2\mathrm{\pi})
 \label{berry_phase_closed_path_topology}
 \end{equation}
 
 Under equation~\eqref{berry_connection_gauge_transformation_topology},
 the change in $\gamma_n(C)$ is the negative of the phase change accumulated around the loop.
-For a single-valued gauge transformation, this change is an integer multiple of $2\pi$.
+For a single-valued gauge transformation, this change is an integer multiple of $2\mathrm{\pi}$.
 Thus $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ is unchanged.
 The local phase choices cancel, while the phase accumulated by connecting the states around the loop remains.
 In particular, a smooth periodic representative obeys
@@ -231,7 +231,7 @@ $\ket{u_{n\vec{k}(s_\mathrm{f})}}=\ket{u_{n\vec{k}(0)}}$ after the endpoint iden
 Equation~\eqref{parallel_transport_berry_appendix} then gives
 $\ket{\bar{u}_n(s_\mathrm{f})}=\mathrm{e}^{\mathrm{i}\gamma_n(C)}\ket{\bar{u}_n(0)}$.
 This phase mismatch is the holonomy of parallel transport around the loop.
-A parallel-transported representative is also periodic only when the Berry phase vanishes modulo $2\pi$.
+A parallel-transported representative is also periodic only when the Berry phase vanishes modulo $2\mathrm{\pi}$.
 
 The same cancellation can be seen by discretizing the path into $M$ points.
 With the endpoint identified with the starting point, we write:
@@ -241,7 +241,7 @@ With the endpoint identified with the starting point, we write:
     =-\lim_{M\rightarrow\infty}\arg
     \prod_{j=0}^{M-1}
     \braket{u_{n\vec{k}_j}|u_{n\vec{k}_{j+1}}}
-    \qquad (\mathrm{mod}\ 2\pi)
+    \qquad (\mathrm{mod}\ 2\mathrm{\pi})
 \label{berry_phase_overlap_product_topology}
 \end{equation}
 
@@ -274,7 +274,7 @@ we do not need to prescribe an actual time evolution of the electron.
 Changing the arbitrary phase of each state leaves the closed-loop result unchanged,
 whereas a smooth change of the hamiltonian or the loop can change $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ continuously,
 provided the band remains non-degenerate along the loop.
-The phase $\gamma_n(C)$ is not generally restricted to $0$ or $\pi$,
+The phase $\gamma_n(C)$ is not generally restricted to $0$ or $\mathrm{\pi}$,
 and a Berry phase on an arbitrary loop is not by itself the two-dimensional $Z_2$ index.
 The additional structure needed for that index comes from time-reversal symmetry and the full selected band subspace.
 
@@ -307,7 +307,7 @@ For an oriented surface $S$ in the $(k_x,k_y)$ plane, Stokes' theorem gives:
     \gamma_n(\partial S)
     =\oint_{\partial S}\vec{\mathcal{A}}_n\cdot\dif\vec{k}
     =\int_S\mathcal{F}_{n,xy}\dif k_x\dif k_y
-    \qquad (\mathrm{mod}\ 2\pi)
+    \qquad (\mathrm{mod}\ 2\mathrm{\pi})
 \label{berry_curvature_stokes_appendix}
 \end{equation}
 
@@ -358,21 +358,21 @@ Taking the two derivatives gives:
 \end{equation}
 
 here, $\mathcal{A}_\varphi$ is the coefficient of $\dif\varphi$ in the connection integral.
-For a loop at fixed $\theta=\theta_0$, traversed with $\varphi$ increasing from $0$ to $2\pi$, we obtain:
+For a loop at fixed $\theta=\theta_0$, traversed with $\varphi$ increasing from $0$ to $2\mathrm{\pi}$, we obtain:
 
 \begin{equation}
     \gamma(C)
-    =\int_0^{2\pi}\mathcal{A}_\varphi(\theta_0)\dif\varphi
-    =-2\pi\sin^2\frac{\theta_0}{2}
-    =-\pi(1-\cos\theta_0)
-    \qquad (\mathrm{mod}\ 2\pi)
+    =\int_0^{2\mathrm{\pi}}\mathcal{A}_\varphi(\theta_0)\dif\varphi
+    =-2\mathrm{\pi}\sin^2\frac{\theta_0}{2}
+    =-\mathrm{\pi}(1-\cos\theta_0)
+    \qquad (\mathrm{mod}\ 2\mathrm{\pi})
 \label{two_component_berry_phase_appendix}
 \end{equation}
 
-Integrating $\mathcal{F}_{\theta\varphi}$ over the cap $0\leq\theta\leq\theta_0<\pi$ gives the same result.
-The chosen state is smooth over this cap; at the south pole $\theta=\pi$, a different phase convention is needed to remove its dependence on $\varphi$.
-At $\theta_0=\pi/2$, the phase is $-\pi$, although the state representative returns to itself after a full turn.
-Its parallel-transported representative instead returns with the factor $\mathrm{e}^{-\mathrm{i}\pi}=-1$.
+Integrating $\mathcal{F}_{\theta\varphi}$ over the cap $0\leq\theta\leq\theta_0<\mathrm{\pi}$ gives the same result.
+The chosen state is smooth over this cap; at the south pole $\theta=\mathrm{\pi}$, a different phase convention is needed to remove its dependence on $\varphi$.
+At $\theta_0=\mathrm{\pi}/2$, the phase is $-\mathrm{\pi}$, although the state representative returns to itself after a full turn.
+Its parallel-transported representative instead returns with the factor $\mathrm{e}^{-\mathrm{i}\mathrm{\pi}}=-1$.
 The example therefore connects the local connection and curvature to the closed-loop phase.
 It also shows why a geometric phase can vary continuously with the path while the two levels remain separated.
 
@@ -393,28 +393,29 @@ Multiplying $\ket{v}$ by an overall phase leaves all three expectation values un
 so one point represents a normalized state up to this phase freedom.
 This sphere describes the two-component state; its coordinates are not the crystal wave vector or the real-space position of an electron.
 
-For a second path, we choose $\theta_0=\pi/3$, as shown in figure~\ref{fig:geometric_phase_appendix}(a).
-Increasing $\varphi$ traces the boundary of the shaded northern cap.
+For a second path, we choose $\theta_0=\mathrm{\pi}/3$, as shown in figure~\ref{fig:geometric_phase_appendix}(a).
+The blue arrows show the direction of increasing $\varphi$ along the boundary of the shaded northern cap.
 The solid angle of this cap and the geometric phase are related by:
 
 \begin{equation}
-    \Omega_S=2\pi(1-\cos\theta_0)=\pi,
-    \qquad \gamma(C)=-\frac{\Omega_S}{2}=-\frac{\pi}{2}
-    \qquad (\mathrm{mod}\ 2\pi)
+    \Omega_S=2\mathrm{\pi}(1-\cos\theta_0)=\mathrm{\pi},
+    \qquad \gamma(C)=-\frac{\Omega_S}{2}=-\frac{\mathrm{\pi}}{2}
+    \qquad (\mathrm{mod}\ 2\mathrm{\pi})
 \label{two_component_solid_angle_appendix}
 \end{equation}
 
+Since the sphere has unit radius, this solid angle is also the surface area of the shaded cap.
 Along this path, the chosen representative gives $\gamma(\varphi)=-\varphi\sin^2(\theta_0/2)$.
 The factor $\mathrm{e}^{\mathrm{i}\gamma(\varphi)}$ therefore moves clockwise from $1$ to $-\mathrm{i}$ in the complex plane, as shown in panel (b).
-Although $\ket{v(\theta_0,2\pi)}=\ket{v(\theta_0,0)}$, the parallel-transported representative
+Although $\ket{v(\theta_0,2\mathrm{\pi})}=\ket{v(\theta_0,0)}$, the parallel-transported representative
 $\ket{\bar{v}(\varphi)}=\mathrm{e}^{\mathrm{i}\gamma(\varphi)}\ket{v(\theta_0,\varphi)}$
-returns with $\ket{\bar{v}(2\pi)}=-\mathrm{i}\ket{\bar{v}(0)}$.
+returns with $\ket{\bar{v}(2\mathrm{\pi})}=-\mathrm{i}\ket{\bar{v}(0)}$.
 The path thus closes on the state sphere while retaining the phase mismatch described earlier.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures_topo/C.2_geometric_phase.pdf}
-    \caption{Geometric phase for $\theta_0=\pi/3$: (a) the closed path on the state sphere and (b) the corresponding phase factor during parallel transport.}
+    \caption{Geometric phase for $\theta_0=\mathrm{\pi}/3$: (a) the closed path on the state sphere and (b) the corresponding phase factor during parallel transport.}
     \label{fig:geometric_phase_appendix}
 \end{figure}
 
@@ -448,16 +449,17 @@ This is the multi-state counterpart of the phase freedom introduced earlier.
 
 We illustrate this freedom with a two-dimensional plane in a real three-dimensional inner-product space in figure~\ref{fig:subspace_basis_appendix}.
 The blue vectors $\ket{1}$ and $\ket{2}$ form one orthonormal basis for the shaded plane.
-Rotating them within the plane gives the orange basis $\ket{1'}$ and $\ket{2'}$.
+Rotating both vectors through the same angle $\alpha=\mathrm{\pi}/5$ within the plane gives the orange basis $\ket{1'}$ and $\ket{2'}$.
 This real rotation is a special case of a unitary transformation.
 Both bases span the same plane and define the same projector $\hat{\mathcal{P}}$.
+The test state $\ket{\psi}$ is kept fixed when we change the basis.
 Consequently, the projection $\hat{\mathcal{P}}\ket{\psi}$ of a test state outside the plane is unchanged.
 The plane represents a subspace of states, rather than an energy band or a plane in the crystal;
 the actual Bloch states belong to a complex Hilbert space that need not be three-dimensional.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures_topo/C.3_subspace_basis.pdf}
+    \includegraphics[width=0.8\textwidth]{figures_topo/C.3_subspace_basis.pdf}
     \caption{Two orthonormal bases spanning the same subspace, with the same projector and the same projection of $\ket{\psi}$.}
     \label{fig:subspace_basis_appendix}
 \end{figure}
