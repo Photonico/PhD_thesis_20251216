@@ -61,11 +61,11 @@ $$
 
 本征值 $E_{n\vec{k}}$ 给出能带色散。然而，本征方程也给出了每个 $\vec{k}$ 处的电子态。因此，布里渊区中相邻的两点不仅分别对应一组能量，也分别对应一组可以通过重叠来比较的态。当我们在布里渊区中移动时，这些重叠描述电子态如何变化。能带拓扑所关心的，正是这种连接的整体结构。
 
-即使对于一个归一化的态，其表示也已经存在自由度。对于任意实相位 $\phi_n(\vec{k}\,)$，我们都可以作如下替换：
+即使对于一个归一化的态，其表示也已经存在自由度。对于任意实相位 $\varphi_n(\vec{k}\,)$，我们都可以作如下替换：
 
 $$
 \lvert u'_{n\vec{k}}\rangle
-    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\rangle
+    =\mathrm{e}^{\mathrm{i}\varphi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\rangle
 \tag{4.4}
 $$
 
@@ -185,10 +185,10 @@ $$
 $$
 \begin{aligned}
     \vec{\mathcal{A}}\,'_n(\vec{k}\,)
-    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k}\,)}
+    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\varphi_n(\vec{k}\,)}
     \langle u_{n\vec{k}}\rvert\nabla_{\vec{k}}
-    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\rangle\right] \\
-    &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\phi_n(\vec{k}\,)
+    \left[\mathrm{e}^{\mathrm{i}\varphi_n(\vec{k}\,)}\lvert u_{n\vec{k}}\rangle\right] \\
+    &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\varphi_n(\vec{k}\,)
 \end{aligned}
 \tag{4.13}
 $$

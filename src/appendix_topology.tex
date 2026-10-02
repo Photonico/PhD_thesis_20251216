@@ -22,11 +22,11 @@ with inner products normalized over one unit cell.
 \subsection{The phase of a quantum state}
 
 There is already a freedom in specifying an individual normalized state.
-For any real phase $\phi_n(\vec{k}\,)$, we can replace it by:
+For any real phase $\varphi_n(\vec{k}\,)$, we can replace it by:
 
 \begin{equation}
     \ket{u'_{n\vec{k}}}
-    =\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}
+    =\mathrm{e}^{\mathrm{i}\varphi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}
 \label{bloch_phase_freedom_topology}
 \end{equation}
 
@@ -161,10 +161,10 @@ Differentiating both the phase factor and the state gives:
 \begin{equation}
 \begin{aligned}
     \vec{\mathcal{A}}\,'_n(\vec{k}\,)
-    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\phi_n(\vec{k}\,)}
+    &=\mathrm{i}\,\mathrm{e}^{-\mathrm{i}\varphi_n(\vec{k}\,)}
     \bra{u_{n\vec{k}}}\nabla_{\vec{k}}
-    \left[\mathrm{e}^{\mathrm{i}\phi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}\right] \\
-    &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\phi_n(\vec{k}\,)
+    \left[\mathrm{e}^{\mathrm{i}\varphi_n(\vec{k}\,)}\ket{u_{n\vec{k}}}\right] \\
+    &=\vec{\mathcal{A}}_n(\vec{k}\,)-\nabla_{\vec{k}}\varphi_n(\vec{k}\,)
 \end{aligned}
 \label{berry_connection_gauge_transformation_topology}
 \end{equation}
@@ -176,7 +176,7 @@ For an open path from $\vec{k}_\mathrm{i}$ to $\vec{k}_\mathrm{f}$, the connecti
 \begin{equation}
     \int_C\vec{\mathcal{A}}\,'_n\cdot\dif\vec{k}
     =\int_C\vec{\mathcal{A}}_n\cdot\dif\vec{k}
-    -\phi_n(\vec{k}_\mathrm{f})+\phi_n(\vec{k}_\mathrm{i})
+    -\varphi_n(\vec{k}_\mathrm{f})+\varphi_n(\vec{k}_\mathrm{i})
 \label{open_path_gauge_endpoints_appendix}
 \end{equation}
 
@@ -255,10 +255,10 @@ We illustrate this cancellation with four points on the same closed path in figu
 For brevity, we denote the states by $\ket{u_j}\coloneqq\ket{u_{n\vec{k}_j}}$ and their overlap product by
 $Z_C\coloneqq\prod_{j=0}^{3}\braket{u_j|u_{j+1}}$, with $\ket{u_4}=\ket{u_0}$ after the endpoint identification.
 The green points specify the wave vectors, while the orange pointers show the extra phase factors chosen for the state representatives.
-In panel (a), these factors are all unity; in panel (b), we replace each representative by $\ket{u'_j}=\mathrm{e}^{\mathrm{i}\phi_j}\ket{u_j}$.
+In panel (a), these factors are all unity; in panel (b), we replace each representative by $\ket{u'_j}=\mathrm{e}^{\mathrm{i}\varphi_j}\ket{u_j}$.
 The pointers therefore describe phase choices, rather than spin directions or real-space vectors.
-Each overlap acquires the factor $\mathrm{e}^{\mathrm{i}(\phi_{j+1}-\phi_j)}$.
-For a consistent closed-loop choice, $\mathrm{e}^{\mathrm{i}\phi_4}=\mathrm{e}^{\mathrm{i}\phi_0}$, and the product of these factors is unity.
+Each overlap acquires the factor $\mathrm{e}^{\mathrm{i}(\varphi_{j+1}-\varphi_j)}$.
+For a consistent closed-loop choice, $\mathrm{e}^{\mathrm{i}\varphi_4}=\mathrm{e}^{\mathrm{i}\varphi_0}$, and the product of these factors is unity.
 Consequently, the two choices give the same $Z_C$ and the same closed-loop phase.
 
 \begin{figure}[htbp]
@@ -299,7 +299,7 @@ For a smooth non-degenerate band, the Berry curvature is defined by the antisymm
 \end{equation}
 
 here, $\ket{\partial_{k_i}u_{n\vec{k}}}$ denotes $\partial_{k_i}\ket{u_{n\vec{k}}}$.
-Under a smooth gauge transformation, the additional mixed derivatives of $\phi_n$ cancel, giving $\mathcal{F}'_{n,ij}=\mathcal{F}_{n,ij}$.
+Under a smooth gauge transformation, the additional mixed derivatives of $\varphi_n$ cancel, giving $\mathcal{F}'_{n,ij}=\mathcal{F}_{n,ij}$.
 Thus the single-band curvature is gauge invariant even though the connection depends on the gauge.
 For an oriented surface $S$ in the $(k_x,k_y)$ plane, Stokes' theorem gives:
 
