@@ -67,6 +67,17 @@ To leading adiabatic order, we therefore write the evolving state as:
 \end{equation}
 
 The dynamical phase $\delta_n(t)$ is determined by the energy and the time spent evolving.
+For a fixed hamiltonian, it gives the familiar factor $\mathrm{e}^{-\mathrm{i}E_nt/\hbar}$.
+However, retaining this phase alone for a changing eigenstate gives
+$\ket{\Psi_0(t)}=\mathrm{e}^{\mathrm{i}\delta_n(t)}\ket{n(t)}$ and:
+
+\begin{equation}
+    \left[\mathrm{i}\hbar\frac{\dif}{\dif t}-\hat{h}(t)\right]\ket{\Psi_0(t)}
+    =\mathrm{i}\hbar\mathrm{e}^{\mathrm{i}\delta_n(t)}\frac{\dif}{\dif t}\ket{n(t)}
+\label{dynamical_phase_residual_appendix}
+\end{equation}
+
+The right-hand side need not vanish.
 The additional phase $\gamma_n(t)$ accounts for the change of the instantaneous eigenstate itself.
 Substituting this form into the Schrödinger equation and projecting onto $\bra{n(t)}$ gives, at the same order:
 
@@ -206,7 +217,25 @@ We introduce a smooth path coordinate $s$ and change the representative at each 
 
 The last relation removes the local phase change between neighbouring representatives.
 It is the parallel-transport condition for the normalized state~\cite{xiao2010berry}.
-The derivative can still have components orthogonal to the state, so the state itself can change along the path.
+To describe the remaining change, we abbreviate $\ket{u_n(s)}\coloneqq\ket{u_{n\vec{k}(s)}}$
+and introduce the covariant derivative along the path:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \mathcal{A}_{n,s}&=\vec{\mathcal{A}}_n\cdot\frac{\dif\vec{k}}{\dif s},
+    \qquad D_s=\frac{\dif}{\dif s}+\mathrm{i}\mathcal{A}_{n,s} \\
+    D_s\ket{u_n(s)}
+    &=\left[\hat{I}-\ket{u_n(s)}\bra{u_n(s)}\right]
+    \frac{\dif}{\dif s}\ket{u_n(s)}
+\end{aligned}\right.
+\label{covariant_state_derivative_appendix}
+\end{equation}
+
+The connection subtracts the derivative component along the state itself.
+Under $\ket{u'_n(s)}=\mathrm{e}^{\mathrm{i}\varphi_n(s)}\ket{u_n(s)}$,
+we obtain $D'_s\ket{u'_n(s)}=\mathrm{e}^{\mathrm{i}\varphi_n(s)}D_s\ket{u_n(s)}$.
+The orthogonal component can remain non-zero when the eigenspace changes.
+Therefore, parallel transport fixes the local phase without requiring $D_s\ket{u_n(s)}=0$.
 For a closed loop, a representative transported in this way need not return with its initial phase.
 
 \subsection{Closing the path}
@@ -250,6 +279,9 @@ using equation~\eqref{reciprocal_lattice_identification_topology} if the loop cr
 The mesh must be fine enough that successive overlaps are non-zero.
 Every local phase then appears once in a bra and once in a ket, so it cancels from the product.
 The minus sign follows from the convention in equation~\eqref{berry_connection_topology}.
+At a finite mesh spacing, the overlap product generally has a magnitude smaller than unity.
+Its argument gives the phase; the magnitude is not an additional phase contribution.
+Equation~\eqref{neighbouring_bloch_overlap_topology} recovers the connection integral as the spacing tends to zero.
 
 We illustrate this cancellation with four points on the same closed path in figure~\ref{fig:phase_gauge_appendix}.
 For brevity, we denote the states by $\ket{u_j}\coloneqq\ket{u_{n\vec{k}_j}}$ and their overlap product by
@@ -316,6 +348,68 @@ The boundary orientation is fixed by the surface orientation.
 For a sufficiently small loop, the curvature consequently gives the geometric phase per oriented area.
 A loop winding around the periodically identified Brillouin zone need not bound such a surface within that zone;
 equation~\eqref{berry_phase_closed_path_topology} still defines its phase, but the surface expression requires this additional check.
+
+\subsection{The curvature in different dimensions}
+
+In three-dimensional parameter space, we can express the same curvature as a vector:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \vec{\Omega}_n&=\nabla_{\vec{k}}\times\vec{\mathcal{A}}_n \\
+    \Omega_{n,x}&=\mathcal{F}_{n,yz} \\
+    \Omega_{n,y}&=\mathcal{F}_{n,zx}=-\mathcal{F}_{n,xz} \\
+    \Omega_{n,z}&=\mathcal{F}_{n,xy}
+\end{aligned}\right.
+\label{berry_curvature_vector_appendix}
+\end{equation}
+
+Equivalently, $\Omega_{n,i}=\frac{1}{2}\sum_{j,l}\epsilon_{ijl}\mathcal{F}_{n,jl}$,
+where $\epsilon_{ijl}$ is the Levi--Civita symbol in a right-handed coordinate system.
+In two dimensions, $\mathcal{F}_{n,xy}$ is the perpendicular curvature component.
+The relation resembles $\vec{B}=\nabla_{\vec{r}}\times\vec{A}_\mathrm{EM}$ in electrodynamics:
+the connection plays the role of a vector potential, while the curvature plays the role of its field strength.
+Adding a gradient changes the potential but leaves its curl unchanged.
+Here, the field describes the electronic states in parameter space; the parameter space itself can be flat~\cite{xiao2010berry}.
+
+For an arbitrary number of parameters, differential forms express the line and surface elements directly.
+Denoting the corresponding one-form and two-form by $\mathcal{A}_n$ and $\mathcal{F}_n$, we write:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \mathcal{A}_n&=\sum_i\mathcal{A}_{n,i}\dif k_i \\
+    \mathcal{F}_n&=\dif\mathcal{A}_n
+    =\sum_{i<j}\mathcal{F}_{n,ij}\dif k_i\wedge\dif k_j
+\end{aligned}\right.
+\label{berry_differential_forms_appendix}
+\end{equation}
+
+here, $\dif$ acting on a form denotes the exterior derivative.
+The wedge product represents an oriented area element:
+$\dif k_i\wedge\dif k_j=-\dif k_j\wedge\dif k_i$ and $\dif k_i\wedge\dif k_i=0$.
+These forms collect the same components used above;
+integrating the one-form along a boundary or the two-form over its surface gives equation~\eqref{berry_curvature_stokes_appendix}.
+
+\subsection{The curvature from a projector}
+
+The phase freedom in equation~\eqref{bloch_phase_freedom_topology} leaves the single-state projector
+$\hat{\mathcal{P}}_n=\ket{u_{n\vec{k}}}\bra{u_{n\vec{k}}}$ unchanged.
+The gauge-dependent connection consequently cannot be determined by this projector alone.
+Differentiating $\hat{\mathcal{P}}_n^2=\hat{\mathcal{P}}_n$ and using its constant unit trace gives:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \operatorname{Tr}\!\left[\hat{\mathcal{P}}_n\partial_{k_i}\hat{\mathcal{P}}_n\right]
+    &=\frac{1}{2}\partial_{k_i}\operatorname{Tr}\hat{\mathcal{P}}_n^2=0 \\
+    \mathcal{F}_{n,ij}
+    &=\mathrm{i}\operatorname{Tr}\!\left[
+    \hat{\mathcal{P}}_n[\partial_{k_i}\hat{\mathcal{P}}_n,\partial_{k_j}\hat{\mathcal{P}}_n]\right]
+\end{aligned}\right.
+\label{projector_berry_curvature_appendix}
+\end{equation}
+
+here, the trace is over the state space.
+Substituting the differentiated ket--bra product into the second line recovers equation~\eqref{abelian_berry_curvature_appendix}.
+The projector therefore determines the curvature, while a connection additionally requires a choice of phase.
 
 \subsection{A two-component example}
 \label{subsec:berry_two_component_example_appendix}
@@ -419,6 +513,54 @@ The path thus closes on the state sphere while retaining the phase mismatch desc
     \label{fig:geometric_phase_appendix}
 \end{figure}
 
+\subsection{A connection to transverse transport}
+
+The curvature also enters the motion of electrons under an external field.
+For a wave packet in an isolated band, a weak electric field and zero magnetic field give~\cite{sundaram1999wave,xiao2010berry}:
+
+\begin{equation}
+\left\{\begin{aligned}
+    \hbar\dot{\vec{k}}&=-e\vec{E} \\
+    \dot{\vec{r}}&=\frac{1}{\hbar}\nabla_{\vec{k}}E_{n\vec{k}}
+    -\dot{\vec{k}}\times\vec{\Omega}_n
+\end{aligned}\right.
+\label{berry_anomalous_velocity_appendix}
+\end{equation}
+
+here, the electron charge is $-e$, with $e>0$.
+The curvature term produces a velocity perpendicular to the electric field.
+In two dimensions, summing its charge-current contribution over occupied states gives:
+
+\begin{equation}
+    \sigma_{xy}^{\mathrm{int}}
+    =-\frac{e^2}{\hbar}\sum_n\int_\mathrm{BZ}
+    \frac{\dif^2k}{(2\mathrm{\pi})^2}\,
+    f_{n\vec{k}}\Omega_{n,z}(\vec{k}\,)
+\label{intrinsic_hall_curvature_appendix}
+\end{equation}
+
+here, $j_x=\sigma_{xy}^{\mathrm{int}}E_y$ fixes the sign convention,
+and $f_{n\vec{k}}$ is the Fermi--Dirac occupation.
+This is the intrinsic Hall contribution; the ordinary Hall effect also involves the Lorentz force from a real magnetic field.
+For an isolated band, the integrated curvature defines a Chern number.
+For a band insulator at zero temperature, the Hall expression then reduces to:
+
+\begin{equation}
+    C_n=\frac{1}{2\mathrm{\pi}}\int_\mathrm{BZ}\Omega_{n,z}\dif^2k\in\mathbb{Z},
+    \qquad \sigma_{xy}^{\mathrm{int}}=-\frac{e^2}{h}\sum_{n\,\mathrm{filled}}C_n
+\label{chern_hall_relation_appendix}
+\end{equation}
+
+The integer counts the winding of phase transformations joining local gauges over the Brillouin zone.
+It can change only when the band isolation is lost during a smooth deformation.
+For a band insulator with broken time-reversal symmetry, this relation describes the quantized anomalous Hall response.
+With a magnetic field, the corresponding analysis uses magnetic bands.
+Time-reversal-related states instead cancel their contributions to the intrinsic charge Hall conductivity.
+They can still contribute to a spin Hall response, whose matrix elements involve the spin-current operator;
+with spin-orbit coupling, this is not generally the difference of two independent spin-channel curvatures.
+These examples explain the physical role of the curvature~\cite{xiao2010berry}.
+The time-reversal invariant $Z_2$ index used in this thesis requires the full band subspace, to which we now return.
+
 \subsection{From an individual band to a band subspace}
 
 The single-band discussion assumes that the state can be followed separately from all other states along the path.
@@ -497,6 +639,9 @@ The corresponding curvature is also a matrix:
 The commutator accounts for the order of the matrix operations.
 This is the non-Abelian generalization of equation~\eqref{abelian_berry_curvature_appendix}~\cite{wilczek1984appearance,xiao2010berry}.
 The matrix curvature transforms covariantly under a change of basis; its trace is gauge invariant.
+The same differential-form notation applies with matrix-valued coefficients:
+$\mathcal{F}=\dif\mathcal{A}-\mathrm{i}\mathcal{A}\wedge\mathcal{A}$.
+The ordered matrix products in the wedge term give the commutator in equation~\eqref{nonabelian_berry_curvature_appendix}.
 Consequently, assigning independent single-band phases to arbitrary members of a degenerate pair does not characterize the whole subspace.
 We must now ask whether these local choices of basis can be joined over the whole Brillouin zone
 while respecting time-reversal pairing.
