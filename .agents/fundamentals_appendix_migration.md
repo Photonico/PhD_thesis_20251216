@@ -91,9 +91,10 @@ C.2 的 phi 上移约一行; phi、theta_0、n、gamma=-pi/2 及两端方位角�
 按用户记号习惯, 正文 53 处圆周率改为 `\mathrm{\pi}`;
 Ch4 的波矢刻度及 C.2/C.3 的圆周率标签同步更新. 轨道、化学键与等离激元中的 pi
 仍采用其原有符号, 程序数值常数 `np.pi` 无变化.
-三张图中的 Dirac notation 改用 MathText 的配对伸缩定界符:
-ket 为 `\left|...\right\rangle`, 内积为 `\left\langle...\middle|...\right\rangle`,
-修正普通竖线与角括号的高度差. 正文继续使用现有 braket 命令.
+三张图中的 Dirac notation 使用真正的 LaTeX `braket` 宏包,
+以 `\ket{...}` 和 `\braket{...|...}` 排版, 对应文字单独启用 `usetex=True`.
+态矢标签统一使用 `label = 13`, 固定大小的括号不随撇号、上下标变化,
+也避免 MathText 伸缩定界符缩小后笔画变细. 正文继续使用现有 braket 命令.
 
 已执行完整 notebook, 并独立数值验证闭路重叠积的规范不变性、相位终点 -i
 及两套基底给出的投影算符一致性.
