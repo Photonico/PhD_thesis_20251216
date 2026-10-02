@@ -1,4 +1,4 @@
-\chapter{A journey of quantum physics}
+\chapter{A glimpse into quantum physics}
 \label{cha:appendix_quantum}
 
 In this appendix, we develop the basic quantum-mechanical descriptions used in chapter~\ref{cha:fundamentals_a}.
@@ -241,7 +241,7 @@ where each $x_i$ includes both spatial and spin degrees of freedom.
 The dynamics are governed by a many-body hamiltonian operator $\hat{H}$ and the time evolution is still described by the Schrödinger equation~\eqref{time-dependent_Schrodinger_equation}.
 
 We work in Hartree atomic units unless stated otherwise.
-In this unit system, $\hbar=1$, $m_\mathrm{e}=1$, $e=1$, and $4\pi\varepsilon_0=1$.
+In this unit system, $\hbar=1$, $m_\mathrm{e}=1$, $e=1$, and $4\mathrm{\pi}\varepsilon_0=1$.
 As a result, energies are measured in Hartree and lengths in the Bohr radius, and the nuclear masses $M_I$ are also given in units of the electron mass.
 
 We adopt $i$ labels the electrons and $I$ labels nuclei.
@@ -1056,7 +1056,7 @@ This leads to the Thomas--Fermi kinetic energy functional:
 \label{tf_functional}
 \end{equation}
 
-here, $C=\frac{3}{10}(3\pi^2)^{2/3}$ for a spin-degenerate electron gas in atomic units.
+here, $C=\frac{3}{10}(3\mathrm{\pi}^2)^{2/3}$ for a spin-degenerate electron gas in atomic units.
 This form of kinetic energy functional was introduced independently in the seminal works by L.~H.~Thomas~\cite{thomas1927calculation} and E.~Fermi~\cite{fermi1927metodo}.
 
 Moreover, to account for inhomogeneity effects beyond the purely local Thomas--Fermi form, one often adds the von Weizsäcker gradient correction to the kinetic energy functional.
@@ -1086,7 +1086,7 @@ At each point $\vec{r}$, the local density $n(\vec{r}\,)$ fixes a local Fermi mo
 For a spin-degenerate system, the phase-space counting gives:
 
 \begin{equation}
-    n(\vec{r}\,) = \frac{2}{h^3}\frac{4\pi}{3}\,p_F^3(\vec{r}\,)
+    n(\vec{r}\,) = \frac{2}{h^3}\frac{4\mathrm{\pi}}{3}\,p_F^3(\vec{r}\,)
 \label{TF_density_pf_intro}
 \end{equation}
 
@@ -1104,14 +1104,14 @@ To close the Thomas--Fermi picture, we treat $v(\vec{r}\,)$ as an electrostatic 
 In atomic units, it satisfies the Poisson equation:
 
 \begin{equation}
-    \nabla^2 v(\vec{r}\,) = -4\pi\,n(\vec{r}\,)
+    \nabla^2 v(\vec{r}\,) = -4\mathrm{\pi}\,n(\vec{r}\,)
 \label{TF_poisson_equation}
 \end{equation}
 
 Eliminating $p_F(\vec{r}\,)$ between \eqref{TF_density_pf_intro} and \eqref{TF_mu_local_intro}, we obtain:
 
 \begin{equation}
-    n(\vec{r}\,) = \frac{1}{3\pi^2}\,[2(\mu - v(\vec{r}\,))]^{3/2}
+    n(\vec{r}\,) = \frac{1}{3\mathrm{\pi}^2}\,[2(\mu - v(\vec{r}\,))]^{3/2}
 \label{TF_density_muV}
 \end{equation}
 
@@ -1119,7 +1119,7 @@ Substituting this expression into equation~\eqref{TF_poisson_equation},
 We arrive at the Thomas--Fermi equation:
 
 \begin{equation}
-    \nabla^2 v(\vec{r}\,)=-\frac{4}{3\pi}\,[2(\mu-v(\vec{r}\,))]^{3/2}
+    \nabla^2 v(\vec{r}\,)=-\frac{4}{3\mathrm{\pi}}\,[2(\mu-v(\vec{r}\,))]^{3/2}
 \label{thomas_fermi_equation}
 \end{equation}
 
@@ -1173,7 +1173,7 @@ For a homogeneous spin-unpolarized electron gas with density $n$,
 the Fermi wave vector satisfies~\cite{simon2013oxford}:
 
 \begin{equation}
-    k_\mathrm{F} = \left(3\pi^2 n\right)^{\frac{1}{3}}
+    k_\mathrm{F} = \left(3\mathrm{\pi}^2 n\right)^{\frac{1}{3}}
 \label{Fermi_wave_vector_homogeneous_gas}
 \end{equation}
 
@@ -1181,7 +1181,7 @@ and the corresponding kinetic energy density reads:
 
 \begin{equation}
     t(n) = \frac{3}{10}\,k_\mathrm{F}^2\,n
-    = \frac{3}{10}\left(3\pi^2\right)^{\frac{2}{3}}n^{\frac{5}{3}}
+    = \frac{3}{10}\left(3\mathrm{\pi}^2\right)^{\frac{2}{3}}n^{\frac{5}{3}}
 \label{kinetic_energy_density_homogeneous_gas}
 \end{equation}
 
@@ -1197,7 +1197,7 @@ Accordingly, this yields the Thomas--Fermi kinetic energy functional~\cite{thoma
 with the Thomas--Fermi constant:
 
 \begin{equation}
-    C_1 \coloneqq \frac{3}{10}\left(3\pi^2\right)^{\frac{2}{3}} 
+    C_1 \coloneqq \frac{3}{10}\left(3\mathrm{\pi}^2\right)^{\frac{2}{3}}
 \label{Thomas_Fermi_constant_C1}
 \end{equation}
 
@@ -1311,7 +1311,7 @@ Equation~\eqref{Thomas_Fermi_equation} then becomes:
 Solving for the density, we obtain:
 
 \begin{equation}
-    n(\vec{r}\,)=\frac{1}{3\pi^2}\left[2\left(\lambda-v(\vec{r}\,)\right)\right]^{\frac{3}{2}}
+    n(\vec{r}\,)=\frac{1}{3\mathrm{\pi}^2}\left[2\left(\lambda-v(\vec{r}\,)\right)\right]^{\frac{3}{2}}
 \label{density_TF_from_potential}
 \end{equation}
 
@@ -1321,28 +1321,28 @@ To derive a differential form, we use the Poisson equation.
 For the nuclear external potential, we have:
 
 \begin{equation}
-    \nabla^2 v_\mathrm{ext}(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)
+    \nabla^2 v_\mathrm{ext}(\vec{r}\,)=4\mathrm{\pi}\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)
 \label{Poisson_external_potential}
 \end{equation}
 
 For the Hartree potential, we have:
 
 \begin{equation}
-    \nabla^2 v_\mathrm{H}([n];\vec{r}\,)=-4\pi n(\vec{r}\,)
+    \nabla^2 v_\mathrm{H}([n];\vec{r}\,)=-4\mathrm{\pi} n(\vec{r}\,)
 \label{Poisson_Hartree_potential}
 \end{equation}
 
 Combining equations~\eqref{effective_potential_definition}, \eqref{Poisson_external_potential}, and \eqref{Poisson_Hartree_potential}, we find:
 
 \begin{equation}
-    \nabla^2 v(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-4\pi n(\vec{r}\,)
+    \nabla^2 v(\vec{r}\,)=4\mathrm{\pi}\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-4\mathrm{\pi} n(\vec{r}\,)
 \label{Poisson_effective_potential}
 \end{equation}
 
 Substituting equation~\eqref{density_TF_from_potential} into equation~\eqref{Poisson_effective_potential}, we arrive at the differential form of the Thomas--Fermi equation:
 
 \begin{equation}
-    \nabla^2 v(\vec{r}\,)=4\pi\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-\frac{4}{3\pi}\left[2\left(\lambda-v(\vec{r}\,)\right)\right]^{\frac{3}{2}}
+    \nabla^2 v(\vec{r}\,)=4\mathrm{\pi}\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-\frac{4}{3\mathrm{\pi}}\left[2\left(\lambda-v(\vec{r}\,)\right)\right]^{\frac{3}{2}}
 \label{differential_form_Thomas_Fermi_equation}
 \end{equation}
 
@@ -1413,7 +1413,7 @@ Since the Dirac exchange functional is given by:
 here, the corresponding constant reads:
 
 \begin{equation}
-    C_2 \coloneqq \frac{3}{4}\left(\frac{3}{\pi}\right)^{\frac{1}{3}}
+    C_2 \coloneqq \frac{3}{4}\left(\frac{3}{\mathrm{\pi}}\right)^{\frac{1}{3}}
 \label{Dirac_exchange_constant}
 \end{equation}
 
