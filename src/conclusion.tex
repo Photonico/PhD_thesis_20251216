@@ -6,7 +6,7 @@ We started this thesis with a question: how do changes in atomic structure modif
 To address this question, we compared graphene-based heterostructures, penta-bipyramid boron phases, and pristine and hydrogen-functionalized beryllene.
 Each comparison begins with a specified structure and then changes its interface, dimensionality, or surface termination.
 These changes redistribute charge, reorganize electronic states, and modify the response to an electromagnetic field.
-For selected structures, they also bring magnetism, electron--phonon coupling, and band topology into the discussion.
+For selected structures, we also examine how the electronic and lattice degrees of freedom enter magnetism, phonon-mediated pairing, and band topology.
 
 We now collect the conclusions from these comparisons and examine how they connect to one another.
 We then discuss the approximations that constrain their interpretation and the further calculations and experiments that can test them.
@@ -19,21 +19,19 @@ Throughout this discussion, we distinguish the properties of the calculated stru
 
 Firstly, chapter~\ref{cha:project_bilayers} examines how an adjacent boron-containing layer modifies graphene.
 The constituent monolayers already span different electronic characters: graphene is a semimetal, borophene is metallic, and the selected \ce{BC3} and \ce{B4C3} monolayers are indirect-gap semiconductors.
-The HSE06 gaps of the latter two monolayers reach 1.822 eV and 2.381 eV, respectively.
+HSE06 gives gaps of 1.822 eV and 2.381 eV for the latter two monolayers, respectively.
 Stacking these constituents therefore compares the effect of coupling graphene to either a metallic layer or a semiconducting layer within the same study.
 
 The resulting Graphene-Borophene heterostructure remains metallic, whereas Graphene-\ce{BC3} and Graphene-\ce{B4C3} display semimetallic band structures.
 The graphene-derived bands remain recognizable near the $\mathrm{K}$ point.
 Interlayer coupling opens local gaps of approximately 50 meV in Graphene-\ce{BC3} and 20 meV in Graphene-\ce{B4C3} at this point, but these local separations do not establish an insulating gap for the complete bilayer.
-This distinction matters when we connect a band-structure feature to the electronic character of the whole system.
 The charge-density differences further show interfacial redistribution from graphene towards the boron-containing layer, with the largest redistribution in the studied Graphene-\ce{BC3} structure.
 The local atomic arrangement therefore modifies the coupling even when the layers retain recognizable features of their isolated electronic structures.
 
 The band alignment gives another view of the interface.
 Within the Schottky--Mott comparison, the graphene contact favours an n-type alignment with \ce{BC3} and a p-type alignment with \ce{B4C3}.
-These estimates identify the relative positions of the relevant electronic energies.
-They do not determine the current through a fabricated contact, since the present work does not calculate carrier transmission through a complete device.
-Nevertheless, the opposite alignment tendencies show that changing the boron-carbide constituent can change the contact character without changing graphene itself.
+The opposite alignment tendencies show that changing the boron-carbide constituent changes the relative position of the graphene Fermi level and the semiconductor band edges.
+They identify which carrier barrier is smaller within this alignment model; calculating an actual injection current would additionally require the contact geometry and carrier transmission.
 
 The optical spectra resolve further differences between the heterostructures.
 All three absorb within the visible region in the calculated response, while the relative strengths depend on photon energy and polarization.
@@ -41,10 +39,9 @@ Graphene-Borophene has the stronger absorption near the low-energy rise around 1
 The sub-eV in-plane energy-loss peaks occur in the two graphene--boron-carbide heterostructures and are absent from the corresponding Graphene-Borophene spectra.
 We therefore need to compare absorption and energy loss separately, since the two quantities probe different aspects of the dielectric response.
 
-The principal conclusion is that interfacial coupling modifies charge redistribution, band alignment, and optical transitions while preserving several features of the constituent layers.
-The spectra establish direction-dependent response within the adopted optical treatment.
-They do not establish natural optical activity from the reported off-diagonal dielectric components, or a propagating plasmon from an isolated loss peak.
-These further interpretations require the tensor and finite-wave-vector analyses discussed below.
+We therefore arrive at an interface whose constituent layers remain electronically recognizable, but whose alignment and response depend on their interaction.
+Retaining the graphene-derived dispersion does not leave the optical spectrum unchanged: the adjacent layer contributes its own states, and the combined system develops a different distribution of transition energies and strengths.
+The comparison with the isolated monolayers identifies these changes and connects them to the formation of the interface.
 
 \subsection{Dimensional reduction and termination in the boron framework}
 
@@ -54,8 +51,8 @@ Hydrogen termination subsequently changes the bonding at its exposed surfaces.
 The resulting electronic structures show that these two operations need not produce the same trend.
 
 Among the tested magnetic configurations, the HSE06 calculation favours the antiferromagnetic monolayer over the ferromagnetic monolayer and gives a gap of 0.105 eV.
-This result connects reduced coordination to a magnetic electronic state within the chosen treatment.
-It establishes an energetic preference among the configurations examined, while leaving the finite-temperature magnetic behaviour open.
+The spin density locates the magnetic moments mainly on the apical boron atoms of the bipyramids.
+This spatial information connects the magnetic state to particular sites within the reduced framework.
 The pristine bilayer has a different character: HSE06 opens a gap of 0.67 eV, whereas PBE gives a semimetallic result.
 Hydrogen termination then produces a metallic bilayer.
 Therefore, hydrogen does not simply open a gap in this structural family; its effect depends on the electronic states and bonding of the starting sheet.
@@ -65,26 +62,27 @@ For a Coulomb pseudopotential $\mu^*=0.13$, the Allen--Dynes estimates give tran
 The hydrogen-terminated bilayer has the larger coupling constant, $\lambda=1.01$, compared with $\lambda=0.931$ in the bulk, but it has the lower estimated transition temperature.
 This comparison illustrates why the coupling constant alone does not determine $T_{\mathrm{c}}$.
 The phonon frequencies entering the pairing problem also control its energy scale.
-The anisotropic gap calculations add information about the distribution of the gap, but a precise anisotropic transition temperature still requires converged solutions that bracket its closure.
+The anisotropic calculations further resolve a distribution of superconducting gaps that shifts towards lower energies as temperature increases.
+Their sampled temperatures establish this suppression, while a precise transition temperature still requires converged solutions that bracket gap closure.
 
 The stability results constrain this interpretation.
 The hydrogen-terminated monolayer develops a clear harmonic instability, while the terminated bilayer retains small imaginary frequencies near $\Gamma$ whose origin remains unresolved.
-Its finite-time persistence during the reported 400 K molecular-dynamics trajectory does not settle this long-wavelength question.
+The terminated bilayer retains its bonding framework during the reported 400 K molecular-dynamics trajectory, leaving the long-wavelength question open.
 The superconducting prediction therefore concerns the specified bilayer structure and its calculated electronic and vibrational reference.
 
 The optical calculations reveal strong directional differences across the boron structures.
 They use a non-spin-polarized PBE reference, including for the monolayer.
 Consequently, these spectra characterize that reference and cannot describe the HSE06 antiferromagnetic semiconductor without a further calculation.
-The comparison nevertheless shows how dimensional reduction and termination redistribute the calculated interband response.
-Taken together, the electronic, magnetic, and electron--phonon results identify several competing behaviours within one boron framework and specify which structural and computational conditions support each prediction.
+Within this reference, the largest absorption coefficients in the visible interval occur for the pristine bilayer in the $xx$ component, the hydrogen-terminated bilayer in $yy$, and the bulk in $zz$.
+The different directional comparisons therefore select different structures.
+Together with the electronic and electron--phonon results, this finding shows how the same boron framework accommodates different responses as its coordination and termination change.
 
 \subsection{Structure, hydrogenation, and band topology in beryllene}
 
 Finally, chapter~\ref{cha:project_beryllene} examines the $\alpha$ and $\beta$ phases of beryllene, extends the comparison to an ABA-stacked square-lattice trilayer, and investigates selected hydrogen arrangements.
 The retained hydrogenated structures are 2H-$\alpha$-, 1H-$\beta$-, and 2H-$\beta$-beryllene.
 This comparison separates changes in the beryllium framework from changes in hydrogen coverage and arrangement.
-The analysis also distinguishes harmonic stability, finite-time structural persistence, adsorption thermodynamics, and competition with another geometry.
-These questions concern different parts of the stability problem.
+The analysis follows the stability question from small lattice displacements to hydrogen exchange with the environment and competition with another geometry.
 
 The pristine $\alpha$, $\beta$, and cubic trilayer structures have no imaginary phonon frequencies in the reported harmonic calculations.
 Their cohesive energies nevertheless remain less favourable than that of bulk hcp beryllium.
@@ -93,13 +91,14 @@ Among the hydrogenated sheets, 2H-$\alpha$-beryllene also satisfies the reported
 For 1H-$\beta$-beryllene, the long-wavelength flexural behaviour remains unresolved: the sampled commensurate modes are real, but the interpolated branch develops imaginary frequencies near $\Gamma$.
 The 2H-$\beta$ structure has a soft mode at a commensurate wave vector, so this instability cannot be dismissed solely as an interpolation effect.
 
-The frozen-phonon calculation resolves the shallow energy landscape along this 2H-$\beta$ mode.
-The one-mode quantum ground state extends across the double well and supports suppression of a static distortion along the selected coordinate.
-This result motivates an anharmonic treatment, but it does not establish stability against all coupled lattice displacements.
-Similarly, the persistence of the hydrogenated structures during 5.5 ps trajectories at 300 K establishes survival over those simulated trajectories, without determining a macroscopic lifetime or a synthesis route.
+The frozen-phonon calculation resolves a shallow double well along this 2H-$\beta$ mode, with a depth of at most 0.2 meV in the 20-atom supercell.
+The one-mode quantum ground state lies approximately 6 meV above the well bottom and remains centred at the undistorted structure.
+The comparison of these energy scales explains why the classical minimum alone does not determine the distortion in this model: quantum motion extends across the shallow wells.
+This supports suppression of a static distortion along the selected coordinate, while leaving coupling to the other modes unresolved.
+The hydrogenated structures also retain their frameworks during 5.5 ps trajectories at 300 K, establishing their persistence over the simulated interval.
 
 The hydrogen free energies refine the comparison further.
-At 298.15 K and a hydrogen pressure of 1 bar, the reported adsorption free energies are approximately $-0.084$, $+0.166$, and $+0.058$ eV per H atom for 2H-$\alpha$-, 1H-$\beta$-, and 2H-$\beta$-beryllene, respectively.
+At approximately 298 K and a hydrogen pressure of 1 bar, the adsorption free energies are $-0.08$, $+0.17$, and $+0.06$ eV per H atom for 2H-$\alpha$-, 1H-$\beta$-, and 2H-$\beta$-beryllene, respectively.
 The reference in each case consists of the corresponding pristine sheet and molecular hydrogen.
 Thus, only 2H-$\alpha$-beryllene favours adsorption under these conditions within the adopted thermodynamic treatment.
 This comparison does not establish formation from bulk beryllium.
@@ -120,11 +119,13 @@ The relevant gaps lie above the Fermi level, and both neutral structures remain 
 These results therefore identify conditional non-trivial subspaces without establishing quantum spin Hall insulators at neutral filling.
 The selected subspaces of $\beta$-beryllene and the hydrogenated structures give trivial indices; for metallic systems, these fixed subspaces must again be distinguished from an occupied insulating manifold.
 
-The optical response also depends on the direction and energy of the comparison.
-The cubic trilayer has weaker in-plane absorption than the bcc reference throughout the sampled visible interval, while its out-of-plane absorption exceeds the reference over only part of that interval.
+The optical response resolves changes that the metallic or semiconducting classification alone cannot describe.
+The cubic trilayer has weaker in-plane absorption than the bcc structural reference throughout the sampled visible interval, while its out-of-plane absorption exceeds the reference over only part of that interval.
+Here, bcc beryllium serves as a structural comparison; its harmonic instability at zero pressure precludes treating it as a stable bulk counterpart under those conditions.
 Hydrogenation likewise redistributes spectral strength without enhancing every component.
 For 2H-$\alpha$-beryllene, the weak broadened response below the main absorption region does not establish strong visible absorption across its wide electronic gap.
-The chapter therefore connects structural modification to specific electronic and optical changes, while retaining the stability conditions and band-subspace conditions needed to interpret them.
+The beryllene comparison therefore yields several distinct outcomes: a harmonically stable cubic trilayer, a wide-gap hydrogenated $\alpha$ sheet, and conditional non-trivial subspaces in two metallic parent structures.
+Their different stability and occupation conditions determine how each outcome can guide further work.
 
 \section{Connections between the three studies}
 \label{sec:conclusions_connections}
@@ -134,17 +135,34 @@ An interface changes the environment of an existing layer, dimensional reduction
 The calculated properties respond to these particular changes rather than to the label of a light-element material alone.
 We now examine what the comparisons establish together.
 
-Firstly, the extent of structural reorganization matters.
-The graphene heterostructures retain recognizable constituent bands, even though interlayer coupling redistributes charge and modifies transitions.
-The boron and beryllium comparisons involve more substantial changes in coordination or termination, and can change the electronic category of the system.
-The HSE06 semiconducting o-\ce{B14} bilayer becomes metallic after hydrogen termination, whereas metallic $\alpha$-beryllene becomes a wide-gap semiconductor.
-These opposite trends show why the same chemical modification cannot determine the outcome independently of the starting structure.
+Firstly, we can follow the structural changes through the charge distributions and orbital contributions.
+In the graphene heterostructures, the relative positions of the two layers determine where charge accumulates and where it depletes.
+Graphene-\ce{BC3} shows the largest redistribution among the three interfaces, consistent with its smaller interlayer separation and hollow-site coordination.
+Hydrogen adsorption on the o-\ce{B14} bilayer also changes charge beyond the adsorption site: the calculated density increases in the interlayer B--B bonds and in the apical boron $p_z$ region directed towards hydrogen.
+The corresponding interlayer bond becomes slightly shorter.
+In hydrogenated beryllene, the projected densities of states resolve the mixing of hydrogen $1s$ states with beryllium $s$ and $p$ states.
+Surface modification therefore reorganizes bonding within the layer as well as introducing new bonds at its surface.
+The charge distributions and orbital contributions connect this rearrangement of atoms to the electronic response.
 
-Next, the comparison must retain the distinction between a local feature and a property of the whole system.
-The small gap near the graphene-derived $\mathrm{K}$ point does not make the complete heterostructure insulating.
-Likewise, a direct separation between selected beryllene bands does not place the Fermi level inside a global insulating gap.
-In both cases, the relevant conclusion requires us to inspect the remaining bands and their occupations.
-This connection also explains why a band gap, a topological index, and an electronic transport response answer different questions, even when they originate from the same band calculation.
+Next, the geometry of the bonding matters when we compare different layer numbers.
+The graphene heterostructures couple two distinct sheets through an interface, whereas the o-\ce{B14} structures retain parts of a connected boron framework as we reduce its thickness.
+The beryllene comparison introduces another change: the cubic trilayer has a square lattice, while the pristine $\alpha$ and $\beta$ structures belong to the hexagonal family.
+Their differences therefore include lattice geometry as well as layer number.
+Hydrogen adsorption further distorts the $\beta$ lattice and changes its symmetry; the 1H structure loses inversion symmetry, whereas the 2H structure retains it.
+This distinction changes the available route to the topological invariant: we use Wilson loops for 1H-$\beta$-beryllene, where the inversion-based parity criterion no longer applies.
+Layer number and composition identify a structure only partially; the atomic arrangement specifies the bonding and symmetry needed to interpret its properties.
+
+These microscopic comparisons explain why the electronic results do not follow one trend with thickness or hydrogen coverage.
+The HSE06 semiconducting o-\ce{B14} bilayer becomes metallic after termination, whereas metallic $\alpha$-beryllene becomes a wide-gap semiconductor.
+Hydrogen introduces orbitals and changes bonding in both cases, but the starting states and the resulting networks differ.
+The comparison therefore concerns a reorganization of the electronic structure, whose outcome depends on the parent material and adsorption geometry.
+
+Once we inspect the resulting bands, we must also distinguish their local separations from the electronic character of the complete system.
+The small gaps near the graphene-derived $\mathrm{K}$ point coexist with semimetallic bilayer bands elsewhere.
+In beryllene, direct isolation of a selected subspace can likewise coexist with a metallic Fermi level.
+The former separation identifies a local change in dispersion; the latter defines the subspace whose topology we can classify.
+An insulating bulk additionally requires the occupied and empty states to remain separated at the actual filling.
+The same band structure can therefore support several different conclusions, depending on whether we ask about a local crossing, the geometry of a subspace, or charge transport.
 
 The optical comparisons carry this reasoning beyond the band energies.
 The dielectric response depends on the available transitions and their polarization-dependent matrix elements, so the distinction between a metal and a semiconductor does not determine an entire optical spectrum.
@@ -152,14 +170,6 @@ The calculated in-plane and out-of-plane responses separate even within one stru
 Changing the structure can strengthen one spectral region while weakening another.
 Therefore, the appropriate comparison specifies the direction, photon-energy interval, and response quantity before discussing an enhancement.
 This conclusion connects the material calculations to the linear-response formulation in chapter~\ref{cha:fundamentals_b}.
-
-The characteristic energy scales also differ across these comparisons.
-The wide gap of 2H-$\alpha$-beryllene and the main interband structures concern energies of several electronvolts, whereas the selected spin--orbit gaps concern approximately one millielectronvolt.
-The same numerical settings need not resolve both questions equally well.
-A calculation that distinguishes a wide-gap sheet from a metal can still leave a small avoided crossing uncertain.
-Similarly, the difference between the two boron coupling constants does not by itself determine their superconducting temperature scales.
-We must retain the relevant phonon frequencies as well.
-The physical quantity under discussion therefore determines which energy differences we need to resolve and which numerical or theoretical uncertainties matter most.
 
 Finally, the structural and electronic descriptions must refer to the same physical state.
 An optical spectrum of a nonmagnetic reference cannot inherit the gap of a different antiferromagnetic calculation.
@@ -188,6 +198,7 @@ The beryllene spectra also omit microscopic local-field effects.
 The numerical broadening smooths the spectra but does not calculate a scattering lifetime.
 These limitations constrain the interpretation of absorption onsets, low-energy loss features, and the widths of spectral peaks.
 In particular, a change of sign in the real dielectric component and a nearby loss peak can motivate a collective-mode analysis without determining its dispersion or damping.
+The off-diagonal components reported for Graphene-\ce{B4C3} likewise require numerical and symmetry checks before interpretation; they do not establish natural optical activity.
 
 A further limitation enters when we convert a periodically repeated sheet into an effective optical medium.
 The assigned layer thickness affects the reported effective dielectric and absorption quantities, while the surrounding vacuum belongs to the computational cell rather than to the material~\cite{matthes2016influence}.
@@ -203,12 +214,12 @@ The one-mode treatment of 2H-$\beta$-beryllene further omits coupling to other v
 The hydrogen free-energy comparisons introduce temperature and pressure, but depend on the specified reference sheets and vibrational treatment.
 These distinctions prevent us from equating a relaxed or temporarily persistent sheet with an experimentally accessible equilibrium phase.
 
-The magnetic, superconducting, and topological results require additional qualifications.
-An energy preference between tested magnetic configurations does not determine a magnetic ordering temperature.
-The Allen--Dynes estimates depend on the calculated phonon spectrum, electron--phonon coupling, and chosen $\mu^*$; the archived anisotropic gap distributions do not independently settle the gap-closing temperature.
-For beryllene, dense sampling and local refinement support the reported direct separations but do not prove a gap at every point of the continuous Brillouin zone.
-Separate cutoff and self-consistent-mesh convergence of the meV spin--orbit gaps remains necessary.
-The HSE06 parity comparison without spin--orbit coupling also does not establish isolation under HSE06 with spin--orbit coupling.
+The magnetic and superconducting calculations also separate static energy comparisons from thermal behaviour.
+The preference among the tested spin configurations does not determine an ordering temperature, while the pairing estimates depend on the phonon spectrum and chosen Coulomb pseudopotential.
+For topology, the required numerical accuracy follows the much smaller spin--orbit gaps.
+A calculation that clearly distinguishes an eV-scale semiconductor gap can still leave a meV-scale avoided crossing uncertain.
+Dense sampling and local refinement locate the smallest sampled separations, but separate cutoff and self-consistent-mesh convergence remains necessary.
+The HSE06 parity check tests band ordering at the symmetry points without spin--orbit coupling; it leaves isolation under HSE06 with spin--orbit coupling across the Brillouin zone open.
 
 Finally, experimental evidence for graphene, boron sheets, or a beryllium sheet does not establish every geometry considered here.
 The particular boron frameworks, hydrogen arrangements, and cubic beryllene trilayer remain theoretical models in the present work.
@@ -258,6 +269,9 @@ For bulk and hydrogen-terminated bilayer o-\ce{B14}, the next superconducting ca
 Anisotropic Migdal--Eliashberg solutions at temperatures on both sides of gap closure can determine the transition more directly than a mean extracted from binned gap distributions.
 For the terminated bilayer, resolving the small imaginary phonon frequencies is part of this task, since the vibrational spectrum also enters the pairing calculation.
 These steps would test the robustness of the predicted pairing and determine how much uncertainty accompanies its temperature scale.
+A useful additional comparison would resolve which phonon-frequency ranges contribute most strongly to the coupling in the bulk and terminated bilayer.
+Following these contributions through their spectral functions would clarify why the larger bilayer coupling accompanies a lower Allen--Dynes temperature and which part of the lattice controls that difference.
+If the sheet can be prepared, electrical transport together with magnetic response could then test the predicted transition under identified structural and termination conditions.
 
 \subsection{Electronic transport and optical response}
 
@@ -282,17 +296,12 @@ Expressing the response as a sheet quantity, or specifying a consistent effectiv
 A film calculation with a selected substrate, incidence angle, and polarization could then predict measured absorption or reflection rather than an idealized bulk-like coefficient.
 The same procedure would test whether the directional contrasts identified here remain visible in an experimental geometry.
 
-For this comparison, the complete polarization dependence offers more information than the position of a single peak.
-We can first compare the order and relative strengths of the spectral features under specified polarizations, then examine their shifts as the support or hydrogen coverage changes.
-This sequence follows the same structural comparisons used in the thesis and tests whether the calculated redistribution accompanies the intended modification.
-It also separates a change common to both polarizations from a change that mainly affects one direction.
-For the graphene heterostructures, measurements on the constituent layers would supply the corresponding references.
-For the hydrogenated sheets, comparing the parent and terminated structures under the same measurement conditions would address the role of hydrogen more directly.
-The substrate reference should also undergo the same measurement, so that we can distinguish its optical response from the contribution of the supported two-dimensional layer under investigation.
-Absolute absorption values would still require the film geometry and normalization discussed above.
-The purpose is to connect the calculated trend to an experimentally controlled change, rather than to match one spectral feature in isolation.
+Polarization-resolved measurements could test the predicted redistribution by following the relative strengths and positions of several features as the structure changes.
+The constituent monolayers supply the references for the graphene interfaces; parent and terminated sheets supply the corresponding hydrogenation comparison.
+Measuring the support under the same conditions would help separate its contribution, although the film calculation must still account for its interaction with the sheet.
+Agreement across these structural and polarization comparisons would test the proposed connection between bonding and optical response more directly than agreement at a single peak.
 
-\subsection{Band topology and experimental tests}
+\subsection{Band isolation and topological response}
 
 For $\alpha$- and cubic beryllene, the first topological question concerns the small direct separations.
 The selected $N$-band subspace requires $E_{N+1}(\vec{k}\,)-E_N(\vec{k}\,)>0$ throughout the Brillouin zone.
@@ -305,13 +314,13 @@ Carrier control, strain, or a substrate should therefore be assessed for a speci
 We cannot assume that moving the chemical potential alone removes an indirect overlap or makes the small gaps robust.
 Transport predictions should follow these checks rather than follow directly from the parity product.
 
-Experimentally, structural identification must accompany each property measurement.
-Polarization-resolved optical spectra can test the predicted directional contrasts after the layer geometry, termination, and support have been established.
-For a candidate superconducting boron sheet, electrical transport together with magnetic response would test the pairing prediction and its temperature scale.
-For a beryllene structure with a verified insulating gap and a controlled chemical potential, edge-sensitive spectroscopy and transport could then address the topological prediction.
-These measurements test different parts of the thesis and should retain the structural and electronic conditions that connect each calculation to the sample.
+For a beryllene structure with a verified insulating gap and a controlled chemical potential, edge-sensitive spectroscopy and transport could then test the connection between the calculated invariant and a boundary response.
+Such a comparison would also need the edge geometry and the remaining bulk states, since an edge spectral feature alone would not determine its topological origin.
+The progression from band isolation to boundary spectrum and then to transport gives the conditional subspace result a definite route towards physical verification.
 
 We finally return to the question posed at the beginning of this thesis.
-The three studies show how particular changes in atomic arrangement reorganize electronic states and redistribute the calculated response in light-element two-dimensional systems.
-They also show why the interpretation must follow the structure, occupation, symmetry, and approximation used in each calculation.
-The resulting predictions identify both material-specific behaviour and a route for further investigation: establish the structure, resolve its electronic and lattice degrees of freedom, and connect their response to a defined measurement.
+Interfacial coupling changes alignment and optical transitions while retaining recognizable constituent bands.
+Dimensional reduction and hydrogen termination can reorganize the bonding more extensively, producing different electronic states within a common structural family.
+The optical response then resolves how these changes redistribute excitations with energy and polarization, while the magnetic, superconducting, and topological analyses examine additional consequences in selected systems.
+We therefore arrive at a connected physical picture: the atomic arrangement specifies the bonding environment, the electrons and lattice respond within that environment, and their response determines which properties emerge under the stated conditions.
+The comparisons in this thesis establish these connections for the selected boron, carbon, and beryllium structures and identify the questions that remain between their calculated behaviour and experimental realization.
