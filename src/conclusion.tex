@@ -61,7 +61,7 @@ The electron--phonon calculations predict appreciable phonon-mediated pairing in
 For a Coulomb pseudopotential $\mu^*=0.13$, the Allen--Dynes estimates give transition temperatures of 28.2 K and 18.5 K, respectively.
 The hydrogen-terminated bilayer has the larger coupling constant, $\lambda=1.01$, compared with $\lambda=0.931$ in the bulk, but it has the lower estimated transition temperature.
 This comparison illustrates why the coupling constant alone does not determine $T_{\mathrm{c}}$.
-The phonon frequencies entering the pairing problem also control its energy scale.
+The phonon frequencies entering the pairing problem also control its energy scale~\cite{allen-dynes}.
 The anisotropic calculations further resolve a distribution of superconducting gaps that shifts towards lower energies as temperature increases.
 Their sampled temperatures establish this suppression, while a precise transition temperature still requires converged solutions that bracket gap closure.
 
@@ -239,6 +239,7 @@ For the hydrogenated sheets, the first question concerns long-wavelength and anh
 Larger real-space force-constant calculations and explicit small-wave-vector tests can determine whether the near-$\Gamma$ features of 1H-$\beta$-beryllene and hydrogen-terminated o-\ce{B14} persist as the numerical description improves.
 For 2H-$\beta$-beryllene, the commensurate soft mode requires a different extension: coupled anharmonic coordinates and nuclear quantum motion must test whether the one-mode suppression of a static distortion survives in the full lattice.
 The absence of a static distortion along one coordinate is the starting point for this calculation, rather than its final criterion.
+A stochastic self-consistent harmonic treatment offers one route to include anharmonicity and quantum nuclear motion through a variational lattice free energy~\cite{errea2014anharmonic}.
 
 Next, the free-energy comparison should include the relevant competing geometries and hydrogen chemical potential.
 The puckered square-layer \ce{BeH2} candidate first requires a phonon calculation before its lower electronic energy can support a stronger stability conclusion.
@@ -266,7 +267,7 @@ Exchange interactions and magnetic anisotropy can then connect those static ener
 Calculating the optical response of the favoured magnetic state would also establish how its gap and spin arrangement modify the nonmagnetic spectra reported here.
 
 For bulk and hydrogen-terminated bilayer o-\ce{B14}, the next superconducting calculation should resolve the sensitivity to momentum sampling, phonon frequencies, and the Coulomb pseudopotential.
-Anisotropic Migdal--Eliashberg solutions at temperatures on both sides of gap closure can determine the transition more directly than a mean extracted from binned gap distributions.
+Anisotropic Migdal--Eliashberg solutions at temperatures on both sides of gap closure can determine the transition more directly than a mean extracted from binned gap distributions~\cite{margine2013anisotropic}.
 For the terminated bilayer, resolving the small imaginary phonon frequencies is part of this task, since the vibrational spectrum also enters the pairing calculation.
 These steps would test the robustness of the predicted pairing and determine how much uncertainty accompanies its temperature scale.
 A useful additional comparison would resolve which phonon-frequency ranges contribute most strongly to the coupling in the bulk and terminated bilayer.
@@ -287,12 +288,12 @@ For the semiconducting boron and boron-carbide structures, it would test which p
 
 The metallic systems require a complementary extension.
 Including an intraband response with a justified scattering treatment would address the low-frequency part omitted from the current boron and beryllene spectra.
-A finite-wave-vector dielectric calculation could then follow the dispersion and damping of candidate collective excitations.
+A finite-wave-vector dielectric calculation could then follow the dispersion and damping of candidate collective excitations~\cite{thygesen2017}.
 This would test whether the reported loss features correspond to modes that remain sufficiently distinct to compare with momentum-resolved energy-loss measurements.
 
 The comparison with optical measurements also requires the full dielectric tensor and the electromagnetic boundary conditions.
 For the monoclinic beryllene structures, retaining the off-diagonal components would determine the coupled polarization response.
-Expressing the response as a sheet quantity, or specifying a consistent effective thickness, would separate material trends from normalization choices.
+Expressing the response as a sheet quantity, or specifying a consistent effective thickness, would separate material trends from normalization choices~\cite{matthes2016influence}.
 A film calculation with a selected substrate, incidence angle, and polarization could then predict measured absorption or reflection rather than an idealized bulk-like coefficient.
 The same procedure would test whether the directional contrasts identified here remain visible in an experimental geometry.
 
@@ -304,7 +305,7 @@ Agreement across these structural and polarization comparisons would test the pr
 \subsection{Band isolation and topological response}
 
 For $\alpha$- and cubic beryllene, the first topological question concerns the small direct separations.
-The selected $N$-band subspace requires $E_{N+1}(\vec{k}\,)-E_N(\vec{k}\,)>0$ throughout the Brillouin zone.
+The selected $N$-band subspace requires $E_{N+1}(\vec{k}\,)-E_N(\vec{k}\,)>0$ throughout the Brillouin zone~\cite{fu2007topological,gresch2017z2pack}.
 Cutoff, self-consistent-mesh, and spin--orbit convergence should therefore precede a stronger topological claim, followed by an HSE06 calculation with spin--orbit coupling that tests isolation beyond the symmetry points.
 Once this condition becomes reliable, boundary calculations can examine the associated edge spectrum in the context of the complete bulk bands.
 
@@ -317,6 +318,14 @@ Transport predictions should follow these checks rather than follow directly fro
 For a beryllene structure with a verified insulating gap and a controlled chemical potential, edge-sensitive spectroscopy and transport could then test the connection between the calculated invariant and a boundary response.
 Such a comparison would also need the edge geometry and the remaining bulk states, since an edge spectral feature alone would not determine its topological origin.
 The progression from band isolation to boundary spectrum and then to transport gives the conditional subspace result a definite route towards physical verification.
+
+Looking further ahead, we can ask whether the control of electronic states and pairing in two-dimensional materials can lead to phases with anyonic excitations.
+Exchanging Abelian anyons produces a statistical phase beyond the bosonic or fermionic sign, while exchanges of non-Abelian anyons act within a degenerate state space and need not commute~\cite{simon2023topological}.
+Fractional quantum Hall quasiparticles and vortices carrying protected Majorana zero modes in certain topological superconductors illustrate distinct routes to these statistics~\cite{arovas1984fractional,ivanov2001nonabelian}.
+The non-trivial band-subspace indices and the separate phonon-mediated pairing predictions in this thesis do not establish either situation in the materials studied here.
+A material-specific investigation would first derive a low-energy hamiltonian from a structurally viable sheet and determine whether its interactions or pairing support a suitable gapped phase under physically accessible conditions.
+We would then identify its localized excitations or defects and calculate their exchange transformations.
+This direction extends the geometric-phase discussion in appendix~\ref{cha:appendix_topology} from the evolution of electronic states to the adiabatic exchange of collective excitations, connecting the present material comparisons to a further question in quantum many-body physics.
 
 We finally return to the question posed at the beginning of this thesis.
 Interfacial coupling changes alignment and optical transitions while retaining recognizable constituent bands.
