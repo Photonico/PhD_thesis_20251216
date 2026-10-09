@@ -28,7 +28,7 @@ and distinct dielectric and energy-loss features under the stated effective-thic
 Furthermore,
 parity analysis of the spin-orbit-coupled electronic states shows that,
 beyond $\alpha$-beryllene,
-trilayer cubic beryllene also has a non-trivial $Z_{2}$ invariant for its lowest six bands,
+trilayer cubic beryllene has a conditional non-trivial $Z_{2}$ index for its lowest six bands,
 which are isolated only by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} above the Fermi level,
 whereas all hydrogen-functionalized structures are trivial.
 These results identify beryllene as an elemental two-dimensional platform that combines metallicity,
@@ -148,7 +148,7 @@ the pristine structures include trilayer cubic beryllene,
 by which we denote ABA-stacked trilayer beryllene with a square lattice.
 The hydrogen-functionalized structures are double-sided hydrogen-terminated $\alpha$-beryllene (2H-$\alpha$-beryllene)
 and single-sided and double-sided hydrogen-terminated $\beta$-beryllene (1H-$\beta$-beryllene and 2H-$\beta$-beryllene).
-The results identify dynamically stable hydrogen-functionalized structures and a trilayer cubic beryllene phase with a non-trivial $Z_{2}$ index for an isolated band subspace.
+The results identify dynamically stable 2H-$\alpha$-beryllene and a trilayer cubic beryllene phase with a conditional non-trivial $Z_{2}$ index for an isolated band subspace.
 The optical properties demonstrate direction-dependent and dimensionality-dependent response,
 together with anisotropic dielectric and energy-loss spectra and a redistribution of visible-to-ultraviolet optical response.
 
@@ -326,6 +326,18 @@ the Kramers--Kronig relation,
 and the derived optical quantities are introduced in chapter~\ref{cha:fundamentals_b},
 especially sections~\ref{sec:from_electronic_response_to_dielectric_function} and~\ref{sec:from_dielectric_function_to_optical_properties}.
 Therefore, we do not repeat these formula definitions here.
+In this chapter,
+we apply these scalar definitions separately to the Cartesian diagonal components $\varepsilon_{\lambda\lambda}(\omega)$,
+with $\lambda=x,y,z$.
+They give the usual principal-component optical quantities when the dielectric tensor is diagonal in the chosen coordinates and the propagation geometry is compatible with that component.
+The off-diagonal coupling in monoclinic 1H-$\beta$-beryllene and 2H-$\beta$-beryllene is not included in the derived spectra,
+which therefore provide scalar comparisons rather than optical constants obtained from the full dielectric tensor.
+In particular,
+$L_{\lambda}(\omega)$ uses the inverse of $\varepsilon_{\lambda\lambda}(\omega)$,
+which need not equal the corresponding component of the inverse tensor.
+The reflectivity describes a homogeneous semi-infinite medium in the scalar normal-incidence approximation,
+not the full reflection of a finite anisotropic layer on a substrate.
+
 For all eight selected optical datasets,
 we use the independent-particle approximation in VASP 6.5.0 with \texttt{LOPTICS=T}.
 These calculations are spin-unpolarized and do not include spin-orbit coupling
@@ -493,8 +505,9 @@ For 1H-$\beta$-beryllene,
 all phonon frequencies at the wave vectors commensurate with the supercell are real.
 The imaginary values near $\Gamma$,
 of up to $1.45i$~\si{\tera\hertz},
-appear only in the Fourier interpolation of the flexural branch,
-and are attributed to the finite supercell.
+appear only in the Fourier interpolation of the flexural branch.
+This behaviour is consistent with limitations of the finite-supercell force constants at long wavelengths,
+but the dynamical stability near $\Gamma$ remains to be established.
 For 2H-$\beta$-beryllene,
 an in-plane beryllium mode becomes soft along the $\Gamma$--$\mathrm{M}$ direction,
 at \qty{80}{\percent} of the distance to $\mathrm{M}$.
@@ -511,9 +524,9 @@ far below the zero-point energy of the mode.
 A one-mode quantum treatment of this anharmonic potential places the ground state approximately \qty{6}{\milli\electronvolt} above the bottom of the well,
 gives a real excitation frequency of approximately \qty{4}{\tera\hertz},
 and keeps the ground state centred at the undistorted structure.
-Therefore,
-no static distortion is expected,
-and 2H-$\beta$-beryllene is stabilized by the strong anharmonicity of this mode rather than being harmonically stable.
+These results support the suppression of a static distortion along this mode by quantum fluctuations.
+Coupling to the other modes is not included,
+so the full anharmonic stability of 2H-$\beta$-beryllene remains to be established.
 The bare electronic susceptibility and the nesting function show no peak at this wave vector,
 so the softening is not driven by Fermi-surface nesting.
 The frozen-phonon energies and the susceptibility are given in table~\ref{tab:proj3_soft_mode} and figure~\ref{fig:proj3_nesting} in section~\ref{3_supplementary}.
@@ -539,7 +552,7 @@ For all three hydrogen-functionalized structures,
 the total energy fluctuates around a stable average value,
 and the temperature fluctuates around the target temperature of \qty{300}{\kelvin}.
 The final structures at \qty{5.5}{\pico\second} preserve the beryllene frameworks without structural collapse or hydrogen desorption.
-These results support the finite-temperature stability of the hydrogen-functionalized phases.
+These results support the persistence of the hydrogen-functionalized structures at \qty{300}{\kelvin} over the simulated time interval.
 
 \begin{figure}[!htbp]
 \centering
@@ -596,7 +609,7 @@ and \qty{0.06}{\electronvolt} per hydrogen atom.
 Therefore,
 only 2H-$\alpha$-beryllene is thermodynamically stable against \ce{H2} release under ambient conditions.
 2H-$\beta$-beryllene requires an equilibrium \ce{H2} pressure of approximately \qty{90}{\bar} at room temperature,
-whereas 1H-$\beta$-beryllene can exist only as a kinetically trapped phase.
+whereas persistence of 1H-$\beta$-beryllene under ambient conditions would require kinetic trapping.
 These energetics are summarized in table~\ref{tab:proj3_hydrogenation_energetics} in section~\ref{3_supplementary}.
 
 2H-$\alpha$-beryllene has the composition of \ce{BeH2}.
@@ -607,8 +620,9 @@ as in bulk \ce{BeH2},
 is \qty{38}{\milli\electronvolt} per formula unit lower in energy than 2H-$\alpha$-beryllene,
 whereas a planar square layer is \qty{1.23}{\electronvolt} per formula unit higher.
 2H-$\alpha$-beryllene is therefore metastable with respect to the puckered square layer.
-Since this transformation requires the triangular beryllium lattice to rearrange into a square lattice,
-2H-$\alpha$-beryllene can remain kinetically stable as the product of hydrogenating $\alpha$-beryllene.
+This transformation requires the triangular beryllium lattice to rearrange into a square lattice.
+2H-$\alpha$-beryllene may remain kinetically trapped after hydrogenation if the reconstruction barrier is sufficiently high,
+but this barrier has not been calculated.
 Only these two square configurations are considered,
 so this comparison does not replace a global structure search~\cite{li2018global}.
 The polymorph energies are listed in table~\ref{tab:proj3_beh2_polymorphs}.
@@ -912,6 +926,7 @@ located \qtyrange{1.2}{2.7}{\electronvolt} above the Fermi level.
 The non-trivial index therefore characterizes a band inversion rather than a quantum spin Hall insulating state.
 Gaps of this size are also far below the accuracy of the band ordering in semilocal density functional theory,
 so this result may be sensitive to the exchange-correlation functional.
+The numerical convergence of these meV-scale gaps with respect to the energy cutoff and the self-consistent k-point mesh has not been established separately from the local refinement of their minima.
 
 Hydrogen functionalization gives trivial $Z_{2}$ indices in all three structures.
 2H-$\alpha$-beryllene is the only insulator among the structures considered,
@@ -926,9 +941,9 @@ respectively,
 and the Wannier charge centres give $Z_{2}=0$ for both subspaces.
 
 The parity eigenvalues at the four time-reversal invariant momenta are unchanged when the HSE06 hybrid functional is used without spin-orbit coupling,
-so the $\nu$ values of the five centrosymmetric structures remain the same with this functional.
+so the corresponding parity products of the five centrosymmetric structures are also unchanged.
 This check tests the band order at the time-reversal invariant momenta,
-but not the spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} elsewhere in the Brillouin zone.
+but does not establish isolation of the corresponding subspaces throughout the Brillouin zone with HSE06 and spin-orbit coupling.
 The converged spin-orbit-coupled states are nonmagnetic,
 with a magnetization density below $3\times10^{-7}~\mu_{\mathrm{B}}\,\text{\AA}^{-3}$,
 and spin-polarized calculations started from ferromagnetic and antiferromagnetic configurations all converge to the nonmagnetic state.
@@ -982,7 +997,7 @@ reflectivity,
 and energy-loss spectrum are defined in chapter~\ref{cha:fundamentals_b},
 especially sections~\ref{sec:from_electronic_response_to_dielectric_function} and~\ref{sec:from_dielectric_function_to_optical_properties}.
 Here,
-we use these quantities to compare the direction-dependent optical response of the beryllene structures.
+we use scalar quantities derived from the Cartesian diagonal dielectric components to compare the direction-dependent optical response of the beryllene structures.
 
 \subsubsection{Pristine $\alpha$- and $\beta$-beryllene}
 \label{3_optical_alpha_beta}
@@ -1207,7 +1222,8 @@ weak low-energy tails under finite numerical broadening are not evidence of a sh
 Upper: absorption coefficient ($\mathrm{nm}^{-1}$); Lower: energy-loss spectrum.
 The spectra are shown for the $xx$,
 $yy$,
-and $zz$ components as functions of photon energy.}
+and $zz$ components as functions of photon energy,
+using the scalar definitions described in section~\ref{3_methods}.}
 \label{fig:proj3_hydrogenated_abs_loss}
 \end{figure}
 
@@ -1225,10 +1241,12 @@ optical response,
 and topological properties of pristine and hydrogen-functionalized two-dimensional beryllium phases using first-principles density functional theory calculations.
 Alongside the previously reported $\alpha$- and $\beta$-beryllene structures,
 we identified a dynamically stable trilayer cubic beryllene phase.
-The phonon dispersion calculations also confirm the dynamical stability of 2H-$\alpha$-beryllene and 1H-$\beta$-beryllene.
+The phonon dispersion calculations also confirm the dynamical stability of 2H-$\alpha$-beryllene,
+whereas the interpolated imaginary frequencies near $\Gamma$ leave the long-wavelength stability of 1H-$\beta$-beryllene unresolved.
 2H-$\beta$-beryllene has a harmonic soft mode,
-but this mode is stabilized by its strong anharmonicity and quantum fluctuations.
-The molecular dynamics simulations further support the finite-temperature stability of these hydrogen-functionalized structures.
+and a one-mode anharmonic treatment supports suppression of a static distortion along this mode by quantum fluctuations.
+The full anharmonic stability requires further examination of coupling between modes.
+The molecular dynamics simulations show that all three hydrogen-functionalized structures persist at \qty{300}{\kelvin} over \qty{5.5}{\pico\second}.
 
 Hydrogen functionalization substantially modifies the structural and electronic properties of beryllene.
 In particular,
@@ -1238,13 +1256,13 @@ whereas the hydrogen-functionalized $\beta$-based structures retain metallic beh
 The calculated adsorption energies show that hydrogen adsorption is exothermic with respect to molecular hydrogen.
 Including zero-point and thermal contributions,
 only 2H-$\alpha$-beryllene is thermodynamically stable against \ce{H2} release under ambient conditions,
-whereas 2H-$\beta$-beryllene requires an elevated \ce{H2} pressure and 1H-$\beta$-beryllene can exist only as a kinetically trapped phase.
+whereas 2H-$\beta$-beryllene requires an elevated \ce{H2} pressure and persistence of 1H-$\beta$-beryllene under ambient conditions would require kinetic trapping.
 
 The calculated optical properties show a direction-dependent redistribution of the effective interband response after dimensional reduction and hydrogen functionalization.
 Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy and distinct loss features.
 The absorption of trilayer cubic beryllene does not exceed that of bulk bcc beryllium throughout the visible range or in all directions,
 and hydrogen adsorption enhances some components while reducing others.
-These comparisons use the stated effective-thickness convention and exclude a Drude intraband contribution.
+These comparisons use the Cartesian diagonal dielectric components under the stated effective-thickness convention and exclude a Drude intraband contribution.
 
 Parity analysis of the spin-orbit-coupled electronic states confirms the previously reported non-trivial topology of $\alpha$-beryllene and the trivial topology of $\beta$-beryllene.
 Trilayer cubic beryllene also has a non-trivial $Z_2$ invariant,
