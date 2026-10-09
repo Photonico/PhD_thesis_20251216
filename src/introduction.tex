@@ -5,95 +5,113 @@
 \label{sec:intro_background}
 
 % opening paragraph
-The isolation of graphene demonstrated that reducing a material to the atomic scale can generate electronic, optical, and quantum properties that differ substantially from those of its bulk form~\cite{novoselov2004electric,geim2007rise}.
-Since then, two-dimensional materials have become a major platform in condensed matter physics and materials science.
-Reduced dimensionality reshapes the electronic states, enhances the role of surfaces and interfaces, and strengthens the connection between symmetry, bonding, and physical response.
-These features allow two-dimensional systems to host properties that are difficult to obtain in conventional three-dimensional crystals.
+The isolation of graphene showed that a material only one atom thick can have electronic properties very different from those of its bulk form~\cite{novoselov2004electric,geim2007rise}.
+When we reduce the dimensionality of a crystal, we also change the environment of its electrons.
+The atomic coordination, symmetry, and interactions between neighbouring layers can all change.
+These changes affect the electronic states and, consequently, the response of the material to an external perturbation.
+This connection between atomic structure and physical response is the starting point of this thesis.
 
-Beyond graphene, the family of atomically thin materials has expanded to include elemental sheets commonly referred to as Xenes, as well as related light-element compound two-dimensional materials~\cite{butler2013progress,molle2018silicene}.
-Light-element Xenes and related compounds provide a useful setting for studying the connection between bonding and physical response.
-Their low atomic masses and diverse bonding environments give rise to structures with different electronic properties.
-Depending on atomic arrangement and chemical modification, these systems may exhibit metallicity, semiconductivity, magnetism, superconductivity, non-trivial topology, and anisotropic optical response.
-The relevant question is therefore how a particular structural change modifies these properties, and which calculations can establish that connection.
+The study of two-dimensional materials has since extended beyond graphene to other elemental sheets, commonly called Xenes, and to compound layers~\cite{butler2013progress,molle2018silicene}.
+Here, we are interested in materials formed from light elements, particularly boron and beryllium.
+Their small atomic masses and different bonding environments allow us to examine both electronic and lattice properties within related low-dimensional structures.
+Depending on the atomic arrangement, these materials may be metallic or semiconducting, and some structures have also been predicted to exhibit magnetism, superconductivity, or non-trivial band topology.
+We therefore need to consider how the atoms are arranged before discussing which properties the material can support.
 
-Boron-based two-dimensional materials occupy an important position in this landscape.
-Unlike carbon, boron is electron deficient, and this electron deficiency favours multicentre bonding and structural diversity.
-As a result, boron can form many competing atomic networks with distinct electronic and collective properties~\cite{sun2017two,han2023superconducting}.
-Boron allotropes and boron-containing compounds therefore provide natural systems for examining how bonding topology controls physical response.
-Beryllium-based two-dimensional materials offer a complementary setting.
-Beryllium is the lightest alkaline-earth metal, and both experimental and theoretical studies have extended its investigation to atomically thin structures~\cite{ono2020dynamical,chahal2023beryllene,li2023coexistence}.
-These studies motivate a comparison of how layer geometry and hydrogen functionalization modify the properties of an elemental light-metal system.
+Let us first consider boron.
+Compared with carbon, boron has fewer valence electrons available for bonding.
+Multicentre bonding allows these electrons to be shared among several atoms, giving rise to a variety of planar and three-dimensional networks~\cite{sun2017two,han2023superconducting}.
+Changing the connections within such a network provides one way to modify its electronic properties.
+Beryllium, the lightest alkaline-earth metal, provides another light-element system in which the number and arrangement of atomic layers can be varied.
+Theoretical studies and the experimental preparation of thin beryllium sheets have motivated the investigation of these geometries~\cite{ono2020dynamical,chahal2023beryllene,li2023coexistence}.
+Together, the boron- and beryllium-based systems allow us to follow the effects of structural modification in different bonding environments.
 
-A central challenge in two-dimensional materials research is to tune intrinsic properties for specific physical functions.
-Van der Waals heterostructure formation provides one route.
-In such systems, different monolayers are stacked through weak interlayer interactions, and the interface can modify electronic states, charge transfer, optical transitions, and collective excitations while preserving important features of the individual layers~\cite{novoselov20162d}.
-Surface functionalization provides another route.
-Hydrogen adsorption or chemical termination can alter bonding, redistribute electronic states, and change the dielectric response.
-We therefore use these strategies to examine how structural modification changes electronic structure and optical response.
-For selected systems, we also investigate magnetism, superconductivity, and band topology.
+We consider two further ways of modifying a layer.
+Firstly, we can place it in contact with another two-dimensional material.
+In a van der Waals heterostructure, the layers remain identifiable, while their interaction can change the charge distribution and electronic states near the interface~\cite{novoselov20162d}.
+Secondly, we can modify the surface bonding by adding hydrogen.
+Hydrogen functionalization changes the local coordination and may redistribute the electronic states over the layer.
+We use these changes, together with dimensional reduction, to investigate the connection between structure, electronic properties, and optical response.
+Magnetism, superconductivity, and band topology are then examined where they are relevant to the particular system.
 
 \section{Literature review}
 \label{sec:intro_lit_review}
 
 % opening paragraph
-The previous section introduced the materials and the structural changes considered in this thesis.
-We now examine what earlier studies have established about these systems.
-We first consider boron-based materials and graphene heterostructures, then turn to beryllium, and finally compare the computational approaches.
-Throughout this review, we distinguish experimental observations from theoretical predictions and identify the questions that remain open.
+We have introduced the materials and the types of structural modification considered in this thesis.
+We now examine the earlier studies that lead to these choices.
+We begin with the bonding and experimental preparation of boron sheets, then consider their interfaces and hydrogen termination.
+Thereafter, we turn to beryllium and discuss the computational descriptions used to study these materials.
+This sequence allows us to connect the findings of previous work to the questions addressed in the research chapters.
 
 \subsection{Boron-based materials and graphene heterostructures}
 \label{subsec:lit_boron}
 
-Firstly, the structure of a boron sheet is not specified by its elemental composition alone.
-The arrangement of triangular units, vacancies, and connections between layers changes the bonding network.
-Experimental work on Ag(111) has identified different borophene phases under different growth conditions~\cite{zhong2017metastable}.
-Chen et al. subsequently reported the synthesis of bilayer borophene on Cu(111), extending the experimentally accessible structures beyond a single atomic layer~\cite{chen2022synthesis}.
-These results show why the phase, layer number, and supporting surface need to be specified together.
-A substrate-supported structure establishes an experimental material, but its bonding and electronic response need not be identical to those of an isolated sheet.
-Therefore, a comparison with a freestanding calculation requires attention to both the atomic structure and its environment.
+A boron sheet is not specified by its elemental composition alone.
+We also need to know how triangular units and holes are arranged within the sheet.
+Tang and Ismail-Beigi explained this structural freedom in terms of the competition between two-centre and three-centre bonding~\cite{tang2007novel}.
+In their description, triangular regions and hexagonal holes have complementary roles in supplying and accepting electrons, so that their combination improves the filling of the in-plane bonding states.
+Penev et al. subsequently examined a wider range of vacancy arrangements using density functional theory and a cluster expansion~\cite{penev2012polymorphism}.
+They found several metallic sheets with closely competing energies.
+Thus, the bonding argument explains why holes can stabilise a boron network, while the configurational comparison explains why it need not select one unique sheet.
 
-Theoretical studies have also examined how different boron networks support different electronic states.
+Experimental synthesis made it possible to examine this structural diversity directly.
+Mannix et al. grew atomically thin crystalline boron on Ag(111) and reported anisotropic structures with metallic characteristics~\cite{mannix2015synthesis}.
+Feng et al. identified $\beta_{12}$ and $\chi_3$ sheets on the same type of substrate, with different periodic arrangements of holes in their triangular networks~\cite{feng2016experimental}.
+Further work examined metastable phases on Ag(111), and bilayer borophene was subsequently prepared on Cu(111)~\cite{zhong2017metastable,chen2022synthesis}.
+These observations connect the structural possibilities of boron to particular growth conditions and supporting surfaces.
+
+The role of the surface can also be examined theoretically.
+Zhang et al. compared boron monolayers on different metals and found that the substrate can lift the near-degeneracy between competing sheets~\cite{zhang2015monolayers}.
+Their calculations related this selection to the competition between buckling strain and boron--metal electronic hybridization.
+The substrate therefore participates in determining which structure is favoured.
+When we pass from a supported sheet to a freestanding model, we remove this interaction and must examine the resulting geometry and response again.
+This is particularly relevant to heterostructures, where replacing the metal surface with another two-dimensional layer introduces a different electronic environment.
+
+We next consider the properties associated with these different networks.
 Gao et al. calculated electron--phonon coupling in metallic $\beta_{12}$- and $\chi_3$-borophene and predicted superconductivity using the McMillan--Allen--Dynes approach~\cite{gao2017prediction}.
 Zhu et al. used an evolutionary structure search to identify magnetic borophene structures~\cite{zhu2019magnetic}.
-These investigations concern specified geometries and specified electronic states.
-They therefore provide examples of the sensitivity of boron properties to the bonding network, rather than a prediction that all boron sheets share the same magnetic or superconducting behaviour.
-For a different structural framework, the electronic configuration, phonons, and electron--phonon coupling must be examined again.
+For the optical response, Adamska and Sharifzadeh showed that strain can change the absorption and optical anisotropy of freestanding borophene while the examined sheets remain metallic~\cite{adamska2017}.
+The last comparison is useful here: retaining metallicity does not imply that the response to light remains unchanged.
+Changes in the band dispersion and the character of the electronic states can still modify the allowed transitions and their polarization dependence.
+We therefore examine the optical response together with the electronic structure throughout this thesis.
 
-Next, incorporating carbon introduces another way to change the bonding and electronic structure.
-Experimental studies have investigated epitaxial \ce{BC3} honeycomb sheets and their phonon properties~\cite{yanagisawa2004phonon,tanaka2005novel,yanagisawa2006phonon}.
-Theoretical work has proposed additional two-dimensional boron carbides, including a semiconducting \ce{B4C3} monolayer~\cite{tian2019}.
-These two types of evidence should be distinguished.
-An experimental \ce{BC3} sheet on a substrate is a relevant precedent, while the properties of an ideal freestanding model remain predictions for that model.
-Similarly, the predicted stability and band structure of \ce{B4C3} motivate further study but do not establish its experimental preparation.
-For the present work, the selected \ce{BC3} and \ce{B4C3} structures provide semiconducting constituents that can be compared with metallic borophene and semimetallic graphene.
+Incorporating carbon provides another way to change the bonding network.
+Epitaxial \ce{BC3} honeycomb sheets and their phonon properties have been investigated experimentally~\cite{yanagisawa2004phonon,tanaka2005novel,yanagisawa2006phonon}.
+Theoretical studies have also proposed other two-dimensional boron carbides, including a semiconducting \ce{B4C3} monolayer~\cite{tian2019}.
+The experimental \ce{BC3} sheets provide a precedent for this material family, whereas the \ce{B4C3} structure used here remains a theoretical model.
+For our comparison, the selected freestanding \ce{BC3} and \ce{B4C3} monolayers provide semiconducting constituents alongside metallic borophene and semimetallic graphene.
+This gives us a set of layers with different initial electronic structures before an interface is formed.
 
-The interface introduces a further degree of freedom.
-Liu and Hersam reported lateral and vertical integration of borophene with graphene, while Hou et al. investigated the preparation and humidity-sensing response of borophene--graphene heterostructures~\cite{liu2019borophene,hou2021borophene}.
-These studies establish that borophene--graphene combinations are experimentally relevant.
-However, their structures, environments, and measured properties do not answer every question about the ideal bilayers considered here.
-In particular, comparisons between different boron-based constituents require the reference monolayers and their interfaces to be treated within a consistent computational setting.
-We therefore compare graphene--borophene, graphene--\ce{BC3}, and graphene--\ce{B4C3} in chapter~\ref{cha:project_bilayers}.
-The central question is how interfacial coupling modifies the electronic structure and optical response relative to the isolated constituents.
-The contribution is a comparative mapping of these structure--property relations.
+We can now ask what changes when these layers are combined.
+Li et al. studied graphene on a \ce{BC3} monolayer and found that weak interlayer coupling could open a gap in the graphene-derived bands~\cite{li2014tunable}.
+They also showed that the interlayer spacing and in-plane strain could tune this gap while approximately retaining the linear band dispersion.
+This result connects an interface geometry to a change in the electronic states.
+The corresponding optical comparison additionally requires the transition strengths and their dependence on polarization, which cannot be obtained from the gap alone.
+
+Related interfaces have also been realised experimentally.
+Liu and Hersam reported both lateral and vertical integration of borophene with graphene~\cite{liu2019borophene}.
+The lateral structures joined the sheets along an atomically sharp boundary, while boron intercalation beneath graphene produced vertically stacked structures.
+Hou et al. further investigated the preparation and humidity-sensing response of borophene--graphene heterostructures~\cite{hou2021borophene}.
+These studies establish the experimental relevance of combining the two materials, with the interface geometry entering the resulting physical problem.
+In chapter~\ref{cha:project_bilayers}, we consider freestanding graphene--borophene, graphene--\ce{BC3}, and graphene--\ce{B4C3} bilayers within a common computational description.
+By retaining the isolated constituents as references, we examine how their different electronic structures affect the changes induced by stacking, and how those changes appear in the optical response.
 
 We now turn from interfaces between different sheets to dimensional reduction within a single boron framework.
-Han et al. predicted a bulk orthorhombic allotrope, o-\ce{B14}, using first-principles calculations and evolutionary structure searches~\cite{han2023superconducting}.
-Their search examined potassium--boron compounds, and removal of potassium from the predicted frameworks generated candidate boron allotropes.
+Han et al. predicted the bulk orthorhombic allotrope o-\ce{B14} using first-principles calculations and evolutionary structure searches~\cite{han2023superconducting}.
+Their search examined potassium--boron compounds, from which removal of potassium generated candidate boron allotropes.
 The o-\ce{B14} structure contains pentagonal bipyramidal units and was predicted to support phonon-mediated superconductivity.
-This is a theoretical bulk reference, not an experimentally synthesized starting material.
-It also differs structurally from the planar borophenes discussed above.
-Reducing this framework to one or two layers changes the coordination of the surface atoms, while hydrogen termination modifies their bonding further.
-The bulk calculation therefore leaves open how these changes affect the electronic ground state and physical response of the resulting sheets.
+It therefore supplies a theoretical bulk reference with a bonding network different from those of the planar borophenes discussed above.
+Reducing this framework to one or two layers changes the coordination of the surface atoms.
+Hydrogen termination then modifies these exposed sites further.
+The question is how the electronic and lattice properties evolve through these successive changes.
 
-Hydrogenation studies on other boron structures show why the outcome cannot be inferred from hydrogen addition alone.
-Hou et al. reported crystalline semiconducting hydrogenated borophene produced through a chemical preparation route~\cite{hou2020ultrastable}.
-Li et al. instead exposed borophene to atomic hydrogen under ultrahigh vacuum and obtained borophane polymorphs that retained metallicity~\cite{li2021synthesis}.
-The structures and preparation conditions differ, so these results do not constitute conflicting measurements of the same material.
-They show that the parent network and hydrogen arrangement are part of the physical problem.
-Neither result directly establishes the behaviour of hydrogen-terminated o-\ce{B14}.
-We therefore examine dimensional reduction and hydrogen termination within this particular framework in chapter~\ref{cha:project_boron}, using the bulk structure and the corresponding pristine sheets as references.
-The comparison concerns electronic and magnetic states, electron--phonon properties, and optical response.
-
+Earlier hydrogenation studies show why we need to retain the parent structure in this comparison.
+Hou et al. reported crystalline semiconducting hydrogenated borophene obtained through a chemical preparation route~\cite{hou2020ultrastable}.
+Li et al. exposed borophene to atomic hydrogen under ultrahigh vacuum and obtained borophane polymorphs that retained metallicity~\cite{li2021synthesis}.
+The different outcomes concern different networks and preparation conditions.
+They show that the effect of hydrogen depends on the bonds it forms within a particular structure.
+In chapter~\ref{cha:project_boron}, we follow this question within the pentagonal-bipyramid framework, comparing bulk o-\ce{B14} with its pristine and hydrogen-terminated low-dimensional forms.
+The comparison includes electronic and magnetic states, electron--phonon properties, and optical response.
 Figure~\ref{fig:intro} shows the hydrogen-terminated bilayer model considered in this thesis.
 
 \begin{figure}[!htbp]
@@ -107,244 +125,222 @@ Figure~\ref{fig:intro} shows the hydrogen-terminated bilayer model considered in
 \subsection{Beryllene and hydrogen functionalization}
 \label{subsec:lit_beryllene}
 
-The previous subsection considered how interfaces and dimensional reduction modify boron-based systems.
-We now extend the discussion to beryllium, where the choice of layer geometry is itself an important part of the investigation.
-Ono compared the dynamical stability of ideal two-dimensional metals in several lattice geometries using first-principles phonon calculations~\cite{ono2020dynamical}.
-The study shows that stability depends on the arrangement of the atoms, rather than following from the stability of the bulk element alone.
-Hess examined broader periodic trends in two-dimensional bonding among main-group elements~\cite{hess2022periodicity}.
-These studies provide structural and bonding guidance, but do not establish that every proposed few-layer configuration is experimentally accessible.
-We therefore treat geometry and dynamical stability as questions to be tested for each model.
+The preceding discussion followed the effects of interfaces and surface bonding in boron-based systems.
+We now consider beryllium, beginning with the geometry of the layer itself.
+Ono compared ideal two-dimensional metals in several lattice arrangements using first-principles phonon calculations~\cite{ono2020dynamical}.
+The resulting differences in dynamical stability show why a stable bulk element does not automatically produce a stable sheet in every geometry.
+Hess examined periodic trends in two-dimensional bonding among main-group elements~\cite{hess2022periodicity}.
+These studies provide a basis for choosing candidate structures and relating their bonding to the arrangement of atoms.
+For each candidate, the response to atomic displacement remains part of the structural investigation.
 
-Chahal et al. reported beryllene sheets obtained by sonochemical exfoliation and characterised several lattice motifs~\cite{chahal2023beryllene}.
-These observations provide an experimental basis for studying atomically thin beryllium.
-However, an observed sheet and an idealised computational phase are not necessarily the same structure.
-The layer number, atomic arrangement, and experimental environment all enter this comparison.
-We therefore distinguish the reported experimental geometries from the pristine and hydrogen-functionalized models considered here.
-Names such as $\alpha$- and $\beta$-beryllene are used together with a structural definition, since a phase name alone is not sufficient to match models from different studies.
+Chahal et al. reported beryllene sheets obtained by sonochemical exfoliation of beryllium powder~\cite{chahal2023beryllene}.
+Their microscopy revealed several lattice motifs, including hexagonal and square arrangements, and their transport measurements indicated metallic behaviour.
+These observations provide an experimental basis for studying thin beryllium structures.
+To compare them with a calculation, we also need the layer number and the detailed atomic arrangement.
+This is especially relevant because the phase names $\alpha$ and $\beta$ have been used for different structural descriptions in the literature.
+We therefore identify each phase by its geometry as well as its name.
 
-Theoretical calculations have already established a basis for discussing electronic and topological properties in beryllene.
 Li et al. investigated a triangular monolayer, denoted as $\alpha$-beryllene, and a corresponding two-layer structure, denoted as $\beta$-beryllene~\cite{li2023coexistence}.
-They reported non-trivial band topology in the $\alpha$ phase, while the $\beta$ phase was topologically trivial.
-Their electron--phonon calculations also predicted superconducting behaviour in both structures.
-These theoretical results provide reference structures and questions against which additional geometries can be examined.
-Here, we extend the comparison to trilayer cubic beryllene, by which we denote ABA-stacked trilayer beryllene with a square lattice, and to selected hydrogen-functionalized configurations.
-The question is how changes in layer geometry and surface bonding affect electronic structure and optical response.
-For the selected pristine phases, we also examine the interpretation of band topology.
+Their calculations identified non-trivial band topology in the $\alpha$ phase and a topologically trivial $\beta$ phase.
+They also predicted superconductivity in both structures using electron--phonon and Migdal--Eliashberg calculations.
+A subsequent preprint by Petrov and Milo\v{s}evi\'{c} reported weaker superconductivity in a reanalysis of these phases and questioned the temperature dependence of the superconducting gaps in the earlier calculation~\cite{petrov2024comment}.
+The quantitative superconducting predictions therefore require attention to the treatment of the pairing problem, even when the parent atomic structures are the same.
+We retain the distinction between the electronic band-topology analysis and the calculation of the superconducting state.
 
-Hydrogen--beryllium interactions have been studied in other structural settings.
-Bachurin and Vladimirov investigated hydrogen on beryllium surfaces using \textit{ab initio} calculations~\cite{bachurin2015ab}.
-This provides a surface-adsorption reference, but a surface of a bulk crystal retains an underlying three-dimensional environment.
-A free-standing layer has different coordination and can respond differently to adsorption.
-Separately, Li et al. used global structure search and first-principles calculations to propose two-dimensional beryllium hydride structures~\cite{li2018global}.
-Those calculations concern compound formation and changes in the bonding network, rather than the termination of a prescribed elemental beryllium layer.
-We therefore distinguish bulk-surface adsorption, hydride-sheet formation, and hydrogen functionalization of a selected parent structure.
+Layer number introduces a further structural variable.
+Jiang et al. examined few-layer beryllene and found that the predicted superconductivity varied nonmonotonically with layer number and stacking~\cite{jiang2025nonmonotonic}.
+Their study related these changes to the electronic states and phonon-mediated coupling, and also examined non-trivial topology and interstitial electronic states.
+Thus, adding a layer need not produce a simple interpolation between monolayer and bulk properties.
+The stacking arrangement changes both the interlayer bonding and the surface environment.
+This motivates an explicit comparison of geometries rather than a classification based only on the number of layers.
 
-Together, these studies motivate a comparison in which both the parent geometry and hydrogen configuration are specified.
-They do not determine in advance whether hydrogenation will preserve metallicity, open a gap, or favour a different structure.
-Chapter~\ref{cha:project_beryllene} examines these questions for the configurations considered in this thesis.
-Structural stability, electronic properties, and optical response are assessed within the corresponding computational approximations.
-The band-topology analysis concerns the selected pristine phases.
+In chapter~\ref{cha:project_beryllene}, we extend the structural comparison to trilayer cubic beryllene and selected hydrogen-functionalized configurations.
+Here, trilayer cubic beryllene denotes the ABA-stacked trilayer with a square lattice, so that it is specified separately from other few-layer structures in the literature.
+We examine how the geometry and surface bonding change the electronic structure and optical response.
+For selected pristine phases, we also investigate the band topology, with the required band-isolation conditions stated explicitly.
+
+Let us next consider the hydrogen--beryllium bond.
+Bachurin and Vladimirov studied hydrogen adsorption on beryllium surfaces using \textit{ab initio} calculations~\cite{bachurin2015ab}.
+Such a surface retains the underlying bulk coordination, whereas both sides of a freestanding layer can respond to adsorption.
+Li et al. instead used global structure search and first-principles calculations to propose two-dimensional beryllium hydride structures~\cite{li2018global}.
+In that case, hydrogen enters the formation of a compound network.
+These studies address related bonding questions in different structural environments.
+The comparison in this thesis starts from specified elemental layers and follows the changes produced by selected hydrogen arrangements.
+In this way, we can examine whether the parent electronic character is retained, how the structure relaxes, and how the changes appear in the optical spectrum.
 
 \subsection{Computational approaches and their limitations}
 \label{subsec:lit_methods}
 
-The preceding studies use different calculations to answer different physical questions.
-We now compare the information provided by these approaches and the limits that matter for the present work.
-The aim here is to identify the basis of a prediction; the detailed theory and calculation settings are given in the later chapters.
+We have seen that previous studies use structural searches, electronic calculations, and response calculations to address different parts of the material problem.
+We now discuss how these descriptions are connected.
+The detailed theory and computational settings are developed in the following chapters; here, we identify what each level of calculation contributes to the comparison.
 
-Firstly, density functional theory (DFT) provides a practical framework for comparing candidate structures and their electronic states.
-Semilocal approximations such as the Perdew--Burke--Ernzerhof (PBE) functional are widely used for these tasks~\cite{perdew1996generalized}.
-For example, the phonon calculations of Ono examine how changing the lattice geometry affects the dynamical stability of two-dimensional metals~\cite{ono2020dynamical}.
-Such a comparison answers a structural question within a particular approximation.
-It does not, by itself, establish the accuracy of an optical excitation energy or a superconducting transition temperature.
-We therefore distinguish the property being tested from the general choice to use DFT.
+Firstly, density functional theory (DFT) provides a practical description of the electronic ground state and the forces acting on the atoms.
+Semilocal approximations, such as the Perdew--Burke--Ernzerhof (PBE) functional, are widely used to relax structures and compare their energies~\cite{perdew1996generalized}.
+When combined with a structural search, these calculations can explore competing arrangements, as in the borophene and bulk o-\ce{B14} studies discussed above~\cite{penev2012polymorphism,han2023superconducting}.
+Once a geometry has been obtained, its band structure gives the first description of the electronic states available for further response calculations.
 
-The exchange-correlation treatment is particularly relevant when comparing band gaps and electronic states.
-Screened hybrid functionals include a fraction of short-range exact exchange and provide an alternative to semilocal descriptions~\cite{heyd2003hybrid,krukau2006influence}.
-Here, we use the 2006 form of the Heyd--Scuseria--Ernzerhof functional, denoted as HSE06.
-Comparing PBE and HSE06 in the boron-based studies allows us to assess the sensitivity of the predicted electronic and optical properties to this choice.
-However, a hybrid-functional band structure remains an approximate description.
-It is not equivalent to a quasiparticle calculation, and an independent-particle optical calculation does not include the attraction between an excited electron and the hole it leaves behind.
-Onida et al. distinguish these excitation problems and discuss the roles of many-body self-energy corrections and electron--hole interactions~\cite{onida2002electronic}.
-Thygesen further explains how screening and the dielectric environment affect quasiparticles, excitons, and plasmons in two-dimensional materials~\cite{thygesen2017}.
-Consequently, agreement between two functionals is useful evidence of a trend, but not a complete validation of an experimental spectrum.
+The exchange-correlation approximation enters this description directly.
+Screened hybrid functionals include a fraction of short-range exact exchange and can change the band separations and orbital ordering obtained with a semilocal functional~\cite{heyd2003hybrid,krukau2006influence}.
+We use the 2006 form of the Heyd--Scuseria--Ernzerhof functional, denoted as HSE06, to compare selected results with PBE in the boron-based studies.
+This comparison tests the sensitivity of the electronic and optical trends to the exchange-correlation treatment.
+A quasiparticle excitation is a further problem: in the $GW$ approach, the electronic self-energy is approximated using the Green function and the screened Coulomb interaction.
+The interaction between the excited electron and the hole can then be included through the Bethe--Salpeter equation~\cite{onida2002electronic}.
+These distinctions are particularly relevant in two-dimensional systems, where screening depends strongly on the environment~\cite{thygesen2017}.
+Our independent-particle optical calculations describe transitions within the adopted electronic structure; they do not include the bound electron--hole excitations of a Bethe--Salpeter treatment.
 
-Secondly, a comparison between isolated sheets and heterostructures requires an appropriate treatment of the interface.
-Dispersion corrections provide one way to include interactions that are not adequately described by a semilocal functional alone~\cite{grimme2010consistent,grimme2011effect}.
-In the graphene-based bilayers considered here, the relaxed separation and atomic registry define the geometry on which the electronic and optical calculations are performed.
-Changes in that geometry can therefore affect the inferred role of interfacial coupling.
-The optical representation also matters.
-Matthes et al. showed how a dielectric tensor obtained from a periodic supercell can be related to the response of an individual sheet or a film of specified thickness, including its out-of-plane response~\cite{matthes2016influence}.
-This comparison makes clear that vacuum spacing, effective thickness, and polarization must be stated when reporting optical quantities for two-dimensional models.
+Next, the electronic comparison requires a consistent structural reference.
+In a heterostructure, the interlayer separation and atomic registry determine the geometry at which charge redistribution and band mixing are evaluated.
+Dispersion corrections account for interactions that are not adequately described by a semilocal functional alone and therefore enter the relaxation of the graphene-based bilayers~\cite{grimme2010consistent,grimme2011effect}.
+The representation of the optical response must also be specified.
+A periodic calculation places a sheet and its surrounding vacuum in the same supercell.
+Consequently, a dielectric quantity normalised to that cell depends on the vacuum spacing.
+Matthes et al. discussed the relation between this response and that of an individual sheet or a film of specified thickness, including the out-of-plane response~\cite{matthes2016influence}.
+This relation is needed when comparing optical magnitudes across different calculations or with a measurement.
 
-Next, we distinguish the different meanings of structural stability.
-A total-energy comparison gives an energetic preference relative to the structures or reference states included in that comparison.
-A harmonic phonon calculation tests the response to small displacements around a particular geometry~\cite{baroni2001phonons}.
-Ab initio molecular dynamics (AIMD) follows the motion of a finite system over a finite time at the chosen simulation conditions.
-For example, the evidence used in the prediction of bulk o-\ce{B14} combines several such tests, whereas Ono's survey focuses on harmonic dynamical stability~\cite{han2023superconducting,ono2020dynamical}.
-These tests complement one another, but they answer different questions.
-They do not replace an assessment of competing phases, formation pathways, or the experimental environment.
-We therefore use the terms energetic preference, dynamical stability, and short-time thermal persistence according to the evidence available.
+We then turn to the motion of the atoms.
+A relaxed structure is a stationary configuration, but its response to displacement provides further information about stability.
+Harmonic phonons, obtained from force constants or density-functional perturbation theory, describe the small-displacement response~\cite{baroni2001phonons}.
+They were used, for example, by Ono to compare two-dimensional metallic lattices~\cite{ono2020dynamical}.
+Ab initio molecular dynamics (AIMD) instead follows the atomic motion at a chosen temperature for a finite simulation time.
+The two calculations therefore examine different aspects of the same structure: local harmonic stability and persistence during the simulated thermal motion.
+Total-energy comparisons supply the energetic ordering of the chosen candidates.
+Together, these results help assess a proposed model, while experimental formation also depends on competing phases, preparation pathways, and the environment.
 
-Finally, superconductivity and topology require additional information beyond a ground-state band plot.
-The borophene study of Gao et al. estimates transition temperatures from electron--phonon coupling using a McMillan--Allen--Dynes expression, while Li et al. use Migdal--Eliashberg calculations for beryllene~\cite{gao2017prediction,li2023coexistence}.
-The resulting temperatures belong to particular materials and treatments of the pairing problem.
-They should not be compared without identifying those choices.
-Wannier interpolation,
-as implemented in EPW, provides a means of evaluating electron--phonon quantities on dense sampling meshes~\cite{ponce2016epw}.
-The topology problem instead concerns the structure of electronic wave functions and requires a suitable band subspace and the relevant symmetries~\cite{fu2007topological}.
-For the present work, these methods address additional questions in selected systems; they do not serve as interchangeable measures of material performance.
+Finally, the coupling between electronic and lattice states allows us to investigate phonon-mediated superconductivity.
+Gao et al. used electron--phonon coupling in a McMillan--Allen--Dynes estimate of the transition temperature, whereas Li et al. treated the superconducting state of beryllene through Migdal--Eliashberg calculations~\cite{gao2017prediction,li2023coexistence}.
+Wannier interpolation, as implemented in EPW, makes it possible to evaluate the relevant electron--phonon quantities on dense sampling meshes~\cite{ponce2016epw}.
+The calculated transition temperature depends on this coupling and on the treatment of the pairing interaction.
+Band topology requires a different extension of the electronic calculation: we must examine the wave functions over a suitable band subspace and use the symmetries of the system~\cite{fu2007topological}.
+We return to its physical significance below.
 
 \subsection{Experimental evidence and theoretical models}
 \label{subsec:lit_critical_status}
 
-At this stage, the review has introduced both experimentally reported materials and computational models.
-We now make the distinction explicit for the systems used in this thesis.
+The preceding comparisons allow us to place the models used in this thesis in their experimental and theoretical context.
+Graphene, substrate-supported borophene, and epitaxial \ce{BC3} have experimental precedents, as do related borophene--graphene interfaces and exfoliated beryllium sheets~\cite{novoselov2004electric,mannix2015synthesis,feng2016experimental,tanaka2005novel,liu2019borophene,chahal2023beryllene}.
+The calculations here use specified freestanding geometries, so the supporting surface and preparation environment of those experiments are not automatically included.
+The \ce{B4C3} monolayer and bulk o-\ce{B14} framework instead originate from theoretical predictions~\cite{tian2019,han2023superconducting}.
+Their use as reference structures allows us to investigate new interfaces or low-dimensional forms, with the resulting properties remaining predictions for those models.
 
-Firstly, graphene, substrate-supported borophene phases, and epitaxial \ce{BC3} sheets have experimental precedents~\cite{novoselov2004electric,zhong2017metastable,chen2022synthesis,yanagisawa2004phonon,tanaka2005novel}.
-Borophene--graphene combinations and exfoliated beryllene sheets have also been reported~\cite{liu2019borophene,hou2021borophene,chahal2023beryllene}.
-These observations establish relevant material families, while retaining the specific geometries and environments of the experiments.
-
-Secondly, the \ce{B4C3} monolayer used here and the bulk o-\ce{B14} framework have theoretical origins~\cite{tian2019,han2023superconducting}.
-The bulk o-\ce{B14} structure is therefore a calculated reference for dimensional reduction, rather than evidence that its monolayer or bilayer has been prepared.
-Likewise, the existence of experimental beryllene sheets does not establish the realization of every idealised $\alpha$, $\beta$, trilayer cubic, or hydrogen-functionalized model.
-
-Thirdly, the present calculations concern specified freestanding heterostructures, low-dimensional o-\ce{B14} models, and pristine or hydrogen-functionalized beryllium configurations.
-Their structural, electronic, and optical properties are predictions under the stated approximations.
-This distinction defines how their contribution is assessed.
-A known monolayer can still provide an informative reference for a new interface comparison, and a predicted bulk structure can motivate a new low-dimensional model.
-The contribution must identify which structure or property is being investigated and what evidence supports the resulting conclusion.
+This distinction also clarifies the comparison between the three projects.
+For the graphene-based bilayers, we begin with selected monolayers and ask how their interaction changes the response.
+For o-\ce{B14}, we begin with a predicted bulk network and change its dimensionality and surface termination.
+For beryllium, we compare layer geometries and then modify their surface bonding.
+In each case, the reference structure is part of the question: it allows us to relate a change in the calculated properties to the structural change being examined.
 
 \section{Motivation for optical and topological analysis}
 \label{sec:intro_observables}
 
 % opening paragraph
-The previous section discussed the materials and the computational approaches used to study them.
-We now explain why electronic structure alone does not answer all the questions considered in this thesis.
-Optical response connects electronic transitions to the interaction with light, while band topology concerns the organisation of the electronic states across the Brillouin zone.
-These analyses provide different information and are used for different purposes.
+So far, we have discussed how the atomic structures are chosen and how their electronic states are calculated.
+We now consider what further information can be obtained from these states.
+Optical response describes their interaction with an electromagnetic field.
+Band topology concerns the way a selected set of wave functions is connected across the Brillouin zone.
+Both start from the electronic structure, but they answer different physical questions.
 
 \subsection{Optical response as a probe of electronic structure}
 \label{subsec:opt_observables_motivation}
 
-The electronic structure describes the states available to the electrons.
-However, the band energies alone do not determine the response to light.
-We also need to consider which transitions are allowed and how their strength changes with the direction of the electric field.
-We therefore compare optical spectra between constituent monolayers and heterostructures, between different dimensional forms of o-\ce{B14}, and between pristine and hydrogen-functionalized beryllium structures.
-These comparisons test whether structural changes produce distinguishable changes in the calculated response.
+The band structure tells us which electronic energies are available.
+To describe the response to light, we must also know which transitions couple to the electric field and how strongly they do so.
+A change in bonding can therefore modify an optical spectrum even when the material remains metallic or semiconducting.
+This is why we compare optical properties alongside the band structures of the isolated layers, heterostructures, and hydrogen-functionalized systems.
 
-Firstly, we compare transition energies and spectral weight.
-Within the adopted independent-particle approximation, these quantities describe the electronic response at different photon energies~\cite{onida2002electronic}.
-Comparing an isolated layer with a bilayer helps identify changes associated with interfacial coupling.
-Comparing pristine and hydrogen-functionalized structures instead examines how changes in surface bonding are reflected in the spectrum.
-The purpose is to connect a change in the atomic model to a change in the optical response.
+We first consider the energies and strengths of the interband transitions.
+Within the independent-particle description, they determine the absorptive part of the dielectric response~\cite{onida2002electronic}.
+Comparing a monolayer with its heterostructure shows how stacking redistributes this response over photon energy.
+Comparing a pristine layer with its hydrogen-functionalized form follows the effect of the changed surface bonds.
+The real part of the dielectric response describes the accompanying polarization and dispersion.
+As developed in chapter~\ref{cha:fundamentals_b}, causality connects these two parts, so they must be considered together.
 
-We then compare different polarizations to examine optical anisotropy.
-The dielectric response within the structural plane can differ from the response perpendicular to it, and inequivalent in-plane directions may also need to be distinguished.
-This directional comparison connects the optical calculation to the symmetry and geometry of the model.
-Off-diagonal tensor components must be interpreted in the chosen coordinate system and with the relevant symmetry constraints.
-Their presence alone does not establish optical activity.
-The derived absorption coefficient, refractive index, extinction coefficient, and reflectivity describe further aspects of the same dielectric response.
-They therefore provide related descriptions of light propagation through the same dielectric response.
+We next resolve the response along different directions.
+The in-plane bonds and the out-of-plane electronic environment are different, giving a natural distinction between the corresponding polarizations.
+When the two in-plane directions are inequivalent, their comparison also reveals the effect of structural anisotropy.
+The dielectric tensor provides the common description of these directional responses.
+In the scalar treatment, the refractive index describes the phase propagation of light, whereas the extinction coefficient describes its attenuation.
+The absorption coefficient expresses this attenuation as an intensity decay per unit distance, and reflectivity describes the fraction returned at an interface under the assumed optical geometry.
+Thus, these quantities express connected physical consequences of the same dielectric response.
+Where a research chapter derives them from individual Cartesian diagonal components, that construction is stated explicitly; a tensor with off-diagonal coupling requires the corresponding propagation problem to obtain its optical modes.
 
-Next, we examine the energy-loss features.
-Here, a loss peak can indicate a collective excitation, but its interpretation also depends on dielectric screening and damping.
-We therefore consider the loss spectrum together with the real and imaginary dielectric response~\cite{thygesen2017}.
-A peak or a zero crossing alone does not establish a particular plasmon mode.
-For two-dimensional systems, the relation to a measured loss spectrum also depends on momentum transfer, geometry, and the surrounding environment.
-These conditions define how the calculated features can be compared with electron energy-loss spectroscopy (EELS).
+We then consider the energy transferred by an external charged probe.
+The energy-loss function depends on the screened response and can contain features associated with collective electronic motion~\cite{thygesen2017}.
+A zero of the real dielectric function together with sufficiently weak damping can support a plasmon interpretation.
+We therefore compare the loss peaks with both parts of the dielectric response, rather than assigning a mode from a peak alone.
+For a two-dimensional sheet, momentum transfer, geometry, and the surrounding dielectric environment also enter the relation to electron energy-loss spectroscopy (EELS).
+The calculated loss spectra allow us to follow changes in screening and candidate collective features within the stated optical treatment.
 
-Finally, we specify the limits of the optical comparison.
-The calculated spectra depend on the treatment of intraband transitions and electron--hole interactions~\cite{onida2002electronic}.
-For periodic two-dimensional models, they also depend on the convention used for vacuum and effective thickness~\cite{matthes2016influence}.
-These choices determine how the calculated response can be related to a measurement in a particular environment.
-Chapter~\ref{cha:fundamentals_b} develops the dielectric response and its relation to optical properties.
-The research chapters state the computational treatment used for their respective systems.
+Finally, the same conventions must be retained when comparing the spectra.
+Metallic systems can have an intraband contribution at low frequency, while electron--hole interactions can change interband excitation energies and strengths~\cite{onida2002electronic}.
+The treatment of these contributions, together with the vacuum or effective-thickness convention, determines what the calculation represents~\cite{matthes2016influence}.
+The research chapters specify these choices for their respective systems.
+With this basis, the optical comparison connects a structural change to a change in the response, while preserving the conditions needed to interpret its magnitude and spectral features.
 
 \subsection{Physical significance of band topology}
 \label{subsec:topo_motivation}
 
-Optical spectra describe the response of the electronic system.
-We now consider another question: how are the electronic states connected across the Brillouin zone?
-Band topology addresses this question through properties of the wave functions that are not contained in the size of a band gap alone.
+We now turn from the response of the electronic states to their organisation across the Brillouin zone.
+Band energies alone do not specify this organisation, since they do not contain the full information carried by the wave functions.
 For a two-dimensional insulating system with time-reversal symmetry and the appropriate spinful band description, a non-trivial $\mathbb{Z}_2$ invariant is associated with helical edge states~\cite{fu2007topological}.
-This connection motivates the investigation of topology in light-element structures, where structural and orbital changes may be relevant even though atomic spin--orbit coupling is weak.
+Counterpropagating states at an edge are related by time reversal, which restricts elastic backscattering between a Kramers pair when that symmetry is preserved.
+The connection between bulk wave functions and boundary transport gives the invariant its physical significance.
+It also motivates the study of light-element materials, where the small spin--orbit interaction makes the energy scales and band separations particularly important.
 
-However, the conditions of the classification must be stated.
-In an inversion-symmetric system, the Fu--Kane criterion evaluates the invariant using the parity eigenvalues of Kramers pairs at the time-reversal-invariant momenta~\cite{fu2007topological}.
-This provides an efficient evaluation once the relevant band subspace has been defined.
-For a metallic system, its separation from the other bands must hold through a direct gap throughout the Brillouin zone.
-Such a subspace can exist even when indirect band overlap makes the material metallic.
-Its topology does not by itself establish quantum spin Hall insulating transport in the material.
-Chapter~\ref{cha:fundamentals_c} develops these symmetry and band-isolation conditions.
-They provide the basis for assessing the topological interpretation of the beryllium structures considered in chapter~\ref{cha:project_beryllene}.
+To evaluate the invariant, we first need a well-defined band subspace.
+In an inversion-symmetric system, the Fu--Kane criterion uses the parity eigenvalues of its Kramers pairs at the time-reversal-invariant momenta~\cite{fu2007topological}.
+The selected subspace must remain separated from the other bands by a direct gap throughout the Brillouin zone.
+An indirect overlap can nevertheless make the material metallic, even when this direct separation is present.
+We therefore distinguish the topology of an isolated subspace from an insulating state at the Fermi level.
+Only the latter supplies the bulk insulating condition for the quantum spin Hall transport interpretation.
+Chapter~\ref{cha:fundamentals_c} develops these distinctions and the symmetry conditions in detail.
+They are then used to assess the selected pristine beryllium phases in chapter~\ref{cha:project_beryllene}.
 
 \section{Research questions and scope of the thesis}
 \label{sec:intro_gaps}
 
 % opening paragraph
-The preceding discussion identifies a common question.
-How do changes in atomic structure modify the electronic structure and optical response of light-element two-dimensional materials?
-We investigate this question using first-principles calculations.
+The preceding discussion leads to the common question of this thesis: how do changes in atomic structure modify the electronic structure and optical response of light-element two-dimensional materials?
+We address this question through three comparisons, each beginning with a specified structural reference.
+The interface, dimensionality, and surface termination provide the changes that connect the reference to the system being investigated.
 
-The three projects examine this question in different bonding environments.
-Each project compares reference structures with modified structures.
-The modification may involve an interface, a change in dimensionality, or hydrogen termination.
-This shared comparison connects the projects.
-Magnetism, superconductivity, and band topology enter as further questions for selected systems.
+Firstly, we consider graphene coupled to borophene, \ce{BC3}, and \ce{B4C3}.
+Earlier work establishes the relevance of these material families and shows that interlayer coupling can modify electronic states.
+Here, we ask how the selected metallic and semiconducting constituents affect the electronic and polarization-dependent optical changes induced by stacking with graphene.
+Comparing each bilayer with its isolated constituents within the same computational framework allows us to identify the response associated with forming that interface.
 
-More specifically, we address the following research questions:
+Next, we follow the pentagonal-bipyramid boron framework from the predicted bulk o-\ce{B14} structure to one- and two-layer forms, and then to hydrogen-terminated sheets.
+The bulk prediction leaves open how reduced coordination and surface bonding affect this network.
+We examine the resulting electronic and magnetic states, the electron--phonon properties, and the changes in optical response.
+The bulk, pristine sheets, and terminated sheets provide successive references for separating the effects of dimensional reduction and hydrogen addition.
 
-\begin{enumerate}
-\item The modification of electronic structure and polarization-dependent optical response induced by coupling graphene to selected boron-based monolayers,
-evaluated relative to the isolated constituents.
-\item The influence of dimensional reduction and hydrogen termination on electronic, magnetic,
-and electron--phonon properties within the pentagonal-bipyramid boron framework, along with the corresponding signatures in the optical response.
-\item The effects of layer geometry and hydrogen functionalization on the stability, electronic structure,
-and optical anisotropy of the examined beryllium configurations, together with the topological character of the selected pristine phases.
-\end{enumerate}
+Finally, we examine the beryllium structures, extending the comparison of the $\alpha$ and $\beta$ phases to trilayer cubic beryllene and selected hydrogen-functionalized configurations.
+We ask how the layer geometry and hydrogen arrangement affect structural stability, electronic states, and optical anisotropy.
+For selected pristine phases, we also examine the band-topology interpretation and the separation of the relevant band subspaces.
+These questions connect the structural comparison to the optical and topological considerations introduced above.
 
-The first question builds on known monolayers and experimental precedents for related interfaces.
-Its contribution is the comparison of the selected graphene-based bilayers and their optical response within a stated computational framework.
-The second question uses the previously predicted bulk o-\ce{B14} structure as a reference and examines its low-dimensional and hydrogen-terminated forms.
-The third question extends the comparison of beryllium structures to trilayer cubic beryllene and selected hydrogen-functionalized configurations, while retaining earlier $\alpha$- and $\beta$-beryllene studies as references.
-Together, these comparisons identify which changes in response follow the structural modifications studied and where the interpretation depends on the method or model.
+The three projects therefore follow the same physical sequence: a change in atomic arrangement modifies bonding and electronic states, which in turn changes the calculated response.
+Magnetism, superconductivity, and topology enter where the particular electronic and lattice structure makes them relevant.
+The conclusions concern the specified models and computational treatments.
+By comparing each modified structure with its reference, we can identify both the common role of structural modification and the different outcomes allowed by each bonding environment.
 
-For the present work, we compare selected structural models using specified computational approximations.
-The calculations provide evidence for the properties of those models.
-We therefore state the limits of each prediction and distinguish computational results from experimental observations.
-Structural relaxation, phonons, and finite-time dynamics are used to assess different aspects of stability, rather than to imply experimental synthesizability.
-Similarly, the magnetic, superconducting, and topological analyses are interpreted within the corresponding electronic states and theoretical descriptions.
-
-\newpage
 \section{Thesis organisation}
 \label{sec:intro_organisation}
 
 % opening paragraph
-The discussion follows the sequence of these research questions.
-We first introduce the theoretical framework and then turn to the three material studies.
+We first develop the theoretical descriptions needed for the material comparisons.
+Chapter~\ref{cha:fundamentals_a} introduces the density-functional treatment of the many-body problem, the exchange-correlation approximations, and their use in practical calculations.
+Chapter~\ref{cha:fundamentals_b} then develops the linear optical response, connecting the dielectric function to the optical quantities used later.
+Chapter~\ref{cha:fundamentals_c} introduces the band-subspace and symmetry conditions for the topological analysis, including the distinction between a topological subspace and an insulating state at the Fermi level.
 
-Chapter~\ref{cha:fundamentals_a} develops the density-functional description of the many-body problem used in the calculations.
-It also discusses the exchange-correlation approximations used later.
-Chapter~\ref{cha:fundamentals_b} then develops the linear optical response.
-It connects the dielectric response to the optical properties examined in the research chapters.
-Chapter~\ref{cha:fundamentals_c} develops the band-subspace and symmetry conditions for the topological analysis.
-It distinguishes the topology of an isolated band subspace from an insulating state at the Fermi level.
-
-In chapter~\ref{cha:project_bilayers}, we compare graphene-based heterostructures with their constituent monolayers.
-This comparison examines how interfacial coupling changes the electronic structure and optical response.
-
-We next consider the pentagonal-bipyramid boron framework in chapter~\ref{cha:project_boron}.
-Here, we examine the effects of dimensional reduction and hydrogen termination on electronic, magnetic, electron--phonon, and optical properties.
-
+We then apply these descriptions to the three research projects.
+Chapter~\ref{cha:project_bilayers} compares the graphene-based heterostructures with their constituent monolayers and examines the electronic and optical changes produced by interfacial coupling.
+Chapter~\ref{cha:project_boron} follows dimensional reduction and hydrogen termination in the pentagonal-bipyramid boron framework, including the electronic, magnetic, electron--phonon, and optical properties.
 Chapter~\ref{cha:project_beryllene} extends the discussion to pristine and hydrogen-functionalized beryllium structures, including trilayer cubic beryllene.
-We examine their structural stability, electronic properties, and optical response, together with band topology in the selected pristine phases.
+It examines their stability, electronic properties, and optical response, together with band topology in the selected pristine phases.
+Finally, chapter~\ref{cha:conclusion_outlook} brings these findings together and discusses the further questions suggested by the results.
 
-Finally, chapter~\ref{cha:conclusion_outlook} brings the findings together.
-It outlines further work suggested by these results.
-
-The additional theoretical foundations are collected in three appendices.
+The more general theoretical foundations are collected in the appendices.
 Appendix~\ref{cha:appendix_quantum} develops the quantum-mechanical background and the elementary density functionals.
-Appendix~\ref{cha:appendix_electrodynamics} develops the electromagnetic response and its causal structure.
-Appendix~\ref{cha:appendix_topology} introduces geometric phases and the quantum-mechanical foundations of the band-topology discussion.
-Finally, appendix~\ref{cha:appendix_code} describes the source code used in this thesis.
+Appendix~\ref{cha:appendix_electrodynamics} discusses the electromagnetic response and its causal structure.
+Appendix~\ref{cha:appendix_topology} introduces geometric phases and the quantum-mechanical foundations of band topology.
+Appendix~\ref{cha:appendix_code} describes the source code used in this thesis.
