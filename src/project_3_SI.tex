@@ -410,6 +410,8 @@ and the minimum of trilayer cubic beryllene remains on the $\Gamma$--$\mathrm{M}
 In each case,
 the lower bound obtained by subtracting the largest local slope times the sampling radius from the minimum gap remains positive,
 between 0.65 and \qty{1.07}{\milli\electronvolt}.
+The local refinements locate minima at fixed self-consistent charge density;
+the convergence of these meV gaps with respect to the plane-wave cutoff and the self-consistent k-point mesh has not been tested separately from the total-energy convergence.
 The smallest direct gap of the hydrogen-functionalized structures is \qty{0.177}{\electronvolt}.
 The Wannier charge centres of 1H-$\beta$-beryllene are shown in figure~\ref{fig:proj3_wcc}.
 For both the lowest four and the lowest six bands,
@@ -417,8 +419,10 @@ the Wannier charge centres are crossed an even number of times by any reference 
 which gives $Z_{2}=0$.
 
 The parities obtained with the HSE06 hybrid functional without spin-orbit coupling are compared with the PBE results in table~\ref{tab:proj3_hse_parity}.
-The numbers of odd-parity Kramers pairs at all four time-reversal invariant momenta are identical,
-so the $\nu$ values of all five structures are unchanged.
+The numbers of odd-parity states among the lowest $N/2$ spinless bands agree with the numbers of odd-parity Kramers pairs in PBE with spin-orbit coupling at all four time-reversal invariant momenta,
+so the parity products at these momenta are unchanged.
+This comparison checks the parity ordering at these momenta,
+but does not establish that the lowest-$N$ spinor subspaces remain isolated throughout the Brillouin zone with HSE06 and spin-orbit coupling.
 For 2H-$\beta$-beryllene,
 the gap above band 6 at $\mathrm{M}$ is \qty{0.171}{\electronvolt} with HSE06 and \qty{0.178}{\electronvolt} with PBE in the same cell.
 
@@ -459,7 +463,10 @@ trilayer cubic beryllene & 6 & 1, 1, 1, 2 & 1 & $\mathrm{M}$: even-parity double
 \caption{Numbers of odd-parity Kramers pairs among the lowest $N$ bands at the time-reversal invariant momenta,
 $Z_{2}$ indices,
 and smallest gaps $E_{N+1}-E_{N}$ at the time-reversal invariant momenta.
-The parities and the $Z_{2}$ indices are identical for HSE06 without spin-orbit coupling and PBE with spin-orbit coupling.
+The HSE06 counts use the lowest $N/2$ spinless states,
+whose parities agree with those of the PBE Kramers pairs.
+The listed $Z_{2}$ indices are conditional PBE results with spin-orbit coupling,
+not independently determined HSE06 indices.
 The HSE06 and PBE gaps are calculated in the same \qty{20}{\angstrom} cell without spin-orbit coupling.
 For trilayer cubic beryllene,
 the boundary of the lowest six bands at $\mathrm{M}$ lies within an orbital doublet of even parity,
@@ -514,6 +521,10 @@ Additional optical spectra are shown in figures~\ref{fig:proj3_reflectivity_alph
 Figures~\ref{fig:proj3_reflectivity_alpha_beta} and~\ref{fig:proj3_energy_loss_alpha_beta} show the reflectivity and energy-loss spectrum for $\alpha$-beryllene and $\beta$-beryllene.
 Figures~\ref{fig:proj3_optical_clean}--\ref{fig:proj3_optical_clean_extinction} compare the pristine bulk and two-dimensional beryllium structures,
 whereas figures~\ref{fig:proj3_optical_hydrogenated}--\ref{fig:proj3_optical_hydrogenated_extinction} compare the corresponding hydrogen-functionalized structures.
+These spectra are scalar comparisons derived from the individual Cartesian diagonal components of the dielectric tensor,
+following the definitions in section~\ref{3_methods}.
+For 1H-$\beta$-beryllene and 2H-$\beta$-beryllene,
+off-diagonal dielectric coupling is not included in these scalar quantities.
 
 \begin{figure}[!htbp]
 \centering
