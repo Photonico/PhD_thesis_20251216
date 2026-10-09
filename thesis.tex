@@ -116,6 +116,7 @@
 \renewcommand{\l@subsubsection}{\@dottedtocline{3}{3em}{4em}}
 \def\@chapter[#1]#2{%
   \refstepcounter{chapter}%
+  \NR@gettitle{#1}% Keep named references consistent with the contents title.
   \chaptermark{#1}%
   \addcontentsline{toc}{chapter}{\protect\tocchapter{\chaptername}{\thechapter}{#1}}%
   \@makechapterhead{#2}%
