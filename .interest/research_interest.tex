@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,left=25mm,right=25mm,top=22mm,bottom=23mm]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+    pdftitle={Statement of Research Interests},
+    pdfauthor={Lu Niu},
+    pdfsubject={Machine-learning surrogate models for two-dimensional materials}
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55\baselineskip}
+\linespread{1.04}
+\raggedbottom
+
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries Statement of Research Interests}\par
+    \vspace{0.2em}
+    {\large Lu Niu}\par
+    School of Physics, The University of Sydney
+\end{center}
+\vspace{-0.4em}
+
+My research examines how atomic structure controls the electronic properties of two-dimensional materials.
+During my PhD at the University of Sydney, I have investigated this connection through first-principles calculations of graphene-based heterostructures, boron allotropes, and pristine and hydrogen-functionalized beryllium sheets.
+I now wish to extend this work to twisted multilayers, where relaxation and disorder demand models that reach beyond the practical scale of direct density functional theory (DFT).
+The postdoctoral project in Professor Christoph Ortner's group at UBC offers a direct route towards this aim through machine-learning interatomic potentials (MLIPs) and machine-learning tight-binding (MLTB) models.
+
+My work on graphene--borophene and graphene--boron-carbide bilayers connects stacking registry and interlayer separation to binding, charge redistribution, and electronic and optical response.
+I compared competing configurations, optimized their structures, and examined their bands and dielectric functions using PBE and HSE06 calculations in VASP.
+This work taught me to resolve small energy differences carefully and to distinguish changes caused by geometry from those introduced by the electronic-structure approximation.
+My subsequent studies of boron and beryllium systems extended these comparisons to hydrogen termination, lattice stability, magnetism, and band topology.
+Two studies have led to first-author publications in \textit{Nanomaterials} and \textit{Physical Review Materials}; the beryllium manuscript is in preparation.
+
+Alongside these calculations, I have developed reusable analysis scripts and Jupyter workflows for convergence tests, electronic bands, phonons, molecular dynamics, and optical response.
+I also have experience with Quantum ESPRESSO, Wannier90, and EPW through electron--phonon calculations performed with collaborators' guidance.
+These activities provide a practical foundation for generating DFT reference data and testing whether a model preserves the physical quantities of interest.
+My machine-learning experience currently consists of small toy-model experiments in JAX.
+I would build on this beginning while contributing my established experience in first-principles modelling and numerical analysis.
+
+At UBC, I would first focus on twisted graphene as a controlled starting point, building on the group's atomic cluster expansion potential for twisted multilayers~\cite{wang2025ace}.
+The central question I wish to address is how accurately a structural model must reproduce local stacking and interlayer forces to predict the electronic consequences of moir\'e relaxation.
+I would begin by reproducing selected structural benchmarks, then identify configurations that challenge the existing model, such as strained regions, corrugation, and selected defect environments.
+This would establish a manageable initial project before extending the approach to BN or transition-metal dichalcogenides in response to the collaboration's priorities.
+
+Next, I would generate and curate additional reference calculations with consistent settings and recorded convergence criteria.
+The data would sample changes in stacking, layer separation, and atomic displacement, including configurations away from equilibrium.
+I would test the potential against relative registry energies, forces, relaxed geometries, and selected phonon modes, reserving entire families of configurations for validation.
+This would expose errors that a random division of closely related structures could conceal.
+Comparisons with new DFT calculations would then guide further sampling towards configurations where the model fails or its predictions become uncertain.
+
+The electronic part of the project would follow from these structural tests.
+I would develop a separately validated MLTB description, drawing on the group's work on equivariant Hamiltonian models~\cite{zhang2022equivariant}.
+A consistent orbital representation, Hermiticity, and the appropriate symmetry transformations would constrain the construction.
+For cells accessible to DFT, I would compare band dispersions, orbital character, and the density of states before applying the model to larger relaxed structures.
+I am particularly interested in tracing how errors in interlayer spacing or local strain propagate into band widths, small gaps, and electronic localization.
+This connects the accuracy of the structural and electronic models to the observables they are intended to predict.
+
+With these comparisons established, I would examine how defects and nonuniform relaxation modify moir\'e domain patterns and the local density of states.
+The collaboration's contact with experiment would help select geometries and observables that answer concrete materials questions.
+I would aim to deliver reproducible reference datasets, documented models, and clear tests of their range of validity, alongside the physical results.
+
+My longer-term interests include the interplay between electronic structure and many-body phenomena in two dimensions.
+Within the exploratory part of the position, I would like to investigate how validated low-energy Hamiltonians could support subsequent studies of interactions in selected moir\'e systems.
+The immediate priority would remain the structural and electronic surrogate models that make such questions tractable.
+I am therefore particularly interested in combining my computational materials background with the group's mathematical and numerical expertise to develop models whose accuracy can be assessed through their physical predictions.
+
+\vspace{0.1em}
+{\small
+\begin{thebibliography}{2}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\bibitem{wang2025ace}
+Y. Wang et al., ``An Atomic Cluster Expansion Potential for Twisted Multilayer Graphene,''
+\href{https://doi.org/10.1088/2632-2153/ae1807}{\textit{Machine Learning: Science and Technology} \textbf{6}, 045040 (2025)}.
+
+\bibitem{zhang2022equivariant}
+L. Zhang et al., ``Equivariant analytical mapping of first principles Hamiltonians to accurate and transferable materials models,''
+\href{https://doi.org/10.1038/s41524-022-00843-2}{\textit{npj Computational Materials} \textbf{8}, 158 (2022)}.
+\end{thebibliography}
+}
+
+\end{document}
