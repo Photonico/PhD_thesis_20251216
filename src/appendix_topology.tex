@@ -567,11 +567,11 @@ The time-reversal invariant $Z_2$ index used in this thesis requires the full ba
 
 \subsection{From an individual band to a band subspace}
 
-The single-band discussion assumes that the state can be followed separately from all other states along the path.
-For spinful time-reversal-symmetric systems, degeneracies are instead part of the problem.
+So far, we have followed a single band separately from the other bands along the path.
+We now consider spinful time-reversal-symmetric systems, where degeneracies also enter the problem.
 Within a degenerate group, the hamiltonian alone does not select a unique state to follow.
 Different choices can mix these states, rather than merely change their individual phases.
-An individual-band Berry phase is therefore not fixed by the degenerate subspace alone.
+The degenerate subspace alone therefore does not fix an individual-band Berry phase.
 We return to the projector in equation~\eqref{band_subspace_projector_topology}.
 
 Within its $2N_\mathrm{p}$-dimensional subspace, we may choose a different orthonormal basis:
@@ -589,17 +589,17 @@ Within its $2N_\mathrm{p}$-dimensional subspace, we may choose a different ortho
 \end{equation}
 
 here, $U(\vec{k}\,)$ is a unitary matrix and $I$ is the identity matrix within the selected subspace.
-The transformed basis need not diagonalize the hamiltonian when it mixes states of different energies.
-Nevertheless, it describes the same projector and therefore the same band subspace.
-This is the multi-state counterpart of the phase freedom introduced earlier.
+When the transformation mixes states of different energies, the transformed basis need not diagonalize the hamiltonian.
+Nevertheless, both bases span the same subspace and define the same projector.
+This extends the phase freedom of an individual state to the choice of basis within a group of states.
 
 We illustrate this freedom with a two-dimensional plane in a real three-dimensional inner-product space in figure~\ref{fig:subspace_basis_appendix}.
 The blue vectors $\ket{1}$ and $\ket{2}$ form one orthonormal basis for the shaded plane.
 Rotating both vectors through the same angle $\alpha=\mathrm{\pi}/5$ within the plane gives the orange basis $\ket{1'}$ and $\ket{2'}$.
 This real rotation is a special case of a unitary transformation.
 Both bases span the same plane and define the same projector $\hat{\mathcal{P}}$.
-The test state $\ket{\psi}$ is kept fixed when we change the basis.
-Consequently, the projection $\hat{\mathcal{P}}\ket{\psi}$ of a test state outside the plane is unchanged.
+We keep the test state $\ket{\psi}$ fixed when we change the basis.
+Consequently, this basis rotation leaves the projection $\hat{\mathcal{P}}\ket{\psi}$ of a test state outside the plane unchanged.
 The plane represents a subspace of states, rather than an energy band or a plane in the crystal;
 the actual Bloch states belong to a complex Hilbert space that need not be three-dimensional.
 
@@ -610,8 +610,8 @@ the actual Bloch states belong to a complex Hilbert space that need not be three
     \label{fig:subspace_basis_appendix}
 \end{figure}
 
-For such a basis, the connection becomes a matrix~\cite{wilczek1984appearance}.
-Applying the same derivative as in equation~\eqref{berry_connection_topology} to each pair of basis states gives:
+We now extend the single-state Berry connection to this basis.
+We apply the derivative in equation~\eqref{berry_connection_topology} to each pair of basis states and obtain a matrix connection~\cite{wilczek1984appearance}:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -625,7 +625,7 @@ Applying the same derivative as in equation~\eqref{berry_connection_topology} to
 \end{equation}
 
 here, $m$ and $n$ run over the selected basis states.
-The second relation follows by differentiating both the original basis and the matrix $U(\vec{k}\,)$.
+We obtain the second relation by differentiating both the original basis and the matrix $U(\vec{k}\,)$.
 For a single state, it reduces to equation~\eqref{berry_connection_gauge_transformation_topology}.
 The off-diagonal elements describe the mixing of basis states as $\vec{k}$ changes.
 The corresponding curvature is also a matrix:
@@ -647,10 +647,10 @@ The same differential-form notation applies with matrix-valued coefficients~\cit
 $\mathcal{F}=\dif\mathcal{A}-\mathrm{i}\mathcal{A}\wedge\mathcal{A}$.
 The ordered matrix products in the wedge term give the commutator in equation~\eqref{nonabelian_berry_curvature_appendix}.
 Consequently, assigning independent single-band phases to arbitrary members of a degenerate pair does not characterize the whole subspace.
-We must now ask whether these local choices of basis can be joined over the whole Brillouin zone
+We now ask whether we can join these local bases over the whole Brillouin zone
 while respecting time-reversal pairing.
 This is a constraint on the full subspace, beyond the phase accumulated around one loop.
-Inversion symmetry allows the corresponding $Z_2$ index to be evaluated from parity eigenvalues in chapter~\ref{cha:fundamentals_c}.
+Using inversion symmetry, we evaluate the corresponding $Z_2$ index from parity eigenvalues in chapter~\ref{cha:fundamentals_c}.
 We first establish how time reversal acts on the same states.
 
 \newpage
@@ -693,7 +693,7 @@ It applies to the non-magnetic spinful problem considered here;
 spin-orbit coupling alone does not break time-reversal symmetry.
 
 Physically, time reversal reverses both the momentum and the spin.
-The complex conjugation also means that coefficients in a linear combination are conjugated:
+The complex-conjugation operation also conjugates the coefficients of a linear combination:
 
 \begin{equation}
     \hat{\Theta}\bigl(c_a\ket{a}+c_b\ket{b}\bigr)
@@ -702,13 +702,13 @@ The complex conjugation also means that coefficients in a linear combination are
 \end{equation}
 
 here, $c_a$ and $c_b$ are complex coefficients.
-This property is called antilinearity.
+We call this property antilinearity.
 In the chosen spin basis, the convention in equation~\eqref{spinful_time_reversal_topology} gives
 $\hat{\Theta}\ket{\uparrow}=-\ket{\downarrow}$ and
 $\hat{\Theta}\ket{\downarrow}=\ket{\uparrow}$.
 Applying time reversal twice therefore returns either spin state with a minus sign,
 which explains $\hat{\Theta}^2=-\hat{I}$.
-The two components of one spinor should consequently be distinguished from its time-reversed partner, which is another complete state.
+We therefore distinguish the two components of one spinor from its time-reversed partner, which is another complete state.
 
 The operator $\hat{\Theta}$ preserves norms while conjugating inner products, and is therefore antiunitary.
 For any two states, it satisfies
@@ -716,7 +716,7 @@ $\braket{\hat{\Theta}a|\hat{\Theta}b}=\braket{b|a}$.
 To apply this relation at a time-reversal invariant momentum (TRIM), we use a full Bloch state $\ket{\psi}$.
 At such a point, the reversed wave vector differs from the original by a reciprocal-lattice vector,
 so both states have the same phases under lattice translations.
-Taking $\ket{a}=\ket{\psi}$ and $\ket{b}=\hat{\Theta}\ket{\psi}$ gives:
+Taking $\ket{a}=\ket{\psi}$ and $\ket{b}=\hat{\Theta}\ket{\psi}$, we obtain:
 
 \begin{equation}
     \braket{\hat{\Theta}\psi|\psi}
@@ -726,7 +726,7 @@ Taking $\ket{a}=\ket{\psi}$ and $\ket{b}=\hat{\Theta}\ket{\psi}$ gives:
 \end{equation}
 
 Consequently, $\braket{\hat{\Theta}\psi|\psi}=0$.
-Time-reversal symmetry also gives $\hat{h}\hat{\Theta}=\hat{\Theta}\hat{h}$ for the full hamiltonian.
+Time-reversal symmetry also imposes $\hat{h}\hat{\Theta}=\hat{\Theta}\hat{h}$ on the full hamiltonian.
 If $\hat{h}\ket{\psi}=E\ket{\psi}$, its partner therefore satisfies:
 
 \begin{equation}
@@ -741,5 +741,5 @@ At a wave vector equivalent to its negative, $\ket{\psi}$ and $\hat{\Theta}\ket{
 therefore represent orthogonal states with the same energy and wave vector.
 These states form a Kramers pair.
 Removing the same Bloch factor from both states preserves their orthogonality,
-so the pairing also supplies two orthogonal cell-periodic states at this representative wave vector.
+so we also obtain two orthogonal cell-periodic states at this representative wave vector.
 At a general wave vector, time reversal instead relates a state at $\vec{k}$ to an equal-energy state at $-\vec{k}$.
