@@ -3,10 +3,10 @@
 
 % opening paragraph
 The electronic states introduced in appendix~\ref{cha:appendix_quantum} carry both amplitudes and phases.
-When we compare states at different parameter values, their relative phases describe how the states are connected.
+When we compare states at different parameter values, we must account for their relative phases.
 In this appendix, we develop this connection through the Berry phase, the Berry connection, and the Berry curvature.
 We then return to a group of electronic bands and establish the time-reversal properties of spinor states.
-These foundations support the band-subspace and parity analysis in chapter~\ref{cha:fundamentals_c}.
+We apply these results to the band-subspace and parity analysis in chapter~\ref{cha:fundamentals_c}.
 
 The discussion of the Berry phase, connection, and curvature partly draws on the educational video by Tony Low at the University of Minnesota Twin Cities~\cite{low2025berry}.
 
@@ -16,15 +16,15 @@ The discussion of the Berry phase, connection, and curvature partly draws on the
 
 % opening paragraph
 The time-dependent Schrödinger equation describes how a quantum state evolves under a given hamiltonian.
-When the hamiltonian changes slowly and returns to its initial form, the state can acquire a phase that depends on the path followed by the parameters.
+When the hamiltonian changes slowly and returns to its initial form, the state can acquire a phase that depends on the path through parameter space.
 We first derive this geometric contribution, and use it to compare electronic states at neighbouring wave vectors later.
 For the application to electronic bands, we use the cell-periodic states introduced in equation~\eqref{bloch_hamiltonian_topology},
 with inner products normalized over one unit cell.
 
 \subsection{The phase of a quantum state}
 
-There is already a freedom in specifying an individual normalized state.
-For any real phase $\varphi_n(\vec{k}\,)$, we can replace it by:
+We first examine the freedom to choose the phase of an individual normalized state.
+For any real phase $\varphi_n(\vec{k}\,)$, we can transform the state as:
 
 \begin{equation}
     \ket{u'_{n\vec{k}}}
@@ -34,7 +34,7 @@ For any real phase $\varphi_n(\vec{k}\,)$, we can replace it by:
 
 This replacement changes neither the band energy nor the projector
 $\ket{u_{n\vec{k}}}\bra{u_{n\vec{k}}}$.
-It therefore represents the same physical state.
+The transformed ket therefore represents the same physical state.
 However, a derivative with respect to $\vec{k}$ also differentiates the chosen phase.
 Consequently, we must account for this freedom when connecting states at different wave vectors.
 We now examine how this freedom enters the evolution of a state and the comparison of neighbouring states.
@@ -53,8 +53,8 @@ At each instant, its normalized eigenstate satisfies:
 \end{equation}
 
 here, $\ket{n(t)}$ abbreviates $\ket{n(\vec{\lambda}(t))}$.
-We assume that this level is non-degenerate and separated from the other levels by a finite energy gap throughout the path.
-Starting in $\ket{n(0)}$, we traverse a fixed smooth parameter path sufficiently slowly that transitions to other levels are suppressed.
+We assume that this level remains non-degenerate and that a finite energy gap separates it from the other levels throughout the path.
+Starting in $\ket{n(0)}$, we traverse a fixed smooth parameter path slowly enough to suppress transitions to other levels.
 This is the adiabatic limit~\cite{berry1984quantal,xiao2010berry}.
 To leading adiabatic order, we therefore write the evolving state as:
 
@@ -68,7 +68,7 @@ To leading adiabatic order, we therefore write the evolving state as:
 \label{adiabatic_phase_separation_appendix}
 \end{equation}
 
-The dynamical phase $\delta_n(t)$ is determined by the energy and the time spent evolving.
+The energy and the elapsed evolution time determine the dynamical phase $\delta_n(t)$.
 For a fixed hamiltonian, it gives the familiar factor $\mathrm{e}^{-\mathrm{i}E_nt/\hbar}$.
 However, retaining this phase alone for a changing eigenstate gives
 $\ket{\Psi_0(t)}=\mathrm{e}^{\mathrm{i}\delta_n(t)}\ket{n(t)}$ and:
@@ -81,7 +81,8 @@ $\ket{\Psi_0(t)}=\mathrm{e}^{\mathrm{i}\delta_n(t)}\ket{n(t)}$ and:
 
 The right-hand side need not vanish.
 The additional phase $\gamma_n(t)$ accounts for the change of the instantaneous eigenstate itself.
-Substituting this form into the Schrödinger equation and projecting onto $\bra{n(t)}$ gives, at the same order:
+We now substitute the state with both phases into the Schrödinger equation and project onto $\bra{n(t)}$.
+At the same adiabatic order, we obtain:
 
 \begin{equation}
 \begin{aligned}
@@ -95,7 +96,7 @@ Substituting this form into the Schrödinger equation and projecting onto $\bra{
 \end{equation}
 
 The projection determines the phase within the retained instantaneous eigenspace.
-Components orthogonal to this space give the transition corrections neglected in the adiabatic approximation.
+Components orthogonal to this space give the transition corrections that we neglect in the adiabatic approximation.
 The single-state form in equation~\eqref{adiabatic_phase_separation_appendix} is consequently an approximate solution when the driving takes a finite time.
 
 Using the chain rule, we now express the geometric contribution as an integral along the parameter path $C_t$:
@@ -122,9 +123,9 @@ Their comparison requires no actual time evolution of an electron.
 \subsection{Connecting neighbouring states}
 
 We first consider a single normalized band that is non-degenerate along a path.
-This simpler case allows us to identify the phase information before returning to a group of bands.
+We first identify the phase information in this single-band case, then return to a group of bands.
 We choose a local gauge in which the state varies smoothly with $\vec{k}$.
-For a small displacement $\dif\vec{k}$, the overlap between neighbouring cell-periodic states is:
+For a small displacement $\dif\vec{k}$, we expand the overlap between neighbouring cell-periodic states as:
 
 \begin{equation}
     \braket{u_{n\vec{k}}|u_{n,\vec{k}+\dif\vec{k}}}
@@ -149,7 +150,7 @@ To identify this first-order change, we differentiate the normalization conditio
 \end{equation}
 
 The two derivative terms are complex conjugates of each other.
-Their sum therefore requires the real part of
+Their vanishing sum therefore forces the real part of
 $\bra{u_{n\vec{k}}}\nabla_{\vec{k}}\ket{u_{n\vec{k}}}$ to vanish.
 The first-order change of the overlap therefore carries a phase.
 We describe this phase variation by introducing the Berry connection~\cite{berry1984quantal}:
@@ -169,7 +170,7 @@ Equation~\eqref{neighbouring_bloch_overlap_topology} consequently takes the form
 $1-\mathrm{i}\,\vec{\mathcal{A}}_n\cdot\dif\vec{k}$ to first order.
 
 We next substitute the phase transformation in equation~\eqref{bloch_phase_freedom_topology} into this definition.
-Differentiating both the phase factor and the state gives:
+We differentiate both the phase factor and the state, and obtain:
 
 \begin{equation}
 \begin{aligned}
@@ -194,7 +195,7 @@ For an open path from $\vec{k}_\mathrm{i}$ to $\vec{k}_\mathrm{f}$, the connecti
 \end{equation}
 
 The integral alone is therefore gauge dependent on an open path.
-An open-path geometric phase can also be defined by specifying an endpoint comparison;
+We can also define an open-path geometric phase by specifying an endpoint comparison;
 when the endpoint overlap is non-zero, adding its argument
 $\arg\braket{u_{n\vec{k}_\mathrm{i}}|u_{n\vec{k}_\mathrm{f}}}$ cancels these endpoint changes.
 For the band-topology discussion, we now consider a closed path.
@@ -218,7 +219,7 @@ We introduce a smooth path coordinate $s$ and change the representative at each 
 \end{equation}
 
 The last relation removes the local phase change between neighbouring representatives.
-It is the parallel-transport condition for the normalized state~\cite{xiao2010berry}.
+This relation defines parallel transport for the normalized state~\cite{xiao2010berry}.
 To describe the remaining change, we abbreviate $\ket{u_n(s)}\coloneqq\ket{u_{n\vec{k}(s)}}$
 and introduce the covariant derivative along the path:
 
@@ -255,7 +256,7 @@ For a smooth gauge that is single-valued around this path, the Berry phase is:
 Under equation~\eqref{berry_connection_gauge_transformation_topology},
 the change in $\gamma_n(C)$ is the negative of the phase change accumulated around the loop.
 For a single-valued gauge transformation, this change is an integer multiple of $2\mathrm{\pi}$.
-Thus $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ is unchanged.
+This transformation therefore leaves $\mathrm{e}^{\mathrm{i}\gamma_n(C)}$ unchanged.
 The local phase choices cancel, while the phase accumulated by connecting the states around the loop remains.
 In particular, a smooth periodic representative obeys
 $\ket{u_{n\vec{k}(s_\mathrm{f})}}=\ket{u_{n\vec{k}(0)}}$ after the endpoint identification.
@@ -264,8 +265,8 @@ $\ket{\bar{u}_n(s_\mathrm{f})}=\mathrm{e}^{\mathrm{i}\gamma_n(C)}\ket{\bar{u}_n(
 This phase mismatch is the holonomy of parallel transport around the loop.
 A parallel-transported representative is also periodic only when the Berry phase vanishes modulo $2\mathrm{\pi}$.
 
-The same cancellation can be seen by discretizing the path into $M$ points.
-With the endpoint identified with the starting point, we write:
+We next recover the same cancellation by discretizing the path into $M$ points.
+We identify the endpoint with the starting point and write:
 
 \begin{equation}
     \gamma_n(C)
@@ -276,7 +277,7 @@ With the endpoint identified with the starting point, we write:
 \label{berry_phase_overlap_product_topology}
 \end{equation}
 
-here, the endpoint state is identified consistently with the initial state,
+here, we consistently identify the endpoint state with the initial state,
 using equation~\eqref{reciprocal_lattice_identification_topology} if the loop crosses a Brillouin-zone boundary.
 The mesh must be fine enough that successive overlaps are non-zero.
 Every local phase then appears once in a bra and once in a ket, so it cancels from the product.
@@ -317,7 +318,7 @@ The additional structure needed for that index comes from time-reversal symmetry
 
 The closed-loop phase compares states around a finite path.
 We now ask how to describe this geometric information locally over a surface.
-For a smooth non-degenerate band, the Berry curvature is defined by the antisymmetric derivatives of the connection~\cite{xiao2010berry}:
+For a smooth non-degenerate band, we define the Berry curvature through the antisymmetric derivatives of the connection~\cite{xiao2010berry}:
 
 \begin{equation}
 \begin{aligned}
@@ -346,7 +347,7 @@ For an oriented surface $S$ in the $(k_x,k_y)$ plane, Stokes' theorem gives:
 \end{equation}
 
 This expression assumes that the band remains non-degenerate on the surface and that a smooth gauge is available over it.
-The boundary orientation is fixed by the surface orientation.
+The surface orientation fixes the boundary orientation.
 For a sufficiently small loop, the curvature consequently gives the geometric phase per oriented area.
 A loop winding around the periodically identified Brillouin zone need not bound such a surface within that zone;
 equation~\eqref{berry_phase_closed_path_topology} still defines its phase, but the surface expression requires this additional check.
@@ -395,8 +396,8 @@ integrating the one-form along a boundary or the two-form over its surface gives
 
 The phase freedom in equation~\eqref{bloch_phase_freedom_topology} leaves the single-state projector
 $\hat{\mathcal{P}}_n=\ket{u_{n\vec{k}}}\bra{u_{n\vec{k}}}$ unchanged.
-The gauge-dependent connection consequently cannot be determined by this projector alone.
-Differentiating $\hat{\mathcal{P}}_n^2=\hat{\mathcal{P}}_n$ and using its constant unit trace gives:
+This projector alone consequently cannot determine the gauge-dependent connection.
+We differentiate $\hat{\mathcal{P}}_n^2=\hat{\mathcal{P}}_n$ and use its constant unit trace to obtain:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -410,15 +411,15 @@ Differentiating $\hat{\mathcal{P}}_n^2=\hat{\mathcal{P}}_n$ and using its consta
 \end{equation}
 
 here, the trace is over the state space.
-Substituting the differentiated ket--bra product into the second line recovers equation~\eqref{abelian_berry_curvature_appendix}.
+Substituting the differentiated ket--bra product into the second line, we recover equation~\eqref{abelian_berry_curvature_appendix}.
 The projector therefore determines the curvature, while a connection additionally requires a choice of phase.
 
 \subsection{A two-component example}
 \label{subsec:berry_two_component_example_appendix}
 
-We can follow these definitions explicitly with two orthonormal basis states $\ket{\uparrow}$ and $\ket{\downarrow}$.
-They are fixed throughout the following calculation.
-For angular parameters $\theta$ and $\varphi$, consider the normalized state and hamiltonian:
+We now apply these definitions to two orthonormal basis states $\ket{\uparrow}$ and $\ket{\downarrow}$.
+We keep this basis fixed throughout the calculation.
+For angular parameters $\theta$ and $\varphi$, we introduce the normalized state and hamiltonian:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -435,7 +436,7 @@ For angular parameters $\theta$ and $\varphi$, consider the normalized state and
 The state $\ket{v}$ has energy $-\Delta/2$, while its orthogonal partner has energy $\Delta/2$.
 The level separation therefore stays finite as the parameters change.
 The angles specify this illustrative hamiltonian; they are independent of the crystal wave vectors used in the thesis calculations.
-Taking the two derivatives gives:
+We evaluate the two derivatives and obtain:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -465,14 +466,14 @@ For a loop at fixed $\theta=\theta_0$, traversed with $\varphi$ increasing from 
 \label{two_component_berry_phase_appendix}
 \end{equation}
 
-Integrating $\mathcal{F}_{\theta\varphi}$ over the cap $0\leq\theta\leq\theta_0<\mathrm{\pi}$ gives the same result.
-The chosen state is smooth over this cap; at the south pole $\theta=\mathrm{\pi}$, a different phase convention is needed to remove its dependence on $\varphi$.
+Integrating $\mathcal{F}_{\theta\varphi}$ over the cap $0\leq\theta\leq\theta_0<\mathrm{\pi}$, we recover the same result.
+The chosen state is smooth over this cap; at the south pole $\theta=\mathrm{\pi}$, we must choose a different phase convention to remove its dependence on $\varphi$.
 At $\theta_0=\mathrm{\pi}/2$, the phase is $-\mathrm{\pi}$, although the state representative returns to itself after a full turn.
 Its parallel-transported representative instead returns with the factor $\mathrm{e}^{-\mathrm{i}\mathrm{\pi}}=-1$.
 The example therefore connects the local connection and curvature to the closed-loop phase.
 It also shows why a geometric phase can vary continuously with the path while the two levels remain separated.
 
-We now give the same example a geometric representation.
+We now represent the same example geometrically.
 For the state in equation~\eqref{two_component_berry_state_appendix}, the expectation values of the Pauli operators define a unit vector:
 
 \begin{equation}
@@ -491,7 +492,7 @@ This sphere describes the two-component state; its coordinates are not the cryst
 
 For a second path, we choose $\theta_0=\mathrm{\pi}/3$, as shown in figure~\ref{fig:geometric_phase_appendix}(a).
 The blue arrows show the direction of increasing $\varphi$ along the boundary of the shaded northern cap.
-The solid angle of this cap and the geometric phase are related by:
+We relate the solid angle of this cap to the geometric phase through:
 
 \begin{equation}
     \Omega_S=2\mathrm{\pi}(1-\cos\theta_0)=\mathrm{\pi},
@@ -518,7 +519,8 @@ The path thus closes on the state sphere while retaining the phase mismatch desc
 \subsection{A connection to transverse transport}
 
 The curvature also enters the motion of electrons under an external field.
-For a wave packet in an isolated band, a weak electric field and zero magnetic field give~\cite{sundaram1999wave,xiao2010berry}:
+We consider a wave packet in an isolated band under a weak electric field and zero magnetic field.
+Its equations of motion read~\cite{sundaram1999wave,xiao2010berry}:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -531,7 +533,7 @@ For a wave packet in an isolated band, a weak electric field and zero magnetic f
 
 here, the electron charge is $-e$, with $e>0$.
 The curvature term produces a velocity perpendicular to the electric field.
-In two dimensions, summing its charge-current contribution over occupied states gives:
+In two dimensions, we sum its charge-current contribution over occupied states and obtain:
 
 \begin{equation}
     \sigma_{xy}^{\mathrm{int}}
@@ -554,7 +556,7 @@ For a band insulator at zero temperature, the Hall expression then reduces to:
 \end{equation}
 
 The integer counts the winding of phase transformations joining local gauges over the Brillouin zone.
-It can change only when the band isolation is lost during a smooth deformation.
+During a smooth deformation, this integer can change only when the band loses its isolation.
 For a band insulator with broken time-reversal symmetry, this relation describes the quantized anomalous Hall response.
 With a magnetic field, the corresponding analysis uses magnetic bands.
 Time-reversal-related states instead cancel their contributions to the intrinsic charge Hall conductivity.
