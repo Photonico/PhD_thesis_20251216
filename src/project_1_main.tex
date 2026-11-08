@@ -25,7 +25,7 @@ All bilayer heterostructure systems exhibit absorption in the visible region, wh
 In addition, all heterojunctions show spectral features consistent with plasmon resonances at approximately \qtyrange{17}{19}{\electronvolt}, while Graphene-\ce{B4C3} and Graphene-Borophene show low-energy features in the in-plane dielectric response within the region \qtyrange{4}{6}{\electronvolt},
 with the latter possessing an additional feature at the lower energy of \qtyrange{1.5}{3}{\electronvolt}.
 The dielectric response differs strongly between in-plane and out-of-plane polarizations.
-The heterostructures show visible-light absorption and plasmon-related features that shift with the boron-based monolayer, indicating tunable optoelectronic behavior.
+The heterostructures show visible-light absorption and plasmon-related features that shift with the boron-based monolayer, indicating tunable optoelectronic behaviour.
 
 \clearpage
 \section{Introduction}
@@ -88,10 +88,10 @@ The comparison with the constituent monolayers identifies how stacking changes t
 These structure-property relationships provide the main contribution of this chapter;
 the calculations do not establish the performance of a fabricated device.
 
-This chapter is organised as follows:
+This chapter is organized as follows:
 In section~\ref{1_calculation_methods}, the calculation method is described,
 followed by the Results and Discussion in section~\ref{1_results}.
-Herein, we describe the physical properties of the monolayers and heterostructures, including band structure, density of states, electron density difference distributions,
+Herein, we describe the physical properties of the monolayers and heterostructures, including band structure, density of states, electron-density difference distributions,
 Schottky barriers and the optical properties.
 This is followed by the Conclusion in section~\ref{1_conclusions}.
 
@@ -100,26 +100,26 @@ This is followed by the Conclusion in section~\ref{1_conclusions}.
 
 We perform first-principles calculations using density functional theory (DFT) as implemented in the Vienna Ab initio Simulation Package (VASP)~\cite{kresse1993ab, kresse1996efficiency, kresse1996efficient}.
 Projector augmented wave (PAW) pseudopotentials account for the electron-ion interactions~\cite{kresse1999ultrasoft}.
-For the structural optimization calculations, we use the generalized gradient approximation (GGA) of Perdew-Burke-Ernzerhof (PBE) as the exchange-correlation functional.
-The Becke-Johnson damped D3(BJ) dispersion correction accounts for long-range van der Waals (vdW) interactions.
-The structural calculations use a $\Gamma$-centered k-point sampling mesh of $11 \times 11 \times 1$, except for the smaller graphene unit cell shown in figure~\ref{fig1.1}, for which a denser mesh of $23 \times 23 \times 1$ is used.
+For the structural optimization calculations, we use the generalized gradient approximation (GGA) of Perdew--Burke--Ernzerhof (PBE) as the exchange-correlation functional.
+The Becke--Johnson damped D3(BJ) dispersion correction accounts for long-range van der Waals (vdW) interactions.
+The structural calculations use a $\Gamma$-centred k-point sampling mesh of $11 \times 11 \times 1$, except for the smaller graphene unit cell shown in figure~\ref{fig1.1}, for which a denser mesh of $23 \times 23 \times 1$ is used.
 Here, the plane-wave energy cutoff is set to \qty{450}{\electronvolt}.
 The electronic convergence criterion is set to \qty{1e-6}{\electronvolt}, and the systems are allowed to relax until all forces on each atom are below \qty{0.01}{\electronvolt\per\angstrom}.
 For smearing at the Fermi level,
 we use the Gaussian smearing method implemented in VASP.
 
 For the calculation of electronic properties,
-the PBE exchange-correlation functional is known to underestimate band gap energies.
+the PBE exchange-correlation functional is known to underestimate band-gap energies.
 Therefore, we also use the screened hybrid exchange-correlation functional of Heyd, Scuseria, and Ernzerhof (HSE06),
-which can improve the description of band gap energies relative to PBE~\cite{sassnick2021electronic, heyd2003hybrid, krukau2006influence}.
+which can improve the description of band-gap energies relative to PBE~\cite{sassnick2021electronic, heyd2003hybrid, krukau2006influence}.
 
 For the total density of states (DoS) shown with the band structures,
-we use a $\Gamma$-centered k-point sampling mesh of $33 \times 33 \times 1$.
+we use a $\Gamma$-centred k-point sampling mesh of $33 \times 33 \times 1$.
 The atom- and orbital-projected HSE06 densities of states use the $17 \times 17 \times 1$ mesh,
 with the total and projected contributions referred to the same Fermi energy for each calculation.
 Both use Gaussian smearing with a broadening value of \qty{0.1}{\electronvolt}.
 The HSE06 exchange-correlation functional is also used for the calculation of optical properties,
-in particular, the frequency-dependent dielectric function with $\Gamma$-centered k-point sampling meshes of $17 \times 17 \times 1$ and $65 \times 65 \times 1$.
+in particular, the frequency-dependent dielectric function with $\Gamma$-centred k-point sampling meshes of $17 \times 17 \times 1$ and $65 \times 65 \times 1$.
 The complex frequency-dependent dielectric function, $\varepsilon(\omega)$,
 is given by equation~\ref{complex_dielectric_function_definition};
 here, $\varepsilon_{1}(\omega)$ and $\varepsilon_{2}(\omega)$ are the real and imaginary parts, respectively, and $\omega$ denotes the angular frequency.
@@ -145,7 +145,7 @@ here, $E_{\mathrm{H}}$ denotes the total energy of the heterostructure,
 $E_{\mathrm{BC}/\mathrm{B}}$ corresponds to the total energy of the isolated boron-carbide or borophene monolayer,
 and $E_{\mathrm{G}}$ denotes the total energy of the isolated graphene monolayer.
 
-Afterwards, the charge density difference $\Delta \rho(\vec{r}\,)$ takes the form:
+Afterwards, the charge-density difference $\Delta \rho(\vec{r}\,)$ takes the form:
 
 \begin{equation}
 \Delta \rho(\vec{r}\,) =
@@ -169,12 +169,12 @@ Graphene is also investigated because it always forms one layer of the heterostr
 The optimized structures of \ce{BC3}, \ce{B4C3}, borophene,
 and graphene are shown in figure~\ref{fig1.1}.
 Borophene monolayers have been predicted to possess various low-energy structures,
-among which the $\beta_{12}$, $\chi_{3}$, and $\alpha'$ structures have been synthesised experimentally~\cite{kaneti2021borophene}.
+among which the $\beta_{12}$, $\chi_{3}$, and $\alpha'$ structures have been synthesized experimentally~\cite{kaneti2021borophene}.
 For this study, we choose to investigate the $\alpha'$ structure of borophene,
-not only because it has been synthesised experimentally,
+not only because it has been synthesized experimentally,
 but also because GGA-level \textit{ab initio} calculations have shown it to have the most favourable cohesive energy~\cite{wu2012two}.
 
-The structural properties and band gap energies of the monolayer systems are shown in table~\ref{tab:1.1_monolayer}.
+The structural properties and band-gap energies of the monolayer systems are shown in table~\ref{tab:1.1_monolayer}.
 For graphene, the calculated lattice constant is $a = 2.467$ $\mathring{\mathrm{A}}$,
 while those of borophene, \ce{BC3}, and \ce{B4C3} are 5.051 $\mathring{\mathrm{A}}$, 5.169 $\mathring{\mathrm{A}}$, and 4.690 $\mathring{\mathrm{A}}$, respectively.
 In agreement with previous calculations, graphene is a semimetal and borophene is metallic,
@@ -279,10 +279,10 @@ as shown in table~\ref{tab:S1.1}.
 
 The results show that the lowest-energy lateral position for the Graphene-\ce{BC3} system is the `Hollow'' stacking configuration.
 As shown in figure~\ref{fig1.3},
-each atom in \ce{BC3} projects to the center of a hexagon in graphene.
-Both the Graphene-Borophene and Graphene-\ce{B4C3} bilayer systems favor the `Top'' stacking configuration.
-In this arrangement, each atom-free hexagon in the bottom layer projects to the center of a hexagon in graphene.
-However, the converse does not hold, because not every hexagon center in graphene aligns with an atom-free hexagon in the bottom layer, as illustrated in figure~\ref{fig1.3}.
+each atom in \ce{BC3} projects to the centre of a hexagon in graphene.
+Both the Graphene-Borophene and Graphene-\ce{B4C3} bilayer systems favour the `Top'' stacking configuration.
+In this arrangement, each atom-free hexagon in the bottom layer projects to the centre of a hexagon in graphene.
+However, the converse does not hold, because not every hexagon centre in graphene aligns with an atom-free hexagon in the bottom layer, as illustrated in figure~\ref{fig1.3}.
 
 \begin{figure}[!htbp]
 \centering
@@ -359,16 +359,16 @@ while \ce{B4C3} is under a larger tensile strain.
 In general, tensile strain tends to narrow the band gap and increase conductivity~\cite{roldan2015strain}.
 Conversely, compressive strain tends to widen the band gap and decrease conductivity~\cite{boukhvalov2008hydrogen}.
 
-\subsubsection{Charge density difference}
+\subsubsection{Charge-density difference}
 
-The charge density difference distributions of the heterostructure systems are shown in figure~\ref{fig1.4_cdd}.
+The charge-density difference distributions of the heterostructure systems are shown in figure~\ref{fig1.4_cdd}.
 We calculate these distributions using equation~\ref{charge_density_difference}.
 Specifically, we subtract the charge densities of the isolated monolayers from the charge density of the corresponding heterostructure.
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=1.00\textwidth]{figures_proj1/proj1.4.pdf}
-\caption{Charge density difference ($\Delta \rho(\vec{r}\,)$, calculated using equation~\ref{charge_density_difference}) between the monolayers and the heterostructures.
+\caption{Charge-density difference ($\Delta \rho(\vec{r}\,)$, calculated using equation~\ref{charge_density_difference}) between the monolayers and the heterostructures.
 Regions of charge accumulation are shown in yellow,
 and regions of charge depletion are shown in blue.
 The isosurface level is $1.5\times10^{-4}$ a$_{0}^{-3}$ and the top layer is always graphene.}
@@ -388,7 +388,7 @@ These coordination-dependent charge redistributions produce the accumulation and
 Therefore, the relative coordination of the two monolayers directly influences the interfacial electronic structure.
 The top and bottom views of the Graphene-\ce{B4C3} heterostructure reveal a clear threefold rotational symmetry in the upper and lower plots of the rightmost panel.
 
-In the next sections, we investigate the band structures and densities of states to further characterise the electronic structures of these heterostructure systems.
+In the next sections, we investigate the band structures and densities of states to further characterize the electronic structures of these heterostructure systems.
 
 \subsubsection{Band structure and density of states}
 
@@ -435,7 +435,7 @@ In each figure, the PBE and HSE06 results are shown in blue and orange, respecti
 Bilayer heterostructures composed of graphene and boron-carbide monolayers can function as Schottky diodes.
 A high Schottky barrier blocks the reverse current from the metal to the semiconductor and enables the rectification effect of a diode.
 Based on the Schottky--Mott model shown in figure~\ref{fig1.8},
-the Schottky barrier at a metal--semiconductor interface~\cite{guo2017all} is determined by the relative positions of the Fermi level and the semiconductor band edges.
+the Schottky barrier at a metal-semiconductor interface~\cite{guo2017all} is determined by the relative positions of the Fermi level and the semiconductor band edges.
 
 For $n$-type materials, the Schottky barrier $\Phi_n$ is defined as the energy difference between the conduction band minimum $E_C$ and the Fermi level $E_F$:
 

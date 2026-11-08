@@ -284,7 +284,7 @@ For the fixed nuclear positions, the stationary electronic states satisfy the ei
 
 here, $N$ denotes the number of electrons, and $x_i\coloneqq(\vec{r}_i,\sigma_i)$.
 
-In practice, due to the significantly greater mass of nuclei compared to electrons, we commonly adopt the clamped-nuclei approximation within the Born-Oppenheimer framework.
+In practice, due to the significantly greater mass of nuclei compared to electrons, we commonly adopt the clamped-nuclei approximation within the Born--Oppenheimer framework.
 For fixed nuclear positions, the nucleus-nucleus repulsion contributes only an additive constant, $\hat{V}_\mathrm{NN}(\{\vec{R}_I\})$.
 The corresponding hamiltonian can then be rewritten as:
 
@@ -447,7 +447,7 @@ In density functional theory, $n(\vec{r}\,)$ serves as the fundamental variable 
 It can be shown that the ground-state density $n(\vec{r}\,)$ uniquely determines the external potential up to an additive constant, and hence all ground-state observables can be written as functionals of $n(\vec{r}\,)$.
 This dramatic reduction comes from a 3$N$-dimensional wave function to a three-dimensional density, which lies at the heart of density functional theory, making formerly intractable many-body problems computationally feasible.
 
-The time-dependent density-functional theory relies on the continuity equation in the Heisenberg picture.
+The time-dependent density functional theory relies on the continuity equation in the Heisenberg picture.
 We first define the particle density operator in the Schrödinger-picture as:
 
 \begin{equation}
@@ -528,7 +528,7 @@ and current $\vec{j}(\vec{r},t)=\bra{\Psi_\mathrm{H}}\hat{\vec{j}}_\mathrm{H}(\v
 This exact conservation law provides a fundamental constraint on the time evolution of the density and current. It also serves as one of the basic structural ingredients of time-dependent density functional theory, where the many-body dynamics are reformulated in terms of the time-dependent density $n(\vec{r},t)$.
 
 \newpage
-\section{Toward the many-body problem}
+\section{Towards the many-body problem}
 \label{sec:toward_many_body_problem}
 
 % opening paragraph
@@ -559,7 +559,7 @@ In the grand canonical ensemble, the expectation value of any observable operato
 \label{grand_canonical}
 \end{equation}
 
-here, the summation runs over all quantum states labeled by $\alpha$,
+here, the summation runs over all quantum states labelled by $\alpha$,
 and $\Psi_{\alpha}$ represents the many-body quantum states of the system, characterized by their energies $E_{\alpha}$ and particle numbers $N_{\alpha}$.
 The inverse temperature $\beta$ is defined as $\beta = 1/(k_B T)$, with $T$ being the temperature and $k_B$ the Boltzmann constant.
 The chemical potential $\mu$ controls particle exchange between the system and its reservoir.
@@ -570,7 +570,7 @@ Therefore, the partition function $\mathcal{Z}$ serves as a normalization factor
 \label{partition_function}
 \end{equation}
 
-In quantum many-body theory and calculation, employing the grand canonical ensemble allows systematic inclusion of particle number fluctuations and thermal equilibrium effects, providing a robust and realistic statistical-mechanical description essential for accurate modeling of complex quantum materials.
+In quantum many-body theory and calculation, employing the grand canonical ensemble allows systematic inclusion of particle number fluctuations and thermal equilibrium effects, providing a robust and realistic statistical-mechanical description essential for accurate modelling of complex quantum materials.
 
 In what follows, we mainly focus on the ground-state setting: zero temperature and fixed particle number; while the grand-canonical form is noted for completeness and later extensions.
 
@@ -1131,7 +1131,7 @@ From the Thomas--Fermi approximation, we express the total energy as a density f
 
 Furthermore, there is also a nucleus-nucleus term $E_\mathrm{NN}$, but it does not depend on the electron density. Therefore, we do not consider this term at the moment.
 
-Accordingly, we write the Thomas--Fermi total energy functional:
+Accordingly, we write the Thomas--Fermi total-energy functional:
 
 \begin{equation}
     E_{\mathrm{TF}}[n;v_\mathrm{ext}] = T_\mathrm{TF}[n] + E_\mathrm{int}[n] + E_\mathrm{ext}[n]
@@ -1224,7 +1224,7 @@ The ground state of the system is characterized by the density that minimizes th
 This is the variational principle for the ground-state energy in density functional theory.
 
 At finite temperature, the equilibrium density is obtained by minimizing the Helmholtz free energy functional~\cite{mermin1965thermal}.
-In the present zero temperature setting, the relevant quantity is the total energy functional $E_\mathrm{TF}[n]$.
+In the present zero-temperature setting, the relevant quantity is the total-energy functional $E_\mathrm{TF}[n]$.
 
 To determine the ground-state density, we minimize the Thomas--Fermi energy functional under the particle number constraint:
 
@@ -1294,7 +1294,7 @@ Since the density variation $\delta n(\vec{r}\,)$ is arbitrary, the integrand mu
 \label{Thomas_Fermi_equation}
 \end{equation}
 
-This is convenient to introduce the effective potential:
+It is convenient to introduce the effective potential:
 
 \begin{equation}
     v(\vec{r}\,)\coloneqq v_\mathrm{ext}(\vec{r}\,)+v_\mathrm{H}([n];\vec{r}\,)
@@ -1383,7 +1383,7 @@ Equivalently, the universal Hohenberg--Kohn functional can be decomposed as:
 \label{HK_decomposition_Hartree_xc}
 \end{equation}
 
-Accordingly, the exact total energy functional can be written in the following form:
+Accordingly, the exact total-energy functional can be written in the following form:
 
 \begin{equation}
     E[n]=E_\mathrm{HK}[n]+\int\dif{\vec{r}}\,n(\vec{r}\,)\,v_\mathrm{ext}(\vec{r}\,)
@@ -1392,7 +1392,7 @@ Accordingly, the exact total energy functional can be written in the following f
 
 Recall the full Thomas--Fermi energy functional in equation~\eqref{full_energy_functional}.
 Let us compare with the exact decomposition in equation~\eqref{functional_exact_total_energy},
-the Thomas--Fermi functional neglects the exchange correlation part of the interaction energy functional $E_\mathrm{xc}^\mathrm{int}[n]$.
+the Thomas--Fermi functional neglects the exchange-correlation part of the interaction energy functional $E_\mathrm{xc}^\mathrm{int}[n]$.
 This omission can lead to sizable errors for total energies even in simple atoms~\cite{schwinger1980thomas, schwinger1981thomas}.
 
 A first improvement is to approximate $E_\mathrm{xc}^\mathrm{int}[n]$ by a local exchange functional derived from the homogeneous electron gas.
@@ -1403,7 +1403,7 @@ This approximation is commonly associated with the Dirac exchange functional~\ci
 \label{Dirac_exchange_approximation}
 \end{equation}
 
-Since the Dirac exchange functional is given by:
+The Dirac exchange functional takes the form:
 
 \begin{equation}
     E_\mathrm{x}^\mathrm{D}[n]\coloneqq -C_2\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{4}{3}}
@@ -1454,5 +1454,5 @@ By adding this gradient correction, we arrive at the Thomas--Fermi Dirac von Wei
 \end{equation}
 
 These extensions provide early orbital free approximations beyond the Thomas--Fermi approach~\cite{lieb1981thomas}.
-They also clarify that improving the kinetic energy functional and the exchange correlation functional is essential for a quantitatively reliable description of realistic interacting electron systems.
+They also clarify that improving the kinetic energy functional and the exchange-correlation functional is essential for a quantitatively reliable description of realistic interacting electron systems.
 

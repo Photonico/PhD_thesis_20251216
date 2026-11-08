@@ -111,7 +111,7 @@ Therefore, it reduces to the time-domain constitutive relation:
 
 ### A5. 命名新量
 
-`src/fundamentals_a.tex`, 第 880 至 889 行:
+`src/fundamentals_a.tex`, 第 881 至 890 行:
 
 ```latex
 For comparison, the kinetic energy functional $T[n]$ appearing in the Hohenberg--Kohn functional $E_\mathrm{HK}[n]$ is evaluated on the minimizing interacting many-body state $\Psi[n]$ that yields the same density.
@@ -130,7 +130,7 @@ We name it the kinetic-correlation functional.
 
 ### A6. 叙述一个计算流程
 
-`src/fundamentals_a.tex`, 第 1543 至 1548 行:
+`src/fundamentals_a.tex`, 第 1544 至 1549 行:
 
 ```latex
 Next, the Hartree equations already demonstrate the basic one-particle structure of a self-consistent field theory.
@@ -145,7 +145,7 @@ and repeat these steps until convergence is reached.
 
 ### A7. 用作用路径解释公式
 
-`src/fundamentals_a.tex`, 第 1511 行, 解释逆 Kohn--Sham 迭代的更新公式:
+`src/fundamentals_a.tex`, 第 1512 行, 解释逆 Kohn--Sham 迭代的更新公式:
 
 ```latex
 Accordingly, the Kohn--Sham potential is increased where the density is overestimated and decreased where it is underestimated.
@@ -282,8 +282,8 @@ The broadening of \qty{0.1}{\electronvolt} enters the present spectra as a numer
 
 | 原文 | 改写 |
 | --- | --- |
-| `The ensemble, temperature control, time step, and duration must therefore be specified with each calculation.` (`fundamentals_a.tex`, 第 2022 行) | `Each research chapter therefore reports the ensemble, thermostat, time step, and duration of its trajectories.` |
-| `The datasets and their convergence settings must be specified for each calculation.` (`fundamentals_a.tex`, 第 1885 行) | `The research chapters report the datasets and their convergence settings.` |
+| `The ensemble, temperature control, time step, and duration must therefore be specified with each calculation.` (`fundamentals_a.tex`, 第 2023 行) | `Each research chapter therefore reports the ensemble, thermostat, time step, and duration of its trajectories.` |
+| `The datasets and their convergence settings must be specified for each calculation.` (`fundamentals_a.tex`, 第 1886 行) | `The research chapters report the datasets and their convergence settings.` |
 
 ### B4. 重复的公式改为引用
 
@@ -327,7 +327,7 @@ This compression forms the basis of practical density functional theory.
 
 | 原文 | 改写 |
 | --- | --- |
-| `Firstly, let us start by an interrelated two-body system consisting of two species.` (`fundamentals_a.tex`, 第 642 行) | `Firstly, let us start with a system that contains two species of particles.` |
-| `Therefore, in this non-interacting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_s[n]$.` (`fundamentals_a.tex`, 第 1053 行) | `Therefore, we treat the ground-state energy of this non-interacting auxiliary system as a functional of the density, and denote it by $E_s[n]$.` |
-| `Schematically, it demonstrates as:` (`fundamentals_a.tex`, 第 1451 行) | `Schematically, it takes the form:` |
+| `Firstly, let us start by an interrelated two-body system consisting of two species.` (`fundamentals_a.tex`, 第 643 行) | `Firstly, let us start with a system that contains two species of particles.` |
+| `Therefore, in this non-interacting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_s[n]$.` (`fundamentals_a.tex`, 第 1054 行) | `Therefore, we treat the ground-state energy of this non-interacting auxiliary system as a functional of the density, and denote it by $E_s[n]$.` |
+| `Schematically, it demonstrates as:` (`fundamentals_a.tex`, 第 1452 行) | `Schematically, it takes the form:` |
 | `We adopt $i$ labels the electrons and $I$ labels nuclei.` (`appendix_quantum.tex`, 第 247 行) | `We use $i$ to label the electrons and $I$ to label the nuclei.` |

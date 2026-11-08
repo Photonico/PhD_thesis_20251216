@@ -56,7 +56,7 @@ Given an observable represented by an operator $\hat{\Omega}$, its ground-state 
 
 and hence every ground-state observable can be regarded, at least formally, as a functional of the many-body wave function $\Omega[\Psi_0]=\Omega$.
 
-However, the kernel idea of density functional theory is here: for the ground-state properties, the wave function dependence can be reduced even further. In our statement, if the density of ground state $n(\vec{r}\,)$ uniquely specifies the corresponding wave function of ground state $\Psi_0$,
+However, the kernel idea of density functional theory is here: for the ground-state properties, the wave function dependence can be reduced even further. In our statement, if the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding wave function of ground state $\Psi_0$,
 the expectation value of any operator $\hat{\Omega}$ in the ground state is uniquely determined by the density $n(\vec{r}\,)$.
 
 Consequently, every ground-state observable can be written as a (unique) density functional:
@@ -77,7 +77,7 @@ Accordingly, any ground-state observable may be written as a functional of the d
 \end{equation}
 
 This is not merely a change of notation; it marks the conceptual compression from a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$, to a function of only three spatial variables, $n(\vec{r}\,)$, which is the cornerstone of the practical formulation of DFT.
-Historically, the density functional formalism was established in the 1960s through the pioneering work of Hohenberg and Kohn, and was later made computationally practical by the Kohn--Sham scheme~\cite{kohn1965self}.
+Historically, the density-functional formalism was established in the 1960s through the pioneering work of Hohenberg and Kohn, and was later made computationally practical by the Kohn--Sham scheme~\cite{kohn1965self}.
 
 Since the many-body wave function $\Psi$ encodes the full complexity of the system, a natural question is the following: what is the ingredient that actually distinguishes one many-electron system from another?
 
@@ -298,7 +298,8 @@ Let their corresponding non-degenerate ground-state wave functions be denoted as
 
 Recall the Schrödinger equation~\eqref{different_hamiltonians_schrodinger_equation}.
 The external potentials $v^{(1)}_\mathrm{ext}(\vec{r}\,)$ and $v^{(2)}_\mathrm{ext}(\vec{r}\,)$ lead to the eigenvalues $E_1$ and $E_2$, and the corresponding ground-state wave functions $\ket{\Psi_0^{(1)}}$ and $\ket{\Psi_0^{(2)}}$, respectively.
-Since the ground states are assumed non-degenerate $\ket{\Psi_0^{(1)}}\neq\ket{\Psi_0^{(2)}}$.
+The first part of the proof, summarized in equation~\eqref{parallel_wave_function}, excludes a common non-degenerate ground state for these two potentials.
+Therefore, the two ground states differ, $\ket{\Psi_0^{(1)}}\neq\ket{\Psi_0^{(2)}}$.
 For each external potential, the total energy can be written as the expectation value of the hamiltonian in its ground state:
 
 \begin{equation}
@@ -346,7 +347,7 @@ We can  expand the right-hand side as:
 \end{equation}
 
 The further step is to rewrite the last term in a density form.
-Let us apply the definition of the electron density function~\eqref{electron_densit_via_expectation} as:
+Let us apply the definition of the electron-density function~\eqref{electron_densit_via_expectation} as:
 
 \begin{equation}
     n^{(2)}(\vec{r}\,) = \bra{\Psi_0^{(2)}}\hat{n}(\vec{r}\,)\ket{\Psi_0^{(2)}}
@@ -600,11 +601,11 @@ At this point, we return to the standard form of the energy functional in equati
     E_\mathrm{HK}[n] = E[n]-\int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
 \label{formal_FHK_as_difference}
 \end{equation}
-This relation may suggest that $E_\mathrm{HK}[n]$ could be obtained once the total energy functional $E[n]$ is known.
+This relation may suggest that $E_\mathrm{HK}[n]$ could be obtained once the total-energy functional $E[n]$ is known.
 
 In practice, this is not a constructive route.
 For a given $v_\mathrm{ext}(\vec{r}\,)$, the interacting many-body problem yields only the minimizing density $n_0(\vec{r}\,)$ and the corresponding energy $E[n_0]$.
-To determine a functional over a broad range of densities, we would in principle need to solve the interacting problem for many different external potentials to sample many ground-state densities.
+To determine a functional over a broad range of densities, we would need to solve the interacting problem for many different external potentials to sample many ground-state densities.
 Therefore, the Hohenberg--Kohn theorem should be viewed as an existence and uniqueness statement, rather than an explicit formula for $E_\mathrm{HK}[n]$. 
 
 These considerations clarify why density functional theory relies on approximations.
@@ -624,7 +625,7 @@ This motivates a reformulation in terms of a simpler basic variable.
 The electron density is an obvious choice.
 The Thomas--Fermi kinetic energy functional in equation~\eqref{tf_functional} provides a first purely density based model.
 Its detailed construction and limitations are discussed in section~\ref{sec:appendix_thomas_fermi} of appendix~\ref{cha:appendix_quantum}.
-They show that improved treatments of the kinetic energy and the exchange correlation effects are necessary.
+They show that improved treatments of the kinetic energy and the exchange-correlation effects are necessary.
 
 In what follows, we introduce an auxiliary description that retains the density as the central variable and provides a practical starting point for systematic improvements.
 
@@ -894,7 +895,7 @@ To obtain a fully orbital-based reference functional,
 we further replace the interacting kinetic energy functional $T[n]$ by $T_s[n]$,
 which amounts to neglecting the kinetic correlation $T_c[n]$ in equation~\eqref{T_decomposition}.
 
-Therefore, the Hartree approximation to the total energy functional reads:
+Therefore, the Hartree approximation to the total-energy functional reads:
 
 \begin{equation}
     E_\mathrm{H}^\mathrm{tot}[n]
@@ -951,7 +952,7 @@ Let us perform some manipulations on exact ground-state energy functional~\eqref
 \end{equation}
 
 Recall the Kohn--Sham exchange-correlation functional~\eqref{Exc_KS_definition},
-and the Hartree approximation to the total energy functional~\eqref{hartree_total_energy_functional},
+and the Hartree approximation to the total-energy functional~\eqref{hartree_total_energy_functional},
 we obtain:
 
 \begin{equation}
@@ -1018,9 +1019,9 @@ therefore, at self-consistency, we may write:
 \label{KS_orbitals_as_density_functionals}
 \end{equation}
 
-Since the Kohn--Sham density expression~\eqref{density_with_occupation_number} gives $n(\vec{r}\,)$ once the orbitals are known.
+The Kohn--Sham density expression~\eqref{density_with_occupation_number} gives $n(\vec{r}\,)$ once the orbitals are known.
 Meanwhile, $v_\mathrm{eff}([n];\vec{r}\,)$ depends on $n(\vec{r}\,)$ through equation~\eqref{KS_effective_potential_definition}.
-Therefore, equations~\eqref{KS_effective_potential_definition} and~\eqref{KS_equation} are solved self-consistently.
+Therefore, we solve equations~\eqref{KS_effective_potential_definition} and~\eqref{KS_equation} self-consistently.
 
 In this sense, density functional theory is built on the Hohenberg--Kohn theorem.
 It states that the ground-state density uniquely determines the external potential modulo an additive constant~\cite{hohenberg1964inhomogeneous,kohn1999nobel}.
@@ -1328,7 +1329,7 @@ For extended systems, similar interpretations have been discussed~\cite{mundt200
 but no general proof is available in the same simple form.
 
 In fact, we work with approximate functionals.
-The resulting eigenvalues are widely used in materials science, for instance as a useful reference for band structure analysis.
+The resulting eigenvalues are widely used in materials science, for instance as a useful reference for band-structure analysis.
 We will return to this point later.
 
 Afterwards, we look into the Kohn--Sham potential.
@@ -1417,14 +1418,14 @@ The Kohn--Sham auxiliary system is designed to reproduce exactly the same ground
 \label{KS_exact_density_matching_1D}
 \end{equation}
 
-If one starts from the naive choice:
+If we start from the naive choice:
 
 \begin{equation}
     v_\mathrm{KS}([n];x)=v_\mathrm{ext}(x)
 \label{naive_KS_choice_external_only_1D}
 \end{equation}
 
-Therefore, the density from equation~\eqref{KS_density_1D_schematic} is concentrated near the center of the well.
+Therefore, the density from equation~\eqref{KS_density_1D_schematic} is concentrated near the centre of the well.
 This concentration is generally excessive.
 Therefore, the missing interaction effects are encoded directly in the local Kohn--Sham potential.
 In the exact solution, this potential develops a central bump~\cite{helbig2009exact}.
@@ -1437,7 +1438,7 @@ we define the Hartree-exchange-correlation potential:
 \label{Hxc_potential_definition_1D}
 \end{equation}
 
-Accordingly, we can process this central bump as a feature of the Hartree-exchange--correlation potential $v_\mathrm{Hxc}([n];x)$.
+Accordingly, we can process this central bump as a feature of the Hartree-exchange-correlation potential $v_\mathrm{Hxc}([n];x)$.
 It works to suppress charge accumulation near the origin and thereby enforce equation~\eqref{KS_exact_density_matching_1D}.
 Therefore, the exact Kohn--Sham potential $v_\mathrm{KS}([n];x)$ is not merely a shifted harmonic well.
 
@@ -1445,7 +1446,7 @@ Next, an asymmetric double-well potential provides an even more instructive exam
 In this interacting system,
 the electron-electron repulsion may force the two electrons to occupy different wells.
 By contrast, in our auxiliary non-interacting system,
-both electrons would tend to occupy the energetically more favorable well.
+both electrons would tend to occupy the energetically more favourable well.
 
 Therefore, the exact Kohn--Sham potential $v_\mathrm{KS}([n];x)$ must develop an additional structure that redistributes the charge correctly.
 Schematically, it demonstrates as:
@@ -1712,7 +1713,7 @@ These advantages make the Heyd--Scuseria--Ernzerhof functional one of the most w
 In the present work,
 we use PBE and HSE06 to examine how the electronic properties depend on the exchange-correlation approximation.
 The screened exchange contribution in equation~\eqref{HSE_exchange_correlation_functional}
-can reduce self-interaction and delocalisation errors,
+can reduce self-interaction and delocalization errors,
 thereby changing the localization of electronic states and the predicted band gap.
 However, HSE06 remains an approximation.
 A larger band gap does not by itself imply a more accurate result.
@@ -1932,7 +1933,7 @@ we define the harmonic force constants as:
 
 here, the subscript $0$ denotes the relaxed reference structure.
 The force constants describe the curvature of the same energy surface used for structural relaxation.
-They can be obtained from finite-displacement calculations or density-functional perturbation theory~\cite{baroni2001phonons}.
+They can be obtained from finite-displacement calculations or density functional perturbation theory~\cite{baroni2001phonons}.
 
 At a stationary reference structure, the first derivative of the energy vanishes.
 Keeping the terms up to second order in the displacements, we obtain:
@@ -2095,7 +2096,7 @@ Atomic displacement changes the external potential and induces a density respons
 which also changes the Hartree and exchange-correlation contributions.
 The same phonon eigenvectors obtained from equation~\eqref{phonon_dynamical_matrix_method}
 describe the atomic displacement associated with this perturbation.
-Density-functional perturbation theory gives both the phonon response and the first-order change in the self-consistent potential~\cite{baroni2001phonons}.
+Density functional perturbation theory gives both the phonon response and the first-order change in the self-consistent potential~\cite{baroni2001phonons}.
 
 We now restore $\hbar$ explicitly, and keep $\omega_{\vec{q}s}$ as an angular frequency.
 Using the cell-periodic parts $\ket{u_{n\vec{k}}}$ of the Bloch states, normalized over a unit cell,
