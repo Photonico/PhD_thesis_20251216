@@ -216,7 +216,7 @@ Up to now, we have mainly discussed a single-particle quantum system described b
 
 In realistic situations, quantum systems often involve many interacting particles.
 For instance, electrons in a material evolve under both external fields and their mutual Coulomb interactions.
-We therefore extend the description to a nonrelativistic many-body system including electrons, nuclei, and their interactions.
+We therefore extend the description to a non-relativistic many-body system including electrons, nuclei, and their interactions.
 
 To describe this larger ensemble, we generalize our single-particle state $\ket{\psi(t)}$ to a many-body state $\ket{\Psi(t)}$, an element of a larger Hilbert space constructed by the tensor product of individual particle spaces:
 
@@ -607,7 +607,7 @@ In practice, we often use approximate wave functions: methods such as Hartree--F
 
 A more radical question is whether we need to work with explicit wave functions at all, or whether the expectation value in equation~\eqref{observables_N-body} can be reformulated entirely in terms of other, more tractable quantities.
 
-To address this question, it is natural to start from the energy, since the ground-state is determined variationally through the hamiltonian expectation value.
+To address this question, it is natural to start from the energy, since the ground state is determined variationally through the hamiltonian expectation value.
 
 In the case of this approximation, for a given hamiltonian $\bra{\Psi}\hat{H}\ket{\Psi}$, we can regard it as depending on the form of the kinetic energy operator $\bra{\Psi}\hat{T}\ket{\Psi}$, external potential operator $\bra{\Psi}\hat{V}_\mathrm{ext}\ket{\Psi}$, and the interaction operator $\bra{\Psi}\hat{V}_\mathrm{int}\ket{\Psi}$.
 
@@ -713,7 +713,7 @@ In principle, all physical observables derive from the many-body Schrödinger eq
 
 If the kinetic energy operator and Coulomb interaction are fixed, the ground-state total energy becomes a functional of the external potential we introduced in equation~\eqref{spectrum_mapping_from_external_potential}.
 
-A central challenge is that evaluating the grand-canonical expectation in equation~\eqref{grand_canonical_trace} remains highly nontrivial, as the trace involves high-dimensional integrals and noncommuting operators.
+A central challenge is that evaluating the grand-canonical expectation in equation~\eqref{grand_canonical_trace} remains highly non-trivial, as the trace involves high-dimensional integrals and non-commuting operators.
 
 Our aim is to express the expectation values—which are, in principle, highly complex functionals—in terms of a single simple function, so that practical approximations become possible.
 
@@ -894,7 +894,7 @@ f_n^\mathrm{eh}(x_1,t)=\int\Psi_g^*(\vec{x};t)\,\Psi_n(\vec{x};t)\prod^N_{j=2}\d
 \label{one_body_transition_quantity_compact}
 \end{equation}
 
-This marginal integral represents the one-body transition density from the ground-state $g$ to the $n$-th excited state.
+This marginal integral represents the one-body transition density from the ground state $g$ to the $n$-th excited state.
 
 In the presence of an oscillating electromagnetic field, we introduce the Bohr frequency:
 
@@ -982,7 +982,7 @@ Our goal is to find a single descriptor $Q$ such that, once $Q$ is known, all th
 
 In other words, $Q$ is chosen to retain exactly the information needed for the set $\{\Omega_i\}$, while discarding irrelevant microscopic details.
 
-In particular, we set $Q \coloneqq n(x)$. In the following, we take the particle density $n(x)$ as the basic variable, as it provides a minimal yet powerful descriptor of the ground-state. In this statement, $x$ denotes a combined space-spin coordinate, $x=(\vec{r},\sigma)$, so that we can represent the one-body (spin-resolved) density as $n(x)$:
+In particular, we set $Q \coloneqq n(x)$. In the following, we take the particle density $n(x)$ as the basic variable, as it provides a minimal yet powerful descriptor of the ground state. In this statement, $x$ denotes a combined space-spin coordinate, $x=(\vec{r},\sigma)$, so that we can represent the one-body (spin-resolved) density as $n(x)$:
 
 Firstly, the particle density $n(x)$ yields exactly all local one-body observables. For an operator of the form $\hat{\Omega}^{(1)}=\sum_{j=1}^N \Omega_1(x_j)$, one has:
 
@@ -992,9 +992,9 @@ Firstly, the particle density $n(x)$ yields exactly all local one-body observabl
 \end{equation}
 
 Secondly, the particle density $n(x)$ is extremely compact compared to the wave function $\Psi$.
-Moreover, in the case of a non-degenerate ground-state, the Hohenberg--Kohn theorem implies a bijective correspondence between the ground-state density and the external potential.
+Moreover, in the case of a non-degenerate ground state, the Hohenberg--Kohn theorem implies a bijective correspondence between the ground-state density and the external potential.
 As a result, $n(x)$ determines $v_\mathrm{ext}$ up to an additive constant.
-This fixes the hamiltonian and thereby fixes the ground-state up to an overall phase.
+This fixes the hamiltonian and thereby fixes the ground state up to an overall phase.
 Therefore, all ground-state observables may be regarded as density functionals, and we seek $\Omega_i[n]$ rather than $\Omega_i[\Psi]$.
 
 Therefore, we explore the variational route for $n$. Define the energy-like functional:
@@ -1018,7 +1018,7 @@ this amounts to adopting controlled approximations for kinetic energy functional
 \section{What is the functional?}
 \label{sec:appendix_functionals}
 
-The many-body problem in subsection~\ref{sec:manybody_schrodinger_equation} motivates a reduced description of the ground-state.
+The many-body problem in subsection~\ref{sec:manybody_schrodinger_equation} motivates a reduced description of the ground state.
 We choose the particle density as the basic variable.
 The corresponding expectation values and reduced densities are developed in section~\ref{sec:toward_many_body_problem}.
 We now introduce the concept of a functional.
@@ -1048,7 +1048,7 @@ It also often appears that we use a non-local functional to describe the classic
 In this thesis, $E_\mathrm{H}[n]$ denotes the Hartree term.
 
 Next, let us consider the expression for kinetic energy in terms of a functional. Within the Thomas--Fermi approximation,
-the noninteracting kinetic energy is treated locally as that of a uniform (homogeneous) electron gas whose density equals the actual electron density $n(\vec{r}\,)$ at each point in space.
+the non-interacting kinetic energy is treated locally as that of a uniform (homogeneous) electron gas whose density equals the actual electron density $n(\vec{r}\,)$ at each point in space.
 This leads to the Thomas--Fermi kinetic energy functional:
 
 \begin{equation}
@@ -1123,7 +1123,7 @@ We arrive at the Thomas--Fermi equation:
 \label{thomas_fermi_equation}
 \end{equation}
 
-This nonlinear equation determines the potential and the density self-consistently within the Thomas--Fermi approximation.
+This non-linear equation determines the potential and the density self-consistently within the Thomas--Fermi approximation.
 
 To connect the Thomas--Fermi construction with density functional theory, we rewrite the total energy in a density functional form, denoted by $E_{\mathrm{TF}}[n;v_\mathrm{ext}]$. In this sense, the Thomas--Fermi model provides an explicit approximation to the universal functional.
 
@@ -1152,7 +1152,7 @@ Using the electron-electron Coulomb repulsion~\eqref{electrons_Coulomb}, we intr
 \end{aligned}
 \end{equation}
 
-here, $E_{\Delta\mathrm{int}}[n]$ collects the nonclassical part of the interaction energy beyond the Hartree term.
+here, $E_{\Delta\mathrm{int}}[n]$ collects the non-classical part of the interaction energy beyond the Hartree term.
 In the Hartree approximation, we set $E_{\Delta\mathrm{int}}[n]=0$.
 
 Therefore, we introduce a Hartree approximation at the level of the interaction energy by replacing $E_\mathrm{int}[n]$ with its classical counterpart $E_\mathrm{H}[n]$:
@@ -1220,7 +1220,7 @@ The nucleus-nucleus contribution $E_\mathrm{NN}$ is omitted since it does not de
 
 This expression gives the total energy in the Thomas--Fermi approximation as a functional of the electron density $n(\vec{r}\,)$ for a given external potential $v_\mathrm{ext}(\vec{r}\,)$.
 
-The ground-state of the system is characterized by the density that minimizes the total energy under the constraint of a fixed particle number.
+The ground state of the system is characterized by the density that minimizes the total energy under the constraint of a fixed particle number.
 This is the variational principle for the ground-state energy in density functional theory.
 
 At finite temperature, the equilibrium density is obtained by minimizing the Helmholtz free energy functional~\cite{mermin1965thermal}.
@@ -1362,7 +1362,7 @@ Let us express the exact total energy as a functional of the density:
 \end{equation}
 
 Here $T[n]$ denotes the exact kinetic energy functional and $E_\mathrm{H}[n]$ is the Hartree energy functional.
-The exchange-correlation functional $E_\mathrm{xc}^\mathrm{int}[n]$ collects all nonclassical interaction effects beyond the Hartree term.
+The exchange-correlation functional $E_\mathrm{xc}^\mathrm{int}[n]$ collects all non-classical interaction effects beyond the Hartree term.
 It includes the exchange contribution originating from the antisymmetry of the many-electron wave function and the correlation contribution accounting for the remaining many-body correlations.
 
 In view of the definition of the universal Hohenberg--Kohn functional in equation~\eqref{functional_HK_definition},

@@ -83,7 +83,7 @@ Firstly, we start from the most general linear-response form.
 For any time $t$, the polarization may depend not only on the electric field at the same point,
 but also on fields acting earlier and in a surrounding spatial region.
 Therefore, before introducing the simplified form used in the present work,
-we write the constitutive relation in its general nonlocal form in space and time~\cite{...}:
+we write the constitutive relation in its general non-local form in space and time~\cite{...}:
 
 \begin{equation}
     P_\alpha(\vec{r},t) =
@@ -99,7 +99,7 @@ instead, it may spread the response over space and retain memory in time.
 At the same time, the upper limit $t$ in equation~\eqref{general_nonlocal_constitutive_relation} keeps the causal order explicit: the perturbation acts first, and the response follows.
 
 For the present work, we focus on the linear response in the long-wavelength regime.
-Under this approximation, spatial nonlocality drops out, and the constitutive relation retains only the memory of the earlier perturbation.
+Under this approximation, spatial non-locality drops out, and the constitutive relation retains only the memory of the earlier perturbation.
 Therefore, it reduces to the time-domain constitutive relation:
 ```
 
@@ -122,7 +122,7 @@ In general, $T[n]$ and $T_s[n]$ are not equal, and we write their difference as:
 \label{T_decomposition}
 \end{equation}
 
-here, $T_c[n]$ measures the kinetic correlation beyond the noninteracting reference.
+here, $T_c[n]$ measures the kinetic correlation beyond the non-interacting reference.
 We name it the kinetic-correlation functional.
 ```
 
@@ -328,6 +328,6 @@ This compression forms the basis of practical density functional theory.
 | 原文 | 改写 |
 | --- | --- |
 | `Firstly, let us start by an interrelated two-body system consisting of two species.` (`fundamentals_a.tex`, 第 642 行) | `Firstly, let us start with a system that contains two species of particles.` |
-| `Therefore, in this noninteracting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_s[n]$.` (`fundamentals_a.tex`, 第 1053 行) | `Therefore, we treat the ground-state energy of this noninteracting auxiliary system as a functional of the density, and denote it by $E_s[n]$.` |
+| `Therefore, in this non-interacting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_s[n]$.` (`fundamentals_a.tex`, 第 1053 行) | `Therefore, we treat the ground-state energy of this non-interacting auxiliary system as a functional of the density, and denote it by $E_s[n]$.` |
 | `Schematically, it demonstrates as:` (`fundamentals_a.tex`, 第 1451 行) | `Schematically, it takes the form:` |
 | `We adopt $i$ labels the electrons and $I$ labels nuclei.` (`appendix_quantum.tex`, 第 247 行) | `We use $i$ to label the electrons and $I$ to label the nuclei.` |

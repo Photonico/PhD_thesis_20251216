@@ -328,7 +328,7 @@ response (171), approximation (68), structure (46), observable (42), contributio
 | we achieve: | we obtain: | `fundamentals_a.tex` |
 | we process X as | we treat X as / we regard X as | `fundamentals_a.tex` |
 | the problem degenerates to | the problem reduces to | `fundamentals_a.tex` |
-| the density of ground-state | the ground-state density | `fundamentals_a.tex` |
+| the density of ground state | the ground-state density | `fundamentals_a.tex` |
 | it demonstrates as: | it takes the form: | `fundamentals_a.tex` |
 | the kernel idea | the key idea / the central idea | `fundamentals_a.tex` |
 | Review the expression of ... | Recall the expression for ... | `fundamentals_a.tex` |
@@ -343,11 +343,15 @@ response (171), approximation (68), structure (46), observable (42), contributio
 ## 8. 一致性约定
 
 - 拼写采用 Oxford spelling, 即 -ize 加英式 -our 和 -re: characterize, polarization, normalized, behaviour, favour, colour, neighbour, centre, $\Gamma$-centred. analyse 保留 -yse. 全文 -ize 416 处, -ise 15 处, 后者需统一.
-- ground state 作名词不加连字符, 作定语加连字符: `the ground state`, `the ground-state density`. 语料中 ground-state 作名词约 35 次, 例如 `in the ground-state.`, `the ground-state is`, 需统一.
-- first principles 同理: `from first principles`, `first-principles calculations`.
+- 复合词放在名词前作定语时加连字符, 作名词时分写. 形容词加名词和名词加名词都按这一条处理.
+  - ground state: `the ground state`, `the ground-state density`, `ground-state observables`, `the ground-state $N$-body wave function`. 全文已统一, 定语 92 处, 名词 44 处.
+  - first principles: `from first principles`, `first-principles calculations`. 全文已统一. 第 5 章标题中作名词用的 `from First-Principles` 已改为 `from First Principles`.
+  - two-dimensional, many-body, low-energy, long-range, short-range, first-order, high-symmetry, single-particle 作定语时全文都已加连字符. 同一词组作名词时分写: at low energy, in two dimensions.
+  - 尚未统一: total energy 作定语时混用 (total-energy 8 处, total energy functional 6 处). band gap, band structure, charge density, spin density, density functional 作定语时也混用.
+- 区分名词和定语的方法: 后面紧跟被修饰的名词时是定语. 后面接标点, 动词, 介词, 连词, 或同位的符号时是名词, 例如 `the ground state $\ket{\Psi_0}$`, `from the ground state $g$`. 中间插入括号说明时仍按定语处理, 例如 `the ground-state ($g\coloneqq 0$) many-body wave function`.
 - 人名并列用 en dash `--`: Kohn--Sham, Hohenberg--Kohn, Kramers--Kronig, Born--Oppenheimer, Thomas--Fermi, Perdew--Burke--Ernzerhof, Heyd--Scuseria--Ernzerhof, Fu--Kane, Allen--Dynes, Migdal--Eliashberg, Schottky--Mott.
 - 物理复合词用连字符: spin-orbit, electron-phonon, electron-electron, electron-hole, exchange-correlation. 第 1, 7, 8 章中的 `spin--orbit`, `electron--phonon`, `electron--hole` 改为连字符.
-- non- 前缀按英式统一加连字符: non-interacting, non-zero, non-local, non-degenerate, non-trivial, non-magnetic, non-relativistic. 当前全文混用, 例如 noninteracting 26 处, non-interacting 1 处.
+- non- 前缀按英式统一加连字符, 全文已统一: non-interacting, non-zero, non-local, non-locality, non-linear, non-classical, non-relativistic, non-commuting, non-monotonically, non-degenerate, non-trivial, non-magnetic, non-negative, non-negligible, non-Abelian, non-self-consistently, non-spin-polarized. none 和 nonetheless 不属于前缀构词. label 和引用键保持原样, 例如 `general_nonlocal_constitutive_relation`, 不随正文改动.
 - 材料名小写: $\alpha$-beryllene, borophene, graphene. 第 3 章的 `$\alpha$-Beryllene` 需改为小写. 化学式用 `\ce{}`.
 - 拓扑指数统一写 $Z_2$ (全文 25 处). 摘要, 引言, 结论中的 $\mathbb{Z}_2$ 需统一.
 - et al. 用正体, 不用斜体.
