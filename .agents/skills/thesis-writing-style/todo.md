@@ -757,6 +757,7 @@ Outlook 一节中的句子:
   - 改写: 第 62 行改为: Consequently, every ground-state observable becomes a unique functional of the density, which the Hohenberg--Kohn theorem establishes in equation~\eqref{functional_from_density}. 第 72 行那句连同公式删去. 第 156 行改为: In this sense, all ground-state observables become functionals of the density.
   - 建议: HK 定理的结论保留两处: 第 69 至 71 行的预告和第 428 至 431 行的总结. 第 1010 至 1012 行和附录 A 第 446, 994 至 996 行改为引用 equation~\eqref{hk_correspondence_v_n_psi}.
   - 建议: KS 方程: 2.2.2 保留 $T_s$, $T_c$, $E_\mathrm{xc}$ 和各势的定义, 删去第 955 至 959 行对拉格朗日乘子的预告, 由 2.2.3 完整推导. 2.2.4 缩成一段, 或移入附录 A.
+
 - [ ] 附录 A: $\hat{U}(\tau)$ 的指数形式显示 4 次 (从 [appendix_quantum.tex:73](../../../src/appendix_quantum.tex#L73) 起). 巨正则系综写了两遍, [appendix_quantum.tex:701](../../../src/appendix_quantum.tex#L701) 的文字说 "compact operator form", 显示的却是求和式. $T_\mathrm{TF}$, $T_\mathrm{vW}$, $E_\mathrm{H}$ 和 Thomas--Fermi 方程各写了两遍. 巨正则系综, 跃迁密度, Bohr 频率, 时序算符在后文都没有用到.
   - 改写: $\hat{U}(\tau)$: 保留 \texttt{time\_evolution\_operator}, 删去 \texttt{time\_evolution\_operator\_tau}, \texttt{time\_evolution\_operator\_reduced\_form} 及 $t_0=0$ 的几个变体 (都没有被引用), 原位置写一句: In the time-independent case, $\hat{U}(t,t_0)$ depends only on the time difference $\tau=t-t_0$, and we write it as $\hat{U}(\tau)$.
   - 方案 A: 巨正则系综: 第 2 章只用零温和固定粒子数, 删去 A.2.1 和第 683 至 709 行的迹形式. 这些 label 只在附录 A 内部引用, 第 715 行一并删去.
@@ -764,23 +765,30 @@ Outlook 一节中的句子:
   - 建议: $T_\mathrm{TF}$, $E_\mathrm{H}$: 保留 A.3 的 \texttt{tf\_functional} 和 \texttt{hartree\_functional} (第 2 章引用了这两个), A.4 中的 \texttt{functional\_TTF}, \texttt{hartree\_term\_functional}, \texttt{Hartree\_potential\_definition} 改为引用 A.3. $T_\mathrm{vW}$ 只留一种写法. Thomas--Fermi 方程保留变分推导和微分形式, 删去第 1080 至 1125 行相空间推导中的重复公式.
   - 方案 A: 跃迁密度与 Bohr 频率 (第 869 至 935 行) 删去, 正文没有用到.
   - 方案 B: 保留, 末尾加一句连到第 3 章: These transition densities determine the matrix elements of one-body operators between the ground state and the excited states, which enter the absorptive response in equation~\eqref{independent_particle_imaginary_dielectric_tensor}.
+
 - [ ] 附录 B: $\varepsilon_{\alpha\beta}=\delta_{\alpha\beta}+\chi_{\alpha\beta}$ 显示两次 ([appendix_electrodynamics.tex:202](../../../src/appendix_electrodynamics.tex#L202) 与 [appendix_electrodynamics.tex:370](../../../src/appendix_electrodynamics.tex#L370)), $P_\alpha=\varepsilon_0\sum_\beta\chi_{\alpha\beta}E_\beta$ 显示两次 (第 177 行与第 357 行). 见 references/examples.md 的 B4.
   - 改写: 第 364 至 371 行换成: The dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ then follows from the susceptibility through equation~\eqref{dielectric_tensor_definition}. 见 references/examples.md 的 B4.
   - 改写: 第 351 至 362 行换成: Afterwards, the linear response reduces to the local relation in equation~\eqref{frequency_domain_polarization_susceptibility_relation}, where $\chi_{\alpha\beta}(\omega)$ characterizes both the amplitude and the phase delay of the response. 被删的 \texttt{frequency\_domain\_polarization\_response} 没有被引用.
+
 - [ ] 第 3 章与附录 B 有四段几乎相同: 开头一句 ([fundamentals_b.tex:23](../../../src/fundamentals_b.tex#L23) 与 [appendix_electrodynamics.tex:15](../../../src/appendix_electrodynamics.tex#L15)), 单位约定 ([fundamentals_b.tex:28](../../../src/fundamentals_b.tex#L28) 与 [appendix_electrodynamics.tex:27](../../../src/appendix_electrodynamics.tex#L27)), $\mu_\mathrm{r}\approx1$ ([fundamentals_b.tex:51](../../../src/fundamentals_b.tex#L51) 与 [appendix_electrodynamics.tex:98](../../../src/appendix_electrodynamics.tex#L98)), regular response 前提 ([fundamentals_b.tex:373](../../../src/fundamentals_b.tex#L373) 与 [appendix_electrodynamics.tex:425](../../../src/appendix_electrodynamics.tex#L425)).
   - 建议: 单位约定: 附录 B 第 8 行已写 We use SI units, as in that chapter. 删去附录 B 第 27 至 30 行.
   - 建议: regular response: 保留第 3 章第 373 至 376 行. 附录 B 第 425 至 428 行换成: We consider the regular electronic response defined in section~\ref{sec:causality_and_kramers_kronig_relations}.
   - 建议: $\mu_\mathrm{r}\approx1$: 保留附录 B 第 98 行. 第 3 章第 51 行换成: Throughout, we take $\mu_\mathrm{r}(\omega)\approx1$, as in appendix~\ref{cha:appendix_electrodynamics}.
   - 改写: 开头一句: 保留第 3 章第 23 至 25 行. 附录 B 第 15 至 19 行换成: Chapter~\ref{cha:fundamentals_b} uses the dielectric function as its central response quantity. This appendix builds that quantity from the macroscopic electrodynamics of matter.
+
+
 - [ ] 第 3 章与第 7 章用同一组铍烯光谱图, 描述也几乎逐字相同, 例如 [fundamentals_b.tex:677](../../../src/fundamentals_b.tex#L677) 与 [project_3_main.tex:1039](../../../src/project_3_main.tex#L1039).
   - 方案 A: 第 3 章保留图 3.1 作代表, 图 3.2 至 3.5 保留图片, 每段多句的描述 (第 556 至 567, 676 至 679, 693 至 698, 785 至 790, 850 至 858 行) 各换成一句, 例如: Section~\ref{3_optical_alpha_beta} discusses these spectra of $\alpha$- and $\beta$-beryllene.
   - 方案 B: 第 3 章只保留图 3.1, 删去图 3.2 至 3.5 及其描述, 各小节改为引用第 7 章对应的图.
+
 - [ ] 第 5 章与第 6 章有相同的教科书句子: 折射率 ([project_1_main.tex:680](../../../src/project_1_main.tex#L680) 与 [project_2_main.tex:830](../../../src/project_2_main.tex#L830)), 介电张量的含义 ([project_1_main.tex:561](../../../src/project_1_main.tex#L561) 与 [project_2_main.tex:765](../../../src/project_2_main.tex#L765)), 带间跃迁与等离激元的耦合 ([project_1_main.tex:666](../../../src/project_1_main.tex#L666) 与 [project_2_main.tex:353](../../../src/project_2_main.tex#L353)).
   - 建议: 三处都以第 3 章为准, 两章各删一份: 第 5 章第 679 至 686 行和第 6 章第 830 至 835 行的折射率说明, 第 5 章第 561 至 566 行和第 6 章第 765 至 767 行的张量说明. 带间跃迁与等离激元耦合的句子保留第 5 章第 666 至 669 行, 删去第 6 章第 353 至 355 行.
   - 改写: 折射率说明删去后可用一句代替: Near the plasmon-related energies, the refractive index drops below one, as described in section~\ref{sec:from_dielectric_function_to_optical_properties}.
+
 - [ ] [fundamentals_c.tex:209](../../../src/fundamentals_c.tex#L209) 第 209 至 221 行在正文中描述图 4.1 的颜色, 箭头和阴影, 移进图注.
   - 改写: 正文只留第 209 行: Figure~\ref{fig:band_subspace_and_insulating_gap} compares four schematic one-dimensional cuts through a band structure.
   - 改写: 图注换成: Schematic distinction between an isolated band subspace and an insulating gap, shown along one-dimensional cuts with model dispersions in arbitrary energy units. (a) Global gap, (b) indirect energy overlap, (c) contact between selected and excluded bands, and (d) degeneracy within the selected subspace. Solid blue and teal curves represent the boundary bands $E_{2N_\mathrm{p},\vec{k}}$ and $E_{2N_\mathrm{p}+1,\vec{k}}$, and the dashed blue curve in (d) represents $E_{2N_\mathrm{p}-2,\vec{k}}$. Each curve represents one member of a degenerate pair. The grey dashed line marks the illustrative Fermi level $E_\mathrm{F}=0$. Orange arrows compare energies at the same wave vector, purple arrows and dotted extrema mark the indirect separation, and purple shading marks the overlap in (b). Orange circles mark the boundary contact in (c), and orange circles with a central dot mark the internal degeneracies in (d).
+
 - [ ] [conclusion.tex:321](../../../src/conclusion.tex#L321) 第 321 至 327 行的 anyon 段落与本文结果关系很远, 建议删去.
   - 方案 A: 整段删去, Outlook 在 topological response 一小节结束.
   - 方案 B: 缩成一句: Looking further ahead, the band topology and phonon-mediated pairing of light-element sheets connect to the broader search for phases with anyonic excitations~\cite{simon2023topological}.
