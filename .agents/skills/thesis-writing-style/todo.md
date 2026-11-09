@@ -17,7 +17,7 @@
   - 改写: 第 17 行之后加一句: The response differs strongly between in-plane and out-of-plane polarizations.
   - 改写: 第 19 行换成: Graphene-\ce{B4C3} shows a similar feature between \qty{5}{\electronvolt} and \qty{6}{\electronvolt}, where its in-plane real dielectric function turns negative. 依据 [project_1_main.tex:599](../../../src/project_1_main.tex#L599) 和第 25 行.
   - 或: 第 19 行换成: Graphene-\ce{BC3} and Graphene-\ce{B4C3} show sharp in-plane energy-loss peaks below \qty{1}{\electronvolt}. 依据 [project_1_main.tex:661](../../../src/project_1_main.tex#L661) 和第 742 行.
-- [ ] [abstract.tex:41](../../../src/abstract.tex#L41) 摘要说 "identify non-trivial $\mathbb{Z}_2$ topology", 没有交代第 7 章的条件: 隔离能隙约 1 meV, 位于费米能以上, 体系是金属. 补上限定, 与第 7 章一致.
+- [x] [abstract.tex:41](../../../src/abstract.tex#L41) 摘要说 "identify non-trivial $\mathbb{Z}_2$ topology", 没有交代第 7 章的条件: 隔离能隙约 1 meV, 位于费米能以上, 体系是金属. 补上限定, 与第 7 章一致.
   - 改写: Using parity analysis of spin-orbit-coupled electronic states, the calculations further identify non-trivial $\mathbb{Z}_2$ band subspaces in pristine $\alpha$-beryllene and trilayer cubic beryllene, isolated by spin-orbit gaps of about \qty{1}{\milli\electronvolt} above the Fermi level, while pristine $\beta$-beryllene remains trivial.
   - 或: Parity analysis of the spin-orbit-coupled states further reveals band inversions with non-trivial $\mathbb{Z}_2$ indices in metallic $\alpha$-beryllene and trilayer cubic beryllene, while pristine $\beta$-beryllene remains trivial.
 - [ ] [project_3_main.tex:34](../../../src/project_3_main.tex#L34) 和 [project_3_main.tex:1273](../../../src/project_3_main.tex#L1273): "combines metallicity, tunable optical properties, and non-trivial topology" 偏强, 与条件性的结论不符.
