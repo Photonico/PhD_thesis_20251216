@@ -17,30 +17,37 @@
   - 改写: 第 17 行之后加一句: The response differs strongly between in-plane and out-of-plane polarizations.
   - 改写: 第 19 行换成: Graphene-\ce{B4C3} shows a similar feature between \qty{5}{\electronvolt} and \qty{6}{\electronvolt}, where its in-plane real dielectric function turns negative. 依据 [project_1_main.tex:599](../../../src/project_1_main.tex#L599) 和第 25 行.
   - 或: 第 19 行换成: Graphene-\ce{BC3} and Graphene-\ce{B4C3} show sharp in-plane energy-loss peaks below \qty{1}{\electronvolt}. 依据 [project_1_main.tex:661](../../../src/project_1_main.tex#L661) 和第 742 行.
+
 - [x] [abstract.tex:41](../../../src/abstract.tex#L41) 摘要说 "identify non-trivial $\mathbb{Z}_2$ topology", 没有交代第 7 章的条件: 隔离能隙约 1 meV, 位于费米能以上, 体系是金属. 补上限定, 与第 7 章一致.
   - 改写: Using parity analysis of spin-orbit-coupled electronic states, the calculations further identify non-trivial $\mathbb{Z}_2$ band subspaces in pristine $\alpha$-beryllene and trilayer cubic beryllene, isolated by spin-orbit gaps of about \qty{1}{\milli\electronvolt} above the Fermi level, while pristine $\beta$-beryllene remains trivial.
   - 或: Parity analysis of the spin-orbit-coupled states further reveals band inversions with non-trivial $\mathbb{Z}_2$ indices in metallic $\alpha$-beryllene and trilayer cubic beryllene, while pristine $\beta$-beryllene remains trivial.
+
 - [x] [project_3_main.tex:34](../../../src/project_3_main.tex#L34) 和 [project_3_main.tex:1273](../../../src/project_3_main.tex#L1273): "combines metallicity, tunable optical properties, and non-trivial topology" 偏强, 与条件性的结论不符.
   - 改写: 第 34 至 36 行: These results identify beryllene as an elemental two-dimensional platform in which structure and hydrogenation tune the electronic and optical properties.
   - 或: 第 34 至 36 行: These results identify beryllene as an elemental two-dimensional platform that combines metallicity, tunable optical properties, and band inversions in selected subspaces.
   - 改写: 第 1272 至 1275 行: Together with the previously reported superconducting behaviour of beryllene~\cite{li2023coexistence}, these results identify two-dimensional beryllium as an elemental platform in which structural design and hydrogen functionalization tune the electronic structure, the optical response, and the band inversions of selected subspaces.
+
 - [ ] 第 5 章的非对角介电元: 核实 (对称化, 与 VASP 输出的 6 个分量对照), 或删去相关讨论和面板. 解决后删除对应的防御句: project_1_main.tex 第 557, 558, 618, 620, 621, 744 行, project_1_SI.tex 第 274, 280, 282, 304, 317 行, conclusion.tex 第 201 行.
   - 方案 A: 核实. 用 \texttt{vasprun.xml} 中对称化的 6 个分量重新导出张量, 检查 $\varepsilon_{xx}=\varepsilon_{yy}$ 和 $\varepsilon_{xy}=\varepsilon_{yx}$. 若非对角元在数值精度内为零, 按下面三条改写, 并删去 S1.18, S1.19 中的非对角面板.
   - 改写: Graphene-\ce{BC3} 段 (第 551 至 567 行) 换成: For this system, the symmetrized dielectric tensor has vanishing off-diagonal components within numerical accuracy. The following discussion therefore focuses on the in-plane and out-of-plane diagonal components.
   - 改写: Graphene-\ce{B4C3} 段 (第 609 至 622 行) 换成: For the reciprocal response, the threefold rotational symmetry of this $\mathrm{P}3$ structure gives equal in-plane diagonal components and vanishing off-diagonal components~\cite{nye1985physical}. The symmetrized spectra satisfy these relations within numerical accuracy. The in-plane and out-of-plane components differ strongly, so Graphene-\ce{B4C3} dissipates energy differently for the two polarizations.
   - 改写: 本章结论第 743 至 744 行换成: The dielectric tensor of Graphene-\ce{B4C3} follows the threefold rotational symmetry of the structure. 第 8 章第 201 行删去.
   - 方案 B: 不重算. 正文只保留对角元的讨论, 删去两段中关于非对角元的句子和 S1.18, S1.19 的非对角面板, 方法部分加一句: We analyse the diagonal components of the dielectric tensor, which carry the response along the principal directions.
+
 - [ ] [project_2_main.tex:706](../../../src/project_2_main.tex#L706) Migdal--Eliashberg 的 $T_c$: 存档数据没有越过 $T_c$. 补算跨过能隙闭合的温度点, 或改为区间表述. 解决后处理第 710, 711 行和 conclusion.tex 第 66 行.
   - 方案 A: 补算. 加算跨过能隙闭合的温度点, 第 706 至 711 行换成: The superconducting gap closes at $T_c=\qty{[ ]}{K}$ for bulk o-\ce{B14} and at $T_c=\qty{[ ]}{K}$ for the hydrogen-terminated bilayer.
   - 方案 B: 不补算, 改为区间表述. 第 706 至 711 行换成: For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_c$ above \qty{30}{K}. For the hydrogen-terminated bilayer, the gap distribution reaches the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_c$ close to \qty{26}{K}.
   - 建议: 第 8 章第 65 至 66 行同步改为: The anisotropic calculations place $T_c$ above \qty{30}{K} for the bulk and close to \qty{26}{K} for the hydrogen-terminated bilayer.
+
 - [ ] [project_2_main.tex:467](../../../src/project_2_main.tex#L467) 双层的结合能比体相低 0.19 eV/atom, 需要解释或核查 (自由原子参考, 自旋极化, D3, 截断能是否一致).
   - 建议: 先核查: 单层, 双层与体相是否用同一截断能, 同一孤立 B 原子参考 (自旋极化, 同一盒子), 是否都含 D3, k 点是否都已收敛.
   - 方案 A: 若设置不一致, 重算后替换数值: The cohesive energies of the monolayer and bilayer are \qty{[ ]}{\electronvolt} and \qty{[ ]}{\electronvolt}, respectively. 第 879 至 881 行同步更新.
   - 方案 B: 若数值确认无误, 补一句解释: The bilayer is lower in cohesive energy than the bulk by \qty{0.19}{\electronvolt} per atom. We attribute this difference to [ ].
+
 - [ ] [project_1_main.tex:136](../../../src/project_1_main.tex#L136) 定义了层间结合能 $E_\mathrm{b}$, 全章没有给出数值, 第 732 行的结论却说 "small binding energies".
   - 方案 A: 补数值. 在表 5.2 加一列 $E_\mathrm{b}$, 正文加: The interlayer binding energies are \qty{[ ]}{\milli\electronvolt} per atom for Graphene-\ce{BC3}, \qty{[ ]}{\milli\electronvolt} per atom for Graphene-Borophene, and \qty{[ ]}{\milli\electronvolt} per atom for Graphene-\ce{B4C3}.
   - 方案 B: 删去第 136 至 146 行的定义, 结论第 732 至 733 行换成: The interlayer distances of 3.4 to 3.5 \AA{} and the small energy differences between stacking positions indicate weak van der Waals coupling between graphene and the monolayers.
+
 - [ ] 光学有效厚度的约定各章不同: 第 5 章不归一化 ([project_1_main.tex:511](../../../src/project_1_main.tex#L511)), 第 6 章用 B 1.91 Å 和 H 1.2 Å ([project_2_SI.tex:64](../../../src/project_2_SI.tex#L64)), 第 7 章用 Be 1.98 Å 和 H 0.70 Å ([project_3_main.tex:357](../../../src/project_3_main.tex#L357)). 在第 3 章用一张表说明各章的约定.
   - 改写: 在第 3 章公式 \eqref{optical_volume_normalization_2d} 之后加: The three research chapters treat the vacuum region of the supercell in different ways. Table~\ref{tab:optical_thickness_conventions} summarizes the normalization, the thickness convention, and the absorption unit of each chapter.
   - LaTeX: 表格内容: 第 5 章, no normalization, supercell average, \si{\per\nano\metre}. 第 6 章, $d_\mathrm{SC}/d_\mathrm{2D}$, outermost atoms plus van der Waals radii of B (\qty{1.91}{\angstrom}) and H (\qty{1.2}{\angstrom}), $d_\mathrm{2D}=\qty{5.807}{\angstrom}$, \qty{9.412}{\angstrom}, \qty{11.209}{\angstrom}, \si{\per\angstrom}. 第 7 章, $d_\mathrm{SC}/d_\mathrm{2D}$, outermost atoms plus radii of Be (\qty{1.98}{\angstrom}) and H (\qty{0.70}{\angstrom}), $d_\mathrm{2D}$ from \qty{3.145}{\angstrom} to \qty{6.966}{\angstrom}, \si{\per\nano\metre}. 沿用论文表格的 \texttt{rowcolors} 和 \texttt{adjustbox} 格式, label 用 \texttt{tab:optical\_thickness\_conventions}.
@@ -53,38 +60,49 @@
   - 改写: 第 643 行: Firstly, let us start with a system that contains two species of particles.
   - 或: 第 643 行: Firstly, we consider a system of two particle species.
   - 改写: appendix_electrodynamics.tex 第 34 行: Let us start with the universal structure of the problem.
+
 - [ ] [fundamentals_a.tex:516](../../../src/fundamentals_a.tex#L516), [fundamentals_a.tex:1056](../../../src/fundamentals_a.tex#L1056): "we achieve:" 改为 "we obtain:".
   - 建议: 第 516 行在第 507 至 521 行的 Slater 动能段内. 按第 5 节删去整段后, 这一条自动解决. 若保留该段, 改为 Substituting equation~\eqref{kinetic_energy_slater}, we obtain:
   - 改写: 第 1056 行: For the auxiliary non-interacting system, we obtain the Kohn--Sham auxiliary energy functional:
+
 - [ ] [fundamentals_a.tex:1054](../../../src/fundamentals_a.tex#L1054), [fundamentals_a.tex:1441](../../../src/fundamentals_a.tex#L1441): "we process X as", "we can process X as" 改为 "we treat X as" 或 "we regard X as".
   - 改写: 第 1054 行: Therefore, we treat the ground-state energy of this non-interacting auxiliary system as a functional of the density, and denote it by $E_s[n]$.
   - 或: 第 1054 行: Therefore, we regard the total ground-state energy of the non-interacting Kohn--Sham system as a density functional $E_s[n]$.
   - 改写: 第 1441 至 1442 行: Accordingly, we regard this central bump as a feature of the Hartree-exchange-correlation potential $v_\mathrm{Hxc}([n];x)$. It suppresses charge accumulation near the origin and thereby enforces equation~\eqref{KS_exact_density_matching_1D}.
+
 - [ ] [fundamentals_a.tex:698](../../../src/fundamentals_a.tex#L698): "the problem degenerates to" 改为 "the problem reduces to".
   - 改写: In this situation, the nuclei act as fixed sources of the external potential, and the problem reduces to an interacting electron system in the prescribed potential $v_\mathrm{ext}(\vec{r}\,)$.
   - 或: In this situation, the nuclei act as fixed sources of the external potential, and we are left with interacting electrons in the prescribed potential $v_\mathrm{ext}(\vec{r}\,)$.
+
 - [ ] [fundamentals_a.tex:42](../../../src/fundamentals_a.tex#L42): "the electron density of ground state" 改为 "the ground-state electron density".
   - 改写: Next, we define the ground-state electron density as the expectation value of this operator in the ground state:
   - 或: Next, the expectation value of this operator in the ground state defines the ground-state electron density:
+
 - [ ] [fundamentals_a.tex:59](../../../src/fundamentals_a.tex#L59): 同一行有两处. "the kernel idea of density functional theory is here:" 改为 "the key idea", 句中的冒号改为句号. "the corresponding wave function of ground state $\Psi_0$" 改为 "the corresponding ground-state wave function $\Psi_0$".
   - 改写: However, density functional theory reduces this dependence even further for the ground-state properties. If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$, the density $n(\vec{r}\,)$ uniquely determines the expectation value of any operator $\hat{\Omega}$ in the ground state.
   - 或: However, the key idea of density functional theory goes one step further for the ground-state properties. If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$, it also determines the ground-state expectation value of any operator $\hat{\Omega}$.
   - 建议: 第 59 行目前一行两句, 改写后按一句一行拆开.
+
 - [ ] [fundamentals_a.tex:1452](../../../src/fundamentals_a.tex#L1452): "it demonstrates as:" 改为 "it takes the form:".
   - 改写: Schematically, it takes the form:
   - 或: Schematically, this structure reads:
+
 - [ ] [fundamentals_a.tex:193](../../../src/fundamentals_a.tex#L193): "Review the expression of ..." 改为 "Recall the expression for ...".
   - 改写: Recall the expression for the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
   - 或: Let us recall the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
+
 - [ ] [appendix_quantum.tex:247](../../../src/appendix_quantum.tex#L247): "We adopt $i$ labels the electrons and $I$ labels nuclei." 改为 "We use $i$ to label the electrons and $I$ to label the nuclei."
   - 改写: We use $i$ to label the electrons and $I$ to label the nuclei.
   - 或: Lower-case indices $i$ label the electrons, and upper-case indices $I$ label the nuclei.
+
 - [ ] [appendix_electrodynamics.tex:23](../../../src/appendix_electrodynamics.tex#L23): "The present section does not review a complete lecture of electrodynamics; instead, we only extract ..." 改为 "The present section extracts only the ingredients required for ...". 上次只删了 aim to.
   - 改写: The present section extracts only the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
   - 或: From electrodynamics, we extract only the ingredients required for the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
+
 - [ ] [fundamentals_a.tex:1296](../../../src/fundamentals_a.tex#L1296): "In practice, the Kohn--Sham equations give the exact electron density in principle" 改为 "In principle, the Kohn--Sham equations give the exact electron density". 第 607 行删去的 in principle 不是这一处.
   - 改写: In principle, the Kohn--Sham equations give the exact electron density~\cite{wagner2014kohn}.
   - 或: With the exact exchange-correlation functional, the Kohn--Sham equations reproduce the exact electron density~\cite{wagner2014kohn}.
+
 - [ ] [fundamentals_a.tex:1421](../../../src/fundamentals_a.tex#L1421) 和 [fundamentals_a.tex:1428](../../../src/fundamentals_a.tex#L1428): "If we start from the naive choice:" 仍没有主句. 改为 "We first test the naive choice:", 第 1428 行改为 "With this choice, the density ... concentrates near the centre of the well." 上次只把 one 改成了 we.
   - 改写: 第 1421 行: We first test the naive choice: 第 1428 至 1429 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} concentrates near the centre of the well, more strongly than in the interacting system.
   - 或: 第 1421 行: Let us start from the naive choice: 第 1428 至 1429 行: This choice concentrates the density from equation~\eqref{KS_density_1D_schematic} near the centre of the well, beyond the concentration of the interacting system.
