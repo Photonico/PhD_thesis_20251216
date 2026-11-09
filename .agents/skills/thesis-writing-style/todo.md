@@ -579,28 +579,28 @@ GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
 - [ ] [project_3_main.tex:1270](../../../src/project_3_main.tex#L1270) 范围: "... these indices are conditional screening results for band inversions rather than quantum spin Hall states."
   - 改写: The non-trivial subspaces of these metallic phases are isolated by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} above the Fermi level, and the indices characterize band inversions within these subspaces.
   - 或: These indices characterize band inversions in subspaces isolated by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt}, above the Fermi level of these metallic phases.
-- [ ] [project_3_SI.tex:62](../../../src/project_3_SI.tex#L62) 对比: "... and is not a unique physical layer thickness."
+- [ ] [project_3_SI.tex:67](../../../src/project_3_SI.tex#L67) 对比: "... and is not a unique physical layer thickness."
   - 改写: Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value under the chosen convention.
   - 或: Consequently, the chosen convention assigns 2H-$\alpha$-beryllene a smaller thickness than the pristine layer.
-- [ ] [project_3_SI.tex:79](../../../src/project_3_SI.tex#L79) 否定: "These comparisons do not establish convergence of the complete low-frequency metallic response ..."
+- [ ] [project_3_SI.tex:84](../../../src/project_3_SI.tex#L84) 否定: "These comparisons do not establish convergence of the complete low-frequency metallic response ..."
   - 改写: These comparisons establish the convergence of the interband response.
   - 或: These comparisons test the convergence of the interband response, and an intraband treatment would complete the low-frequency metallic response.
-- [ ] [project_3_SI.tex:81](../../../src/project_3_SI.tex#L81) 对比: "... a final-parameter reference rather than an additional strictly one-parameter convergence point."
+- [ ] [project_3_SI.tex:86](../../../src/project_3_SI.tex#L86) 对比: "... a final-parameter reference rather than an additional strictly one-parameter convergence point."
   - 改写: The selected reference uses the final k-point grid and band count, which may differ from those of a convergence series.
   - 或: The selected reference represents the final parameter set, which may change both the k-point grid and the total band count.
-- [ ] [project_3_SI.tex:260](../../../src/project_3_SI.tex#L260) 对比: "... rather than replacing a full anharmonic phonon calculation."
+- [ ] [project_3_SI.tex:265](../../../src/project_3_SI.tex#L265) 对比: "... rather than replacing a full anharmonic phonon calculation."
   - 改写: These one-mode values indicate the size of the quantum fluctuations along the soft mode.
   - 或: Within this one-mode treatment, these values indicate the size of the quantum fluctuations.
-- [ ] [project_3_SI.tex:375](../../../src/project_3_SI.tex#L375) 待定: "The dynamical stability of the puckered square layer is not calculated."
+- [ ] [project_3_SI.tex:380](../../../src/project_3_SI.tex#L380) 待定: "The dynamical stability of the puckered square layer is not calculated."
   - 建议: 删去. 第 8 章 Outlook (conclusion.tex 第 244 行) 已经列出这项声子计算.
   - 或: A phonon calculation would test the dynamical stability of the puckered square layer.
-- [ ] [project_3_SI.tex:414](../../../src/project_3_SI.tex#L414) 待定: "... has not been tested separately from the total-energy convergence."
+- [ ] [project_3_SI.tex:419](../../../src/project_3_SI.tex#L419) 待定: "... has not been tested separately from the total-energy convergence."
   - 改写: The local refinements locate minima at fixed self-consistent charge density, with the plane-wave cutoff and the k-point mesh converged for the total energy.
   - 建议: 删去后半句. 第 8 章 Limitations (conclusion.tex 第 220 行) 已经说明.
-- [ ] [project_3_SI.tex:424](../../../src/project_3_SI.tex#L424) 否定: "... but does not establish that the lowest-$N$ spinor subspaces remain isolated ..."
+- [ ] [project_3_SI.tex:429](../../../src/project_3_SI.tex#L429) 否定: "... but does not establish that the lowest-$N$ spinor subspaces remain isolated ..."
   - 改写: This comparison checks the parity ordering at these momenta.
   - 建议: 删去后半句, 与正文第 945 行重复.
-- [ ] [project_3_SI.tex:468](../../../src/project_3_SI.tex#L468) 对比: "... conditional PBE results with spin-orbit coupling, not independently determined HSE06 indices."
+- [ ] [project_3_SI.tex:473](../../../src/project_3_SI.tex#L473) 对比: "... conditional PBE results with spin-orbit coupling, not independently determined HSE06 indices."
   - 改写: The listed $\mathbb{Z}_2$ indices are conditional PBE results with spin-orbit coupling.
   - 或: The listed $\mathbb{Z}_2$ indices come from PBE with spin-orbit coupling, and the HSE06 parities in table~\ref{tab:proj3_hse_parity} check their band order.
 

@@ -14,6 +14,11 @@ as functions of the k-point set for the beryllium structures.
 Convergence tests for the calculation of the dielectric function are shown in figures~\ref{fig:proj3_hcp_dielectric_nbands_convergence}--\ref{fig:proj3_cubic_dielectric_kpoint_convergence},
 including tests for both the k-point set and the total number of bands included through the parameter \texttt{NBANDS}.
 
+We also test the sensitivity of the cohesive energies to dispersion by adding the D3 energy with Becke--Johnson damping at the PBE geometries.
+The cohesive energies of $\alpha$-beryllene, $\beta$-beryllene, and trilayer cubic beryllene then lie \qty{1.04}{\electronvolt}, \qty{0.60}{\electronvolt}, and \qty{0.56}{\electronvolt} per atom above that of bulk hcp beryllium.
+Without the correction, these differences are \qty{0.79}{\electronvolt}, \qty{0.44}{\electronvolt}, and \qty{0.43}{\electronvolt} per atom.
+The correction therefore favours the bulk phase and preserves the energy ordering.
+
 \begin{figure}[!htbp]
 \centering
 \begin{tabular}{@{}cc@{}}
@@ -578,7 +583,7 @@ and $zz$ components as functions of photon energy.}
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/optics_hydrogenated_refractive_thesis.pdf}
-\caption{Refractive index for pristine and hydrogen-functionalized $\alpha$-beryllene and $\beta$-beryllene structures.
+\caption{Refractive index for the pristine and hydrogen-functionalized $\alpha$-beryllene and $\beta$-beryllene structures.
 The spectra are shown for the $xx$,
 $yy$,
 and $zz$ components as functions of photon energy.}
@@ -588,7 +593,7 @@ and $zz$ components as functions of photon energy.}
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/optics_hydrogenated_reflectivity_thesis.pdf}
-\caption{Reflectivity for pristine and hydrogen-functionalized $\alpha$-beryllene and $\beta$-beryllene structures.
+\caption{Reflectivity for the pristine and hydrogen-functionalized $\alpha$-beryllene and $\beta$-beryllene structures.
 The spectra are shown for the $xx$,
 $yy$,
 and $zz$ components as functions of photon energy.}
@@ -598,7 +603,7 @@ and $zz$ components as functions of photon energy.}
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/optics_hydrogenated_extinction_thesis.pdf}
-\caption{Extinction coefficient for pristine and hydrogen-functionalized $\alpha$-beryllene and $\beta$-beryllene structures.
+\caption{Extinction coefficient for the pristine and hydrogen-functionalized $\alpha$-beryllene and $\beta$-beryllene structures.
 The spectra are shown for the $xx$,
 $yy$,
 and $zz$ components as functions of photon energy.}
