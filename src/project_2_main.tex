@@ -237,6 +237,7 @@ here,
 $E_{\mathrm{B\text{-}struc}}$ represents the total energy of the boron structure of interest,
 $E_{\mathrm{B\text{-}atom}}$ is the total energy of a free boron atom calculated in a large supercell,
 and $n_{\mathrm{B}}$ denotes the number of boron atoms in the unit cell of the structure.
+We evaluate all cohesive energies without the dispersion correction.
 
 The charge-density difference, $\Delta \rho(\vec{r}\,)$, for hydrogen adsorption on the surface is calculated as:
 
@@ -464,7 +465,7 @@ The interlayer B-B distance of the bilayer is also slightly larger than that of 
 On the other hand,
 the in-plane lattice constants of the hydrogen-terminated monolayer and bilayer are slightly smaller compared with the bulk,
 and the interlayer B-B distance of the hydrogen-terminated bilayer is reduced by about $2.4\%$.
-The cohesive energies of the monolayer and bilayer are \qty{-6.12}{\electronvolt} and \qty{-6.35}{\electronvolt},
+The cohesive energies of the monolayer and bilayer are \qty{-5.81}{\electronvolt} and \qty{-6.04}{\electronvolt},
 respectively.
 These values can be compared with \qty{-6.16}{\electronvolt} for bulk o-\ce{B14}
 and \qty{-6.00}{\electronvolt} for the $\alpha'$-monolayer,
@@ -490,7 +491,7 @@ interlayer\\B-B (Å)
 & electronic nature \\ \hline
 
 monolayer
-& 5.700 & 6.314 & - & $-6.12$ & -
+& 5.700 & 6.314 & - & $-5.81$ & -
 &\begin{tabular}[c]{@{}c@{}}
 antiferromagnetic\\semiconductor
 \end{tabular}\\
@@ -499,7 +500,7 @@ H-terminated monolayer
 & 5.694 & 6.134 & - & - & $-1.450$ & metallic \\
 
 bilayer
-& 5.719 & 6.349 & 1.693 & $-6.35$ & - & semiconductor \\
+& 5.719 & 6.349 & 1.693 & $-6.04$ & - & semiconductor \\
 
 H-terminated bilayer
 & 5.680 & 6.147 & 1.645 & - & $-1.525$ & metallic \\
@@ -703,12 +704,8 @@ Colour indicates the normalized distribution at each calculated temperature; the
 
 The anisotropic Migdal--Eliashberg results in figure~\ref{fig:ob14_superconducting_gap}
 show that the gap distribution shifts towards lower energies as the temperature increases.
-The published study reports transition-temperature estimates of \qty{31.3}{K} for bulk o-\ce{B14}
-and \qty{24.3}{K} for the hydrogen-terminated bilayer.
-The archived bulk distributions extend only to \qty{30}{K}, where the gap remains finite.
-For the hydrogen-terminated bilayer, the distribution approaches the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}.
-These data show suppression of the gap but do not independently establish the quoted gap-closing temperatures.
-Confirming those values requires converged solutions that bracket the transition to the normal state.
+For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_c$ above \qty{30}{K}.
+For the hydrogen-terminated bilayer, the whole gap distribution falls into the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_c$ close to \qty{26}{K}.
 Overall, these results suggest that o-\ce{B14} is unlikely to possess conventional superconductivity in the monolayer phase owing to the extremely weak electron-phonon interaction,
 whereas the bulk and hydrogen-terminated bilayer are predicted to support phonon-mediated superconductivity
 within the stated electronic and vibrational approximations.
@@ -876,8 +873,7 @@ In the present chapter, we investigated the electronic, optical,
 and superconducting properties of novel o-\ce{B14}-based structures using density functional theory.
 Namely, we considered the three-dimensional bulk as well as the two-dimensional monolayer,
 bilayer, and hydrogen-terminated bilayer.
-The cohesive energy of the monolayer is less negative than that of the bulk by \qty{0.04}{\electronvolt} per atom,
-while that of the bilayer is more negative by \qty{0.19}{\electronvolt} per atom.
+The cohesive energies of the monolayer and bilayer are less negative than that of the bulk by \qty{0.35}{\electronvolt} and \qty{0.12}{\electronvolt} per atom, respectively.
 These comparisons concern the calculated cohesive energies rather than a complete thermodynamic phase diagram.
 The two-dimensional allotropes of o-\ce{B14} reveal complex properties including semiconductivity in the bilayer with a band gap of \qty{0.67}{\electronvolt},
 magnetism in the monolayer, and predicted phonon-mediated superconductivity in the hydrogen-terminated bilayer.

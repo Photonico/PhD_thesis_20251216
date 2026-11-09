@@ -45,7 +45,7 @@ It corresponds to the total energy of the system.
 For a closed system with a time-independent hamiltonian, the expectation value of the energy is conserved. This evolution is described by the time-dependent Schrödinger equation~\cite{shankar2012principles}:
 
 \begin{equation}
-    i\hbar\frac{\partial}{\partial t}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}
+    \mathrm{i}\hbar\frac{\partial}{\partial t}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}
 \label{time-dependent_Schrodinger_equation}
 \end{equation}
 
@@ -361,7 +361,7 @@ here, the antisymmetric $N$-electron wave function $\Psi$ is constructed from a 
 Finally, we can describe the full time-evolution of the many-body wave function in coordinate space by the time-dependent Schrödinger equation~\eqref{time-dependent_Schrodinger_equation}:
 
 \begin{equation}
-    i\frac{\partial}{\partial t}\Psi(x_1,x_2,\cdots,x_N,t)
+    \mathrm{i}\frac{\partial}{\partial t}\Psi(x_1,x_2,\cdots,x_N,t)
     = \hat{H}\,\Psi(x_1,x_2,\cdots,x_N,t)
 \label{tdse_manybody_coord}
 \end{equation}
@@ -381,7 +381,7 @@ In the standard formulation of quantum mechanics, observables represent measurab
 This is why observables are taken to be Hermitian operators, which ensures real eigenvalues and guarantees that $\braket{\hat{\Omega}}\in\mathbb{R}$.
 
 To set up the transformation, we return to the Schrödinger picture.
-Recall \eqref{state_time_evolution} and the definition of the time-evolution operator in \eqref{time_evolution_operator}.
+Recall equation~\eqref{state_time_evolution} and the definition of the time-evolution operator in equation~\eqref{time_evolution_operator}.
 With $\hat{U}(t,t_0)$, the two pictures are related as follows.
 
 In the Heisenberg picture, the state at the reference time $t_0$ is taken to be time-independent:
@@ -404,7 +404,7 @@ For any Schrödinger picture operator $\hat{\Omega}$, we can define its Heisenbe
 This definition transfers the time dependence from the state to the operator.
 
 With these definitions, the expectation value is unchanged from Schrödinger to the Heisenberg picture.
-Applying the expression of time-evolution operator\eqref{state_time_evolution},
+Applying the expression for the time-evolution operator~\eqref{state_time_evolution},
 the following relation demonstrates the equivalence of the two pictures:
 
 \begin{equation}
@@ -428,8 +428,7 @@ This form is particularly convenient for discussing conserved quantities and sym
 
 \subsection{From Heisenberg picture to the continuity equation}
 
-Having seen that any local one-body observable can be written as an integral over a single function,
-we now introduce that central quantity.
+We now introduce the one-body density.
 The one-body density contains all the information needed to compute local one-body expectation values and serves as the fundamental variable in density functional theory~\cite{hohenberg1964inhomogeneous,jones2015density,maitra2016perspective}.
 In what follows, we review its precise definition:
 
@@ -624,7 +623,7 @@ we work at the fixed nuclear coordinates $\{\vec{R}_I\}$ and write the clamped n
 \end{equation}
 
 In the present electronic many-body problem within the Born--Oppenheimer approximation, 
-the nuclear coordinates are clamped, and the nuclear-nuclear repulsion becomes a negligible constant. 
+the nuclear coordinates are clamped, and the nuclear-nuclear repulsion becomes a constant energy shift. 
 We can identify the interaction operator as the electron-electron Coulomb repulsion~\eqref{electrons_Coulomb},
 and the external potential acting on the electrons is the attractive electron-nucleus interaction, which can be written as a sum of one-body terms~\eqref{Electron-nucleus_one-body_form}:
 
@@ -1086,14 +1085,14 @@ At each point $\vec{r}$, the local density $n(\vec{r}\,)$ fixes a local Fermi mo
 For a spin-degenerate system, the phase-space counting gives:
 
 \begin{equation}
-    n(\vec{r}\,) = \frac{2}{h^3}\frac{4\mathrm{\pi}}{3}\,p_F^3(\vec{r}\,)
+    n(\vec{r}\,) = \frac{2}{(2\mathrm{\pi})^3}\frac{4\mathrm{\pi}}{3}\,p_F^3(\vec{r}\,)
 \label{TF_density_pf_intro}
 \end{equation}
 
 and the local Fermi momentum is related to the local single-particle energy through:
 
 \begin{equation}
-    \mu = \frac{p_F^2(\vec{r}\,)}{2m}+v(\vec{r}\,)
+    \mu = \frac{p_F^2(\vec{r}\,)}{2}+v(\vec{r}\,)
 \label{TF_mu_local_intro}
 \end{equation}
 
@@ -1108,7 +1107,7 @@ In atomic units, it satisfies the Poisson equation:
 \label{TF_poisson_equation}
 \end{equation}
 
-Eliminating $p_F(\vec{r}\,)$ between \eqref{TF_density_pf_intro} and \eqref{TF_mu_local_intro}, we obtain:
+Eliminating $p_F(\vec{r}\,)$ between equations~\eqref{TF_density_pf_intro} and~\eqref{TF_mu_local_intro}, we obtain:
 
 \begin{equation}
     n(\vec{r}\,) = \frac{1}{3\mathrm{\pi}^2}\,[2(\mu - v(\vec{r}\,))]^{3/2}
@@ -1116,7 +1115,7 @@ Eliminating $p_F(\vec{r}\,)$ between \eqref{TF_density_pf_intro} and \eqref{TF_m
 \end{equation}
 
 Substituting this expression into equation~\eqref{TF_poisson_equation},
-We arrive at the Thomas--Fermi equation:
+we arrive at the Thomas--Fermi equation:
 
 \begin{equation}
     \nabla^2 v(\vec{r}\,)=-\frac{4}{3\mathrm{\pi}}\,[2(\mu-v(\vec{r}\,))]^{3/2}
@@ -1332,7 +1331,7 @@ For the Hartree potential, we have:
 \label{Poisson_Hartree_potential}
 \end{equation}
 
-Combining equations~\eqref{effective_potential_definition}, \eqref{Poisson_external_potential}, and \eqref{Poisson_Hartree_potential}, we find:
+Combining equations~\eqref{effective_potential_definition}, \eqref{Poisson_external_potential}, and~\eqref{Poisson_Hartree_potential}, we find:
 
 \begin{equation}
     \nabla^2 v(\vec{r}\,)=4\mathrm{\pi}\sum_I Z_I\,\delta\left(\vec{r}-\vec{R}_I\,\right)-4\mathrm{\pi} n(\vec{r}\,)

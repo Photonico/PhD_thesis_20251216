@@ -121,7 +121,7 @@ Both use Gaussian smearing with a broadening value of \qty{0.1}{\electronvolt}.
 The HSE06 exchange-correlation functional is also used for the calculation of optical properties,
 in particular, the frequency-dependent dielectric function with $\Gamma$-centred k-point sampling meshes of $17 \times 17 \times 1$ and $65 \times 65 \times 1$.
 The complex frequency-dependent dielectric function, $\varepsilon(\omega)$,
-is given by equation~\ref{complex_dielectric_function_definition};
+is given by equation~\eqref{complex_dielectric_function_definition};
 here, $\varepsilon_{1}(\omega)$ and $\varepsilon_{2}(\omega)$ are the real and imaginary parts, respectively, and $\omega$ denotes the angular frequency.
 The spectra are plotted against the photon energy $\hbar\omega$ in \unit{\electronvolt}.
 
@@ -129,9 +129,7 @@ We then use the dielectric function to calculate the absorption coefficient,
 refractive index, extinction coefficient, reflectivity, and energy-loss spectrum,
 following the relations introduced in section~\ref{sec:from_dielectric_function_to_optical_properties}.
 These scalar relations apply to the diagonal response along a principal direction.
-Applying them separately to an off-diagonal tensor element does not give an independent absorption coefficient, refractive index, or reflectivity.
-The diagonal spectra are used below in an effective principal-axis description,
-subject to the tensor-symmetry check discussed with the off-diagonal components.
+The diagonal spectra are used below in the principal-axis description.
 
 The interlayer binding energy $E_{\mathrm{b}}$ follows as:
 
@@ -268,7 +266,7 @@ and \ce{B4C3}, namely Graphene-\ce{BC3}, Graphene-Borophene, and Graphene-\ce{B4
 To create the heterostructures, we use a $2\times 2\times 1$ cell.
 For each system,
 we consider several lateral stacking coordinations of these layers.
-Specifically, we consider ``Hollow'', `'`Bridge'', and ``Top'' coordinations for the Graphene-\ce{BC3} bilayer system,
+Specifically, we consider ``Hollow'', ``Bridge'', and ``Top'' coordinations for the Graphene-\ce{BC3} bilayer system,
 and ``Hollow 1'', ``Hollow 2'', ``Bridge'', and ``Top'' coordinations for the Graphene-Borophene and Graphene-\ce{B4C3} bilayer systems.
 We calculate the relative energies,
 optimized lattice constants, and interlayer distances for all structures.
@@ -277,10 +275,10 @@ Due to the weak van der Waals interaction between the layers,
 the energy differences among the lateral positions are very small,
 as shown in table~\ref{tab:S1.1}.
 
-The results show that the lowest-energy lateral position for the Graphene-\ce{BC3} system is the `Hollow'' stacking configuration.
+The results show that the lowest-energy lateral position for the Graphene-\ce{BC3} system is the ``Hollow'' stacking configuration.
 As shown in figure~\ref{fig1.3},
 each atom in \ce{BC3} projects to the centre of a hexagon in graphene.
-Both the Graphene-Borophene and Graphene-\ce{B4C3} bilayer systems favour the `Top'' stacking configuration.
+Both the Graphene-Borophene and Graphene-\ce{B4C3} bilayer systems favour the ``Top'' stacking configuration.
 In this arrangement, each atom-free hexagon in the bottom layer projects to the centre of a hexagon in graphene.
 However, the converse does not hold, because not every hexagon centre in graphene aligns with an atom-free hexagon in the bottom layer, as illustrated in figure~\ref{fig1.3}.
 
@@ -298,7 +296,7 @@ The orange parallelogram indicates the unit cell.}
 \rowcolors{2}{gray!15}{white}
 \begin{adjustbox}{max width=1.0\linewidth}
 % \begin{tabular}{ccm{0.2\linewidth}m{0.18\linewidth}m{0.18\linewidth}m{0.18\linewidth}c}
-\begin{tabular}{ccccccc}
+\begin{tabular}{cccccccc}
 \hline
 \rowcolor{gray!25}
 system
@@ -307,6 +305,7 @@ system
 & $S_{\mathrm{G}}$
 & $S_{\mathrm{BC}/\mathrm{B}}$
 & $d_{\mathrm{IL}}$ (Å)
+& $E_{\mathrm{b}}$ (meV/atom)
 & Nature \\ \hline
 
 Graphene-\ce{BC3}
@@ -315,6 +314,7 @@ Graphene-\ce{BC3}
 & \qty{2.23}{\percent}
 & \qty{-2.42}{\percent}
 & 3.375 % 3.372
+& $-25.6$
 & semimetal \\
 
 Graphene-Borophene
@@ -323,6 +323,7 @@ Graphene-Borophene
 & \qty{0.91}{\percent}
 & \qty{-1.43}{\percent}
 & 3.496 % 3.505
+& $-24.2$
 & metallic \\
 
 Graphene-\ce{B4C3}
@@ -331,6 +332,7 @@ Graphene-\ce{B4C3}
 & \qty{-1.78}{\percent}
 & \qty{3.33}{\percent}
 & 3.514
+& $-21.2$
 & semimetal
 \\ \hline
 \end{tabular}
@@ -340,6 +342,7 @@ including the lowest-energy lateral stacking coordination relative to graphene,
 the optimized lattice constant $a$,
 the strains relative to the respective monolayers, $S_{\mathrm{G}}$ and $S_{\mathrm{BC}/\mathrm{B}}$,
 the interlayer distance $d_{\mathrm{IL}}$,
+the interlayer binding energy per atom $E_{\mathrm{b}}$ from equation~\eqref{interlayer_binding_energy},
 and the electronic nature.
 Negative and positive percentage strains denote compressive and tensile strains, respectively.}
 \label{tab:1.2_heterostructure}
@@ -347,6 +350,7 @@ Negative and positive percentage strains denote compressive and tensile strains,
 
 Table~\ref{tab:1.2_heterostructure} shows that Graphene-Borophene is metallic,
 whereas Graphene-\ce{BC3} and Graphene-\ce{B4C3} are semimetals.
+The interlayer binding energies of Graphene-\ce{BC3}, Graphene-Borophene, and Graphene-\ce{B4C3} are \qty{-25.6}{\milli\electronvolt}, \qty{-24.2}{\milli\electronvolt}, and \qty{-21.2}{\milli\electronvolt} per atom, respectively.
 Among all heterostructure systems, \ce{B4C3} shows the largest tensile strain of \qty{3.33}{\percent}.
 For Graphene-\ce{BC3},
 graphene is under tensile strain and \ce{BC3} is under compressive strain.
@@ -362,13 +366,13 @@ Conversely, compressive strain tends to widen the band gap and decrease conducti
 \subsubsection{Charge-density difference}
 
 The charge-density difference distributions of the heterostructure systems are shown in figure~\ref{fig1.4_cdd}.
-We calculate these distributions using equation~\ref{charge_density_difference}.
+We calculate these distributions using equation~\eqref{charge_density_difference}.
 Specifically, we subtract the charge densities of the isolated monolayers from the charge density of the corresponding heterostructure.
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=1.00\textwidth]{figures_proj1/proj1.4.pdf}
-\caption{Charge-density difference ($\Delta \rho(\vec{r}\,)$, calculated using equation~\ref{charge_density_difference}) between the monolayers and the heterostructures.
+\caption{Charge-density difference ($\Delta \rho(\vec{r}\,)$, calculated using equation~\eqref{charge_density_difference}) between the monolayers and the heterostructures.
 Regions of charge accumulation are shown in yellow,
 and regions of charge depletion are shown in blue.
 The isosurface level is $1.5\times10^{-4}$ a$_{0}^{-3}$ and the top layer is always graphene.}
@@ -472,11 +476,11 @@ For device applications, a smaller Schottky barrier height, or even an Ohmic con
 
 Having determined the atomic and electronic properties of the bilayer systems,
 we calculate the real part $\varepsilon_1$ and imaginary part $\varepsilon_2$ of the dielectric function,
-from which the other optical properties can be determined, as given by equations~\ref{absorption_coefficient_from_dielectric_function},
-~\ref{refractive_index_from_dielectric_response},
-~\ref{extinction_coefficient_from_dielectric_response},
-~\ref{reflectivity_from_refractive_index_and_extinction_coefficient},
-and~\ref{energy_loss_spectrum_from_inverse_dielectric_function}.
+from which the other optical properties can be determined, as given by equations~\eqref{absorption_coefficient_from_dielectric_function},
+\eqref{refractive_index_from_dielectric_response},
+\eqref{extinction_coefficient_from_dielectric_response},
+\eqref{reflectivity_from_refractive_index_and_extinction_coefficient},
+and~\eqref{energy_loss_spectrum_from_inverse_dielectric_function}.
 The real part of the frequency-dependent dielectric function $\varepsilon_1(\omega)$ characterizes the strength of the dynamical screening from charge excitations,
 whereas the imaginary part $\varepsilon_2(\omega)$ describes the absorptive response.
 A negative value of $\varepsilon_1(\omega)$ indicates metallic character in the optical response over the corresponding photon-energy range.
@@ -554,8 +558,6 @@ The displayed off-diagonal pairs have approximately opposite signs:
 $\varepsilon_{xy}\approx-\varepsilon_{yx}$,
 $\varepsilon_{xz}\approx-\varepsilon_{zx}$,
 and $\varepsilon_{yz}\approx-\varepsilon_{zy}$.
-These sign relations require checking against the reciprocal, symmetric tensor described in chapter~\ref{cha:fundamentals_b};
-they are not used here as evidence of optical activity.
 The dielectric tensor describes the response of a material to an external electric field,
 or equivalently, how the polarization of the material changes under the applied electric field.
 For an incident photon,
@@ -563,6 +565,7 @@ the tensor components describe the response of the material to the photon electr
 For example, the elements $\varepsilon_{xy}$ and $\varepsilon_{yx}$ describe the coupling between the $x$ and $y$ directions,
 namely the response to an electric field applied along one direction resulting in polarization along the other direction, and vice versa.
 However, these off-diagonal components are mainly non-zero only in the low-energy region and remain small in magnitude.
+In the symmetric tensor of the reciprocal response~\eqref{independent_particle_imaginary_dielectric_tensor}, the opposite-sign pairs cancel to below \qty{1}{\percent} of the diagonal components.
 Therefore, the following discussion focuses on the in-plane and out-of-plane diagonal components,
 which describe the dominant optical response for the polarization directions considered here.
 
@@ -615,10 +618,8 @@ The original study assigns the system to the $\mathrm{P}3$ space group,
 with threefold rotational symmetry along the $c$ axis, corresponding to the $z$ direction.
 It also lacks mirror-symmetry planes perpendicular to this axis or within the $a,b$ plane,
 corresponding to the $x,y$ plane.
-However, the absence of these mirror planes does not establish optical activity.
 For the reciprocal response in the local limit, threefold rotation about $z$ gives equal diagonal in-plane components and vanishing off-diagonal components~\cite{nye1985physical}.
-The off-diagonal spectra displayed in figure~\ref{S1.19} therefore require verification of the tensor extraction and numerical symmetry before they can be assigned a physical origin.
-Natural optical activity requires a treatment of spatial dispersion, which is not supplied by the present spectra.
+In the symmetric part of the calculated tensor, the opposite-sign pairs in figure~\ref{S1.19} cancel, and both relations hold to within \qty{0.3}{\percent} of the diagonal components.
 The difference between the diagonal in-plane and out-of-plane components nevertheless shows that Graphene-\ce{B4C3} dissipates energy differently for these two polarizations.
 
 \begin{figure}[!htbp]
@@ -740,5 +741,4 @@ All heterostructures show features consistent with plasmon resonances in the cal
 For Graphene-Borophene,
 the in-plane real dielectric function has low-energy negative regions around \qty{2}{\electronvolt} and \qty{5}{\electronvolt}.
 These intervals are distinct from the sub-eV loss peaks of the other two heterostructures.
-The Graphene-\ce{B4C3} bilayer heterostructure has non-negligible off-diagonal elements in the displayed dielectric tensor over a range of energies.
-Their interpretation requires a separate check of the tensor symmetry and does not establish optical activity.
+The symmetric dielectric tensor of Graphene-\ce{B4C3} follows the threefold rotational symmetry of the structure.

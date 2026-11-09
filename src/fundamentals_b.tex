@@ -12,7 +12,7 @@ The discussion follows the route used in the optical analysis of this thesis.
 We first introduce the constitutive relations used in the optical calculations, then formulate the dielectric response, and finally derive the optical observables.
 The electromagnetic foundations and the detailed causality derivation are given in appendix~\ref{cha:appendix_electrodynamics}.
 In section~\ref{sec:constitutive_relations_for_optical_response}, we connect the polarization field $\vec{P}(\vec{r},t)$ and electric displacement field $\vec{D}(\vec{r},t)$ to the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$.
-Section~\ref{sec:from_electronic_response_to_dielectric_function} then describes the complex dielectric function $\varepsilon(\omega)=\varepsilon_1(\omega)+i\varepsilon_2(\omega)$ and its directional form in anisotropic media.
+Section~\ref{sec:from_electronic_response_to_dielectric_function} then describes the complex dielectric function $\varepsilon(\omega)=\varepsilon_1(\omega)+\mathrm{i}\,\varepsilon_2(\omega)$ and its directional form in anisotropic media.
 Causality constrains the real and imaginary parts of this response, and section~\ref{sec:causality_and_kramers_kronig_relations} expresses this constraint through the Kramers--Kronig relations.
 Finally, section~\ref{sec:from_dielectric_function_to_optical_properties} derives the absorption coefficient $\alpha(\omega)$, refractive index $n(\omega)$, extinction coefficient $k(\omega)$, reflectivity $R(\omega)$, and energy-loss spectrum $L(\omega)$ from the complex dielectric function.
 
@@ -311,6 +311,26 @@ The superscripts $\mathrm{SC}$ and $\mathrm{2D}$ distinguish the supercell respo
 The thickness values are given in section~\ref{3_supplementary}.
 The dielectric function and the derived optical quantities therefore remain associated with this thickness convention.
 
+Table~\ref{tab:optical_thickness_conventions} lists the conventions of the three research chapters.
+
+\begin{table}[!htbp]
+\centering
+\rowcolors{2}{gray!15}{white}
+\begin{tabular}{ccc}
+\hline
+\rowcolor{gray!25}
+chapter & $d_{\mathrm{2D}}$ (\AA) & absorption unit \\
+\hline
+chapter~\ref{cha:project_bilayers} & -- & \si{\per\nano\metre} \\
+chapter~\ref{cha:project_boron} & 5.807, 9.412, 11.209 & \si{\per\angstrom} \\
+chapter~\ref{cha:project_beryllene} & 3.145--6.966 & \si{\per\nano\metre} \\
+\hline
+\end{tabular}
+\caption{Effective thickness $d_{\mathrm{2D}}$ and absorption unit of each research chapter.
+Chapter~\ref{cha:project_bilayers} reports the unscaled response of the \qty{15}{\angstrom} supercell.}
+\label{tab:optical_thickness_conventions}
+\end{table}
+
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/3.1_dielectric.pdf}
@@ -464,7 +484,7 @@ For a monochromatic wave propagating through the medium,
 the intensity follows:
 
 \begin{equation}
-    I_{\lambda}(z,\omega)= I_{\lambda,0}(\omega)\,e^{-\alpha_{\lambda}(\omega) z}
+    I_{\lambda}(z,\omega)= I_{\lambda,0}(\omega)\,\mathrm{e}^{-\alpha_{\lambda}(\omega) z}
 \label{intensity_attenuation_from_absorption_coefficient}
 \end{equation}
 

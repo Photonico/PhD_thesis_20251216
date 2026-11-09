@@ -251,7 +251,7 @@ Thus, we arrive at the following relation:
 \label{parallel_wave_function}
 \end{equation}
 
-Hence $(E_1-E_2)/N$ is a constant. This contradicts the assumption in equation~\eqref{V_ext}.
+Hence $g(\vec{r}\,)=(E_1-E_2)/N$, which contradicts the assumption in equation~\eqref{V_ext}.
 Therefore, we arrive at the conclusion that two different external potentials cannot lead to the same non-degenerate ground-state wave function unless they differ only by an additive constant, as stated in equation~\eqref{parallel_wave_function}.
 
 Equivalently, up to a constant shift in the potential and for a fixed form of interaction, the mapping from the external potential to the non-degenerate ground-state wave function is one-to-one.
@@ -419,7 +419,7 @@ In the present setting, however, we restrict ourselves to non-degenerate ground 
 \end{equation}
 
 Combining equations~\eqref{potential_wave_function_correspondence}, \eqref{wave_function_density_map},
-and\eqref{density_potential_map}, we finally arrive at a one-to-one correspondence among the basic ground-state descriptors:
+and~\eqref{density_potential_map}, we finally arrive at a one-to-one correspondence among the basic ground-state descriptors:
 
 \begin{equation}
     \left[v_\mathrm{ext}(\vec{r}\,)\right]\,\longleftrightarrow\, n(\vec{r}\,)\,\longleftrightarrow\,\left[\ket{\Psi_0}\right]
@@ -502,22 +502,6 @@ E[n]
 &= T[n]+E_\mathrm{int}[n]+\int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
 \end{aligned}
 \label{energy_density_functional_decomposition}
-\end{equation}
-
-Recall the Slater determinant representation~\eqref{slater_determinant},
-under this independent-particle form, the expectation value of the kinetic energy operator becomes a sum over orbitals:
-
-\begin{equation}
-\langle\Psi|\hat{T}|\Psi\rangle
-= -\frac{1}{2}\sum_i \langle\psi_i|\nabla_i^2|\psi_i\rangle
-\label{kinetic_energy_slater}
-\end{equation}
-
-Substituting equation~\eqref{kinetic_energy_slater}, we achieve:
-
-\begin{equation}
-E[n]=-\frac{1}{2}\sum_i\bra{\psi_i}\nabla_i^2\ket{\psi_i}+E_\mathrm{int}[n]+\int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
-\label{total_energy_functional_decomposition}
 \end{equation}
 
 To proceed, we separate the system-specific external potential contribution from the remaining part of the energy.
@@ -969,7 +953,7 @@ we obtain:
 \end{equation}
 
 Subsequently, we minimize the energy functional $E[n]$ with respect to the spin-orbital wave functions $\psi_i(\vec{r}\,)$.
-This variational procedure determines the stationary condition of the functional, while enforcing the orthonormality constraints:
+This variational procedure determines the stationary condition of the functional, while enforcing the orthonormality constraints.
 
 Accordingly, we introduce a set of Lagrange multipliers $\{\lambda_{ij}\}$ and consider the constrained variation.
 Varying with respect to $\psi_i^\ast(\vec{r}\,)$ generates a one-body eigenvalue problem.
@@ -1840,8 +1824,7 @@ The smooth auxiliary state $\ket{\widetilde{\psi}_{n\vec{k}}}$ can then be expan
     &=\sum_{\vec{G}}C_{n\vec{k}}(\vec{G}\,)\ket{\vec{k}+\vec{G}\,} \\
     \braket{\vec{r}\,|\vec{k}+\vec{G}\,}
     &=\frac{1}{\sqrt{\Omega_\mathrm{cell}}}
-    \mathrm{e}^{\mathrm{i}(\vec{k}+\vec{G}
-    ,)\cdot\vec{r}}
+    \mathrm{e}^{\mathrm{i}(\vec{k}+\vec{G}\,)\cdot\vec{r}}
 \end{aligned}\right.
 \label{plane_wave_expansion_method}
 \end{equation}
