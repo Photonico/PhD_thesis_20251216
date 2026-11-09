@@ -13,10 +13,11 @@
 
 这些问题会让读者质疑结论, 应最先处理. 有几组防御句的根源就在这里, 问题解决后可以一并删除.
 
-- [ ] [abstract.tex:19](../../../src/abstract.tex#L19) 摘要说 Graphene-\ce{B4C3} "possibly chiral optical behaviour", 第 5 章却说非对角元不能证明旋光性. 删去 chiral.
-  - 改写: The dielectric response of all three heterostructures differs strongly between in-plane and out-of-plane polarizations.
-  - 或: 删去整句. 第 5 章的非对角元核实前, 摘要不提非对角元.
-- [ ] [abstract.tex:39](../../../src/abstract.tex#L39) 摘要说 "identify non-trivial $\mathbb{Z}_2$ topology", 没有交代第 7 章的条件: 隔离能隙约 1 meV, 位于费米能以上, 体系是金属. 补上限定, 与第 7 章一致.
+- [x] [abstract.tex:19](../../../src/abstract.tex#L19) 摘要说 Graphene-\ce{B4C3} "possibly chiral optical behaviour", 第 5 章却说非对角元不能证明旋光性. 只删 chiral 不够, 整句以未核实的非对角元为依据. 第 19 行换成第 5 章已有数据支撑的 Graphene-\ce{B4C3} 结果, 各向异性另起一句, 用面内与面外分量之差表述, 与 [project_1_main.tex:27](../../../src/project_1_main.tex#L27) 一致.
+  - 改写: 第 17 行之后加一句: The response differs strongly between in-plane and out-of-plane polarizations.
+  - 改写: 第 19 行换成: Graphene-\ce{B4C3} shows a similar feature between \qty{5}{\electronvolt} and \qty{6}{\electronvolt}, where its in-plane real dielectric function turns negative. 依据 [project_1_main.tex:599](../../../src/project_1_main.tex#L599) 和第 25 行.
+  - 或: 第 19 行换成: Graphene-\ce{BC3} and Graphene-\ce{B4C3} show sharp in-plane energy-loss peaks below \qty{1}{\electronvolt}. 依据 [project_1_main.tex:661](../../../src/project_1_main.tex#L661) 和第 742 行.
+- [ ] [abstract.tex:41](../../../src/abstract.tex#L41) 摘要说 "identify non-trivial $\mathbb{Z}_2$ topology", 没有交代第 7 章的条件: 隔离能隙约 1 meV, 位于费米能以上, 体系是金属. 补上限定, 与第 7 章一致.
   - 改写: Using parity analysis of spin-orbit-coupled electronic states, the calculations further identify non-trivial $\mathbb{Z}_2$ band subspaces in pristine $\alpha$-beryllene and trilayer cubic beryllene, isolated by spin-orbit gaps of about \qty{1}{\milli\electronvolt} above the Fermi level, while pristine $\beta$-beryllene remains trivial.
   - 或: Parity analysis of the spin-orbit-coupled states further reveals band inversions with non-trivial $\mathbb{Z}_2$ indices in metallic $\alpha$-beryllene and trilayer cubic beryllene, while pristine $\beta$-beryllene remains trivial.
 - [ ] [project_3_main.tex:34](../../../src/project_3_main.tex#L34) 和 [project_3_main.tex:1273](../../../src/project_3_main.tex#L1273): "combines metallicity, tunable optical properties, and non-trivial topology" 偏强, 与条件性的结论不符.
@@ -112,7 +113,7 @@ GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
 
 ### 摘要
 
-- [ ] [abstract.tex:38](../../../src/abstract.tex#L38) 否定: "Neither dimensional reduction nor hydrogenation enhances absorption in every direction or throughout the visible range."
+- [ ] [abstract.tex:40](../../../src/abstract.tex#L40) 否定: "Neither dimensional reduction nor hydrogenation enhances absorption in every direction or throughout the visible range."
   - 改写: Dimensional reduction and hydrogenation redistribute the absorption between directions and photon energies, strengthening some components and weakening others.
   - 建议: 删去. 前一句的 direction-dependent redistribution 已经表达了同一层意思.
 
