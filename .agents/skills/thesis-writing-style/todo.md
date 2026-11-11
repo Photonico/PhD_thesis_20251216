@@ -1,7 +1,7 @@
 # todo list
 
 完善论文用的待办清单, 配合同目录下的 `SKILL.md` 使用. 规则和改法见 `SKILL.md`, 这里只列具体位置.
-行号以 2026-11-10 的版本为准, 已完成的条目保留原来的行号. 行号变动后按引文搜索. 完成一条, 就把 `[ ]` 改为 `[x]`.
+行号以 2026-11-12 的版本为准, 已完成的条目保留原来的行号. 行号变动后按引文搜索. 完成一条, 就把 `[ ]` 改为 `[x]`.
 
 1. 内容一致性 (P0)
 2. 非母语用法
@@ -57,6 +57,47 @@
   - LaTeX: 表格内容: 第 5 章, no normalization, supercell average, \si{\per\nano\metre}. 第 6 章, $d_\mathrm{SC}/d_\mathrm{2D}$, outermost atoms plus van der Waals radii of B (\qty{1.91}{\angstrom}) and H (\qty{1.2}{\angstrom}), $d_\mathrm{2D}=\qty{5.807}{\angstrom}$, \qty{9.412}{\angstrom}, \qty{11.209}{\angstrom}, \si{\per\angstrom}. 第 7 章, $d_\mathrm{SC}/d_\mathrm{2D}$, outermost atoms plus radii of Be (\qty{1.98}{\angstrom}) and H (\qty{0.70}{\angstrom}), $d_\mathrm{2D}$ from \qty{3.145}{\angstrom} to \qty{6.966}{\angstrom}, \si{\per\nano\metre}. 沿用论文表格的 \texttt{rowcolors} 和 \texttt{adjustbox} 格式, label 用 \texttt{tab:optical\_thickness\_conventions}.
   - 已处理 (2026-11-10): 在第 3 章第 312 行后加一句和表 3.1, 只列各章的 $d_\mathrm{2D}$ 和吸收系数单位. 表注说明第 5 章不归一化, 超胞高度 15 Å (存档中 25 个光学计算都是 15 Å).
 
+重读新增 (2026-11-12). 前两条是第 6 章的数值, 已发表的文章里是同样的数, 最先处理:
+
+- [ ] [project_2_main.tex:473](../../../src/project_2_main.tex#L473) 第 6 章双层的氢吸附能 "The reported adsorption energy per hydrogen atom on the bilayer" 为 \qty{-1.525}{\electronvolt}, 用的是未弛豫结构的能量. 用弛豫后的能量是 \qty{-0.996}{\electronvolt}, 比单层的 \qty{-1.450}{\electronvolt} 弱, 第 474 行的 slightly stronger 不成立.
+  - 依据: 双层与单层吸附能之差与 \ce{H2} 的能量无关. `o-B14_20241024/2.2_self_consistent` 的四个自洽计算给出 +0.454 eV, `2.1_geometry_optimization` 弛豫最后一步给出 +0.456 eV. 论文的差值是 -0.075 eV. `bilayer_with_Hydrogen_top` 和 `bilayer` 两个弛豫都取第一步的能量 (-197.374 和 -177.729 eV), 差值是 -0.079 eV.
+  - 依据: 单层的 -1.450 用自洽计算的能量可以复现, 对应 $E_{\ce{H2}}=\qty{-6.765}{\electronvolt}$. 仓库里没有 \ce{H2} 的计算, `1.1_energy_atom/Hydrogen` 是孤立 H 原子, 改之前先确认这个参考能量. 它每变 0.007 eV, 两个吸附能同时变 0.003 eV.
+  - 改写: 第 473 至 474 行: The reported adsorption energy per hydrogen atom on the bilayer is \qty{-0.996}{\electronvolt}, which is weaker than that on the monolayer, \qty{-1.450}{\electronvolt}.
+  - LaTeX: 表 6.2 第 506 行的 `$-1.525$` 改为 `$-0.996$`.
+
+- [ ] [project_2_main.tex:447](../../../src/project_2_main.tex#L447) 第 6 章 hollow-bridge 位比 top 位高出的能量, 单层和双层的数值写反了: "by \qty{1.57}{\electronvolt} per hydrogen atom for the monolayer" 中的 1.57 是双层的值, 第 448 行的 2.61 是单层的值.
+  - 依据: 用 `2.1_geometry_optimization` 弛豫最后一步的能量, 这个差值与 \ce{H2} 的能量无关. 双层: bridge 位 -185.086 eV (2 个 H), 参考 -179.471 eV; top 位 -198.358 eV (4 个 H), 参考 -180.853 eV; 差值 1.57 eV. 单层: bridge 位 -90.924 eV, 参考 -86.473 eV; top 位 -105.825 eV, 参考 -86.492 eV; 差值 2.61 eV.
+  - 建议: bridge 位的参考取自 `*_with_Hydrogen_bridge_relax`. 双层的这个参考比弛豫的双层高 1.38 eV. 两个位点都以弛豫的纯硼层为参考时, 单层的差值是 2.62 eV, 双层是 2.26 eV.
+  - 方案 A: 只对调两个数: by \qty{2.61}{\electronvolt} per hydrogen atom for the monolayer and \qty{1.57}{\electronvolt} per hydrogen atom for the bilayer.
+  - 方案 B: 两个位点用同一参考: by \qty{2.62}{\electronvolt} per hydrogen atom for the monolayer and \qty{2.26}{\electronvolt} per hydrogen atom for the bilayer.
+
+- [ ] [fundamentals_c.tex:611](../../../src/fundamentals_c.tex#L611) 第 4 章写的是 "The \texttt{irvsp} method used in chapter", 第 7 章第 269 行写的是 \texttt{IrRep}. 存档的最终宇称来自 IrRep 2.1.3, irvsp 只用在早期草稿里.
+  - 改写: 第 611 至 612 行: The \texttt{IrRep} code used in chapter~\ref{cha:project_beryllene} extracts such symmetry information from VASP wave functions~\cite{iraola2022irrep}.
+
+- [ ] [introduction.tex:187](../../../src/introduction.tex#L187) "in the boron-based studies": 第 1 章和第 2 章都说 HSE06 只用于硼的两章. 第 7 章也用 HSE06 算了 2H-$\alpha$-beryllene 的带隙和宇称 (project_3_main.tex 第 313 至 320 行).
+  - 改写: 第 187 行删去句末的 in the boron-based studies.
+  - 改写: [fundamentals_a.tex:1706](../../../src/fundamentals_a.tex#L1706) "we use PBE." 改为: For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE, and test the band gap and the band order with HSE06.
+
+- [ ] [project_3_main.tex:36](../../../src/project_3_main.tex#L36) 第 7 章摘要的最后一句仍是 "and non-trivial topology". 上面已勾的那条只改了本章结论 (第 1272 至 1274 行).
+  - 改写: 第 36 行改为: and band inversions in selected subspaces.
+
+- [ ] [abstract.tex:19](../../../src/abstract.tex#L19) "Graphene-Borophene gives the strongest absorption" 没有限定范围. 第 5 章第 645 至 646 行说的是 \qty{1}{\electronvolt} 附近, 第 8 章第 38 行写明不代表整个谱.
+  - 改写: Graphene-Borophene gives the strongest absorption near \qty{1}{\electronvolt} and supports low-energy plasmonic features.
+
+- [ ] [conclusion.tex:195](../../../src/conclusion.tex#L195) "the metallic spectra in chapters" 只列了第 6, 7 章. 第 5 章的 Graphene-Borophene 也是金属, 它的光谱同样只含带间跃迁 (VASP 的 LOPTICS, 后处理没有加 Drude 项).
+  - 改写: They do not include electron-hole attraction, and the metallic spectra in chapters~\ref{cha:project_bilayers}, \ref{cha:project_boron}, and~\ref{cha:project_beryllene} do not contain a separate Drude contribution.
+
+- [ ] [project_2_main.tex:887](../../../src/project_2_main.tex#L887) 第 6 章结论 "the monolayer and bulk systems behave as indefinite media" 漏了 hydrogen-terminated bilayer. 正文第 750 至 753 行列的是三个体系.
+  - 改写: 第 887 行: Interestingly, the monolayer, hydrogen-terminated bilayer, and bulk systems behave as indefinite media, 第 889 行: This occurs in the region below \qty{2.0}{\electronvolt} for the monolayer and hydrogen-terminated bilayer,
+
+- [ ] [project_2_main.tex:508](../../../src/project_2_main.tex#L508) 表 6.2 体相一行的 $a$, $b$ 是 5.697 和 6.204 Å, 对应表 6.1 的 $a$ 和 $c$. 表 6.1 的 $b$ 是 4.048 Å.
+  - 改写: 表 6.2 的表注加一句: For the bulk, $a$ and $b$ denote the lattice constants $a$ and $c$ in table~\ref{tab:bulk_ob14_structure}.
+
+- [ ] [appendix_quantum.tex:1034](../../../src/appendix_quantum.tex#L1034) 文字说 "to the total energy $E[n]$ given by an external potential", 下面的公式却是 $E_\mathrm{ext}[n]$.
+  - 改写: For example, in condensed matter physics, it often appears as a map from the electron density $n(\vec{r}\,)$ to the external potential energy $E_\mathrm{ext}[n]$:
+
+- [ ] [fundamentals_a.tex:1365](../../../src/fundamentals_a.tex#L1365) 待核对: 一维双电子模型写的是裸库仑势 "$v_\mathrm{ee}(x_1,x_2)=|x_1-x_2|^{-1}$", 它在 $x_1=x_2$ 处不可积. 一维模型的文献通常用 soft-Coulomb 势 $[(x_1-x_2)^2+a^2]^{-1/2}$. 请确认这里要写哪一种.
+
 ## 2. 非母语用法
 
 对应 `SKILL.md` 第 7 节的规则.
@@ -110,6 +151,55 @@
 - [ ] [fundamentals_a.tex:1405](../../../src/fundamentals_a.tex#L1405) 和 [fundamentals_a.tex:1412](../../../src/fundamentals_a.tex#L1412): "If we start from the naive choice:" 仍没有主句. 改为 "We first test the naive choice:", 第 1412 行改为 "With this choice, the density ... concentrates near the centre of the well." 上次只把 one 改成了 we.
   - 改写: 第 1405 行: We first test the naive choice: 第 1412 至 1413 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} concentrates near the centre of the well, more strongly than in the interacting system.
   - 或: 第 1405 行: Let us start from the naive choice: 第 1412 至 1413 行: This choice concentrates the density from equation~\eqref{KS_density_1D_schematic} near the centre of the well, beyond the concentration of the interacting system.
+
+重读新增 (2026-11-12), 都在第 2 章和附录 A. 每处只改几个词:
+
+- [ ] 用词.
+  - [fundamentals_a.tex:30](../../../src/fundamentals_a.tex#L30) "we can realize that" 删去: Therefore, a functional takes the density $n(\vec{r}\,)$ as input and returns a quantum-mechanical observable as output.
+  - [fundamentals_a.tex:89](../../../src/fundamentals_a.tex#L89) "we review the form of hamiltonian" 改为 we recall the form of the hamiltonian.
+  - [fundamentals_a.tex:1223](../../../src/fundamentals_a.tex#L1223) "and achieve the exact ground-state density" 改为 and obtain the exact ground-state density. 与上面 we achieve 那条同类.
+  - [appendix_quantum.tex:732](../../../src/appendix_quantum.tex#L732) "We can find that this integral naturally factors" 改为 This integral naturally factors.
+  - [appendix_quantum.tex:851](../../../src/appendix_quantum.tex#L851) "via the matrix of density" 改为 via the density matrix.
+
+- [ ] 逗号连接了两个完整的句子, 或句子没有主句.
+  - [fundamentals_a.tex:113](../../../src/fundamentals_a.tex#L113) "A central example is the electron density, for an arbitrary state" 改为: A central example is the electron density. For an arbitrary state $\ket{\Psi}$, it is defined as the expectation value of the density operator $\hat{n}(\vec{r}\,)$:
+  - [fundamentals_a.tex:123](../../../src/fundamentals_a.tex#L123) "Consider a fixed form of interaction, the external potential" 改为 For a fixed form of interaction, the external potential.
+  - [fundamentals_a.tex:293](../../../src/fundamentals_a.tex#L293) "which this subsection further clarifies the character of this mapping" 改为另起一句: This subsection clarifies the character of this mapping.
+  - [fundamentals_a.tex:313](../../../src/fundamentals_a.tex#L313) 句末缺句号, 在 `via equation~\eqref{density_function}` 之后.
+  - [fundamentals_a.tex:315](../../../src/fundamentals_a.tex#L315) "Through the Rayleigh--Ritz variational principle: for the ground-state energy" 改为: According to the Rayleigh--Ritz variational principle, the energy expectation value over any normalized trial wave function $\Phi$ provides an upper bound to the ground-state energy $E_0$ of a given hamiltonian $\hat{H}$:
+  - [fundamentals_a.tex:388](../../../src/fundamentals_a.tex#L388) "Revisit our assumption that" 改为 Under our assumption that.
+  - [fundamentals_a.tex:634](../../../src/fundamentals_a.tex#L634) "Here, we suppose that there is no interaction between these two species, the wave function factorizes as:" 改为: If there is no interaction between these two species, the wave function factorizes as:
+  - [fundamentals_a.tex:689](../../../src/fundamentals_a.tex#L689) "Suppose that we aim to describe the density, the auxiliary system must" 改为 If we aim to describe the density, the auxiliary system must.
+  - [fundamentals_a.tex:938](../../../src/fundamentals_a.tex#L938) "Recall the Kohn--Sham exchange-correlation functional" 改为 Recalling the Kohn--Sham exchange-correlation functional. 这一句到第 940 行的 we obtain: 结束.
+  - [fundamentals_a.tex:999](../../../src/fundamentals_a.tex#L999) "therefore, at self-consistency, we may write" 前面的逗号改句号: Therefore, at self-consistency, we may write:
+  - [fundamentals_a.tex:1061](../../../src/fundamentals_a.tex#L1061) "it is obtained from a set of one-electron orbitals" 改为 which is obtained from a set of one-electron orbitals.
+  - [fundamentals_a.tex:1344](../../../src/fundamentals_a.tex#L1344) "it allows us to examine several simple exactly solvable model systems" 改为 we examine several simple exactly solvable model systems.
+  - [appendix_quantum.tex:797](../../../src/appendix_quantum.tex#L797) "and we work within the set of admissible densities, and equation" 在 densities 后断句: ... admissible densities. Equation~\eqref{particle_number_constraint_density} provides the particle number constraint.
+  - [appendix_quantum.tex:828](../../../src/appendix_quantum.tex#L828) "So that the expectation value of the Coulomb interaction energy reduces to" 改为 The expectation value of the Coulomb interaction energy then reduces to:
+  - [appendix_quantum.tex:870](../../../src/appendix_quantum.tex#L870) "Given a time-dependent many-body wave function" 与下一句合并: Given a time-dependent many-body wave function $\Psi(x_1,x_2,\cdots,x_N; t)$, we denote the corresponding ground-state ($g\coloneqq 0$) many-body wave function as $\Psi_g(x_1,x_2,\cdots,x_N; t)$.
+  - [appendix_quantum.tex:1141](../../../src/appendix_quantum.tex#L1141) "and the external contribution is given by" 去掉 and.
+  - [appendix_quantum.tex:1394](../../../src/appendix_quantum.tex#L1394) "Let us compare with the exact decomposition" 改为 Compared with the exact decomposition, 与第 1395 行连成一句.
+
+- [ ] 冠词.
+  - [fundamentals_a.tex:126](../../../src/fundamentals_a.tex#L126) "Given definition of external potential operator" 改为 Given the definition of the external potential operator.
+  - [fundamentals_a.tex:136](../../../src/fundamentals_a.tex#L136) "Using the expectation of density operator" 改为 Using the expectation value of the density operator.
+  - [fundamentals_a.tex:448](../../../src/fundamentals_a.tex#L448) "According to decomposition of the hamiltonian" 改为 According to the decomposition of the hamiltonian.
+  - [fundamentals_a.tex:494](../../../src/fundamentals_a.tex#L494) "the decomposition of exact ground-state energy functional" 改为 the decomposition of the exact ground-state energy functional.
+  - [fundamentals_a.tex:623](../../../src/fundamentals_a.tex#L623) "as summarized in the equation" 改为 as summarized in equation.
+  - [fundamentals_a.tex:708](../../../src/fundamentals_a.tex#L708) "we separate the $\hat{H}_\mathrm{BO}(\{\vec{R}_I\})$ into" 去掉 the.
+  - [fundamentals_a.tex:922](../../../src/fundamentals_a.tex#L922) "manipulations on exact ground-state energy functional" 改为 manipulations on the exact ground-state energy functional.
+  - [fundamentals_a.tex:1051](../../../src/fundamentals_a.tex#L1051) "the key idea of Kohn--Sham equations" 改为 the key idea of the Kohn--Sham equations.
+
+- [ ] 评价性形容词和 AI 常用词, 对应 `SKILL.md` 第 6.4 节. 逐处替换, 句子结构不动. 第 5, 6 章是已发表的文章, 其中的 novel, intriguing, promising 没有列入.
+  - [appendix_quantum.tex:231](../../../src/appendix_quantum.tex#L231) "It is worth noting that" 删去, 句子从 Not every state 开始.
+  - [appendix_quantum.tex:447](../../../src/appendix_quantum.tex#L447) "This dramatic reduction" 改为 This reduction.
+  - [appendix_quantum.tex:550](../../../src/appendix_quantum.tex#L550) "it is essential to introduce" 改为 we introduce.
+  - [appendix_quantum.tex:551](../../../src/appendix_quantum.tex#L551) "particularly crucial" 改为 relevant.
+  - [appendix_quantum.tex:572](../../../src/appendix_quantum.tex#L572) "providing a robust and realistic statistical-mechanical description essential for accurate modelling of complex quantum materials" 连同前面的逗号删去.
+  - [appendix_quantum.tex:718](../../../src/appendix_quantum.tex#L718) "which are, in principle, highly complex functionals" 两侧的破折号改为逗号.
+  - [appendix_quantum.tex:985](../../../src/appendix_quantum.tex#L985) "a minimal yet powerful descriptor" 改为 a compact descriptor.
+  - [fundamentals_a.tex:1297](../../../src/fundamentals_a.tex#L1297) "we utilize" 改为 we use.
+  - [fundamentals_a.tex:1346](../../../src/fundamentals_a.tex#L1346) "They also elucidate why its exchange-correlation component can remain" 改为 They also show that its exchange-correlation component can remain.
 
 已完成:
 
@@ -856,3 +946,100 @@ Outlook 一节中的句子:
 - [x] [project_1_main.tex:124](../../../src/project_1_main.tex#L124) 第 124, 365, 371, 475 至 479 行引用公式用了 `\ref`, 改为 `\eqref`.
   - LaTeX: 第 124, 365, 371 行的 `equation~\ref{...}` 改为 `equation~\eqref{...}`.
   - LaTeX: 第 475 至 479 行改为: `as given by equations~\eqref{absorption_coefficient_from_dielectric_function}, \eqref{refractive_index_from_dielectric_response}, \eqref{extinction_coefficient_from_dielectric_response}, \eqref{reflectivity_from_refractive_index_and_extinction_coefficient}, and~\eqref{energy_loss_spectrum_from_inverse_dielectric_function}.`
+
+重读新增 (2026-11-12). 前五条来自编译日志里的 Overfull 和 Underfull. 五条的改法一起试编译过, 日志里不再有 Overfull 和 Underfull:
+
+- [ ] [project_3_main.tex:1](../../../src/project_3_main.tex#L1) 第 7 章标题第二行超出版心 26 pt ("Pristine and Hydrogen-Functionalized Two-Dimensional").
+  - LaTeX: 长标题里手动断行: `{Emergent Topological and Optical Properties in\\ Pristine and Hydrogen-Functionalized\\ Two-Dimensional Beryllium Phases}`. 目录和页眉用方括号里的短标题, 不受影响.
+
+- [ ] [appendix_quantum.tex:816](../../../src/appendix_quantum.tex#L816) 公式 (A.75) 第二行超出版心 15 pt, 编号被挤到下一行.
+  - LaTeX: 在 `N(N-1)` 之后断行, 写成 `N(N-1) \\` 和 `&\quad\times\int\mathrm{d}x_3\cdots`.
+
+- [ ] [thesis.tex:412](../../../thesis.tex#L412) 参考文献里有 5 条超出版心, 最多 27 pt.
+  - LaTeX: 导言区加一行 `\appto{\bibsetup}{\emergencystretch=1em}`.
+
+- [ ] [project_3_SI.tex:602](../../../src/project_3_SI.tex#L602) 图 7.45 图注第一行 Underfull (badness 1910). 三条图注统一成 for pristine 之后, 这一条又报警. 三条写法完全一致时, 总有一条报警.
+  - 方案 A: 保持三条一致, 在这张图的 `\centering` 之后加一行 `\hbadness=2000`. 排版结果不变, 只是不再报警.
+  - 方案 B: 这一条写 for the pristine, 另外两条不带 the.
+
+- [ ] [fundamentals_a.tex:1564](../../../src/fundamentals_a.tex#L1564) "Thereafter, we introduce several widely used approximations" 这一行超出版心 4 pt.
+  - 改写: Thereafter 改为 Next.
+
+- [ ] [fundamentals_b.tex:288](../../../src/fundamentals_b.tex#L288) 第 3 章的 6 张图在正文里没有按编号引用, 写的是 "is shown in the following figure" 一类的句子. 浮动体不一定紧跟这句话, 图 3.1 之前现在还隔着表 3.1.
+  - 改写: 第 288 行: ... is shown in figure~\ref{figure_representative_dielectric_response}.
+  - 改写: 第 545, 774, 839 行的 The following figure presents 改为 Figure~\ref{...} presents, 句末冒号改句号. label 依次是 absorption_coefficient_present_systems, reflectivity_alpha_beta_beryllene, energy_loss_spectrum_alpha_beta_beryllene.
+  - 改写: 第 665 行句末加 in figure~\ref{refractive_index_present_systems}, 冒号改句号. 第 681 至 682 行句末加 in figure~\ref{extinction_coefficient_alpha_beta_beryllene}, 冒号改句号.
+
+- [ ] [project_1_SI.tex:18](../../../src/project_1_SI.tex#L18) 图 S1.1 (第 18 行) 和图 S1.3 (第 34 行) 在正文里没有被引用.
+  - 改写: project_1_main.tex 第 273 行改为 Figures~\ref{S1.3}--\ref{S1.6} give details of this procedure. 第 105 行后加一句: Figure~\ref{S1.1} shows the k-point convergence for the Graphene-\ce{BC3} bilayer.
+
+- [ ] [appendix_quantum.tex:985](../../../src/appendix_quantum.tex#L985) 冒号后面没有公式: "so that we can represent the one-body (spin-resolved) density as $n(x)$:" 后面接的是 Firstly 一段. 冒号改句号.
+
+- [ ] 冒号用来连接两个分句, 共 9 处, 在第 4, 7 章和附录 A, C. SKILL 第 5 节规定冒号只用于引出行间公式.
+  - [fundamentals_c.tex:8](../../../src/fundamentals_c.tex#L8) "We now examine another property of the same electronic states:" 与下一行合成一句: We now examine the continuous connection of the same electronic states across the Brillouin zone under the symmetries of the system.
+  - [fundamentals_c.tex:325](../../../src/fundamentals_c.tex#L325) "are not TRIM:" 改句号, 下一句写 Time reversal exchanges the two inequivalent corners.
+  - [fundamentals_c.tex:456](../../../src/fundamentals_c.tex#L456) "These edge states are helical:" 改句号, 下一句首字母大写.
+  - [fundamentals_c.tex:579](../../../src/fundamentals_c.tex#L579) "The calculation must supply the same ingredients used in that connection:" 改为 The calculation supplies the same ingredients used in that connection, namely a specified spinor hamiltonian, ...
+  - [project_3_main.tex:585](../../../src/project_3_main.tex#L585) "hydrogen adsorption breaks the hexagonal symmetry:" 改句号, 下一句首字母大写.
+  - [appendix_topology.tex:372](../../../src/appendix_topology.tex#L372) "in electrodynamics:" 改句号, 下一句首字母大写.
+  - [appendix_topology.tex:390](../../../src/appendix_topology.tex#L390) "The wedge product represents an oriented area element:" 冒号改为 , with.
+  - [appendix_topology.tex:646](../../../src/appendix_topology.tex#L646) "applies with matrix-valued coefficients" 一句的冒号改为 , and gives.
+  - [appendix_quantum.tex:720](../../../src/appendix_quantum.tex#L720) "in a many-body system: equation" 改为 in a many-body system in equation.
+
+- [ ] 行间公式前一句没有以冒号结尾, 共 8 处: [fundamentals_a.tex:459](../../../src/fundamentals_a.tex#L459), [fundamentals_a.tex:1073](../../../src/fundamentals_a.tex#L1073), [appendix_quantum.tex:466](../../../src/appendix_quantum.tex#L466), [appendix_quantum.tex:504](../../../src/appendix_quantum.tex#L504), [appendix_quantum.tex:593](../../../src/appendix_quantum.tex#L593), [appendix_quantum.tex:760](../../../src/appendix_quantum.tex#L760), [appendix_quantum.tex:1007](../../../src/appendix_quantum.tex#L1007), [appendix_quantum.tex:1207](../../../src/appendix_quantum.tex#L1207).
+  - 建议: 前 7 处在句末加冒号, 其中第 466 和 760 行是把句末逗号改成冒号. 第 1207 行与第 1206 行对调, 让 we arrive at 那一句在公式前, 句末改冒号.
+
+- [ ] 公式后解释符号用了 where, 其余 134 处用 here,.
+  - [appendix_quantum.tex:239](../../../src/appendix_quantum.tex#L239) "where each $x_i$ includes" 改为 here, each $x_i$ includes.
+  - [appendix_electrodynamics.tex:295](../../../src/appendix_electrodynamics.tex#L295) "where $\hat{e}_{\lambda}$ denotes the unit vector" 改为 here, $\hat{e}_{\lambda}$ denotes the unit vector.
+
+- [ ] [appendix_quantum.tex:419](../../../src/appendix_quantum.tex#L419) "differentiating \eqref{heisenberg_operator_definition}" 缺 equation~.
+  - LaTeX: `differentiating equation~\eqref{heisenberg_operator_definition}`
+
+- [ ] [fundamentals_a.tex:915](../../../src/fundamentals_a.tex#L915) 第 915, 916 行的 `E_\mathrm{int}` 和 `E_\mathrm{HK}` 后面缺 `[n]`, 第 917 行有.
+  - LaTeX: `(E_\mathrm{int}[n]-E_\mathrm{H}[n])` 和 `(E_\mathrm{HK}[n]-T[n]-E_\mathrm{H}[n])`
+
+- [ ] [appendix_quantum.tex:611](../../../src/appendix_quantum.tex#L611) 这一句把期望值叫作算符: "for a given hamiltonian $\bra{\Psi}\hat{H}\ket{\Psi}$".
+  - LaTeX: 第 611 行的四处 `\bra{\Psi}...\ket{\Psi}` 去掉, 只留 `\hat{H}`, `\hat{T}`, `\hat{V}_\mathrm{ext}`, `\hat{V}_\mathrm{int}`.
+
+- [ ] 记号不统一, 第一组: 描述性下标按 SKILL 4.6 改为正体, 或与别处的写法对齐.
+  - [appendix_electrodynamics.tex:299](../../../src/appendix_electrodynamics.tex#L299) 第 299 至 306 行的 `\chi_{\lambda}`, `\varepsilon_{\lambda}` 改为 `\chi_{\lambda\lambda}`, `\varepsilon_{\lambda\lambda}`. 本附录第 402 行和第 3 章都用双下标.
+  - [appendix_quantum.tex:1084](../../../src/appendix_quantum.tex#L1084) 第 1084, 1089, 1096, 1111 行的 `p_F` 改为 `p_\mathrm{F}`. 第 1176 行和第 2 章写的是 `k_\mathrm{F}`.
+  - [fundamentals_a.tex:1620](../../../src/fundamentals_a.tex#L1620) 第 1620 至 1677 行的 `E_x`, `E_c`, `F_x`, `\varepsilon_x` 的下标改为 `\mathrm{x}`, `\mathrm{c}`. 附录 A 第 1402 行写的是 `E_\mathrm{x}^\mathrm{D}`.
+  - [fundamentals_b.tex:246](../../../src/fundamentals_b.tex#L246) 第 246, 252 行的 `\omega_{p,\lambda}` 改为 `\omega_{\mathrm{p},\lambda}`.
+  - [appendix_quantum.tex:563](../../../src/appendix_quantum.tex#L563) `k_B` 改为 `\kB`.
+  - [appendix_quantum.tex:866](../../../src/appendix_quantum.tex#L866) 第 866, 867 行的 `\hat\Omega_i[Q]` 去掉 hat. 第 979 行写的是 `\Omega_i[Q]`.
+  - [project_3_main.tex:941](../../../src/project_3_main.tex#L941) `$\mathbb{Z}_2=0$` 改为 `$\nu=0$`, project_3_SI.tex 第 424 行同. 正文其余地方用 $\nu$ 表示这个指数.
+
+- [ ] 记号不统一, 第二组: 同一个量有两个符号, 或一个符号表示两个量.
+  - [fundamentals_a.tex:1323](../../../src/fundamentals_a.tex#L1323) `v_\mathrm{KS}` 与第 979 行的 `v_\mathrm{eff}` 是同一个势. 第 1320 行后可加一句: It coincides with the effective potential in equation~\eqref{KS_effective_potential_definition}.
+  - [appendix_quantum.tex:1200](../../../src/appendix_quantum.tex#L1200) `C_1` 与第 1059 行的 `C` 是同一个常数.
+  - [appendix_quantum.tex:873](../../../src/appendix_quantum.tex#L873) 激发态先用 $\alpha$ 标记, 第 886 至 932 行改用 $n$.
+  - [appendix_quantum.tex:197](../../../src/appendix_quantum.tex#L197) 时序算符 $\hat{T}$ 与动能算符 $\hat{T}$ 同名.
+  - [project_3_main.tex:283](../../../src/project_3_main.tex#L283) 第 7 章的 $N$ 等于第 4 章的 $2N_\mathrm{p}$. 第 283 行句末可加: so that $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
+  - 已发表的两章只作记录: 第 6 章的临界温度写 `T_c`, 第 2, 8 章写 `T_\mathrm{c}`. 第 5 章的 `E_F`, `E_C`, `E_V`, `E_g` 是斜体下标.
+
+- [ ] 连字符和破折号.
+  - [fundamentals_a.tex:520](../../../src/fundamentals_a.tex#L520) "system specific" 改为 system-specific.
+  - [fundamentals_a.tex:610](../../../src/fundamentals_a.tex#L610) "density based" 改为 density-based.
+  - [fundamentals_a.tex:678](../../../src/fundamentals_a.tex#L678) "many body physics" 改为 many-body physics.
+  - [appendix_quantum.tex:614](../../../src/appendix_quantum.tex#L614) "clamped nuclei hamiltonian" 改为 clamped-nuclei hamiltonian.
+  - [appendix_quantum.tex:1456](../../../src/appendix_quantum.tex#L1456) "orbital free" 改为 orbital-free.
+  - [appendix_quantum.tex:450](../../../src/appendix_quantum.tex#L450) "Schrödinger-picture" 改为 Schrödinger picture.
+  - [conclusion.tex:250](../../../src/conclusion.tex#L250) "free-standing" 改为 freestanding, 第 252 行同. 第 1 章 6 处都写 freestanding.
+  - [appendix_quantum.tex:1422](../../../src/appendix_quantum.tex#L1422) "Thomas--Fermi Dirac" 改为 `Thomas--Fermi--Dirac`, 第 1433 行同. 第 1444 行改为 `Thomas--Fermi--Dirac--von Weizsäcker`.
+  - [fundamentals_a.tex:1345](../../../src/fundamentals_a.tex#L1345) "Kohn–Sham" 里是 Unicode 短横, 改为 `Kohn--Sham`.
+
+- [ ] 单位没有用 siunitx.
+  - [conclusion.tex:22](../../../src/conclusion.tex#L22) 第 8 章有 22 处数值和单位是直接写的, 例如 "1.822 eV". 改为 `\qty{1.822}{\electronvolt}` 的写法.
+  - [project_1_main.tex:176](../../../src/project_1_main.tex#L176) 第 176, 177 行的 `$\mathring{\mathrm{A}}$` 改为 `\qty{2.467}{\angstrom}` 的写法.
+
+- [ ] 零散的小处.
+  - [fundamentals_a.tex:543](../../../src/fundamentals_a.tex#L543) 图注句末缺句号.
+  - [fundamentals_a.tex:344](../../../src/fundamentals_a.tex#L344) `aligned` 最后一行末尾多了 `\\`.
+  - [fundamentals_c.tex:530](../../../src/fundamentals_c.tex#L530) "sign changes changes" 改为 sign changes alters.
+  - [project_1_SI.tex:184](../../../src/project_1_SI.tex#L184) "of the Graphene-\ce{BC3} calculated" 去掉 the, 第 191 行同. 图 S1.9 的图注没有 the.
+  - [introduction.tex:207](../../../src/introduction.tex#L207) "Ab initio molecular dynamics" 没有用斜体, 第 165 行是 `\textit{ab initio}`.
+  - [appendix.tex:8](../../../src/appendix.tex#L8) "For Chapter 5:" 写死了章号, 第 13, 18 行同. 改为 `For chapter~\ref{cha:project_bilayers}:`.
+  - [appendix_quantum.tex:13](../../../src/appendix_quantum.tex#L13) 节标题 "A story starts with time evolution quantum mechanics" 缺介词, 可写 time evolution in quantum mechanics.
+  - [project_3_main.tex:211](../../../src/project_3_main.tex#L211) 第 211 至 213 行说带 D3 的初步声子只有立方的几个结构. 存档里 hcp, bcc, $\alpha$, $\beta$ 和氢化结构的初步声子也带 D3. 可改为: The preliminary phonon calculations, which are not discussed further, included the D3 dispersion correction.
