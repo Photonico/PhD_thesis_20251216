@@ -136,16 +136,6 @@
   - [appendix_quantum.tex:1141](../../../src/appendix_quantum.tex#L1141) "and the external contribution is given by" 去掉 and.
   - [appendix_quantum.tex:1394](../../../src/appendix_quantum.tex#L1394) "Let us compare with the exact decomposition" 改为 Compared with the exact decomposition, 与第 1395 行连成一句.
 
-- [ ] 冠词.
-  - [fundamentals_a.tex:126](../../../src/fundamentals_a.tex#L126) "Given definition of external potential operator" 改为 Given the definition of the external potential operator.
-  - [fundamentals_a.tex:136](../../../src/fundamentals_a.tex#L136) "Using the expectation of density operator" 改为 Using the expectation value of the density operator.
-  - [fundamentals_a.tex:448](../../../src/fundamentals_a.tex#L448) "According to decomposition of the hamiltonian" 改为 According to the decomposition of the hamiltonian.
-  - [fundamentals_a.tex:494](../../../src/fundamentals_a.tex#L494) "the decomposition of exact ground-state energy functional" 改为 the decomposition of the exact ground-state energy functional.
-  - [fundamentals_a.tex:623](../../../src/fundamentals_a.tex#L623) "as summarized in the equation" 改为 as summarized in equation.
-  - [fundamentals_a.tex:708](../../../src/fundamentals_a.tex#L708) "we separate the $\hat{H}_\mathrm{BO}(\{\vec{R}_I\})$ into" 去掉 the.
-  - [fundamentals_a.tex:922](../../../src/fundamentals_a.tex#L922) "manipulations on exact ground-state energy functional" 改为 manipulations on the exact ground-state energy functional.
-  - [fundamentals_a.tex:1051](../../../src/fundamentals_a.tex#L1051) "the key idea of Kohn--Sham equations" 改为 the key idea of the Kohn--Sham equations.
-
 - [ ] 评价性形容词和 AI 常用词, 对应 `SKILL.md` 第 6.4 节. 逐处替换, 句子结构不动. 第 5, 6 章是已发表的文章, 其中的 novel, intriguing, promising 没有列入.
   - [appendix_quantum.tex:231](../../../src/appendix_quantum.tex#L231) "It is worth noting that" 删去, 句子从 Not every state 开始.
   - [appendix_quantum.tex:447](../../../src/appendix_quantum.tex#L447) "This dramatic reduction" 改为 This reduction.
