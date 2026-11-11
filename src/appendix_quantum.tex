@@ -194,11 +194,11 @@ The state is still propagated by the evolution operator $\hat{U}(t_1,t_0)$ as in
 In this case, its corresponding time-evolution operator can be written as a time-ordered exponential~\cite{sakurai2020modern}:
 
 \begin{equation}
-    \hat{U}(t_1,t_0)=\hat{T}\exp\left(-\frac{\mathrm{i}}{\hbar}\int_{t_0}^{t_1}\hat{H}(t)\mathrm{d}t\right)
+    \hat{U}(t_1,t_0)=\hat{\mathcal{T}}\exp\left(-\frac{\mathrm{i}}{\hbar}\int_{t_0}^{t_1}\hat{H}(t)\mathrm{d}t\right)
 \label{time-ordering_operator}
 \end{equation}
 
-here, $\hat{T}$ denotes the time-ordering operator.
+here, $\hat{\mathcal{T}}$ denotes the time-ordering operator.
 It orders products of $\hat{H}(t)$ such that operators at later times appear to the left.
 This is required when the hamiltonians at different times do not commute:
 
@@ -236,7 +236,7 @@ This means that their correlations cannot be described by individual particle st
 \label{many-body_wave_function}
 \end{equation}
 
-where each $x_i$ includes both spatial and spin degrees of freedom.
+here, each $x_i$ includes both spatial and spin degrees of freedom.
 
 The dynamics are governed by a many-body hamiltonian operator $\hat{H}$ and the time evolution is still described by the Schrödinger equation~\eqref{time-dependent_Schrodinger_equation}.
 
@@ -416,7 +416,7 @@ the following relation demonstrates the equivalence of the two pictures:
 \label{equivalence_schrodinger_heisenberg}
 \end{equation}
 
-For a time-independent hamiltonian and an operator without explicit time dependence in the Schrödinger picture, differentiating \eqref{heisenberg_operator_definition} gives the Heisenberg equation of motion~\cite{shankar2012principles}:
+For a time-independent hamiltonian and an operator without explicit time dependence in the Schrödinger picture, differentiating equation~\eqref{heisenberg_operator_definition} gives the Heisenberg equation of motion~\cite{shankar2012principles}:
 
 \begin{equation}
     \frac{\mathrm{d}}{\mathrm{d}t}\hat{\Omega}_\mathrm{H}(t)
@@ -560,7 +560,7 @@ In the grand canonical ensemble, the expectation value of any observable operato
 
 here, the summation runs over all quantum states labelled by $\alpha$,
 and $\Psi_{\alpha}$ represents the many-body quantum states of the system, characterized by their energies $E_{\alpha}$ and particle numbers $N_{\alpha}$.
-The inverse temperature $\beta$ is defined as $\beta = 1/(k_B T)$, with $T$ being the temperature and $k_B$ the Boltzmann constant.
+The inverse temperature $\beta$ is defined as $\beta = 1/(\kB T)$, with $T$ being the temperature and $\kB$ the Boltzmann constant.
 The chemical potential $\mu$ controls particle exchange between the system and its reservoir.
 Therefore, the partition function $\mathcal{Z}$ serves as a normalization factor and is defined as:
 
@@ -608,7 +608,7 @@ A more radical question is whether we need to work with explicit wave functions 
 
 To address this question, it is natural to start from the energy, since the ground state is determined variationally through the hamiltonian expectation value.
 
-In the case of this approximation, for a given hamiltonian $\bra{\Psi}\hat{H}\ket{\Psi}$, we can regard it as depending on the form of the kinetic energy operator $\bra{\Psi}\hat{T}\ket{\Psi}$, external potential operator $\bra{\Psi}\hat{V}_\mathrm{ext}\ket{\Psi}$, and the interaction operator $\bra{\Psi}\hat{V}_\mathrm{int}\ket{\Psi}$.
+In the case of this approximation, for a given hamiltonian $\hat{H}$, we can regard it as depending on the form of the kinetic energy operator $\hat{T}$, external potential operator $\hat{V}_\mathrm{ext}$, and the interaction operator $\hat{V}_\mathrm{int}$.
 
 To specify the quantum dynamics and interactions of our system within the Born--Oppenheimer approximation,
 we work at the fixed nuclear coordinates $\{\vec{R}_I\}$ and write the clamped-nuclei hamiltonian as:
@@ -863,15 +863,15 @@ and get the simplified expectation value of the kinetic energy operator:
 \label{kinetic_energy_density_matrix}
 \end{equation}
 
-We begin by insisting on a single functional variable $Q$ such that every observable of interest $\hat\Omega_i$ can be written in the form $\hat\Omega_i[Q]$.
-Having identified $Q$, we then derive the explicit mappings $\hat\Omega_i[Q]$ for each target observable.
-Finally, we develop a practical algorithm or an approximation scheme to compute $Q$ itself, thereby rendering all observables $\hat\Omega_i[Q]$ tractable.
+We begin by insisting on a single functional variable $Q$ such that every observable of interest, represented by an operator $\hat\Omega_i$, has an expectation value $\Omega_i[Q]$.
+Having identified $Q$, we then derive the explicit mappings $\Omega_i[Q]$ for each target observable.
+Finally, we develop a practical algorithm or an approximation scheme to compute $Q$ itself, thereby rendering all observables $\Omega_i[Q]$ tractable.
 
 Given a time-dependent many-body wave function $\Psi(x_1,x_2,\cdots,x_N; t)$. 
 We denote the corresponding ground-state ($g\coloneqq 0$) many-body wave function as 
 $\Psi_g(x_1,x_2,\cdots,x_N; t)$.
-We can also denote the excited states by an index $\alpha$ ($\alpha\geq1$), 
-as $\Psi_{\alpha}(x_1,x_2,\cdots,x_N; t)$.
+We can also denote the excited states by an index $n$ ($n\geq1$),
+as $\Psi_n(x_1,x_2,\cdots,x_N; t)$.
 
 Then, we can describe the ground-state one-body density:
 
@@ -1081,19 +1081,19 @@ For this reason, they are commonly referred to as density functionals.
 Now, we introduce the Thomas--Fermi approach as a first and purely density-based model for the kinetic energy.
 
 The basic idea is to treat the electrons locally as a uniform, spin-degenerate Fermi gas.
-At each point $\vec{r}$, the local density $n(\vec{r}\,)$ fixes a local Fermi momentum $p_F(\vec{r}\,)$, which allows us to estimate the kinetic energy density from the occupied Fermi sphere in momentum space.
+At each point $\vec{r}$, the local density $n(\vec{r}\,)$ fixes a local Fermi momentum $p_\mathrm{F}(\vec{r}\,)$, which allows us to estimate the kinetic energy density from the occupied Fermi sphere in momentum space.
 
 For a spin-degenerate system, the phase-space counting gives:
 
 \begin{equation}
-    n(\vec{r}\,) = \frac{2}{(2\mathrm{\pi})^3}\frac{4\mathrm{\pi}}{3}\,p_F^3(\vec{r}\,)
+    n(\vec{r}\,) = \frac{2}{(2\mathrm{\pi})^3}\frac{4\mathrm{\pi}}{3}\,p_\mathrm{F}^3(\vec{r}\,)
 \label{TF_density_pf_intro}
 \end{equation}
 
 and the local Fermi momentum is related to the local single-particle energy through:
 
 \begin{equation}
-    \mu = \frac{p_F^2(\vec{r}\,)}{2}+v(\vec{r}\,)
+    \mu = \frac{p_\mathrm{F}^2(\vec{r}\,)}{2}+v(\vec{r}\,)
 \label{TF_mu_local_intro}
 \end{equation}
 
@@ -1108,7 +1108,7 @@ In atomic units, it satisfies the Poisson equation:
 \label{TF_poisson_equation}
 \end{equation}
 
-Eliminating $p_F(\vec{r}\,)$ between equations~\eqref{TF_density_pf_intro} and~\eqref{TF_mu_local_intro}, we obtain:
+Eliminating $p_\mathrm{F}(\vec{r}\,)$ between equations~\eqref{TF_density_pf_intro} and~\eqref{TF_mu_local_intro}, we obtain:
 
 \begin{equation}
     n(\vec{r}\,) = \frac{1}{3\mathrm{\pi}^2}\,[2(\mu - v(\vec{r}\,))]^{3/2}
@@ -1190,14 +1190,14 @@ we apply this homogeneous result locally by replacing $n$ with $n(\vec{r}\,)$ an
 Accordingly, this yields the Thomas--Fermi kinetic energy functional~\cite{thomas1927calculation,fermi1927metodo,mi2023orbital}:
 
 \begin{equation}
-    T_\mathrm{TF}[n] = C_1\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
+    T_\mathrm{TF}[n] = C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
 \label{functional_TTF}
 \end{equation}
 
 with the Thomas--Fermi constant:
 
 \begin{equation}
-    C_1 \coloneqq \frac{3}{10}\left(3\mathrm{\pi}^2\right)^{\frac{2}{3}}
+    C \coloneqq \frac{3}{10}\left(3\mathrm{\pi}^2\right)^{\frac{2}{3}}
 \label{Thomas_Fermi_constant_C1}
 \end{equation}
 
@@ -1209,10 +1209,10 @@ The nucleus-nucleus contribution $E_\mathrm{NN}$ is omitted since it does not de
 \begin{equation}
 \begin{aligned}
     E_\mathrm{TF}[n]
-    &= C_1\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
+    &= C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
     + \frac{1}{2}\iint\dif{\vec{r}}\,\dif{\vec{r}\,'}\,\frac{n(\vec{r}\,)n(\vec{r}\,')}{|\vec{r}-\vec{r}\,'|}
     + \int\dif{\vec{r}}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,) \\
-    &= C_1\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
+    &= C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
     + E_\mathrm{H}[n] + \int\dif{\vec{r}}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
 \end{aligned}
 \label{full_energy_functional}
@@ -1260,7 +1260,7 @@ For the Thomas--Fermi kinetic term, we obtain:
 
 \begin{equation}
     \delta T_\mathrm{TF}[n]
-    = \int\dif{\vec{r}}\,\frac{5}{3}C_1\,n(\vec{r}\,)^{\frac{2}{3}}\,\delta n(\vec{r}\,)
+    = \int\dif{\vec{r}}\,\frac{5}{3}C\,n(\vec{r}\,)^{\frac{2}{3}}\,\delta n(\vec{r}\,)
 \label{variation_TTF}
 \end{equation}
 
@@ -1283,14 +1283,14 @@ For the external contribution, the variation follows directly from the linear co
 Substituting equations~\eqref{variation_TTF}--\eqref{variation_Eext} into equation~\eqref{total_energy_variation}, we obtain:
 
 \begin{equation}
-    \int\dif{\vec{r}}\,\left\{\frac{5}{3}C_1\,n(\vec{r}\,)^{\frac{2}{3}}+v_\mathrm{H}([n];\vec{r}\,)+v_\mathrm{ext}(\vec{r}\,)-\lambda\right\}\delta n(\vec{r}\,)=0
+    \int\dif{\vec{r}}\,\left\{\frac{5}{3}C\,n(\vec{r}\,)^{\frac{2}{3}}+v_\mathrm{H}([n];\vec{r}\,)+v_\mathrm{ext}(\vec{r}\,)-\lambda\right\}\delta n(\vec{r}\,)=0
 \label{total_energy_minimization}
 \end{equation}
 
 Since the density variation $\delta n(\vec{r}\,)$ is arbitrary, the integrand must vanish pointwise, which yields the Thomas--Fermi equation:
 
 \begin{equation}
-    \frac{5}{3}C_1\,n(\vec{r}\,)^{\frac{2}{3}}+v_\mathrm{H}([n];\vec{r}\,)+v_\mathrm{ext}(\vec{r}\,)=\lambda
+    \frac{5}{3}C\,n(\vec{r}\,)^{\frac{2}{3}}+v_\mathrm{H}([n];\vec{r}\,)+v_\mathrm{ext}(\vec{r}\,)=\lambda
 \label{Thomas_Fermi_equation}
 \end{equation}
 
@@ -1304,7 +1304,7 @@ It is convenient to introduce the effective potential:
 Equation~\eqref{Thomas_Fermi_equation} then becomes:
 
 \begin{equation}
-    \frac{5}{3}C_1\,n(\vec{r}\,)^{\frac{2}{3}}+v(\vec{r}\,)=\lambda
+    \frac{5}{3}C\,n(\vec{r}\,)^{\frac{2}{3}}+v(\vec{r}\,)=\lambda
 \label{Thomas_Fermi_equation_compact}
 \end{equation}
 
@@ -1423,7 +1423,7 @@ Including the Dirac exchange term, we obtain the Thomas--Fermi--Dirac functional
 
 \begin{equation}
     E_\mathrm{TFD}[n]
-    \coloneqq C_1\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
+    \coloneqq C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
     + E_\mathrm{H}[n]
     - C_2\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{4}{3}}
     + \int\dif{\vec{r}}\,n(\vec{r}\,)\,v_\mathrm{ext}(\vec{r}\,)
@@ -1445,7 +1445,7 @@ By adding this gradient correction, we arrive at the Thomas--Fermi--Dirac von We
 
 \begin{equation}
     E_\mathrm{TFDW}[n]
-    \coloneqq C_1\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
+    \coloneqq C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
     + T_\mathrm{vW}[n]
     + E_\mathrm{H}[n]
     - C_2\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{4}{3}}

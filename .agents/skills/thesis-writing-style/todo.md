@@ -987,20 +987,20 @@ Outlook 一节中的句子:
 - [ ] 行间公式前一句没有以冒号结尾, 共 8 处: [fundamentals_a.tex:459](../../../src/fundamentals_a.tex#L459), [fundamentals_a.tex:1073](../../../src/fundamentals_a.tex#L1073), [appendix_quantum.tex:466](../../../src/appendix_quantum.tex#L466), [appendix_quantum.tex:504](../../../src/appendix_quantum.tex#L504), [appendix_quantum.tex:593](../../../src/appendix_quantum.tex#L593), [appendix_quantum.tex:760](../../../src/appendix_quantum.tex#L760), [appendix_quantum.tex:1007](../../../src/appendix_quantum.tex#L1007), [appendix_quantum.tex:1207](../../../src/appendix_quantum.tex#L1207).
   - 建议: 前 7 处在句末加冒号, 其中第 466 和 760 行是把句末逗号改成冒号. 第 1207 行与第 1206 行对调, 让 we arrive at 那一句在公式前, 句末改冒号.
 
-- [ ] 公式后解释符号用了 where, 其余 134 处用 here,.
+- [x] 公式后解释符号用了 where, 其余 134 处用 here,.
   - [appendix_quantum.tex:239](../../../src/appendix_quantum.tex#L239) "where each $x_i$ includes" 改为 here, each $x_i$ includes.
   - [appendix_electrodynamics.tex:295](../../../src/appendix_electrodynamics.tex#L295) "where $\hat{e}_{\lambda}$ denotes the unit vector" 改为 here, $\hat{e}_{\lambda}$ denotes the unit vector.
 
-- [ ] [appendix_quantum.tex:419](../../../src/appendix_quantum.tex#L419) "differentiating \eqref{heisenberg_operator_definition}" 缺 equation~.
+- [x] [appendix_quantum.tex:419](../../../src/appendix_quantum.tex#L419) "differentiating \eqref{heisenberg_operator_definition}" 缺 equation~.
   - LaTeX: `differentiating equation~\eqref{heisenberg_operator_definition}`
 
-- [ ] [fundamentals_a.tex:915](../../../src/fundamentals_a.tex#L915) 第 915, 916 行的 `E_\mathrm{int}` 和 `E_\mathrm{HK}` 后面缺 `[n]`, 第 917 行有.
+- [x] [fundamentals_a.tex:915](../../../src/fundamentals_a.tex#L915) 第 915, 916 行的 `E_\mathrm{int}` 和 `E_\mathrm{HK}` 后面缺 `[n]`, 第 917 行有.
   - LaTeX: `(E_\mathrm{int}[n]-E_\mathrm{H}[n])` 和 `(E_\mathrm{HK}[n]-T[n]-E_\mathrm{H}[n])`
 
-- [ ] [appendix_quantum.tex:611](../../../src/appendix_quantum.tex#L611) 这一句把期望值叫作算符: "for a given hamiltonian $\bra{\Psi}\hat{H}\ket{\Psi}$".
+- [x] [appendix_quantum.tex:611](../../../src/appendix_quantum.tex#L611) 这一句把期望值叫作算符: "for a given hamiltonian $\bra{\Psi}\hat{H}\ket{\Psi}$".
   - LaTeX: 第 611 行的四处 `\bra{\Psi}...\ket{\Psi}` 去掉, 只留 `\hat{H}`, `\hat{T}`, `\hat{V}_\mathrm{ext}`, `\hat{V}_\mathrm{int}`.
 
-- [ ] 记号不统一, 第一组: 描述性下标按 SKILL 4.6 改为正体, 或与别处的写法对齐.
+- [x] 记号不统一, 第一组: 描述性下标按 SKILL 4.6 改为正体, 或与别处的写法对齐.
   - [appendix_electrodynamics.tex:299](../../../src/appendix_electrodynamics.tex#L299) 第 299 至 306 行的 `\chi_{\lambda}`, `\varepsilon_{\lambda}` 改为 `\chi_{\lambda\lambda}`, `\varepsilon_{\lambda\lambda}`. 本附录第 402 行和第 3 章都用双下标.
   - [appendix_quantum.tex:1084](../../../src/appendix_quantum.tex#L1084) 第 1084, 1089, 1096, 1111 行的 `p_F` 改为 `p_\mathrm{F}`. 第 1176 行和第 2 章写的是 `k_\mathrm{F}`.
   - [fundamentals_a.tex:1620](../../../src/fundamentals_a.tex#L1620) 第 1620 至 1677 行的 `E_x`, `E_c`, `F_x`, `\varepsilon_x` 的下标改为 `\mathrm{x}`, `\mathrm{c}`. 附录 A 第 1402 行写的是 `E_\mathrm{x}^\mathrm{D}`.
@@ -1009,13 +1009,14 @@ Outlook 一节中的句子:
   - [appendix_quantum.tex:866](../../../src/appendix_quantum.tex#L866) 第 866, 867 行的 `\hat\Omega_i[Q]` 去掉 hat. 第 979 行写的是 `\Omega_i[Q]`.
   - [project_3_main.tex:941](../../../src/project_3_main.tex#L941) `$\mathbb{Z}_2=0$` 改为 `$\nu=0$`, project_3_SI.tex 第 424 行同. 正文其余地方用 $\nu$ 表示这个指数.
 
-- [ ] 记号不统一, 第二组: 同一个量有两个符号, 或一个符号表示两个量.
+- [x] 记号不统一, 第二组: 同一个量有两个符号, 或一个符号表示两个量.
   - [fundamentals_a.tex:1323](../../../src/fundamentals_a.tex#L1323) `v_\mathrm{KS}` 与第 979 行的 `v_\mathrm{eff}` 是同一个势. 第 1320 行后可加一句: It coincides with the effective potential in equation~\eqref{KS_effective_potential_definition}.
   - [appendix_quantum.tex:1200](../../../src/appendix_quantum.tex#L1200) `C_1` 与第 1059 行的 `C` 是同一个常数.
   - [appendix_quantum.tex:873](../../../src/appendix_quantum.tex#L873) 激发态先用 $\alpha$ 标记, 第 886 至 932 行改用 $n$.
   - [appendix_quantum.tex:197](../../../src/appendix_quantum.tex#L197) 时序算符 $\hat{T}$ 与动能算符 $\hat{T}$ 同名.
   - [project_3_main.tex:283](../../../src/project_3_main.tex#L283) 第 7 章的 $N$ 等于第 4 章的 $2N_\mathrm{p}$. 第 283 行句末可加: so that $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
   - 已发表的两章只作记录: 第 6 章的临界温度写 `T_c`, 第 2, 8 章写 `T_\mathrm{c}`. 第 5 章的 `E_F`, `E_C`, `E_V`, `E_g` 是斜体下标.
+  - 已处理 (2026-11-12): 两组记号和前四项表述一并修正. Thomas--Fermi 常数的十处 `C_1` 统一为 `C`, 激发态统一用 `n`, 时序算符改为 `\hat{\mathcal{T}}`. 保留实际算符的帽子, 标量泛函 `\Omega_i[Q]` 去帽并明确其为期望值. 补上两章带子空间计数的关系, 将 `N` 明确为所选子空间的自旋能带数. 公式标签与文献引用保留.
 
 - [x] 连字符和破折号.
   - [fundamentals_a.tex:520](../../../src/fundamentals_a.tex#L520) "system specific" 改为 system-specific.

@@ -912,8 +912,8 @@ we have:
 \begin{equation}
 \begin{aligned}
     E_\mathrm{xc}[n]
-    &= (T[n]-T_s[n]) + (E_\mathrm{int}-E_\mathrm{H}[n]) \\
-    &= (T[n]-T_s[n]) + (E_\mathrm{HK}-T[n]-E_\mathrm{H}[n]) \\
+    &= (T[n]-T_s[n]) + (E_\mathrm{int}[n]-E_\mathrm{H}[n]) \\
+    &= (T[n]-T_s[n]) + (E_\mathrm{HK}[n]-T[n]-E_\mathrm{H}[n]) \\
     &= E_\mathrm{HK}[n]-T_s[n]-E_\mathrm{H}[n]
 \end{aligned}
 \label{Exc_KS_definition}
@@ -1317,6 +1317,7 @@ The resulting eigenvalues are widely used in materials science, for instance as 
 We will return to this point later.
 
 Afterwards, we look into the Kohn--Sham potential.
+It coincides with the effective potential in equation~\eqref{KS_effective_potential_definition}.
 It consists of the external potential, the Hartree potential, and the exchange-correlation potential:
 
 \begin{equation}
@@ -1617,16 +1618,16 @@ and $s(\vec{r}\,)$ measures the local inhomogeneity of the density.
 Accordingly, the exchange functional in a generalized gradient approximation combines the local-density exchange energy per electron with the exchange enhancement factor:
 
 \begin{equation}
-    E_x^\mathrm{GGA}[n]
-    = \int\dif{\vec{r}}\,n(\vec{r}\,)\,\varepsilon_x^\mathrm{LDA}(n(\vec{r}\,))\,F_x(s(\vec{r}\,))
+    E_\mathrm{x}^\mathrm{GGA}[n]
+    = \int\dif{\vec{r}}\,n(\vec{r}\,)\,\varepsilon_\mathrm{x}^\mathrm{LDA}(n(\vec{r}\,))\,F_\mathrm{x}(s(\vec{r}\,))
 \label{GGA_exchange_functional_enhancement_factor_form}
 \end{equation}
 
-here, $\varepsilon_x^\mathrm{LDA}(n)$ denotes the local-density exchange energy per electron,
-and $F_x(s)$ denotes the exchange enhancement factor.
-The factor $F_x(s)$ incorporates density-gradient effects into the exchange energy.
+here, $\varepsilon_\mathrm{x}^\mathrm{LDA}(n)$ denotes the local-density exchange energy per electron,
+and $F_\mathrm{x}(s)$ denotes the exchange enhancement factor.
+The factor $F_\mathrm{x}(s)$ incorporates density-gradient effects into the exchange energy.
 
-Subsequently, different generalized gradient approximations choose different exchange enhancement factors $F_x(s)$ and different correlation functionals.
+Subsequently, different generalized gradient approximations choose different exchange enhancement factors $F_\mathrm{x}(s)$ and different correlation functionals.
 Prominent examples include the Perdew--Wang functional and the Perdew--Burke--Ernzerhof functional.
 These generalized gradient approximations satisfy several known exact constraints on the exchange-correlation energy~\cite{perdew1992atoms, perdew1996generalized}.
 Among them, the Perdew--Burke--Ernzerhof functional remains one of the most widely used generalized gradient approximations in first-principles calculations of condensed-matter systems.
@@ -1664,17 +1665,17 @@ With this range separation, the Heyd--Scuseria--Ernzerhof scheme constructs the 
 
 \begin{equation}
     E_\mathrm{xc}^\mathrm{HSE}[n]
-    = aE_x^{\mathrm{HF},\mathrm{SR}}[n;\omega]
-    + (1-a)E_x^{\mathrm{PBE},\mathrm{SR}}[n;\omega]
-    + E_x^{\mathrm{PBE},\mathrm{LR}}[n;\omega]
-    + E_c^\mathrm{PBE}[n]
+    = aE_\mathrm{x}^{\mathrm{HF},\mathrm{SR}}[n;\omega]
+    + (1-a)E_\mathrm{x}^{\mathrm{PBE},\mathrm{SR}}[n;\omega]
+    + E_\mathrm{x}^{\mathrm{PBE},\mathrm{LR}}[n;\omega]
+    + E_\mathrm{c}^\mathrm{PBE}[n]
 \label{HSE_exchange_correlation_functional}
 \end{equation}
 
-here, $E_x^{\mathrm{HF},\mathrm{SR}}[n;\omega]$ refers to the short-range Hartree--Fock exchange energy,
+here, $E_\mathrm{x}^{\mathrm{HF},\mathrm{SR}}[n;\omega]$ refers to the short-range Hartree--Fock exchange energy,
 
-$E_x^{\mathrm{PBE},\mathrm{SR}}[n;\omega]$ and $E_x^{\mathrm{PBE},\mathrm{LR}}[n;\omega]$ refer to the short-range and long-range parts of the PBE exchange functional,
-and $E_c^\mathrm{PBE}[n]$ refers to the PBE correlation functional.
+$E_\mathrm{x}^{\mathrm{PBE},\mathrm{SR}}[n;\omega]$ and $E_\mathrm{x}^{\mathrm{PBE},\mathrm{LR}}[n;\omega]$ refer to the short-range and long-range parts of the PBE exchange functional,
+and $E_\mathrm{c}^\mathrm{PBE}[n]$ refers to the PBE correlation functional.
 Moreover, $a$ refers to the mixing parameter that determines the fraction of exact exchange.
 
 The Hartree--Fock exchange term depends explicitly on the occupied orbitals.
