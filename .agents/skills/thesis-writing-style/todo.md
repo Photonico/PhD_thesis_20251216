@@ -958,9 +958,7 @@ Outlook 一节中的句子:
 - [ ] [thesis.tex:412](../../../thesis.tex#L412) 参考文献里有 5 条超出版心, 最多 27 pt.
   - LaTeX: 导言区加一行 `\appto{\bibsetup}{\emergencystretch=1em}`.
 
-- [ ] [project_3_SI.tex:602](../../../src/project_3_SI.tex#L602) 图 7.45 图注第一行 Underfull (badness 1910). 三条图注统一成 for pristine 之后, 这一条又报警. 三条写法完全一致时, 总有一条报警.
-  - 方案 A: 保持三条一致, 在这张图的 `\centering` 之后加一行 `\hbadness=2000`. 排版结果不变, 只是不再报警.
-  - 方案 B: 这一条写 for the pristine, 另外两条不带 the.
+- [x] [project_3_SI.tex:602](../../../src/project_3_SI.tex#L602) 图 7.45 图注第一行 Underfull (badness 1910). 三条图注统一成 for pristine 之后, 这一条又报警. 三条写法完全一致时, 总有一条报警.
 
 - [ ] [fundamentals_a.tex:1564](../../../src/fundamentals_a.tex#L1564) "Thereafter, we introduce several widely used approximations" 这一行超出版心 4 pt.
   - 改写: Thereafter 改为 Next.
@@ -1019,7 +1017,7 @@ Outlook 一节中的句子:
   - [project_3_main.tex:283](../../../src/project_3_main.tex#L283) 第 7 章的 $N$ 等于第 4 章的 $2N_\mathrm{p}$. 第 283 行句末可加: so that $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
   - 已发表的两章只作记录: 第 6 章的临界温度写 `T_c`, 第 2, 8 章写 `T_\mathrm{c}`. 第 5 章的 `E_F`, `E_C`, `E_V`, `E_g` 是斜体下标.
 
-- [ ] 连字符和破折号.
+- [x] 连字符和破折号.
   - [fundamentals_a.tex:520](../../../src/fundamentals_a.tex#L520) "system specific" 改为 system-specific.
   - [fundamentals_a.tex:610](../../../src/fundamentals_a.tex#L610) "density based" 改为 density-based.
   - [fundamentals_a.tex:678](../../../src/fundamentals_a.tex#L678) "many body physics" 改为 many-body physics.
@@ -1030,9 +1028,10 @@ Outlook 一节中的句子:
   - [appendix_quantum.tex:1422](../../../src/appendix_quantum.tex#L1422) "Thomas--Fermi Dirac" 改为 `Thomas--Fermi--Dirac`, 第 1433 行同. 第 1444 行改为 `Thomas--Fermi--Dirac--von Weizsäcker`.
   - [fundamentals_a.tex:1345](../../../src/fundamentals_a.tex#L1345) "Kohn–Sham" 里是 Unicode 短横, 改为 `Kohn--Sham`.
 
-- [ ] 单位没有用 siunitx.
+- [x] 单位没有用 siunitx.
   - [conclusion.tex:22](../../../src/conclusion.tex#L22) 第 8 章有 22 处数值和单位是直接写的, 例如 "1.822 eV". 改为 `\qty{1.822}{\electronvolt}` 的写法.
   - [project_1_main.tex:176](../../../src/project_1_main.tex#L176) 第 176, 177 行的 `$\mathring{\mathrm{A}}$` 改为 `\qty{2.467}{\angstrom}` 的写法.
+  - 已处理 (2026-11-12): 第 8 章当前版本共 26 个数值统一为 `\qty`, 吸附自由能的显式正号保留, 三处纯单位表述改为 `\unit`. 第 5 章这两行的四个晶格常数统一为 `\qty{...}{\angstrom}`.
 
 - [x] 零散的小处.
   - [fundamentals_a.tex:543](../../../src/fundamentals_a.tex#L543) 图注句末缺句号.
