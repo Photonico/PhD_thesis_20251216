@@ -1,7 +1,7 @@
 # todo list
 
 完善论文用的待办清单, 配合同目录下的 `SKILL.md` 使用. 规则和改法见 `SKILL.md`, 这里只列具体位置.
-行号以 2026-11-12 的版本为准, 已完成的条目保留原来的行号. 行号变动后按引文搜索. 完成一条, 就把 `[ ]` 改为 `[x]`.
+行号以 2026-11-12 的版本为准. 行号变动后按引文搜索. 完成一条就删去该条, 删去的条目见 git 历史.
 
 1. 内容一致性 (P0)
 2. 非母语用法
@@ -12,50 +12,6 @@
 ## 1. 内容一致性 (P0)
 
 这些问题会让读者质疑结论, 应最先处理. 有几组防御句的根源就在这里, 问题解决后可以一并删除.
-
-- [x] [abstract.tex:19](../../../src/abstract.tex#L19) 摘要说 Graphene-\ce{B4C3} "possibly chiral optical behaviour", 第 5 章却说非对角元不能证明旋光性. 只删 chiral 不够, 整句以未核实的非对角元为依据. 第 19 行换成第 5 章已有数据支撑的 Graphene-\ce{B4C3} 结果, 各向异性另起一句, 用面内与面外分量之差表述, 与 [project_1_main.tex:27](../../../src/project_1_main.tex#L27) 一致.
-  - 改写: 第 17 行之后加一句: The response differs strongly between in-plane and out-of-plane polarizations.
-  - 改写: 第 19 行换成: Graphene-\ce{B4C3} shows a similar feature between \qty{5}{\electronvolt} and \qty{6}{\electronvolt}, where its in-plane real dielectric function turns negative. 依据 [project_1_main.tex:599](../../../src/project_1_main.tex#L599) 和第 25 行.
-  - 或: 第 19 行换成: Graphene-\ce{BC3} and Graphene-\ce{B4C3} show sharp in-plane energy-loss peaks below \qty{1}{\electronvolt}. 依据 [project_1_main.tex:661](../../../src/project_1_main.tex#L661) 和第 742 行.
-
-- [x] [abstract.tex:41](../../../src/abstract.tex#L41) 摘要说 "identify non-trivial $\mathbb{Z}_2$ topology", 没有交代第 7 章的条件: 隔离能隙约 1 meV, 位于费米能以上, 体系是金属. 补上限定, 与第 7 章一致.
-  - 改写: Using parity analysis of spin-orbit-coupled electronic states, the calculations further identify non-trivial $\mathbb{Z}_2$ band subspaces in pristine $\alpha$-beryllene and trilayer cubic beryllene, isolated by spin-orbit gaps of about \qty{1}{\milli\electronvolt} above the Fermi level, while pristine $\beta$-beryllene remains trivial.
-  - 或: Parity analysis of the spin-orbit-coupled states further reveals band inversions with non-trivial $\mathbb{Z}_2$ indices in metallic $\alpha$-beryllene and trilayer cubic beryllene, while pristine $\beta$-beryllene remains trivial.
-
-- [x] [project_3_main.tex:34](../../../src/project_3_main.tex#L34) 和 [project_3_main.tex:1273](../../../src/project_3_main.tex#L1273): "combines metallicity, tunable optical properties, and non-trivial topology" 偏强, 与条件性的结论不符.
-  - 改写: 第 34 至 36 行: These results identify beryllene as an elemental two-dimensional platform in which structure and hydrogenation tune the electronic and optical properties.
-  - 或: 第 34 至 36 行: These results identify beryllene as an elemental two-dimensional platform that combines metallicity, tunable optical properties, and band inversions in selected subspaces.
-  - 改写: 第 1272 至 1275 行: Together with the previously reported superconducting behaviour of beryllene~\cite{li2023coexistence}, these results identify two-dimensional beryllium as an elemental platform in which structural design and hydrogen functionalization tune the electronic structure, the optical response, and the band inversions of selected subspaces.
-
-- [x] 第 5 章的非对角介电元: 核实 (对称化, 与 VASP 输出的 6 个分量对照), 或删去相关讨论和面板.
-  - 已核实 (2026-11-09): 读 `Graphene-BC_20230622/5_Dielectric_function/{E,G}_*/vaspout.h5` 的 density-density 张量. 两体系 VASP 均判为 C$_1$, 非自旋极化, k 点只按时间反演减半. 原始非对角元近似反对称, 取对称部分 (第 3 章公式 independent_particle_imaginary_dielectric_tensor 的 Re[...]) 后: BC3 非对角 ≤ 0.63%, $|\varepsilon_{xx}-\varepsilon_{yy}|$ ≤ 0.74%; B4C3 分别 ≤ 0.27% 和 ≤ 0.21% (相对对角元最大值, HSE K17 与 PBE K65). Graphene-Borophene (C$_{3v}$) 反对称部分为零. 按最小修改处理: 保留图件, 删去防御句, 补一句核实结果; 另改了第 133 至 134 行的悬空从句. 解决后删除对应的防御句: project_1_main.tex 第 557, 558, 618, 620, 621, 744 行, project_1_SI.tex 第 274, 280, 282, 304, 317 行, conclusion.tex 第 201 行.
-  - 方案 A: 核实. 用 \texttt{vasprun.xml} 中对称化的 6 个分量重新导出张量, 检查 $\varepsilon_{xx}=\varepsilon_{yy}$ 和 $\varepsilon_{xy}=\varepsilon_{yx}$. 若非对角元在数值精度内为零, 按下面三条改写, 并删去 S1.18, S1.19 中的非对角面板.
-  - 改写: Graphene-\ce{BC3} 段 (第 551 至 567 行) 换成: For this system, the symmetrized dielectric tensor has vanishing off-diagonal components within numerical accuracy. The following discussion therefore focuses on the in-plane and out-of-plane diagonal components.
-  - 改写: Graphene-\ce{B4C3} 段 (第 609 至 622 行) 换成: For the reciprocal response, the threefold rotational symmetry of this $\mathrm{P}3$ structure gives equal in-plane diagonal components and vanishing off-diagonal components~\cite{nye1985physical}. The symmetrized spectra satisfy these relations within numerical accuracy. The in-plane and out-of-plane components differ strongly, so Graphene-\ce{B4C3} dissipates energy differently for the two polarizations.
-  - 改写: 本章结论第 743 至 744 行换成: The dielectric tensor of Graphene-\ce{B4C3} follows the threefold rotational symmetry of the structure. 第 8 章第 201 行删去.
-  - 方案 B: 不重算. 正文只保留对角元的讨论, 删去两段中关于非对角元的句子和 S1.18, S1.19 的非对角面板, 方法部分加一句: We analyse the diagonal components of the dielectric tensor, which carry the response along the principal directions.
-
-- [x] [project_2_main.tex:706](../../../src/project_2_main.tex#L706) Migdal--Eliashberg 的 $T_c$: 存档数据没有越过 $T_c$. 补算跨过能隙闭合的温度点, 或改为区间表述. 解决后处理第 710, 711 行和 conclusion.tex 第 66 行.
-  - 方案 A: 补算. 加算跨过能隙闭合的温度点, 第 706 至 711 行换成: The superconducting gap closes at $T_c=\qty{[ ]}{K}$ for bulk o-\ce{B14} and at $T_c=\qty{[ ]}{K}$ for the hydrogen-terminated bilayer.
-  - 方案 B: 不补算, 改为区间表述. 第 706 至 711 行换成: For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_c$ above \qty{30}{K}. For the hydrogen-terminated bilayer, the gap distribution reaches the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_c$ close to \qty{26}{K}.
-  - 建议: 第 8 章第 65 至 66 行同步改为: The anisotropic calculations place $T_c$ above \qty{30}{K} for the bulk and close to \qty{26}{K} for the hydrogen-terminated bilayer.
-  - 已处理 (2026-11-10): 采用方案 B. 存档数据 `o-B14_20241024/superconductivity` 中, 体相算到 30 K, 能隙仍在 0.99 至 2.28 meV. 双层在 25.5 K 还剩 0.03 至 0.09 meV, 26 K 全部落入最低格. 第 706 至 711 行换成方案 B 的两句 (把 reaches 改为 the whole gap distribution falls into), 第 8 章第 66 行改为 These distributions place $T_{\mathrm{c}}$ above 30 K for the bulk and close to 26 K for the hydrogen-terminated bilayer. 原文引用的 31.3 K 和 24.3 K 来自 `superconductivity_gap.ipynb` 对能隙分布的幂律拟合 ($R^2$ 为 0.43 和 0.28). 双层的 24.3 K 低于能隙仍然有限的温度, 正文不再引用.
-
-- [x] [project_2_main.tex:467](../../../src/project_2_main.tex#L467) 双层的结合能比体相低 0.19 eV/atom, 需要解释或核查 (自由原子参考, 自旋极化, D3, 截断能是否一致).
-  - 建议: 先核查: 单层, 双层与体相是否用同一截断能, 同一孤立 B 原子参考 (自旋极化, 同一盒子), 是否都含 D3, k 点是否都已收敛.
-  - 方案 A: 若设置不一致, 重算后替换数值: The cohesive energies of the monolayer and bilayer are \qty{[ ]}{\electronvolt} and \qty{[ ]}{\electronvolt}, respectively. 第 879 至 881 行同步更新.
-  - 方案 B: 若数值确认无误, 补一句解释: The bilayer is lower in cohesive energy than the bulk by \qty{0.19}{\electronvolt} per atom. We attribute this difference to [ ].
-  - 已处理 (2026-11-10): 设置不一致, 按方案 A 用存档数据重算, 不需要新计算. 体相 -6.16 和 α′ -6.00 是正确的结合能 (PBE 不含 D3, 自由能 TOTEN, 自旋极化孤立 B 原子 -0.310 eV). 原表双层 -6.35 是不含 D3 的每原子总能量 (-6.347 eV), 没有减去孤立原子能量. 单层 -6.12 在存档中找不到来源. 按同一方法: 双层 -6.04 (`5.1_dielectric_function/bilayer`), 单层 -5.81 (非磁性 -5.78, 加上同一结构 PBE+D3 下 AFM 与非磁性之差 -0.029 eV/atom, 两者的 D3 项相同而抵消). 改了第 467 行, 表 6.2, 第 879 至 880 行, 并在第 239 行后加一句: We evaluate all cohesive energies without the dispersion correction. 已发表文章若也写 -6.12 和 -6.35, 需要考虑勘误.
-
-- [x] [project_1_main.tex:134](../../../src/project_1_main.tex#L134) 定义了层间结合能 $E_\mathrm{b}$, 全章没有给出数值, 第 727 行的结论却说 "small binding energies".
-  - 方案 A: 补数值. 在表 5.2 加一列 $E_\mathrm{b}$, 正文加: The interlayer binding energies are \qty{[ ]}{\milli\electronvolt} per atom for Graphene-\ce{BC3}, \qty{[ ]}{\milli\electronvolt} per atom for Graphene-Borophene, and \qty{[ ]}{\milli\electronvolt} per atom for Graphene-\ce{B4C3}.
-  - 方案 B: 删去第 134 至 144 行的定义, 结论第 727 至 728 行换成: The interlayer distances of 3.4 to 3.5 \AA{} and the small energy differences between stacking positions indicate weak van der Waals coupling between graphene and the monolayers.
-  - 已处理 (2026-11-10): 采用方案 A. `Graphene-BC_20230622` 中异质结 (`1_Self_Consistent`) 与两个孤立单层 (`2_Structure_and_CDD`) 在同一超胞中用同一设置计算 (PBE+D3(BJ), 450 eV, 17×17×1), 原子坐标逐一相同, 层间距与表 5.2 一致. $E_\mathrm{b}$ 为 -25.6, -24.2, -21.2 meV/atom, 即 -18.6, -18.0, -15.6 meV/Å². 表 5.2 加一列, 表注加一项, 第 347 行后加一句. 结论第 727 行保留.
-
-- [x] 光学有效厚度的约定各章不同: 第 5 章不归一化 ([project_1_main.tex:509](../../../src/project_1_main.tex#L509)), 第 6 章用 B 1.91 Å 和 H 1.2 Å ([project_2_SI.tex:64](../../../src/project_2_SI.tex#L64)), 第 7 章用 Be 1.98 Å 和 H 0.70 Å ([project_3_main.tex:357](../../../src/project_3_main.tex#L357)). 在第 3 章用一张表说明各章的约定.
-  - 改写: 在第 3 章公式 \eqref{optical_volume_normalization_2d} 之后加: The three research chapters treat the vacuum region of the supercell in different ways. Table~\ref{tab:optical_thickness_conventions} summarizes the normalization, the thickness convention, and the absorption unit of each chapter.
-  - LaTeX: 表格内容: 第 5 章, no normalization, supercell average, \si{\per\nano\metre}. 第 6 章, $d_\mathrm{SC}/d_\mathrm{2D}$, outermost atoms plus van der Waals radii of B (\qty{1.91}{\angstrom}) and H (\qty{1.2}{\angstrom}), $d_\mathrm{2D}=\qty{5.807}{\angstrom}$, \qty{9.412}{\angstrom}, \qty{11.209}{\angstrom}, \si{\per\angstrom}. 第 7 章, $d_\mathrm{SC}/d_\mathrm{2D}$, outermost atoms plus radii of Be (\qty{1.98}{\angstrom}) and H (\qty{0.70}{\angstrom}), $d_\mathrm{2D}$ from \qty{3.145}{\angstrom} to \qty{6.966}{\angstrom}, \si{\per\nano\metre}. 沿用论文表格的 \texttt{rowcolors} 和 \texttt{adjustbox} 格式, label 用 \texttt{tab:optical\_thickness\_conventions}.
-  - 已处理 (2026-11-10): 在第 3 章第 312 行后加一句和表 3.1, 只列各章的 $d_\mathrm{2D}$ 和吸收系数单位. 表注说明第 5 章不归一化, 超胞高度 15 Å (存档中 25 个光学计算都是 15 Å).
 
 重读新增 (2026-11-12). 前两条是第 6 章的数值, 已发表的文章里是同样的数, 最先处理:
 
@@ -78,7 +34,7 @@
   - 改写: 第 187 行删去句末的 in the boron-based studies.
   - 改写: [fundamentals_a.tex:1706](../../../src/fundamentals_a.tex#L1706) "we use PBE." 改为: For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE, and test the band gap and the band order with HSE06.
 
-- [ ] [project_3_main.tex:36](../../../src/project_3_main.tex#L36) 第 7 章摘要的最后一句仍是 "and non-trivial topology". 上面已勾的那条只改了本章结论 (第 1272 至 1274 行).
+- [ ] [project_3_main.tex:36](../../../src/project_3_main.tex#L36) 第 7 章摘要的最后一句仍是 "and non-trivial topology". 本章结论 (第 1272 至 1274 行) 已改, 这里处理摘要.
   - 改写: 第 36 行改为: and band inversions in selected subspaces.
 
 - [ ] [abstract.tex:19](../../../src/abstract.tex#L19) "Graphene-Borophene gives the strongest absorption" 没有限定范围. 第 5 章第 645 至 646 行说的是 \qty{1}{\electronvolt} 附近, 第 8 章第 38 行写明不代表整个谱.
@@ -201,13 +157,6 @@
   - [fundamentals_a.tex:1297](../../../src/fundamentals_a.tex#L1297) "we utilize" 改为 we use.
   - [fundamentals_a.tex:1346](../../../src/fundamentals_a.tex#L1346) "They also elucidate why its exchange-correlation component can remain" 改为 They also show that its exchange-correlation component can remain.
 
-已完成:
-
-- [x] [fundamentals_a.tex:59](../../../src/fundamentals_a.tex#L59): "the density of ground state $n(\vec{r}\,)$" 已改为 "the ground-state density $n(\vec{r}\,)$".
-- [x] [appendix_quantum.tex:1297](../../../src/appendix_quantum.tex#L1297): "This is convenient" 已改为 "It is convenient".
-- [x] [appendix_electrodynamics.tex:351](../../../src/appendix_electrodynamics.tex#L351): "Afterwards, ... then ..." 已删去 then.
-- [x] [fundamentals_a.tex:301](../../../src/fundamentals_a.tex#L301), [fundamentals_a.tex:1022](../../../src/fundamentals_a.tex#L1022), [appendix_quantum.tex:1406](../../../src/appendix_quantum.tex#L1406): 三处 "Since A." 残句已改.
-
 ## 3. 防御性句子
 
 GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
@@ -221,7 +170,7 @@ GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
 
 每条下面给出参考写法: "改写" 是按 `SKILL.md` 风格拟的句子, "或" 是另一种写法, "建议" 表示删去, 合并或移入图注. 参考句只改句式, 保留原句的限定含义, 不增加新的结论. 原句带 `\cite` 的, 参考句保留同一引用.
 
-正文里的数学或物理否定不属于这一类, 不需要改, 例如 "its $\mathbb{Z}_2$ index cannot change", "the polarization response cannot occur before the external electric field is applied". 第 5 章非对角元和第 6 章 $T_c$ 相关的句子已归入第 1 节.
+正文里的数学或物理否定不属于这一类, 不需要改, 例如 "its $\mathbb{Z}_2$ index cannot change", "the polarization response cannot occur before the external electric field is applied". 第 5 章非对角元和第 6 章 $T_c$ 相关的句子已在第 1 节处理.
 
 ### 摘要
 
@@ -844,123 +793,20 @@ Outlook 一节中的句子:
 
 作者决定 (2026-11-11): 本节列出的重复属于行文习惯, 保留原样, 各条标为不改. 逐条核对过, 重复出现的公式和结论彼此一致. 需要处理的只有下面第一条, 它是文字与公式不符, 不属于行文重复.
 
-- [x] [appendix_quantum.tex:701](../../../src/appendix_quantum.tex#L701) 巨正则系综: 文字说 "recast ... in the compact operator form", 下面显示的却是求和式, 与第 556 行的公式 \eqref{grand_canonical} 相同. 迹形式在第 683 至 699 行已经给出.
-  - 方案 A: 只补公式, 保留全部句子. 在第 705 行的求和式后面加一行: `= \frac{1}{\mathcal{Z}}\,\operatorname{Tr}\,\left[\mathrm{e}^{-\beta\left(\hat{H}-\mu \hat{N}\right)}\,\hat{\Omega}\right]`
-  - 方案 B: 删去第 701 至 707 行. 第 709 行的 `\eqref{grand_canonical_trace}` 改为 `\eqref{grand_canonical}`, 第 715 行的 `\eqref{grand_canonical_trace}` 改为 `\eqref{grand_canonical_expectation_trace}`.
-  - 已处理 (2026-11-11): 采用方案 A. 在第 705 行的求和式后面补了一行迹形式, 文字没有改动. 公式与上面的 \eqref{grand_partition_function_trace} 写法一致.
-
-- [x] 第 2 章: $\Omega=\Omega[n]$ 显示了 4 次 (label 依次为 `ground_state_observable_expectation_value`, `ground_state_observable_density_functional`, `functional_from_expectation`, `functional_from_density`). HK 定理的结论复述 4 到 5 次. KS 方程在 2.2.2, 2.2.3, 2.2.4 三节各推导一遍.
+- [ ] 第 2 章: $\Omega=\Omega[n]$ 显示了 4 次 (label 依次为 `ground_state_observable_expectation_value`, `ground_state_observable_density_functional`, `functional_from_expectation`, `functional_from_density`). HK 定理的结论复述 4 到 5 次. KS 方程在 2.2.2, 2.2.3, 2.2.4 三节各推导一遍.
   - 方案 A: $\Omega=\Omega[n]$ 只保留第 435 行的 \texttt{functional\_from\_density} (被引用 1 次), 删去 \texttt{ground\_state\_observable\_expectation\_value}, \texttt{ground\_state\_observable\_density\_functional}, \texttt{functional\_from\_expectation} 三个公式 (都没有被引用).
   - 改写: 第 62 行改为: Consequently, every ground-state observable becomes a unique functional of the density, which the Hohenberg--Kohn theorem establishes in equation~\eqref{functional_from_density}. 第 72 行那句连同公式删去. 第 156 行改为: In this sense, all ground-state observables become functionals of the density.
   - 建议: HK 定理的结论保留两处: 第 69 至 71 行的预告和第 428 至 431 行的总结. 第 1010 至 1012 行和附录 A 第 446, 994 至 996 行改为引用 equation~\eqref{hk_correspondence_v_n_psi}.
   - 建议: KS 方程: 2.2.2 保留 $T_s$, $T_c$, $E_\mathrm{xc}$ 和各势的定义, 删去第 955 至 959 行对拉格朗日乘子的预告, 由 2.2.3 完整推导. 2.2.4 缩成一段, 或移入附录 A.
-  - 不改 (2026-11-11): 作者保留原写法. 核对: 四处 $\Omega=\Omega[n]$, 各处 HK 结论, 以及 KS 方程的三种引入方式 (直接陈述, 轨道变分, 密度变分) 彼此一致.
-
-- [x] 附录 A: $\hat{U}(\tau)$ 的指数形式显示 4 次 (从 [appendix_quantum.tex:73](../../../src/appendix_quantum.tex#L73) 起). 巨正则系综写了两遍, [appendix_quantum.tex:701](../../../src/appendix_quantum.tex#L701) 的文字说 "compact operator form", 显示的却是求和式. $T_\mathrm{TF}$, $T_\mathrm{vW}$, $E_\mathrm{H}$ 和 Thomas--Fermi 方程各写了两遍. 巨正则系综, 跃迁密度, Bohr 频率, 时序算符在后文都没有用到.
-  - 改写: $\hat{U}(\tau)$: 保留 \texttt{time\_evolution\_operator}, 删去 \texttt{time\_evolution\_operator\_tau}, \texttt{time\_evolution\_operator\_reduced\_form} 及 $t_0=0$ 的几个变体 (都没有被引用), 原位置写一句: In the time-independent case, $\hat{U}(t,t_0)$ depends only on the time difference $\tau=t-t_0$, and we write it as $\hat{U}(\tau)$.
-  - 方案 A: 巨正则系综: 第 2 章只用零温和固定粒子数, 删去 A.2.1 和第 683 至 709 行的迹形式. 这些 label 只在附录 A 内部引用, 第 715 行一并删去.
-  - 方案 B: 巨正则系综缩成两句: At finite temperature and variable particle number, the grand canonical ensemble replaces the pure-state expectation value by a thermal trace~\cite{gould2026ensemblization}. We restrict ourselves to zero temperature and fixed particle number.
-  - 建议: $T_\mathrm{TF}$, $E_\mathrm{H}$: 保留 A.3 的 \texttt{tf\_functional} 和 \texttt{hartree\_functional} (第 2 章引用了这两个), A.4 中的 \texttt{functional\_TTF}, \texttt{hartree\_term\_functional}, \texttt{Hartree\_potential\_definition} 改为引用 A.3. $T_\mathrm{vW}$ 只留一种写法. Thomas--Fermi 方程保留变分推导和微分形式, 删去第 1080 至 1125 行相空间推导中的重复公式.
-  - 方案 A: 跃迁密度与 Bohr 频率 (第 869 至 935 行) 删去, 正文没有用到.
-  - 方案 B: 保留, 末尾加一句连到第 3 章: These transition densities determine the matrix elements of one-body operators between the ground state and the excited states, which enter the absorptive response in equation~\eqref{independent_particle_imaginary_dielectric_tensor}.
-  - 不改 (2026-11-11): 作者保留原写法. 核对: 两处 $T_\mathrm{TF}$ 的常数 $C$ 与 $C_1$ 数值相同, 两种 $T_\mathrm{vW}$ 写法等价, 两条 Thomas--Fermi 推导给出同一个密度公式. 巨正则系综一段中文字与公式不符的问题另列在本节第一条.
-
-- [ ] 附录 B: $\varepsilon_{\alpha\beta}=\delta_{\alpha\beta}+\chi_{\alpha\beta}$ 显示两次 ([appendix_electrodynamics.tex:202](../../../src/appendix_electrodynamics.tex#L202) 与 [appendix_electrodynamics.tex:370](../../../src/appendix_electrodynamics.tex#L370)), $P_\alpha=\varepsilon_0\sum_\beta\chi_{\alpha\beta}E_\beta$ 显示两次 (第 177 行与第 357 行). 见 references/examples.md 的 B4.
-  - 改写: 第 364 至 371 行换成: The dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ then follows from the susceptibility through equation~\eqref{dielectric_tensor_definition}. 见 references/examples.md 的 B4.
-  - 改写: 第 351 至 362 行换成: Afterwards, the linear response reduces to the local relation in equation~\eqref{frequency_domain_polarization_susceptibility_relation}, where $\chi_{\alpha\beta}(\omega)$ characterizes both the amplitude and the phase delay of the response. 被删的 \texttt{frequency\_domain\_polarization\_response} 没有被引用.
-
-- [x] 第 3 章与附录 B 有四段几乎相同: 开头一句 ([fundamentals_b.tex:23](../../../src/fundamentals_b.tex#L23) 与 [appendix_electrodynamics.tex:15](../../../src/appendix_electrodynamics.tex#L15)), 单位约定 ([fundamentals_b.tex:28](../../../src/fundamentals_b.tex#L28) 与 [appendix_electrodynamics.tex:27](../../../src/appendix_electrodynamics.tex#L27)), $\mu_\mathrm{r}\approx1$ ([fundamentals_b.tex:51](../../../src/fundamentals_b.tex#L51) 与 [appendix_electrodynamics.tex:98](../../../src/appendix_electrodynamics.tex#L98)), regular response 前提 ([fundamentals_b.tex:373](../../../src/fundamentals_b.tex#L373) 与 [appendix_electrodynamics.tex:425](../../../src/appendix_electrodynamics.tex#L425)).
-  - 建议: 单位约定: 附录 B 第 8 行已写 We use SI units, as in that chapter. 删去附录 B 第 27 至 30 行.
-  - 建议: regular response: 保留第 3 章第 373 至 376 行. 附录 B 第 425 至 428 行换成: We consider the regular electronic response defined in section~\ref{sec:causality_and_kramers_kronig_relations}.
-  - 建议: $\mu_\mathrm{r}\approx1$: 保留附录 B 第 98 行. 第 3 章第 51 行换成: Throughout, we take $\mu_\mathrm{r}(\omega)\approx1$, as in appendix~\ref{cha:appendix_electrodynamics}.
-  - 改写: 开头一句: 保留第 3 章第 23 至 25 行. 附录 B 第 15 至 19 行换成: Chapter~\ref{cha:fundamentals_b} uses the dielectric function as its central response quantity. This appendix builds that quantity from the macroscopic electrodynamics of matter.
-  - 不改 (2026-11-11): 作者保留原写法. 核对: 第 3 章 285 句中有 6 句与附录 B 逐字相同, 都是单位约定和适用前提.
 
 - [?] 第 3 章与第 7 章用同一组铍烯光谱图, 描述也几乎逐字相同, 例如 [fundamentals_b.tex:677](../../../src/fundamentals_b.tex#L677) 与 [project_3_main.tex:1039](../../../src/project_3_main.tex#L1039).
   - 方案 A: 第 3 章保留图 3.1 作代表, 图 3.2 至 3.5 保留图片, 每段多句的描述 (第 556 至 567, 676 至 679, 693 至 698, 785 至 790, 850 至 858 行) 各换成一句, 例如: Section~\ref{3_optical_alpha_beta} discusses these spectra of $\alpha$- and $\beta$-beryllene.
   - 方案 B: 第 3 章只保留图 3.1, 删去图 3.2 至 3.5 及其描述, 各小节改为引用第 7 章对应的图.
   - 不改 (2026-11-11): 作者保留原写法. 核对: 第 3 章 285 句中只有 1 句与第 7 章逐字相同, 另有 3 句相近. 两章的图文件也不相同.
 
-- [x] 第 5 章与第 6 章有相同的教科书句子: 折射率 ([project_1_main.tex:680](../../../src/project_1_main.tex#L680) 与 [project_2_main.tex:830](../../../src/project_2_main.tex#L830)), 介电张量的含义 ([project_1_main.tex:561](../../../src/project_1_main.tex#L561) 与 [project_2_main.tex:765](../../../src/project_2_main.tex#L765)), 带间跃迁与等离激元的耦合 ([project_1_main.tex:666](../../../src/project_1_main.tex#L666) 与 [project_2_main.tex:353](../../../src/project_2_main.tex#L353)).
-  - 建议: 三处都以第 3 章为准, 两章各删一份: 第 5 章第 679 至 686 行和第 6 章第 830 至 835 行的折射率说明, 第 5 章第 561 至 566 行和第 6 章第 765 至 767 行的张量说明. 带间跃迁与等离激元耦合的句子保留第 5 章第 666 至 669 行, 删去第 6 章第 353 至 355 行.
-  - 改写: 折射率说明删去后可用一句代替: Near the plasmon-related energies, the refractive index drops below one, as described in section~\ref{sec:from_dielectric_function_to_optical_properties}.
-  - 不改 (2026-11-11): 两章都是已发表文章的原文. 核对: 没有逐字相同的句子, 相近的有 5 句.
-
-- [x] [fundamentals_c.tex:209](../../../src/fundamentals_c.tex#L209) 第 209 至 221 行在正文中描述图 4.1 的颜色, 箭头和阴影, 移进图注.
-  - 改写: 正文只留第 209 行: Figure~\ref{fig:band_subspace_and_insulating_gap} compares four schematic one-dimensional cuts through a band structure.
-  - 改写: 图注换成: Schematic distinction between an isolated band subspace and an insulating gap, shown along one-dimensional cuts with model dispersions in arbitrary energy units. (a) Global gap, (b) indirect energy overlap, (c) contact between selected and excluded bands, and (d) degeneracy within the selected subspace. Solid blue and teal curves represent the boundary bands $E_{2N_\mathrm{p},\vec{k}}$ and $E_{2N_\mathrm{p}+1,\vec{k}}$, and the dashed blue curve in (d) represents $E_{2N_\mathrm{p}-2,\vec{k}}$. Each curve represents one member of a degenerate pair. The grey dashed line marks the illustrative Fermi level $E_\mathrm{F}=0$. Orange arrows compare energies at the same wave vector, purple arrows and dotted extrema mark the indirect separation, and purple shading marks the overlap in (b). Orange circles mark the boundary contact in (c), and orange circles with a central dot mark the internal degeneracies in (d).
-  - 不改 (2026-11-11): 作者保留原写法. 图例说明只在正文出现一次, 不构成重复.
-
-- [x] [conclusion.tex:321](../../../src/conclusion.tex#L321) 第 321 至 327 行的 anyon 段落与本文结果关系很远, 建议删去.
-  - 方案 A: 整段删去, Outlook 在 topological response 一小节结束.
-  - 方案 B: 缩成一句: Looking further ahead, the band topology and phonon-mediated pairing of light-element sheets connect to the broader search for phases with anyonic excitations~\cite{simon2023topological}.
-  - 不改 (2026-11-11): 作者保留该段.
-
 ## 5. 排版与记号 (P2)
 
-- [x] [fundamentals_a.tex:1843](../../../src/fundamentals_a.tex#L1843) 指数中多了逗号: `\vec{G}` 之后换行写成了 `,)`, PDF 显示为 (k+G,)·r.
-  - LaTeX: 第 1843 至 1844 行合成一行: `\mathrm{e}^{\mathrm{i}(\vec{k}+\vec{G}\,)\cdot\vec{r}}`
-
-- [x] [fundamentals_a.tex:507](../../../src/fundamentals_a.tex#L507) 第 507 至 521 行把 Slater 行列式的动能代入了相互作用泛函 $E[n]$, 与第 886 行的 $T[n]=T_s[n]+T_c[n]$ 矛盾.
-  - 方案 A: 删去第 507 至 521 行 (两个公式都只在这一段内部使用). 前面的 \texttt{energy\_density\_functional\_decomposition} 之后直接接第 523 行 To proceed, we separate ..., $T_s$ 留到第 841 至 856 行再引入.
-  - 方案 B: 保留, 明确是独立粒子: For a single Slater determinant, the expectation value of the kinetic energy operator becomes a sum over orbitals: 公式中的 $\nabla_i^2$ 改为 $\nabla^2$, 并删去把它代入 $E[n]$ 的第 516 至 521 行.
-  - 已处理 (2026-11-09): 采用方案 A. 第 848 至 856 行已有正确的 $T_s$ 轨道求和, 两个 label 无引用. 第 2 节第 516 行的 "we achieve" 随之删去, 只剩第 1056 行.
-
-- [x] [fundamentals_a.tex:254](../../../src/fundamentals_a.tex#L254) "Hence $(E_1-E_2)/N$ is a constant" 应写成 $g(\vec{r}\,)=(E_1-E_2)/N$.
-  - 改写: Here, the constant equals $(E_1-E_2)/N$. This relation contradicts the assumption in equation~\eqref{V_ext}.
-  - 或: Hence $g(\vec{r}\,)=(E_1-E_2)/N$, which contradicts the assumption in equation~\eqref{V_ext}.
-
-- [x] [fundamentals_a.tex:972](../../../src/fundamentals_a.tex#L972) 冒号后面没有公式.
-  - 改写: This variational procedure determines the stationary condition of the functional, while enforcing the orthonormality constraints.
-  - 建议: 若按第 4 节删去第 971 至 975 行的预告, 这一条一并解决.
-
-- [x] [fundamentals_a.tex:422](../../../src/fundamentals_a.tex#L422) 和 [appendix_quantum.tex:407](../../../src/appendix_quantum.tex#L407) `\eqref` 前缺空格.
-  - LaTeX: fundamentals_a.tex 第 422 行: `and~\eqref{density_potential_map}`
-  - 改写: appendix_quantum.tex 第 407 行: Applying the time-evolution operator in equation~\eqref{state_time_evolution},
-
-- [x] 斜体 i 和 e 改为正体: [fundamentals_b.tex:15](../../../src/fundamentals_b.tex#L15), [fundamentals_b.tex:467](../../../src/fundamentals_b.tex#L467), [appendix_quantum.tex:48](../../../src/appendix_quantum.tex#L48), [appendix_quantum.tex:364](../../../src/appendix_quantum.tex#L364).
-  - LaTeX: fundamentals_b.tex 第 15 行: `\varepsilon(\omega)=\varepsilon_1(\omega)+\mathrm{i}\,\varepsilon_2(\omega)`
-  - LaTeX: fundamentals_b.tex 第 467 行: `I_{\lambda}(z,\omega)= I_{\lambda,0}(\omega)\,\mathrm{e}^{-\alpha_{\lambda}(\omega) z}`
-  - LaTeX: appendix_quantum.tex 第 48 行: `\mathrm{i}\hbar\frac{\partial}{\partial t}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}`, 第 364 行: `\mathrm{i}\frac{\partial}{\partial t}\Psi(x_1,x_2,\cdots,x_N,t)`
-  - 已全局核查 (2026-11-09): 另把第 7 章虚频 6 行 (project_3_main.tex 3 处, project_3_SI.tex 7 处) 的 `3.90i` 改为 `3.90\mathrm{i}`. 微分 d 全文已是 `\dif` 或 `\mathrm{d}`. 其余斜体 e, i, d 为元电荷, 本征矢, 指标, 维数和变量, 保留. project_2_SI.tex 第 57, 59 行的 $dz$ 是 z 坐标差, 与图 S2.6 的标注一致, 保留.
-
-- [x] [appendix_quantum.tex:627](../../../src/appendix_quantum.tex#L627) 核排斥项不是 "negligible", 而是一个常数能量平移.
-  - 改写: In the present electronic many-body problem within the Born--Oppenheimer approximation, the nuclear coordinates are clamped, and the nucleus-nucleus repulsion becomes a constant energy shift.
-
-- [x] [appendix_quantum.tex:431](../../../src/appendix_quantum.tex#L431) "Having seen ..." 引用的是下一节才出现的内容.
-  - 改写: We now introduce the central quantity of density functional theory, the one-body density.
-  - 或: 把这一小节移到 Toward the many-body problem 一节之后, 那里第 740 至 745 行已经推出一体算符的期望值只需一体密度, 原句即可成立.
-
-- [x] [appendix_quantum.tex:1119](../../../src/appendix_quantum.tex#L1119) 逗号后的 We 应小写.
-  - 改写: 第 1118 至 1119 行合成一句: Substituting this expression into equation~\eqref{TF_poisson_equation}, we arrive at the Thomas--Fermi equation:
-
-- [x] [appendix_quantum.tex:1089](../../../src/appendix_quantum.tex#L1089) Thomas--Fermi 部分在声明原子单位后又用了 $h^3$ 和 $2m$ (第 1089, 1096 行).
-  - LaTeX: 第 1089 行改为原子单位: `n(\vec{r}\,) = \frac{p_F^3(\vec{r}\,)}{3\mathrm{\pi}^2}`, 第 1096 行: `\mu = \frac{p_F^2(\vec{r}\,)}{2}+v(\vec{r}\,)`. 两式合起来正好给出公式 \eqref{TF_density_muV}.
-  - 已处理 (2026-11-09): 第 1089 行只把 $h^3$ 换成 $(2\mathrm{\pi})^3$, 保留相空间计数的写法; 第 1096 行 $2m$ 改为 $2$.
-
-- [x] [project_1_main.tex:271](../../../src/project_1_main.tex#L271) 第 271, 280, 283 行的引号配对错乱.
-  - 改写: 去掉引号, 与表 S1.1 一致: Specifically, we consider Hollow, Bridge, and Top coordinations for the Graphene-\ce{BC3} bilayer system, and Hollow 1, Hollow 2, Bridge, and Top coordinations for the Graphene-Borophene and Graphene-\ce{B4C3} bilayer systems. 第 280, 283 行同样写 Hollow, Top.
-  - LaTeX: 若保留引号, 统一为 ``Hollow'', ``Bridge'', ``Top''.
-
-- [x] [project_1_main.tex:124](../../../src/project_1_main.tex#L124) 第 124, 365, 371, 475 至 479 行引用公式用了 `\ref`, 改为 `\eqref`.
-  - LaTeX: 第 124, 365, 371 行的 `equation~\ref{...}` 改为 `equation~\eqref{...}`.
-  - LaTeX: 第 475 至 479 行改为: `as given by equations~\eqref{absorption_coefficient_from_dielectric_function}, \eqref{refractive_index_from_dielectric_response}, \eqref{extinction_coefficient_from_dielectric_response}, \eqref{reflectivity_from_refractive_index_and_extinction_coefficient}, and~\eqref{energy_loss_spectrum_from_inverse_dielectric_function}.`
-
-重读新增 (2026-11-12). 前五条来自编译日志里的 Overfull 和 Underfull. 五条的改法一起试编译过, 日志里不再有 Overfull 和 Underfull:
-
-- [ ] [project_3_main.tex:1](../../../src/project_3_main.tex#L1) 第 7 章标题第二行超出版心 26 pt ("Pristine and Hydrogen-Functionalized Two-Dimensional").
-  - LaTeX: 长标题里手动断行: `{Emergent Topological and Optical Properties in\\ Pristine and Hydrogen-Functionalized\\ Two-Dimensional Beryllium Phases}`. 目录和页眉用方括号里的短标题, 不受影响.
-
-- [ ] [appendix_quantum.tex:816](../../../src/appendix_quantum.tex#L816) 公式 (A.75) 第二行超出版心 15 pt, 编号被挤到下一行.
-  - LaTeX: 在 `N(N-1)` 之后断行, 写成 `N(N-1) \\` 和 `&\quad\times\int\mathrm{d}x_3\cdots`.
-
-- [ ] [thesis.tex:412](../../../thesis.tex#L412) 参考文献里有 5 条超出版心, 最多 27 pt.
-  - LaTeX: 导言区加一行 `\appto{\bibsetup}{\emergencystretch=1em}`.
-
-- [x] [project_3_SI.tex:602](../../../src/project_3_SI.tex#L602) 图 7.45 图注第一行 Underfull (badness 1910). 三条图注统一成 for pristine 之后, 这一条又报警. 三条写法完全一致时, 总有一条报警.
-
-- [ ] [fundamentals_a.tex:1564](../../../src/fundamentals_a.tex#L1564) "Thereafter, we introduce several widely used approximations" 这一行超出版心 4 pt.
-  - 改写: Thereafter 改为 Next.
+重读新增 (2026-11-12). 前四条来自编译日志里的 Overfull. 这四条的改法一起试编译过, 日志里不再有 Overfull 和 Underfull:
 
 - [ ] [fundamentals_b.tex:288](../../../src/fundamentals_b.tex#L288) 第 3 章的 6 张图在正文里没有按编号引用, 写的是 "is shown in the following figure" 一类的句子. 浮动体不一定紧跟这句话, 图 3.1 之前现在还隔着表 3.1.
   - 改写: 第 288 行: ... is shown in figure~\ref{figure_representative_dielectric_response}.
@@ -985,66 +831,3 @@ Outlook 一节中的句子:
 
 - [ ] 行间公式前一句没有以冒号结尾, 共 8 处: [fundamentals_a.tex:459](../../../src/fundamentals_a.tex#L459), [fundamentals_a.tex:1073](../../../src/fundamentals_a.tex#L1073), [appendix_quantum.tex:466](../../../src/appendix_quantum.tex#L466), [appendix_quantum.tex:504](../../../src/appendix_quantum.tex#L504), [appendix_quantum.tex:593](../../../src/appendix_quantum.tex#L593), [appendix_quantum.tex:760](../../../src/appendix_quantum.tex#L760), [appendix_quantum.tex:1007](../../../src/appendix_quantum.tex#L1007), [appendix_quantum.tex:1207](../../../src/appendix_quantum.tex#L1207).
   - 建议: 前 7 处在句末加冒号, 其中第 466 和 760 行是把句末逗号改成冒号. 第 1207 行与第 1206 行对调, 让 we arrive at 那一句在公式前, 句末改冒号.
-
-- [x] 公式后解释符号用了 where, 其余 134 处用 here,.
-  - [appendix_quantum.tex:239](../../../src/appendix_quantum.tex#L239) "where each $x_i$ includes" 改为 here, each $x_i$ includes.
-  - [appendix_electrodynamics.tex:295](../../../src/appendix_electrodynamics.tex#L295) "where $\hat{e}_{\lambda}$ denotes the unit vector" 改为 here, $\hat{e}_{\lambda}$ denotes the unit vector.
-
-- [x] [appendix_quantum.tex:419](../../../src/appendix_quantum.tex#L419) "differentiating \eqref{heisenberg_operator_definition}" 缺 equation~.
-  - LaTeX: `differentiating equation~\eqref{heisenberg_operator_definition}`
-
-- [x] [fundamentals_a.tex:915](../../../src/fundamentals_a.tex#L915) 第 915, 916 行的 `E_\mathrm{int}` 和 `E_\mathrm{HK}` 后面缺 `[n]`, 第 917 行有.
-  - LaTeX: `(E_\mathrm{int}[n]-E_\mathrm{H}[n])` 和 `(E_\mathrm{HK}[n]-T[n]-E_\mathrm{H}[n])`
-
-- [x] [appendix_quantum.tex:611](../../../src/appendix_quantum.tex#L611) 这一句把期望值叫作算符: "for a given hamiltonian $\bra{\Psi}\hat{H}\ket{\Psi}$".
-  - LaTeX: 第 611 行的四处 `\bra{\Psi}...\ket{\Psi}` 去掉, 只留 `\hat{H}`, `\hat{T}`, `\hat{V}_\mathrm{ext}`, `\hat{V}_\mathrm{int}`.
-
-- [x] 记号不统一, 第一组: 描述性下标按 SKILL 4.6 改为正体, 或与别处的写法对齐.
-  - [appendix_electrodynamics.tex:299](../../../src/appendix_electrodynamics.tex#L299) 第 299 至 306 行的 `\chi_{\lambda}`, `\varepsilon_{\lambda}` 改为 `\chi_{\lambda\lambda}`, `\varepsilon_{\lambda\lambda}`. 本附录第 402 行和第 3 章都用双下标.
-  - [appendix_quantum.tex:1084](../../../src/appendix_quantum.tex#L1084) 第 1084, 1089, 1096, 1111 行的 `p_F` 改为 `p_\mathrm{F}`. 第 1176 行和第 2 章写的是 `k_\mathrm{F}`.
-  - [fundamentals_a.tex:1620](../../../src/fundamentals_a.tex#L1620) 第 1620 至 1677 行的 `E_x`, `E_c`, `F_x`, `\varepsilon_x` 的下标改为 `\mathrm{x}`, `\mathrm{c}`. 附录 A 第 1402 行写的是 `E_\mathrm{x}^\mathrm{D}`.
-  - [fundamentals_b.tex:246](../../../src/fundamentals_b.tex#L246) 第 246, 252 行的 `\omega_{p,\lambda}` 改为 `\omega_{\mathrm{p},\lambda}`.
-  - [appendix_quantum.tex:563](../../../src/appendix_quantum.tex#L563) `k_B` 改为 `\kB`.
-  - [appendix_quantum.tex:866](../../../src/appendix_quantum.tex#L866) 第 866, 867 行的 `\hat\Omega_i[Q]` 去掉 hat. 第 979 行写的是 `\Omega_i[Q]`.
-  - [project_3_main.tex:941](../../../src/project_3_main.tex#L941) `$\mathbb{Z}_2=0$` 改为 `$\nu=0$`, project_3_SI.tex 第 424 行同. 正文其余地方用 $\nu$ 表示这个指数.
-
-- [x] 记号不统一, 第二组: 同一个量有两个符号, 或一个符号表示两个量.
-  - [fundamentals_a.tex:1323](../../../src/fundamentals_a.tex#L1323) `v_\mathrm{KS}` 与第 979 行的 `v_\mathrm{eff}` 是同一个势. 第 1320 行后可加一句: It coincides with the effective potential in equation~\eqref{KS_effective_potential_definition}.
-  - [appendix_quantum.tex:1200](../../../src/appendix_quantum.tex#L1200) `C_1` 与第 1059 行的 `C` 是同一个常数.
-  - [appendix_quantum.tex:873](../../../src/appendix_quantum.tex#L873) 激发态先用 $\alpha$ 标记, 第 886 至 932 行改用 $n$.
-  - [appendix_quantum.tex:197](../../../src/appendix_quantum.tex#L197) 时序算符 $\hat{T}$ 与动能算符 $\hat{T}$ 同名.
-  - [project_3_main.tex:283](../../../src/project_3_main.tex#L283) 第 7 章的 $N$ 等于第 4 章的 $2N_\mathrm{p}$. 第 283 行句末可加: so that $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
-  - 已发表的两章只作记录: 第 6 章的临界温度写 `T_c`, 第 2, 8 章写 `T_\mathrm{c}`. 第 5 章的 `E_F`, `E_C`, `E_V`, `E_g` 是斜体下标.
-  - 已处理 (2026-11-12): 两组记号和前四项表述一并修正. Thomas--Fermi 常数的十处 `C_1` 统一为 `C`, 激发态统一用 `n`, 时序算符改为 `\hat{\mathcal{T}}`. 保留实际算符的帽子, 标量泛函 `\Omega_i[Q]` 去帽并明确其为期望值. 补上两章带子空间计数的关系, 将 `N` 明确为所选子空间的自旋能带数. 公式标签与文献引用保留.
-
-- [x] 动能泛函与温度区分, 并检查全文的描述性下标 (2026-11-12).
-  - 第 2 章与附录 A 的动能泛函统一为 `K[n]`, `K_\mathrm{s}[n]`, `K_\mathrm{c}[n]`, `K_\mathrm{TF}[n]` 和 `K_\mathrm{vW}[n]`, 对应的动能期望值统一为 `K`, 符号表同步更新.
-  - 非相互作用参照体系的 `\Psi_s`, `E_s`, `n_s` 改用正体 `s`. 左右势阱的 `v_L`, `v_R` 及容差 `\eta_E`, `\eta_F` 改用正体描述性下标.
-  - 按作者本次要求, 第 5 章的 `E_C`, `E_F`, `E_V`, `E_g`, `\Phi_n`, `\Phi_p` 一并统一为正体下标, 对应定义, 公式和图注均同步; 此项取代上面仅作记录的处理.
-  - 已检查其余正文与附录. 声子分支 `s`, 显式定义的基态索引 `g`, 能带与粒子索引, 以及笛卡尔分量均保留斜体. 温度 `T`, 动能算符及公式标签保留.
-
-- [x] 连字符和破折号.
-  - [fundamentals_a.tex:520](../../../src/fundamentals_a.tex#L520) "system specific" 改为 system-specific.
-  - [fundamentals_a.tex:610](../../../src/fundamentals_a.tex#L610) "density based" 改为 density-based.
-  - [fundamentals_a.tex:678](../../../src/fundamentals_a.tex#L678) "many body physics" 改为 many-body physics.
-  - [appendix_quantum.tex:614](../../../src/appendix_quantum.tex#L614) "clamped nuclei hamiltonian" 改为 clamped-nuclei hamiltonian.
-  - [appendix_quantum.tex:1456](../../../src/appendix_quantum.tex#L1456) "orbital free" 改为 orbital-free.
-  - [appendix_quantum.tex:450](../../../src/appendix_quantum.tex#L450) "Schrödinger-picture" 改为 Schrödinger picture.
-  - [conclusion.tex:250](../../../src/conclusion.tex#L250) "free-standing" 改为 freestanding, 第 252 行同. 第 1 章 6 处都写 freestanding.
-  - [appendix_quantum.tex:1422](../../../src/appendix_quantum.tex#L1422) "Thomas--Fermi Dirac" 改为 `Thomas--Fermi--Dirac`, 第 1433 行同. 第 1444 行改为 `Thomas--Fermi--Dirac--von Weizsäcker`.
-  - [fundamentals_a.tex:1345](../../../src/fundamentals_a.tex#L1345) "Kohn–Sham" 里是 Unicode 短横, 改为 `Kohn--Sham`.
-
-- [x] 单位没有用 siunitx.
-  - [conclusion.tex:22](../../../src/conclusion.tex#L22) 第 8 章有 22 处数值和单位是直接写的, 例如 "1.822 eV". 改为 `\qty{1.822}{\electronvolt}` 的写法.
-  - [project_1_main.tex:176](../../../src/project_1_main.tex#L176) 第 176, 177 行的 `$\mathring{\mathrm{A}}$` 改为 `\qty{2.467}{\angstrom}` 的写法.
-  - 已处理 (2026-11-12): 第 8 章当前版本共 26 个数值统一为 `\qty`, 吸附自由能的显式正号保留, 三处纯单位表述改为 `\unit`. 第 5 章这两行的四个晶格常数统一为 `\qty{...}{\angstrom}`.
-
-- [x] 零散的小处.
-  - [fundamentals_a.tex:543](../../../src/fundamentals_a.tex#L543) 图注句末缺句号.
-  - [fundamentals_a.tex:344](../../../src/fundamentals_a.tex#L344) `aligned` 最后一行末尾多了 `\\`.
-  - [fundamentals_c.tex:530](../../../src/fundamentals_c.tex#L530) "sign changes changes" 改为 sign changes alters.
-  - [project_1_SI.tex:184](../../../src/project_1_SI.tex#L184) "of the Graphene-\ce{BC3} calculated" 去掉 the, 第 191 行同. 图 S1.9 的图注没有 the.
-  - [introduction.tex:207](../../../src/introduction.tex#L207) "Ab initio molecular dynamics" 没有用斜体, 第 165 行是 `\textit{ab initio}`.
-  - [appendix.tex:8](../../../src/appendix.tex#L8) "For Chapter 5:" 写死了章号, 第 13, 18 行同. 改为 `For chapter~\ref{cha:project_bilayers}:`.
-  - [appendix_quantum.tex:13](../../../src/appendix_quantum.tex#L13) 节标题 "A story starts with time evolution quantum mechanics" 缺介词, 可写 time evolution in quantum mechanics.
-  - [project_3_main.tex:211](../../../src/project_3_main.tex#L211) 第 211 至 213 行说带 D3 的初步声子只有立方的几个结构. 存档里 hcp, bcc, $\alpha$, $\beta$ 和氢化结构的初步声子也带 D3. 可改为: The preliminary phonon calculations, which are not discussed further, included the D3 dispersion correction.

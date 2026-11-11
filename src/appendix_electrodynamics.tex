@@ -348,27 +348,10 @@ It excludes any polarization response before the external electric field acts.
 In the present work,
 we consider the optical long-wavelength limit,
 where the spatial non-locality of the dielectric response becomes negligible~\cite{agranovich2013crystal}.
-Afterwards, the linear response reduces to a local frequency-dependent tensor relation~\cite{franta2023dispersion}:
+Afterwards, the linear response takes the local frequency-dependent form of equation~\eqref{frequency_domain_polarization_susceptibility_relation}~\cite{franta2023dispersion}.
+The electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$ determines the amplitude and phase delay of each Cartesian response at angular frequency $\omega$~\cite{koutserimpas2024time}.
 
-\begin{equation}
-    P_{\alpha}(\omega) =
-    \varepsilon_0\sum_{\beta}\chi_{\alpha\beta}(\omega)
-    \,E_{\beta}(\omega)
-\label{frequency_domain_polarization_response}
-\end{equation}
-
-here, $\chi_{\alpha\beta}(\omega)$ denotes the frequency-domain electric susceptibility tensor.
-It characterizes the response amplitude for each Cartesian component at angular frequency $\omega$.
-Meanwhile, it also describes the phase delay of the response at the same frequency~\cite{koutserimpas2024time}.
-
-We then express the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ via the electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$~\cite{franta2020symmetry}:
-
-\begin{equation}
-    \varepsilon_{\alpha\beta}(\omega) =
-    \delta_{\alpha\beta}
-    + \chi_{\alpha\beta}(\omega)
-\label{dielectric_tensor_from_susceptibility}
-\end{equation}
+We then obtain the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ from the electric susceptibility tensor using equation~\eqref{dielectric_tensor_definition}~\cite{franta2020symmetry}.
 
 Subsequently, the causal condition in equation~\eqref{causal_condition_susceptibility_kernel}
 gives the frequency-domain susceptibility in the form:

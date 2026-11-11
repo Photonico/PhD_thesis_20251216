@@ -73,19 +73,7 @@ Subsequently, we introduce the explicit exponential representation of the time-e
 \label{time_evolution_operator}
 \end{equation}
 
-With the time difference $\tau=t-t_0$, we can express the time-evolution as a single-parameter family $\hat{U}(\tau)$:
-
-\begin{equation}
-    \hat{U}(\tau)=\mathrm{e}^{-\frac{\mathrm{i}}{\hbar}\hat{H}\tau}
-\label{time_evolution_operator_tau}
-\end{equation}
-
-If we stipulate $t_0=0$, this expression becomes:
-
-\begin{equation}
-    \hat{U}(t)=\mathrm{e}^{-\frac{\mathrm{i}}{\hbar}\hat{H}t}
-\label{time_evolution_operator_reduced_form}
-\end{equation}
+In the time-independent case, $\hat{U}(t,t_0)$ depends only on the time difference $\tau=t-t_0$, and we write it as $\hat{U}(\tau)$.
 
 We use $\hat{U}(t,t_0)$ to propagate the state forward in time while preserving its norm.
 Since $\hat{H}$ is Hermitian, $\hat{U}(t,t_0)$ is unitary.
@@ -112,14 +100,6 @@ In terms of the time difference $\tau$, this relation can be written as:
 \label{time_evolution_reversible_tau}
 \end{equation}
 
-% Accordingly, in the stipulation of $t=t_0$, this expression degenerates into:
-Accordingly, if we choose $t_0=0$, this expression becomes:
-
-\begin{equation}
-    \hat{U}^{\dagger}(t)= \hat{U}^{-1}(t)= \hat{U}(-t)
-\label{time_evolution_reversible_deg}
-\end{equation}
-
 The two-time evolution operator $\hat{U}(t,t_0)$ maps a quantum state from the reference time $t_0$ to time $t$.
 By construction, successive time evolutions must be consistent with each other.
 This requirement leads to the composition law:
@@ -129,19 +109,11 @@ This requirement leads to the composition law:
 \label{composition_law_time_evolution}
 \end{equation}
 
-In the time-independent case, $\hat{U}(t,t_0)$ depends only on the time difference $\tau=t-t_0$.
 The operators $\hat{U}(\tau)$ therefore form a one-parameter unitary group:
 
 \begin{equation}
     \hat{U}(\tau_2)\,\hat{U}(\tau_1)=\hat{U}(\tau_2+\tau_1)
 \label{time_evolution_group_property_tau}
-\end{equation}
-
-In particular, when we choose $t_0=0$, the one-parameter composition law becomes:
-
-\begin{equation}
-    \hat{U}(t_1+t_2)=\hat{U}(t_1)\,\hat{U}(t_2)
-\label{time_evolution_group_property}
 \end{equation}
 
 For the one-parameter family $\hat{U}(\tau)$, the identity element, $\hat{I}$, corresponds to $\tau=0$:
@@ -170,14 +142,7 @@ If the state is normalized at time $t_0$, then $\braket{\psi(t_0)|\psi(t_0)}=1$,
 This is why we can view $\hat{U}(t,t_0)$ as the quantum analogue of a time-translation operator.
 It moves the state through Hilbert space without changing its total probability.
 
-Finally, for a small time step $\Delta t$, we return to the exponential form:
-
-\begin{equation}
-    \hat{U}(\Delta t)=\mathrm{e}^{-\frac{\mathrm{i}}{\hbar}\hat{H}\Delta t}
-\label{time_evolution_short_time_exact}
-\end{equation}
-
-and obtain the short-time expansion:
+Finally, for a small time step $\Delta t$, we expand equation~\eqref{time_evolution_operator}:
 
 \begin{equation}
     \hat{U}(\Delta t)\approx \hat{I}-\frac{\mathrm{i}}{\hbar}\hat{H}\Delta t+\mathcal{O}(\Delta t^2)
@@ -459,7 +424,7 @@ and its corresponding Heisenberg-picture counterpart is defined by the unitary t
 
 \begin{equation}
     \hat{n}_\mathrm{H}(\vec{r},t)
-    = \hat U^\dagger(t)\,\hat{n}(\vec{r}\,)\,\hat{U}(t)
+    = \hat{U}^\dagger(t,t_0)\,\hat{n}(\vec{r}\,)\,\hat{U}(t,t_0)
 \label{Heisenberg-picture_density_operator}
 \end{equation}
 
@@ -544,38 +509,11 @@ We can extract them from the wave function through expectation values:
 
 \subsection{An introduction to grand canonical ensemble}
 
-Although chapter~\ref{cha:fundamentals_a} mainly focuses on the zero-temperature ground-state formalism,
-it is useful to briefly record the grand-canonical framework because it provides the natural extension to finite temperature and varying particle number~\cite{gould2026ensemblization}.
-
-Before proceeding further, it is essential to introduce the grand canonical ensemble, as it naturally accommodates quantum many-body systems exchanging particles and energy with external reservoirs.
-This treatment is particularly crucial in density functional theory calculations for realistic materials, where fluctuations in particle number and thermal effects are common.
-
-In the grand canonical ensemble, the expectation value of any observable operator $\hat{\Omega}$ is computed as follows:
-
-\begin{equation}
-    \braket{\hat{\Omega}} 
-    = \frac{1}{\mathcal{Z}}\sum_{\alpha}\mathrm{e}^{-\beta(E_{\alpha}-\mu N_{\alpha})}\bra{\Psi_{\alpha}}\hat{\Omega}\ket{\Psi_{\alpha}}
-\label{grand_canonical}
-\end{equation}
-
-here, the summation runs over all quantum states labelled by $\alpha$,
-and $\Psi_{\alpha}$ represents the many-body quantum states of the system, characterized by their energies $E_{\alpha}$ and particle numbers $N_{\alpha}$.
-The inverse temperature $\beta$ is defined as $\beta = 1/(\kB T)$, with $T$ being the temperature and $\kB$ the Boltzmann constant.
-The chemical potential $\mu$ controls particle exchange between the system and its reservoir.
-Therefore, the partition function $\mathcal{Z}$ serves as a normalization factor and is defined as:
-
-\begin{equation}
-    \mathcal{Z} = \sum_{\alpha} \mathrm{e}^{-\beta(E_{\alpha}-\mu N_{\alpha})}
-\label{partition_function}
-\end{equation}
-
-In quantum many-body theory and calculation, employing the grand canonical ensemble allows systematic inclusion of particle number fluctuations and thermal equilibrium effects, providing a robust and realistic statistical-mechanical description essential for accurate modelling of complex quantum materials.
-
-In what follows, we mainly focus on the ground-state setting: zero temperature and fixed particle number; while the grand-canonical form is noted for completeness and later extensions.
+At finite temperature and variable particle number, the grand canonical ensemble replaces the pure-state expectation value by a thermal trace~\cite{gould2026ensemblization}.
+In what follows, we consider zero temperature and a fixed particle number.
 
 \subsection{From wave function to practical functionals}
 
-Let us stay at zero temperature and fixed particle number $N$.
 Consider the operator for the measurement $\sum_{i,j,\cdots}\hat\Omega\left(x_i,x_j,\cdots\right)$,
 and the ground-state $N$-body wave function $\Psi(x_1,x_2,\cdots,x_N)$.
 By inserting resolutions of the identity in the coordinate basis for all particles, $I=\int \mathrm{d}x\,\ket{x}\bra{x}$~\cite{shankar2017quantum},
@@ -680,40 +618,11 @@ here, $E_n\left[v_\mathrm{ext}\right]$ denotes the energy eigenvalue associated 
 \label{eigenenergy_as_expectation_value}
 \end{equation}
 
-The grand-canonical ensemble admits a compact operator formulation in terms of a trace over the many-body Hilbert space.
-Invoking the cyclic invariance of the trace, we obtain:
-
-\begin{equation}
-    \braket{\hat{\Omega}}
-    = \frac{1}{\mathcal{Z}}\,\operatorname{Tr}\,\left[\mathrm{e}^{-\beta\left(\hat{H}-\mu \hat{N}\right)}\,\hat{\Omega}\right]
-\label{grand_canonical_expectation_trace}
-\end{equation}
-
-with the grand-canonical partition function:
-
-\begin{equation}
-    \mathcal{Z}
-    =\sum_{\alpha}\mathrm{e}^{-\beta\left(E_{\alpha}-\mu N_{\alpha}\right)} 
-    =\operatorname{Tr}\,\left[\mathrm{e}^{-\beta\left(\hat{H}-\mu \hat{N}\right)}\right]
-\label{grand_partition_function_trace}
-\end{equation}
-
-Note that the sum over states in equation~\eqref{grand_canonical} is nothing but a trace over the many-body Hilbert space.  By using the cyclic invariance of the trace, we can therefore recast both the expectation value and the partition function in the compact operator form:
-
-\begin{equation}
-    \braket{\hat\Omega}
-    = \frac{1}{\mathcal{Z}}\sum_\alpha \mathrm{e}^{-\beta(E_\alpha-\mu N_\alpha)}\bra{\Psi_\alpha}\hat\Omega\ket{\Psi_\alpha} 
-    = \frac{1}{\mathcal{Z}}\,\operatorname{Tr}\,\left[\mathrm{e}^{-\beta\left(\hat{H}-\mu \hat{N}\right)}\,\hat{\Omega}\right]
-\label{grand_canonical_trace}
-\end{equation}
-
-Equivalently, by expanding the trace in the eigenbasis of $\hat{H}$, equation~\eqref{grand_canonical_expectation_trace} reduces to the sum representation in equation~\eqref{grand_canonical_trace}.
-
 In principle, all physical observables derive from the many-body Schrödinger equation~\eqref{tdse_manybody_coord}, yet the exponential growth of the Hilbert-space dimension renders direct diagonalization intractable for realistic systems.
 
 If the kinetic energy operator and Coulomb interaction are fixed, the ground-state total energy becomes a functional of the external potential we introduced in equation~\eqref{spectrum_mapping_from_external_potential}.
 
-A central challenge is that evaluating the grand-canonical expectation in equation~\eqref{grand_canonical_trace} remains highly non-trivial, as the trace involves high-dimensional integrals and non-commuting operators.
+A central challenge is that evaluating the expectation value in equation~\eqref{observables_N-body} requires the many-body wave function and integration over all particle coordinates.
 
 Our aim is to express the expectation values—which are, in principle, highly complex functionals—in terms of a single simple function, so that practical approximations become possible.
 
@@ -813,7 +722,7 @@ Next, consider the expectation value of the electron-electron Coulomb interactio
 \begin{aligned}
     \braket{\hat{V}_\mathrm{ee}}
     &= \iint\cdots\int \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\sum_{i,j>i}\frac{1}{|\vec{r}_i-\vec{r}_j\,|}\Psi(x_1,x_2,\cdots,x_N) \\
-    &= \int\mathrm{d}x_1\mathrm{d}x_2\,\frac{1}{2|\vec{r}_1-\vec{r}_2\,|}N(N-1)\int\mathrm{d}x_3\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\Psi(x_1,x_2,\cdots,x_N)
+    &= \int\mathrm{d}x_1\mathrm{d}x_2\,\frac{1}{2|\vec{r}_1-\vec{r}_2\,|}N(N-1) \\ &\int\mathrm{d}x_3\cdots\mathrm{d}x_N\,\Psi^*(x_1,x_2,\cdots,x_N)\Psi(x_1,x_2,\cdots,x_N)
 \end{aligned}
 \label{coulomb_interaction_energy}
 \end{equation}
@@ -867,11 +776,7 @@ We begin by insisting on a single functional variable $Q$ such that every observ
 Having identified $Q$, we then derive the explicit mappings $\Omega_i[Q]$ for each target observable.
 Finally, we develop a practical algorithm or an approximation scheme to compute $Q$ itself, thereby rendering all observables $\Omega_i[Q]$ tractable.
 
-Given a time-dependent many-body wave function $\Psi(x_1,x_2,\cdots,x_N; t)$. 
-We denote the corresponding ground-state ($g\coloneqq 0$) many-body wave function as 
-$\Psi_g(x_1,x_2,\cdots,x_N; t)$.
-We can also denote the excited states by an index $n$ ($n\geq1$),
-as $\Psi_n(x_1,x_2,\cdots,x_N; t)$.
+Let $\Psi_g(x_1,x_2,\cdots,x_N;t)$ denote the ground-state wave function, with $g\coloneqq0$.
 
 Then, we can describe the ground-state one-body density:
 
@@ -879,61 +784,6 @@ Then, we can describe the ground-state one-body density:
     n_g(x_1,t)=N\iint\cdots\int\dif{x_2}\,\dif{x_3}\cdots\dif{x_N}\,\Psi_g^*(x_1,x_2,\cdots,x_N;t)\,\Psi_g(x_1,x_2,\cdots,x_N;t) % \rho_g(x_1,t)
 \label{ground_one-body_density}
 \end{equation}
-
-When this system makes transitions to excited states, the one-body transition density is obtained by integrating other coordinates:
-
-\begin{equation}
-    f_n^\mathrm{eh}(x_1,t)=\iint\cdots\int\dif{x_2}\,\dif{x_3}\cdots\dif{x_N}\,\Psi_g^*(x_1,x_2,\cdots,x_N;t)\,\Psi_n(x_1,x_2,\cdots,x_N;t)
-\label{transition_one-body}
-\end{equation}
-
-Equivalently, the reduced integral reads: 
-
-\begin{equation}
-f_n^\mathrm{eh}(x_1,t)=\int\Psi_g^*(\vec{x};t)\,\Psi_n(\vec{x};t)\prod^N_{j=2}\dif{x_j}
-\label{one_body_transition_quantity_compact}
-\end{equation}
-
-This marginal integral represents the one-body transition density from the ground state $g$ to the $n$-th excited state.
-
-In the presence of an oscillating electromagnetic field, we introduce the Bohr frequency:
-
-\begin{equation}
-\omega_{ng}=(E_n-E_g)/\hbar
-\label{Bohr_frequency}
-\end{equation}
-
-The corresponding phase factor associated with the excitation energy is $\mathrm{e}^{-\mathrm{i}\omega_{ng}t}$.
-We retain $\hbar$ explicitly in these phase relations.
-For a time-independent hamiltonian, we separate the time dependence of each stationary state as:
-
-\begin{equation}
-    \ket{\Psi_j(t)}=\mathrm{e}^{-\mathrm{i}E_jt/\hbar}\ket{\Phi_j},
-    \qquad j\in\{g,n\}
-\label{time_dep_eigenstate}
-\end{equation}
-
-here, $\ket{\Phi_j}$ is the time-independent many-body eigenstate with energy $E_j$.
-Substituting these states into equation~\eqref{one_body_transition_quantity_compact},
-we obtain:
-
-\begin{equation}
-    f_n^\mathrm{eh}(x_1,t)
-    =\mathrm{e}^{-\mathrm{i}\omega_{ng}t}f_n^\mathrm{eh}(x_1,0)
-\label{mod_transition_one-body}
-\end{equation}
-
-here, the phase-independent part follows from the coordinate projections of the stationary states:
-
-\begin{equation}
-    f_n^\mathrm{eh}(x_1,0)
-    =\int\braket{\Phi_g|\vec{x}\,}\braket{\vec{x}\,|\Phi_n}
-    \prod_{j=2}^{N}\dif{x_j}
-\label{transition_amplitude}
-\end{equation}
-
-The time dependence is therefore contained in a single phase factor,
-while the transition amplitude is determined by the stationary states.
 
 Subsequently, we recall a one-body operator $\hat{\Omega}^{(1)}$ with kernel $\Omega_1(x_1)$,
 the one-body density $n(x_1)$,
@@ -1010,6 +860,8 @@ and obtain the ground-state density from
 \label{ground_state_density}
 \end{equation}
 
+here, $\mu$ is the Lagrange multiplier enforcing the fixed-particle-number constraint $N[n]=N$.
+
 Once $n_g$ is known, all desired observables are evaluated as $\Omega_i[n_g]$; 
 for non-local one-body or two-body quantities,
 this amounts to adopting controlled approximations for kinetic energy functional $K[n]$ and interaction energy functional $E_\mathrm{int}[n]$ such as the Kohn--Sham framework developed in section~\ref{sec:from_density_functional_to_Kohn_Sham_theory}.
@@ -1081,51 +933,10 @@ For this reason, they are commonly referred to as density functionals.
 Now, we introduce the Thomas--Fermi approach as a first and purely density-based model for the kinetic energy.
 
 The basic idea is to treat the electrons locally as a uniform, spin-degenerate Fermi gas.
-At each point $\vec{r}$, the local density $n(\vec{r}\,)$ fixes a local Fermi momentum $p_\mathrm{F}(\vec{r}\,)$, which allows us to estimate the kinetic energy density from the occupied Fermi sphere in momentum space.
+We first construct the total-energy functional and then determine the ground-state density variationally.
 
-For a spin-degenerate system, the phase-space counting gives:
-
-\begin{equation}
-    n(\vec{r}\,) = \frac{2}{(2\mathrm{\pi})^3}\frac{4\mathrm{\pi}}{3}\,p_\mathrm{F}^3(\vec{r}\,)
-\label{TF_density_pf_intro}
-\end{equation}
-
-and the local Fermi momentum is related to the local single-particle energy through:
-
-\begin{equation}
-    \mu = \frac{p_\mathrm{F}^2(\vec{r}\,)}{2}+v(\vec{r}\,)
-\label{TF_mu_local_intro}
-\end{equation}
-
-Combining these two expressions yields a local relation between $n(\vec{r}\,)$ and $v(\vec{r}\,)$.
-This relation also leads to an explicit approximation for the kinetic energy functional in terms of $n(\vec{r}\,)$ alone, which we introduce next.
-
-To close the Thomas--Fermi picture, we treat $v(\vec{r}\,)$ as an electrostatic potential generated self-consistently by the electron density.
-In atomic units, it satisfies the Poisson equation:
-
-\begin{equation}
-    \nabla^2 v(\vec{r}\,) = -4\mathrm{\pi}\,n(\vec{r}\,)
-\label{TF_poisson_equation}
-\end{equation}
-
-Eliminating $p_\mathrm{F}(\vec{r}\,)$ between equations~\eqref{TF_density_pf_intro} and~\eqref{TF_mu_local_intro}, we obtain:
-
-\begin{equation}
-    n(\vec{r}\,) = \frac{1}{3\mathrm{\pi}^2}\,[2(\mu - v(\vec{r}\,))]^{3/2}
-\label{TF_density_muV}
-\end{equation}
-
-Substituting this expression into equation~\eqref{TF_poisson_equation},
-we arrive at the Thomas--Fermi equation:
-
-\begin{equation}
-    \nabla^2 v(\vec{r}\,)=-\frac{4}{3\mathrm{\pi}}\,[2(\mu-v(\vec{r}\,))]^{3/2}
-\label{thomas_fermi_equation}
-\end{equation}
-
-This non-linear equation determines the potential and the density self-consistently within the Thomas--Fermi approximation.
-
-To connect the Thomas--Fermi construction with density functional theory, we rewrite the total energy in a density functional form, denoted by $E_{\mathrm{TF}}[n;v_\mathrm{ext}]$. In this sense, the Thomas--Fermi model provides an explicit approximation to the universal functional.
+We write the total energy as the density functional $E_{\mathrm{TF}}[n;v_\mathrm{ext}]$.
+The Thomas--Fermi model provides an explicit approximation to the universal functional.
 
 From the Thomas--Fermi approximation, we express the total energy as a density functional composed of a statistical kinetic term $K_\mathrm{TF}[n]$, an interaction term $E_\mathrm{int}[n]$, and an external contribution $E_\mathrm{ext}[n]$ describing the coupling to the external potential $v_\mathrm{ext}(\vec{r}\,)$.
 
@@ -1141,18 +952,8 @@ Accordingly, we write the Thomas--Fermi total-energy functional:
 According to the local form of the external potential energy functional~\eqref{functional_Eext_local_form}, and the external contribution is given by the coupling between $n(\vec{r}\,)$ and $v_\mathrm{ext}(\vec{r}\,)$.
 For fixed nuclear positions, the external potential $v_\mathrm{ext}(\vec{r}\,)$ is a prescribed function of $\vec{r}$ defined in equation~\eqref{one-body_Electron-nucleus}. Therefore, the external contribution $E_\mathrm{ext}[n]$ is linear in the electron density $n(\vec{r}\,)$.
 
-We next approximate the interaction energy functional by its classical Coulomb form associated with the density distribution.
-Using the electron-electron Coulomb repulsion~\eqref{electrons_Coulomb}, we introduce the Hartree term:
-
-\begin{equation}
-\begin{aligned}
-    E_\mathrm{H}[n] &\coloneqq E_\mathrm{int}[n]-E_{\Delta\mathrm{int}}[n] \\
-    &= \frac{1}{2}\iint\dif{\vec{r}}\,\dif{\vec{r}\,'}\,\frac{n(\vec{r}\,)n(\vec{r}\,')}{|\vec{r}-\vec{r}\,'|}
-\label{hartree_term_functional}
-\end{aligned}
-\end{equation}
-
-here, $E_{\Delta\mathrm{int}}[n]$ collects the non-classical part of the interaction energy beyond the Hartree term.
+We next approximate the electron-electron interaction in equation~\eqref{electrons_Coulomb} by the Hartree functional in equation~\eqref{hartree_functional}.
+The remainder $E_{\Delta\mathrm{int}}[n]\coloneqq E_\mathrm{int}[n]-E_\mathrm{H}[n]$ collects the non-classical part of the interaction energy.
 In the Hartree approximation, we set $E_{\Delta\mathrm{int}}[n]=0$.
 
 Therefore, we introduce a Hartree approximation at the level of the interaction energy by replacing $E_\mathrm{int}[n]$ with its classical counterpart $E_\mathrm{H}[n]$:
@@ -1187,20 +988,7 @@ and the corresponding kinetic energy density reads:
 
 Within the local density approximation,
 we apply this homogeneous result locally by replacing $n$ with $n(\vec{r}\,)$ and integrating over space.
-Accordingly, this yields the Thomas--Fermi kinetic energy functional~\cite{thomas1927calculation,fermi1927metodo,mi2023orbital}:
-
-\begin{equation}
-    K_\mathrm{TF}[n] = C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
-\label{functional_TTF}
-\end{equation}
-
-with the Thomas--Fermi constant:
-
-\begin{equation}
-    C \coloneqq \frac{3}{10}\left(3\mathrm{\pi}^2\right)^{\frac{2}{3}}
-\label{Thomas_Fermi_constant_C1}
-\end{equation}
-
+This yields the Thomas--Fermi kinetic energy functional in equation~\eqref{tf_functional}~\cite{thomas1927calculation,fermi1927metodo,mi2023orbital}.
 This expression holds for a spin-unpolarized system.
 
 Therefore, we arrive at the full Thomas--Fermi energy functional as a functional of the electron density~\cite{garcia2007efficient,xu2024recent}.
@@ -1247,12 +1035,8 @@ The Lagrange multiplier $\lambda$ enforces the particle number constraint and ca
 
 Here $\lambda$ enforces the particle number constraint and plays the role of the chemical potential.
 
-We define the Hartree potential as a functional of density:
-
-\begin{equation}
-    v_\mathrm{H}([n];\vec{r}\,)\coloneqq\int\dif{\vec{r}\,'}\,\frac{n(\vec{r}\,')}{|\vec{r}-\vec{r}\,'|}
-\label{Hartree_potential_definition}
-\end{equation}
+The Hartree potential is the density derivative of the Hartree functional in equation~\eqref{hartree_functional}.
+Its explicit form is given in equation~\eqref{Hartree_potential_KS_definition}.
 
 The corresponding first variations of the three contributions can be evaluated explicitly.
 
@@ -1434,12 +1218,7 @@ The Thomas--Fermi--Dirac approximation improves total energies by incorporating 
 However, the kinetic energy is still treated at the Thomas--Fermi level, which is often insufficient for molecules and solids.
 
 A systematic gradient correction to the kinetic energy can be introduced through the von Weizsäcker form~\cite{yang1986gradient}.
-The corresponding von Weizsäcker kinetic energy functional is defined as:
-
-\begin{equation}
-    K_\mathrm{vW}[n]\coloneqq \frac{1}{2}\int\dif{\vec{r}}\,\left|\nabla\sqrt{n(\vec{r}\,)}\right|^2
-\label{von_Weizsaecker_kinetic}
-\end{equation}
+The corresponding kinetic energy functional is defined in equation~\eqref{vw_functional}.
 
 By adding this gradient correction, we arrive at the Thomas--Fermi--Dirac von Weizsäcker model:
 
