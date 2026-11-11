@@ -471,11 +471,13 @@ which reduces to $E_0$ when $n=n_0$.
 
 Here the minimization is taken over all normalized antisymmetric $N$-electron wave functions $\ket{\Psi}$ compatible with the fixed interaction.
 
-The kinetic energy functional $T[n]$, the interaction energy functional $E_\mathrm{int}[n]$, and the external potential energy functional $E_\mathrm{ext}[n]$ are evaluated on a minimizing wave function $\Psi[n]$ that yields the density $n$. We now write their definitions:
+The kinetic energy functional $K[n]$, the interaction energy functional $E_\mathrm{int}[n]$, and the external potential energy functional $E_\mathrm{ext}[n]$ are evaluated on a minimizing wave function $\Psi[n]$ that yields the density $n$.
+We use $K$ for kinetic energy and $T$ for temperature.
+We now write their definitions:
 
 \begin{equation}
 \begin{aligned}
-    T[n]&\coloneqq\bra{\Psi[n]}\hat{T}\ket{\Psi[n]} \\
+    K[n]&\coloneqq\bra{\Psi[n]}\hat{T}\ket{\Psi[n]} \\
     E_\mathrm{int}[n]&\coloneqq\bra{\Psi[n]}\hat{V}_\mathrm{int}\ket{\Psi[n]} \\
     E_\mathrm{ext}[n]&\coloneqq\bra{\Psi[n]}\hat{V}_\mathrm{ext}\ket{\Psi[n]}
 \end{aligned}
@@ -499,7 +501,7 @@ E[n]
 &= \bra{\Psi[n]}(\hat{T}+\hat{V}_\mathrm{int}+\hat{V}_\mathrm{ext})\ket{\Psi[n]} \\
 &= \bra{\Psi[n]}(\hat{T}+\hat{V}_\mathrm{int})\ket{\Psi[n]}
  + \int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,) \\
-&= T[n]+E_\mathrm{int}[n]+\int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
+&= K[n]+E_\mathrm{int}[n]+\int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
 \end{aligned}
 \label{energy_density_functional_decomposition}
 \end{equation}
@@ -511,7 +513,7 @@ This motivates introducing the universal Hohenberg--Kohn functional $E_\mathrm{H
 \begin{aligned}
     E_\mathrm{HK}[n]
     &= \min_{\Psi\to n}\bra{\Psi}(\hat{T}+\hat{V}_\mathrm{int})\ket{\Psi} \\
-    &= T[n] + E_\mathrm{int}[n]
+    &= K[n] + E_\mathrm{int}[n]
 \end{aligned}
 \label{functional_HK_definition}
 \end{equation}
@@ -808,33 +810,33 @@ and it is often referred to as non-interacting $v$-representability~\cite{de2012
 
 \subsection{The framework of the Kohn--Sham equations}
 
-Firstly, we introduce a non-interacting reference system that reproduces the density $n(\vec{r}\,)$, and denote its ground-state wave function by $\Psi_s[n]$.
+Firstly, we introduce a non-interacting reference system that reproduces the density $n(\vec{r}\,)$, and denote its ground-state wave function by $\Psi_\mathrm{s}[n]$.
 
 The wave function $\Psi[n]$ denotes the minimizing interacting many-body wave function that yields the density $n(\vec{r}\,)$,
-while $\Psi_s[n]$ represents the ground state of a non-interacting reference system constructed to reproduce the same density.
+while $\Psi_\mathrm{s}[n]$ represents the ground state of a non-interacting reference system constructed to reproduce the same density.
 
 Accordingly, they share the same one-body density but represent different many-body states:
 
 \begin{equation}
-n(\vec{r}\,) = n_{\Psi}(\vec{r}\,) = n_{\Psi_s}(\vec{r}\,)
+n(\vec{r}\,) = n_{\Psi}(\vec{r}\,) = n_{\Psi_\mathrm{s}}(\vec{r}\,)
 \label{density_equal_Psi_Psis}
 \end{equation}
 
-In other words, $\Psi_s[n]$ is introduced to match the density, rather than to approximate $\Psi[n]$ at the wave function level.
+In other words, $\Psi_\mathrm{s}[n]$ is introduced to match the density, rather than to approximate $\Psi[n]$ at the wave function level.
 
 We define the non-interacting kinetic energy functional as:
 
 \begin{equation}
-    T_s[n]\coloneqq\bra{\Psi_s[n]}\hat{T}\ket{\Psi_s[n]}
+    K_\mathrm{s}[n]\coloneqq\bra{\Psi_\mathrm{s}[n]}\hat{T}\ket{\Psi_\mathrm{s}[n]}
 \label{Ts_definition}
 \end{equation}
 
 Recall the Slater determinant representation~\eqref{slater_determinant}.
-For the non-interacting reference state $\Psi_s[n]$,
+For the non-interacting reference state $\Psi_\mathrm{s}[n]$,
 the expectation value of the kinetic energy operator becomes a sum over orbitals:
 
 \begin{equation}
-    \bra{\Psi_s[n]}\hat{T}\ket{\Psi_s[n]}
+    \bra{\Psi_\mathrm{s}[n]}\hat{T}\ket{\Psi_\mathrm{s}[n]}
     = -\frac{1}{2}\sum_i f_i\,\bra{\psi_i}\nabla^2\ket{\psi_i} 
 \label{Ts_orbital_sum}
 \end{equation}
@@ -862,28 +864,28 @@ Moreover, we can express the density with $f_i$:
 here, $\psi_i(\vec{r}\,)$ denotes a spin-orbital, and the spin degree of freedom is included implicitly in the index $i$,
 and the density $n(\vec{r}\,)$ can be understood as a functional of the set of spin-orbitals $\{\psi_i(\vec{r}\,)\}$.
 
-For comparison, the kinetic energy functional $T[n]$ appearing in the Hohenberg--Kohn functional $E_\mathrm{HK}[n]$ is evaluated on the minimizing interacting many-body state $\Psi[n]$ that yields the same density.
-In general, $T[n]$ and $T_s[n]$ are not equal, and we write their difference as:
+For comparison, the kinetic energy functional $K[n]$ appearing in the Hohenberg--Kohn functional $E_\mathrm{HK}[n]$ is evaluated on the minimizing interacting many-body state $\Psi[n]$ that yields the same density.
+In general, $K[n]$ and $K_\mathrm{s}[n]$ are not equal, and we write their difference as:
 
 \begin{equation}
-    T[n]=T_s[n]+T_c[n]
+    K[n]=K_\mathrm{s}[n]+K_\mathrm{c}[n]
 \label{T_decomposition}
 \end{equation}
 
-here, $T_c[n]$ measures the kinetic correlation beyond the non-interacting reference.
+here, $K_\mathrm{c}[n]$ measures the kinetic correlation beyond the non-interacting reference.
 We name it the kinetic-correlation functional.
 
 At the level of the interaction energy, the Hartree approximation replaces $E_\mathrm{int}[n]$ with the classical Coulomb functional $E_\mathrm{H}[n]$ in equation~\eqref{hartree_functional}.
 
 To obtain a fully orbital-based reference functional,
-we further replace the interacting kinetic energy functional $T[n]$ by $T_s[n]$,
-which amounts to neglecting the kinetic correlation $T_c[n]$ in equation~\eqref{T_decomposition}.
+we further replace the interacting kinetic energy functional $K[n]$ by $K_\mathrm{s}[n]$,
+which amounts to neglecting the kinetic correlation $K_\mathrm{c}[n]$ in equation~\eqref{T_decomposition}.
 
 Therefore, the Hartree approximation to the total-energy functional reads:
 
 \begin{equation}
     E_\mathrm{H}^\mathrm{tot}[n]
-    = T_s[n]
+    = K_\mathrm{s}[n]
     + \int \dif{\vec{r}}\,v_\mathrm{ext}(\vec{r}\,)n(\vec{r}\,)
     + E_\mathrm{H}[n]
 \label{hartree_total_energy_functional}
@@ -896,12 +898,12 @@ The interaction energy functional can be written as a Hartree term plus a remain
 $E_\mathrm{xc}^{\mathrm{int}}[n]\coloneqq E_\mathrm{int}[n]-E_\mathrm{H}[n]$,
 as in equation~\eqref{Exc_int_definition} of appendix~\ref{cha:appendix_quantum}.
 
-In the Kohn--Sham construction, there is an additional correction coming from the kinetic energy, since $T[n]$ and $T_s[n]$ are not equal, and their difference is measured by $T_c[n]$ in equation~\eqref{T_decomposition}.
+In the Kohn--Sham construction, there is an additional correction coming from the kinetic energy, since $K[n]$ and $K_\mathrm{s}[n]$ are not equal, and their difference is measured by $K_\mathrm{c}[n]$ in equation~\eqref{T_decomposition}.
 
 Therefore, we define the Kohn--Sham exchange-correlation functional as:
 
 \begin{equation}
-    E_\mathrm{xc}[n]\coloneqq T_c[n]+E_\mathrm{xc}^{\mathrm{int}}[n]
+    E_\mathrm{xc}[n]\coloneqq K_\mathrm{c}[n]+E_\mathrm{xc}^{\mathrm{int}}[n]
 \label{Exc_KS_sum}
 \end{equation}
 
@@ -912,9 +914,9 @@ we have:
 \begin{equation}
 \begin{aligned}
     E_\mathrm{xc}[n]
-    &= (T[n]-T_s[n]) + (E_\mathrm{int}[n]-E_\mathrm{H}[n]) \\
-    &= (T[n]-T_s[n]) + (E_\mathrm{HK}[n]-T[n]-E_\mathrm{H}[n]) \\
-    &= E_\mathrm{HK}[n]-T_s[n]-E_\mathrm{H}[n]
+    &= (K[n]-K_\mathrm{s}[n]) + (E_\mathrm{int}[n]-E_\mathrm{H}[n]) \\
+    &= (K[n]-K_\mathrm{s}[n]) + (E_\mathrm{HK}[n]-K[n]-E_\mathrm{H}[n]) \\
+    &= E_\mathrm{HK}[n]-K_\mathrm{s}[n]-E_\mathrm{H}[n]
 \end{aligned}
 \label{Exc_KS_definition}
 \end{equation}
@@ -923,14 +925,14 @@ Let us perform some manipulations on exact ground-state energy functional~\eqref
 
 \begin{equation}
 \begin{aligned}
-    E[n] &= T[n]+E_\mathrm{int}[n]
+    E[n] &= K[n]+E_\mathrm{int}[n]
     +\int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,) \\
     &= E_\mathrm{HK}[n]
     + \int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
-    + T_s[n] - T_s[n] + E_\mathrm{H}[n] - E_\mathrm{H}[n] \\
-    &= T_s[n] +
+    + K_\mathrm{s}[n] - K_\mathrm{s}[n] + E_\mathrm{H}[n] - E_\mathrm{H}[n] \\
+    &= K_\mathrm{s}[n] +
     \int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
-    + E_\mathrm{H}[n] + (E_\mathrm{HK}[n]-T_s[n]-E_\mathrm{H}[n])
+    + E_\mathrm{H}[n] + (E_\mathrm{HK}[n]-K_\mathrm{s}[n]-E_\mathrm{H}[n])
 \end{aligned}
 \label{energy_density_functional_manipulations}
 \end{equation}
@@ -941,10 +943,10 @@ we obtain:
 
 \begin{equation}
 \begin{aligned}
-    E[n] &= T_s[n]
+    E[n] &= K_\mathrm{s}[n]
     + \int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
     + E_\mathrm{H}[n] + E_\mathrm{xc}[n] \\
-    &= T_s[n]
+    &= K_\mathrm{s}[n]
     + \int\mathrm{d}\vec{r}\,v_\mathrm{ext}(\vec{r}\,)\,n(\vec{r}\,)
     + \frac{1}{2}\iint\dif{\vec{r}}\,\dif{\vec{r}\,'}\,\frac{n(\vec{r}\,)n(\vec{r}\,')}{|\vec{r}-\vec{r}\,'|}
     + E_\mathrm{xc}[n] \\
@@ -1035,12 +1037,12 @@ here, $\left[v(\vec{r}\,)\right]$ denotes the equivalence class of potentials th
 
 This shows that once the density $n(\vec{r}\,)$ is given, the effective potential $v_\mathrm{eff}([n];\vec{r}\,)$ is fixed up to an additive constant.
 
-Therefore, in this non-interacting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_s[n]$.
+Therefore, in this non-interacting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_\mathrm{s}[n]$.
 
 For the auxiliary non-interacting system, we achieve the Kohn--Sham auxiliary energy functional:
 
 \begin{equation}
-    E_s[n]=T_s[n]+\int\dif{\vec{r}}\,n(\vec{r}\,)v_\mathrm{eff}([n];\vec{r}\,)
+    E_\mathrm{s}[n]=K_\mathrm{s}[n]+\int\dif{\vec{r}}\,n(\vec{r}\,)v_\mathrm{eff}([n];\vec{r}\,)
 \label{KS_auxiliary_energy_functional}
 \end{equation}
 
@@ -1053,11 +1055,11 @@ For a given interacting system, we assume the existence of an auxiliary system o
 This auxiliary system is constructed to reproduce the same density:
 
 \begin{equation}
-    n_s(\vec{r}\,)=n(\vec{r}\,)
+    n_\mathrm{s}(\vec{r}\,)=n(\vec{r}\,)
 \label{KS_same_density_assumption}
 \end{equation}
 
-here, $n_s(\vec{r}\,)$ denotes the ground-state density of the auxiliary non-interacting system,
+here, $n_\mathrm{s}(\vec{r}\,)$ denotes the ground-state density of the auxiliary non-interacting system,
 it is obtained from a set of one-electron orbitals.
 The corresponding one-body potential is denoted by the Kohn--Sham potential $v_\mathrm{eff}([n];\vec{r}\,)$.
 It is chosen such that equation~\eqref{KS_same_density_assumption} holds.
@@ -1081,7 +1083,7 @@ Firstly, we introduce the one-body kinetic operator in the single-particle Hilbe
 Accordingly, we represent the non-interacting kinetic energy as an orbital functional:
 
 \begin{equation}
-    T_s[\{\psi_i(\vec{r}\,)\}]=
+    K_\mathrm{s}[\{\psi_i(\vec{r}\,)\}]=
     \sum_i f_i \bra{\psi_i}\hat{K}\ket{\psi_i}
 \label{KS_noninteracting_kinetic_energy_orbital_functional}
 \end{equation}
@@ -1116,7 +1118,7 @@ Therefore, we view the total energy as an orbital functional through the density
 
 \begin{equation}
     E[\{\psi_i(\vec{r}\,)\}]\coloneqq
-    \,T_s[\{\psi_i(\vec{r}\,)\}]
+    \,K_\mathrm{s}[\{\psi_i(\vec{r}\,)\}]
     + \int \dif{\vec{r}}\,
     n(\vec{r}\,)v_\mathrm{ext}(\vec{r}\,) 
     \,+ E_\mathrm{H}[n]
@@ -1249,16 +1251,16 @@ Accordingly, we impose the normalization constraint by a Lagrange multiplier $\l
 
 \begin{equation}
     \frac{\delta}{\delta n(\vec{r}\,)}\,\left[
-        E_s[n]-\lambda\int\dif{\vec{r}\,'}\,n(\vec{r}\,')
+        E_\mathrm{s}[n]-\lambda\int\dif{\vec{r}\,'}\,n(\vec{r}\,')
     \right]=0
 \label{KS_auxiliary_density_stationarity}
 \end{equation}
 
 Therefore, at the minimizing density $n_0(\vec{r}\,)$,
-we obtain the Euler--Lagrange condition for the auxiliary non-interacting energy functional $E_s[n]$:
+we obtain the Euler--Lagrange condition for the auxiliary non-interacting energy functional $E_\mathrm{s}[n]$:
 
 \begin{equation}
-    \left.\frac{\delta T_s[n]}{\delta n(\vec{r}\,)}\right|_{n_0}+v_\mathrm{eff}([n_0];\vec{r}\,)=\lambda
+    \left.\frac{\delta K_\mathrm{s}[n]}{\delta n(\vec{r}\,)}\right|_{n_0}+v_\mathrm{eff}([n_0];\vec{r}\,)=\lambda
 \label{KS_auxiliary_EL_condition}
 \end{equation}
 
@@ -1268,12 +1270,12 @@ Therefore, we equivalently express the Euler--Lagrange condition as an explicit 
 
 \begin{equation}
     v_\mathrm{eff}([n_0];\vec{r}\,)
-    = \lambda-\left.\frac{\delta T_s[n]}{\delta n(\vec{r}\,)}\right|_{n_0}
-    = -\left.\frac{\delta T_s[n]}{\delta n(\vec{r}\,)}\right|_{n_0}+\mathrm{const.}
+    = \lambda-\left.\frac{\delta K_\mathrm{s}[n]}{\delta n(\vec{r}\,)}\right|_{n_0}
+    = -\left.\frac{\delta K_\mathrm{s}[n]}{\delta n(\vec{r}\,)}\right|_{n_0}+\mathrm{const.}
 \label{KS_auxiliary_v_eff_from_Ts}
 \end{equation}
 
-Consequently, if the functional derivative of the non-interacting kinetic energy functional $T_s[n]$ is well behaved around the ground-state density $n_0(\vec{r}\,)$,
+Consequently, if the functional derivative of the non-interacting kinetic energy functional $K_\mathrm{s}[n]$ is well behaved around the ground-state density $n_0(\vec{r}\,)$,
 the Kohn--Sham effective potential $v_\mathrm{eff}(\vec{r}\,)$ can be constructed to reproduce $n_0(\vec{r}\,)$.
 In this sense, the auxiliary non-interacting system idea is reasonable.
 
@@ -1439,8 +1441,8 @@ Schematically, it demonstrates as:
 \begin{equation}
 v_\mathrm{KS}([n];x)\approx\left\{
 \begin{aligned}
-    &v_L(x)      &&\qquad \text{$x$ in the left well} \\
-    &v_R(x)+C    &&\qquad \text{$x$ in the right well}
+    &v_\mathrm{L}(x)      &&\qquad \text{$x$ in the left well} \\
+    &v_\mathrm{R}(x)+C    &&\qquad \text{$x$ in the right well}
 \end{aligned}\right.
 \qquad
 \label{KS_step_structure_schematic}
@@ -1768,15 +1770,15 @@ For example, the electronic and force convergence criteria can be expressed as:
 \begin{equation}
 \left\{\begin{aligned}
     \left|E_\mathrm{SCF}^{(j)}-E_\mathrm{SCF}^{(j-1)}\right|
-    &<\eta_E \\
-    \max_I|\vec{F}_I\,|&<\eta_F
+    &<\eta_\mathrm{E} \\
+    \max_I|\vec{F}_I\,|&<\eta_\mathrm{F}
 \end{aligned}\right.
 \label{electronic_and_force_convergence}
 \end{equation}
 
 here, $j$ labels successive electronic iterations at fixed nuclear positions,
 $E_\mathrm{SCF}^{(j)}$ denotes the energy evaluated at that iteration,
-and $\eta_E$ and $\eta_F$ denote the chosen energy and force tolerances.
+and $\eta_\mathrm{E}$ and $\eta_\mathrm{F}$ denote the chosen energy and force tolerances.
 The first condition controls the electronic iteration,
 whereas the second controls the residual forces during structural relaxation.
 If lattice parameters are relaxed, the corresponding stress also needs to be converged.

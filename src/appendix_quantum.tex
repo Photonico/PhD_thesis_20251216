@@ -837,7 +837,7 @@ Similarly, the expectation value of the kinetic energy takes the form:
 
 \begin{equation}
 \begin{aligned}
-    T
+    K
     &= -\iint\cdots\int \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_N\,
     \Psi^*(x_1,x_2,\cdots,x_N)\sum_i\frac{\nabla_i^2}{2}\Psi(x_1,x_2,\cdots,x_N) \\
     &= -N\iint\cdots\int \mathrm{d}x_1\mathrm{d}x_2\cdots\mathrm{d}x_N\,
@@ -859,7 +859,7 @@ We can also separate this integral via the matrix of density:
 and get the simplified expectation value of the kinetic energy operator:
 
 \begin{equation}
-    T = -\frac{1}{2}\int\dif{x_1}\,\left[\nabla_{x'_1}^{2}\,\rho(x_1,x'_1)\right]_{x'_1=x_1}
+    K = -\frac{1}{2}\int\dif{x_1}\,\left[\nabla_{x'_1}^{2}\,\rho(x_1,x'_1)\right]_{x'_1=x_1}
 \label{kinetic_energy_density_matrix}
 \end{equation}
 
@@ -944,7 +944,7 @@ Then, the spatial parts are contained in $x_1,x_2$:
 \begin{equation}
 \begin{aligned}
     \braket{\hat{\Omega}^{(1)}} &= \int \mathrm{d}x_1\,\Omega_1(x_1)\,n(x_1)\\
-    T &= -\frac{1}{2}\int \mathrm{d}x_1\,
+    K &= -\frac{1}{2}\int \mathrm{d}x_1\,
     \left[\nabla_{x'_1}^{2}\,\rho(x_1,x'_1)\right]_{x'_1=x_1}\\
     \braket{\hat{V}_\mathrm{ee}} &= \frac{1}{2}\int \mathrm{d}x_1\,\mathrm{d}x_2\,
     \frac{n_2(x_1,x_2)}{|\vec{r}_1-\vec{r}_2\,|}
@@ -1000,7 +1000,7 @@ Therefore, all ground-state observables may be regarded as density functionals, 
 Therefore, we explore the variational route for $n$. Define the energy-like functional:
 
 \begin{equation}
-    E[n;v_\mathrm{ext}]=T[n]+E_\mathrm{int}[n]+\int\mathrm{d}x\,v_\mathrm{ext}(x)n(x)
+    E[n;v_\mathrm{ext}]=K[n]+E_\mathrm{int}[n]+\int\mathrm{d}x\,v_\mathrm{ext}(x)n(x)
 \label{energy-like_functional}
 \end{equation}
 
@@ -1012,7 +1012,7 @@ and obtain the ground-state density from
 
 Once $n_g$ is known, all desired observables are evaluated as $\Omega_i[n_g]$; 
 for non-local one-body or two-body quantities,
-this amounts to adopting controlled approximations for kinetic energy functional $T[n]$ and interaction energy functional $E_\mathrm{int}[n]$ such as the Kohn--Sham framework developed in section~\ref{sec:from_density_functional_to_Kohn_Sham_theory}.
+this amounts to adopting controlled approximations for kinetic energy functional $K[n]$ and interaction energy functional $E_\mathrm{int}[n]$ such as the Kohn--Sham framework developed in section~\ref{sec:from_density_functional_to_Kohn_Sham_theory}.
 
 \newpage
 \section{What is the functional?}
@@ -1052,7 +1052,7 @@ the non-interacting kinetic energy is treated locally as that of a uniform (homo
 This leads to the Thomas--Fermi kinetic energy functional:
 
 \begin{equation}
-    T_\mathrm{TF}[n]=C\int\mathrm{d}\vec{r}\,n^{5/3}(\vec{r}\,)
+    K_\mathrm{TF}[n]=C\int\mathrm{d}\vec{r}\,n^{5/3}(\vec{r}\,)
 \label{tf_functional}
 \end{equation}
 
@@ -1064,7 +1064,7 @@ A detailed discussion can be found in the review by C.~J.~García-Cervera~\cite{
 In atomic units, it is generally written as:
 
 \begin{equation}
-    T_\mathrm{vW}[n] = \frac{1}{8}\int \mathrm{d}\vec{r}\,\frac{\nabla n(\vec{r}\,)\cdot\nabla n(\vec{r}\,)}{n(\vec{r}\,)}
+    K_\mathrm{vW}[n] = \frac{1}{8}\int \mathrm{d}\vec{r}\,\frac{\nabla n(\vec{r}\,)\cdot\nabla n(\vec{r}\,)}{n(\vec{r}\,)}
 \label{vw_functional}
 \end{equation}
 
@@ -1127,14 +1127,14 @@ This non-linear equation determines the potential and the density self-consisten
 
 To connect the Thomas--Fermi construction with density functional theory, we rewrite the total energy in a density functional form, denoted by $E_{\mathrm{TF}}[n;v_\mathrm{ext}]$. In this sense, the Thomas--Fermi model provides an explicit approximation to the universal functional.
 
-From the Thomas--Fermi approximation, we express the total energy as a density functional composed of a statistical kinetic term $T_\mathrm{TF}[n]$, an interaction term $E_\mathrm{int}[n]$, and an external contribution $E_\mathrm{ext}[n]$ describing the coupling to the external potential $v_\mathrm{ext}(\vec{r}\,)$.
+From the Thomas--Fermi approximation, we express the total energy as a density functional composed of a statistical kinetic term $K_\mathrm{TF}[n]$, an interaction term $E_\mathrm{int}[n]$, and an external contribution $E_\mathrm{ext}[n]$ describing the coupling to the external potential $v_\mathrm{ext}(\vec{r}\,)$.
 
 Furthermore, there is also a nucleus-nucleus term $E_\mathrm{NN}$, but it does not depend on the electron density. Therefore, we do not consider this term at the moment.
 
 Accordingly, we write the Thomas--Fermi total-energy functional:
 
 \begin{equation}
-    E_{\mathrm{TF}}[n;v_\mathrm{ext}] = T_\mathrm{TF}[n] + E_\mathrm{int}[n] + E_\mathrm{ext}[n]
+    E_{\mathrm{TF}}[n;v_\mathrm{ext}] = K_\mathrm{TF}[n] + E_\mathrm{int}[n] + E_\mathrm{ext}[n]
 \label{TF_total_energy_functional}
 \end{equation}
 
@@ -1159,14 +1159,14 @@ Therefore, we introduce a Hartree approximation at the level of the interaction 
 
 \begin{equation}
     E_\mathrm{H}^{\mathrm{int}}[n]
-    \coloneqq T[n]
+    \coloneqq K[n]
     + \int \dif^3{r}\,v_\mathrm{ext}(\vec{r}\,)n(\vec{r}\,)
     + E_\mathrm{H}[n]
 \label{hartree_interaction_level_energy}
 \end{equation}
 
-here, $T[n]$ is the interacting kinetic energy functional evaluated on the minimizing many-body state $\Psi[n]$ that yields the density $n$.
-In other words, this replacement affects only the interaction energy, while the kinetic energy functional remains $T[n]$ at this stage.
+here, $K[n]$ is the interacting kinetic energy functional evaluated on the minimizing many-body state $\Psi[n]$ that yields the density $n$.
+In other words, this replacement affects only the interaction energy, while the kinetic energy functional remains $K[n]$ at this stage.
 
 We next consider the kinetic energy functional.
 For a homogeneous spin-unpolarized electron gas with density $n$,
@@ -1190,7 +1190,7 @@ we apply this homogeneous result locally by replacing $n$ with $n(\vec{r}\,)$ an
 Accordingly, this yields the Thomas--Fermi kinetic energy functional~\cite{thomas1927calculation,fermi1927metodo,mi2023orbital}:
 
 \begin{equation}
-    T_\mathrm{TF}[n] = C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
+    K_\mathrm{TF}[n] = C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
 \label{functional_TTF}
 \end{equation}
 
@@ -1240,7 +1240,7 @@ The Lagrange multiplier $\lambda$ enforces the particle number constraint and ca
 \begin{equation}
 \begin{aligned}
     0 &= \delta\left\{E_\mathrm{TF}[n]-\lambda\left(\int\dif{\vec{r}}\,n(\vec{r}\,)-N\right)\right\}\\
-    &= \delta\left\{T_\mathrm{TF}[n]+E_\mathrm{int}[n]+E_\mathrm{ext}[n]-\lambda\left(\int\dif{\vec{r}}\,n(\vec{r}\,)-N\right)\right\}
+    &= \delta\left\{K_\mathrm{TF}[n]+E_\mathrm{int}[n]+E_\mathrm{ext}[n]-\lambda\left(\int\dif{\vec{r}}\,n(\vec{r}\,)-N\right)\right\}
 \end{aligned}
 \label{total_energy_variation}
 \end{equation}
@@ -1259,7 +1259,7 @@ The corresponding first variations of the three contributions can be evaluated e
 For the Thomas--Fermi kinetic term, we obtain:
 
 \begin{equation}
-    \delta T_\mathrm{TF}[n]
+    \delta K_\mathrm{TF}[n]
     = \int\dif{\vec{r}}\,\frac{5}{3}C\,n(\vec{r}\,)^{\frac{2}{3}}\,\delta n(\vec{r}\,)
 \label{variation_TTF}
 \end{equation}
@@ -1357,11 +1357,11 @@ In density functional theory, the total energy can be written as a functional of
 Let us express the exact total energy as a functional of the density:
 
 \begin{equation}
-    E[n]=T[n]+E_\mathrm{H}[n]+E_\mathrm{xc}^\mathrm{int}[n]+\int\dif{\vec{r}}\,n(\vec{r}\,)v_\mathrm{ext}(\vec{r}\,)
+    E[n]=K[n]+E_\mathrm{H}[n]+E_\mathrm{xc}^\mathrm{int}[n]+\int\dif{\vec{r}}\,n(\vec{r}\,)v_\mathrm{ext}(\vec{r}\,)
 \label{functional_exact_total_energy}
 \end{equation}
 
-Here $T[n]$ denotes the exact kinetic energy functional and $E_\mathrm{H}[n]$ is the Hartree energy functional.
+Here $K[n]$ denotes the exact kinetic energy functional and $E_\mathrm{H}[n]$ is the Hartree energy functional.
 The exchange-correlation functional $E_\mathrm{xc}^\mathrm{int}[n]$ collects all non-classical interaction effects beyond the Hartree term.
 It includes the exchange contribution originating from the antisymmetry of the many-electron wave function and the correlation contribution accounting for the remaining many-body correlations.
 
@@ -1377,8 +1377,8 @@ Equivalently, the universal Hohenberg--Kohn functional can be decomposed as:
 
 \begin{equation}
 \begin{aligned}
-    E_\mathrm{HK}[n] &= T[n] + E_\mathrm{int}[n] \\
-    &= T[n]+E_\mathrm{H}[n]+E_\mathrm{xc}^\mathrm{int}[n]
+    E_\mathrm{HK}[n] &= K[n] + E_\mathrm{int}[n] \\
+    &= K[n]+E_\mathrm{H}[n]+E_\mathrm{xc}^\mathrm{int}[n]
 \end{aligned}
 \label{HK_decomposition_Hartree_xc}
 \end{equation}
@@ -1437,7 +1437,7 @@ A systematic gradient correction to the kinetic energy can be introduced through
 The corresponding von Weizsäcker kinetic energy functional is defined as:
 
 \begin{equation}
-    T_\mathrm{vW}[n]\coloneqq \frac{1}{2}\int\dif{\vec{r}}\,\left|\nabla\sqrt{n(\vec{r}\,)}\right|^2
+    K_\mathrm{vW}[n]\coloneqq \frac{1}{2}\int\dif{\vec{r}}\,\left|\nabla\sqrt{n(\vec{r}\,)}\right|^2
 \label{von_Weizsaecker_kinetic}
 \end{equation}
 
@@ -1446,7 +1446,7 @@ By adding this gradient correction, we arrive at the Thomas--Fermi--Dirac von We
 \begin{equation}
     E_\mathrm{TFDW}[n]
     \coloneqq C\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{5}{3}}
-    + T_\mathrm{vW}[n]
+    + K_\mathrm{vW}[n]
     + E_\mathrm{H}[n]
     - C_2\int\dif{\vec{r}}\,n(\vec{r}\,)^{\frac{4}{3}}
     + \int\dif{\vec{r}}\,n(\vec{r}\,)\,v_\mathrm{ext}(\vec{r}\,)

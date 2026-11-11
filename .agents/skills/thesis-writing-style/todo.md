@@ -865,10 +865,9 @@ Outlook 一节中的句子:
   - 方案 B: 保留, 末尾加一句连到第 3 章: These transition densities determine the matrix elements of one-body operators between the ground state and the excited states, which enter the absorptive response in equation~\eqref{independent_particle_imaginary_dielectric_tensor}.
   - 不改 (2026-11-11): 作者保留原写法. 核对: 两处 $T_\mathrm{TF}$ 的常数 $C$ 与 $C_1$ 数值相同, 两种 $T_\mathrm{vW}$ 写法等价, 两条 Thomas--Fermi 推导给出同一个密度公式. 巨正则系综一段中文字与公式不符的问题另列在本节第一条.
 
-- [x] 附录 B: $\varepsilon_{\alpha\beta}=\delta_{\alpha\beta}+\chi_{\alpha\beta}$ 显示两次 ([appendix_electrodynamics.tex:202](../../../src/appendix_electrodynamics.tex#L202) 与 [appendix_electrodynamics.tex:370](../../../src/appendix_electrodynamics.tex#L370)), $P_\alpha=\varepsilon_0\sum_\beta\chi_{\alpha\beta}E_\beta$ 显示两次 (第 177 行与第 357 行). 见 references/examples.md 的 B4.
+- [ ] 附录 B: $\varepsilon_{\alpha\beta}=\delta_{\alpha\beta}+\chi_{\alpha\beta}$ 显示两次 ([appendix_electrodynamics.tex:202](../../../src/appendix_electrodynamics.tex#L202) 与 [appendix_electrodynamics.tex:370](../../../src/appendix_electrodynamics.tex#L370)), $P_\alpha=\varepsilon_0\sum_\beta\chi_{\alpha\beta}E_\beta$ 显示两次 (第 177 行与第 357 行). 见 references/examples.md 的 B4.
   - 改写: 第 364 至 371 行换成: The dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ then follows from the susceptibility through equation~\eqref{dielectric_tensor_definition}. 见 references/examples.md 的 B4.
   - 改写: 第 351 至 362 行换成: Afterwards, the linear response reduces to the local relation in equation~\eqref{frequency_domain_polarization_susceptibility_relation}, where $\chi_{\alpha\beta}(\omega)$ characterizes both the amplitude and the phase delay of the response. 被删的 \texttt{frequency\_domain\_polarization\_response} 没有被引用.
-  - 不改 (2026-11-11): 作者保留原写法. 核对: 两处公式一致, 第二处是取局域极限之后的形式.
 
 - [x] 第 3 章与附录 B 有四段几乎相同: 开头一句 ([fundamentals_b.tex:23](../../../src/fundamentals_b.tex#L23) 与 [appendix_electrodynamics.tex:15](../../../src/appendix_electrodynamics.tex#L15)), 单位约定 ([fundamentals_b.tex:28](../../../src/fundamentals_b.tex#L28) 与 [appendix_electrodynamics.tex:27](../../../src/appendix_electrodynamics.tex#L27)), $\mu_\mathrm{r}\approx1$ ([fundamentals_b.tex:51](../../../src/fundamentals_b.tex#L51) 与 [appendix_electrodynamics.tex:98](../../../src/appendix_electrodynamics.tex#L98)), regular response 前提 ([fundamentals_b.tex:373](../../../src/fundamentals_b.tex#L373) 与 [appendix_electrodynamics.tex:425](../../../src/appendix_electrodynamics.tex#L425)).
   - 建议: 单位约定: 附录 B 第 8 行已写 We use SI units, as in that chapter. 删去附录 B 第 27 至 30 行.
@@ -877,7 +876,7 @@ Outlook 一节中的句子:
   - 改写: 开头一句: 保留第 3 章第 23 至 25 行. 附录 B 第 15 至 19 行换成: Chapter~\ref{cha:fundamentals_b} uses the dielectric function as its central response quantity. This appendix builds that quantity from the macroscopic electrodynamics of matter.
   - 不改 (2026-11-11): 作者保留原写法. 核对: 第 3 章 285 句中有 6 句与附录 B 逐字相同, 都是单位约定和适用前提.
 
-- [x] 第 3 章与第 7 章用同一组铍烯光谱图, 描述也几乎逐字相同, 例如 [fundamentals_b.tex:677](../../../src/fundamentals_b.tex#L677) 与 [project_3_main.tex:1039](../../../src/project_3_main.tex#L1039).
+- [?] 第 3 章与第 7 章用同一组铍烯光谱图, 描述也几乎逐字相同, 例如 [fundamentals_b.tex:677](../../../src/fundamentals_b.tex#L677) 与 [project_3_main.tex:1039](../../../src/project_3_main.tex#L1039).
   - 方案 A: 第 3 章保留图 3.1 作代表, 图 3.2 至 3.5 保留图片, 每段多句的描述 (第 556 至 567, 676 至 679, 693 至 698, 785 至 790, 850 至 858 行) 各换成一句, 例如: Section~\ref{3_optical_alpha_beta} discusses these spectra of $\alpha$- and $\beta$-beryllene.
   - 方案 B: 第 3 章只保留图 3.1, 删去图 3.2 至 3.5 及其描述, 各小节改为引用第 7 章对应的图.
   - 不改 (2026-11-11): 作者保留原写法. 核对: 第 3 章 285 句中只有 1 句与第 7 章逐字相同, 另有 3 句相近. 两章的图文件也不相同.
@@ -1017,6 +1016,12 @@ Outlook 一节中的句子:
   - [project_3_main.tex:283](../../../src/project_3_main.tex#L283) 第 7 章的 $N$ 等于第 4 章的 $2N_\mathrm{p}$. 第 283 行句末可加: so that $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
   - 已发表的两章只作记录: 第 6 章的临界温度写 `T_c`, 第 2, 8 章写 `T_\mathrm{c}`. 第 5 章的 `E_F`, `E_C`, `E_V`, `E_g` 是斜体下标.
   - 已处理 (2026-11-12): 两组记号和前四项表述一并修正. Thomas--Fermi 常数的十处 `C_1` 统一为 `C`, 激发态统一用 `n`, 时序算符改为 `\hat{\mathcal{T}}`. 保留实际算符的帽子, 标量泛函 `\Omega_i[Q]` 去帽并明确其为期望值. 补上两章带子空间计数的关系, 将 `N` 明确为所选子空间的自旋能带数. 公式标签与文献引用保留.
+
+- [x] 动能泛函与温度区分, 并检查全文的描述性下标 (2026-11-12).
+  - 第 2 章与附录 A 的动能泛函统一为 `K[n]`, `K_\mathrm{s}[n]`, `K_\mathrm{c}[n]`, `K_\mathrm{TF}[n]` 和 `K_\mathrm{vW}[n]`, 对应的动能期望值统一为 `K`, 符号表同步更新.
+  - 非相互作用参照体系的 `\Psi_s`, `E_s`, `n_s` 改用正体 `s`. 左右势阱的 `v_L`, `v_R` 及容差 `\eta_E`, `\eta_F` 改用正体描述性下标.
+  - 按作者本次要求, 第 5 章的 `E_C`, `E_F`, `E_V`, `E_g`, `\Phi_n`, `\Phi_p` 一并统一为正体下标, 对应定义, 公式和图注均同步; 此项取代上面仅作记录的处理.
+  - 已检查其余正文与附录. 声子分支 `s`, 显式定义的基态索引 `g`, 能带与粒子索引, 以及笛卡尔分量均保留斜体. 温度 `T`, 动能算符及公式标签保留.
 
 - [x] 连字符和破折号.
   - [fundamentals_a.tex:520](../../../src/fundamentals_a.tex#L520) "system specific" 改为 system-specific.
