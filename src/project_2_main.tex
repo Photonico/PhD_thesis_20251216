@@ -19,7 +19,7 @@ with diverse bond lengths.
 These structural motifs facilitate the formation of unusual seven-centre-two-electron $\pi$-bonds,
 which were predicted for the first time in three-dimensional boron allotropes.
 The presence of these bonds highlights the complexity and versatility of boron chemistry under ambient conditions.
-Moreover, this material is predicted to be a superconductor with a critical temperature $T_c$ of \qty{29.1}{K}~\cite{han2023superconducting}.
+Moreover, this material is predicted to be a superconductor with a critical temperature $T_\mathrm{c}$ of \qty{29.1}{K}~\cite{han2023superconducting}.
 
 In this chapter, we investigate the electronic and optical properties of bulk o-\ce{B14},
 its monolayer and bilayer forms,
@@ -56,14 +56,14 @@ such as three-centre-two-electron bonds.
 Additionally, boron-rich compounds exhibit promising semiconducting and thermoelectric properties,
 with potential use in next-generation electronics and energy-harvesting devices.
 
-Generally, the superconducting critical temperature $T_c$ of elemental superconductors is relatively low at ambient pressure.
-A representative elemental superconductor, \ce{Nb}, has a $T_c$ of about \qty{9}{K}.
-Under high pressure, the $T_c$ can be significantly increased compared with the ambient-pressure value,
+Generally, the superconducting critical temperature $T_\mathrm{c}$ of elemental superconductors is relatively low at ambient pressure.
+A representative elemental superconductor, \ce{Nb}, has a $T_\mathrm{c}$ of about \qty{9}{K}.
+Under high pressure, the $T_\mathrm{c}$ can be significantly increased compared with the ambient-pressure value,
 but high pressure hinders experimental studies and practical applications.
 Therefore,
-it is important to explore elemental superconductors with a high $T_c$ under low or ambient pressure.
-Interestingly, superconductivity with a $T_c$ of \qty{35}{K} has been reported in a three-dimensional kagome-like boron allotrope under \qty{7}{GPa} on the basis of \textit{ab initio} calculations~\cite{ouyang2025superconductivity},
-while earlier work predicts a $T_c$ exceeding \qty{15}{K} in three-dimensional boron allotropes~\cite{zhang2020superconducting}.
+it is important to explore elemental superconductors with a high $T_\mathrm{c}$ under low or ambient pressure.
+Interestingly, superconductivity with a $T_\mathrm{c}$ of \qty{35}{K} has been reported in a three-dimensional kagome-like boron allotrope under \qty{7}{GPa} on the basis of \textit{ab initio} calculations~\cite{ouyang2025superconductivity},
+while earlier work predicts a $T_\mathrm{c}$ exceeding \qty{15}{K} in three-dimensional boron allotropes~\cite{zhang2020superconducting}.
 
 Boron can also form isolated clusters which exhibit many intriguing properties,
 including fluxionality~\cite{pan2019fluxional}.
@@ -289,16 +289,16 @@ The Fermi-surface average of the squared matrix elements, resolved by phonon fre
 gives the Eliashberg spectral function $\alpha^2F(\omega)$,
 from which $\lambda$ and $\omega_\mathrm{log}$ follow through equation~\eqref{electron_phonon_spectral_moments}.
 Superconductivity is subsequently analysed using the EPW code~\cite{giannozzi2009quantum,giannozzi2020quantum,giannozzi2017advanced,ponce2016epw},
-which is employed to evaluate the electron-phonon coupling strength and estimate the Allen--Dynes transition temperatures, $T_c$~\cite{margine2013anisotropic}.
+which is employed to evaluate the electron-phonon coupling strength and estimate the Allen--Dynes transition temperatures, $T_\mathrm{c}$~\cite{margine2013anisotropic}.
 The superconducting properties are also obtained by solving the fully anisotropic Migdal--Eliashberg equations~\cite{bardeen1955electron,giustino2017electron,margine2013anisotropic},
 as implemented in the EPW code.
-In this treatment, $T_c$ is obtained from the disappearance of the superconducting gap upon increasing temperature;
+In this treatment, $T_\mathrm{c}$ is obtained from the disappearance of the superconducting gap upon increasing temperature;
 it is a separate estimate from the Allen--Dynes result.
 The Morel--Anderson pseudopotential $\mu^{*}$ is chosen to be $0.13$,
 consistent with the typical semi-empirical range of $0.10$--$0.16$ used in Migdal--Eliashberg calculations for light-element and $sp$-bonded superconductors~\cite{allen-dynes},
 and with the value adopted in the literature for boron-based two-dimensional superconductors~\cite{zhao2019two}.
 With this choice,
-the calculated electron-phonon coupling strengths, $\lambda$, and $T_c$ indicate clear dimensionality effects,
+the calculated electron-phonon coupling strengths, $\lambda$, and $T_\mathrm{c}$ indicate clear dimensionality effects,
 as discussed in section~\ref{2_superconducting}.
 
 For the calculation of the optical properties within VASP,
@@ -681,12 +681,12 @@ while the H-B distance is \qty{1.19}{\angstrom} in both cases.
 
 For the bulk phase,
 an electron-phonon coupling strength of $\lambda=0.931$ is obtained,
-corresponding to an Allen--Dynes superconducting transition temperature of $T_c=\qty{28.2}{K}$.
+corresponding to an Allen--Dynes superconducting transition temperature of $T_\mathrm{c}=\qty{28.2}{K}$.
 This value is consistent with the previously reported value of \qty{29.1}{K}~\cite{han2023superconducting}.
 The hydrogen-terminated bilayer exhibits a slightly higher electron-phonon coupling strength,
 $\lambda=1.01$,
-but a lower transition temperature of $T_c=\qty{18.5}{K}$.
-A larger $\lambda$ does not necessarily imply a higher $T_c$,
+but a lower transition temperature of $T_\mathrm{c}=\qty{18.5}{K}$.
+A larger $\lambda$ does not necessarily imply a higher $T_\mathrm{c}$,
 since the phonon frequency scale also enters the Allen--Dynes estimate~\cite{migdal1958interaction,marsiglio2020eliashberg,eliashberg1960interactions}.
 The reported monolayer coupling, $\lambda=0.05$, is too weak to support an appreciable transition temperature in this calculation.
 For $\mu^*=0.13$, it is outside the applicable range of the simplified Allen--Dynes expression in equation~\eqref{allen_dynes_temperature_estimate}.
@@ -704,8 +704,8 @@ Colour indicates the normalized distribution at each calculated temperature; the
 
 The anisotropic Migdal--Eliashberg results in figure~\ref{fig:ob14_superconducting_gap}
 show that the gap distribution shifts towards lower energies as the temperature increases.
-For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_c$ above \qty{30}{K}.
-For the hydrogen-terminated bilayer, the whole gap distribution falls into the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_c$ close to \qty{26}{K}.
+For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_\mathrm{c}$ above \qty{30}{K}.
+For the hydrogen-terminated bilayer, the whole gap distribution falls into the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_\mathrm{c}$ close to \qty{26}{K}.
 Overall, these results suggest that o-\ce{B14} is unlikely to possess conventional superconductivity in the monolayer phase owing to the extremely weak electron-phonon interaction,
 whereas the bulk and hydrogen-terminated bilayer are predicted to support phonon-mediated superconductivity
 within the stated electronic and vibrational approximations.
