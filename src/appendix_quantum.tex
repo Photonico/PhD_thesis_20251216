@@ -193,7 +193,7 @@ To describe this larger ensemble, we generalize our single-particle state $\ket{
 For identical fermions, the physical many-body states belong to the antisymmetric subspace of $\mathbb{H}$.
 
 For example, in a two-particle system, the total Hilbert space is $\mathbb{H}=\mathbb{H}_1\otimes\mathbb{H}_2$.
-It is worth noting that not every state $\ket{\Psi}$ can be factored as  $\ket{\psi_1} \otimes \ket{\psi_2}$, because many physically relevant states are entangled.
+Not every state $\ket{\Psi}$ can be factored as  $\ket{\psi_1} \otimes \ket{\psi_2}$, because many physically relevant states are entangled.
 This means that their correlations cannot be described by individual particle states alone. In the coordinate representation, we express the wave function as:
 
 \begin{equation}
@@ -409,7 +409,7 @@ Physically, $n(\vec{r}\,)\mathrm{d}^3r$ is the expected number of electrons in t
 In density functional theory, $n(\vec{r}\,)$ serves as the fundamental variable replacing the full many-body wave function.  
 
 It can be shown that the ground-state density $n(\vec{r}\,)$ uniquely determines the external potential up to an additive constant, and hence all ground-state observables can be written as functionals of $n(\vec{r}\,)$.
-This dramatic reduction comes from a 3$N$-dimensional wave function to a three-dimensional density, which lies at the heart of density functional theory, making formerly intractable many-body problems computationally feasible.
+This reduction comes from a 3$N$-dimensional wave function to a three-dimensional density, which lies at the heart of density functional theory, making formerly intractable many-body problems computationally feasible.
 
 The time-dependent density functional theory relies on the continuity equation in the Heisenberg picture.
 We first define the particle density operator in the Schrödinger picture as:
@@ -624,7 +624,7 @@ If the kinetic energy operator and Coulomb interaction are fixed, the ground-sta
 
 A central challenge is that evaluating the expectation value in equation~\eqref{observables_N-body} requires the many-body wave function and integration over all particle coordinates.
 
-Our aim is to express the expectation values—which are, in principle, highly complex functionals—in terms of a single simple function, so that practical approximations become possible.
+Our aim is to express the expectation values, which are, in principle, highly complex functionals, in terms of a single simple function, so that practical approximations become possible.
 
 Next, recall the general expression for an observable in a many-body system: equation~\eqref{observables_N-body}. If the observable is a local one-body operator, we have:
 
@@ -832,7 +832,7 @@ Our goal is to find a single descriptor $Q$ such that, once $Q$ is known, all th
 
 In other words, $Q$ is chosen to retain exactly the information needed for the set $\{\Omega_i\}$, while discarding irrelevant microscopic details.
 
-In particular, we set $Q \coloneqq n(x)$. In the following, we take the particle density $n(x)$ as the basic variable, as it provides a minimal yet powerful descriptor of the ground state. In this statement, $x$ denotes a combined space-spin coordinate, $x=(\vec{r},\sigma)$, so that we can represent the one-body (spin-resolved) density as $n(x)$:
+In particular, we set $Q \coloneqq n(x)$. In the following, we take the particle density $n(x)$ as the basic variable, as it provides a compact descriptor of the ground state. In this statement, $x$ denotes a combined space-spin coordinate, $x=(\vec{r},\sigma)$, so that we can represent the one-body (spin-resolved) density as $n(x)$:
 
 Firstly, the particle density $n(x)$ yields exactly all local one-body observables. For an operator of the form $\hat{\Omega}^{(1)}=\sum_{j=1}^N \Omega_1(x_j)$, one has:
 

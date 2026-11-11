@@ -136,17 +136,6 @@
   - [appendix_quantum.tex:1141](../../../src/appendix_quantum.tex#L1141) "and the external contribution is given by" 去掉 and.
   - [appendix_quantum.tex:1394](../../../src/appendix_quantum.tex#L1394) "Let us compare with the exact decomposition" 改为 Compared with the exact decomposition, 与第 1395 行连成一句.
 
-- [ ] 评价性形容词和 AI 常用词, 对应 `SKILL.md` 第 6.4 节. 逐处替换, 句子结构不动. 第 5, 6 章是已发表的文章, 其中的 novel, intriguing, promising 没有列入.
-  - [appendix_quantum.tex:231](../../../src/appendix_quantum.tex#L231) "It is worth noting that" 删去, 句子从 Not every state 开始.
-  - [appendix_quantum.tex:447](../../../src/appendix_quantum.tex#L447) "This dramatic reduction" 改为 This reduction.
-  - [appendix_quantum.tex:550](../../../src/appendix_quantum.tex#L550) "it is essential to introduce" 改为 we introduce.
-  - [appendix_quantum.tex:551](../../../src/appendix_quantum.tex#L551) "particularly crucial" 改为 relevant.
-  - [appendix_quantum.tex:572](../../../src/appendix_quantum.tex#L572) "providing a robust and realistic statistical-mechanical description essential for accurate modelling of complex quantum materials" 连同前面的逗号删去.
-  - [appendix_quantum.tex:718](../../../src/appendix_quantum.tex#L718) "which are, in principle, highly complex functionals" 两侧的破折号改为逗号.
-  - [appendix_quantum.tex:985](../../../src/appendix_quantum.tex#L985) "a minimal yet powerful descriptor" 改为 a compact descriptor.
-  - [fundamentals_a.tex:1297](../../../src/fundamentals_a.tex#L1297) "we utilize" 改为 we use.
-  - [fundamentals_a.tex:1346](../../../src/fundamentals_a.tex#L1346) "They also elucidate why its exchange-correlation component can remain" 改为 They also show that its exchange-correlation component can remain.
-
 ## 3. 防御性句子
 
 GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
