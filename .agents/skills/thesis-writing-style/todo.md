@@ -1034,7 +1034,7 @@ Outlook 一节中的句子:
   - [conclusion.tex:22](../../../src/conclusion.tex#L22) 第 8 章有 22 处数值和单位是直接写的, 例如 "1.822 eV". 改为 `\qty{1.822}{\electronvolt}` 的写法.
   - [project_1_main.tex:176](../../../src/project_1_main.tex#L176) 第 176, 177 行的 `$\mathring{\mathrm{A}}$` 改为 `\qty{2.467}{\angstrom}` 的写法.
 
-- [ ] 零散的小处.
+- [x] 零散的小处.
   - [fundamentals_a.tex:543](../../../src/fundamentals_a.tex#L543) 图注句末缺句号.
   - [fundamentals_a.tex:344](../../../src/fundamentals_a.tex#L344) `aligned` 最后一行末尾多了 `\\`.
   - [fundamentals_c.tex:530](../../../src/fundamentals_c.tex#L530) "sign changes changes" 改为 sign changes alters.
