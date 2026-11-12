@@ -1352,7 +1352,9 @@ with the many-body hamiltonian:
 \label{interacting_hamiltonian_1D_two_electrons}
 \end{equation}
 
-here, $v_\mathrm{ee}(x_1,x_2)$ denotes the two-body interaction, $v_\mathrm{ee}(x_1,x_2)=|x_1-x_2|^{-1}$. For a harmonic confinement, the external potential takes the form:
+here, $v_\mathrm{ee}(x_1,x_2)$ denotes the two-body interaction.
+In one dimension, we use the soft-Coulomb form $v_\mathrm{ee}(x_1,x_2)=\left[(x_1-x_2)^2+a^2\right]^{-1/2}$ with the softening parameter $a$.
+For a harmonic confinement, the external potential takes the form:
 
 \begin{equation}
     v_\mathrm{ext}(x)=\frac{1}{2}\Omega^2 x^2
@@ -1693,7 +1695,7 @@ However, HSE06 remains an approximation.
 A larger band gap does not by itself imply a more accurate result.
 Therefore, when comparing the results in chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron},
 we need to consider the limitations of both functionals.
-For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE.
+For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE, and test the band gap and the band order with HSE06.
 We discuss this choice and its limitations with the corresponding calculations.
 
 Consequently, the local density approximation,

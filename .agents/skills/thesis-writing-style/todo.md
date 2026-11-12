@@ -3,55 +3,9 @@
 完善论文用的待办清单, 配合同目录下的 `SKILL.md` 使用. 规则和改法见 `SKILL.md`, 这里只列具体位置.
 行号以 2026-11-12 的版本为准. 行号变动后按引文搜索. 完成一条就删去该条, 删去的条目见 git 历史.
 
-1. 内容一致性 (P0)
 2. 非母语用法
 3. 防御性句子
 4. 重复与篇幅 (P1)
-
-## 1. 内容一致性 (P0)
-
-这些问题会让读者质疑结论, 应最先处理. 有几组防御句的根源就在这里, 问题解决后可以一并删除.
-
-重读新增 (2026-11-12). 前两条是第 6 章的数值, 已发表的文章里是同样的数, 最先处理:
-
-- [ ] [project_2_main.tex:473](../../../src/project_2_main.tex#L473) 第 6 章双层的氢吸附能 "The reported adsorption energy per hydrogen atom on the bilayer" 为 \qty{-1.525}{\electronvolt}, 用的是未弛豫结构的能量. 用弛豫后的能量是 \qty{-0.996}{\electronvolt}, 比单层的 \qty{-1.450}{\electronvolt} 弱, 第 474 行的 slightly stronger 不成立.
-  - 依据: 双层与单层吸附能之差与 \ce{H2} 的能量无关. `o-B14_20241024/2.2_self_consistent` 的四个自洽计算给出 +0.454 eV, `2.1_geometry_optimization` 弛豫最后一步给出 +0.456 eV. 论文的差值是 -0.075 eV. `bilayer_with_Hydrogen_top` 和 `bilayer` 两个弛豫都取第一步的能量 (-197.374 和 -177.729 eV), 差值是 -0.079 eV.
-  - 依据: 单层的 -1.450 用自洽计算的能量可以复现, 对应 $E_{\ce{H2}}=\qty{-6.765}{\electronvolt}$. 仓库里没有 \ce{H2} 的计算, `1.1_energy_atom/Hydrogen` 是孤立 H 原子, 改之前先确认这个参考能量. 它每变 0.007 eV, 两个吸附能同时变 0.003 eV.
-  - 改写: 第 473 至 474 行: The reported adsorption energy per hydrogen atom on the bilayer is \qty{-0.996}{\electronvolt}, which is weaker than that on the monolayer, \qty{-1.450}{\electronvolt}.
-  - LaTeX: 表 6.2 第 506 行的 `$-1.525$` 改为 `$-0.996$`.
-
-- [ ] [project_2_main.tex:447](../../../src/project_2_main.tex#L447) 第 6 章 hollow-bridge 位比 top 位高出的能量, 单层和双层的数值写反了: "by \qty{1.57}{\electronvolt} per hydrogen atom for the monolayer" 中的 1.57 是双层的值, 第 448 行的 2.61 是单层的值.
-  - 依据: 用 `2.1_geometry_optimization` 弛豫最后一步的能量, 这个差值与 \ce{H2} 的能量无关. 双层: bridge 位 -185.086 eV (2 个 H), 参考 -179.471 eV; top 位 -198.358 eV (4 个 H), 参考 -180.853 eV; 差值 1.57 eV. 单层: bridge 位 -90.924 eV, 参考 -86.473 eV; top 位 -105.825 eV, 参考 -86.492 eV; 差值 2.61 eV.
-  - 建议: bridge 位的参考取自 `*_with_Hydrogen_bridge_relax`. 双层的这个参考比弛豫的双层高 1.38 eV. 两个位点都以弛豫的纯硼层为参考时, 单层的差值是 2.62 eV, 双层是 2.26 eV.
-  - 方案 A: 只对调两个数: by \qty{2.61}{\electronvolt} per hydrogen atom for the monolayer and \qty{1.57}{\electronvolt} per hydrogen atom for the bilayer.
-  - 方案 B: 两个位点用同一参考: by \qty{2.62}{\electronvolt} per hydrogen atom for the monolayer and \qty{2.26}{\electronvolt} per hydrogen atom for the bilayer.
-
-- [ ] [fundamentals_c.tex:609](../../../src/fundamentals_c.tex#L609) 第 4 章写的是 "The \texttt{irvsp} method used in chapter", 第 7 章第 269 行写的是 \texttt{IrRep}. 存档的最终宇称来自 IrRep 2.1.3, irvsp 只用在早期草稿里.
-  - 改写: 第 609 至 610 行: The \texttt{IrRep} code used in chapter~\ref{cha:project_beryllene} extracts such symmetry information from VASP wave functions~\cite{iraola2022irrep}.
-
-- [ ] [introduction.tex:187](../../../src/introduction.tex#L187) "in the boron-based studies": 第 1 章和第 2 章都说 HSE06 只用于硼的两章. 第 7 章也用 HSE06 算了 2H-$\alpha$-beryllene 的带隙和宇称 (project_3_main.tex 第 313 至 320 行).
-  - 改写: 第 187 行删去句末的 in the boron-based studies.
-  - 改写: [fundamentals_a.tex:1696](../../../src/fundamentals_a.tex#L1696) "we use PBE." 改为: For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE, and test the band gap and the band order with HSE06.
-
-- [ ] [project_3_main.tex:36](../../../src/project_3_main.tex#L36) 第 7 章摘要的最后一句仍是 "and non-trivial topology". 本章结论 (第 1272 至 1274 行) 已改, 这里处理摘要.
-  - 改写: 第 36 行改为: and band inversions in selected subspaces.
-
-- [ ] [abstract.tex:19](../../../src/abstract.tex#L19) "Graphene-Borophene gives the strongest absorption" 没有限定范围. 第 5 章第 645 至 646 行说的是 \qty{1}{\electronvolt} 附近, 第 8 章第 38 行写明不代表整个谱.
-  - 改写: Graphene-Borophene gives the strongest absorption near \qty{1}{\electronvolt} and supports low-energy plasmonic features.
-
-- [ ] [conclusion.tex:195](../../../src/conclusion.tex#L195) "the metallic spectra in chapters" 只列了第 6, 7 章. 第 5 章的 Graphene-Borophene 也是金属, 它的光谱同样只含带间跃迁 (VASP 的 LOPTICS, 后处理没有加 Drude 项).
-  - 改写: They do not include electron-hole attraction, and the metallic spectra in chapters~\ref{cha:project_bilayers}, \ref{cha:project_boron}, and~\ref{cha:project_beryllene} do not contain a separate Drude contribution.
-
-- [ ] [project_2_main.tex:887](../../../src/project_2_main.tex#L887) 第 6 章结论 "the monolayer and bulk systems behave as indefinite media" 漏了 hydrogen-terminated bilayer. 正文第 750 至 753 行列的是三个体系.
-  - 改写: 第 887 行: Interestingly, the monolayer, hydrogen-terminated bilayer, and bulk systems behave as indefinite media, 第 889 行: This occurs in the region below \qty{2.0}{\electronvolt} for the monolayer and hydrogen-terminated bilayer,
-
-- [ ] [project_2_main.tex:508](../../../src/project_2_main.tex#L508) 表 6.2 体相一行的 $a$, $b$ 是 5.697 和 6.204 Å, 对应表 6.1 的 $a$ 和 $c$. 表 6.1 的 $b$ 是 4.048 Å.
-  - 改写: 表 6.2 的表注加一句: For the bulk, $a$ and $b$ denote the lattice constants $a$ and $c$ in table~\ref{tab:bulk_ob14_structure}.
-
-- [ ] [appendix_quantum.tex:886](../../../src/appendix_quantum.tex#L886) 文字说 "to the total energy $E[n]$ given by an external potential", 下面的公式却是 $E_\mathrm{ext}[n]$.
-  - 改写: For example, in condensed matter physics, it often appears as a map from the electron density $n(\vec{r}\,)$ to the external potential energy $E_\mathrm{ext}[n]$:
-
-- [ ] [fundamentals_a.tex:1355](../../../src/fundamentals_a.tex#L1355) 待核对: 一维双电子模型写的是裸库仑势 "$v_\mathrm{ee}(x_1,x_2)=|x_1-x_2|^{-1}$", 它在 $x_1=x_2$ 处不可积. 一维模型的文献通常用 soft-Coulomb 势 $[(x_1-x_2)^2+a^2]^{-1/2}$. 请确认这里要写哪一种.
 
 ## 2. 非母语用法
 
@@ -98,9 +52,9 @@
   - 改写: In principle, the Kohn--Sham equations give the exact electron density~\cite{wagner2014kohn}.
   - 或: With the exact exchange-correlation functional, the Kohn--Sham equations reproduce the exact electron density~\cite{wagner2014kohn}.
 
-- [ ] [fundamentals_a.tex:1395](../../../src/fundamentals_a.tex#L1395) 和 [fundamentals_a.tex:1402](../../../src/fundamentals_a.tex#L1402): "If we start from the naive choice:" 仍没有主句. 改为 "We first test the naive choice:", 第 1402 行改为 "With this choice, the density ... concentrates near the centre of the well." 上次只把 one 改成了 we.
-  - 改写: 第 1395 行: We first test the naive choice: 第 1402 至 1403 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} concentrates near the centre of the well, more strongly than in the interacting system.
-  - 或: 第 1395 行: Let us start from the naive choice: 第 1402 至 1403 行: This choice concentrates the density from equation~\eqref{KS_density_1D_schematic} near the centre of the well, beyond the concentration of the interacting system.
+- [ ] [fundamentals_a.tex:1397](../../../src/fundamentals_a.tex#L1397) 和 [fundamentals_a.tex:1404](../../../src/fundamentals_a.tex#L1404): "If we start from the naive choice:" 仍没有主句. 改为 "We first test the naive choice:", 第 1404 行改为 "With this choice, the density ... concentrates near the centre of the well." 上次只把 one 改成了 we.
+  - 改写: 第 1397 行: We first test the naive choice: 第 1404 至 1405 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} concentrates near the centre of the well, more strongly than in the interacting system.
+  - 或: 第 1397 行: Let us start from the naive choice: 第 1404 至 1405 行: This choice concentrates the density from equation~\eqref{KS_density_1D_schematic} near the centre of the well, beyond the concentration of the interacting system.
 
 重读新增 (2026-11-12), 都在第 2 章和附录 A. 每处只改几个词:
 
@@ -443,7 +397,7 @@ GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
 - [ ] [project_2_main.tex:693](../../../src/project_2_main.tex#L693) 否定: "This result does not determine superconductivity in the gapped antiferromagnetic HSE06 state."
   - 改写: This result refers to the non-magnetic PBE reference of the monolayer.
   - 或: This coupling describes the non-magnetic PBE reference, separate from the gapped antiferromagnetic HSE06 state.
-- [ ] [project_2_main.tex:709](../../../src/project_2_main.tex#L709) 范围: "... within the stated electronic and vibrational approximations."
+- [ ] [project_2_main.tex:713](../../../src/project_2_main.tex#L713) 范围: "... within the stated electronic and vibrational approximations."
   - 改写: 删去句末的 within the stated electronic and vibrational approximations.
   - 或: ..., whereas the calculations predict phonon-mediated superconductivity in the bulk and the hydrogen-terminated bilayer.
 - [ ] [project_2_main.tex:712](../../../src/project_2_main.tex#L712) 待定: "... remain a limitation of the stability assessment."
