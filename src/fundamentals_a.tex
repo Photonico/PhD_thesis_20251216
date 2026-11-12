@@ -27,7 +27,7 @@ The supporting quantum-mechanical and Thomas--Fermi derivations are collected in
 
 In quantum mechanics, it is often convenient to shift the basic variable from the many-body wave function to the electron density $n(\vec{r}\,)$.
 From this point of view, every relevant physical quantity can be expressed as a functional of the density.
-Therefore, we can realize that a functional takes the density $n(\vec{r}\,)$ as input and returns a quantum-mechanical observable as output.
+Therefore, a functional takes the density $n(\vec{r}\,)$ as input and returns a quantum-mechanical observable as output.
 
 We use the Hartree atomic units defined in subsection~\ref{sec:manybody_schrodinger_equation} of appendix~\ref{cha:appendix_quantum}:
 $\hbar=1$, $m_\mathrm{e}=1$, $e=1$, and $4\mathrm{\pi}\varepsilon_0=1$.
@@ -1268,7 +1268,7 @@ Consequently, if the functional derivative of the non-interacting kinetic energy
 the Kohn--Sham effective potential $v_\mathrm{eff}(\vec{r}\,)$ can be constructed to reproduce $n_0(\vec{r}\,)$.
 In this sense, the auxiliary non-interacting system idea is reasonable.
 
-In practice, the Kohn--Sham equations give the exact electron density in principle~\cite{wagner2014kohn}.
+In principle, the Kohn--Sham equations give the exact electron density~\cite{wagner2014kohn}.
 The only missing piece is the exchange-correlation energy functional $E_\mathrm{xc}[n]$, or equivalently the exchange-correlation potential $v_\mathrm{xc}([n];\vec{r}\,)$.
 We will introduce approximations for it later.
 
@@ -1403,7 +1403,7 @@ We first test the naive choice:
 \label{naive_KS_choice_external_only_1D}
 \end{equation}
 
-Therefore, the density from equation~\eqref{KS_density_1D_schematic} is concentrated near the centre of the well.
+With this choice, the density from equation~\eqref{KS_density_1D_schematic} is concentrated near the centre of the well.
 This concentration is generally excessive.
 Therefore, the missing interaction effects are encoded directly in the local Kohn--Sham potential.
 In the exact solution, this potential develops a central bump~\cite{helbig2009exact}.

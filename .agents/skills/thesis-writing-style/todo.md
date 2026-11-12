@@ -11,32 +11,6 @@
 
 对应 `SKILL.md` 第 7 节的规则.
 
-
-- [ ] [fundamentals_a.tex:59](../../../src/fundamentals_a.tex#L59): 同一行有两处. "the kernel idea of density functional theory is here:" 改为 "the key idea", 句中的冒号改为句号. "the corresponding wave function of ground state $\Psi_0$" 改为 "the corresponding ground-state wave function $\Psi_0$".
-  - 改写: However, density functional theory reduces this dependence even further for the ground-state properties. If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$, the density $n(\vec{r}\,)$ uniquely determines the expectation value of any operator $\hat{\Omega}$ in the ground state.
-  - 或: However, the key idea of density functional theory goes one step further for the ground-state properties. If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$, it also determines the ground-state expectation value of any operator $\hat{\Omega}$.
-  - 建议: 第 59 行目前一行两句, 改写后按一句一行拆开.
-
-- [ ] [appendix_electrodynamics.tex:23](../../../src/appendix_electrodynamics.tex#L23): "The present section does not review a complete lecture of electrodynamics; instead, we only extract ..." 改为 "The present section extracts only the ingredients required for ...". 上次只删了 aim to.
-  - 改写: The present section extracts only the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
-  - 或: From electrodynamics, we extract only the ingredients required for the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
-
-- [ ] [fundamentals_a.tex:1269](../../../src/fundamentals_a.tex#L1269): "In practice, the Kohn--Sham equations give the exact electron density in principle" 改为 "In principle, the Kohn--Sham equations give the exact electron density". 第 591 行删去的 in principle 不是这一处.
-  - 改写: In principle, the Kohn--Sham equations give the exact electron density~\cite{wagner2014kohn}.
-  - 或: With the exact exchange-correlation functional, the Kohn--Sham equations reproduce the exact electron density~\cite{wagner2014kohn}.
-
-- [ ] [fundamentals_a.tex:1406](../../../src/fundamentals_a.tex#L1406): "Therefore, the density from equation~\eqref{KS_density_1D_schematic} is concentrated" 中的 Therefore 不是推论. 第 1399 行已改为 We first test the naive choice:, 这里只是写出这个选择的结果, 而且第 1408 行紧接着又是一个 Therefore.
-  - 改写: 第 1406 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} is concentrated near the centre of the well.
-
-重读新增 (2026-11-12), 都在第 2 章和附录 A. 每处只改几个词:
-
-- [ ] 用词.
-  - [fundamentals_a.tex:30](../../../src/fundamentals_a.tex#L30) "we can realize that" 删去: Therefore, a functional takes the density $n(\vec{r}\,)$ as input and returns a quantum-mechanical observable as output.
-  - [fundamentals_a.tex:82](../../../src/fundamentals_a.tex#L82) "we review the form of hamiltonian" 改为 we recall the form of the hamiltonian.
-  - [fundamentals_a.tex:1212](../../../src/fundamentals_a.tex#L1212) "and achieve the exact ground-state density" 改为 and obtain the exact ground-state density. 与上面 we achieve 那条同类.
-  - [appendix_quantum.tex:641](../../../src/appendix_quantum.tex#L641) "We can find that this integral naturally factors" 改为 This integral naturally factors.
-  - [appendix_quantum.tex:760](../../../src/appendix_quantum.tex#L760) "via the matrix of density" 改为 via the density matrix.
-
 - [ ] 逗号连接了两个完整的句子, 或句子没有主句.
   - [fundamentals_a.tex:106](../../../src/fundamentals_a.tex#L106) "A central example is the electron density, for an arbitrary state" 改为: A central example is the electron density. For an arbitrary state $\ket{\Psi}$, it is defined as the expectation value of the density operator $\hat{n}(\vec{r}\,)$:
   - [fundamentals_a.tex:116](../../../src/fundamentals_a.tex#L116) "Consider a fixed form of interaction, the external potential" 改为 For a fixed form of interaction, the external potential.
