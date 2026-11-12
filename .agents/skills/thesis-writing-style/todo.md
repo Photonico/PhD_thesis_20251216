@@ -149,19 +149,19 @@ GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
 - [ ] [fundamentals_b.tex:256](../../../src/fundamentals_b.tex#L256) 否定: "Therefore, these spectra do not describe the complete low-frequency response of the metallic systems." 第 7 章第 350 行, 第 8 章第 196 行重复了同一限定.
   - 改写: Therefore, these spectra describe the interband part of the low-frequency response of the metallic systems.
   - 或: The free-carrier response of the metals would add to these spectra at low frequency.
-- [ ] [fundamentals_b.tex:731](../../../src/fundamentals_b.tex#L731) 范围: "The resulting reflectivity is a parameter of this effective-medium model." 连同第 712 行.
+- [ ] [fundamentals_b.tex:723](../../../src/fundamentals_b.tex#L723) 范围: "The resulting reflectivity is a parameter of this effective-medium model." 连同第 712 行.
   - 改写: The resulting reflectivity characterizes this effective medium, while the measured reflectance of a finite layer also depends on its thickness, substrate, and optical geometry.
   - 或: The resulting reflectivity belongs to the effective-medium model. A measurement on a finite layer adds the effects of thickness, substrate, and optical geometry.
-- [ ] [fundamentals_b.tex:734](../../../src/fundamentals_b.tex#L734) 对比: "... a formal out-of-plane response of the scalar model, not a second normal-incidence channel of the layer."
+- [ ] [fundamentals_b.tex:726](../../../src/fundamentals_b.tex#L726) 对比: "... a formal out-of-plane response of the scalar model, not a second normal-incidence channel of the layer."
   - 改写: The value obtained from $\varepsilon_{zz}(\omega)$ therefore represents a formal out-of-plane response of the scalar model.
   - 或: The value obtained from $\varepsilon_{zz}(\omega)$ therefore describes the response to a field normal to the layer, within the scalar model.
-- [ ] [fundamentals_b.tex:803](../../../src/fundamentals_b.tex#L803) 规定: "finite momentum and surface contributions require the appropriate scattering geometry."
+- [ ] [fundamentals_b.tex:791](../../../src/fundamentals_b.tex#L791) 规定: "finite momentum and surface contributions require the appropriate scattering geometry."
   - 改写: This loss function describes the corresponding bulk response in electron energy-loss spectroscopy. Finite momentum transfer and surface contributions enter through the scattering geometry.
   - 或: This loss function gives the bulk response measured in electron energy-loss spectroscopy at small momentum transfer.
-- [ ] [fundamentals_b.tex:819](../../../src/fundamentals_b.tex#L819) 否定: "... so a peak alone does not establish a plasmon."
+- [ ] [fundamentals_b.tex:808](../../../src/fundamentals_b.tex#L808) 否定: "... so a peak alone does not establish a plasmon."
   - 改写: Interband excitations also contribute to the loss spectrum, so we identify a plasmon from a loss peak together with a zero of $\varepsilon_{1,\lambda\lambda}(\omega)$~\cite{dressel2002electrodynamics,onida2002electronic}.
   - 或: Interband excitations also produce loss peaks, which we distinguish from plasmons through the behaviour of $\varepsilon_{1,\lambda\lambda}(\omega)$ and $\varepsilon_{2,\lambda\lambda}(\omega)$~\cite{dressel2002electrodynamics,onida2002electronic}.
-- [ ] [fundamentals_b.tex:836](../../../src/fundamentals_b.tex#L836) 否定: "Therefore, a large imaginary part does not by itself produce a strong loss peak." 可改为 "A larger imaginary part therefore lowers the loss peak at the zero crossing."
+- [ ] [fundamentals_b.tex:824](../../../src/fundamentals_b.tex#L824) 否定: "Therefore, a large imaginary part does not by itself produce a strong loss peak." 可改为 "A larger imaginary part therefore lowers the loss peak at the zero crossing."
   - 改写: Therefore, a larger imaginary part lowers the loss peak at the zero crossing.
   - 或: Therefore, the loss peak grows as the damping $\varepsilon_{2,\lambda\lambda}(\omega)$ decreases.
 
@@ -636,9 +636,3 @@ Outlook 一节中的句子:
 - [ ] [appendix_topology.tex:672](../../../src/appendix_topology.tex#L672) 对比: "They are not two separate occupied bands."
   - 建议: 删去. 上一句已经说明两个空间分量构成一个旋量态.
   - 或: Together, they occupy one band.
-
-## 重复与篇幅 (P1)
-
-- [?] 第 3 章与第 7 章用同一组铍烯光谱图, 描述也几乎逐字相同, 例如 [fundamentals_b.tex:677](../../../src/fundamentals_b.tex#L677) 与 [project_3_main.tex:1039](../../../src/project_3_main.tex#L1039).
-  - 方案 A: 第 3 章保留图 3.1 作代表, 图 3.2 至 3.5 保留图片, 每段多句的描述 (第 556 至 567, 676 至 679, 693 至 698, 785 至 790, 850 至 858 行) 各换成一句, 例如: Section~\ref{3_optical_alpha_beta} discusses these spectra of $\alpha$- and $\beta$-beryllene.
-  - 方案 B: 第 3 章只保留图 3.1, 删去图 3.2 至 3.5 及其描述, 各小节改为引用第 7 章对应的图.
