@@ -64,7 +64,7 @@ The relaxed coordinates are converted to Cartesian lengths with periodic wrappin
 The same optical volume normalization is applied to the $xx$, $yy$ and $zz$ components.
 The absolute effective response depends on this thickness convention.
 The endpoint-radius contribution is Be+Be for pristine structures, H+H for double-sided termination, and Be+H for single-sided termination.
-Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value; this is a consequence of the chosen convention and is not a unique physical layer thickness.
+Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value, which is a consequence of the chosen convention.
 Unrounded structure-derived values are used in all calculations.
 The actual total numbers of bands are 140 for each hydrogenated structure,
 133 for pristine $\alpha$-beryllene and trilayer cubic beryllene,
@@ -81,9 +81,9 @@ $\alpha$-beryllene, $\beta$-beryllene, bulk bcc beryllium,
 and trilayer cubic beryllene.
 The plots retain the full range of every curve within the displayed energy window.
 In particular, the bulk hcp $45\times45\times45$ k-point calculation has a large low-energy dielectric response that is visible in figure~\ref{fig:proj3_hcp_dielectric_kpoint_convergence}.
-These comparisons do not establish convergence of the complete low-frequency metallic response, which would also require an intraband treatment.
-The selected reference may change both the k-point grid and the total band count relative to a convergence series;
-it is a final-parameter reference rather than an additional strictly one-parameter convergence point.
+These comparisons test the convergence of the interband response, and the complete low-frequency metallic response would also require an intraband treatment.
+The selected reference may change both the k-point grid and the total band count relative to a convergence series,
+as it is a final-parameter reference.
 
 \begin{figure}[!htbp]
 \centering
@@ -263,7 +263,7 @@ and also calculate the self-consistent harmonic frequency $\Omega$ of this singl
 which satisfies $\Omega^{2}=2a+12b\langle Q^{2}\rangle$,
 with $\langle Q^{2}\rangle=(\hbar/2\Omega)\coth(\hbar\Omega/2k_{\mathrm{B}}T)$.
 The coupling to the other phonon modes is neglected,
-so these values indicate the size of the quantum fluctuations rather than replacing a full anharmonic phonon calculation.
+so these values indicate the size of the quantum fluctuations.
 The results are listed in table~\ref{tab:proj3_soft_mode}.
 For all three smearing values,
 the ground state lies approximately \qty{6}{\milli\electronvolt} above the bottom of the double well,
@@ -415,8 +415,8 @@ and the minimum of trilayer cubic beryllene remains on the $\Gamma$--$\mathrm{M}
 In each case,
 the lower bound obtained by subtracting the largest local slope times the sampling radius from the minimum gap remains positive,
 between 0.65 and \qty{1.07}{\milli\electronvolt}.
-The local refinements locate minima at fixed self-consistent charge density;
-the convergence of these meV gaps with respect to the plane-wave cutoff and the self-consistent k-point mesh has not been tested separately from the total-energy convergence.
+The local refinements locate minima at fixed self-consistent charge density.
+The convergence of these meV gaps with respect to the plane-wave cutoff and the self-consistent k-point mesh has not been tested separately from the total-energy convergence.
 The smallest direct gap of the hydrogen-functionalized structures is \qty{0.177}{\electronvolt}.
 The Wannier charge centres of 1H-$\beta$-beryllene are shown in figure~\ref{fig:proj3_wcc}.
 For both the lowest four and the lowest six bands,
@@ -427,7 +427,7 @@ The parities obtained with the HSE06 hybrid functional without spin-orbit coupli
 The numbers of odd-parity states among the lowest $N/2$ spinless bands agree with the numbers of odd-parity Kramers pairs in PBE with spin-orbit coupling at all four time-reversal invariant momenta,
 so the parity products at these momenta are unchanged.
 This comparison checks the parity ordering at these momenta,
-but does not establish that the lowest-$N$ spinor subspaces remain isolated throughout the Brillouin zone with HSE06 and spin-orbit coupling.
+and the isolation of the lowest-$N$ spinor subspaces throughout the Brillouin zone with HSE06 and spin-orbit coupling is a separate test.
 For 2H-$\beta$-beryllene,
 the gap above band 6 at $\mathrm{M}$ is \qty{0.171}{\electronvolt} with HSE06 and \qty{0.178}{\electronvolt} with PBE in the same cell.
 
@@ -470,8 +470,7 @@ $\mathbb{Z}_2$ indices,
 and smallest gaps $E_{N+1}-E_{N}$ at the time-reversal invariant momenta.
 The HSE06 counts use the lowest $N/2$ spinless states,
 whose parities agree with those of the PBE Kramers pairs.
-The listed $\mathbb{Z}_2$ indices are conditional PBE results with spin-orbit coupling,
-not independently determined HSE06 indices.
+The listed $\mathbb{Z}_2$ indices are conditional PBE results with spin-orbit coupling.
 The HSE06 and PBE gaps are calculated in the same \qty{20}{\angstrom} cell without spin-orbit coupling.
 For trilayer cubic beryllene,
 the boundary of the lowest six bands at $\mathrm{M}$ lies within an orbital doublet of even parity,

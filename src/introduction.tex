@@ -72,7 +72,7 @@ We next consider the properties associated with these different networks.
 Gao et al. calculated electron-phonon coupling in metallic $\beta_{12}$- and $\chi_3$-borophene and predicted superconductivity using the McMillan--Allen--Dynes approach~\cite{gao2017prediction}.
 Zhu et al. used an evolutionary structure search to identify magnetic borophene structures~\cite{zhu2019magnetic}.
 For the optical response, Adamska and Sharifzadeh showed that strain can change the absorption and optical anisotropy of freestanding borophene while the examined sheets remain metallic~\cite{adamska2017}.
-This comparison shows that retaining metallicity does not imply an unchanged optical response.
+This comparison shows that the optical response can change while the sheet remains metallic.
 Changes in the band dispersion and the character of the electronic states can still modify the allowed transitions and their polarization dependence.
 We therefore examine the optical response together with the electronic structure throughout this thesis.
 
@@ -87,7 +87,7 @@ We now ask how interlayer coupling modifies these electronic structures.
 Li et al. studied graphene on a \ce{BC3} monolayer and found that weak interlayer coupling could open a gap in the graphene-derived bands~\cite{li2014tunable}.
 They also showed that the interlayer spacing and in-plane strain could tune this gap while approximately retaining the linear band dispersion.
 This result connects an interface geometry to a change in the electronic states.
-To compare the optical response, we must also determine the transition strengths and their polarization dependence; the gap alone does not specify them.
+To compare the optical response, we also determine the transition strengths and their polarization dependence in addition to the gap.
 
 Experimental studies have also realized related interfaces.
 Liu and Hersam reported both lateral and vertical integration of borophene with graphene~\cite{liu2019borophene}.
@@ -130,10 +130,10 @@ Figure~\ref{fig:intro} illustrates the hydrogen-terminated bilayer model that we
 The preceding discussion followed the effects of interfaces and surface bonding in boron-based systems.
 We now consider beryllium, beginning with the geometry of the layer itself.
 Ono compared ideal two-dimensional metals in several lattice arrangements using first-principles phonon calculations~\cite{ono2020dynamical}.
-The resulting differences in dynamical stability show why a stable bulk element does not automatically produce a stable sheet in every geometry.
+The resulting differences in dynamical stability show that a stable bulk element produces a stable sheet only in some geometries.
 Hess examined periodic trends in two-dimensional bonding among main-group elements~\cite{hess2022periodicity}.
 These studies guide the choice of candidate structures and relate their bonding to the atomic arrangement.
-For each candidate, we must also examine how the atoms respond to displacement.
+For each candidate, we also examine how the atoms respond to displacement.
 
 Chahal et al. prepared beryllene sheets by sonochemical exfoliation of beryllium powder~\cite{chahal2023beryllene}.
 Their microscopy revealed several lattice motifs, including hexagonal and square arrangements, and their transport measurements indicated metallic behaviour.
@@ -152,7 +152,7 @@ We also distinguish the electronic band-topology analysis from the calculation o
 Layer number introduces a further structural variable.
 Jiang et al. examined few-layer beryllene and found that the predicted superconductivity varied non-monotonically with layer number and stacking~\cite{jiang2025nonmonotonic}.
 Their study related these changes to the electronic states and phonon-mediated coupling, and also examined non-trivial topology and interstitial electronic states.
-Thus, adding a layer need not produce a simple interpolation between monolayer and bulk properties.
+Thus, the properties after adding a layer can deviate from a simple interpolation between the monolayer and the bulk.
 The stacking arrangement changes both the interlayer bonding and the surface environment.
 We therefore compare the geometries explicitly instead of classifying the structures only by layer number.
 
@@ -189,12 +189,13 @@ This comparison tests the sensitivity of the electronic and optical trends to th
 To describe quasiparticle excitations, the $GW$ approach approximates the electronic self-energy using the Green function and the screened Coulomb interaction.
 The Bethe--Salpeter equation then incorporates the interaction between the excited electron and the hole~\cite{onida2002electronic}.
 These distinctions are particularly relevant in two-dimensional systems, where screening depends strongly on the environment~\cite{thygesen2017}.
-Our independent-particle optical calculations describe transitions within the adopted electronic structure; they do not include the bound electron-hole excitations of a Bethe--Salpeter treatment.
+Our independent-particle optical calculations describe transitions within the adopted electronic structure.
+They do not include the bound electron-hole excitations of a Bethe--Salpeter treatment.
 
 Next, the electronic comparison requires a consistent structural reference.
 In a heterostructure, we first determine the interlayer separation and atomic registry, then evaluate charge redistribution and band mixing at that geometry.
-Dispersion corrections account for interactions that a semilocal functional alone does not adequately describe and therefore enter the relaxation of the graphene-based bilayers~\cite{grimme2010consistent,grimme2011effect}.
-We must also specify how we represent the optical response.
+Dispersion corrections account for the van der Waals interactions missing from a semilocal functional and therefore enter the relaxation of the graphene-based bilayers~\cite{grimme2010consistent,grimme2011effect}.
+We also specify how we represent the optical response.
 A periodic calculation places a sheet and its surrounding vacuum in the same supercell.
 Consequently, a dielectric quantity normalized to that cell depends on the vacuum spacing.
 Matthes et al. discussed the relation between this response and that of an individual sheet or a film of specified thickness, including the out-of-plane response~\cite{matthes2016influence}.
@@ -245,7 +246,7 @@ Both start from the electronic structure, but they answer different physical que
 \label{subsec:opt_observables_motivation}
 
 The band structure specifies the electronic energies.
-To describe the response to light, we must also determine which transitions couple to the electric field and how strongly they do so.
+To describe the response to light, we also determine which transitions couple to the electric field and how strongly they do so.
 A change in bonding can therefore modify an optical spectrum even when the material remains metallic or semiconducting.
 This is why we compare optical properties alongside the band structures of the isolated layers, heterostructures, and hydrogen-functionalized systems.
 
@@ -269,9 +270,9 @@ When off-diagonal components couple the response, we must solve the correspondin
 We then consider the energy transferred by an external charged probe.
 The energy-loss function depends on the screened response and can contain features associated with collective electronic motion~\cite{thygesen2017}.
 A zero of the real dielectric function together with sufficiently weak damping can support a plasmon interpretation.
-We therefore compare the loss peaks with both parts of the dielectric response, rather than assigning a mode from a peak alone.
+We therefore compare the loss peaks with both parts of the dielectric response before assigning a mode.
 For a two-dimensional sheet, momentum transfer, geometry, and the surrounding dielectric environment also enter the relation to electron energy-loss spectroscopy (EELS).
-Within the stated optical treatment, we use the calculated loss spectra to trace changes in screening and examine possible collective excitations.
+We use the calculated loss spectra to trace changes in screening and examine possible collective excitations.
 
 Finally, we retain the same conventions when comparing the spectra.
 Metallic systems can have an intraband contribution at low frequency, while electron-hole interactions can change interband excitation energies and strengths~\cite{onida2002electronic}.
@@ -283,7 +284,7 @@ With these choices specified, we relate the structural changes to the optical re
 \label{subsec:topo_motivation}
 
 We now turn from the response of the electronic states to their organization across the Brillouin zone.
-Band energies alone do not specify this organization, since they do not contain the full information carried by the wave functions.
+This organization is specified by the wave functions, which contain information beyond the band energies.
 For a two-dimensional insulating system with time-reversal symmetry and the appropriate spinful band description, a non-trivial $\mathbb{Z}_2$ invariant characterizes a phase with helical edge states~\cite{fu2007topological}.
 Time reversal relates the counterpropagating states at an edge and restricts elastic backscattering between a Kramers pair as long as the system preserves that symmetry.
 The invariant thus connects the bulk wave functions to boundary transport.

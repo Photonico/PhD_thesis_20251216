@@ -71,7 +71,7 @@ Accordingly, any ground-state observable may be written as a functional of the d
 \label{ground_state_observable_density_functional}
 \end{equation}
 
-This is not merely a change of notation; it marks the conceptual compression from a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$, to a function of only three spatial variables, $n(\vec{r}\,)$, which is the cornerstone of the practical formulation of DFT.
+This relation marks the conceptual compression from a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$, to a function of only three spatial variables, $n(\vec{r}\,)$, which is the cornerstone of the practical formulation of DFT.
 Historically, the density-functional formalism was established in the 1960s through the pioneering work of Hohenberg and Kohn, and was later made computationally practical by the Kohn--Sham scheme~\cite{kohn1965self}.
 
 Since the many-body wave function $\Psi$ encodes the full complexity of the system, a natural question is the following: what is the ingredient that actually distinguishes one many-electron system from another?
@@ -1696,9 +1696,9 @@ The screened exchange contribution in equation~\eqref{HSE_exchange_correlation_f
 can reduce self-interaction and delocalization errors,
 thereby changing the localization of electronic states and the predicted band gap.
 However, HSE06 remains an approximation.
-A larger band gap does not by itself imply a more accurate result.
+A larger band gap does not imply a more accurate result.
 Therefore, when comparing the results in chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron},
-we need to consider the limitations of both functionals.
+we consider the limitations of both functionals.
 For the beryllene systems in chapter~\ref{cha:project_beryllene}, we use PBE, and test the band gap and the band order with HSE06.
 We discuss this choice and its limitations with the corresponding calculations.
 
@@ -1755,7 +1755,7 @@ here, $\vec{R}_I$ and $\vec{F}_I$ denote the position and force of nucleus $I$.
 The electronic energy is evaluated self-consistently at each nuclear configuration.
 The force therefore connects the electronic problem in equation~\eqref{BO_SE_with_ENN} to the motion of the nuclei.
 When an empirical dispersion correction is included,
-it must also enter the energy and its derivatives used for relaxation.
+it also enters the energy and its derivatives used for relaxation.
 
 We then update the atomic positions and the lattice parameters allowed to vary.
 For example, the electronic and force convergence criteria can be expressed as:
@@ -1776,8 +1776,8 @@ The first condition controls the electronic iteration,
 whereas the second controls the residual forces during structural relaxation.
 If lattice parameters are relaxed, the corresponding stress also needs to be converged.
 
-However, satisfying these stopping criteria does not establish convergence with respect to the plane-wave cutoff or the sampling of reciprocal space.
-We need to examine how these choices affect the physical quantity being compared.
+However, convergence with respect to the plane-wave cutoff and the sampling of reciprocal space is a separate requirement from these stopping criteria.
+We examine how these choices affect the physical quantity being compared.
 For two-dimensional structures, the vacuum separation also controls the interaction between periodically repeated layers.
 The treatment of dispersion interactions is particularly relevant to the interlayer geometry in chapter~\ref{cha:project_bilayers}.
 The actual stopping criteria and numerical settings are given with the calculations in chapters~\ref{cha:project_bilayers}, \ref{cha:project_boron}, and~\ref{cha:project_beryllene}.
@@ -1860,9 +1860,9 @@ and $\bra{\widetilde{p}_a}$ is the corresponding projector.
 The correction restores the rapidly varying part inside the augmentation regions;
 outside these regions, the two partial waves coincide.
 The implemented calculation uses a frozen-core approximation and a finite partial-wave representation.
-The smooth auxiliary density alone is therefore not the reconstructed all-electron density.
+The reconstructed all-electron density therefore consists of the smooth auxiliary density and the augmentation corrections.
 The Quantum ESPRESSO calculations for superconductivity in section~\ref{2_methods} instead use norm-conserving pseudopotentials~\cite{hamann2013optimized}.
-The datasets and their convergence settings must be specified for each calculation.
+The datasets and their convergence settings are specified for each calculation.
 
 Electronic quantities require integration over the Brillouin zone.
 For a quantity $A(\vec{k}\,)$, we approximate its Brillouin-zone average by:
@@ -1882,7 +1882,7 @@ For a slab supercell, the in-plane mesh is refined while the sampling along the 
 The required mesh depends on the reciprocal-cell dimensions and the quantity of interest.
 For a metal, the occupation changes near the Fermi energy make this integration more sensitive to the mesh and occupation broadening.
 We therefore check their effect on the quantity of interest together.
-A high-symmetry path used to display a band structure does not replace this integration mesh.
+A high-symmetry path used to display a band structure is separate from this integration mesh.
 
 By increasing the sampling density, we examine the numerical accuracy of equation~\eqref{brillouin_zone_quadrature}.
 However, a mesh that gives a converged total energy may still be insufficient for an optical spectrum.
@@ -1978,8 +1978,8 @@ the ordinary frequency is $\omega_{\vec{q}s}/(2\mathrm{\pi})$.
 Here, $\omega$ denotes a frequency, rather than the range-separation parameter used in section~\ref{sec:exchange_correlation_functional}.
 
 A negative eigenvalue $\omega_{\vec{q}s}^{2}$ gives an imaginary frequency and indicates a harmonic instability of the reference structure.
-Small imaginary frequencies require convergence checks before they can be attributed to numerical errors.
-The absence of imaginary modes supports harmonic dynamical stability within the wave vectors and numerical accuracy examined.
+Small imaginary frequencies are attributed to numerical errors only after convergence checks.
+The absence of imaginary modes supports harmonic dynamical stability.
 
 We then turn to \textit{ab initio} molecular dynamics (AIMD).
 In the Born--Oppenheimer approximation,
@@ -1999,9 +1999,9 @@ here, the electronic problem is solved at successive nuclear configurations to u
 Phonons examine the local curvature of the energy surface,
 whereas AIMD follows an atomic trajectory on that surface.
 The trajectory tests whether the structure persists at the chosen temperature over the simulated time.
-The ensemble, temperature control, time step, and duration must therefore be specified with each calculation.
+The ensemble, temperature control, time step, and duration are therefore specified with each calculation.
 These two methods address the boron and beryllene structures in chapters~\ref{cha:project_boron} and~\ref{cha:project_beryllene}.
-Neither test alone establishes thermodynamic stability or experimental synthesizability.
+Thermodynamic stability and experimental synthesizability are separate questions from these two tests.
 
 \subsection{Spin polarization and magnetic ordering}
 \label{subsec:method_magnetism}
@@ -2057,15 +2057,13 @@ we can define the energy difference per atom as:
 
 here, $N_\mathrm{at}$ denotes the number of atoms in each comparison cell.
 A negative value favours the antiferromagnetic configuration within this comparison.
-The normalization must be stated when reporting an energy difference,
-and the numerical uncertainty must be small compared with that difference.
+A meaningful comparison states the normalization of the energy difference and keeps the numerical uncertainty small compared with that difference.
 
 In chapter~\ref{cha:project_boron},
 this comparison addresses the competing magnetic states of monolayer o-\ce{B14}.
-A vanishing total spin moment alone does not distinguish an antiferromagnetic state from a non-magnetic state;
-the local spin density is also required.
+The local spin density distinguishes the antiferromagnetic state from the non-magnetic state, as both have a vanishing total spin moment.
 The lowest-energy solution among the configurations examined identifies the preferred state within that set,
-but does not by itself establish magnetic order at finite temperature.
+while magnetic order at finite temperature requires a separate calculation.
 
 \subsection{Electron-phonon coupling and superconductivity}
 \label{subsec:method_elph}
@@ -2116,7 +2114,7 @@ For a uniform mesh of $N_\mathrm{k}$ points in the full Brillouin zone, the tran
 here, $a$ labels a Wannier orbital and $\vec{L}$ labels its cell.
 The matrices $U(\vec{k}\,)$ mix the chosen Bloch states to obtain a smooth, localized representation.
 For an isolated set of bands, this mixing is unitary within that set.
-For entangled bands, a subspace must first be selected within the chosen energy windows.
+For entangled bands, we first select a subspace within the chosen energy windows.
 The factor $1/N_\mathrm{k}$ follows from the cell-normalized Bloch states introduced in equation~\eqref{bloch_state_cell_periodic_method};
 the Wannier states are normalized over the corresponding $N_\mathrm{k}$-cell Born--von Karman supercell.
 
@@ -2137,13 +2135,13 @@ and $h_{ab}^{\mathrm{W}}(\vec{k}\,)$ is the interpolated matrix in the Wannier b
 When the real-space matrix elements are sufficiently localized,
 this Fourier sum can be evaluated on a finer mesh.
 Diagonalizing it gives the interpolated band energies and the transformation back to the band basis.
-The interpolation must be checked against direct calculations in the energy range of interest.
+A comparison with direct calculations in the energy range of interest validates the interpolation.
 
 The electron-phonon perturbation also carries the phonon wave vector $\vec{q}$.
 Its matrix elements therefore require Fourier transformations with respect to both $\vec{k}$ and $\vec{q}$,
 together with the phonon eigenvectors and the electronic band rotations~\cite{giustino2007electron}.
 EPW uses this localized representation to obtain the matrix elements on finer electronic and phonon meshes~\cite{ponce2016epw}.
-Interpolating the band energies alone would not provide the coupling in equation~\eqref{electron_phonon_matrix_element_method}.
+The coupling in equation~\eqref{electron_phonon_matrix_element_method} therefore requires the interpolated matrix elements in addition to the band energies.
 
 For a spin-degenerate metallic normal state with $N(E_\mathrm{F})>0$,
 we use the density of states per unit cell and per spin at the Fermi energy.
@@ -2219,19 +2217,17 @@ the transition temperature is estimated as~\cite{allen-dynes}:
 here, $\mu^*$ denotes the dimensionless screened Coulomb pseudopotential.
 The factor $\hbar\omega_\mathrm{log}/\kB$ converts the phonon frequency scale into a temperature.
 This simplified expression omits the additional strong-coupling and spectral-shape correction factors of the full Allen--Dynes formula.
-Its applicability must be checked for the system considered;
-in particular, it should not be extrapolated through a zero or negative denominator in the exponent.
+The expression applies when the denominator in the exponent, $\lambda-\mu^*(1+0.62\lambda)$, is positive.
 
 The anisotropic Migdal--Eliashberg treatment retains the band, momentum, and frequency dependence of the coupling instead of reducing it to these spectral averages~\cite{margine2013anisotropic}.
 It determines the superconducting gap $\Delta_{n\vec{k}}(\mathrm{i}\omega_j,T)$ together with the electronic renormalization function.
 Here, $\omega_j=(2j+1)\mathrm{\pi}\kB T/\hbar$ denotes a fermionic Matsubara frequency, with integer $j$.
-The averaged function $\alpha^2F(\omega)$ alone does not retain the information required for this anisotropic calculation.
 The transition is determined from the disappearance of the non-zero gap solution upon increasing temperature.
 The corresponding $T_\mathrm{c}$ is therefore a separate result from equation~\eqref{allen_dynes_temperature_estimate}.
 
 Chapter~\ref{cha:project_boron} compares bulk, monolayer, and hydrogen-terminated bilayer o-\ce{B14}.
 Section~\ref{2_superconducting} reports the coupling strengths and transition temperatures.
-The electronic reference state, fine meshes, spectral integration, Coulomb pseudopotential, and form of the transition-temperature estimate must be identified with those results.
+The electronic reference state, fine meshes, spectral integration, Coulomb pseudopotential, and form of the transition-temperature estimate are identified with those results.
 
 At this stage, we have connected the electronic ground-state framework to structural, vibrational, magnetic, and superconducting calculations.
 We now turn to chapter~\ref{cha:fundamentals_b},

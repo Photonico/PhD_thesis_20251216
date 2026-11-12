@@ -26,7 +26,7 @@ its monolayer and bilayer forms,
 and their hydrogen-terminated counterparts using first-principles calculations.
 The pristine monolayer and bilayer show no imaginary phonon frequencies on the calculated paths.
 The hydrogen-terminated bilayer also retains its bonding framework during a finite-temperature simulation,
-although small imaginary phonon frequencies near $\Gamma$ require further convergence checks.
+although it shows small imaginary phonon frequencies near $\Gamma$.
 These structures exhibit a remarkable variety of electronic behaviour,
 including semiconductivity with a band gap of \qty{0.67}{\electronvolt} in the bilayer,
 predicted phonon-mediated superconductivity in the hydrogen-terminated bilayer,
@@ -314,7 +314,7 @@ The displayed bulk spectrum uses the finer $34\times48\times31$ k-point mesh.
 The optical calculations use non-spin-polarized PBE states,
 with Gaussian occupation smearing of \qty{0.01}{\electronvolt} and \texttt{CSHIFT=0.1}~eV.
 No separately parameterized Drude term is added.
-The latter broadening is a numerical parameter, rather than a fitted carrier scattering rate.
+The latter broadening is a numerical parameter.
 The microscopic expression for the dielectric response,
 the Kramers--Kronig relation,
 and the derived optical quantities are introduced in chapter~\ref{cha:fundamentals_b},
@@ -349,7 +349,7 @@ The thickness is defined in figure~\ref{S2.6}.
 The plotted layer spectra retain the same convention for all three diagonal components.
 The resulting magnitudes depend on the chosen $d_{\mathrm{2D}}$.
 For perpendicular polarization, the electrostatic boundary condition differs from the in-plane case,
-so this rescaling should not be identified with a unique intrinsic out-of-plane dielectric constant.
+so this rescaling gives an effective quantity of the chosen convention.
 The derived layer optical quantities are interpreted within this effective-medium convention.
 We note that interband transitions presumably coexist with the plasmons and form a broad background.
 The coexistence of individual transitions and plasmons in the same energy range leads to coupling between the two types of excitations,
@@ -425,7 +425,7 @@ which reinforces the stability of the bonding framework.
 The calculated cohesive energy of bulk o-\ce{B14} is \qty{-6.16}{\electronvolt}.
 Relative to $\alpha$-\ce{B12},
 the reported energy difference of o-\ce{B14} is \qty{0.232}{\electronvolt} per atom~\cite{han2023superconducting}.
-This positive difference does not establish o-\ce{B14} as the thermodynamic ground-state phase.
+This positive difference places o-\ce{B14} above $\alpha$-\ce{B12} in energy.
 
 \subsection{\texorpdfstring{Xene o-\ce{B14}: atomic and electronic structure}{Xene o-B14: atomic and electronic structure}}
 \label{xene_atomic_electronic_structure}
@@ -551,7 +551,7 @@ the hydrogen-terminated bilayer retains its bonding framework over the \qty{5.5}
 as shown in figure~\ref{S2.10}.
 This supports thermal persistence on the simulated time scale.
 Together with the cohesive energies and phonon spectra,
-it does not establish thermodynamic stability against all competing phases or experimental synthesizability.
+it leaves thermodynamic stability against all competing phases and experimental synthesizability as separate questions.
 
 \begin{figure}[!htbp]
 \centering
@@ -588,7 +588,7 @@ as calculated using the HSE06 functional.
 In this HSE06 comparison, the antiferromagnetic configuration is lower in energy than the ferromagnetic configuration
 by approximately \qty{0.02}{\electronvolt} per 14-atom cell.
 This small difference is a zero-temperature energy comparison,
-and does not determine a finite-temperature magnetic ordering temperature.
+and the magnetic ordering temperature requires a separate calculation.
 A small band gap of \qty{0.105}{\electronvolt} opens in the antiferromagnetic case.
 In the non-magnetic state,
 the system is metallic and exhibits a high density of states at the Fermi level.
@@ -629,8 +629,7 @@ In the antiferromagnetic configuration,
 virtual hopping between neighbouring magnetic sites is enhanced because electrons can delocalize onto oppositely aligned spins without violating the Pauli exclusion principle,
 leading to a greater kinetic-energy lowering.
 In contrast, ferromagnetic alignment restricts such virtual hopping processes and reduces the associated kinetic-energy gain.
-This provides a possible interpretation of the calculated HSE06 ordering,
-rather than an independent determination of the exchange mechanism.
+This provides a possible interpretation of the calculated HSE06 ordering.
 
 \begin{figure}[!htbp]
 \centering
@@ -652,8 +651,8 @@ The screened short-range Fock exchange in HSE06,
 as introduced in equation~\eqref{HSE_exchange_correlation_functional},
 partly reduces the self-interaction and delocalization errors of semilocal exchange
 and changes the relative band-edge energies.
-The difference is therefore sensitive to the exchange-correlation approximation;
-neither result alone establishes the experimental gap.
+The difference is therefore sensitive to the exchange-correlation approximation,
+and both values are theoretical estimates of the gap.
 On terminating the bilayer structure with hydrogen,
 the band structure changes dramatically.
 As shown in figure~\ref{fig:h_bilayer_band_dos},
@@ -688,11 +687,11 @@ This value is consistent with the previously reported value of \qty{29.1}{K}~\ci
 The hydrogen-terminated bilayer exhibits a slightly higher electron-phonon coupling strength,
 $\lambda=1.01$,
 but a lower transition temperature of $T_\mathrm{c}=\qty{18.5}{K}$.
-A larger $\lambda$ does not necessarily imply a higher $T_\mathrm{c}$,
+A larger $\lambda$ can accompany a lower $T_\mathrm{c}$,
 since the phonon frequency scale also enters the Allen--Dynes estimate~\cite{migdal1958interaction,marsiglio2020eliashberg,eliashberg1960interactions}.
 The reported monolayer coupling, $\lambda=0.05$, is too weak to support an appreciable transition temperature in this calculation.
 For $\mu^*=0.13$, it is outside the applicable range of the simplified Allen--Dynes expression in equation~\eqref{allen_dynes_temperature_estimate}.
-This result does not determine superconductivity in the gapped antiferromagnetic HSE06 state.
+This result refers to the non-magnetic PBE reference state, separate from the gapped antiferromagnetic HSE06 state.
 
 \begin{figure}[!htbp]
 \centering
@@ -709,11 +708,10 @@ show that the gap distribution shifts towards lower energies as the temperature 
 For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_\mathrm{c}$ above \qty{30}{K}.
 For the hydrogen-terminated bilayer, the whole gap distribution falls into the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_\mathrm{c}$ close to \qty{26}{K}.
 Overall, these results suggest that o-\ce{B14} is unlikely to possess conventional superconductivity in the monolayer phase owing to the extremely weak electron-phonon interaction,
-whereas the bulk and hydrogen-terminated bilayer are predicted to support phonon-mediated superconductivity
-within the stated electronic and vibrational approximations.
+whereas the bulk and hydrogen-terminated bilayer are predicted to support phonon-mediated superconductivity.
 For the hydrogen-terminated bilayer, the small imaginary phonon frequencies discussed in section~\ref{xene_ob14_phonon_dispersion}
-remain a limitation of the stability assessment.
-The Allen--Dynes and anisotropic Migdal--Eliashberg estimates should be compared separately.
+limit the stability assessment.
+The Allen--Dynes and anisotropic Migdal--Eliashberg estimates are separate results.
 
 \subsection{Optical properties}
 \label{2_optical}
@@ -760,10 +758,10 @@ Peaks in the imaginary part of the dielectric function signal strong absorption 
 typically interband excitations. Their energy, width, and intensity reflect the band structure and optical response.
 Except for the bilayer, the structures show a large low-energy response in these metallic reference calculations.
 Since no separately parameterized Drude term is added,
-this response does not by itself determine the free-carrier scattering rate or the dc limit.
+the free-carrier scattering rate and the dc limit lie outside this response.
 The bilayer, on the other hand,
-has a small $\varepsilon_{2}(\omega)$ at low energy despite its PBE semimetallic band structure;
-small band overlap does not require strong optical transitions in every polarization.
+has a small $\varepsilon_{2}(\omega)$ at low energy despite its PBE semimetallic band structure,
+as a small band overlap can coexist with weak optical transitions.
 The dielectric tensor characterizes how the polarization of the material changes in response to an applied electric field.
 For an incident photon,
 the tensor components represent the material response to the electric-field component of the photon along different directions.
@@ -789,7 +787,7 @@ The absorption coefficient is obtained from both parts of the dielectric functio
 $\alpha(\omega)=2\omega k(\omega)/c$,
 as given in equation~\eqref{absorption_coefficient_from_extinction_coefficient}.
 Here, $\omega$ is the angular frequency, with photon energy $E=\hbar\omega$.
-The absorption onset need not coincide with the first maximum of $\varepsilon_{2}(\omega)$.
+The absorption onset can differ from the first maximum of $\varepsilon_{2}(\omega)$.
 The bulk, monolayer, and hydrogen-terminated bilayer show appreciable low-energy absorption in the present reference calculations.
 
 In the visible region of the spectrum, from \qty{1.7}{\electronvolt} to \qty{3.3}{\electronvolt},
@@ -800,17 +798,16 @@ Related first-principles studies have also considered the optical response of bu
 A quantitative comparison requires consistent absorption units and, for the layers, a consistent effective-thickness convention.
 
 The energy-loss spectrum in figure~\ref{fig:ob14_absorption_loss} exhibits several sharp peaks.
-A negative $\varepsilon_1$ alone does not establish a plasmon resonance:
-a loss maximum close to a zero crossing of $\varepsilon_1$, with sufficiently small $\varepsilon_2$,
-provides the relevant optical-limit signature.
-A wave-vector-dependent response would be required to establish the dispersion of a propagating two-dimensional plasmon.
+Beyond a negative $\varepsilon_1$, a loss maximum close to a zero crossing of $\varepsilon_1$, with sufficiently small $\varepsilon_2$,
+provides the optical-limit signature of a plasmon resonance.
+A wave-vector-dependent response would give the dispersion of a propagating two-dimensional plasmon.
 For the $xx$ component, the bulk, monolayer, and hydrogen-terminated bilayer show loss features below approximately \qty{1.5}{\electronvolt}.
 The monolayer also shows a distinct feature in the $yy$ direction.
 The finite $\varepsilon_2(\omega)$ near the corresponding zero crossings indicates damping, especially for the bulk.
 In the out-of-plane direction, the hydrogen-terminated bilayer has a strong peak near \qty{1.6}{\electronvolt}.
 The monolayer has features in the \qtyrange{4}{5}{\electronvolt} region and near \qty{6}{\electronvolt},
 while the bilayer has features around \qtyrange{5}{6}{\electronvolt}.
-The negative-$\varepsilon_1$ intervals and the loss maxima need not have identical boundaries.
+The negative-$\varepsilon_1$ intervals and the loss maxima can have different boundaries.
 
 \begin{figure}[!htbp]
 \centering
@@ -849,7 +846,7 @@ Near a plasmon resonance,
 the dielectric function changes rapidly in both its real and imaginary parts,
 which affects the extinction coefficient and produces sharp features,
 including dips or peaks, near resonances.
-These features follow from the same dielectric function and do not independently distinguish a plasmon from an interband transition.
+These features follow from the same dielectric function, so they repeat the evidence of the loss spectrum for the plasmon assignment.
 
 Specifically, these dips or peaks occur around \qty{0.5}{\electronvolt} and \qty{1.3}{\electronvolt} for the $xx$ component,
 \qty{1.0}{\electronvolt} and \qty{6.0}{\electronvolt} for the $yy$ component,
@@ -876,7 +873,7 @@ and superconducting properties of novel o-\ce{B14}-based structures using densit
 Namely, we considered the three-dimensional bulk as well as the two-dimensional monolayer,
 bilayer, and hydrogen-terminated bilayer.
 The cohesive energies of the monolayer and bilayer are less negative than that of the bulk by \qty{0.35}{\electronvolt} and \qty{0.12}{\electronvolt} per atom, respectively.
-These comparisons concern the calculated cohesive energies rather than a complete thermodynamic phase diagram.
+These comparisons concern the calculated cohesive energies.
 The two-dimensional allotropes of o-\ce{B14} reveal complex properties including semiconductivity in the bilayer with a band gap of \qty{0.67}{\electronvolt},
 magnetism in the monolayer, and predicted phonon-mediated superconductivity in the hydrogen-terminated bilayer.
 The calculated optical properties show absorption in the visible region of the spectrum for the bilayer in the in-plane $xx$ component,
@@ -885,7 +882,7 @@ and the bulk in the out-of-plane $zz$ component.
 
 The metallic reference systems show low-energy in-plane loss features below around \qty{1.5}{\electronvolt},
 while all systems show out-of-plane loss features.
-Their plasmonic interpretation remains subject to damping and the effective-medium treatment of the layers.
+Their plasmonic interpretation depends on the damping and the effective-medium treatment of the layers.
 Interestingly, the monolayer, hydrogen-terminated bilayer, and bulk systems behave as indefinite media,
 for which the real part of the dielectric function in the in-plane and out-of-plane directions has opposite signs.
 This occurs in the region below \qty{2.0}{\electronvolt} for the monolayer and hydrogen-terminated bilayer,

@@ -229,8 +229,7 @@ This point clarifies what the calculated spectra describe.
 The imaginary part reflects the band energies, the occupation pattern,
 and the direction-resolved transition matrix elements.
 The Brillouin-zone integration is evaluated using the k-point sampling discussed in section~\ref{subsec:method_kpoints}.
-Within the adopted independent-particle description,
-the spectra resolve the interband onset, absorption peaks, and directional contrast.
+The spectra resolve the interband onset, absorption peaks, and directional contrast.
 The electron-hole interaction is not included in this approximation.
 
 The tensor indices $\alpha$ and $\beta$ enter directly through the velocity matrix elements.
@@ -253,7 +252,7 @@ $\omega_{\mathrm{p},\lambda}$ is the plasma angular frequency,
 and $\gamma_{\lambda}>0$ is the carrier damping rate.
 For the spectra shown here, we use the independent-particle interband response calculated with VASP,
 without microscopic local-field effects or a Drude contribution from intraband transitions.
-Therefore, these spectra do not describe the complete low-frequency response of the metallic systems.
+Therefore, these spectra describe the interband part of the low-frequency response of the metallic systems.
 
 \subsection{Dielectric response in anisotropic media}
 
@@ -723,8 +722,7 @@ The incident medium therefore satisfies $N_{0,\lambda}(\omega)=1$.
 The resulting reflectivity is a parameter of this effective-medium model.
 For a finite two-dimensional layer, the measured reflectance also depends on the thickness, substrate, and optical geometry.
 At normal incidence on the structural plane, the electric field is in-plane.
-The value obtained from $\varepsilon_{zz}(\omega)$ is therefore a formal out-of-plane response of the scalar model,
-not a second normal-incidence channel of the layer.
+The value obtained from $\varepsilon_{zz}(\omega)$ is therefore a formal out-of-plane response of the scalar model.
 With the complex refractive index $N_{\lambda}(\omega)$ in equation~\eqref{complex_refractive_index_for_absorption_coefficient},
 we then write the amplitude reflection coefficient as:
 
@@ -787,8 +785,8 @@ We now move from surface reflection to energy dissipation inside the medium by e
 
 The energy-loss spectrum $L_{\lambda}(\omega)$ characterizes the energy transferred from an external probe to the medium at an energy transfer $\hbar\omega$.
 Here, we consider a longitudinal perturbation along the principal direction $\lambda$ in the local, long-wavelength limit.
-This loss function describes the corresponding bulk response relevant to electron energy-loss spectroscopy;
-finite momentum and surface contributions require the appropriate scattering geometry.
+This loss function describes the corresponding bulk response relevant to electron energy-loss spectroscopy.
+Finite momentum and surface contributions depend on the scattering geometry.
 
 We first express this principal-axis loss function as~\cite{dressel2002electrodynamics,wooten2013optical,fox2010optical,onida2002electronic}:
 
@@ -805,7 +803,7 @@ but also the screening effect determined by the full complex dielectric function
 For a weakly damped longitudinal collective excitation,
 a loss peak can occur near a zero of $\varepsilon_{1,\lambda\lambda}(\omega)$ when $\varepsilon_{2,\lambda\lambda}(\omega)$ is small.
 Interband excitations also contribute to the loss spectrum,
-so a peak alone does not establish a plasmon~\cite{dressel2002electrodynamics,onida2002electronic}.
+so a plasmon assignment combines a loss peak with the zero of $\varepsilon_{1,\lambda\lambda}(\omega)$~\cite{dressel2002electrodynamics,onida2002electronic}.
 
 Substituting equation~\eqref{direction_resolved_complex_dielectric_function} into equation~\eqref{energy_loss_spectrum_from_inverse_dielectric_function}, we then obtain the explicit expression adopted in the present work:
 
@@ -821,7 +819,7 @@ This expression separates the dissipative channel from the dielectric screening.
 The imaginary part $\varepsilon_{2,\lambda\lambda}(\omega)$ enters both the numerator and the denominator.
 At $\varepsilon_{1,\lambda\lambda}(\omega)=0$ and finite positive $\varepsilon_{2,\lambda\lambda}(\omega)$,
 the loss function is $L_{\lambda}(\omega)=1/\varepsilon_{2,\lambda\lambda}(\omega)$.
-Therefore, a large imaginary part does not by itself produce a strong loss peak.
+Therefore, a larger imaginary part lowers the loss peak at the zero crossing.
 The loss spectrum describes longitudinal screening and complements the transverse absorption and reflection responses~\cite{dressel2002electrodynamics,onida2002electronic}.
 
 Figure~\ref{energy_loss_spectrum_alpha_beta_beryllene} presents the calculated energy-loss $L_{\lambda}(\omega)$ spectra of $\alpha$-beryllene and $\beta$-beryllene for the in-plane and out-of-plane directions.
