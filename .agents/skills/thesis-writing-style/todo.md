@@ -11,24 +11,6 @@
 
 对应 `SKILL.md` 第 7 节的规则.
 
-- [ ] 逗号连接了两个完整的句子, 或句子没有主句.
-  - [fundamentals_a.tex:106](../../../src/fundamentals_a.tex#L106) "A central example is the electron density, for an arbitrary state" 改为: A central example is the electron density. For an arbitrary state $\ket{\Psi}$, it is defined as the expectation value of the density operator $\hat{n}(\vec{r}\,)$:
-  - [fundamentals_a.tex:116](../../../src/fundamentals_a.tex#L116) "Consider a fixed form of interaction, the external potential" 改为 For a fixed form of interaction, the external potential.
-  - [fundamentals_a.tex:281](../../../src/fundamentals_a.tex#L281) "which this subsection further clarifies the character of this mapping" 改为另起一句: This subsection clarifies the character of this mapping.
-  - [fundamentals_a.tex:313](../../../src/fundamentals_a.tex#L313) 句末缺句号, 在 `via equation~\eqref{density_function}` 之后.
-  - [fundamentals_a.tex:303](../../../src/fundamentals_a.tex#L303) "Through the Rayleigh--Ritz variational principle: for the ground-state energy" 改为: According to the Rayleigh--Ritz variational principle, the energy expectation value over any normalized trial wave function $\Phi$ provides an upper bound to the ground-state energy $E_0$ of a given hamiltonian $\hat{H}$:
-  - [fundamentals_a.tex:376](../../../src/fundamentals_a.tex#L376) "Revisit our assumption that" 改为 Under our assumption that.
-  - [fundamentals_a.tex:621](../../../src/fundamentals_a.tex#L621) "Here, we suppose that there is no interaction between these two species, the wave function factorizes as:" 改为: If there is no interaction between these two species, the wave function factorizes as:
-  - [fundamentals_a.tex:676](../../../src/fundamentals_a.tex#L676) "Suppose that we aim to describe the density, the auxiliary system must" 改为 If we aim to describe the density, the auxiliary system must.
-  - [fundamentals_a.tex:925](../../../src/fundamentals_a.tex#L925) "Recall the Kohn--Sham exchange-correlation functional" 改为 Recalling the Kohn--Sham exchange-correlation functional. 这一句到第 927 行的 we obtain: 结束.
-  - [fundamentals_a.tex:987](../../../src/fundamentals_a.tex#L987) "therefore, at self-consistency, we may write" 前面的逗号改句号: Therefore, at self-consistency, we may write:
-  - [fundamentals_a.tex:1049](../../../src/fundamentals_a.tex#L1049) "it is obtained from a set of one-electron orbitals" 改为 which is obtained from a set of one-electron orbitals.
-  - [fundamentals_a.tex:1334](../../../src/fundamentals_a.tex#L1334) "it allows us to examine several simple exactly solvable model systems" 改为 we examine several simple exactly solvable model systems.
-  - [appendix_quantum.tex:706](../../../src/appendix_quantum.tex#L706) "and we work within the set of admissible densities, and equation" 在 densities 后断句: ... admissible densities. Equation~\eqref{particle_number_constraint_density} provides the particle number constraint.
-  - [appendix_quantum.tex:737](../../../src/appendix_quantum.tex#L737) "So that the expectation value of the Coulomb interaction energy reduces to" 改为 The expectation value of the Coulomb interaction energy then reduces to:
-  - [appendix_quantum.tex:952](../../../src/appendix_quantum.tex#L952) "and the external contribution is given by" 去掉 and.
-  - [appendix_quantum.tex:1178](../../../src/appendix_quantum.tex#L1178) "Let us compare with the exact decomposition" 改为 Compared with the exact decomposition, 与第 1179 行连成一句.
-
 ## 3. 防御性句子
 
 GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:

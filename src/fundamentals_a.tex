@@ -105,7 +105,8 @@ Conversely, if the hamiltonian is known, then in principle we may solve its eige
 With the wave function known, any observable can be evaluated as the expectation value of the corresponding operator.
 
 This viewpoint motivates the search for compact descriptors that retain the essential information of the ground state.
-A central example is the electron density, for an arbitrary state $\ket{\Psi}$, the electron density is defined as the expectation value of the density operator $\hat{n}(\vec{r}\,)$:
+A central example is the electron density.
+For an arbitrary state $\ket{\Psi}$, the electron density is defined as the expectation value of the density operator $\hat{n}(\vec{r}\,)$:
 
 \begin{equation}
 \begin{aligned}
@@ -115,7 +116,7 @@ A central example is the electron density, for an arbitrary state $\ket{\Psi}$, 
 \label{electron_densit_via_expectation}
 \end{equation}
 
-Consider a fixed form of interaction, the external potential $v_\mathrm{ext}(\vec{r}\,)$ specifies the corresponding hamiltonian and therefore the ground-state structure.
+For a fixed form of interaction, the external potential $v_\mathrm{ext}(\vec{r}\,)$ specifies the corresponding hamiltonian and therefore the ground-state structure.
 Here $v_\mathrm{ext}(\vec{r}\,)$ is a scalar potential field in real space, whereas $\hat{V}_\mathrm{ext}$ is the associated many-body operator acting on the $N$-electron wave function.
 
 Given the definition of the external potential operator~\eqref{Electron-nucleus_one-body_form}, in coordinate representation, $\hat{V}_\mathrm{ext}$ acts by multiplication with $\sum_i v_\mathrm{ext}(\hat{\vec{r}}_i\,)$.
@@ -280,7 +281,8 @@ Moreover, the wave function is directly related to the density through the stand
 \end{equation}
 
 here, $\Psi$ is normalized and $N$ is the number of particles.
-This means that the external potential $v_\mathrm{ext}$ induces a mapping to the ground-state density $n(\vec r\,)$, which this subsection further clarifies the character of this mapping.
+This means that the external potential $v_\mathrm{ext}$ induces a mapping to the ground-state density $n(\vec r\,)$.
+This subsection further clarifies the character of this mapping.
 
 The strategy to establish this relation is also a reductio ad absurdum argument.
 Suppose there exist two different external potentials $v^{(1)}_\mathrm{ext}(\vec{r}\,)$ and $v^{(2)}_\mathrm{ext}(\vec{r}\,)$ such that $v^{(1)}_\mathrm{ext}(\vec{r}\,)\neq v^{(2)}_\mathrm{ext}(\vec{r}\,)+\mathrm{const.}$
@@ -300,9 +302,9 @@ For each external potential, the total energy can be written as the expectation 
 \label{different_total_energies}
 \end{equation}
 
-We now make the key assumption for contradiction: although the two external potentials, and hence the two ground-state wave functions, are different, they lead to the same ground-state density $n^{(1)}(\vec{r}\,)=n^{(2)}(\vec{r}\,)$, where $n^{(1)}(\vec{r}\,)$ and $n^{(2)}(\vec{r}\,)$ are obtained from $\Psi_0^{(1)}$ and $\Psi_0^{(2)}$, respectively, via equation~\eqref{density_function}
+We now make the key assumption for contradiction: although the two external potentials, and hence the two ground-state wave functions, are different, they lead to the same ground-state density $n^{(1)}(\vec{r}\,)=n^{(2)}(\vec{r}\,)$, where $n^{(1)}(\vec{r}\,)$ and $n^{(2)}(\vec{r}\,)$ are obtained from $\Psi_0^{(1)}$ and $\Psi_0^{(2)}$, respectively, via equation~\eqref{density_function}.
 
-Through the Rayleigh--Ritz variational principle: for the ground-state energy $E_0$ of a given hamiltonian $\hat{H}$, the energy expectation value over any normalized trial wave function $\Phi$ provides an upper bound to the ground-state energy:
+According to the Rayleigh--Ritz variational principle, the energy expectation value over any normalized trial wave function $\Phi$ provides an upper bound to the ground-state energy $E_0$ of a given hamiltonian $\hat{H}$:
 
 \begin{equation}
     E_0\leq \bra{\Phi}\hat{H}\ket{\Phi}
@@ -375,7 +377,7 @@ Vice versa, upon interchanging the roles of the two systems, we analogously obta
 \end{equation}
 
 We are now ready to complete the reductio ad absurdum argument.
-Revisit our assumption that two distinct external potentials $v_\mathrm{ext}^{(1)}(\vec{r}\,)\neq v_\mathrm{ext}^{(2)}(\vec{r}\,)$ yield the same ground-state density $n(\vec{r}\,)=n^{(1)}(\vec{r}\,)=n^{(2)}(\vec{r}\,)$, the Rayleigh--Ritz variational principle leads to the previous ground-state energy inequalities.
+Under our assumption that two distinct external potentials $v_\mathrm{ext}^{(1)}(\vec{r}\,)\neq v_\mathrm{ext}^{(2)}(\vec{r}\,)$ yield the same ground-state density $n(\vec{r}\,)=n^{(1)}(\vec{r}\,)=n^{(2)}(\vec{r}\,)$, the Rayleigh--Ritz variational principle leads to the previous ground-state energy inequalities.
 
 Using $n(\vec{r}\,)=n^{(1)}(\vec{r}\,) = n^{(2)}(\vec{r}\,)$ and adding equations~\eqref{total_energy_inequality_E1}
 and~\eqref{total_energy_inequality_E2}, the integral terms cancel identically, which leads to:
@@ -620,7 +622,7 @@ and those of the second species by $y_1,y_2,\cdots,y_M$.
 
 Therefore, the full many-body wave function reads $\Psi(x_1,x_2,\cdots,x_N;y_1,y_2,\cdots,y_M)$.
 
-Here, we suppose that there is no interaction between these two species, the wave function factorizes as:
+Here, we suppose that there is no interaction between these two species, so that the wave function factorizes as:
 
 \begin{equation}
     \Psi(x_1,x_2,\cdots,x_N;y_1,y_2,\cdots,y_M)
@@ -675,7 +677,7 @@ Therefore, the auxiliary system should be viewed as a simpler description that a
 In our discussion, the density is the central observable, and the auxiliary system is required to reproduce the same density as the original problem.
 
 Moreover, the choice of observables determines how the auxiliary system must be constructed.
-Suppose that we aim to describe the density, the auxiliary system must have enough flexibility to match the density, but it is not required to reproduce the full many-body wave function.
+If we aim to describe the density, the auxiliary system must have enough flexibility to match the density, but it is not required to reproduce the full many-body wave function.
 
 Accordingly, once an auxiliary system is specified, its predictions should be trusted only for those quantities it is designed to reproduce.
 For questions outside this design target, the auxiliary system provides no guarantee of accuracy.
@@ -924,7 +926,7 @@ Let us perform some manipulations on the exact ground-state energy functional~\e
 \label{energy_density_functional_manipulations}
 \end{equation}
 
-Recall the Kohn--Sham exchange-correlation functional~\eqref{Exc_KS_definition},
+Recalling the Kohn--Sham exchange-correlation functional~\eqref{Exc_KS_definition}
 and the Hartree approximation to the total-energy functional~\eqref{hartree_total_energy_functional},
 we obtain:
 
@@ -985,8 +987,8 @@ the stationarity condition can be expressed as the Kohn--Sham equations~\cite{ko
 \label{KS_equation}
 \end{equation}
 
-here, the orbitals are determined by the effective potential $v_\mathrm{eff}([n];\vec{r}\,)$,
-therefore, at self-consistency, we may write:
+here, the orbitals are determined by the effective potential $v_\mathrm{eff}([n];\vec{r}\,)$.
+Therefore, at self-consistency, we may write:
 
 \begin{equation}
     \psi_i(\vec{r}\,)=\psi_i([n];\vec{r}\,)
@@ -1048,7 +1050,7 @@ This auxiliary system is constructed to reproduce the same density:
 \end{equation}
 
 here, $n_\mathrm{s}(\vec{r}\,)$ denotes the ground-state density of the auxiliary non-interacting system,
-it is obtained from a set of one-electron orbitals.
+which is obtained from a set of one-electron orbitals.
 The corresponding one-body potential is denoted by the Kohn--Sham potential $v_\mathrm{eff}([n];\vec{r}\,)$.
 It is chosen such that equation~\eqref{KS_same_density_assumption} holds.
 
@@ -1333,7 +1335,7 @@ We will discuss these approximations later.
 \subsection{Structure and construction of the Kohn--Sham potential}
 
 After the general framework of the Kohn--Sham construction has been established through equations~\eqref{density_with_occupation_number},~\eqref{KS_equations_expansion}, and~\eqref{KS_potential_decomposition},
-it allows us to examine several simple exactly solvable model systems.
+we examine several simple exactly solvable model systems.
 These examples demonstrate the exact form that the Kohn--Sham potential can take.
 They also elucidate why its exchange-correlation component can remain highly non-trivial even though it is still a local multiplicative potential.
 
