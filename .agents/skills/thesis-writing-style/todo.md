@@ -57,11 +57,6 @@
 
 对应 `SKILL.md` 第 7 节的规则.
 
-- [ ] [fundamentals_a.tex:614](../../../src/fundamentals_a.tex#L614), [appendix_electrodynamics.tex:34](../../../src/appendix_electrodynamics.tex#L34): "let us start by" 改为 "let us start with".
-  - 改写: 第 614 行: Firstly, let us start with a system that contains two species of particles.
-  - 或: 第 614 行: Firstly, we consider a system of two particle species.
-  - 改写: appendix_electrodynamics.tex 第 34 行: Let us start with the universal structure of the problem.
-
 - [ ] [fundamentals_a.tex:1028](../../../src/fundamentals_a.tex#L1028): "we achieve:" 改为 "we obtain:".
   - 改写: For the auxiliary non-interacting system, we obtain the Kohn--Sham auxiliary energy functional:
 
