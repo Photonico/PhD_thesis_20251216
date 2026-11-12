@@ -59,13 +59,6 @@ and hence every ground-state observable can be regarded, at least formally, as a
 However, the kernel idea of density functional theory is here: for the ground-state properties, the wave function dependence can be reduced even further. In our statement, if the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding wave function of ground state $\Psi_0$,
 the expectation value of any operator $\hat{\Omega}$ in the ground state is uniquely determined by the density $n(\vec{r}\,)$.
 
-Consequently, every ground-state observable can be written as a (unique) density functional:
-
-\begin{equation}
-    \bra{\Psi_0}\hat{\Omega}\ket{\Psi_0}=\Omega[n(\vec{r}\,)]
-\label{ground_state_observable_expectation_value}
-\end{equation}
-
 Under the usual Hohenberg--Kohn setting (in particular, for a non-degenerate ground state), the density $n(\vec{r}\,)$ uniquely determines the external potential $v_\mathrm{ext}(\vec{r}\,)$ up to an additive constant.
 Consequently, $n(\vec{r}\,)$ fixes the hamiltonian and hence the ground state $\ket{\Psi_0}$ (up to an overall phase).
 This statement is essentially the central result of the Hohenberg--Kohn theorem~\cite{hohenberg1964inhomogeneous}, namely that in the ground state all observables are uniquely determined by the electron density.
@@ -153,12 +146,7 @@ Consequently, the ground-state expectation value of any observable $\hat{\Omega}
 The central move of density functional theory is to further replace the dependence on the wave function by a dependence on the electron density $n(\vec{r}\,)$.
 The key question is whether the map from external potential $v_\mathrm{ext}(\vec{r}\,)$ to the ground-state density $n(\vec{r}\,)$ is likewise invertible in an appropriate sense.
 The first Hohenberg--Kohn theorem answers this in the affirmative for non-degenerate ground states: the ground-state density $n(\vec{r}\,)$ uniquely determines $v_\mathrm{ext}(\vec{r}\,)$ (again up to an additive constant), and hence uniquely fixes the hamiltonian and the corresponding ground state.
-In this sense, all ground-state observables can be regarded as functionals of the density:
-
-\begin{equation}
-    \braket{\hat{\Omega}}=\Omega[n(\vec{r}\,)]
-\label{functional_from_expectation}
-\end{equation}
+In this sense, all ground-state observables can be regarded as functionals of the density.
 
 In the presence of ground-state degeneracy, the strict one-to-one correspondence must be understood at the level of the ground-state subspace; certain observables may then depend on the particular choice of degenerate ground state. This issue is commonly handled through an ensemble formulation (or via a symmetry-breaking limit) to recover a single-valued density-functional description.
 
@@ -441,9 +429,6 @@ Therefore, the ground-state expectation definition~\eqref{functional_from_extern
 here, $\Omega[n(\vec{r}\,)]$ denotes the density functional that yields the ground-state expectation value of $\hat{\Omega}$.
 This observation forms the central premise of density functional theory and motivates the use of the density, rather than the wave function, as the fundamental variable.
 
-As described by equation~\eqref{functional_from_density},
-every ground-state observable is a unique functional of the electron density.
-
 The ground-state energy is the expectation value of the hamiltonian in its ground state.
 According to the decomposition of the hamiltonian in equation~\eqref{hamiltonian_decomposition}, we write:
 
@@ -456,7 +441,7 @@ According to the decomposition of the hamiltonian in equation~\eqref{hamiltonian
 \label{groundstate_energy_decomposition}
 \end{equation}
 
-To generalize this variational picture, for a given admissible density $n(\vec{r}\,)$ we consider wave functions $\Psi$ that yield $n$, and define
+To generalize this variational picture, for a given admissible density $n(\vec{r}\,)$ we consider wave functions $\Psi$ that yield $n$, and define:
 
 \begin{equation}
 \begin{aligned}
@@ -959,6 +944,7 @@ This variational procedure determines the stationary condition of the functional
 
 Accordingly, we introduce a set of Lagrange multipliers $\{\lambda_{ij}\}$ and consider the constrained variation.
 Varying with respect to $\psi_i^\ast(\vec{r}\,)$ generates a one-body eigenvalue problem.
+The detailed derivation is given in subsection~\ref{subsec:KS_variational_derivation}.
 
 Moreover, the functional derivative of the Hartree term produces the Hartree potential:
 
@@ -1067,12 +1053,13 @@ It is chosen such that equation~\eqref{KS_same_density_assumption} holds.
 Consequently, the interacting many-electron problem is mapped to a non-interacting orbital problem with the same density.
 
 \subsection{From variational derivation to the Kohn--Sham equations}
+\label{subsec:KS_variational_derivation}
 
 To determine the orbitals in the Kohn--Sham scheme,
 we start from the density built from orbitals in equation~\eqref{density_with_occupation_number}.
 We are going to apply the variational principle and minimize the total energy with respect to the orbitals.
 
-Firstly, we introduce the one-body kinetic operator in the single-particle Hilbert space
+Firstly, we introduce the one-body kinetic operator in the single-particle Hilbert space:
 
 \begin{equation}
     \hat{K}\coloneqq

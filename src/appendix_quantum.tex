@@ -428,7 +428,7 @@ and its corresponding Heisenberg-picture counterpart is defined by the unitary t
 \label{Heisenberg-picture_density_operator}
 \end{equation}
 
-Its time derivative follows from the Heisenberg equation of motion,
+Its time derivative follows from the Heisenberg equation of motion:
 
 \begin{equation}
     \frac{\partial}{\partial t}\hat n_\mathrm{H}(\vec{r},t)
@@ -466,7 +466,7 @@ The Heisenberg-picture current operator can now be introduced:
 \label{heisenberg-picture_current_operator}
 \end{equation}
 
-here, $\hat{\vec{p}}_i$ is the momentum operator of particle $i$. A direct commutator calculation then yields
+here, $\hat{\vec{p}}_i$ is the momentum operator of particle $i$. A direct commutator calculation then yields:
 
 \begin{equation}
     \frac{\mathrm{i}}{\hbar}\left[\hat{T}_\mathrm{e},\hat n_\mathrm{H}(\vec{r},t)\right]
@@ -528,7 +528,7 @@ we can represent the expectation value as:
 \label{observables_N-body}
 \end{equation}
 
-Therefore, we may regard the expectation value of the observable as a functional of the many-body wave function $\Psi$, and write
+Therefore, we may regard the expectation value of the observable as a functional of the many-body wave function $\Psi$, and write:
 
 \begin{equation}
 \Omega[\Psi] = \bra{\Psi}\hat{\Omega}\ket{\Psi}
@@ -626,7 +626,8 @@ A central challenge is that evaluating the expectation value in equation~\eqref{
 
 Our aim is to express the expectation values, which are, in principle, highly complex functionals, in terms of a single simple function, so that practical approximations become possible.
 
-Next, recall the general expression for an observable in a many-body system: equation~\eqref{observables_N-body}. If the observable is a local one-body operator, we have:
+Next, recall the general expression for an observable in a many-body system in equation~\eqref{observables_N-body}.
+If the observable is a local one-body operator, we have:
 
 \begin{equation}
 \begin{aligned}
@@ -666,7 +667,7 @@ To recover the spin-summed spatial density, we write a discrete sum over the spi
 \label{sum_spatial_density}
 \end{equation}
 
-or use an integral notation for the spin index,
+or use an integral notation for the spin index:
 
 \begin{equation}
     n(\vec{r}\,)=\int\mathrm{d}\sigma\,n(\vec{r},\sigma)
@@ -832,7 +833,7 @@ Our goal is to find a single descriptor $Q$ such that, once $Q$ is known, all th
 
 In other words, $Q$ is chosen to retain exactly the information needed for the set $\{\Omega_i\}$, while discarding irrelevant microscopic details.
 
-In particular, we set $Q \coloneqq n(x)$. In the following, we take the particle density $n(x)$ as the basic variable, as it provides a compact descriptor of the ground state. In this statement, $x$ denotes a combined space-spin coordinate, $x=(\vec{r},\sigma)$, so that we can represent the one-body (spin-resolved) density as $n(x)$:
+In particular, we set $Q \coloneqq n(x)$. In the following, we take the particle density $n(x)$ as the basic variable, as it provides a compact descriptor of the ground state. In this statement, $x$ denotes a combined space-spin coordinate, $x=(\vec{r},\sigma)$, so that we can represent the one-body (spin-resolved) density as $n(x)$.
 
 Firstly, the particle density $n(x)$ yields exactly all local one-body observables. For an operator of the form $\hat{\Omega}^{(1)}=\sum_{j=1}^N \Omega_1(x_j)$, one has:
 
@@ -991,8 +992,8 @@ we apply this homogeneous result locally by replacing $n$ with $n(\vec{r}\,)$ an
 This yields the Thomas--Fermi kinetic energy functional in equation~\eqref{tf_functional}~\cite{thomas1927calculation,fermi1927metodo,mi2023orbital}.
 This expression holds for a spin-unpolarized system.
 
-Therefore, we arrive at the full Thomas--Fermi energy functional as a functional of the electron density~\cite{garcia2007efficient,xu2024recent}.
 The nucleus-nucleus contribution $E_\mathrm{NN}$ is omitted since it does not depend on $n(\vec{r}\,)$.
+Therefore, we arrive at the full Thomas--Fermi energy functional as a functional of the electron density~\cite{garcia2007efficient,xu2024recent}:
 
 \begin{equation}
 \begin{aligned}
