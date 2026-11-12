@@ -39,7 +39,7 @@ To describe this process, we first introduce the density operator:
 \label{density_operator}
 \end{equation}
 
-Next, we can define the electron density of ground state as its expectation value in the ground state:
+Next, the expectation value of this operator in the ground state defines the ground-state electron density
 
 \begin{equation}
     n(\vec{r}\,)\coloneqq\bra{\Psi_0}\hat{n}(\vec{r}\,)\ket{\Psi_0}
@@ -56,7 +56,9 @@ Given an observable represented by an operator $\hat{\Omega}$, its ground-state 
 
 and hence every ground-state observable can be regarded, at least formally, as a functional of the many-body wave function $\Omega[\Psi_0]=\Omega$.
 
-However, the kernel idea of density functional theory is here: for the ground-state properties, the wave function dependence can be reduced even further. In our statement, if the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding wave function of ground state $\Psi_0$,
+However, the key idea of density functional theory is here.
+For the ground-state properties, the wave function dependence can be reduced even further.
+If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$,
 the expectation value of any operator $\hat{\Omega}$ in the ground state is uniquely determined by the density $n(\vec{r}\,)$.
 
 Under the usual Hohenberg--Kohn setting (in particular, for a non-degenerate ground state), the density $n(\vec{r}\,)$ uniquely determines the external potential $v_\mathrm{ext}(\vec{r}\,)$ up to an additive constant.
@@ -178,7 +180,7 @@ Subtracting the two equations yields:
 \label{difference_eigen}
 \end{equation}
 
-Review the expression of the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
+Review the expression for the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
 Since $\hat{T}$ and $\hat{V}_\mathrm{int}$ are identical in $\hat{H}_1$ and $\hat{H}_2$, the difference comes entirely from the external potential term.
 Therefore, for an $N$-electron system, we have:
 
@@ -1023,7 +1025,7 @@ here, $\left[v(\vec{r}\,)\right]$ denotes the equivalence class of potentials th
 
 This shows that once the density $n(\vec{r}\,)$ is given, the effective potential $v_\mathrm{eff}([n];\vec{r}\,)$ is fixed up to an additive constant.
 
-Therefore, in this non-interacting Kohn--Sham auxiliary system, we process the corresponding total ground-state energy as a functional of the density, and denote it by $E_\mathrm{s}[n]$.
+Therefore, in this non-interacting Kohn--Sham auxiliary system, we regard the corresponding total ground-state energy as a functional of the density, and denote it by $E_\mathrm{s}[n]$.
 
 For the auxiliary non-interacting system, we achieve the Kohn--Sham auxiliary energy functional:
 
@@ -1394,7 +1396,7 @@ The Kohn--Sham auxiliary system is designed to reproduce exactly the same ground
 \label{KS_exact_density_matching_1D}
 \end{equation}
 
-If we start from the naive choice:
+We first test the naive choice:
 
 \begin{equation}
     v_\mathrm{KS}([n];x)=v_\mathrm{ext}(x)
@@ -1414,7 +1416,7 @@ we define the Hartree-exchange-correlation potential:
 \label{Hxc_potential_definition_1D}
 \end{equation}
 
-Accordingly, we can process this central bump as a feature of the Hartree-exchange-correlation potential $v_\mathrm{Hxc}([n];x)$.
+Accordingly, we regard this central bump as a feature of the Hartree-exchange-correlation potential $v_\mathrm{Hxc}([n];x)$.
 It works to suppress charge accumulation near the origin and thereby enforce equation~\eqref{KS_exact_density_matching_1D}.
 Therefore, the exact Kohn--Sham potential $v_\mathrm{KS}([n];x)$ is not merely a shifted harmonic well.
 
@@ -1425,7 +1427,7 @@ By contrast, in our auxiliary non-interacting system,
 both electrons would tend to occupy the energetically more favourable well.
 
 Therefore, the exact Kohn--Sham potential $v_\mathrm{KS}([n];x)$ must develop an additional structure that redistributes the charge correctly.
-Schematically, it demonstrates as:
+Schematically, this structure reads:
 
 \begin{equation}
 v_\mathrm{KS}([n];x)\approx\left\{

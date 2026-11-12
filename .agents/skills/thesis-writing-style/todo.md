@@ -11,38 +11,11 @@
 
 对应 `SKILL.md` 第 7 节的规则.
 
-- [ ] [fundamentals_a.tex:1028](../../../src/fundamentals_a.tex#L1028): "we achieve:" 改为 "we obtain:".
-  - 改写: For the auxiliary non-interacting system, we obtain the Kohn--Sham auxiliary energy functional:
-
-- [ ] [fundamentals_a.tex:1038](../../../src/fundamentals_a.tex#L1038), [fundamentals_a.tex:1425](../../../src/fundamentals_a.tex#L1425): "we process X as", "we can process X as" 改为 "we treat X as" 或 "we regard X as".
-  - 改写: 第 1038 行: Therefore, we treat the ground-state energy of this non-interacting auxiliary system as a functional of the density, and denote it by $E_s[n]$.
-  - 或: 第 1038 行: Therefore, we regard the total ground-state energy of the non-interacting Kohn--Sham system as a density functional $E_s[n]$.
-  - 改写: 第 1425 至 1426 行: Accordingly, we regard this central bump as a feature of the Hartree-exchange-correlation potential $v_\mathrm{Hxc}([n];x)$. It suppresses charge accumulation near the origin and thereby enforces equation~\eqref{KS_exact_density_matching_1D}.
-
-- [ ] [fundamentals_a.tex:669](../../../src/fundamentals_a.tex#L669): "the problem degenerates to" 改为 "the problem reduces to".
-  - 改写: In this situation, the nuclei act as fixed sources of the external potential, and the problem reduces to an interacting electron system in the prescribed potential $v_\mathrm{ext}(\vec{r}\,)$.
-  - 或: In this situation, the nuclei act as fixed sources of the external potential, and we are left with interacting electrons in the prescribed potential $v_\mathrm{ext}(\vec{r}\,)$.
-
-- [ ] [fundamentals_a.tex:42](../../../src/fundamentals_a.tex#L42): "the electron density of ground state" 改为 "the ground-state electron density".
-  - 改写: Next, we define the ground-state electron density as the expectation value of this operator in the ground state:
-  - 或: Next, the expectation value of this operator in the ground state defines the ground-state electron density:
 
 - [ ] [fundamentals_a.tex:59](../../../src/fundamentals_a.tex#L59): 同一行有两处. "the kernel idea of density functional theory is here:" 改为 "the key idea", 句中的冒号改为句号. "the corresponding wave function of ground state $\Psi_0$" 改为 "the corresponding ground-state wave function $\Psi_0$".
   - 改写: However, density functional theory reduces this dependence even further for the ground-state properties. If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$, the density $n(\vec{r}\,)$ uniquely determines the expectation value of any operator $\hat{\Omega}$ in the ground state.
   - 或: However, the key idea of density functional theory goes one step further for the ground-state properties. If the ground-state density $n(\vec{r}\,)$ uniquely specifies the corresponding ground-state wave function $\Psi_0$, it also determines the ground-state expectation value of any operator $\hat{\Omega}$.
   - 建议: 第 59 行目前一行两句, 改写后按一句一行拆开.
-
-- [ ] [fundamentals_a.tex:1426](../../../src/fundamentals_a.tex#L1426): "it demonstrates as:" 改为 "it takes the form:".
-  - 改写: Schematically, it takes the form:
-  - 或: Schematically, this structure reads:
-
-- [ ] [fundamentals_a.tex:181](../../../src/fundamentals_a.tex#L181): "Review the expression of ..." 改为 "Recall the expression for ...".
-  - 改写: Recall the expression for the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
-  - 或: Let us recall the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
-
-- [ ] [appendix_quantum.tex:212](../../../src/appendix_quantum.tex#L212): "We adopt $i$ labels the electrons and $I$ labels nuclei." 改为 "We use $i$ to label the electrons and $I$ to label the nuclei."
-  - 改写: We use $i$ to label the electrons and $I$ to label the nuclei.
-  - 或: Lower-case indices $i$ label the electrons, and upper-case indices $I$ label the nuclei.
 
 - [ ] [appendix_electrodynamics.tex:23](../../../src/appendix_electrodynamics.tex#L23): "The present section does not review a complete lecture of electrodynamics; instead, we only extract ..." 改为 "The present section extracts only the ingredients required for ...". 上次只删了 aim to.
   - 改写: The present section extracts only the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
@@ -52,9 +25,8 @@
   - 改写: In principle, the Kohn--Sham equations give the exact electron density~\cite{wagner2014kohn}.
   - 或: With the exact exchange-correlation functional, the Kohn--Sham equations reproduce the exact electron density~\cite{wagner2014kohn}.
 
-- [ ] [fundamentals_a.tex:1397](../../../src/fundamentals_a.tex#L1397) 和 [fundamentals_a.tex:1404](../../../src/fundamentals_a.tex#L1404): "If we start from the naive choice:" 仍没有主句. 改为 "We first test the naive choice:", 第 1404 行改为 "With this choice, the density ... concentrates near the centre of the well." 上次只把 one 改成了 we.
-  - 改写: 第 1397 行: We first test the naive choice: 第 1404 至 1405 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} concentrates near the centre of the well, more strongly than in the interacting system.
-  - 或: 第 1397 行: Let us start from the naive choice: 第 1404 至 1405 行: This choice concentrates the density from equation~\eqref{KS_density_1D_schematic} near the centre of the well, beyond the concentration of the interacting system.
+- [ ] [fundamentals_a.tex:1406](../../../src/fundamentals_a.tex#L1406): "Therefore, the density from equation~\eqref{KS_density_1D_schematic} is concentrated" 中的 Therefore 不是推论. 第 1399 行已改为 We first test the naive choice:, 这里只是写出这个选择的结果, 而且第 1408 行紧接着又是一个 Therefore.
+  - 改写: 第 1406 行: With this choice, the density from equation~\eqref{KS_density_1D_schematic} is concentrated near the centre of the well.
 
 重读新增 (2026-11-12), 都在第 2 章和附录 A. 每处只改几个词:
 
@@ -156,66 +128,66 @@ GPT 润色时常写这类句子. 每条后面标出类型, 改法如下:
 - [ ] [fundamentals_a.tex:72](../../../src/fundamentals_a.tex#L72) 对比: "This is not merely a change of notation; it marks ..." 见 references/examples.md 的 B5.
   - 改写: This step compresses a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$, into a function of three spatial variables, $n(\vec{r}\,)$. This compression forms the basis of practical density functional theory.
   - 或: This replacement reduces the number of variables from $3N$ in $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$ to three in $n(\vec{r}\,)$, and it forms the basis of practical density functional theory.
-- [ ] [fundamentals_a.tex:1693](../../../src/fundamentals_a.tex#L1693) 否定: "A larger band gap does not by itself imply a more accurate result."
+- [ ] [fundamentals_a.tex:1697](../../../src/fundamentals_a.tex#L1697) 否定: "A larger band gap does not by itself imply a more accurate result."
   - 改写: Experiment or a quasiparticle calculation determines which of the two gaps is more accurate.
   - 或: 与上一句合并为: HSE06 remains an approximation, and experiment determines which predicted gap is more accurate.
-- [ ] [fundamentals_a.tex:1695](../../../src/fundamentals_a.tex#L1695) 规定: "... we need to consider the limitations of both functionals."
+- [ ] [fundamentals_a.tex:1699](../../../src/fundamentals_a.tex#L1699) 规定: "... we need to consider the limitations of both functionals."
   - 改写: Therefore, in chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron}, we compare the PBE and HSE06 results side by side.
   - 或: Therefore, chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron} report both the PBE and the HSE06 results.
-- [ ] [fundamentals_a.tex:1752](../../../src/fundamentals_a.tex#L1752) 规定: "... it must also enter the energy and its derivatives used for relaxation."
+- [ ] [fundamentals_a.tex:1756](../../../src/fundamentals_a.tex#L1756) 规定: "... it must also enter the energy and its derivatives used for relaxation."
   - 改写: An empirical dispersion correction, when included, enters both the energy and the forces used for relaxation.
   - 或: When we include an empirical dispersion correction, it contributes to both the energy and its derivatives.
-- [ ] [fundamentals_a.tex:1773](../../../src/fundamentals_a.tex#L1773) 否定: "... satisfying these stopping criteria does not establish convergence with respect to the plane-wave cutoff ..."
+- [ ] [fundamentals_a.tex:1777](../../../src/fundamentals_a.tex#L1777) 否定: "... satisfying these stopping criteria does not establish convergence with respect to the plane-wave cutoff ..."
   - 改写: We therefore test the plane-wave cutoff and the reciprocal-space sampling separately.
   - 或: The plane-wave cutoff and the sampling of reciprocal space are converged in separate tests.
-- [ ] [fundamentals_a.tex:1857](../../../src/fundamentals_a.tex#L1857) 否定: "The smooth auxiliary density alone is therefore not the reconstructed all-electron density."
+- [ ] [fundamentals_a.tex:1861](../../../src/fundamentals_a.tex#L1861) 否定: "The smooth auxiliary density alone is therefore not the reconstructed all-electron density."
   - 改写: The all-electron density therefore combines the smooth auxiliary density with these augmentation corrections.
   - 或: The augmentation corrections therefore restore the all-electron density from the smooth auxiliary density.
-- [ ] [fundamentals_a.tex:1859](../../../src/fundamentals_a.tex#L1859) 规定: "The datasets and their convergence settings must be specified for each calculation." 见 references/examples.md 的 B3.
+- [ ] [fundamentals_a.tex:1863](../../../src/fundamentals_a.tex#L1863) 规定: "The datasets and their convergence settings must be specified for each calculation." 见 references/examples.md 的 B3.
   - 改写: The research chapters report the datasets and their convergence settings.
   - 或: Each research chapter lists the PAW datasets or pseudopotentials together with their convergence settings.
-- [ ] [fundamentals_a.tex:1879](../../../src/fundamentals_a.tex#L1879) 否定: "A high-symmetry path used to display a band structure does not replace this integration mesh."
+- [ ] [fundamentals_a.tex:1883](../../../src/fundamentals_a.tex#L1883) 否定: "A high-symmetry path used to display a band structure does not replace this integration mesh."
   - 改写: The integration uses this mesh, whereas a high-symmetry path only displays the band structure.
   - 或: We use the uniform mesh for integration and the high-symmetry path for display.
-- [ ] [fundamentals_a.tex:1975](../../../src/fundamentals_a.tex#L1975) 规定: "Small imaginary frequencies require convergence checks before they can be attributed to numerical errors."
+- [ ] [fundamentals_a.tex:1979](../../../src/fundamentals_a.tex#L1979) 规定: "Small imaginary frequencies require convergence checks before they can be attributed to numerical errors."
   - 改写: For small imaginary frequencies, convergence tests distinguish numerical errors from a physical instability.
   - 或: Convergence tests with respect to the supercell size and the sampling separate numerical errors from a physical instability.
-- [ ] [fundamentals_a.tex:1976](../../../src/fundamentals_a.tex#L1976) 范围: "... within the wave vectors and numerical accuracy examined."
+- [ ] [fundamentals_a.tex:1980](../../../src/fundamentals_a.tex#L1980) 范围: "... within the wave vectors and numerical accuracy examined."
   - 改写: The absence of imaginary modes supports harmonic dynamical stability of the structure.
   - 或: A spectrum without imaginary modes indicates harmonic dynamical stability on the calculated wave-vector grid.
-- [ ] [fundamentals_a.tex:1996](../../../src/fundamentals_a.tex#L1996) 规定: "... must therefore be specified with each calculation." 见 references/examples.md 的 B3.
+- [ ] [fundamentals_a.tex:2000](../../../src/fundamentals_a.tex#L2000) 规定: "... must therefore be specified with each calculation." 见 references/examples.md 的 B3.
   - 改写: Each research chapter therefore reports the ensemble, thermostat, time step, and duration of its trajectories.
   - 或: Sections~\ref{2_methods} and~\ref{3_methods} list these settings for each trajectory.
-- [ ] [fundamentals_a.tex:1998](../../../src/fundamentals_a.tex#L1998) 否定: "Neither test alone establishes thermodynamic stability or experimental synthesizability."
+- [ ] [fundamentals_a.tex:2002](../../../src/fundamentals_a.tex#L2002) 否定: "Neither test alone establishes thermodynamic stability or experimental synthesizability."
   - 改写: Thermodynamic stability and synthesizability further depend on the competing phases and the preparation conditions.
   - 或: Together, the two tests characterize local stability and thermal persistence, while thermodynamic stability follows from a comparison with competing phases.
-- [ ] [fundamentals_a.tex:2054](../../../src/fundamentals_a.tex#L2054) 规定: "The normalization must be stated when reporting an energy difference, and the numerical uncertainty must be small ..."
+- [ ] [fundamentals_a.tex:2058](../../../src/fundamentals_a.tex#L2058) 规定: "The normalization must be stated when reporting an energy difference, and the numerical uncertainty must be small ..."
   - 改写: We state the normalization of each energy difference and compare the difference with the numerical uncertainty.
   - 或: Each energy difference carries its normalization, here per atom, and its size relative to the numerical uncertainty.
-- [ ] [fundamentals_a.tex:2059](../../../src/fundamentals_a.tex#L2059) 否定: "A vanishing total spin moment alone does not distinguish an antiferromagnetic state from a non-magnetic state;"
+- [ ] [fundamentals_a.tex:2063](../../../src/fundamentals_a.tex#L2063) 否定: "A vanishing total spin moment alone does not distinguish an antiferromagnetic state from a non-magnetic state;"
   - 改写: The local spin density distinguishes an antiferromagnetic state from a non-magnetic state, since both have a vanishing total spin moment.
   - 或: Both an antiferromagnetic state and a non-magnetic state have a vanishing total moment, and the local spin density separates them.
-- [ ] [fundamentals_a.tex:2062](../../../src/fundamentals_a.tex#L2062) 否定: "... but does not by itself establish magnetic order at finite temperature."
+- [ ] [fundamentals_a.tex:2066](../../../src/fundamentals_a.tex#L2066) 否定: "... but does not by itself establish magnetic order at finite temperature."
   - 改写: The lowest-energy solution identifies the preferred state among the configurations examined. Magnetic order at finite temperature further depends on the exchange interactions and the magnetic anisotropy.
   - 或: The lowest-energy solution identifies the preferred zero-temperature state among the configurations examined.
-- [ ] [fundamentals_a.tex:2113](../../../src/fundamentals_a.tex#L2113) 规定: "For entangled bands, a subspace must first be selected within the chosen energy windows."
+- [ ] [fundamentals_a.tex:2117](../../../src/fundamentals_a.tex#L2117) 规定: "For entangled bands, a subspace must first be selected within the chosen energy windows."
   - 改写: For entangled bands, we first select a subspace within the chosen energy windows.
   - 或: For entangled bands, a disentanglement step first selects a subspace within the chosen energy windows.
-- [ ] [fundamentals_a.tex:2134](../../../src/fundamentals_a.tex#L2134) 规定: "The interpolation must be checked against direct calculations in the energy range of interest."
+- [ ] [fundamentals_a.tex:2138](../../../src/fundamentals_a.tex#L2138) 规定: "The interpolation must be checked against direct calculations in the energy range of interest."
   - 改写: We check the interpolation against direct calculations in the energy range of interest.
   - 或: A comparison with direct calculations in the energy range of interest validates the interpolation.
-- [ ] [fundamentals_a.tex:2140](../../../src/fundamentals_a.tex#L2140) 否定: "Interpolating the band energies alone would not provide the coupling ..."
+- [ ] [fundamentals_a.tex:2144](../../../src/fundamentals_a.tex#L2144) 否定: "Interpolating the band energies alone would not provide the coupling ..."
   - 改写: EPW therefore interpolates the matrix elements in equation~\eqref{electron_phonon_matrix_element_method} together with the band energies.
   - 建议: 删去. 前两句已经说明需要对 $\vec{k}$ 和 $\vec{q}$ 两个变量做 Fourier 变换.
-- [ ] [fundamentals_a.tex:2216](../../../src/fundamentals_a.tex#L2216) 规定: "Its applicability must be checked for the system considered;"
+- [ ] [fundamentals_a.tex:2220](../../../src/fundamentals_a.tex#L2220) 规定: "Its applicability must be checked for the system considered;"
   - 改写: The expression applies when the denominator $\lambda-\mu^*(1+0.62\lambda)$ in the exponent remains positive.
   - 或: The expression holds for $\lambda>\mu^*(1+0.62\lambda)$, which keeps the denominator in the exponent positive.
-- [ ] [fundamentals_a.tex:2217](../../../src/fundamentals_a.tex#L2217) 规定: "... it should not be extrapolated through a zero or negative denominator in the exponent."
+- [ ] [fundamentals_a.tex:2221](../../../src/fundamentals_a.tex#L2221) 规定: "... it should not be extrapolated through a zero or negative denominator in the exponent."
   - 建议: 与上一条是同一句, 按上一条一并改写.
-- [ ] [fundamentals_a.tex:2222](../../../src/fundamentals_a.tex#L2222) 否定: "The averaged function $\alpha^2F(\omega)$ alone does not retain the information required ..."
+- [ ] [fundamentals_a.tex:2226](../../../src/fundamentals_a.tex#L2226) 否定: "The averaged function $\alpha^2F(\omega)$ alone does not retain the information required ..."
   - 改写: This anisotropic calculation uses the band- and momentum-resolved coupling, which the averaged function $\alpha^2F(\omega)$ integrates out.
   - 或: The anisotropic treatment works with the full coupling $g_{mn,s}(\vec{k},\vec{q}\,)$, whereas $\alpha^2F(\omega)$ keeps only its Fermi-surface average.
-- [ ] [fundamentals_a.tex:2228](../../../src/fundamentals_a.tex#L2228) 规定: "... must be identified with those results."
+- [ ] [fundamentals_a.tex:2232](../../../src/fundamentals_a.tex#L2232) 规定: "... must be identified with those results."
   - 改写: Section~\ref{2_methods} lists the electronic reference state, fine meshes, spectral integration, Coulomb pseudopotential, and transition-temperature estimate used for those results.
   - 或: We report these results together with the electronic reference state, fine meshes, spectral integration, Coulomb pseudopotential, and form of the transition-temperature estimate.
 
