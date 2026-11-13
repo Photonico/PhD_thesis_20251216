@@ -31,6 +31,8 @@ beyond $\alpha$-beryllene,
 trilayer cubic beryllene has a conditional non-trivial $\mathbb{Z}_2$ index for its lowest six bands,
 which are isolated only by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} above the Fermi level,
 whereas all hydrogen-functionalized structures are trivial.
+Electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene,
+with the highest anisotropic Migdal--Eliashberg transition temperature of approximately \qty{31.7}{\kelvin} in 2H-$\beta$-beryllene.
 These results identify beryllene as an elemental two-dimensional platform that combines metallicity,
 tunable optical properties,
 and band inversions in selected subspaces.
@@ -141,13 +143,15 @@ In this chapter,
 we use density functional theory calculations to investigate the atomic,
 electronic,
 optical,
-and topological properties of pristine and hydrogen-functionalized beryllene systems.
+topological,
+and superconducting properties of pristine and hydrogen-functionalized beryllene systems.
 In addition to $\alpha$- and $\beta$-beryllene,
 the pristine structures include trilayer cubic beryllene,
 by which we denote ABA-stacked trilayer beryllene with a square lattice.
 The hydrogen-functionalized structures are double-sided hydrogen-terminated $\alpha$-beryllene (2H-$\alpha$-beryllene)
 and single-sided and double-sided hydrogen-terminated $\beta$-beryllene (1H-$\beta$-beryllene and 2H-$\beta$-beryllene).
 The results identify dynamically stable 2H-$\alpha$-beryllene and a trilayer cubic beryllene phase with a conditional non-trivial $\mathbb{Z}_2$ index for an isolated band subspace.
+Electron-phonon calculations further predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene.
 The optical properties demonstrate direction-dependent and dimensionality-dependent response,
 together with anisotropic dielectric and energy-loss spectra and a redistribution of visible-to-ultraviolet optical response.
 
@@ -318,6 +322,47 @@ and the same q-point mesh for the Fock exchange.
 Since inversion acts only on the spatial part of the wave functions and the spin-orbit splittings of Be and H are approximately \qty{1}{\milli\electronvolt},
 the parities of the spinless states at the time-reversal invariant momenta are compared directly with those of the Kramers pairs.
 The HSE06 band structure of 2H-$\alpha$-beryllene is calculated at 71 points along the $\Gamma$--$\mathrm{K}$--$\mathrm{M}$--$\Gamma$ path and at 9 points around each PBE band edge.
+
+The Quantum ESPRESSO calculations~\cite{giannozzi2017advanced,giannozzi2009quantum} are performed on the structures relaxed with the PBE functional.
+We use optimized norm-conserving Vanderbilt pseudopotentials~\cite{hamann2013optimized},
+in which the Be $1s$ states are treated as valence states,
+with plane-wave cutoffs of \qty{80}{Ry} and \qty{640}{Ry} for the wave functions and charge density, respectively,
+and Marzari--Vanderbilt smearing of \qty{0.02}{Ry}~\cite{marzari1999thermal}.
+We also use a two-dimensional Coulomb cutoff~\cite{sohier2017density},
+along with a vacuum region of approximately \qty{15}{\angstrom} or larger.
+The k-point meshes are $56 \times 56 \times 1$, $52 \times 52 \times 1$, $46 \times 46 \times 1$, and $57 \times 52 \times 1$ for trilayer cubic beryllene,
+2H-$\alpha$-beryllene,
+2H-$\beta$-beryllene,
+and 1H-$\beta$-beryllene,
+respectively.
+The relaxed structures are listed in table~\ref{tab:proj3_qe_structures} in section~\ref{3_supplementary}.
+To examine the band topology of these structures,
+we recalculate the parities at the time-reversal invariant momenta with fully relativistic projector augmented wave pseudopotentials~\cite{dalcorso2014pseudopotentials},
+with cutoffs of \qty{90}{Ry} and \qty{720}{Ry},
+and with spin-orbit coupling.
+We also compute Wilson loops~\cite{yu2011equivalent} with \texttt{WannierTools}~\cite{wu2018wanniertools},
+based on Wannier function models generated with \texttt{Wannier90}~\cite{pizzi2020wannier90}.
+
+The phonons of trilayer cubic beryllene,
+2H-$\beta$-beryllene,
+and 1H-$\beta$-beryllene are computed using density functional perturbation theory~\cite{baroni2001phonons} on a $12 \times 12 \times 1$ q-point mesh,
+and the electron-phonon coupling is calculated using EPW~\cite{lee2023electron,giustino2007electron}.
+Electronic states and phonon perturbations are Wannier-interpolated from coarse $24 \times 24 \times 1$ k-point and $12 \times 12 \times 1$ q-point meshes to $80 \times 80 \times 1$ fine meshes,
+and the convergence is checked using $40 \times 40 \times 1$ fine meshes.
+The electronic and phonon smearings are set to \qty{0.15}{\electronvolt} and \qty{0.5}{\milli\electronvolt}, respectively,
+and the Matsubara-frequency cutoff is \qty{1.2}{\electronvolt}.
+The electron-phonon coupling strength $\lambda$ and the logarithmic average frequency $\omega_\mathrm{log}$ are extracted from the Eliashberg spectral function $\alpha^2F(\omega)$ through equations~\eqref{eliashberg_spectral_function_method} and~\eqref{electron_phonon_spectral_moments}.
+The transition temperature $T_\mathrm{c}$ is calculated in two ways.
+Firstly, the simplified Allen--Dynes expression in equation~\eqref{allen_dynes_temperature_estimate}~\cite{allen-dynes,mcmillan1968transition} is used with the Coulomb pseudopotential $\mu^*$ varying from 0.10 to 0.16.
+Secondly, the isotropic Migdal--Eliashberg equations on the imaginary axis~\cite{giustino2017electron,eliashberg1960interactions,migdal1958interaction} are solved with $\mu^*=0.13$,
+and the isotropic $T_\mathrm{c}$ is found by fitting the temperature dependence of the gap at the first Matsubara frequency.
+For 2H-$\beta$-beryllene and 1H-$\beta$-beryllene,
+the anisotropic Migdal--Eliashberg equations~\cite{margine2013anisotropic} are also solved for each temperature using up to 6000 iterations.
+Close to $T_\mathrm{c}$, the convergence is very slow.
+Therefore, the gap is monitored throughout the iterations.
+A temperature is considered below $T_\mathrm{c}$ if the extrapolated gap converges to a non-zero value for all fitted ranges,
+and above $T_\mathrm{c}$ if the gap decreases exponentially with increasing number of iterations.
+Finally, $T_\mathrm{c}$ is estimated from the extrapolation of the limiting gaps below $T_\mathrm{c}$ and the decay rates above $T_\mathrm{c}$.
 
 For the optical calculations,
 we calculate the frequency-dependent dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ within VASP.
@@ -946,6 +991,17 @@ The converged spin-orbit-coupled states are non-magnetic,
 with a magnetization density below $3\times10^{-7}~\mu_{\mathrm{B}}\,\text{\AA}^{-3}$,
 and spin-polarized calculations started from ferromagnetic and antiferromagnetic configurations all converge to the non-magnetic state.
 These results support the time-reversal symmetry assumed in the analysis.
+For the PBE structures used in the Quantum ESPRESSO calculations,
+the parity eigenvalues of the centrosymmetric structures and the Wilson loops give the same $\nu$ as in table~\ref{tab:proj3_topological_parity} for trilayer cubic beryllene,
+2H-$\alpha$-beryllene,
+2H-$\beta$-beryllene,
+and 1H-$\beta$-beryllene.
+For trilayer cubic beryllene,
+2H-$\alpha$-beryllene,
+and 2H-$\beta$-beryllene,
+the Wilson loop calculation is consistent with the parity calculation.
+In trilayer cubic beryllene,
+the Wannier charge centres switch partners once along the Wilson loop.
 The band structures with the lowest-$N$ subspaces are shown in figures~\ref{fig:proj3_topology_bands_pristine} and~\ref{fig:proj3_topology_bands_hydrogenated}.
 The direct-gap maps,
 the refinement of the smallest gaps,
@@ -980,6 +1036,102 @@ corresponding to the lowest-four and lowest-six subspaces.
 For 1H-$\beta$-beryllene and 2H-$\beta$-beryllene,
 the path is the same as in figure~\ref{fig:proj3_band_structures_cubic_hydrogenated}.}
 \label{fig:proj3_topology_bands_hydrogenated}
+\end{figure}
+
+\subsection{Electron-phonon coupling and superconductivity}
+\label{3_superconductivity}
+
+We next examine the electron-phonon coupling of the metallic trilayer cubic beryllene,
+2H-$\beta$-beryllene,
+and 1H-$\beta$-beryllene.
+The main superconducting characteristics are listed in table~\ref{tab:proj3_superconductivity} and presented in figure~\ref{fig:proj3_superconducting_gap}.
+For trilayer cubic beryllene,
+the analysis gives $\lambda=0.46$,
+$T_\mathrm{c}^{\mathrm{AD}}=\qty{2.0}{\kelvin}$,
+and $T_\mathrm{c}^{\mathrm{iso}}=\qty{3.7}{\kelvin}$.
+Trilayer cubic beryllene is therefore predicted to be a weak-coupling superconductor with a $T_\mathrm{c}$ of a few kelvin.
+The electron-phonon coupling strength of 2H-$\beta$-beryllene is $\lambda=1.40$,
+and the Allen--Dynes transition temperature is $T_\mathrm{c}^{\mathrm{AD}}=\qty{21.9}{\kelvin}$ for $\mu^*=0.13$.
+The solution of the isotropic Migdal--Eliashberg equations gives a larger $T_\mathrm{c}^{\mathrm{iso}}$ of \qty{28.3}{\kelvin},
+with $2\Delta_0/\kB T_\mathrm{c}=4.28$,
+which is above the BCS value of 3.53~\cite{bardeen1957theory},
+as shown in figure~\ref{fig:proj3_superconducting_gap}(c).
+Therefore, 2H-$\beta$-beryllene is predicted to be a strong-coupling superconductor with the highest $T_\mathrm{c}$ among all cases examined.
+In the anisotropic solution,
+the superconducting gap of 2H-$\beta$-beryllene approaches a finite value at \qtyrange{29}{31}{\kelvin},
+while at \qty{32}{\kelvin} and above,
+it tends exponentially to zero,
+as shown in figure~\ref{fig:proj3_superconducting_gap}(d).
+Thus, the anisotropic $T_\mathrm{c}$ falls into the range from \qty{31}{\kelvin} to \qty{32}{\kelvin} and is estimated to be \qty{31.7}{\kelvin}.
+These electron-phonon calculations use harmonic phonons,
+whereas the soft mode of 2H-$\beta$-beryllene is anharmonic,
+as discussed in section~\ref{3_dynamical_stability_and_phonon_dispersion}.
+For 1H-$\beta$-beryllene,
+the Allen--Dynes expression gives $T_\mathrm{c}^{\mathrm{AD}}=\qty{8.1}{\kelvin}$ for $\mu^*=0.13$.
+On the other hand,
+the isotropic Migdal--Eliashberg equations give a higher $T_\mathrm{c}^{\mathrm{iso}}$ of \qty{11.6}{\kelvin},
+with $2\Delta_0/\kB T_\mathrm{c}=3.64$,
+as shown in figure~\ref{fig:proj3_superconducting_gap}(a).
+In the anisotropic solution,
+the superconducting gap approaches a finite value at \qty{14.0}{\kelvin} and \qty{14.1}{\kelvin},
+about \qtyrange{0.39}{0.40}{\milli\electronvolt} and \qtyrange{0.25}{0.28}{\milli\electronvolt}, respectively,
+while at \qty{14.5}{\kelvin} the gap tends exponentially to zero,
+as shown in figure~\ref{fig:proj3_superconducting_gap}(b).
+At \qty{14.2}{\kelvin},
+the temperature closest to $T_\mathrm{c}$,
+the gap does not reach a plateau and does not decay exponentially during approximately 5000 iterations.
+As a consequence,
+the anisotropic $T_\mathrm{c}$ lies between \qty{14.1}{\kelvin} and \qty{14.5}{\kelvin} and can be estimated to be \qty{14.2}{\kelvin}.
+Therefore, the gap anisotropy increases $T_\mathrm{c}$ by about \qtyrange{2.5}{2.9}{\kelvin} compared with the isotropic value.
+
+\begin{table}[!htbp]
+\centering
+\rowcolors{2}{gray!15}{white}
+\begin{adjustbox}{max width=1.0\linewidth,center}
+\begin{tabular}{cccccccc}
+\hline
+\rowcolor{gray!25}
+structure
+& $\lambda$
+& $\omega_\mathrm{log}$ (meV)
+& $T_\mathrm{c}^{\mathrm{AD}}$ (K)
+& $T_\mathrm{c}^{\mathrm{iso}}$ (K)
+& $\Delta_0$ (meV)
+& $2\Delta_0/\kB T_\mathrm{c}$
+& $T_\mathrm{c}^{\mathrm{aniso}}$ (K) \\
+\hline
+trilayer cubic beryllene
+& 0.46 & 36.0 & 3.7 / 2.0 / 0.9 & 3.7 & 0.57 & 3.58 & -- \\
+2H-$\beta$-beryllene
+& 1.40 & 19.5 & 24.2 / 21.9 / 19.6 & 28.3 & 5.23 & 4.28 & $\approx 31.7$ \\
+1H-$\beta$-beryllene
+& 0.61 & 40.7 & 11.4 / 8.1 / 5.4 & 11.6 & 1.83 & 3.64 & $\approx 14.2$ \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Electron-phonon coupling strength $\lambda$,
+logarithmic average frequency $\omega_\mathrm{log}$,
+Allen--Dynes transition temperature $T_\mathrm{c}^{\mathrm{AD}}$ from equation~\eqref{allen_dynes_temperature_estimate} for $\mu^*=0.10$, 0.13, and 0.16,
+isotropic Migdal--Eliashberg transition temperature $T_\mathrm{c}^{\mathrm{iso}}$ with the fitted gap amplitude $\Delta_0$ and gap ratio,
+and anisotropic Migdal--Eliashberg transition temperature $T_\mathrm{c}^{\mathrm{aniso}}$.
+All values are calculated on $80 \times 80 \times 1$ fine meshes,
+and $\mu^*=0.13$ is used for the Migdal--Eliashberg calculations.}
+\label{tab:proj3_superconductivity}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.80\linewidth]{figures_proj3/superconductivity/superconductivity.pdf}
+\caption{Superconducting gap.
+(a) Gap at the first Matsubara frequency, $\Delta(\mathrm{i}\omega_1)$, as a function of temperature,
+with $\omega_1=\mathrm{\pi}\kB T/\hbar$.
+Circles and squares represent isotropic Migdal--Eliashberg solutions,
+while lines correspond to fits with $\Delta_0\tanh\left[1.74\left(T_\mathrm{c}/T-1\right)^{1/2}\right]$.
+Open diamonds show the anisotropic gaps below $T_\mathrm{c}$,
+and the shaded band marks the anisotropic $T_\mathrm{c}$.
+(b) Fermi-surface-averaged $\Delta(\mathrm{i}\omega_1)$ of 1H-$\beta$-beryllene in the anisotropic Migdal--Eliashberg iterations.
+(c) and (d) are analogous to (a) and (b), respectively, for 2H-$\beta$-beryllene.}
+\label{fig:proj3_superconducting_gap}
 \end{figure}
 
 \subsection{Optical properties}
@@ -1257,6 +1409,12 @@ Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy and disti
 The absorption of trilayer cubic beryllene does not exceed that of bulk bcc beryllium throughout the visible range or in all directions,
 and hydrogen adsorption enhances some components while reducing others.
 These comparisons use the Cartesian diagonal dielectric components and exclude a Drude intraband contribution.
+
+Electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene.
+Trilayer cubic beryllene is a weak-coupling superconductor with $T_\mathrm{c}^{\mathrm{iso}}=\qty{3.7}{\kelvin}$.
+2H-$\beta$-beryllene has the strongest coupling, $\lambda=1.40$,
+and the highest transition temperatures, \qty{28.3}{\kelvin} from the isotropic and approximately \qty{31.7}{\kelvin} from the anisotropic Migdal--Eliashberg equations.
+For 1H-$\beta$-beryllene, the gap anisotropy raises $T_\mathrm{c}$ from \qty{11.6}{\kelvin} to approximately \qty{14.2}{\kelvin}.
 
 Parity analysis of the spin-orbit-coupled electronic states confirms the previously reported non-trivial topology of $\alpha$-beryllene and the trivial topology of $\beta$-beryllene.
 Trilayer cubic beryllene also has a non-trivial $\mathbb{Z}_2$ invariant,

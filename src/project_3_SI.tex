@@ -519,6 +519,47 @@ for (a) the lowest four bands and (b) the lowest six bands.}
 \label{fig:proj3_wcc}
 \end{figure}
 
+\subsection*{Structures for the Quantum ESPRESSO calculations}
+
+The structures optimized with PBE in Quantum ESPRESSO,
+which are used for the topological cross-check and the electron-phonon calculations,
+are listed in table~\ref{tab:proj3_qe_structures}.
+
+\begin{table}[!htbp]
+\centering
+\rowcolors{2}{gray!15}{white}
+\begin{adjustbox}{max width=1.0\linewidth,center}
+\begin{tabular}{ccccccc}
+\hline
+\rowcolor{gray!25}
+system
+& cell content
+& $a$
+& $b$
+& angle
+& thickness
+& electronic nature \\
+\hline
+trilayer cubic beryllene
+& \ce{Be3} & 2.18 & 2.18 & $90.00^{\circ}$ & 3.04 & metallic \\
+2H-$\alpha$-beryllene
+& \ce{BeH2} & 2.32 & 2.32 & $120.00^{\circ}$ & 1.74 & semiconductor \\
+2H-$\beta$-beryllene
+& \ce{Be2H2} & 2.62 & 2.62 & $133.12^{\circ}$ & 3.79 & metallic \\
+1H-$\beta$-beryllene
+& \ce{Be2H} & 2.32 & 2.11 & $117.01^{\circ}$ & 2.85 & metallic \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Cell content,
+lattice vectors $a$ and $b$,
+angle between the two in-plane lattice vectors,
+thickness between the outermost atomic centres,
+and electronic nature of the structures optimized with PBE in Quantum ESPRESSO.
+The lattice vectors and thickness are given in \si{\angstrom}.}
+\label{tab:proj3_qe_structures}
+\end{table}
+
 \subsection*{Additional optical spectra}
 
 Additional optical spectra are shown in figures~\ref{fig:proj3_reflectivity_alpha_beta}--\ref{fig:proj3_optical_hydrogenated_extinction}.
