@@ -1,0 +1,645 @@
+{
+  "record_date": "2026-09-23",
+  "scope": "Project 2 revision evidence; confirmed corrections and remaining limits, not a claim of full physical validation.",
+  "source_repository": "https://github.com/Photonico/o-B14_20241024",
+  "source_commit": "a9476a5c0e5ce764456c4cc7a50f8e15d64f951c",
+  "source_tree_truncated": false,
+  "key_source_git_blobs": {
+    "8.0_aimd.ipynb": "491d7dfb31bf42c1b3a890095f7aea8aed64532e",
+    "6.0_AIMD/bilayer_H/POSCAR": "a92ac234a5955c8aad7b75aa1c29b21822b7bcfe",
+    "6.0_AIMD/bilayer_H/INCAR": "0a551d517752663b0320d53c540fe73ecf7cfd46",
+    "6.0_AIMD/bilayer_H/OSZICAR": "417660c38dd65a382d8fd08faf8f863113371b56",
+    "5.0_dielectric_function.ipynb": "14b42c1b0c6f691439fd63a27d8972a51e6ddf74",
+    "6.1_linear_optical_properties.ipynb": "e27ed5775ef900a1c12c4ecaf98aa7ad54b9f2cc",
+    "vmatplot/algorithms.py": "f1343da481ea44d3508dfd86316af887093b4eb0",
+    "vmatplot/dielectric_function.py": "eebc1eccb43262717eabefd3a94eaf91ecb147b7",
+    "vmatplot/linear_optical_properties.py": "95d0eb7cc0be3899fb472139f06ed6d943624e8b",
+    "1.1_energy_atom/Hydrogen/POSCAR": "7ec1762499b7a7b3782e10b6931324a3168b4f2e",
+    "3.1_bandstructure/monolayer_AFM_HSE06/POSCAR": "7767b3b08153e6839e3c233dbefa0173fb361db6",
+    "3.1_bandstructure/monolayer_AFM_HSE06/INCAR": "d21012122a1906de88d6b46ffc5bb116559f80ab",
+    "3.1_bandstructure/monolayer_AFM_HSE06/KPOINTS": "cd890a5da1a0f8c98c530bf38cdda7f829534ddb",
+    "3.1_bandstructure/monolayer_AFM_HSE06/OSZICAR": "45ce835835aaba19607ac7480bc678421b375e88",
+    "3.1_bandstructure/monolayer_FM_HSE06/POSCAR": "74a2e88d1082f8dae941f781c9fcb00b4629ce52",
+    "3.1_bandstructure/monolayer_FM_HSE06/INCAR": "94847a41b2bea83312c7e65c1a0ba63fcf708a5f",
+    "3.1_bandstructure/monolayer_FM_HSE06/KPOINTS": "cd890a5da1a0f8c98c530bf38cdda7f829534ddb",
+    "3.1_bandstructure/monolayer_FM_HSE06/OSZICAR": "f2b486a31f2f2a9d6e13ed17985c5c1452bb626d",
+    "5.1_dielectric_function/bilayer/vasprun.xml": "07910df147cb1a121a79faa16b5b4f0b79548384",
+    "5.1_dielectric_function/monolayer/vasprun.xml": "f51f451242d3548118596d8a7e131bf8ce4aa934",
+    "5.1_dielectric_function/o-B14_n128_k34/vasprun.xml": "91e269b0ba9642512d788ae67612fe8a97a81016",
+    "5.1_dielectric_function/bilayer_with_Hydrogen/vasprun.xml": "953b7bcfbe2d9319ae9498b29462166f756797d9"
+  },
+  "published_paper": {
+    "local_path": "paper 2-compressed.pdf",
+    "doi": "10.1103/b2q9-fytt",
+    "publication": "Physical Review Materials 10, 074001 (2026)",
+    "page_index_convention": "PDF file pages, starting at 1",
+    "evidence_pages": {
+      "3": [
+        "hydrogen adsorption-energy formula and reference definition",
+        "QE/DFPT/Wannier/EPW settings and mu*=0.13",
+        "optical convergence grids and input NBANDS=128"
+      ],
+      "4-5": [
+        "reported adsorption energies -1.450 and -1.525 eV/H"
+      ],
+      "6": [
+        "HSE06 AFM-FM difference approximately 0.02 eV without atom normalization",
+        "AFM gap 0.105 eV and metallic NM reference"
+      ],
+      "7": [
+        "bilayer HSE06 gap 0.67 eV and PBE semimetal",
+        "Allen-Dynes Tc bulk 28.2 K and H-bilayer 18.5 K"
+      ],
+      "8": [
+        "anisotropic ME Tc bulk 31.3 K and H-bilayer 24.3 K",
+        "dielectric functions without explicit optical spin-state/Drude identification"
+      ],
+      "9": [
+        "absorption figure labelled Angstrom^-1"
+      ]
+    }
+  },
+  "AIMD_identity": {
+    "identical_remote_files": [
+      "figures_collection/S2.10a_long.pdf",
+      "figures/8.0_aimd_bilayer_H.pdf"
+    ],
+    "notebook": "8.0_aimd.ipynb",
+    "data_directory": "6.0_AIMD/bilayer_H",
+    "atoms": {
+      "B": 112,
+      "H": 16
+    },
+    "steps": 5500,
+    "time_step_fs": 1,
+    "duration_ps": 5.5,
+    "temperature_K": 400,
+    "ensemble": "NVT",
+    "thermostat": "Nose-Hoover",
+    "plot_energy_key": "F",
+    "old_title_wrong": "AIMD simulation for bulk o-B14",
+    "before_revision_pdf": "figures_proj2/S2.10/S2.10a_long.pdf",
+    "before_revision_sha256": "0518f38e50ae6eaf15be0404287228c59aa5f033f93f3ae5d2b10b47ceaad231",
+    "before_revision_git_blob_sha1": "9edbaf12b734031bcd16b307a1fb1c525a5be549",
+    "note": "Hashes identify the original mislabelled PDF, not the revised export. Notebook input and matching bytes establish the hydrogen-terminated bilayer identity.",
+    "supercell_relative_to_B28H4": [
+      2,
+      2,
+      1
+    ],
+    "input_settings": {
+      "NSW": 5500,
+      "POTIM_fs": 1,
+      "TEBEG_K": 400,
+      "TEEND_K": 400,
+      "MDALGO": 2,
+      "SMASS": 0,
+      "ISIF": 2
+    },
+    "revised_pdf_paths": [
+      "figures_proj2/S2.10/S2.10a_long.pdf",
+      "figures_proj2/S2.10a_long.pdf"
+    ]
+  },
+  "magnetic_energy": {
+    "atom_count": 14,
+    "kmesh": [
+      10,
+      9,
+      1
+    ],
+    "F_AFM_eV": -95.178542,
+    "F_FM_eV": -95.160298,
+    "E0_AFM_eV": -95.178541,
+    "E0_FM_eV": -95.159537,
+    "difference_F_eV": -0.018244,
+    "difference_E0_eV": -0.019004,
+    "recommended_report": "about 0.02 eV per 14-atom cell within the HSE06 comparison",
+    "source_directories": [
+      "3.1_bandstructure/monolayer_AFM_HSE06",
+      "3.1_bandstructure/monolayer_FM_HSE06"
+    ],
+    "geometry_comparison": {
+      "same_lattice": true,
+      "max_atomic_coordinate_difference_A": 0.00105075,
+      "note": "The two archived HSE06 runs do not use numerically identical atomic positions."
+    },
+    "PBE_comparison_limit": "Separate 2.2_self_consistent/monolayer_AFM and monolayer_FM runs favour FM by approximately 12-16 meV/cell, but the PBE versus HSE06 sets differ in atomic positions, explicit dispersion correction and occupation smearing. They are not a controlled exchange-correlation-only comparison; no such new claim was added."
+  },
+  "optical_reference_and_curve_identity": {
+    "source_notebook": "5.0_dielectric_function.ipynb",
+    "dielectric_parser": "vmatplot/dielectric_function.py",
+    "common_output_settings": {
+      "reference": "non-spin-polarized PBE",
+      "ISPIN": 1,
+      "LHFCALC": false,
+      "LSORBIT": false,
+      "LOPTICS": true,
+      "SIGMA_eV": 0.01,
+      "CSHIFT_eV": 0.1,
+      "WPLASMAI": 0.0,
+      "input_NBANDS": 128
+    },
+    "actual_NBANDS": {
+      "o-B14_n128_k34": 129,
+      "monolayer": 168,
+      "bilayer": 168,
+      "bilayer_with_Hydrogen": 168
+    },
+    "displayed_bulk_kmesh": [
+      34,
+      48,
+      31
+    ],
+    "published_converged_kmesh": {
+      "bulk": [
+        20,
+        28,
+        18
+      ],
+      "two_dimensional": [
+        20,
+        18,
+        1
+      ]
+    },
+    "Drude_statement": "No separately parameterized Drude term is added; this does not establish that all intraband contributions are absent from VASP LOPTICS.",
+    "official_context": [
+      "https://vasp.at/wiki/WPLASMAI",
+      "https://vasp.at/forum/viewtopic.php?p=23965",
+      "https://vasp.at/wiki/index.php/LOPTICS"
+    ],
+    "thickness_convention": {
+      "scaling_real": "1 + (eps1_SC - 1) * dSC / d2D",
+      "scaling_imag": "eps2_SC * dSC / d2D",
+      "components": [
+        "xx",
+        "yy",
+        "zz"
+      ],
+      "limit": "An adopted effective-thickness convention, not a unique intrinsic out-of-plane dielectric constant.",
+      "monolayer": {
+        "dSC_A": 24.044058323,
+        "d2D_A": 5.807056948202938,
+        "published_text_typo_A": 5.897
+      },
+      "bilayer": {
+        "dSC_A": 28.088116646,
+        "d2D_A": 9.41157
+      },
+      "bilayer_with_Hydrogen": {
+        "dSC_A": 30.088116646,
+        "d2D_A": 11.20862
+      }
+    },
+    "original_dielectric_pdf_match": {
+      "local_path": "figures_proj2/fig2.10.pdf",
+      "remote_path": "figures_correction/fig9.pdf",
+      "identical_bytes": false,
+      "identical_vector_objects_text_and_render": true,
+      "vector_object_count": 309,
+      "eps2_xx_curve_matches": {
+        "bilayer_with_Hydrogen": {
+          "ratio": 2.6843729777617584,
+          "points": 212,
+          "matched_points": 212,
+          "pdf_y_intercept": 798.7691174757026,
+          "pdf_y_slope": -5.413385524907729,
+          "max_residual_pdf_points": 0.0007807637565520054,
+          "rms_residual_pdf_points": 0.0004265261005203141
+        },
+        "bilayer": {
+          "ratio": 2.9844241339117703,
+          "points": 251,
+          "matched_points": 251,
+          "pdf_y_intercept": 798.7691315227362,
+          "pdf_y_slope": -5.413387666314888,
+          "max_residual_pdf_points": 0.0008362047262835404,
+          "rms_residual_pdf_points": 0.00047195939889146417
+        },
+        "monolayer": {
+          "ratio": 4.140489500527581,
+          "points": 229,
+          "matched_points": 229,
+          "pdf_y_intercept": 798.7691298403561,
+          "pdf_y_slope": -5.413387821816969,
+          "max_residual_pdf_points": 0.0011075958509536576,
+          "rms_residual_pdf_points": 0.0006309242691207977
+        },
+        "o-B14_n128_k34": {
+          "ratio": 1,
+          "points": 154,
+          "matched_points": 154,
+          "pdf_y_intercept": 798.7691443570594,
+          "pdf_y_slope": -5.413390503619353,
+          "max_residual_pdf_points": 0.00031454074030534684,
+          "rms_residual_pdf_points": 0.00016118666203132813
+        }
+      }
+    }
+  },
+  "absorption_correction": {
+    "source_helpers": [
+      "vmatplot/algorithms.py: energy_to_frequency",
+      "vmatplot/linear_optical_properties.py: comp_absorption_coefficient"
+    ],
+    "old_frequency": "E / h (ordinary frequency, but used in an angular-frequency absorption formula)",
+    "old_light_velocity_unit": "nm / s",
+    "old_figure_interpretation": "Angstrom^-1",
+    "correct_expression": "alpha_Ainv = 2 * E_eV / hbar_eVs / c_m_per_s * sqrt((hypot(eps1, eps2) - eps1) / 2) * 1e-10",
+    "new_numerical_value_over_old_plotted_value": 0.6283185307179586,
+    "factor_interpretation": "Multiply old plotted numbers by 2*pi to repair frequency, then divide by 10 to convert nm^-1 to Angstrom^-1.",
+    "pre_revision_curve_verification": {
+      "curves": 12,
+      "maximum_residual_pdf_points": 0.018977147211018064,
+      "per_curve": {
+        "bilayer_with_Hydrogen_xx": {
+          "vertices": 334,
+          "max_residual_pdf_points": 0.010442778137530695
+        },
+        "bilayer_with_Hydrogen_yy": {
+          "vertices": 376,
+          "max_residual_pdf_points": 0.011859336320412694
+        },
+        "bilayer_with_Hydrogen_zz": {
+          "vertices": 286,
+          "max_residual_pdf_points": 0.006391079187352489
+        },
+        "bilayer_xx": {
+          "vertices": 362,
+          "max_residual_pdf_points": 0.012726605510877675
+        },
+        "bilayer_yy": {
+          "vertices": 306,
+          "max_residual_pdf_points": 0.0096355706702127
+        },
+        "bilayer_zz": {
+          "vertices": 251,
+          "max_residual_pdf_points": 0.00960022392550286
+        },
+        "monolayer_xx": {
+          "vertices": 392,
+          "max_residual_pdf_points": 0.018977147211018064
+        },
+        "monolayer_yy": {
+          "vertices": 415,
+          "max_residual_pdf_points": 0.018593032069958326
+        },
+        "monolayer_zz": {
+          "vertices": 298,
+          "max_residual_pdf_points": 0.011844751223407002
+        },
+        "o-B14_n128_k34_xx": {
+          "vertices": 240,
+          "max_residual_pdf_points": 0.0038130045083732966
+        },
+        "o-B14_n128_k34_yy": {
+          "vertices": 198,
+          "max_residual_pdf_points": 0.003338823997907525
+        },
+        "o-B14_n128_k34_zz": {
+          "vertices": 257,
+          "max_residual_pdf_points": 0.004201984179218243
+        }
+      }
+    },
+    "revised_pdf": "figures_proj2/fig2.11a.pdf",
+    "scope": "Same archived dielectric data and thickness convention; corrected postprocessing, no new DFT calculation."
+  },
+  "plasmon_checks": {
+    "formula": "L = eps2 / (eps1^2 + eps2^2)",
+    "data": "Effective dielectric arrays used in the displayed optical figures.",
+    "method": "Linear interpolation for epsilon1 zeros; sampled strict local maxima of L in 0 < E <= 12 eV; retain representative low-energy/out-of-plane features.",
+    "limits": "Negative epsilon1 alone does not establish a weakly damped plasmon. Finite epsilon2 is significant, especially bulk xx. Optical-limit calculations do not determine finite-q dispersion or lifetime.",
+    "selected_features": {
+      "o-B14_n128_k34_xx": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 0.2282,
+            "eps2": 15.4936,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 0.3553,
+            "eps2": 6.099,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 0.4747,
+            "loss": 0.2571,
+            "eps1": 1.6687,
+            "eps2": 2.9439
+          }
+        ]
+      },
+      "monolayer_xx": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 0.4001,
+            "eps2": 78.9496,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 1.4472,
+            "eps2": 1.0613,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 1.4614,
+            "loss": 0.956,
+            "eps1": 0.104,
+            "eps2": 1.0355
+          }
+        ]
+      },
+      "monolayer_yy": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 0.1263,
+            "eps2": 273.8382,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 1.246,
+            "eps2": 1.109,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 1.2636,
+            "loss": 0.9163,
+            "eps1": 0.1636,
+            "eps2": 1.0662
+          }
+        ]
+      },
+      "monolayer_zz": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 3.4597,
+            "eps2": 13.5281,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 4.0705,
+            "eps2": 3.527,
+            "direction": "neg-to-pos"
+          },
+          {
+            "energy_eV": 4.2965,
+            "eps2": 3.6773,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 4.4659,
+            "eps2": 2.3585,
+            "direction": "neg-to-pos"
+          },
+          {
+            "energy_eV": 6.013,
+            "eps2": 4.2534,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 6.2678,
+            "eps2": 1.5176,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 6.3399,
+            "loss": 0.7331,
+            "eps1": 0.3437,
+            "eps2": 1.2711
+          },
+          {
+            "energy_eV": 4.7906,
+            "loss": 0.6169,
+            "eps1": 0.5938,
+            "eps2": 1.3622
+          },
+          {
+            "energy_eV": 4.1423,
+            "loss": 0.2944,
+            "eps1": 0.2576,
+            "eps2": 3.377
+          }
+        ]
+      },
+      "bilayer_zz": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 4.3713,
+            "eps2": 14.5482,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 4.8543,
+            "eps2": 3.995,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 5.7542,
+            "loss": 0.3794,
+            "eps1": 1.0812,
+            "eps2": 2.0715
+          },
+          {
+            "energy_eV": 5.436,
+            "loss": 0.3413,
+            "eps1": 0.7051,
+            "eps2": 2.7493
+          },
+          {
+            "energy_eV": 4.8747,
+            "loss": 0.2513,
+            "eps1": 0.1665,
+            "eps2": 3.9717
+          }
+        ]
+      },
+      "bilayer_with_Hydrogen_xx": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 0.1466,
+            "eps2": 59.8697,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 0.6525,
+            "eps2": 1.8577,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 0.6936,
+            "loss": 0.5945,
+            "eps1": 0.4382,
+            "eps2": 1.5591
+          }
+        ]
+      },
+      "bilayer_with_Hydrogen_zz": {
+        "epsilon1_zero_crossings": [
+          {
+            "energy_eV": 1.2813,
+            "eps2": 7.0876,
+            "direction": "pos-to-neg"
+          },
+          {
+            "energy_eV": 1.5737,
+            "eps2": 1.368,
+            "direction": "neg-to-pos"
+          }
+        ],
+        "loss_local_maxima": [
+          {
+            "energy_eV": 1.6091,
+            "loss": 0.8092,
+            "eps1": 0.3005,
+            "eps2": 1.1578
+          },
+          {
+            "energy_eV": 6.8712,
+            "loss": 0.1267,
+            "eps1": 3.9405,
+            "eps2": 4.1817
+          }
+        ]
+      }
+    }
+  },
+  "hydrogen_adsorption": {
+    "correct_formula": "(E_H/B - E_B - n_H * E_H) / n_H, with E_H = E_H2 / 2",
+    "formula_issue_also_in_published_paper": true,
+    "hydrogenated_cell_stoichiometry": {
+      "monolayer": {
+        "B": 14,
+        "H": 4
+      },
+      "bilayer": {
+        "B": 28,
+        "H": 4
+      }
+    },
+    "reported_Ead_eV_per_H": {
+      "monolayer": -1.45,
+      "bilayer": -1.525
+    },
+    "archived_H_reference": "1.1_energy_atom/Hydrogen/POSCAR contains a single isolated H, not H2.",
+    "verification_status": "Matching H2 energy and adsorption-energy ledger not found; reported numeric Ead values retained, neither certified nor declared erroneous by this audit."
+  },
+  "EPC": {
+    "published_mu_star": 0.13,
+    "published_electronic_kmesh": {
+      "bulk": [
+        9,
+        12,
+        8
+      ],
+      "monolayer": [
+        10,
+        10,
+        1
+      ],
+      "hydrogenated_bilayer": [
+        9,
+        9,
+        1
+      ]
+    },
+    "published_DFPT_qmesh": {
+      "bulk": [
+        3,
+        4,
+        3
+      ],
+      "monolayer": [
+        5,
+        5,
+        1
+      ],
+      "hydrogenated_bilayer": [
+        3,
+        3,
+        1
+      ]
+    },
+    "published_Wannier_kmesh": {
+      "bulk": [
+        6,
+        8,
+        6
+      ],
+      "monolayer": [
+        6,
+        6,
+        1
+      ],
+      "hydrogenated_bilayer": [
+        6,
+        6,
+        1
+      ]
+    },
+    "Wannier_initial_projections": "B s and p",
+    "Tc_K": {
+      "bulk": {
+        "Allen_Dynes": 28.2,
+        "anisotropic_ME": 31.3
+      },
+      "hydrogenated_bilayer": {
+        "Allen_Dynes": 18.5,
+        "anisotropic_ME": 24.3
+      }
+    },
+    "lambda": {
+      "bulk": 0.931,
+      "hydrogenated_bilayer": 1.01,
+      "monolayer": 0.05
+    },
+    "archive_inventory": {
+      "commit": "a9476a5c0e5ce764456c4cc7a50f8e15d64f951c",
+      "tree_truncated": false,
+      "superconductivity_file_count": 123,
+      "superconductivity_types": {
+        "no suffix": 2,
+        ".ipynb": 4,
+        "imag_aniso_gap0": 112,
+        ".pdf": 1,
+        ".png": 3,
+        ".zip": 1
+      },
+      "all_tree_potential_epw_input_or_spectral_files": [],
+      "zip_count": 123,
+      "zip_types": {
+        "no suffix": 2,
+        ".ipynb": 5,
+        "imag_aniso_gap0": 112,
+        ".png": 3,
+        ".pdf": 1
+      }
+    },
+    "missing": "Original QE/EPW input decks, fine meshes, Wannier windows, integration/Matsubara cutoffs, alpha2F files and monolayer EPC spin-state evidence."
+  },
+  "phonon_limit": {
+    "figure": "figures_proj2/S2.9b.pdf",
+    "finding": "Actual plotted hydrogen-terminated bilayer retains small negative frequencies near Gamma.",
+    "unresolved": "No evidence that the negative pocket has disappeared under convergence or is definitively numerical; 5.5 ps AIMD does not settle this."
+  },
+  "reproduction_artifacts": {
+    "script": "figures_proj2/reproduce_revisions.py",
+    "data": "figures_proj2/revision_data.npz",
+    "data_contents": "Effective dielectric E/epsilon1/epsilon2 arrays for four structures and 5500 AIMD steps with temperature and electronic free energy."
+  },
+  "final_thesis_build_QA": "To be added by root after the final whole-thesis compilation."
+}

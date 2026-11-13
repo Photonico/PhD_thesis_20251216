@@ -8,20 +8,21 @@ The working optical relations remain in chapter~\ref{cha:fundamentals_b}.
 We use SI units, as in that chapter.
 
 \newpage
-\section{Towards electromagnetic response in matter}
+\section{Toward electromagnetic response in matter}
 \label{sec:toward_electromagnetic_response_in_matter}
 
 % opening paragraph
 Chapter~\ref{cha:fundamentals_a} focused on the ground-state electronic problem.
 There, the central question was how electrons arrange themselves under a given external potential.
-However, optical properties do not follow from the ground state alone.
+However, optical properties do not follow from the ground-state alone.
 When an electromagnetic field is applied,
 it drives the electrons away from their static equilibrium and triggers a series of responses.
 
 Therefore, before introducing the dielectric function, we need a language that describes both the applied field and the feedback of matter to that field.
 That language is electrodynamics.
-The present section extracts only the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
-We begin with electromagnetic fields in matter, and then gradually move towards a frequency-dependent response function that can be connected to the electronic structure.
+The present section does not aim to review a complete lecture of electrodynamics;
+instead, we only extract the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
+We begin with electromagnetic fields in matter, and then gradually move toward a frequency-dependent response function that can be connected to the electronic structure.
 
 We use SI units for the macroscopic electrodynamic equations.
 The dielectric function is dimensionless and denotes the relative dielectric response.
@@ -30,7 +31,7 @@ and the photon energy is $\hbar\omega$.
 
 \subsection{Maxwell equations in matter}
 
-Let us start with the universal structure of the problem.
+Let us start by the universal structure of the problem.
 When an electromagnetic field enters a medium, it drives charge redistribution and induces currents inside the medium, while these induced sources further modify the field itself.
 Therefore, the optical response of matter should be described within the framework of electrodynamics~\cite{landau2013electrodynamics,griffiths2023introduction}.
 
@@ -138,7 +139,7 @@ Firstly, we start from the most general linear-response form.
 For any time $t$, the polarization may depend not only on the electric field at the same point,
 but also on fields acting earlier and in a surrounding spatial region.
 Therefore, before introducing the simplified form used in the present work,
-we write the constitutive relation in its general non-local form in space and time~\cite{royo2019first}:
+we write the constitutive relation in its general nonlocal form in space and time~\cite{royo2019first}:
 
 \begin{equation}
     P_\alpha(\vec{r},t) =
@@ -154,7 +155,7 @@ instead, it may spread the response over space and retain memory in time.
 At the same time, the upper limit $t$ in equation~\eqref{general_nonlocal_constitutive_relation} keeps the causal order explicit: the perturbation acts first, and the response follows.
 
 For the present work, we focus on the linear response in the long-wavelength regime.
-Under this approximation, spatial non-locality drops out, and the constitutive relation retains only the memory of the earlier perturbation.
+Under this approximation, spatial nonlocality drops out, and the constitutive relation retains only the memory of the earlier perturbation.
 Therefore, it reduces to the time-domain constitutive relation:
 
 \begin{equation}
@@ -291,18 +292,18 @@ Once the principal directions of the dielectric tensor $\varepsilon_{\alpha\beta
 \label{electric_field_decomposition_principal_directions}
 \end{equation}
 
-here, $\hat{e}_{\lambda}$ denotes the unit vector along the principal direction $\lambda$.
+where $\hat{e}_{\lambda}$ denotes the unit vector along the principal direction $\lambda$.
 In the same basis, the induced polarization $\vec{P}(\omega)$ takes the form:
 
 \begin{equation}
-    \vec{P}(\omega)=\varepsilon_0\sum_{\lambda}\chi_{\lambda\lambda}(\omega)\,E_{\lambda}(\omega)\,\hat{e}_{\lambda}
+    \vec{P}(\omega)=\varepsilon_0\sum_{\lambda}\chi_{\lambda}(\omega)\,E_{\lambda}(\omega)\,\hat{e}_{\lambda}
 \label{polarization_decomposition_principal_directions}
 \end{equation}
 
-Accordingly, we denote the dielectric response along each principal direction by $\varepsilon_{\lambda\lambda}(\omega)$ and express:
+Accordingly, we denote the dielectric response along each principal direction by $\varepsilon_{\lambda}(\omega)$ and express:
 
 \begin{equation}
-    \varepsilon_{\lambda\lambda}(\omega)=1+\chi_{\lambda\lambda}(\omega)
+    \varepsilon_{\lambda}(\omega)=1+\chi_{\lambda}(\omega)
 \label{direction_resolved_dielectric_response}
 \end{equation}
 
@@ -346,11 +347,28 @@ It excludes any polarization response before the external electric field acts.
 
 In the present work,
 we consider the optical long-wavelength limit,
-where the spatial non-locality of the dielectric response becomes negligible~\cite{agranovich2013crystal}.
-Afterwards, the linear response takes the local frequency-dependent form of equation~\eqref{frequency_domain_polarization_susceptibility_relation}~\cite{franta2023dispersion}.
-The electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$ determines the amplitude and phase delay of each Cartesian response at angular frequency $\omega$~\cite{koutserimpas2024time}.
+where the spatial nonlocality of the dielectric response becomes negligible~\cite{agranovich2013crystal}.
+Afterwards, the linear response then reduces to a local frequency-dependent tensor relation~\cite{franta2023dispersion}:
 
-We then obtain the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ from the electric susceptibility tensor using equation~\eqref{dielectric_tensor_definition}~\cite{franta2020symmetry}.
+\begin{equation}
+    P_{\alpha}(\omega) =
+    \varepsilon_0\sum_{\beta}\chi_{\alpha\beta}(\omega)
+    \,E_{\beta}(\omega)
+\label{frequency_domain_polarization_response}
+\end{equation}
+
+here, $\chi_{\alpha\beta}(\omega)$ denotes the frequency-domain electric susceptibility tensor.
+It characterizes the response amplitude for each Cartesian component at angular frequency $\omega$.
+Meanwhile, it also describes the phase delay of the response at the same frequency~\cite{koutserimpas2024time}.
+
+We then express the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ via the electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$~\cite{franta2020symmetry}:
+
+\begin{equation}
+    \varepsilon_{\alpha\beta}(\omega) =
+    \delta_{\alpha\beta}
+    + \chi_{\alpha\beta}(\omega)
+\label{dielectric_tensor_from_susceptibility}
+\end{equation}
 
 Subsequently, the causal condition in equation~\eqref{causal_condition_susceptibility_kernel}
 gives the frequency-domain susceptibility in the form:

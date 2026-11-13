@@ -1,0 +1,199 @@
+{
+  "source_repository": "Photonico/o-B14_20241024",
+  "reachable_commit": "a9476a5c0e5ce764456c4cc7a50f8e15d64f951c",
+  "first_commit": "dc5eef0b57f9de608448d9413af47a1d94a33b25",
+  "first_commit_date": "2024-10-01",
+  "latest_commit_date": "2026-06-29",
+  "commit_count": 549,
+  "merge_commit_count": 2,
+  "history_method": "Bare single-branch partial clone with blob:none; git log -m --name-status --no-renames includes merge-parent differences. No full calculation repository downloaded.",
+  "git_metadata_initial_pack_size_KiB": 1007.69,
+  "historical_unique_paths": 32771,
+  "historically_deleted_paths": 24848,
+  "filename_search_results": {
+    "explicit_molecular_H2_paths": [],
+    "adsorption_EPW_alpha2F_paths": [],
+    "QE_Wannier_input_extensions": []
+  },
+  "selective_file_versions": [
+    {
+      "commit": "a0432dedf32c929aa293468d5706241ef12974e6",
+      "path": "1.1_energy_atom/Hydrogen/POSCAR",
+      "blob": "7ec1762499b7a7b3782e10b6931324a3168b4f2e",
+      "bytes": 315,
+      "source_lines": 9,
+      "hits": [
+        {
+          "text": "o-B14\n   1.00000000000000     \n    15.0000000000000000    0.0000000000000000    0.0000000000000000\n     0.0000000000000000   12.5000000000000000    0.0000000000000000\n     0.0000000000000000    0.0000000000000000   18.0000000000000000\n   H\n     1\nDirect\n  0.5212300000000027  0.5450000000000017  0.6379599999999996\n"
+        }
+      ]
+    },
+    {
+      "commit": "37f39f25e9fa4e5a8a972d86766d9bb3c29a0a8e",
+      "path": "1.0_cohesive_energy_atom/POSCAR",
+      "blob": "caa689cdc6c9707128ece95316cafd21144917b0",
+      "bytes": 314,
+      "source_lines": 9,
+      "hits": [
+        {
+          "text": "o-B14\n   1.00000000000000     \n    15.0000000000000000    0.0000000000000000    0.0000000000000000\n     0.0000000000000000   12.5000000000000000    0.0000000000000000\n     0.0000000000000000    0.0000000000000000   18.0000000000000000\n  B\n     1\nDirect\n  0.5212300000000027  0.5450000000000017  0.6379599999999996\n"
+        }
+      ]
+    },
+    {
+      "commit": "06f3fec9c32195f9f34e13d17da70ef7de70ab84",
+      "path": "2.0_geometry.ipynb",
+      "blob": "8111a59d091376213f43ec0a6e77b8f048e35863",
+      "bytes": 3526,
+      "source_lines": 62,
+      "hits": []
+    },
+    {
+      "commit": "20959dd9e566a7836807669fd9c9201521c37cad",
+      "path": "2.0_geometry.ipynb",
+      "blob": "fd51e3bac0cb9f1f568df828bbf6de5b093d5b14",
+      "bytes": 3502,
+      "source_lines": 62,
+      "hits": []
+    },
+    {
+      "commit": "6eb9af59d58013332cb8ecac3b9c243a820da0ed",
+      "path": "2.0_geometry.ipynb",
+      "blob": "818ae14ffcf9878ff3871818f24abdf0d6770cc8",
+      "bytes": 4761,
+      "source_lines": 66,
+      "hits": []
+    },
+    {
+      "commit": "a2161ce95a58a4dd9e2ca5a89783b6cae30e4460",
+      "path": "2.0_geometry.ipynb",
+      "blob": "e7475e15be0bda541f8bdb8a86e40e81f06cfa4f",
+      "bytes": 4618,
+      "source_lines": 62,
+      "hits": []
+    },
+    {
+      "commit": "39ecca8d82ebd6653d19c4a3ff3de6a482c48582",
+      "path": "2.0_geometry.ipynb",
+      "blob": "a169579fdb095b01582f44f12d9f2ddb1b6922f4",
+      "bytes": 2693,
+      "source_lines": 39,
+      "hits": []
+    },
+    {
+      "commit": "23bd85bb1653cc4d24b88c00009a3ab151bb5fdd",
+      "path": "2.0_geometry.ipynb",
+      "blob": "f8d9b7e3ed940ab78c9babcc5b0f316ab8734219",
+      "bytes": 2501,
+      "source_lines": 33,
+      "hits": []
+    },
+    {
+      "commit": "85de57ed472609f3a159d737f255cff4d6cf9e51",
+      "path": "2.0_geometry.ipynb",
+      "blob": "b59731309963945f1176da868757dbd0fb17b7ba",
+      "bytes": 1685,
+      "source_lines": 21,
+      "hits": []
+    },
+    {
+      "commit": "25b438cfda7bc00612e18dc2c1b18dd5508a41a5",
+      "path": "2.0_geometry.ipynb",
+      "blob": "ca8bd31cc196d25c2cf38c1d4002b07529564f90",
+      "bytes": 1521,
+      "source_lines": 20,
+      "hits": []
+    },
+    {
+      "commit": "a9f7c6b5223d09e5b7204a7ad49262472bc5968f",
+      "path": "2.0_geometry.ipynb",
+      "blob": "b43e9f1d06da8e3066649196ebdd692cdb787078",
+      "bytes": 596,
+      "source_lines": 9,
+      "hits": []
+    },
+    {
+      "commit": "07ee6c45fb19c8447efe5c7f100d1f225bd9fd86",
+      "path": "2.0_geometry_optimization.ipynb",
+      "blob": "23502024c601269d75f48999f1ba57ac2678be8b",
+      "bytes": 490,
+      "source_lines": 7,
+      "hits": []
+    },
+    {
+      "commit": "a2161ce95a58a4dd9e2ca5a89783b6cae30e4460",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "8998797f4fa0b8f089dac2ab31cad7e83cd3f54c",
+      "bytes": 527,
+      "source_lines": 8,
+      "hits": []
+    },
+    {
+      "commit": "de5245bad03a3e2e337a9cb5b2652336a54f5f67",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "3803619881b6d6c8c6c815ad5f2ee45d00c301e9",
+      "bytes": 1558,
+      "source_lines": 11,
+      "hits": []
+    },
+    {
+      "commit": "e141de2524cce57d6a548329ed014db699e1316c",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "c7af9f1a2bf63ecf697002e7dbd68949b49ae5dc",
+      "bytes": 2666,
+      "source_lines": 16,
+      "hits": []
+    },
+    {
+      "commit": "a5dfa7dd7bc252651f4f4bbc8111ada539350352",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "c66d06df55173ce0330d0c1e9484097dff530a60",
+      "bytes": 2653,
+      "source_lines": 16,
+      "hits": []
+    },
+    {
+      "commit": "a56c20b089391ddd3bd11f524ad1db808b7f4e17",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "928e725769ed098827df3e8fd40a41e114ac3e89",
+      "bytes": 491,
+      "source_lines": 6,
+      "hits": []
+    },
+    {
+      "commit": "ed9c4d56e116b9a96ac93966876f70c49f55d975",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "fc6703f4d7e7d21f872e18b79ac54dcf16a0b032",
+      "bytes": 395,
+      "source_lines": 3,
+      "hits": []
+    },
+    {
+      "commit": "124ebba9fa3940f3ab35501f09feba4ea635713f",
+      "path": "0.0_abstract_draft.ipynb",
+      "blob": "45f84d10f080bf8ee8e3e3ed0eb47ddc9e262130",
+      "bytes": 388,
+      "source_lines": 1,
+      "hits": []
+    },
+    {
+      "commit": "8d78b3a86ccb5772c0ea8c9512c669d3b41b0f68",
+      "path": "superconductivity/Superconducting gap.ipynb",
+      "blob": "d75d63a55d2a10f777d8453139a75b2959bd08b4",
+      "bytes": 225855,
+      "source_lines": 311,
+      "hits": []
+    }
+  ],
+  "historical_archives": [
+    "0.0_structure/figures.zip",
+    "superconductivity/script.zip"
+  ],
+  "superconductivity_directory_commits": [
+    "8d78b3a86ccb5772c0ea8c9512c669d3b41b0f68",
+    "4bccac8e27b5d4dfa0ab21d65de7bb6106b79e27"
+  ],
+  "script_zip_only_version_commit": "8d78b3a86ccb5772c0ea8c9512c669d3b41b0f68",
+  "conclusion": "No recoverable H2 molecular energy reference, adsorption energy ledger, or QE/EPW input was identified in this bounded public-history audit.",
+  "limits": "All reachable main history path names were checked; selected relevant notebook/reference contents were checked. Arbitrarily named unrelated blobs, unreachable commits, deleted remote branches, other repositories and private/offline records were not exhaustively searched."
+}

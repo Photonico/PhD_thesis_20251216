@@ -19,16 +19,16 @@ with diverse bond lengths.
 These structural motifs facilitate the formation of unusual seven-centre-two-electron $\pi$-bonds,
 which were predicted for the first time in three-dimensional boron allotropes.
 The presence of these bonds highlights the complexity and versatility of boron chemistry under ambient conditions.
-Moreover, this material is predicted to be a superconductor with a critical temperature $T_\mathrm{c}$ of \qty{29.1}{K}~\cite{han2023superconducting}.
+Moreover, this material is predicted to be a superconductor with a critical temperature $T_c$ of \qty{29.1}{K}~\cite{han2023superconducting}.
 
 In this chapter, we investigate the electronic and optical properties of bulk o-\ce{B14},
 its monolayer and bilayer forms,
 and their hydrogen-terminated counterparts using first-principles calculations.
 The pristine monolayer and bilayer show no imaginary phonon frequencies on the calculated paths.
 The hydrogen-terminated bilayer also retains its bonding framework during a finite-temperature simulation,
-although it shows small imaginary phonon frequencies near $\Gamma$.
+although small imaginary phonon frequencies near $\Gamma$ require further convergence checks.
 These structures exhibit a remarkable variety of electronic behaviour,
-including semiconductivity with a band gap of \qty{0.67}{\electronvolt} in the bilayer,
+including semiconductivity with a band-gap of \qty{0.67}{\electronvolt} in the bilayer,
 predicted phonon-mediated superconductivity in the hydrogen-terminated bilayer,
 and magnetism in the monolayer.
 The directional bonding network drives anisotropic plasmonic and optical responses,
@@ -56,14 +56,14 @@ such as three-centre-two-electron bonds.
 Additionally, boron-rich compounds exhibit promising semiconducting and thermoelectric properties,
 with potential use in next-generation electronics and energy-harvesting devices.
 
-Generally, the superconducting critical temperature $T_\mathrm{c}$ of elemental superconductors is relatively low at ambient pressure.
-A representative elemental superconductor, \ce{Nb}, has a $T_\mathrm{c}$ of about \qty{9}{K}.
-Under high pressure, the $T_\mathrm{c}$ can be significantly increased compared with the ambient-pressure value,
+Generally, the superconducting critical temperature $T_c$ of elemental superconductors is relatively low at ambient pressure.
+A representative elemental superconductor, \ce{Nb}, has a $T_c$ of about \qty{9}{K}.
+Under high pressure, the $T_c$ can be significantly increased compared with the ambient-pressure value,
 but high pressure hinders experimental studies and practical applications.
 Therefore,
-it is important to explore elemental superconductors with a high $T_\mathrm{c}$ under low or ambient pressure.
-Interestingly, superconductivity with a $T_\mathrm{c}$ of \qty{35}{K} has been reported in a three-dimensional kagome-like boron allotrope under \qty{7}{GPa} on the basis of \textit{ab initio} calculations~\cite{ouyang2025superconductivity},
-while earlier work predicts a $T_\mathrm{c}$ exceeding \qty{15}{K} in three-dimensional boron allotropes~\cite{zhang2020superconducting}.
+it is important to explore elemental superconductors with a high $T_c$ under low or ambient pressure.
+Interestingly, superconductivity with a $T_c$ of \qty{35}{K} has been reported in a three-dimensional kagome-like boron allotrope under \qty{7}{GPa} on the basis of \textit{ab initio} calculations~\cite{ouyang2025superconductivity},
+while earlier work predicts a $T_c$ exceeding \qty{15}{K} in three-dimensional boron allotropes~\cite{zhang2020superconducting}.
 
 Boron can also form isolated clusters which exhibit many intriguing properties,
 including fluxionality~\cite{pan2019fluxional}.
@@ -71,8 +71,8 @@ Fluxionality describes the ability to undergo continuous structural rearrangemen
 Recent studies have focused on two-dimensional forms of boron,
 including monolayer borophene, where many different structures have been observed.
 Recent review papers have summarized these developments:
-Wang et al.~\cite{wang2024borophene} have summarized the synthesis and properties of borophene,
-while Mishra et al.~\cite{mishra2024borophene} have reviewed the potential of borophene in various technological fields such as batteries, supercapacitors, and fuel cells, as well as the associated synthesis techniques.
+Wang \textit{et al.}~\cite{wang2024borophene} have summarized the synthesis and properties of borophene,
+while Mishra \textit{et al.}~\cite{mishra2024borophene} have reviewed the potential of borophene in various technological fields such as batteries, supercapacitors, and fuel cells, as well as the associated synthesis techniques.
 Other recent reviews of borophene focus on experimental aspects~\cite{mohanty2023review,yang2023borophenes,kumar2024,xie2020two},
 and provide a survey of structures starting from the bulk allotropes, boron clusters,
 potential building blocks for two-dimensional boron crystals, and two-dimensional few-layered boron sheets~\cite{sun2017two}.
@@ -108,7 +108,7 @@ which passivates the highly reactive surface boron atoms.
 This passivation can reduce the tendency to oxidize or react with ambient species,
 thereby improving chemical stability in air.
 Moreover, hydrogen termination can modify the electronic properties,
-potentially opening a band gap or altering metallic behaviour,
+potentially opening a band-gap or altering metallic behaviour,
 which may be advantageous for specific applications~\cite{hou2020ultrastable,li2021synthesis}.
 Large-scale synthesis of freestanding atomic sheets of borophene has been reported through a novel liquid-phase exfoliation approach,
 where electron microscopy confirmed the presence of the $\beta_{12}$ and $\chi_{3}$ phases,
@@ -162,7 +162,7 @@ where the interlayer connectivity consists only of single B-B bonds.
 
 In this chapter, we use density functional theory calculations to investigate the electronic and optical properties of bulk o-\ce{B14} and its monolayer and bilayer forms.
 Hydrogen termination of the two-dimensional structures is also considered.
-Interestingly, bilayer o-\ce{B14} is found to be a semiconductor with a band gap of around
+Interestingly, bilayer o-\ce{B14} is found to be a semiconductor with a band-gap of around
 \qty{0.67}{\electronvolt} as calculated using the HSE06 hybrid functional.
 The hydrogen-terminated bilayer, however, is predicted to support phonon-mediated superconductivity,
 while monolayer o-\ce{B14} is found to be magnetic.
@@ -170,7 +170,7 @@ The optical properties reveal distinctive anisotropic behaviour and loss feature
 as well as the ultraviolet energy range for out-of-plane excitation,
 broadening the potential of boron for applications in optoelectronics, plasmonics, and catalysis.
 
-This chapter is organized as follows.
+This chapter is organised as follows.
 Section~\ref{2_methods} presents the computational methods.
 Then, section~\ref{2_results} discusses the electronic, superconducting, and optical properties.
 Finally, section~\ref{2_conclusions} gives the conclusions.
@@ -184,7 +184,7 @@ The density functional theory calculations are performed using the Vienna Ab ini
 The projector augmented wave method is used to describe the electron-ion interactions~\cite{kresse1999ultrasoft}.
 The generalized gradient approximation of Perdew--Burke--Ernzerhof is employed for the exchange-correlation functional~\cite{perdew1996generalized},
 along with the D3 dispersion correction with Becke--Johnson damping to account for long-range van der Waals interactions~\cite{becke2005density,grimme2010consistent,grimme2011effect}.
-For bulk o-\ce{B14}, a $\Gamma$-centred k-point mesh of $34 \times 48 \times 31$ is used with a plane-wave energy cutoff of \qty{600}{\electronvolt}.
+For bulk o-\ce{B14}, a $\Gamma$-centered k-point mesh of $34 \times 48 \times 31$ is used with a plane-wave energy cutoff of \qty{600}{\electronvolt}.
 The electronic convergence criterion is set to \qty{1e-6}{\electronvolt},
 and the structures are relaxed until all forces on each atom are below \qty{0.01}{\electronvolt\per\angstrom}.
 For the two-dimensional systems, a vacuum region of approximately \qty{22}{\angstrom} is included,
@@ -198,7 +198,7 @@ which can improve band-gap estimates relative to semilocal functionals~\cite{sas
 Unless explicitly stated otherwise,
 all figures show results obtained using the Perdew--Burke--Ernzerhof functional.
 For the density-of-states calculations for bulk o-\ce{B14},
-we use a $\Gamma$-centred k-point mesh of $20 \times 28 \times 18$.
+we use a $\Gamma$-centered k-point mesh of $20 \times 28 \times 18$.
 For the two-dimensional systems,
 we use a mesh of $20 \times 18 \times 1$.
 The Fermi-level smearing is calculated using the Gaussian method with a broadening value of \qty{0.1}{\electronvolt}.
@@ -224,7 +224,6 @@ here, $E_{\mathrm{H/B}}$ is the total energy of the adsorption system,
 $E_{\mathrm{B}}$ represents the total energy of the pristine two-dimensional boron structure,
 $E_{\mathrm{H}}=E_{\ce{H2}}/2$ denotes half the total energy of an isolated \ce{H2} molecule,
 and $n_{\mathrm{H}}$ denotes the number of hydrogen atoms in the unit cell.
-We evaluate all adsorption energies from non-spin-polarized total energies.
 
 The cohesive energy per atom, $E_{\mathrm{c}}$, of the boron systems is calculated as:
 
@@ -238,9 +237,8 @@ here,
 $E_{\mathrm{B\text{-}struc}}$ represents the total energy of the boron structure of interest,
 $E_{\mathrm{B\text{-}atom}}$ is the total energy of a free boron atom calculated in a large supercell,
 and $n_{\mathrm{B}}$ denotes the number of boron atoms in the unit cell of the structure.
-We evaluate all cohesive energies without the dispersion correction.
 
-The charge-density difference, $\Delta \rho(\vec{r}\,)$, for hydrogen adsorption on the surface is calculated as:
+The charge density difference, $\Delta \rho(\vec{r}\,)$, for hydrogen adsorption on the surface is calculated as:
 
 \begin{equation}
     \Delta \rho(\vec{r}\,) =
@@ -258,7 +256,7 @@ the hydrogen fragment contains all the adsorbed hydrogen atoms.
 
 The dynamical stability of the pristine monolayer and bilayer,
 as well as the hydrogen-terminated structures,
-is examined from the phonon-dispersion curves using the finite-difference method.
+is examined from the phonon dispersion curves using the finite-difference method.
 The main phonon dispersions are calculated using $(3\times3)$ supercells.
 The comparison with $(2\times2)$ supercells is included in figures~\ref{S2.8} and~\ref{S2.9}.
 For the hydrogen-terminated bilayer,
@@ -276,7 +274,7 @@ and a vacuum spacing of \qty{15}{\angstrom} is added for the two-dimensional sys
 Monkhorst--Pack k-point meshes of $9 \times 12 \times 8$ for the bulk,
 $10 \times 10 \times 1$ for the monolayer,
 and $9 \times 9 \times 1$ for the bilayer are employed to sample the Brillouin zone~\cite{monkhorst1976special}.
-Density functional perturbation theory gives the phonon dispersions and the first-order change in the self-consistent potential
+Density-functional perturbation theory gives the phonon dispersions and the first-order change in the self-consistent potential
 on q-point grids of $3 \times 4 \times 3$,
 $5 \times 5 \times 1$, and $3 \times 3 \times 1$, respectively~\cite{baroni2001phonons}.
 Atomic positions and lattice parameters are relaxed until residual forces are below $1\times10^{-5}$~Ry/bohr,
@@ -290,16 +288,16 @@ The Fermi-surface average of the squared matrix elements, resolved by phonon fre
 gives the Eliashberg spectral function $\alpha^2F(\omega)$,
 from which $\lambda$ and $\omega_\mathrm{log}$ follow through equation~\eqref{electron_phonon_spectral_moments}.
 Superconductivity is subsequently analysed using the EPW code~\cite{giannozzi2009quantum,giannozzi2020quantum,giannozzi2017advanced,ponce2016epw},
-which is employed to evaluate the electron-phonon coupling strength and estimate the Allen--Dynes transition temperatures, $T_\mathrm{c}$~\cite{margine2013anisotropic}.
+which is employed to evaluate the electron-phonon coupling strength and estimate the Allen--Dynes transition temperatures, $T_c$~\cite{margine2013anisotropic}.
 The superconducting properties are also obtained by solving the fully anisotropic Migdal--Eliashberg equations~\cite{bardeen1955electron,giustino2017electron,margine2013anisotropic},
 as implemented in the EPW code.
-In this treatment, $T_\mathrm{c}$ is obtained from the disappearance of the superconducting gap upon increasing temperature;
+In this treatment, $T_c$ is obtained from the disappearance of the superconducting gap upon increasing temperature;
 it is a separate estimate from the Allen--Dynes result.
 The Morel--Anderson pseudopotential $\mu^{*}$ is chosen to be $0.13$,
 consistent with the typical semi-empirical range of $0.10$--$0.16$ used in Migdal--Eliashberg calculations for light-element and $sp$-bonded superconductors~\cite{allen-dynes},
 and with the value adopted in the literature for boron-based two-dimensional superconductors~\cite{zhao2019two}.
 With this choice,
-the calculated electron-phonon coupling strengths, $\lambda$, and $T_\mathrm{c}$ indicate clear dimensionality effects,
+the calculated electron-phonon coupling strengths, $\lambda$, and $T_c$ indicate clear dimensionality effects,
 as discussed in section~\ref{2_superconducting}.
 
 For the calculation of the optical properties within VASP,
@@ -314,7 +312,7 @@ The displayed bulk spectrum uses the finer $34\times48\times31$ k-point mesh.
 The optical calculations use non-spin-polarized PBE states,
 with Gaussian occupation smearing of \qty{0.01}{\electronvolt} and \texttt{CSHIFT=0.1}~eV.
 No separately parameterized Drude term is added.
-The latter broadening is a numerical parameter.
+The latter broadening is a numerical parameter, rather than a fitted carrier scattering rate.
 The microscopic expression for the dielectric response,
 the Kramers--Kronig relation,
 and the derived optical quantities are introduced in chapter~\ref{cha:fundamentals_b},
@@ -349,7 +347,7 @@ The thickness is defined in figure~\ref{S2.6}.
 The plotted layer spectra retain the same convention for all three diagonal components.
 The resulting magnitudes depend on the chosen $d_{\mathrm{2D}}$.
 For perpendicular polarization, the electrostatic boundary condition differs from the in-plane case,
-so this rescaling gives an effective quantity of the chosen convention.
+so this rescaling should not be identified with a unique intrinsic out-of-plane dielectric constant.
 The derived layer optical quantities are interpreted within this effective-medium convention.
 We note that interband transitions presumably coexist with the plasmons and form a broad background.
 The coexistence of individual transitions and plasmons in the same energy range leads to coupling between the two types of excitations,
@@ -425,7 +423,7 @@ which reinforces the stability of the bonding framework.
 The calculated cohesive energy of bulk o-\ce{B14} is \qty{-6.16}{\electronvolt}.
 Relative to $\alpha$-\ce{B12},
 the reported energy difference of o-\ce{B14} is \qty{0.232}{\electronvolt} per atom~\cite{han2023superconducting}.
-This positive difference places o-\ce{B14} above $\alpha$-\ce{B12} in energy.
+This positive difference does not establish o-\ce{B14} as the thermodynamic ground-state phase.
 
 \subsection{\texorpdfstring{Xene o-\ce{B14}: atomic and electronic structure}{Xene o-B14: atomic and electronic structure}}
 \label{xene_atomic_electronic_structure}
@@ -433,7 +431,7 @@ This positive difference places o-\ce{B14} above $\alpha$-\ce{B12} in energy.
 \subsubsection{Structural properties}
 \label{xene_ob14_structural_properties}
 
-The Xene derivatives of o-\ce{B14} are considered next.
+The xene derivatives of o-\ce{B14} are considered next.
 The atomic structures of the bilayer and monolayer are shown in panels~(d) and~(e),
 and panels~(g) and~(h) of figure~\ref{fig:ob14_atomic_structure},
 respectively.
@@ -445,8 +443,8 @@ located between the two apical boron atoms on each side of the layer,
 as shown in figure~\ref{S2.7}.
 This adsorption site, however,
 is found to be metastable and notably less favourable than the top site,
-by \qty{2.62}{\electronvolt} per hydrogen atom for the monolayer
-and \qty{2.26}{\electronvolt} per hydrogen atom for the bilayer.
+by \qty{1.57}{\electronvolt} per hydrogen atom for the monolayer
+and \qty{2.61}{\electronvolt} per hydrogen atom for the bilayer.
 
 \begin{figure}[!htbp]
 \centering
@@ -466,13 +464,13 @@ The interlayer B-B distance of the bilayer is also slightly larger than that of 
 On the other hand,
 the in-plane lattice constants of the hydrogen-terminated monolayer and bilayer are slightly smaller compared with the bulk,
 and the interlayer B-B distance of the hydrogen-terminated bilayer is reduced by about $2.4\%$.
-The cohesive energies of the monolayer and bilayer are \qty{-5.81}{\electronvolt} and \qty{-6.04}{\electronvolt},
+The cohesive energies of the monolayer and bilayer are \qty{-6.12}{\electronvolt} and \qty{-6.35}{\electronvolt},
 respectively.
 These values can be compared with \qty{-6.16}{\electronvolt} for bulk o-\ce{B14}
 and \qty{-6.00}{\electronvolt} for the $\alpha'$-monolayer,
 calculated using the same approach.
-The reported adsorption energy per hydrogen atom on the bilayer is \qty{-0.99}{\electronvolt},
-which is weaker than that on the monolayer, \qty{-1.45}{\electronvolt}.
+The reported adsorption energy per hydrogen atom on the bilayer is \qty{-1.525}{\electronvolt},
+which is slightly stronger than that on the monolayer, \qty{-1.450}{\electronvolt}.
 
 \begin{table}[!htbp]
 \centering
@@ -492,19 +490,19 @@ interlayer\\B-B (Å)
 & electronic nature \\ \hline
 
 monolayer
-& 5.700 & 6.314 & - & $-5.81$ & -
+& 5.700 & 6.314 & - & $-6.12$ & -
 &\begin{tabular}[c]{@{}c@{}}
 antiferromagnetic\\semiconductor
 \end{tabular}\\
 
 H-terminated monolayer
-& 5.694 & 6.134 & - & - & $-1.45$ & metallic \\
+& 5.694 & 6.134 & - & - & $-1.450$ & metallic \\
 
 bilayer
-& 5.719 & 6.349 & 1.693 & $-6.04$ & - & semiconductor \\
+& 5.719 & 6.349 & 1.693 & $-6.35$ & - & semiconductor \\
 
 H-terminated bilayer
-& 5.680 & 6.147 & 1.645 & - & $-0.99$ & metallic \\
+& 5.680 & 6.147 & 1.645 & - & $-1.525$ & metallic \\
 
 bulk & 5.697 & 6.204 & 1.686 & $-6.16$ & - & metallic \\
 
@@ -521,7 +519,6 @@ adsorption energy $E_{\mathrm{ad}}$,
 and electronic nature of the considered o-\ce{B14} systems.
 The lattice vectors and interlayer B-B distance are given in \si{\angstrom},
 while $E_{\mathrm{c}}$ is given in eV per boron atom and $E_{\mathrm{ad}}$ in eV per hydrogen atom.
-For the bulk, $a$ and $b$ denote the lattice constants $a$ and $c$ in table~\ref{tab:bulk_ob14_structure}.
 The semiconducting classifications refer to the HSE06 band structures.}
 \label{tab:xene_ob14_structure}
 \end{table}
@@ -532,7 +529,7 @@ The semiconducting classifications refer to the HSE06 band structures.}
 To investigate whether the monolayer and bilayer structures,
 both with and without hydrogen adsorption,
 are dynamically stable,
-the phonon-dispersion curves are calculated.
+the phonon dispersion curves are calculated.
 The results obtained from finite differences using $3\times3$ supercells are shown in figure~\ref{fig:xene_ob14_phonon_dispersion}
 for the monolayer and bilayer.
 No imaginary frequencies are present;
@@ -551,12 +548,12 @@ the hydrogen-terminated bilayer retains its bonding framework over the \qty{5.5}
 as shown in figure~\ref{S2.10}.
 This supports thermal persistence on the simulated time scale.
 Together with the cohesive energies and phonon spectra,
-it leaves thermodynamic stability against all competing phases and experimental synthesizability as separate questions.
+it does not establish thermodynamic stability against all competing phases or experimental synthesizability.
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.60\textwidth]{figures_proj2/fig2.5.pdf}
-\caption{Phonon-dispersion curves for monolayer and bilayer o-\ce{B14},
+\caption{Phonon dispersion curves for monolayer and bilayer o-\ce{B14},
 as calculated from finite differences using a $3\times3$ supercell.}
 \label{fig:xene_ob14_phonon_dispersion}
 \end{figure}
@@ -564,18 +561,18 @@ as calculated from finite differences using a $3\times3$ supercell.}
 \subsubsection{Electronic properties}
 \label{xene_ob14_electronic_properties}
 
-The charge-density difference distribution for hydrogen adsorption on the surface of the bilayer is shown in figure~\ref{fig:h_ob14_charge_density_difference}.
+The charge density difference distribution for hydrogen adsorption on the surface of the bilayer is shown in figure~\ref{fig:h_ob14_charge_density_difference}.
 There is a significant depletion of electron density around the hydrogen atoms,
 and an increase both in the interlayer B-B bonds and in the $p_z$ orbital of the uppermost bipyramid boron atom.
-The latter is directed towards the hydrogen atom and is partially hidden within the large depletion region.
+The latter is directed toward the hydrogen atom and is partially hidden within the large depletion region.
 The increase in electron density between the interlayer B-B bond is consistent with the slightly smaller distance compared with the bilayer without hydrogen adsorption.
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\textwidth]{figures_proj2/fig2.4/fig2.4_6k.png}
-\caption{Charge-density difference, $\Delta \rho(\vec{r}\,)$,
+\caption{Charge density difference, $\Delta \rho(\vec{r}\,)$,
 for hydrogen adsorption on the bilayer o-\ce{B14} surface.
-The charge-density difference is calculated using equation~\eqref{charge_density_difference_hydrogen_adsorption}
+The charge density difference is calculated using equation~\eqref{charge_density_difference_hydrogen_adsorption}
 for a $2\times2$ supercell.
 Regions of charge accumulation are shown in yellow,
 and regions of charge depletion are shown in blue.
@@ -588,14 +585,14 @@ as calculated using the HSE06 functional.
 In this HSE06 comparison, the antiferromagnetic configuration is lower in energy than the ferromagnetic configuration
 by approximately \qty{0.02}{\electronvolt} per 14-atom cell.
 This small difference is a zero-temperature energy comparison,
-and the magnetic ordering temperature requires a separate calculation.
+and does not determine a finite-temperature magnetic ordering temperature.
 A small band gap of \qty{0.105}{\electronvolt} opens in the antiferromagnetic case.
-In the non-magnetic state,
+In the nonmagnetic state,
 the system is metallic and exhibits a high density of states at the Fermi level.
 This feature is related to flat bands throughout the Brillouin zone,
 particularly along the $\mathrm{T}$--$\mathrm{Y}$ direction,
 as shown in figures~\ref{S2.12} and~\ref{S2.13}.
-Since a large density of states at the Fermi level often suggests that a material is prone to undergo transitions to more stable ground states,
+Since a large density of states at the Fermi level often suggests that a material is prone to undergo transitions to more stable ground-states,
 such as forming superconductors, ferromagnets,
 or experiencing structural distortions such as the Jahn--Teller effect,
 we tested these aspects, as shown in figure~\ref{S2.14}.
@@ -619,7 +616,7 @@ The lower-left panel shows the band structure of bilayer o-\ce{B14}.}
 \end{figure}
 
 For the antiferromagnetic case,
-the spatial distributions of the highest occupied and lowest unoccupied states at a k point midway along the high-symmetry $\mathrm{T}$--$\mathrm{Y}$ direction are shown in figure~\ref{fig:monolayer_afm_states_spin_density}.
+the spatial distributions of the highest occupied and lowest unoccupied states at a k-point midway along the high-symmetry $\mathrm{T}$--$\mathrm{Y}$ direction are shown in figure~\ref{fig:monolayer_afm_states_spin_density}.
 The total spin density is also shown in the same figure.
 It is apparent that the apical boron atoms of the bipyramid are responsible for the magnetic behaviour of the system,
 where they have a magnetic moment of $0.262~\mu_{\mathrm{B}}$.
@@ -629,13 +626,14 @@ In the antiferromagnetic configuration,
 virtual hopping between neighbouring magnetic sites is enhanced because electrons can delocalize onto oppositely aligned spins without violating the Pauli exclusion principle,
 leading to a greater kinetic-energy lowering.
 In contrast, ferromagnetic alignment restricts such virtual hopping processes and reduces the associated kinetic-energy gain.
-This provides a possible interpretation of the calculated HSE06 ordering.
+This provides a possible interpretation of the calculated HSE06 ordering,
+rather than an independent determination of the exchange mechanism.
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=0.80\textwidth]{figures_proj2/fig2.7/fig2.7_from2.6.png}
 \caption{Highest occupied and lowest unoccupied spin-up and spin-down states of the monolayer in the antiferromagnetic state
-at a k point midway along the high-symmetry $\mathrm{T}$--$\mathrm{Y}$ direction.
+at a k-point midway along the high-symmetry $\mathrm{T}$--$\mathrm{Y}$ direction.
 The corresponding spin density of the monolayer is also shown.
 The isosurface levels are $1\times10^{-7}~e\,\si{\angstrom}^{-3}$ for the state distributions
 and $0.005~e\,\si{\angstrom}^{-3}$ for the spin density.}
@@ -651,8 +649,8 @@ The screened short-range Fock exchange in HSE06,
 as introduced in equation~\eqref{HSE_exchange_correlation_functional},
 partly reduces the self-interaction and delocalization errors of semilocal exchange
 and changes the relative band-edge energies.
-The difference is therefore sensitive to the exchange-correlation approximation,
-and both values are theoretical estimates of the gap.
+The difference is therefore sensitive to the exchange-correlation approximation;
+neither result alone establishes the experimental gap.
 On terminating the bilayer structure with hydrogen,
 the band structure changes dramatically.
 As shown in figure~\ref{fig:h_bilayer_band_dos},
@@ -682,16 +680,16 @@ while the H-B distance is \qty{1.19}{\angstrom} in both cases.
 
 For the bulk phase,
 an electron-phonon coupling strength of $\lambda=0.931$ is obtained,
-corresponding to an Allen--Dynes superconducting transition temperature of $T_\mathrm{c}=\qty{28.2}{K}$.
+corresponding to an Allen--Dynes superconducting transition temperature of $T_c=\qty{28.2}{K}$.
 This value is consistent with the previously reported value of \qty{29.1}{K}~\cite{han2023superconducting}.
 The hydrogen-terminated bilayer exhibits a slightly higher electron-phonon coupling strength,
 $\lambda=1.01$,
-but a lower transition temperature of $T_\mathrm{c}=\qty{18.5}{K}$.
-A larger $\lambda$ can accompany a lower $T_\mathrm{c}$,
+but a lower transition temperature of $T_c=\qty{18.5}{K}$.
+A larger $\lambda$ does not necessarily imply a higher $T_c$,
 since the phonon frequency scale also enters the Allen--Dynes estimate~\cite{migdal1958interaction,marsiglio2020eliashberg,eliashberg1960interactions}.
 The reported monolayer coupling, $\lambda=0.05$, is too weak to support an appreciable transition temperature in this calculation.
 For $\mu^*=0.13$, it is outside the applicable range of the simplified Allen--Dynes expression in equation~\eqref{allen_dynes_temperature_estimate}.
-This result refers to the non-magnetic PBE reference state, separate from the gapped antiferromagnetic HSE06 state.
+This result does not determine superconductivity in the gapped antiferromagnetic HSE06 state.
 
 \begin{figure}[!htbp]
 \centering
@@ -705,13 +703,18 @@ Colour indicates the normalized distribution at each calculated temperature; the
 
 The anisotropic Migdal--Eliashberg results in figure~\ref{fig:ob14_superconducting_gap}
 show that the gap distribution shifts towards lower energies as the temperature increases.
-For bulk o-\ce{B14}, the gap remains finite at the highest calculated temperature of \qty{30}{K}, which places $T_\mathrm{c}$ above \qty{30}{K}.
-For the hydrogen-terminated bilayer, the whole gap distribution falls into the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}, which places $T_\mathrm{c}$ close to \qty{26}{K}.
+The published study reports transition-temperature estimates of \qty{31.3}{K} for bulk o-\ce{B14}
+and \qty{24.3}{K} for the hydrogen-terminated bilayer.
+The archived bulk distributions extend only to \qty{30}{K}, where the gap remains finite.
+For the hydrogen-terminated bilayer, the distribution approaches the lowest gap bin of \qty{0.03}{\milli\electronvolt} at \qty{26}{K}.
+These data show suppression of the gap but do not independently establish the quoted gap-closing temperatures.
+Confirming those values requires converged solutions that bracket the transition to the normal state.
 Overall, these results suggest that o-\ce{B14} is unlikely to possess conventional superconductivity in the monolayer phase owing to the extremely weak electron-phonon interaction,
-whereas the bulk and hydrogen-terminated bilayer are predicted to support phonon-mediated superconductivity.
+whereas the bulk and hydrogen-terminated bilayer are predicted to support phonon-mediated superconductivity
+within the stated electronic and vibrational approximations.
 For the hydrogen-terminated bilayer, the small imaginary phonon frequencies discussed in section~\ref{xene_ob14_phonon_dispersion}
-limit the stability assessment.
-The Allen--Dynes and anisotropic Migdal--Eliashberg estimates are separate results.
+remain a limitation of the stability assessment.
+The Allen--Dynes and anisotropic Migdal--Eliashberg estimates should be compared separately.
 
 \subsection{Optical properties}
 \label{2_optical}
@@ -758,10 +761,10 @@ Peaks in the imaginary part of the dielectric function signal strong absorption 
 typically interband excitations. Their energy, width, and intensity reflect the band structure and optical response.
 Except for the bilayer, the structures show a large low-energy response in these metallic reference calculations.
 Since no separately parameterized Drude term is added,
-the free-carrier scattering rate and the dc limit lie outside this response.
+this response does not by itself determine the free-carrier scattering rate or the dc limit.
 The bilayer, on the other hand,
-has a small $\varepsilon_{2}(\omega)$ at low energy despite its PBE semimetallic band structure,
-as a small band overlap can coexist with weak optical transitions.
+has a small $\varepsilon_{2}(\omega)$ at low energy despite its PBE semimetallic band structure;
+small band overlap does not require strong optical transitions in every polarization.
 The dielectric tensor characterizes how the polarization of the material changes in response to an applied electric field.
 For an incident photon,
 the tensor components represent the material response to the electric-field component of the photon along different directions.
@@ -787,7 +790,7 @@ The absorption coefficient is obtained from both parts of the dielectric functio
 $\alpha(\omega)=2\omega k(\omega)/c$,
 as given in equation~\eqref{absorption_coefficient_from_extinction_coefficient}.
 Here, $\omega$ is the angular frequency, with photon energy $E=\hbar\omega$.
-The absorption onset can differ from the first maximum of $\varepsilon_{2}(\omega)$.
+The absorption onset need not coincide with the first maximum of $\varepsilon_{2}(\omega)$.
 The bulk, monolayer, and hydrogen-terminated bilayer show appreciable low-energy absorption in the present reference calculations.
 
 In the visible region of the spectrum, from \qty{1.7}{\electronvolt} to \qty{3.3}{\electronvolt},
@@ -798,16 +801,17 @@ Related first-principles studies have also considered the optical response of bu
 A quantitative comparison requires consistent absorption units and, for the layers, a consistent effective-thickness convention.
 
 The energy-loss spectrum in figure~\ref{fig:ob14_absorption_loss} exhibits several sharp peaks.
-Beyond a negative $\varepsilon_1$, a loss maximum close to a zero crossing of $\varepsilon_1$, with sufficiently small $\varepsilon_2$,
-provides the optical-limit signature of a plasmon resonance.
-A wave-vector-dependent response would give the dispersion of a propagating two-dimensional plasmon.
+A negative $\varepsilon_1$ alone does not establish a plasmon resonance:
+a loss maximum close to a zero crossing of $\varepsilon_1$, with sufficiently small $\varepsilon_2$,
+provides the relevant optical-limit signature.
+A wave-vector-dependent response would be required to establish the dispersion of a propagating two-dimensional plasmon.
 For the $xx$ component, the bulk, monolayer, and hydrogen-terminated bilayer show loss features below approximately \qty{1.5}{\electronvolt}.
 The monolayer also shows a distinct feature in the $yy$ direction.
 The finite $\varepsilon_2(\omega)$ near the corresponding zero crossings indicates damping, especially for the bulk.
 In the out-of-plane direction, the hydrogen-terminated bilayer has a strong peak near \qty{1.6}{\electronvolt}.
 The monolayer has features in the \qtyrange{4}{5}{\electronvolt} region and near \qty{6}{\electronvolt},
 while the bilayer has features around \qtyrange{5}{6}{\electronvolt}.
-The negative-$\varepsilon_1$ intervals and the loss maxima can have different boundaries.
+The negative-$\varepsilon_1$ intervals and the loss maxima need not have identical boundaries.
 
 \begin{figure}[!htbp]
 \centering
@@ -846,7 +850,7 @@ Near a plasmon resonance,
 the dielectric function changes rapidly in both its real and imaginary parts,
 which affects the extinction coefficient and produces sharp features,
 including dips or peaks, near resonances.
-These features follow from the same dielectric function, so they repeat the evidence of the loss spectrum for the plasmon assignment.
+These features follow from the same dielectric function and do not independently distinguish a plasmon from an interband transition.
 
 Specifically, these dips or peaks occur around \qty{0.5}{\electronvolt} and \qty{1.3}{\electronvolt} for the $xx$ component,
 \qty{1.0}{\electronvolt} and \qty{6.0}{\electronvolt} for the $yy$ component,
@@ -872,8 +876,9 @@ In the present chapter, we investigated the electronic, optical,
 and superconducting properties of novel o-\ce{B14}-based structures using density functional theory.
 Namely, we considered the three-dimensional bulk as well as the two-dimensional monolayer,
 bilayer, and hydrogen-terminated bilayer.
-The cohesive energies of the monolayer and bilayer are less negative than that of the bulk by \qty{0.35}{\electronvolt} and \qty{0.12}{\electronvolt} per atom, respectively.
-These comparisons concern the calculated cohesive energies.
+The cohesive energy of the monolayer is less negative than that of the bulk by \qty{0.04}{\electronvolt} per atom,
+while that of the bilayer is more negative by \qty{0.19}{\electronvolt} per atom.
+These comparisons concern the calculated cohesive energies rather than a complete thermodynamic phase diagram.
 The two-dimensional allotropes of o-\ce{B14} reveal complex properties including semiconductivity in the bilayer with a band gap of \qty{0.67}{\electronvolt},
 magnetism in the monolayer, and predicted phonon-mediated superconductivity in the hydrogen-terminated bilayer.
 The calculated optical properties show absorption in the visible region of the spectrum for the bilayer in the in-plane $xx$ component,
@@ -882,10 +887,10 @@ and the bulk in the out-of-plane $zz$ component.
 
 The metallic reference systems show low-energy in-plane loss features below around \qty{1.5}{\electronvolt},
 while all systems show out-of-plane loss features.
-Their plasmonic interpretation depends on the damping and the effective-medium treatment of the layers.
-Interestingly, the monolayer, hydrogen-terminated bilayer, and bulk systems behave as indefinite media,
+Their plasmonic interpretation remains subject to damping and the effective-medium treatment of the layers.
+Interestingly, the monolayer and bulk systems behave as indefinite media,
 for which the real part of the dielectric function in the in-plane and out-of-plane directions has opposite signs.
-This occurs in the region below \qty{2.0}{\electronvolt} for the monolayer and hydrogen-terminated bilayer,
+This occurs in the region below \qty{2.0}{\electronvolt} for the monolayer,
 and between \qty{6.0}{\electronvolt} and \qty{10.0}{\electronvolt} for the bulk.
 Altogether, these complex optical, electronic,
 and superconducting properties emphasize the rich physics of boron materials,
