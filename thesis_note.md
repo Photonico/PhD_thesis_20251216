@@ -28,3 +28,7 @@ main width: 37em
 * \enspace  1/2 em
 * \quad     1 em
 * \qquad    2 em
+
+$\mathrm{i}\hbar$
+
+$\mathrm{i}\mathrm{\hbar}$
