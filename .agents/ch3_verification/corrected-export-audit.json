@@ -1,0 +1,623 @@
+{
+  "source_commit": "f863ab02ebf93d5804f5552967ea750571778335",
+  "source_files": [
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/CONTCAR",
+      "sha256": "e36bcb9206cd198020d09178a6bc5a3bb02a73ff113dda84f70d7d217eccd5cd"
+    },
+    {
+      "path": "6.0_dielectric_selection/a-Beryllene/vaspout.h5",
+      "sha256": "50609bd82c41b81ba4c386da69e4f3bb219ddb8b66eafb4f80375c3bc76d7d19"
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/CONTCAR",
+      "sha256": "db7f6143175489b93ac9ca4caa14ac5a1e05903ea31080528dd09a69a0ef9a02"
+    },
+    {
+      "path": "6.0_dielectric_selection/b-Beryllene/vaspout.h5",
+      "sha256": "639db6a94ff71123d7758eb37014c7f1f9961a201feebdd32d395da2e9a4dbea"
+    }
+  ],
+  "geometry": {
+    "a": {
+      "cell_height_A": 40.0,
+      "fractional_z_span": 0.0,
+      "geometric_z_span_A": 0.0,
+      "effective_thickness_A": 3.96
+    },
+    "b": {
+      "cell_height_A": 40.0,
+      "fractional_z_span": 0.04737716419755601,
+      "geometric_z_span_A": 1.8950865679022404,
+      "effective_thickness_A": 5.855086567902241
+    }
+  },
+  "scope": "Corrected postprocessing of archived density-density interband arrays; no new DFT or Drude term.",
+  "h_eV_s": 4.135667662e-15,
+  "c_nm_s": 2.99792458e+17,
+  "software": {
+    "numpy": "2.4.2",
+    "h5py": "3.15.1",
+    "matplotlib": "3.10.8"
+  },
+  "figures": [
+    {
+      "path": "figures_proj3/fig3.13_dielectric.pdf",
+      "sha256": "cf7ffaf01a9aca533385053b75045b6af4cd5b19aeca35287a4affd3b90c073e",
+      "size_inches": [
+        16.0,
+        12.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "eps1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -4.761788294491145,
+            22.691495480142883
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "eps1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -13.55556070644498,
+            21.76648768695534
+          ]
+        },
+        {
+          "channel": "in_plane",
+          "quantity": "eps2",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -1.2984207548010354,
+            25.968415096020706
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "eps2",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -1.22526475730315,
+            24.505295146063
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_ch3/3.1_dielectric.pdf",
+      "sha256": "169635e7a270101d33b9179e83e8166bd9ea49664856b9d0d01ea84865b68c70",
+      "size_inches": [
+        16.0,
+        12.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "eps1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -4.761788294491145,
+            22.691495480142883
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "eps1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -13.55556070644498,
+            21.76648768695534
+          ]
+        },
+        {
+          "channel": "in_plane",
+          "quantity": "eps2",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -1.2984207548010354,
+            25.968415096020706
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "eps2",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -1.22526475730315,
+            24.505295146063
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_proj3/fig3.14a_absorption.pdf",
+      "sha256": "4436184d324e68a0d8036a673f58ee73e872b174d999e930cd5bf80d669ce813",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "absorption_nm^-1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.0125,
+            0.2625
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "absorption_nm^-1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.0125,
+            0.2625
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_ch3/4.1_absorption.pdf",
+      "sha256": "5b852a8e787a6007941c5b5179896bff114b3ea69eb7f7b730b3f5c65c473d6a",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "absorption_nm^-1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.0125,
+            0.2625
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "absorption_nm^-1",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.0125,
+            0.2625
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_proj3/fig3.14b_refractive.pdf",
+      "sha256": "02be69b824a709cd1b2365f6bccc5d37bc988b3e8eec6654515c4af1597fd03a",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "n",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.375,
+            5.128653293200709
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "n",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.375,
+            4.891133344391868
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_ch3/4.2_refractive.pdf",
+      "sha256": "cf3c7c2995aefb987d9ef1e26b7195dd7c4f04f94540072e309014195b7e17de",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "n",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.375,
+            5.128653293200709
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "n",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.375,
+            4.891133344391868
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_proj3/fig3.15_extinction.pdf",
+      "sha256": "bac634335b5a34cbed3e5229d70c7b45cae1fa65fd87269c4a618cd039b25bd5",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "k",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.25,
+            3.3073947523624043
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "k",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.25,
+            4.200447177878578
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_ch3/4.3_extinction.pdf",
+      "sha256": "4678975faa979c8cb7a45284dac1431f35652641fa1fd9c9b89fc84f577c1eea",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "k",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.25,
+            3.3073947523624043
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "k",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.25,
+            4.200447177878578
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_proj3/S3.16_reflectivity.pdf",
+      "sha256": "ad50970083c6fbd29c7f99776686d791d0d512919a42c334e4c6d5a1a76a3b61",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "R",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.05,
+            0.5613936749939004
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "R",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.05,
+            0.893971450645976
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_ch3/4.4_reflectivity.pdf",
+      "sha256": "1427c11a08ec934bd29a95d6b1fd8f9185dfc63b7e44c8544116fdc5c0e3ea50",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "R",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.05,
+            0.5613936749939004
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "R",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.05,
+            0.893971450645976
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_proj3/S3.17_energy-loss.pdf",
+      "sha256": "d0195f0f1e47d7216beaceb0c8a694434007df057a3e76392f0ad6dfb4ccb954",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "L",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.1,
+            2.5
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "L",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.1,
+            9.5
+          ]
+        }
+      ]
+    },
+    {
+      "path": "figures_ch3/4.5_energy-loss.pdf",
+      "sha256": "73dcbad870053c30328f95e84fec29e281ad9b930a735dc76348d9272b91fc8a",
+      "size_inches": [
+        16.0,
+        6.0
+      ],
+      "panels": [
+        {
+          "channel": "in_plane",
+          "quantity": "L",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.1,
+            2.5
+          ]
+        },
+        {
+          "channel": "out_of_plane",
+          "quantity": "L",
+          "xlim_eV": [
+            -0.5995128266993291,
+            12.589769360685912
+          ],
+          "ylim": [
+            -0.1,
+            9.5
+          ]
+        }
+      ]
+    }
+  ],
+  "maxima_0_to_12_eV": {
+    "a_in_plane": {
+      "eps1": {
+        "value": 7.220518740675961,
+        "energy_eV": 5.338687102500367
+      },
+      "eps2": {
+        "value": 9.427748710317516,
+        "energy_eV": 6.342199715752316
+      },
+      "n": {
+        "value": 2.816077856292835,
+        "energy_eV": 5.7200218955361075
+      },
+      "k": {
+        "value": 2.0719230446675256,
+        "energy_eV": 6.44255097707751
+      },
+      "absorption_nm^-1": {
+        "value": 0.13547562137803232,
+        "energy_eV": 6.46262122934255
+      },
+      "R": {
+        "value": 0.39743576740998365,
+        "energy_eV": 6.4826914816075885
+      },
+      "L": {
+        "value": 2.226474306742218,
+        "energy_eV": 11.981940602228267
+      }
+    },
+    "a_out_of_plane": {
+      "eps1": {
+        "value": 17.151460642980236,
+        "energy_eV": 5.218265588910133
+      },
+      "eps2": {
+        "value": 19.31730570636893,
+        "energy_eV": 5.318616850235328
+      },
+      "n": {
+        "value": 4.370248463163603,
+        "energy_eV": 5.238335841175172
+      },
+      "k": {
+        "value": 2.6791247074347524,
+        "energy_eV": 5.338687102500367
+      },
+      "absorption_nm^-1": {
+        "value": 0.17501005558124916,
+        "energy_eV": 7.747117374305044
+      },
+      "R": {
+        "value": 0.8516725981682405,
+        "energy_eV": 9.111894528327694
+      },
+      "L": {
+        "value": 8.878108733429999,
+        "energy_eV": 10.637233700470656
+      }
+    },
+    "b_in_plane": {
+      "eps1": {
+        "value": 21.443618944932247,
+        "energy_eV": 0.9624286181126354
+      },
+      "eps2": {
+        "value": 24.731823900972103,
+        "energy_eV": 1.1629345802194344
+      },
+      "n": {
+        "value": 4.902274466089142,
+        "energy_eV": 1.0025298105339953
+      },
+      "k": {
+        "value": 3.1498997641546707,
+        "energy_eV": 1.2832381574835139
+      },
+      "absorption_nm^-1": {
+        "value": 0.15929803272055487,
+        "energy_eV": 7.178113443423406
+      },
+      "R": {
+        "value": 0.5374463436773261,
+        "energy_eV": 1.3834911385369133
+      },
+      "L": {
+        "value": 1.5067609378179887,
+        "energy_eV": 11.990256533986583
+      }
+    },
+    "b_out_of_plane": {
+      "eps1": {
+        "value": 20.16094003270987,
+        "energy_eV": 3.3283989709728643
+      },
+      "eps2": {
+        "value": 23.33837632958381,
+        "energy_eV": 5.854774093518532
+      },
+      "n": {
+        "value": 4.662807141612765,
+        "energy_eV": 3.348449567183544
+      },
+      "k": {
+        "value": 4.000425883693884,
+        "energy_eV": 5.955027074571932
+      },
+      "absorption_nm^-1": {
+        "value": 0.24145349604941888,
+        "energy_eV": 5.955027074571932
+      },
+      "R": {
+        "value": 0.7660174490411309,
+        "energy_eV": 8.60170577438168
+      },
+      "L": {
+        "value": 1.0017697277759552,
+        "energy_eV": 9.965146316707912
+      }
+    }
+  }
+}
