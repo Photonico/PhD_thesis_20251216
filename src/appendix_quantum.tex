@@ -618,13 +618,15 @@ here, $E_n\left[v_\mathrm{ext}\right]$ denotes the energy eigenvalue associated 
 \label{eigenenergy_as_expectation_value}
 \end{equation}
 
-In principle, all physical observables derive from the many-body Schrödinger equation~\eqref{tdse_manybody_coord}, yet the exponential growth of the Hilbert-space dimension renders direct diagonalization intractable for realistic systems.
+In principle, all physical observables derive from the many-body Schrödinger equation~\eqref{tdse_manybody_coord}.
+However, the exponential growth of the Hilbert-space dimension renders direct diagonalization intractable for realistic systems.
 
 If the kinetic energy operator and Coulomb interaction are fixed, the ground-state total energy becomes a functional of the external potential we introduced in equation~\eqref{spectrum_mapping_from_external_potential}.
 
 A central challenge is that evaluating the expectation value in equation~\eqref{observables_N-body} requires the many-body wave function and integration over all particle coordinates.
 
-Our aim is to express the expectation values, which are, in principle, highly complex functionals, in terms of a single simple function, so that practical approximations become possible.
+Our aim is to express the expectation values, which are, in principle, highly complex functionals,
+in terms of a single simple function, so that practical approximations become possible.
 
 Next, recall the general expression for an observable in a many-body system in equation~\eqref{observables_N-body}.
 If the observable is a local one-body operator, we have:
@@ -1101,7 +1103,8 @@ Solving for the density, we obtain:
 \label{density_TF_from_potential}
 \end{equation}
 
-The above expression applies in the region where $\lambda>v(\vec{r}\,)$, and one takes $n(\vec{r}\,)=0$ otherwise.
+The above expression applies in the region where $\lambda>v(\vec{r}\,)$,
+and one takes $n(\vec{r}\,)=0$ otherwise.
 
 To derive a differential form, we use the Poisson equation.
 For the nuclear external potential, we have:
@@ -1205,7 +1208,8 @@ here, the corresponding constant reads:
 
 At this level, correlation effects are not included in $E_\mathrm{x}^\mathrm{D}[n]$.
 
-Including the Dirac exchange term, we obtain the Thomas--Fermi--Dirac functional:
+Including the Dirac exchange term,
+we obtain the Thomas--Fermi--Dirac functional:
 
 \begin{equation}
     E_\mathrm{TFD}[n]
@@ -1235,5 +1239,5 @@ By adding this gradient correction, we arrive at the Thomas--Fermi--Dirac von We
 \end{equation}
 
 These extensions provide early orbital-free approximations beyond the Thomas--Fermi approach~\cite{lieb1981thomas}.
-They also clarify that improving the kinetic energy functional and the exchange-correlation functional is essential for a quantitatively reliable description of realistic interacting electron systems.
-
+They also clarify that the kinetic energy functional and the exchange-correlation functional both need improvement.
+A quantitatively reliable description of realistic interacting electron systems requires these improvements.
