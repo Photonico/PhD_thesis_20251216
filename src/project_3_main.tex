@@ -21,8 +21,8 @@ an ABA-stacked trilayer beryllene with a square lattice.
 In addition to confirming the stability of the previously proposed $\alpha$- and $\beta$-beryllene phases,
 we predict a dynamically stable trilayer cubic beryllene phase with distinct electronic and optical characteristics.
 Hydrogen functionalization drives $\alpha$-beryllene into a wide-gap semiconducting state with an HSE06 band gap of \qty{6.00}{\electronvolt},
-whereas the hydrogen-functionalized $\beta$-based structures remain metallic.
-Only hydrogenated $\alpha$-beryllene is thermodynamically stable against \ce{H2} release under ambient conditions.
+whereas the hydrogen-functionalized $\beta$-beryllene structures remain metallic.
+Only hydrogen-functionalized $\alpha$-beryllene is thermodynamically stable against \ce{H2} release under ambient conditions.
 The calculated dielectric response reveals strong anisotropy and low-dimensional optical effects,
 including a direction-dependent redistribution of visible-to-ultraviolet optical response
 and distinct dielectric and energy-loss features.
@@ -32,7 +32,7 @@ beyond $\alpha$-beryllene,
 trilayer cubic beryllene has a conditional non-trivial $\mathbb{Z}_2$ index for its lowest six bands,
 whereas all hydrogen-functionalized structures are trivial.
 These six bands are isolated only by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} above the Fermi level.
-Electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene and the hydrogen-functionalized $\beta$-based structures,
+Electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene and the hydrogen-functionalized $\beta$-beryllene structures,
 with the highest anisotropic Migdal--Eliashberg transition temperature of approximately \qty{31.7}{\kelvin} in double-sided hydrogen-terminated $\beta$-beryllene.
 These results identify beryllene as an elemental two-dimensional platform that combines metallicity,
 tunable optical properties,
@@ -173,10 +173,10 @@ this correction adds only an energy term and leaves the Kohn--Sham eigenvalues u
 The PBE band structures are calculated non-self-consistently from the self-consistent charge densities,
 and their energies are given relative to the Fermi level of the corresponding self-consistent calculations.
 
-For bulk hexagonal close-packed beryllium and bulk body-centred cubic beryllium,
+For bulk hexagonal close-packed (hcp) beryllium and bulk body-centred cubic (bcc) beryllium,
 a $\Gamma$-centred k-point mesh of $27 \times 27 \times 27$ is used for the total energies and structural relaxations.
 A $105 \times 105 \times 105$ mesh is used for the calculation of the complex dielectric function.
-We use a plane-wave energy cutoff of \qty{600}{\electronvolt} for all calculations except the molecular dynamics simulations described below.
+We use a plane-wave cutoff of \qty{600}{\electronvolt} for all calculations except the molecular dynamics simulations described below.
 The electronic convergence criterion is set to \qty{1e-6}{\electronvolt},
 and the structures are relaxed until all forces on each atom are below \qty{0.001}{\electronvolt\per\angstrom}.
 For the two-dimensional structures,
@@ -188,7 +188,7 @@ whereas a $25 \times 25 \times 1$ mesh is used for the cubic structures.
 For all two-dimensional systems,
 we calculate the complex dielectric function on a $105 \times 105 \times 1$ mesh.
 Convergence tests for the cohesive and total energies,
-as well as for the dielectric function with respect to the k-point set and the number of bands included through \texttt{NBANDS},
+as well as for the dielectric function with respect to the k-point mesh and the number of bands included through \texttt{NBANDS},
 are shown in figures~\ref{fig:proj3_cohesive_energy_convergence}--\ref{fig:proj3_cubic_dielectric_kpoint_convergence} in section~\ref{3_supplementary}.
 With the selected meshes,
 the cohesive energies of bulk hcp beryllium,
@@ -217,13 +217,13 @@ The soft mode of 2H-$\beta$-beryllene is further examined with the frozen-phonon
 The preliminary phonon calculations,
 which are not discussed further,
 include the D3 dispersion correction.
-The finite-temperature stability of the hydrogen-functionalized structures is further examined using \textit{ab initio} molecular dynamics simulations.
+The finite-temperature stability of the hydrogen-functionalized structures is examined using \textit{ab initio} molecular dynamics simulations.
 These simulations use $5 \times 5 \times 1$ supercells without the dipole correction,
-with supercell heights of \qty{26.7}{\angstrom} for 2H-$\alpha$-beryllene and \qty{40}{\angstrom} for the $\beta$-based structures.
+with supercell heights of \qty{26.7}{\angstrom} for 2H-$\alpha$-beryllene and \qty{40}{\angstrom} for 1H-$\beta$-beryllene and 2H-$\beta$-beryllene.
 We use a Nos\'e--Hoover thermostat at \qty{300}{\kelvin}~\cite{nose1984unified,hoover1985canonical},
 a time step of \qty{0.5}{\femto\second},
 a total simulation time of \qty{5.5}{\pico\second},
-an energy cutoff of \qty{350}{\electronvolt},
+a plane-wave cutoff of \qty{350}{\electronvolt},
 and a $3 \times 3 \times 1$ k-point mesh.
 
 The adsorption energy per hydrogen atom,
@@ -267,10 +267,10 @@ $E_{\mathrm{Be\text{-}atom}}$ is the total energy of a free beryllium atom calcu
 and $n_{\mathrm{Be}}$ is the number of beryllium atoms in the unit cell.
 
 For the topological calculations,
-we use an energy cutoff of \qty{600}{\electronvolt},
+we use a plane-wave cutoff of \qty{600}{\electronvolt},
 a $105 \times 105 \times 1$ k-point mesh,
 and the same supercell height of \qty{40}{\angstrom} with the dipole correction.
-The self-consistent convergence criterion is set to \qty{1e-8}{\electronvolt},
+The electronic convergence criterion is set to \qty{1e-8}{\electronvolt},
 and Gaussian smearing of \qty{0.01}{\electronvolt} is used.
 Spin-orbit coupling is included in the band-structure and parity calculations.
 We calculate the parity eigenvalues of the spinor wave functions using \texttt{IrRep}~\cite{iraola2022irrep},
@@ -313,9 +313,9 @@ written through the interface between VASP and \texttt{Wannier90}~\cite{pizzi202
 The Wilson loops are refined until the convergence checks of \texttt{Z2Pack} are passed.
 For the metallic structures,
 the lowest $N$ bands are not completely filled.
-We therefore check the isolation of this subspace with the direct gap $E_{N+1}(\vec{k})-E_{N}(\vec{k})$ on the $105 \times 105$ grid,
+We therefore check the isolation of this subspace with the direct gap $E_{N+1}(\vec{k})-E_{N}(\vec{k})$ on the $105 \times 105$ mesh,
 along the band paths,
-and on locally refined grids around each minimum.
+and on locally refined meshes around each minimum.
 The time-reversal symmetry assumed in this analysis is checked with spin-polarized calculations started from ferromagnetic and antiferromagnetic configurations.
 
 To test the band gap and the band order beyond the semilocal approximation,
@@ -343,7 +343,7 @@ respectively.
 The relaxed structures are listed in table~\ref{tab:proj3_qe_structures} in section~\ref{3_supplementary}.
 To examine the band topology of these structures,
 we recalculate the parities at the time-reversal invariant momenta with fully relativistic projector augmented wave pseudopotentials~\cite{dalcorso2014pseudopotentials},
-with cutoffs of \qty{90}{Ry} and \qty{720}{Ry},
+with plane-wave cutoffs of \qty{90}{Ry} and \qty{720}{Ry},
 and with spin-orbit coupling.
 We also compute Wilson loops~\cite{yu2011equivalent} with \texttt{WannierTools}~\cite{wu2018wanniertools},
 based on Wannier function models generated with \texttt{Wannier90}~\cite{pizzi2020wannier90}.
@@ -400,7 +400,7 @@ and the postprocessing adds no Drude term.
 They therefore describe the interband part of the low-frequency response of these metallic systems.
 For the two-dimensional systems,
 the calculated dielectric tensor contains the combined dielectric response of the material and the vacuum region.
-We therefore renormalize the calculated dielectric functions with equation~\eqref{optical_volume_normalization_2d}
+We therefore normalize the calculated dielectric functions with equation~\eqref{optical_volume_normalization_2d}
 to obtain the effective dielectric response under the chosen thickness convention~\cite{yang2021method}.
 The full normal supercell height for the two-dimensional optical calculations is \qty{40}{\angstrom}.
 We assign the effective thickness $d_{\mathrm{2D}}$ as the separation of the outermost atomic centres along the surface normal,
@@ -435,8 +435,11 @@ and the unit cells are outlined.}
 \label{fig:proj3_bulk_structures}
 \end{figure}
 
-Bulk beryllium is known experimentally to adopt the hexagonal close-packed structure under ambient conditions,
-whereas the body-centred cubic phase has been predicted at high pressure but has not been conclusively observed experimentally.
+Bulk beryllium is known experimentally to adopt the hexagonal close-packed structure under ambient conditions.
+In contrast,
+the body-centred cubic phase is stable only close to the melting point and has been predicted,
+but not conclusively observed,
+at high pressure.
 We include this phase as a bulk reference structure.
 The optimized cohesive energy of bulk hcp beryllium is \qty{-3.73}{\electronvolt} per atom,
 which is \qty{0.10}{\electronvolt} per atom lower than that of bulk bcc beryllium.
@@ -519,7 +522,7 @@ Hydrogen adsorption on trilayer cubic beryllene,
 at the hollow or top sites on one or both sides,
 gives structures with imaginary phonon frequencies in preliminary calculations,
 so these configurations are not considered further.
-For each $\alpha$- and $\beta$-based configuration,
+For each hydrogen-terminated configuration of $\alpha$- and $\beta$-beryllene,
 we use the lowest-energy structure among the hydrogen adsorption sites considered.
 These structures are denoted 2H-$\alpha$-beryllene,
 1H-$\beta$-beryllene,
@@ -541,7 +544,7 @@ electronic, topological, electron-phonon, and optical analyses below.
 We then evaluate the dynamical stability of the beryllium structures using phonon-dispersion calculations.
 The phonon-dispersion curves are calculated using finite displacements,
 as described in section~\ref{3_methods}.
-The bulk hcp structure and the pristine $\alpha$-beryllene and $\beta$-beryllene structures are dynamically stable,
+Bulk hcp beryllium and the pristine $\alpha$-beryllene and $\beta$-beryllene structures are dynamically stable,
 as shown in figure~\ref{fig:proj3_phonon_dispersion} in section~\ref{3_supplementary}.
 This result is consistent with previous reports on $\alpha$- and $\beta$-beryllene.
 In contrast,
@@ -647,19 +650,19 @@ and \qty{-0.17}{\electronvolt} per hydrogen atom for 2H-$\alpha$-beryllene,
 and 2H-$\beta$-beryllene,
 respectively.
 These negative adsorption energies indicate that hydrogen adsorption is exothermic for all three structures,
-although only weakly for the $\beta$-based structures.
+although only weakly for 1H-$\beta$-beryllene and 2H-$\beta$-beryllene.
 
 The zero-point energies of the beryllene layers and of the \ce{H2} molecule raise these values to \qty{-0.24}{\electronvolt},
 \qty{0.01}{\electronvolt},
 and \qty{-0.09}{\electronvolt} per hydrogen atom,
 respectively.
-At \qty{298}{\kelvin} and \qty{1}{\bar} of \ce{H2},
+At \qty{298.15}{\kelvin} and \qty{1}{\bar} of \ce{H2},
 the corresponding adsorption free energies are \qty{-0.08}{\electronvolt},
 \qty{0.17}{\electronvolt},
 and \qty{0.06}{\electronvolt} per hydrogen atom.
 Therefore,
 only 2H-$\alpha$-beryllene is thermodynamically stable against \ce{H2} release under ambient conditions.
-2H-$\beta$-beryllene requires an equilibrium \ce{H2} pressure of approximately \qty{90}{\bar} at room temperature,
+2H-$\beta$-beryllene requires an equilibrium \ce{H2} pressure of approximately \qty{90}{\bar} at \qty{298.15}{\kelvin},
 whereas persistence of 1H-$\beta$-beryllene under ambient conditions would require kinetic trapping.
 These energetics are summarized in table~\ref{tab:proj3_hydrogenation_energetics} in section~\ref{3_supplementary}.
 
@@ -722,7 +725,7 @@ The band structures of pristine $\alpha$-beryllene and $\beta$-beryllene are sho
 and agree well with previous calculations~\cite{li2023coexistence}.
 The band structures of trilayer cubic beryllene and the hydrogen-functionalized structures are shown in figure~\ref{fig:proj3_band_structures_cubic_hydrogenated}.
 
-The trilayer cubic beryllene structure shows metallic behaviour,
+Trilayer cubic beryllene shows metallic behaviour,
 with multiple bands crossing the Fermi level.
 The bands near the Fermi level show moderate dispersion,
 which suggests delocalized electronic states and good in-plane conductivity.
@@ -744,7 +747,7 @@ In contrast,
 both 1H-$\beta$-beryllene and 2H-$\beta$-beryllene remain metallic,
 with bands crossing the Fermi level.
 These results show that hydrogen functionalization opens a large gap in $\alpha$-beryllene,
-whereas the hydrogen-functionalized $\beta$-based structures preserve their metallic character.
+whereas the hydrogen-functionalized $\beta$-beryllene structures preserve their metallic character.
 
 \begin{figure}[!htbp]
 \centering
@@ -952,7 +955,7 @@ the single Kramers pair is even at the $\Gamma$ point and odd at the three zone-
 The Fu--Kane product is therefore $(-1)^{\nu}=-1$,
 which gives $\nu=1$ and confirms the non-trivial topology previously reported for this phase.
 These two bands are separated from band 3 at every sampled wave vector.
-The smallest separation is the spin-orbit gap of \qty{1.13}{\milli\electronvolt} at the Dirac point at $\mathrm{K}$,
+The smallest direct gap is the spin-orbit gap of \qty{1.13}{\milli\electronvolt} at the Dirac point at $\mathrm{K}$,
 approximately \qty{2.7}{\electronvolt} above the Fermi level.
 For $\beta$-beryllene,
 the Fu--Kane product is $(-1)^{\nu}=+1$,
@@ -976,7 +979,7 @@ located \qtyrange{1.2}{2.7}{\electronvolt} above the Fermi level.
 The non-trivial index therefore characterizes a band inversion rather than a quantum spin Hall insulating state.
 Gaps of this size are also far below the accuracy of the band ordering in semilocal density functional theory,
 so this result may be sensitive to the exchange-correlation functional.
-The numerical convergence of these meV-scale gaps with respect to the energy cutoff and the self-consistent k-point mesh has not been established separately from the local refinement of their minima.
+The convergence of these meV-scale gaps with respect to the plane-wave cutoff and the self-consistent k-point mesh has not been tested separately from the total-energy convergence.
 
 Hydrogen functionalization gives trivial $\mathbb{Z}_2$ indices in all three structures.
 2H-$\alpha$-beryllene is the only insulator among the structures considered,
@@ -1168,9 +1171,9 @@ The real and imaginary parts of the dielectric function for the in-plane and out
 
 For $\beta$-beryllene,
 the in-plane real part contains zero crossings and a low-energy interval in which its sign differs from the out-of-plane component.
-On the calculated grid, these components have opposite signs from approximately \qtyrange{1.22}{2.21}{\electronvolt}.
+On the calculated energy grid, these components have opposite signs from approximately \qtyrange{1.22}{2.21}{\electronvolt}.
 For $\alpha$-beryllene, the out-of-plane real part crosses zero near \qty{10.64}{\electronvolt}, where the imaginary part is comparatively small.
-The sign changes and loss features identify candidate energy ranges for further analysis of collective response.
+The sign changes and energy-loss features identify candidate energy ranges for further analysis of collective response.
 Establishing propagating modes in a finite two-dimensional layer and their lifetimes belongs to that further analysis.
 The numerical broadening is an input to the calculation.
 
@@ -1202,7 +1205,7 @@ $\beta$-beryllene remains stronger than $\alpha$-beryllene over the infrared to 
 The first downward $n=1$ crossings occur near \qty{7.42}{\electronvolt} for $\alpha$ $xx$,
 \qty{7.82}{\electronvolt} for $\alpha$ $zz$, \qty{7.32}{\electronvolt} for $\beta$ $xx$, and \qty{6.37}{\electronvolt} for $\beta$ $zz$.
 The $\alpha$ out-of-plane index rises above one again near \qty{11.71}{\electronvolt}.
-These crossings describe the dispersion of the effective optical constants, and a plasmon assignment requires the loss spectrum as well.
+These crossings describe the dispersion of the effective optical constants, and a plasmon assignment requires the energy-loss spectrum as well.
 
 \begin{figure}[!htbp]
 \centering
@@ -1247,7 +1250,7 @@ whereas $\alpha$-beryllene shows pronounced peaks in the ultraviolet region.
 The in-plane energy-loss spectrum of $\beta$-beryllene has a visible-range local maximum of approximately 0.49
 and a larger high-energy local maximum of approximately 1.34 near \qty{11.03}{\electronvolt}.
 It reaches approximately 1.50 at the last available sample near \qty{11.98}{\electronvolt} while still rising.
-For the out-of-plane response, $\alpha$-beryllene has a dominant loss maximum of approximately 8.88 near \qty{10.64}{\electronvolt},
+For the out-of-plane response, $\alpha$-beryllene has a dominant energy-loss maximum of approximately 8.88 near \qty{10.64}{\electronvolt},
 substantially above the $\beta$ maximum of approximately 1.09 near \qty{9.95}{\electronvolt}.
 
 \subsubsection{Bulk hcp, bulk bcc, and trilayer cubic beryllene}
@@ -1257,7 +1260,7 @@ We next compare the optical response of bulk hcp beryllium,
 bulk bcc beryllium,
 and trilayer cubic beryllene.
 The real and imaginary parts of the dielectric function are shown in figure~\ref{fig:proj3_bulk_cubic_dielectric}.
-The bulk hcp and bulk bcc structures show similar behaviour and weak directional dependence.
+Bulk hcp and bulk bcc beryllium show similar behaviour and weak directional dependence.
 For both bulk structures,
 the real part becomes negative above approximately \qty{4.5}{\electronvolt},
 reaches a minimum around \qtyrange{5.5}{6.0}{\electronvolt},
@@ -1292,9 +1295,9 @@ and $zz$ components as functions of photon energy.}
 The absorption coefficient and energy-loss spectra are shown in figure~\ref{fig:proj3_bulk_cubic_abs_loss}.
 Trilayer cubic beryllene shows an absorption enhancement relative to bulk bcc beryllium only in some directions and energy ranges.
 In the visible interval of \qtyrange{1.65}{3.26}{\electronvolt},
-the trilayer $xx$ and $yy$ absorption is lower than bulk bcc at every available trilayer sample.
+the trilayer $xx$ and $yy$ absorption is lower than that of bulk bcc beryllium at every available trilayer sample.
 For this comparison,
-the bulk spectrum is linearly interpolated to the trilayer grid.
+the bulk spectrum is linearly interpolated to the trilayer energy grid.
 The respective visible maxima are approximately \qty{0.0604}{\per\nano\metre} and \qty{0.0746}{\per\nano\metre}.
 The trilayer $zz$ response exceeds the bulk value over only part of this interval.
 The strongest sampled absorption of trilayer cubic beryllene occurs near \qty{5.40}{\electronvolt} in $xx$ and $yy$,
@@ -1302,9 +1305,9 @@ and near \qty{5.25}{\electronvolt} in $zz$.
 The corresponding coefficients are approximately \qty{0.148}{\per\nano\metre} and \qty{0.166}{\per\nano\metre}, respectively.
 These results show a redistribution of the effective interband response.
 
-The loss spectra also differ between directions and structures.
+The energy-loss spectra also differ between directions and structures.
 The low-energy $\beta$ in-plane feature and the high-energy $\alpha$ out-of-plane maximum are retained in the comparison.
-The scalar loss features identify variations in the inverse dielectric response, and propagating plasmon modes require a separate analysis.
+The scalar energy-loss features identify variations in the inverse dielectric response, and propagating plasmon modes require a separate analysis.
 
 \begin{figure}[!htbp]
 \centering
@@ -1334,7 +1337,7 @@ hydrogen adsorption changes the magnitude and spectral distribution of the effec
 In $xx$ and $yy$, 2H-$\alpha$-beryllene has a real dielectric maximum of approximately 31.2 near \qty{4.91}{\electronvolt},
 and its strongest imaginary dielectric feature is approximately 31.2 near \qty{5.59}{\electronvolt}.
 In $zz$, the largest imaginary dielectric feature instead occurs near \qty{9.77}{\electronvolt}.
-These comparisons retain the specified H/H surface-radius convention for the hydrogenated layer.
+These comparisons retain the specified H/H surface-radius convention for the hydrogen-functionalized layer.
 Changes in peak height therefore describe an effective response under that convention.
 
 For $\beta$-beryllene,
@@ -1360,13 +1363,14 @@ and $zz$ components as functions of photon energy.}
 
 The corresponding absorption coefficient and energy-loss spectra are shown in figure~\ref{fig:proj3_hydrogenated_abs_loss}.
 For $\alpha$-beryllene, hydrogen adsorption produces a strongly direction-dependent redistribution of absorption.
-The $xx$ and $yy$ coefficients increase over the sampled visible interval,
-but the 2H-$\alpha$ visible maximum is only approximately \qty{0.00137}{\per\nano\metre}, much smaller than its ultraviolet maximum near \qty{5.71}{\electronvolt}.
+Relative to pristine $\alpha$-beryllene,
+the $xx$ and $yy$ coefficients increase over the sampled visible interval,
+but the visible maximum of 2H-$\alpha$-beryllene is only approximately \qty{0.00137}{\per\nano\metre}, much smaller than its ultraviolet maximum near \qty{5.71}{\electronvolt}.
 The $zz$ coefficient instead decreases throughout the sampled \qtyrange{1.65}{4.13}{\electronvolt} interval,
 and its strongest peak occurs near \qty{9.83}{\electronvolt}.
 For 2H-$\beta$-beryllene, the strongest sampled absorption peaks occur near \qty{6.75}{\electronvolt} in $xx$,
 \qty{9.39}{\electronvolt} in $yy$, and \qty{8.36}{\electronvolt} in $zz$.
-The loss spectra likewise change with hydrogen coverage and direction.
+The energy-loss spectra likewise change with hydrogen coverage and direction.
 These results establish changes in the calculated interband and inverse dielectric response.
 The weak low-energy tails arise from the finite numerical broadening.
 
@@ -1385,7 +1389,7 @@ using the scalar definitions described in section~\ref{3_methods}.}
 \end{figure}
 
 These results show that both dimensionality and hydrogen functionalization redistribute the effective interband optical response of beryllene.
-Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy, while trilayer cubic beryllene and the hydrogenated phases enhance some components and reduce others.
+Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy, while trilayer cubic beryllene and the hydrogen-functionalized structures enhance some components and reduce others.
 
 \section{Conclusions}
 \label{3_conclusions}
@@ -1409,7 +1413,7 @@ Hydrogen functionalization substantially modifies the structural and electronic 
 In particular,
 it transforms metallic $\alpha$-beryllene into 2H-$\alpha$-beryllene,
 a wide-gap semiconductor with an HSE06 band gap of \qty{6.00}{\electronvolt},
-whereas the hydrogen-functionalized $\beta$-based structures retain metallic behaviour.
+whereas the hydrogen-functionalized $\beta$-beryllene structures retain metallic behaviour.
 The calculated adsorption energies show that hydrogen adsorption is exothermic with respect to molecular hydrogen.
 Including zero-point and thermal contributions,
 only 2H-$\alpha$-beryllene is thermodynamically stable against \ce{H2} release under ambient conditions.
@@ -1417,7 +1421,7 @@ only 2H-$\alpha$-beryllene is thermodynamically stable against \ce{H2} release u
 whereas persistence of 1H-$\beta$-beryllene under ambient conditions would require kinetic trapping.
 
 The calculated optical properties show a direction-dependent redistribution of the effective interband response after dimensional reduction and hydrogen functionalization.
-Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy and distinct loss features.
+Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy and distinct energy-loss features.
 Trilayer cubic beryllene absorbs more strongly than bulk bcc beryllium only in some directions and energy ranges,
 and hydrogen adsorption enhances some components while reducing others.
 These comparisons use the Cartesian diagonal dielectric components and exclude a Drude intraband contribution.

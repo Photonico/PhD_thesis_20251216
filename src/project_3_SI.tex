@@ -10,9 +10,9 @@ The original data presented in this chapter are openly available from the \textt
 Convergence tests for the cohesive energy and total energy are shown in figures~\ref{fig:proj3_cohesive_energy_convergence}
 and~\ref{fig:proj3_total_energy_convergence},
 respectively,
-as functions of the k-point set for the beryllium structures.
+as functions of the k-point mesh for the beryllium structures.
 Convergence tests for the calculation of the dielectric function are shown in figures~\ref{fig:proj3_hcp_dielectric_nbands_convergence}--\ref{fig:proj3_cubic_dielectric_kpoint_convergence},
-including tests for both the k-point set and the total number of bands included through the parameter \texttt{NBANDS}.
+including tests for both the k-point mesh and the total number of bands included through the parameter \texttt{NBANDS}.
 
 We also test the sensitivity of the cohesive energies to dispersion by adding the D3 energy with Becke--Johnson damping at the PBE geometries.
 The cohesive energies of $\alpha$-beryllene, $\beta$-beryllene, and trilayer cubic beryllene then lie \qty{1.04}{\electronvolt}, \qty{0.60}{\electronvolt}, and \qty{0.56}{\electronvolt} per atom above that of bulk hcp beryllium.
@@ -27,7 +27,7 @@ The correction therefore favours the bulk phase and preserves the energy orderin
     \includegraphics[width=0.40\linewidth]{figures_proj3/convergence_cohesive_kpoints_bcc-beryllium_thesis.pdf}&
     \includegraphics[width=0.40\linewidth]{figures_proj3/convergence_cohesive_kpoints_cubic-beryllene-trilayer_thesis.pdf}
 \end{tabular}
-\caption{Cohesive energy as a function of k-point set for bulk hcp beryllium, $\alpha$-beryllene, bulk bcc beryllium, and trilayer cubic beryllene.}
+\caption{Cohesive energy as a function of the k-point mesh for bulk hcp beryllium, $\alpha$-beryllene, bulk bcc beryllium, and trilayer cubic beryllene.}
 \label{fig:proj3_cohesive_energy_convergence}
 \end{figure}
 
@@ -39,7 +39,7 @@ The correction therefore favours the bulk phase and preserves the energy orderin
     \includegraphics[width=0.40\linewidth]{figures_proj3/convergence_energy_kpoints_bcc-beryllium_thesis.pdf}&
     \includegraphics[width=0.40\linewidth]{figures_proj3/convergence_energy_kpoints_cubic-beryllene-trilayer_thesis.pdf}
 \end{tabular}
-\caption{Total energy as a function of k-point set for bulk hcp beryllium, $\alpha$-beryllene, bulk bcc beryllium, and trilayer cubic beryllene.}
+\caption{Total energy as a function of the k-point mesh for bulk hcp beryllium, $\alpha$-beryllene, bulk bcc beryllium, and trilayer cubic beryllene.}
 \label{fig:proj3_total_energy_convergence}
 \end{figure}
 
@@ -47,11 +47,11 @@ The correction therefore favours the bulk phase and preserves the energy orderin
 
 The dielectric function and the derived optical observables are introduced in chapter~\ref{cha:fundamentals_b},
 especially section~\ref{sec:from_dielectric_function_to_optical_properties},
-and the dielectric-function renormalization is given in equation~\eqref{optical_volume_normalization_2d}.
+and the optical volume normalization is given in equation~\eqref{optical_volume_normalization_2d}.
 Therefore, we do not repeat these formula definitions here.
 The structure thicknesses and the numbers of bands used in the optical calculations are specified below.
 
-The effective thicknesses $d_{\mathrm{2D}}$ used in the dielectric-function renormalization are
+The effective thicknesses $d_{\mathrm{2D}}$ used in the optical volume normalization are
 \qty{3.960}{\angstrom} for pristine $\alpha$-beryllene,
 \qty{5.869}{\angstrom} for pristine $\beta$-beryllene,
 \qty{6.966}{\angstrom} for trilayer cubic beryllene,
@@ -65,9 +65,9 @@ The relaxed coordinates are converted to Cartesian lengths with periodic wrappin
 The same optical volume normalization is applied to the $xx$, $yy$, and $zz$ components.
 The absolute effective response depends on this thickness convention.
 The endpoint-radius contribution is Be+Be for pristine structures, H+H for double-sided termination, and Be+H for single-sided termination.
-Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value.
+Consequently, the assigned thickness of 2H-$\alpha$-beryllene is smaller than that of pristine $\alpha$-beryllene.
 Unrounded structure-derived values are used in all calculations.
-The actual total numbers of bands are 140 for each hydrogenated structure,
+The actual total numbers of bands are 140 for each hydrogen-functionalized structure,
 133 for pristine $\alpha$-beryllene and trilayer cubic beryllene,
 128 for pristine $\beta$-beryllene,
 70 for bulk bcc beryllium,
@@ -77,7 +77,7 @@ They can differ from the requested \texttt{NBANDS} because of parallel band allo
 
 \subsection*{Dielectric-function convergence}
 
-The convergence of the calculated dielectric function is examined with respect to the number of bands included in the calculation and the k-point set.
+The convergence of the calculated dielectric function is examined with respect to the number of bands included in the calculation and the k-point mesh.
 Figures~\ref{fig:proj3_hcp_dielectric_nbands_convergence}--\ref{fig:proj3_cubic_dielectric_kpoint_convergence}
 show the corresponding tests for bulk hcp beryllium,
 $\alpha$-beryllene, $\beta$-beryllene, bulk bcc beryllium,
@@ -86,7 +86,7 @@ The plots retain the full range of every curve within the displayed energy windo
 In particular, the bulk hcp $45\times45\times45$ k-point calculation has a large low-energy dielectric response that is visible in figure~\ref{fig:proj3_hcp_dielectric_kpoint_convergence}.
 These comparisons test the convergence of the interband response, and the complete low-frequency metallic response would also require an intraband treatment.
 The selected reference is the final-parameter calculation,
-so its k-point grid and total band count can differ from those of the convergence series.
+so its k-point mesh and total band count can differ from those of the convergence series.
 
 \begin{figure}[!htbp]
 \centering
@@ -100,7 +100,7 @@ calculated with different total numbers of bands.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_kpoints_hcp-beryllium_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for bulk hcp beryllium,
-calculated with different k-point sets.}
+calculated with different k-point meshes.}
 \label{fig:proj3_hcp_dielectric_kpoint_convergence}
 \end{figure}
 
@@ -116,7 +116,7 @@ calculated with different total numbers of bands.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_kpoints_alpha-beryllene_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for $\alpha$-beryllene,
-calculated with different k-point sets.}
+calculated with different k-point meshes.}
 \label{fig:proj3_alpha_dielectric_kpoint_convergence}
 \end{figure}
 
@@ -132,7 +132,7 @@ calculated with different total numbers of bands.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_kpoints_beta-beryllene_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for $\beta$-beryllene,
-calculated with different k-point sets.}
+calculated with different k-point meshes.}
 \label{fig:proj3_beta_dielectric_kpoint_convergence}
 \end{figure}
 
@@ -148,7 +148,7 @@ calculated with different total numbers of bands.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_kpoints_bcc-beryllium_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for bulk bcc beryllium,
-calculated with different k-point sets.}
+calculated with different k-point meshes.}
 \label{fig:proj3_bcc_dielectric_kpoint_convergence}
 \end{figure}
 
@@ -164,7 +164,7 @@ calculated with different total numbers of bands.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_kpoints_cubic-beryllene-trilayer_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for trilayer cubic beryllene,
-calculated with different k-point sets.}
+calculated with different k-point meshes.}
 \label{fig:proj3_cubic_dielectric_kpoint_convergence}
 \end{figure}
 
@@ -319,12 +319,12 @@ so the softening is not driven by Fermi-surface nesting.
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/nesting_2H-beta-beryllene_thesis.pdf}
 \caption{Bare static susceptibility $\chi_{0}(\vec{q})$ (left) and nesting function $\xi(\vec{q})$ (right) of 2H-$\beta$-beryllene,
-calculated with constant matrix elements from the spin-orbit-coupled eigenvalues on the $105 \times 105$ grid,
+calculated with constant matrix elements from the spin-orbit-coupled eigenvalues on the $105 \times 105$ mesh,
 with Gaussian smearing of \qty{0.05}{\electronvolt}.
 The bands with states within \qty{1}{\electronvolt} of the Fermi level are included.
 The open circles mark the soft-mode wave vector and its symmetry images,
 and the value at $\vec{q}=0$ is excluded from the colour scale.
-Among the 11024 non-zero wave vectors of the grid,
+Among the 11024 non-zero wave vectors of the mesh,
 the soft-mode wave vector ranks between 8723 and 8935 in $\chi_{0}$ and between 3806 and 8405 in $\xi$ for smearing between 0.02 and \qty{0.10}{\electronvolt}.}
 \label{fig:proj3_nesting}
 \end{figure}
@@ -407,8 +407,8 @@ and relaxed total energies per formula unit relative to 2H-$\alpha$-beryllene fo
 \subsection*{Topological screening}
 
 The direct gaps $E_{N+1}-E_{N}$ between the lowest $N$ spinor bands and band $N+1$ are shown over the Brillouin zone in figures~\ref{fig:proj3_direct_gap_pristine} and~\ref{fig:proj3_direct_gap_hydrogenated}.
-We unfold the $105 \times 105$ grid of the self-consistent calculation with the symmetry operations of each structure,
-and refine the minima of the direct gap on locally denser grids with non-self-consistent spin-orbit calculations.
+We unfold the $105 \times 105$ mesh of the self-consistent calculation with the symmetry operations of each structure,
+and refine the minima of the direct gap on locally denser meshes with non-self-consistent spin-orbit calculations.
 For the pristine structures,
 the smallest direct gaps are approximately \qty{1}{\milli\electronvolt},
 so each local minimum is further refined with successively smaller $9 \times 9$ patches,
@@ -439,7 +439,7 @@ The converged spin-orbit-coupled states have a maximum magnetization density bel
 and the Kramers splittings at the time-reversal invariant momenta are at most \qty{3.8e-6}{\electronvolt}.
 For 1H-$\beta$-beryllene,
 which has no inversion symmetry,
-the eigenvalues satisfy $E(\vec{k})=E(-\vec{k})$ within \qty{4.0e-7}{\electronvolt} for all 5512 pairs of wave vectors on the grid.
+the eigenvalues satisfy $E(\vec{k})=E(-\vec{k})$ within \qty{4.0e-7}{\electronvolt} for all 5512 pairs of wave vectors on the mesh.
 All 11 spin-polarized calculations started from ferromagnetic,
 antiferromagnetic,
 and,

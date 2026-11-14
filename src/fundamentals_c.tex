@@ -155,7 +155,7 @@ An individual eigenstate may then be difficult to follow continuously,
 although the subspace formed by all the selected states remains well defined.
 
 To separate this subspace from the remaining bands,
-we require a positive direct separation at every wave vector:
+we require a positive direct gap at every wave vector:
 
 \begin{equation}
 \left\{\begin{aligned}
@@ -168,16 +168,16 @@ we require a positive direct separation at every wave vector:
 \end{equation}
 
 The condition concerns the boundary between the selected and excluded bands.
-Degeneracies wholly inside the selected subspace do not close this separation.
-For a smooth periodic hamiltonian, the separation allows the spectral projector
+Degeneracies wholly inside the selected subspace do not close this gap.
+For a smooth periodic hamiltonian, this gap allows the spectral projector
 $\hat{\mathcal{P}}(\vec{k}\,)$ to vary smoothly across the Brillouin zone.
 The choice of basis for that projector may still require different local phase conventions.
 
 We next ask whether the same condition also makes the system insulating.
-The direct separation compares two energies at the same $\vec{k}$.
+The direct gap compares two energies at the same $\vec{k}$.
 An insulating gap instead requires the highest energy of the selected bands to lie below the lowest energy of the excluded bands,
 even when these energies occur at different wave vectors.
-We therefore define the global, or indirect, separation as:
+We therefore define the global, or indirect, gap as:
 
 \begin{equation}
     \Delta_\mathrm{ind}
@@ -213,7 +213,7 @@ Each displayed curve represents one member of a degenerate pair;
 the coincident partner is not drawn separately.
 The grey dashed line denotes the illustrative Fermi level $E_\mathrm{F}=0$.
 
-Orange arrows compare energies at the same wave vector, while purple arrows and dotted extrema indicate the indirect separation.
+Orange arrows compare energies at the same wave vector, while purple arrows and dotted extrema indicate the indirect gap.
 The purple shading in (b) marks the indirect energy overlap.
 Orange circles mark the boundary contact in (c),
 while orange circles with a central dot mark the internal degeneracies in (d).
@@ -228,14 +228,14 @@ and (d) degeneracy within the selected subspace.}
 \end{figure}
 
 In figure~\ref{fig:band_subspace_and_insulating_gap}(a), positive direct and indirect gaps permit an insulating filling.
-In (b), the direct separation remains positive despite the indirect energy overlap.
-Both situations permit a smooth fixed-rank projector, provided the direct separation holds over the full two-dimensional Brillouin zone.
-In (c), a band touching closes the separation between the selected and excluded bands.
+In (b), the direct gap remains positive despite the indirect energy overlap.
+Both situations permit a smooth fixed-rank projector, provided the direct gap remains positive over the full two-dimensional Brillouin zone.
+In (c), a band touching closes the direct gap between the selected and excluded bands.
 In (d), both pairs belong to the selected subspace on either side of the degeneracy.
 The plotted energies remain ordered, so $E_{2N_\mathrm{p}-2,\vec{k}}\leq E_{2N_\mathrm{p},\vec{k}}$ throughout the cut.
 Following this energy order through a crossing can give a cusp in the plotted eigenvalues,
 although the hamiltonian and the projector onto both pairs remain smooth.
-Since the direct separation remains positive, this internal degeneracy does not prevent the selected subspace from varying smoothly.
+Since the direct gap remains positive, this internal degeneracy does not prevent the selected subspace from varying smoothly.
 We now examine the symmetries that constrain these states,
 while keeping the separate question of the physical Fermi level explicit.
 
@@ -594,12 +594,12 @@ so the phrase ``occupied bands'' leaves the subspace ambiguous.
 Numerical smearing of the occupations also does not define a fixed-rank projector.
 The band count instead refers to the selected spectral subspace at every wave vector.
 
-The direct separation has to be checked over the two-dimensional Brillouin zone.
+The direct gap has to be checked over the two-dimensional Brillouin zone.
 Its positivity at the four TRIM or along a plotted high-symmetry path covers only part of that zone.
-In practice, a converged two-dimensional sampling, with refinement near the smallest separations,
+In practice, a converged two-dimensional sampling, with refinement near the smallest direct gaps,
 provides evidence for the gap condition within the numerical accuracy of the calculation.
-If interpolation is used, direct calculations near those separations verify its accuracy.
-A near-zero separation is refined further, because an unresolved touching point changes whether the chosen spectral subspace is isolated.
+If interpolation is used, direct calculations near those gaps verify its accuracy.
+A near-zero direct gap is refined further, because an unresolved touching point changes whether the chosen spectral subspace is isolated.
 
 At each TRIM, the parity eigenvalues can be obtained from the symmetry representation of the spinor states.
 The \texttt{IrRep} code used in chapter~\ref{cha:project_beryllene}
@@ -618,7 +618,7 @@ If equation~\eqref{insulating_fermi_level_topology} holds,
 the subspace is the occupied space of a band insulator,
 and $\nu=1$ identifies the non-trivial two-dimensional time-reversal phase within the band description.
 
-If the direct separation remains positive but the indirect separation is negative,
+If the direct gap remains positive but the indirect gap is negative,
 we can still discuss the topology of the isolated lower-band subspace.
 The actual Fermi-level state nevertheless remains metallic at an overlapping filling.
 Thus the topological index and the metallic character describe different aspects of the same band structure,
