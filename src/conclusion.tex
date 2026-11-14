@@ -60,8 +60,8 @@ Therefore, the effect of hydrogen in this structural family depends on the elect
 
 The electron-phonon calculations predict appreciable phonon-mediated pairing in bulk o-\ce{B14} and the hydrogen-terminated bilayer.
 For a Coulomb pseudopotential $\mu^*=0.13$, the Allen--Dynes estimates give transition temperatures of \qty{28.2}{\kelvin} and \qty{18.5}{\kelvin}, respectively.
-The hydrogen-terminated bilayer has the larger coupling constant, $\lambda=1.01$, compared with $\lambda=0.931$ in the bulk, but it has the lower estimated transition temperature.
-This comparison illustrates that $T_{\mathrm{c}}$ depends on more than the coupling constant.
+The hydrogen-terminated bilayer has the larger coupling strength, $\lambda=1.01$, compared with $\lambda=0.931$ in the bulk, but it has the lower estimated transition temperature.
+This comparison illustrates that $T_{\mathrm{c}}$ depends on more than the coupling strength.
 The phonon frequencies entering the pairing problem also control its energy scale~\cite{allen-dynes}.
 The anisotropic calculations further resolve a distribution of superconducting gaps that shifts towards lower energies as temperature increases.
 These distributions place $T_{\mathrm{c}}$ above \qty{30}{\kelvin} for the bulk and close to \qty{26}{\kelvin} for the hydrogen-terminated bilayer.
@@ -95,7 +95,7 @@ The 2H-$\beta$ structure has a soft mode at a commensurate wave vector, so this 
 The frozen-phonon calculation resolves a shallow double well along this 2H-$\beta$ mode, with a depth of at most \qty{0.2}{\milli\electronvolt} in the 20-atom supercell.
 The one-mode quantum ground state lies approximately \qty{6}{\milli\electronvolt} above the well bottom and remains centred at the undistorted structure.
 In this model, the comparison of these energy scales shows that quantum motion extends across the shallow wells, beyond the classical minimum.
-This supports suppression of a static distortion along the selected coordinate.
+This result supports suppression of a static distortion along the selected coordinate.
 The hydrogenated structures also retain their frameworks during \qty{5.5}{\pico\second} trajectories at \qty{300}{\kelvin}, establishing their persistence over the simulated interval.
 
 The hydrogen free energies refine the comparison further.
@@ -116,19 +116,27 @@ The same operation, hydrogen addition, therefore produces a wide-gap semiconduct
 This difference reinforces the need to follow the actual bonding geometry.
 
 The topological analysis concerns selected band subspaces.
-The reported spin-orbit-coupled calculations give non-trivial $\mathbb{Z}_2$ indices for the lowest two spinor bands of $\alpha$-beryllene and the lowest six spinor bands of cubic beryllene, conditional on their isolation throughout the Brillouin zone.
+The reported spin-orbit-coupled calculations give non-trivial $\mathbb{Z}_2$ indices for the lowest two spinor bands of $\alpha$-beryllene and the lowest six spinor bands of trilayer cubic beryllene.
+These indices are conditional on the isolation of the two subspaces throughout the Brillouin zone.
 The minimum sampled direct separations are only \qty{1.13}{\milli\electronvolt} and \qty{0.735}{\milli\electronvolt}, respectively.
 The relevant gaps lie above the Fermi level, and both neutral structures remain metallic.
 These results therefore identify conditional non-trivial subspaces in structures that remain metallic at neutral filling.
 The selected subspaces of $\beta$-beryllene and the hydrogenated structures give trivial indices, and for metallic systems these fixed subspaces again differ from an occupied insulating manifold.
 
+The electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene.
+The cubic trilayer has the weakest coupling, $\lambda=0.46$, and an isotropic Migdal--Eliashberg transition temperature of \qty{3.7}{\kelvin}.
+2H-$\beta$-beryllene has the strongest coupling, $\lambda=1.40$, and the anisotropic Migdal--Eliashberg solution places its $T_{\mathrm{c}}$ at approximately \qty{31.7}{\kelvin}.
+For 1H-$\beta$-beryllene, the gap anisotropy raises $T_{\mathrm{c}}$ from \qty{11.6}{\kelvin} to approximately \qty{14.2}{\kelvin}.
+
 The optical response resolves changes beyond the metallic or semiconducting classification.
 The cubic trilayer has weaker in-plane absorption than the bcc structural reference throughout the sampled visible interval, while its out-of-plane absorption exceeds the reference over only part of that interval.
-Here, bcc beryllium serves as a structural comparison; its harmonic instability at zero pressure precludes treating it as a stable bulk counterpart under those conditions.
+Here, bcc beryllium serves as a structural comparison.
+Its harmonic instability at zero pressure precludes treating it as a stable bulk counterpart under those conditions.
 Hydrogenation likewise redistributes spectral strength without enhancing every component.
 For 2H-$\alpha$-beryllene, the response below the main absorption region is weak and broadened, consistent with its wide electronic gap.
-The beryllene comparison therefore yields several distinct outcomes: a harmonically stable cubic trilayer, a wide-gap hydrogenated $\alpha$ sheet, and conditional non-trivial subspaces in two metallic parent structures.
-Their different stability and occupation conditions determine how each outcome can guide further work.
+The beryllene comparison therefore yields several distinct outcomes.
+They include a harmonically stable cubic trilayer, a wide-gap hydrogenated $\alpha$ sheet, conditional non-trivial subspaces in two metallic parent structures, and phonon-mediated superconductivity in three metallic structures.
+Their different stability and occupation conditions determine the role of each outcome in further work.
 
 \section{Connections between the three studies}
 \label{sec:conclusions_connections}
@@ -149,11 +157,13 @@ The charge distributions and orbital contributions connect this rearrangement of
 
 Next, the geometry of the bonding matters when we compare different layer numbers.
 The graphene heterostructures couple two distinct sheets through an interface, whereas the o-\ce{B14} structures retain parts of a connected boron framework as we reduce its thickness.
-The beryllene comparison introduces another change: the cubic trilayer has a square lattice, while the pristine $\alpha$ and $\beta$ structures belong to the hexagonal family.
+The beryllene comparison introduces another change.
+The cubic trilayer has a square lattice, while the pristine $\alpha$ and $\beta$ structures belong to the hexagonal family.
 Their differences therefore include lattice geometry as well as layer number.
 Hydrogen adsorption further distorts the $\beta$ lattice and changes its symmetry.
 The 1H structure loses inversion symmetry, whereas the 2H structure retains it.
-This distinction changes the available route to the topological invariant: we use Wilson loops for 1H-$\beta$-beryllene, where the inversion-based parity criterion no longer applies.
+This distinction changes the available route to the $\mathbb{Z}_2$ index.
+For 1H-$\beta$-beryllene, where the inversion-based parity criterion no longer applies, we use Wilson loops.
 Layer number and composition identify a structure only partially.
 The atomic arrangement specifies the bonding and symmetry needed to interpret its properties.
 
@@ -226,7 +236,7 @@ Dense sampling and local refinement locate the smallest sampled separations, but
 The HSE06 parity check tests band ordering at the symmetry points without spin-orbit coupling.
 It leaves isolation under HSE06 with spin-orbit coupling across the Brillouin zone open.
 
-Finally, graphene, boron sheets, and a beryllium sheet have been prepared experimentally, whereas the particular boron frameworks, hydrogen arrangements, and cubic beryllene trilayer considered here remain theoretical models.
+Finally, graphene, boron sheets, and a beryllium sheet have been prepared experimentally, whereas the particular boron frameworks, hydrogen arrangements, and trilayer cubic beryllene considered here remain theoretical models.
 Their calculated properties identify questions for experimental testing, while their realization requires independent structural evidence.
 
 \section{Outlook}
@@ -259,22 +269,23 @@ Only then can the freestanding prediction guide a realistic preparation route.
 
 The proposed preparation conditions also need a structural test.
 For a hydrogenated sheet, the structural test resolves the adsorption arrangement and the underlying lattice in addition to the hydrogen content.
-The 2H-$\alpha$ comparison with square-layer \ce{BeH2} illustrates this point: the same composition admits different bonding geometries and different electronic energies.
+The 2H-$\alpha$ comparison with square-layer \ce{BeH2} illustrates this point.
+The same composition admits different bonding geometries and different electronic energies.
 Measurements that resolve the lattice together with the vibrational response could distinguish these alternatives more directly than composition alone.
 Calculating their corresponding structural and vibrational signatures would make that comparison concrete.
 The resulting assignment would then determine which electronic and optical prediction applies to the sample.
 
 \subsection{Magnetic states and superconducting estimates}
 
-For monolayer o-\ce{B14}, the next step would places the magnetic energy comparison and the response calculations on a consistent electronic reference.
+For monolayer o-\ce{B14}, the next step would place the magnetic energy comparison and the response calculations on a consistent electronic reference.
 Converged comparisons of additional spin arrangements can test the preference among the states examined so far.
 Exchange interactions and magnetic anisotropy can then connect those static energies to a model of finite-temperature magnetism.
 Calculating the optical response of the favoured magnetic state would also establish how its gap and spin arrangement modify the non-magnetic spectra reported here.
 
 For bulk and hydrogen-terminated bilayer o-\ce{B14}, a refined superconducting calculation can resolve the sensitivity to momentum sampling, phonon frequencies, and the Coulomb pseudopotential.
-Anisotropic Migdal--Eliashberg solutions at temperatures on both sides of gap closure can determine the transition more directly than a mean extracted from binned gap distributions~\cite{margine2013anisotropic}.
+Anisotropic Migdal--Eliashberg solutions at temperatures on both sides of gap closure, as used for beryllene in section~\ref{3_superconductivity}, can determine the transition more directly than a mean extracted from binned gap distributions~\cite{margine2013anisotropic}.
 For the terminated bilayer, resolving the small imaginary phonon frequencies is part of this task, since the vibrational spectrum also enters the pairing calculation.
-These steps would test the robustness of the predicted pairing and determine how much uncertainty accompanies its temperature scale.
+These steps would test the predicted pairing and determine the uncertainty of its temperature scale.
 A useful additional comparison would resolve which phonon-frequency ranges contribute most strongly to the coupling in the bulk and terminated bilayer.
 Following these contributions through their spectral functions would clarify why the larger bilayer coupling accompanies a lower Allen--Dynes temperature and which part of the lattice controls that difference.
 If the sheet can be prepared, electrical transport together with magnetic response could then test the predicted transition under identified structural and termination conditions.
@@ -309,21 +320,21 @@ Agreement across these structural and polarization comparisons would test the pr
 
 \subsection{Band isolation and topological response}
 
-For $\alpha$- and cubic beryllene, the first topological question concerns the small direct separations.
+For $\alpha$-beryllene and trilayer cubic beryllene, the first topological question concerns the small direct separations.
 The selected $N$-band subspace requires $E_{N+1}(\vec{k}\,)-E_N(\vec{k}\,)>0$ throughout the Brillouin zone~\cite{fu2007topological,gresch2017z2pack}.
 Cutoff, self-consistent-mesh, and spin-orbit convergence tests therefore precede a stronger topological assignment, followed by an HSE06 calculation with spin-orbit coupling that tests isolation beyond the symmetry points.
 Once this condition becomes reliable, boundary calculations can examine the associated edge spectrum in the context of the complete bulk bands.
 
 The position of the chemical potential then becomes a separate physical question.
 The present neutral structures are metallic, and their relevant gaps lie above the Fermi level.
-Carrier control, strain, or a substrate would therefore be assessed by whether it can produce an accessible insulating energy interval while preserving the required symmetry and band separation.
+We would therefore assess carrier control, strain, or a substrate by its ability to produce an accessible insulating energy interval while preserving the required symmetry and band separation.
 % Whether moving the chemical potential alone removes an indirect overlap or makes the small gaps sufficiently wide is part of this assessment.
-Whether moving the chemical potential alone changes the filling but leaves an indirect overlap and the small gaps unchanged.
+Moving the chemical potential alone changes the filling but leaves an indirect overlap and the small gaps unchanged.
 
 Transport predictions then build on these checks in addition to the parity product.
 
 For a beryllene structure with a verified insulating gap and a controlled chemical potential, edge-sensitive spectroscopy and transport could then test the connection between the calculated invariant and a boundary response.
-Such a comparison would also need the edge geometry and the remaining bulk states, since they are needed to determine the topological origin of an edge spectral feature.
+Such a comparison would also require the edge geometry and the remaining bulk states, which determine whether an edge spectral feature has a topological origin.
 The progression from band isolation to boundary spectrum and then to transport gives the conditional subspace result a definite route towards physical verification.
 
 Looking further ahead, we can ask whether the control of electronic states and pairing in two-dimensional materials can lead to phases with anyonic excitations.

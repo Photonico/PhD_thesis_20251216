@@ -59,18 +59,21 @@ The effective thicknesses $d_{\mathrm{2D}}$ used in the dielectric-function reno
 \qty{5.524}{\angstrom} for 1H-$\beta$-beryllene,
 and \qty{5.193}{\angstrom} for 2H-$\beta$-beryllene.
 We assign $d_{\mathrm{2D}}$ as the separation of the outermost atomic centres along the surface normal,
-plus the radii of the atoms at those two surfaces: \qty{1.98}{\angstrom} for Be and \qty{0.70}{\angstrom} for H.
+plus the radii of the atoms at those two surfaces.
+These radii are \qty{1.98}{\angstrom} for Be and \qty{0.70}{\angstrom} for H.
 The relaxed coordinates are converted to Cartesian lengths with periodic wrapping removed.
-The same optical volume normalization is applied to the $xx$, $yy$ and $zz$ components.
+The same optical volume normalization is applied to the $xx$, $yy$, and $zz$ components.
 The absolute effective response depends on this thickness convention.
 The endpoint-radius contribution is Be+Be for pristine structures, H+H for double-sided termination, and Be+H for single-sided termination.
-Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value, which is a consequence of the chosen convention.
+Consequently, the assigned 2H-$\alpha$ thickness is smaller than the pristine value.
 Unrounded structure-derived values are used in all calculations.
 The actual total numbers of bands are 140 for each hydrogenated structure,
 133 for pristine $\alpha$-beryllene and trilayer cubic beryllene,
 128 for pristine $\beta$-beryllene,
-70 for bulk bcc beryllium and 66 for bulk hcp beryllium.
-These are total bands, not counts of unoccupied bands; the actual output may differ from the requested \texttt{NBANDS} because of parallel band allocation.
+70 for bulk bcc beryllium,
+and 66 for bulk hcp beryllium.
+These numbers include both occupied and unoccupied bands.
+They can differ from the requested \texttt{NBANDS} because of parallel band allocation.
 
 \subsection*{Dielectric-function convergence}
 
@@ -82,14 +85,14 @@ and trilayer cubic beryllene.
 The plots retain the full range of every curve within the displayed energy window.
 In particular, the bulk hcp $45\times45\times45$ k-point calculation has a large low-energy dielectric response that is visible in figure~\ref{fig:proj3_hcp_dielectric_kpoint_convergence}.
 These comparisons test the convergence of the interband response, and the complete low-frequency metallic response would also require an intraband treatment.
-The selected reference may change both the k-point grid and the total band count relative to a convergence series,
-as it is a final-parameter reference.
+The selected reference is the final-parameter calculation,
+so its k-point grid and total band count can differ from those of the convergence series.
 
 \begin{figure}[!htbp]
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_nbands_hcp-beryllium_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for bulk hcp beryllium,
-calculated with different total numbers of bands included in the calculation.}
+calculated with different total numbers of bands.}
 \label{fig:proj3_hcp_dielectric_nbands_convergence}
 \end{figure}
 
@@ -105,7 +108,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_nbands_alpha-beryllene_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for $\alpha$-beryllene,
-calculated with different total numbers of bands included in the calculation.}
+calculated with different total numbers of bands.}
 \label{fig:proj3_alpha_dielectric_nbands_convergence}
 \end{figure}
 
@@ -121,7 +124,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_nbands_beta-beryllene_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for $\beta$-beryllene,
-calculated with different total numbers of bands included in the calculation.}
+calculated with different total numbers of bands.}
 \label{fig:proj3_beta_dielectric_nbands_convergence}
 \end{figure}
 
@@ -137,7 +140,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_nbands_bcc-beryllium_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for bulk bcc beryllium,
-calculated with different total numbers of bands included in the calculation.}
+calculated with different total numbers of bands.}
 \label{fig:proj3_bcc_dielectric_nbands_convergence}
 \end{figure}
 
@@ -153,7 +156,7 @@ calculated with different k-point sets.}
 \centering
     \includegraphics[width=1.0\linewidth]{figures_proj3/convergence_dielectric_nbands_cubic-beryllene-trilayer_thesis.pdf}
 \caption{Real and imaginary parts of the dielectric function for trilayer cubic beryllene,
-calculated with different total numbers of bands included in the calculation.}
+calculated with different total numbers of bands.}
 \label{fig:proj3_cubic_dielectric_nbands_convergence}
 \end{figure}
 
@@ -173,22 +176,22 @@ are shown in figures~\ref{fig:proj3_phonon_dispersion} and~\ref{fig:proj3_band_s
 The phonon dispersions are calculated with PBE without a dispersion correction.
 Bulk bcc beryllium has an imaginary frequency of $3.90\mathrm{i}$~\si{\tera\hertz} at the $\mathrm{N}$ point,
 which is commensurate with the $4 \times 4 \times 4$ supercell.
-This is expected for the high-temperature bcc phase of beryllium,
+This instability is expected for the high-temperature bcc phase of beryllium,
 which is stabilized by anharmonicity.
 The Brillouin zones used for the hexagonal and distorted hexagonal cells are shown in figure~\ref{fig:proj3_brillouin_zones}.
 For 1H-$\beta$-beryllene and 2H-$\beta$-beryllene,
 the band structures and phonon dispersions use the path $\Gamma$--$\mathrm{X}$--$\mathrm{K}$--$\Gamma$--$\mathrm{Y}$--$\mathrm{K}'$--$\mathrm{M}$--$\Gamma$ shown in figure~\ref{fig:proj3_brillouin_zones}(b).
 These cells are continuous distortions of the hexagonal cell,
-with angles of \qty{117}{\degree} and \qty{133}{\degree} between the lattice vectors,
-so $\mathrm{K}$ and $\mathrm{K}'$ derive from the zone corners of the hexagonal cell,
+with angles of \qty{117}{\degree} and \qty{133}{\degree} between the lattice vectors.
+Therefore, $\mathrm{K}$ and $\mathrm{K}'$ derive from the zone corners of the hexagonal cell,
 and $\mathrm{X}$, $\mathrm{Y}$, and $\mathrm{M}$ from its three equivalent $\mathrm{M}$ points.
 With the $P1$ and $P\bar{1}$ symmetry of 1H-$\beta$-beryllene and 2H-$\beta$-beryllene,
 together with time-reversal symmetry,
 this path covers the irreducible part of the zone boundary.
 Within a tolerance of \qty{1e-3}{\angstrom},
-the two cells have $Cm$ and $C2/m$ symmetry,
-which makes the $\Gamma$--$\mathrm{Y}$ and $\Gamma$--$\mathrm{M}$ lines of 1H-$\beta$-beryllene and the $\Gamma$--$\mathrm{X}$ and $\Gamma$--$\mathrm{Y}$ lines of 2H-$\beta$-beryllene equivalent;
-the calculated PBE bands along these lines differ by at most \qty{3.3}{\milli\electronvolt} and \qty{7.3}{\milli\electronvolt},
+the two cells have $Cm$ and $C2/m$ symmetry.
+This higher symmetry makes the $\Gamma$--$\mathrm{Y}$ and $\Gamma$--$\mathrm{M}$ lines of 1H-$\beta$-beryllene and the $\Gamma$--$\mathrm{X}$ and $\Gamma$--$\mathrm{Y}$ lines of 2H-$\beta$-beryllene equivalent.
+The calculated PBE bands along these lines differ by at most \qty{3.3}{\milli\electronvolt} and \qty{7.3}{\milli\electronvolt},
 respectively.
 
 \begin{figure}[!htbp]
@@ -209,7 +212,7 @@ Imaginary frequencies are shown as negative values.}
 \centering
     \includegraphics[width=0.80\linewidth]{figures_proj3/brillouin_zone_thesis.pdf}
 \caption{Schematic Brillouin zones of the hexagonal and distorted hexagonal cells.
-(a) Brillouin zone for the hexagonal unit cells of $\alpha$-beryllene, $\beta$-beryllene, and 2H-$\alpha$-beryllene;
+(a) Brillouin zone for the hexagonal unit cells of $\alpha$-beryllene, $\beta$-beryllene, and 2H-$\alpha$-beryllene.
 (b) Brillouin zone for the distorted hexagonal cells of 1H-$\beta$-beryllene and 2H-$\beta$-beryllene,
 with the path $\Gamma$--$\mathrm{X}$--$\mathrm{K}$--$\Gamma$--$\mathrm{Y}$--$\mathrm{K}'$--$\mathrm{M}$--$\Gamma$ used for their band structures and phonon dispersions.
 $\vec{b}_{1}$ and $\vec{b}_{2}$ are the reciprocal lattice vectors of each relaxed cell,
@@ -249,7 +252,7 @@ which is also commensurate with this wave vector.
 The atoms are displaced along the eigenvector of the soft mode,
 with maximum displacements of \qty{0.025}{\angstrom}, \qty{0.049}{\angstrom}, and \qty{0.098}{\angstrom},
 and the total energy is calculated at each amplitude without further relaxation.
-These calculations are repeated with Gaussian smearing of \qty{0.02}{\electronvolt}, \qty{0.05}{\electronvolt}, and \qty{0.10}{\electronvolt},
+We repeat these calculations with Gaussian smearing of \qty{0.02}{\electronvolt}, \qty{0.05}{\electronvolt}, and \qty{0.10}{\electronvolt},
 using k-point meshes of $16 \times 97 \times 1$ for \qty{0.02}{\electronvolt} and $11 \times 65 \times 1$ otherwise.
 The energies are fitted to $E(Q)-E(0)=aQ^{2}+bQ^{4}$,
 where $Q$ is the mass-weighted amplitude of the mode.
@@ -258,10 +261,10 @@ and $a^{2}/4b$ gives the depth of the double well for $a<0$.
 The fitted harmonic frequencies of $1.0\mathrm{i}$--$1.8\mathrm{i}$~\si{\tera\hertz} are comparable with the value of $1.65\mathrm{i}$~\si{\tera\hertz} from the phonon calculation.
 
 To estimate the effect of quantum fluctuations,
-we solve the one-dimensional Schr\"odinger equation for the fitted potential numerically,
-and also calculate the self-consistent harmonic frequency $\Omega$ of this single mode,
+we solve the one-dimensional Schr\"odinger equation for the fitted potential numerically.
+We also calculate the self-consistent harmonic frequency $\Omega$ of this single mode,
 which satisfies $\Omega^{2}=2a+12b\langle Q^{2}\rangle$,
-with $\langle Q^{2}\rangle=(\hbar/2\Omega)\coth(\hbar\Omega/2k_{\mathrm{B}}T)$.
+with $\langle Q^{2}\rangle=(\hbar/2\Omega)\coth(\hbar\Omega/2\kB T)$.
 The coupling to the other phonon modes is neglected,
 so these values indicate the size of the quantum fluctuations.
 The results are listed in table~\ref{tab:proj3_soft_mode}.
@@ -336,12 +339,12 @@ The free energies at \qty{298.15}{\kelvin} and \qty{1}{\bar} include the harmoni
 and the enthalpy and entropy of gaseous \ce{H2},
 $H(T)-H(0)-TS=\qty{-0.316}{\electronvolt}$ per \ce{H2}.
 The equilibrium \ce{H2} pressure is the pressure at which the adsorption free energy vanishes,
-$p_{\mathrm{eq}}=p^{\circ}\exp\left(2\Delta G/k_{\mathrm{B}}T\right)$ with $p^{\circ}=\qty{1}{\bar}$.
+$p_{\mathrm{eq}}=p^{\circ}\exp\left(2\Delta G/\kB T\right)$ with $p^{\circ}=\qty{1}{\bar}$.
 The zero-point energy raises all adsorption energies by \qtyrange{0.08}{0.09}{\electronvolt} per hydrogen atom,
 because the vibrations of the adsorbed hydrogen atoms outweigh the stretching mode of \ce{H2}.
 For 2H-$\beta$-beryllene,
-the imaginary phonon modes are excluded from the vibrational free energy;
-they cover \qty{1.1}{\percent} of the Brillouin zone,
+the imaginary phonon modes are excluded from the vibrational free energy.
+They cover \qty{1.1}{\percent} of the Brillouin zone,
 and their contribution is below \qty{0.1}{\milli\electronvolt} per hydrogen atom.
 
 \begin{table}[!htbp]
@@ -404,8 +407,8 @@ and relaxed total energies per formula unit relative to 2H-$\alpha$-beryllene fo
 \subsection*{Topological screening}
 
 The direct gaps $E_{N+1}-E_{N}$ between the lowest $N$ spinor bands and band $N+1$ are shown over the Brillouin zone in figures~\ref{fig:proj3_direct_gap_pristine} and~\ref{fig:proj3_direct_gap_hydrogenated}.
-The $105 \times 105$ grid of the self-consistent calculation is unfolded with the symmetry operations of each structure,
-and the minima of the direct gap are refined on locally denser grids with non-self-consistent spin-orbit calculations.
+We unfold the $105 \times 105$ grid of the self-consistent calculation with the symmetry operations of each structure,
+and refine the minima of the direct gap on locally denser grids with non-self-consistent spin-orbit calculations.
 For the pristine structures,
 the smallest direct gaps are approximately \qty{1}{\milli\electronvolt},
 so each local minimum is further refined with successively smaller $9 \times 9$ patches,
@@ -424,10 +427,10 @@ the Wannier charge centres are crossed an even number of times by any reference 
 which gives $\nu=0$.
 
 The parities obtained with the HSE06 hybrid functional without spin-orbit coupling are compared with the PBE results in table~\ref{tab:proj3_hse_parity}.
-The numbers of odd-parity states among the lowest $N/2$ spinless bands agree with the numbers of odd-parity Kramers pairs in PBE with spin-orbit coupling at all four time-reversal invariant momenta,
-so the parity products at these momenta are unchanged.
-This comparison checks the parity ordering at these momenta,
-and the isolation of the lowest-$N$ spinor subspaces throughout the Brillouin zone with HSE06 and spin-orbit coupling is a separate test.
+The numbers of odd-parity states among the lowest $N/2$ spinless bands agree with the numbers of odd-parity Kramers pairs in PBE with spin-orbit coupling at all four time-reversal invariant momenta.
+The parity products at these momenta are therefore unchanged.
+This comparison checks the parity ordering at these momenta.
+The isolation of the lowest-$N$ spinor subspaces throughout the Brillouin zone with HSE06 and spin-orbit coupling is a separate test.
 For 2H-$\beta$-beryllene,
 the gap above band 6 at $\mathrm{M}$ is \qty{0.171}{\electronvolt} with HSE06 and \qty{0.178}{\electronvolt} with PBE in the same cell.
 
