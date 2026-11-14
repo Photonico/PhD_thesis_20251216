@@ -12,7 +12,7 @@ The discussion follows the route used in the optical analysis of this thesis.
 We first introduce the constitutive relations used in the optical calculations, then formulate the dielectric response, and finally derive the optical observables.
 The electromagnetic foundations and the detailed causality derivation are given in appendix~\ref{cha:appendix_electrodynamics}.
 In section~\ref{sec:constitutive_relations_for_optical_response}, we connect the polarization field $\vec{P}(\vec{r},t)$ and electric displacement field $\vec{D}(\vec{r},t)$ to the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$.
-Section~\ref{sec:from_electronic_response_to_dielectric_function} then describes the complex dielectric function $\varepsilon(\omega)=\varepsilon_1(\omega)+i\varepsilon_2(\omega)$ and its directional form in anisotropic media.
+Section~\ref{sec:from_electronic_response_to_dielectric_function} then describes the complex dielectric function $\varepsilon(\omega)=\varepsilon_1(\omega)+\mathrm{i}\,\varepsilon_2(\omega)$ and its directional form in anisotropic media.
 Causality constrains the real and imaginary parts of this response, and section~\ref{sec:causality_and_kramers_kronig_relations} expresses this constraint through the Kramers--Kronig relations.
 Finally, section~\ref{sec:from_dielectric_function_to_optical_properties} derives the absorption coefficient $\alpha(\omega)$, refractive index $n(\omega)$, extinction coefficient $k(\omega)$, reflectivity $R(\omega)$, and energy-loss spectrum $L(\omega)$ from the complex dielectric function.
 
@@ -128,9 +128,9 @@ the reflectivity $R(\omega)$,
 and the energy-loss spectrum $L(\omega)$.
 This complex dielectric function therefore provides a unified framework for the linear optical properties~\cite{onida2002electronic,djurivsic2002progress,niu2024electronic}.
 
-For the xene systems considered in the present work,
+For the Xene systems considered in the present work,
 we accordingly resolve the dielectric response for the in-plane and out-of-plane channels for separate analysis.
-In anisotropic xenes, the response along the structural plane usually differs substantially from that along the perpendicular direction~\cite{marinopoulos2002anisotropy,huang2023optical,slavich2024exploring,cheng2025two}.
+In anisotropic Xenes, the response along the structural plane usually differs substantially from that along the perpendicular direction~\cite{marinopoulos2002anisotropy,huang2023optical,slavich2024exploring,cheng2025two}.
 
 At this stage, we arrive at the complex dielectric function as the central response quantity for discussing optical performance.
 When we enter the frequency domain, the optical response no longer appears as a static redistribution of charge;
@@ -217,7 +217,7 @@ Meanwhile, the Dirac delta function enforces the energy-conservation condition:
 \end{equation}
 
 Equation~\eqref{independent_particle_imaginary_dielectric_tensor} describes the microscopic origin of the interband absorptive response.
-For a transition to contribute, the occupation difference and the velocity matrix elements must be nonzero,
+For a transition to contribute, the occupation difference and the velocity matrix elements must be non-zero,
 and the transition energy must match the photon energy $\hbar\omega$.
 For an insulator at zero temperature, this reduces to a transition from an occupied valence state to an empty conduction state.
 For a metal, the occupations must instead be resolved at each $\vec{k}$.
@@ -229,9 +229,8 @@ This point clarifies what the calculated spectra describe.
 The imaginary part reflects the band energies, the occupation pattern,
 and the direction-resolved transition matrix elements.
 The Brillouin-zone integration is evaluated using the k-point sampling discussed in section~\ref{subsec:method_kpoints}.
-Within the adopted independent-particle description,
-the spectra resolve the interband onset, absorption peaks, and directional contrast.
-The electron--hole interaction is not included in this approximation.
+The spectra resolve the interband onset, absorption peaks, and directional contrast.
+The electron-hole interaction is not included in this approximation.
 
 The tensor indices $\alpha$ and $\beta$ enter directly through the velocity matrix elements.
 Therefore, the microscopic transition strength already resolves the field polarization and the crystal directions.
@@ -243,17 +242,17 @@ For a metal, a simple model for this additional contribution along a principal d
 \begin{equation}
     \varepsilon_{\lambda\lambda}(\omega)
     = \varepsilon_{\lambda\lambda}^{\mathrm{inter}}(\omega)
-    - \frac{\omega_{p,\lambda}^{2}}
+    - \frac{\omega_{\mathrm{p},\lambda}^{2}}
     {\omega\left(\omega+\mathrm{i}\,\gamma_{\lambda}\right)}
 \label{interband_and_drude_dielectric_response}
 \end{equation}
 
 here, $\varepsilon_{\lambda\lambda}^{\mathrm{inter}}(\omega)$ includes the vacuum background of one,
-$\omega_{p,\lambda}$ is the plasma angular frequency,
+$\omega_{\mathrm{p},\lambda}$ is the plasma angular frequency,
 and $\gamma_{\lambda}>0$ is the carrier damping rate.
 For the spectra shown here, we use the independent-particle interband response calculated with VASP,
 without microscopic local-field effects or a Drude contribution from intraband transitions.
-Therefore, these spectra do not describe the complete low-frequency response of the metallic systems.
+Therefore, these spectra describe the interband part of the low-frequency response of the metallic systems.
 
 \subsection{Dielectric response in anisotropic media}
 
@@ -285,9 +284,9 @@ the out-of-plane dielectric function $\varepsilon_{\perp}(\omega)$.
 Once we decompose the dielectric response into directional channels,
 the derived optical properties inherit the same anisotropy~\cite{alonso2004optical}.
 
-A representative example of the direction-resolved dielectric response is shown in the following figure.
+A representative example of the direction-resolved dielectric response is shown in figure~\ref{figure_representative_dielectric_response}.
 The real and imaginary parts exhibit distinct in-plane and out-of-plane features over the full photon-energy range.
-The $\alpha$-Beryllene and $\beta$-Beryllene spectra in this chapter were calculated by the author for the study presented in chapter~\ref{cha:project_beryllene}.
+The $\alpha$-beryllene and $\beta$-beryllene spectra in this chapter were calculated by the author for the study presented in chapter~\ref{cha:project_beryllene}.
 The calculation methods and corresponding optical results are discussed in sections~\ref{3_methods} and~\ref{3_optical_alpha_beta}.
 
 For these two-dimensional systems, the calculated dielectric response includes the vacuum region of the supercell.
@@ -311,10 +310,30 @@ The superscripts $\mathrm{SC}$ and $\mathrm{2D}$ distinguish the supercell respo
 The thickness values are given in section~\ref{3_supplementary}.
 The dielectric function and the derived optical quantities therefore remain associated with this thickness convention.
 
+Table~\ref{tab:optical_thickness_conventions} lists the conventions of the three research chapters.
+
+\begin{table}[!htbp]
+\centering
+\rowcolors{2}{gray!15}{white}
+\begin{tabular}{ccc}
+\hline
+\rowcolor{gray!25}
+chapter & $d_{\mathrm{2D}}$ (\AA) & absorption unit \\
+\hline
+chapter~\ref{cha:project_bilayers} & -- & \si{\per\nano\metre} \\
+chapter~\ref{cha:project_boron} & 5.807, 9.412, 11.209 & \si{\per\angstrom} \\
+chapter~\ref{cha:project_beryllene} & 3.145--6.966 & \si{\per\nano\metre} \\
+\hline
+\end{tabular}
+\caption{Effective thickness $d_{\mathrm{2D}}$ and absorption unit of each research chapter.
+Chapter~\ref{cha:project_bilayers} reports the unscaled response of the \qty{15}{\angstrom} supercell.}
+\label{tab:optical_thickness_conventions}
+\end{table}
+
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/3.1_dielectric.pdf}
-\caption{Representative real and imaginary parts of the in-plane and out-of-plane dielectric function as a function of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene. The figure illustrates the direction-resolved complex dielectric response discussed in the text.
+\caption{Representative real and imaginary parts of the in-plane and out-of-plane dielectric function as a function of photon energy for $\alpha$-beryllene and $\beta$-beryllene. The figure illustrates the direction-resolved complex dielectric response discussed in the text.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.
 These spectra are from our calculations presented in chapter~\ref{cha:project_beryllene}.}
 \label{figure_representative_dielectric_response}
@@ -449,8 +468,9 @@ which identifies the dominant resonant energy-loss channels in the medium.
 
 In what follows, we present the general relations that
 connect these quantities to the complex dielectric function $\varepsilon(\omega)$~\cite{born2013principles,wooten2013optical,dressel2002electrodynamics,fox2010optical}.
-Recent first-principles studies have also analyzed the dielectric response together with the derived optical properties in low-dimensional materials~\cite{niu2024electronic,khan2025insight,albert2024optical,huang2023optical,cheng2025two}.
-Afterwards, we analyze the in-plane and out-of-plane optical response of the present systems.
+Recent first-principles studies have also analysed the dielectric response together with the derived optical properties in low-dimensional materials~\cite{niu2024electronic,khan2025insight,albert2024optical,huang2023optical,cheng2025two}.
+Afterwards, we analyse the in-plane and out-of-plane optical response of the present systems.
+We will discuss the individual spectral features in detail in section~\ref{3_optical_alpha_beta}.
 For absorption, refraction, and reflection, we use the local effective-medium description of a transverse principal-axis mode with $\mu_{\mathrm{r}}(\omega)\approx1$.
 The index $\lambda$ denotes the electric-field polarization.
 In the propagation equations, $z$ denotes distance along the wave path and need not coincide with the structural out-of-plane axis.
@@ -464,7 +484,7 @@ For a monochromatic wave propagating through the medium,
 the intensity follows:
 
 \begin{equation}
-    I_{\lambda}(z,\omega)= I_{\lambda,0}(\omega)\,e^{-\alpha_{\lambda}(\omega) z}
+    I_{\lambda}(z,\omega)= I_{\lambda,0}(\omega)\,\mathrm{e}^{-\alpha_{\lambda}(\omega) z}
 \label{intensity_attenuation_from_absorption_coefficient}
 \end{equation}
 
@@ -522,21 +542,18 @@ response quantity derived from the dielectric function.
 Here, the imaginary part $\varepsilon_{2,\lambda\lambda}(\omega)$ provides the spectral weight generated by electronic transitions,
 whereas the real part $\varepsilon_{1,\lambda\lambda}(\omega)$ modifies the magnitude and energy dependence of the resulting attenuation.
 
-The following figure presents the calculated absorption coefficient $\alpha_{\lambda}(\omega)$ spectra of the present systems for the in-plane and out-of-plane directions:
+Figure~\ref{absorption_coefficient_present_systems} presents the calculated absorption coefficient $\alpha_{\lambda}(\omega)$ spectra of the present systems for the in-plane and out-of-plane directions.
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/4.1_absorption.pdf}
-\caption{The absorption coefficients for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+\caption{The absorption coefficients for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-beryllene and $\beta$-beryllene.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively. The absorption coefficient is given in $\mathrm{nm}^{-1}$.
 These spectra are from our calculations presented in chapter~\ref{cha:project_beryllene}.}
 \label{absorption_coefficient_present_systems}
 \end{figure}
 
 The absorption coefficient spectra demonstrate differences between the two optical directions and between the two materials.
-In the in-plane channel, $\beta$-Beryllene shows a stronger absorption response than $\alpha$-Beryllene over a broad photon-energy range,
-whereas $\alpha$-Beryllene develops its main absorption only beyond the low-energy range and then forms a broader spectral feature.
-In the out-of-plane channel, both materials develop stronger peak structures, while $\beta$-Beryllene still shows the stronger overall absorption.
 These trends indicate that the optical attenuation depends on both the polarization direction and the crystal structure of the medium.
 
 Once the electronic transitions generate different spectral weights along different directions,
@@ -642,40 +659,34 @@ Similarly, we express the extinction coefficient $k_{\lambda}(\omega)$ as:
 \label{extinction_coefficient_from_dielectric_response}
 \end{equation}
 
-With these expressions, we present the calculated refractive index $n_{\lambda}(\omega)$ spectra of $\alpha$-Beryllene and $\beta$-Beryllene:
+With these expressions, we present the calculated refractive index $n_{\lambda}(\omega)$ spectra of $\alpha$-beryllene and $\beta$-beryllene in figure~\ref{refractive_index_present_systems}.
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/4.2_refractive.pdf}
-\caption{The refractive indices for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+\caption{The refractive indices for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-beryllene and $\beta$-beryllene.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.
 These spectra are from our calculations presented in chapter~\ref{cha:project_beryllene}.}
 \label{refractive_index_present_systems}
 \end{figure}
 
 The refractive index spectra demonstrate distinct directional and structural contrasts.
-In the in-plane channel, $\beta$-Beryllene develops two pronounced enhancements in the infrared and near-ultraviolet regions, with a minimum in the visible range, whereas $\alpha$-Beryllene varies more smoothly over the same interval.
-In the out-of-plane channel, $\beta$-Beryllene remains stronger than $\alpha$-Beryllene over the infrared to near-ultraviolet range.
 These trends indicate that the phase response depends on both the optical direction and the crystal structure of the medium.
 
-We next present the extinction coefficient $k_{\lambda}(\omega)$ spectra,
-which follow the absorptive part of the dielectric response more directly~\cite{wooten2013optical,dressel2002electrodynamics,fox2010optical}:
+We next present the extinction coefficient $k_{\lambda}(\omega)$ spectra in figure~\ref{extinction_coefficient_alpha_beta_beryllene},
+which follow the absorptive part of the dielectric response more directly~\cite{wooten2013optical,dressel2002electrodynamics,fox2010optical}.
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/4.3_extinction.pdf}
-\caption{The extinction coefficients for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+\caption{The extinction coefficients for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-beryllene and $\beta$-beryllene.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.
 These spectra are from our calculations presented in chapter~\ref{cha:project_beryllene}.}
 \label{extinction_coefficient_alpha_beta_beryllene}
 \end{figure}
 
 The extinction coefficient spectra demonstrate a similar directional contrast.
-In the in-plane channel, $\beta$-Beryllene exhibits a strong infrared peak, followed by a pronounced trough from the visible to near-ultraviolet range and another strong feature in the ultraviolet region.
-By contrast, $\alpha$-Beryllene remains weak at low photon energies and develops a broader ultraviolet response before gradually decreasing at higher energies.
-In the out-of-plane channel, $\beta$-Beryllene is stronger than $\alpha$-Beryllene from the infrared to the near-ultraviolet range and reaches its largest response in the ultraviolet region.
-Both phases then show oscillatory features and an overall decrease toward higher photon energies.
-This behavior shows that amplitude attenuation also depends on both the optical direction and the crystal structure of the medium.
+This behaviour shows that amplitude attenuation also depends on both the optical direction and the crystal structure of the medium.
 
 Accordingly, the refractive index $n_{\lambda}(\omega)$ and extinction coefficient $k_{\lambda}(\omega)$ connect the dielectric function to the interface response through the Fresnel equations~\cite{born2013principles,wooten2013optical,dressel2002electrodynamics}.
 We next use them to determine the reflectivity, which transfers the bulk optical response to the interface.
@@ -711,8 +722,7 @@ The incident medium therefore satisfies $N_{0,\lambda}(\omega)=1$.
 The resulting reflectivity is a parameter of this effective-medium model.
 For a finite two-dimensional layer, the measured reflectance also depends on the thickness, substrate, and optical geometry.
 At normal incidence on the structural plane, the electric field is in-plane.
-The value obtained from $\varepsilon_{zz}(\omega)$ is therefore a formal out-of-plane response of the scalar model,
-not a second normal-incidence channel of the layer.
+The value obtained from $\varepsilon_{zz}(\omega)$ is therefore a formal out-of-plane response of the scalar model.
 With the complex refractive index $N_{\lambda}(\omega)$ in equation~\eqref{complex_refractive_index_for_absorption_coefficient},
 we then write the amplitude reflection coefficient as:
 
@@ -751,22 +761,18 @@ A larger mismatch between $n_{\lambda}(\omega)$ and the vacuum value enhances re
 whereas $k_{\lambda}(\omega)$ modifies the reflected intensity through optical dissipation.
 Therefore, the reflectivity $R_{\lambda}(\omega)$ characterizes the reflected optical response at a specific photon energy.
 
-The following figure presents the calculated reflectivity $R_{\lambda}(\omega)$ spectra of $\alpha$-Beryllene and $\beta$-Beryllene for the in-plane and out-of-plane directions:
+Figure~\ref{reflectivity_alpha_beta_beryllene} presents the calculated reflectivity $R_{\lambda}(\omega)$ spectra of $\alpha$-beryllene and $\beta$-beryllene for the in-plane and out-of-plane directions.
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/4.4_reflectivity.pdf}
-\caption{The reflectivities for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+\caption{The reflectivities for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-beryllene and $\beta$-beryllene.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively. The reflectivities are evaluated within the effective-medium model described in the text.
 These spectra are from our calculations presented in chapter~\ref{cha:project_beryllene}.}
 \label{reflectivity_alpha_beta_beryllene}
 \end{figure}
 
 The reflectivity spectra follow the directional contrast already demonstrated in the extinction coefficient.
-In the in-plane channel, $\beta$-Beryllene exhibits strong low-energy reflection, followed by a pronounced minimum across the visible range and renewed strong reflection from the near-ultraviolet into the ultraviolet region,
-whereas $\alpha$-Beryllene varies more smoothly with a broad intermediate-energy feature.
-In the out-of-plane channel, $\beta$-Beryllene remains stronger over the low-energy range and then develops a series of rapid oscillations toward higher photon energies,
-while $\alpha$-Beryllene shows pronounced peaks in the ultraviolet region.
 These trends reflect the combined role of the refractive index $n_{\lambda}(\omega)$ and the extinction coefficient $k_{\lambda}(\omega)$ in determining the surface reflectivity.
 
 We next turn to the energy-loss spectrum $L_{\lambda}(\omega)$ and examine the longitudinal loss response of the medium.
@@ -779,8 +785,8 @@ We now move from surface reflection to energy dissipation inside the medium by e
 
 The energy-loss spectrum $L_{\lambda}(\omega)$ characterizes the energy transferred from an external probe to the medium at an energy transfer $\hbar\omega$.
 Here, we consider a longitudinal perturbation along the principal direction $\lambda$ in the local, long-wavelength limit.
-This loss function describes the corresponding bulk response relevant to electron energy-loss spectroscopy;
-finite momentum and surface contributions require the appropriate scattering geometry.
+This loss function describes the corresponding bulk response relevant to electron energy-loss spectroscopy.
+Finite momentum and surface contributions depend on the scattering geometry.
 
 We first express this principal-axis loss function as~\cite{dressel2002electrodynamics,wooten2013optical,fox2010optical,onida2002electronic}:
 
@@ -797,7 +803,7 @@ but also the screening effect determined by the full complex dielectric function
 For a weakly damped longitudinal collective excitation,
 a loss peak can occur near a zero of $\varepsilon_{1,\lambda\lambda}(\omega)$ when $\varepsilon_{2,\lambda\lambda}(\omega)$ is small.
 Interband excitations also contribute to the loss spectrum,
-so a peak alone does not establish a plasmon~\cite{dressel2002electrodynamics,onida2002electronic}.
+so a plasmon assignment combines a loss peak with the zero of $\varepsilon_{1,\lambda\lambda}(\omega)$~\cite{dressel2002electrodynamics,onida2002electronic}.
 
 Substituting equation~\eqref{direction_resolved_complex_dielectric_function} into equation~\eqref{energy_loss_spectrum_from_inverse_dielectric_function}, we then obtain the explicit expression adopted in the present work:
 
@@ -813,26 +819,21 @@ This expression separates the dissipative channel from the dielectric screening.
 The imaginary part $\varepsilon_{2,\lambda\lambda}(\omega)$ enters both the numerator and the denominator.
 At $\varepsilon_{1,\lambda\lambda}(\omega)=0$ and finite positive $\varepsilon_{2,\lambda\lambda}(\omega)$,
 the loss function is $L_{\lambda}(\omega)=1/\varepsilon_{2,\lambda\lambda}(\omega)$.
-Therefore, a large imaginary part does not by itself produce a strong loss peak.
+Therefore, a larger imaginary part lowers the loss peak at the zero crossing.
 The loss spectrum describes longitudinal screening and complements the transverse absorption and reflection responses~\cite{dressel2002electrodynamics,onida2002electronic}.
 
-The following figure presents the calculated energy-loss $L_{\lambda}(\omega)$ spectra of $\alpha$-Beryllene and $\beta$-Beryllene for the in-plane and out-of-plane directions:
+Figure~\ref{energy_loss_spectrum_alpha_beta_beryllene} presents the calculated energy-loss $L_{\lambda}(\omega)$ spectra of $\alpha$-beryllene and $\beta$-beryllene for the in-plane and out-of-plane directions.
 
 \begin{figure}[htbp]
 \centering
     \includegraphics[width=0.95\textwidth]{figures_ch3/4.5_energy-loss.pdf}
-\caption{The energy-loss spectra for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-Beryllene and $\beta$-Beryllene.
+\caption{The energy-loss spectra for the in-plane and out-of-plane directions as functions of photon energy for $\alpha$-beryllene and $\beta$-beryllene.
 The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components, respectively.
 These spectra are from our calculations presented in chapter~\ref{cha:project_beryllene}.}
 \label{energy_loss_spectrum_alpha_beta_beryllene}
 \end{figure}
 
 The energy-loss spectra demonstrate clear directional and structural contrasts.
-In the in-plane channel, $\beta$-Beryllene develops a visible-range peak and a stronger response in the deep-ultraviolet region,
-whereas $\alpha$-Beryllene remains weak at low photon energy and rises toward the upper end of the plotted range.
-In the out-of-plane channel, both materials remain weak in the visible range and develop stronger loss features at higher energies.
-The deep-ultraviolet peak of $\alpha$-Beryllene is stronger than that of $\beta$-Beryllene.
-
 These results demonstrate that the energy-loss spectrum $L_{\lambda}(\omega)$ varies with both the response direction and the crystal structure of the medium.
 As $L_{\lambda}(\omega)$ follows the inverse dielectric function,
 its peaks identify energy ranges with a strong longitudinal loss response.

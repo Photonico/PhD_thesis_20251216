@@ -5,21 +5,20 @@
 We continue our discussion of the fundamentals in this chapter, where we introduce the topology of electronic bands.
 Chapter~\ref{cha:fundamentals_a} established the electronic states and their energies within the Kohn--Sham framework.
 Chapter~\ref{cha:fundamentals_b} then connected these states to the optical response through transition matrix elements and energy differences.
-We now examine another property of the same electronic states:
-how they can be connected continuously across the Brillouin zone while preserving the symmetries of the system.
-This connection contains information that is not specified by the band energies alone.
+We now examine another property of the same electronic states, namely how they can be connected continuously across the Brillouin zone while preserving the symmetries of the system.
+This connection carries information beyond the band energies.
 
 The discussion follows the parity analysis used for the beryllene systems in chapter~\ref{cha:project_beryllene}.
 The geometric phase and the general action of time reversal are developed in appendix~\ref{cha:appendix_topology}.
 Here, we start from the spinor Bloch states supplied by the electronic-structure calculation
 and identify the band subspace to which a topological index can be assigned.
 We then locate the time-reversal invariant momenta and determine how inversion acts on the Kramers pairs.
-Finally, we use their parity eigenvalues to obtain the two-dimensional $Z_2$ index and connect its interpretation to the calculated band structure.
+Finally, we use their parity eigenvalues to obtain the two-dimensional $\mathbb{Z}_2$ index and connect its interpretation to the calculated band structure.
 Throughout this discussion, we distinguish the topology of a selected band subspace from an insulating state at the Fermi level.
 This distinction is required when interpreting the metallic systems considered in the present work.
 
 \newpage
-\section{Toward the topology of Bloch states}
+\section{Towards the topology of Bloch states}
 \label{sec:toward_band_topology}
 
 % opening paragraph
@@ -204,11 +203,10 @@ The selected subspace then remains separated at every individual $\vec{k}$,
 while its energy range overlaps that of the excluded bands~\cite{fu2007topological}.
 At the corresponding filling, this overlap can produce electron and hole pockets.
 The states below $E_\mathrm{F}$ are consequently not the same fixed-rank subspace at every wave vector.
-We must therefore specify the band count when assigning a topological index to such a subspace.
+We therefore specify the band count when assigning a topological index to such a subspace.
 
 Figure~\ref{fig:band_subspace_and_insulating_gap} compares four schematic one-dimensional cuts through a band structure.
-The model dispersions use arbitrary energy units and a dimensionless periodic coordinate $k$;
-they are not calculated beryllene bands.
+The model dispersions use arbitrary energy units and a dimensionless periodic coordinate $k$.
 The solid blue and teal curves represent the boundary bands $E_{2N_\mathrm{p},\vec{k}}$ and $E_{2N_\mathrm{p}+1,\vec{k}}$, respectively.
 In (d), the dashed blue curve represents $E_{2N_\mathrm{p}-2,\vec{k}}$ for $N_\mathrm{p}\geq2$.
 Each displayed curve represents one member of a degenerate pair;
@@ -232,7 +230,6 @@ and (d) degeneracy within the selected subspace.}
 In figure~\ref{fig:band_subspace_and_insulating_gap}(a), positive direct and indirect gaps permit an insulating filling.
 In (b), the direct separation remains positive despite the indirect energy overlap.
 Both situations permit a smooth fixed-rank projector, provided the direct separation holds over the full two-dimensional Brillouin zone.
-This isolation requires a separate check beyond the illustrated cuts.
 In (c), a band touching closes the separation between the selected and excluded bands.
 In (d), both pairs belong to the selected subspace on either side of the degeneracy.
 The plotted energies remain ordered, so $E_{2N_\mathrm{p}-2,\vec{k}}\leq E_{2N_\mathrm{p},\vec{k}}$ throughout the cut.
@@ -257,7 +254,7 @@ Together, these two symmetries provide the information used in the parity criter
 \subsection{Kramers pairing in the spinful calculation}
 
 Equation~\eqref{KS_spinor_equation_method} supplies the spinor states used in the calculation.
-The two spin components belong to one electronic state; they are not two separate bands.
+The two spin components belong to one electronic state.
 Spin-orbit coupling can mix these components without breaking time-reversal symmetry.
 We therefore retain the full spinor when identifying the time-reversed partner.
 
@@ -293,7 +290,7 @@ the four inequivalent solutions can be represented as:
 \label{four_trim_two_dimensions_topology}
 \end{equation}
 
-To understand why there are only four, we rewrite equation~\eqref{trim_condition_topology} as $2\vec{\Lambda}_i=\vec{G}_i$.
+We count these points by rewriting equation~\eqref{trim_condition_topology} as $2\vec{\Lambda}_i=\vec{G}_i$.
 The two coefficients of $\vec{G}_i$ in the reciprocal basis are integers.
 Increasing either integer by two changes $\vec{\Lambda}_i$ by a full reciprocal-lattice vector,
 so it gives an equivalent wave vector.
@@ -308,9 +305,8 @@ to keep all four points explicit before using any additional rotational symmetry
 Figure~\ref{fig:four_trim_two_dimensions} shows these two Brillouin zones.
 The representatives follow equation~\eqref{four_trim_two_dimensions_topology},
 with reciprocal-lattice translations used where necessary to place them in the displayed zones.
-The diagrams indicate wave-vector locations only; they contain no calculated parity eigenvalues.
-Each colour identifies one inequivalent TRIM and its periodic copies within a panel;
-it does not indicate a parity or a topological class.
+The diagrams indicate wave-vector locations only.
+Each colour identifies one inequivalent TRIM and its periodic copies within a panel.
 
 \begin{figure}[htbp]
 \centering
@@ -322,8 +318,8 @@ Filled points identify inequivalent TRIM; open points mark periodic boundary cop
 
 The boundary copies in figure~\ref{fig:four_trim_two_dimensions} do not provide additional independent factors in the parity product.
 They represent equivalent wave vectors related by a reciprocal-lattice translation.
-Likewise, the corners conventionally denoted by $\mathrm{K}$ in the hexagonal Brillouin zone are not TRIM:
-time reversal exchanges the two inequivalent corners rather than returning either one to itself.
+Likewise, the corners conventionally denoted by $\mathrm{K}$ in the hexagonal Brillouin zone are not TRIM.
+Time reversal exchanges the two inequivalent corners rather than returning either one to itself.
 
 \subsection{Inversion and the parity of a Kramers pair}
 
@@ -374,9 +370,10 @@ Applying inversion twice gives $\xi_n^2\ket{\psi_{n\vec{\Lambda}_i}}=\ket{\psi_{
 so the eigenvalue can only be $+1$ or $-1$.
 The values $+1$ and $-1$ describe even and odd inversion parity, respectively.
 An even state is unchanged under inversion, while an odd state changes sign.
-This sign describes the transformation of the state, not the sign of its probability density, which is unchanged in both cases.
+This sign describes the transformation of the state.
+The probability density is unchanged in both cases.
 Within a degenerate eigenspace, the states can be chosen as simultaneous energy and parity eigenstates.
-An arbitrary numerical basis of that eigenspace need not already have this form.
+An arbitrary numerical basis of that eigenspace can mix these eigenstates.
 
 We can also express the same parity relation using the cell-periodic states.
 Inversion changes the sign in the Bloch factor of equation~\eqref{bloch_hamiltonian_topology}.
@@ -396,7 +393,7 @@ Substituting this factor into equation~\eqref{parity_eigenvalue_topology}, with 
 
 here, the reciprocal-lattice factor returns the inverted state to the chosen representative of the TRIM.
 At $\Gamma$, this factor is unity.
-At a non-zero TRIM, it must be included when extracting the full Bloch-state parity from a cell-periodic representation.
+At a non-zero TRIM, it enters the full Bloch-state parity extracted from a cell-periodic representation.
 Thus the two representations give the same $\xi_n$ when their boundary identification is treated consistently.
 
 We now apply inversion to the time-reversed partner.
@@ -413,19 +410,19 @@ Since inversion commutes with time reversal and $\xi_n$ is real, we obtain:
 \end{equation}
 
 Therefore, the two states of a Kramers pair have the same parity.
-This result determines how parity eigenvalues must be counted in the topological criterion.
+This result determines how parity eigenvalues are counted in the topological criterion.
 Counting both states separately would square every pair contribution and remove the sign information that we need.
 
 \newpage
-\section{From parity eigenvalues to the two-dimensional \texorpdfstring{$Z_2$}{Z2} index}
+\section{From parity eigenvalues to the two-dimensional \texorpdfstring{$\mathbb{Z}_2$}{Z2} index}
 \label{sec:fu_kane_criterion_topology}
 
 % opening paragraph
 We have now established the selected band subspace, its phase freedom, and the pairing imposed by symmetry.
 The remaining question is whether this subspace can change its topological character continuously while preserving time-reversal symmetry and its separation from the excluded bands.
-The two-dimensional $Z_2$ index distinguishes two possibilities for this spinful band problem~\cite{kane2005z2}.
+The two-dimensional $\mathbb{Z}_2$ index distinguishes two possibilities for this spinful band problem~\cite{kane2005z2}.
 Inversion symmetry then allows us to evaluate that index using the parity information at the four TRIM.
-Time reversal is the symmetry that protects this $Z_2$ classification;
+Time reversal is the symmetry that protects this $\mathbb{Z}_2$ classification;
 inversion supplies the simpler route for evaluating it.
 If inversion is removed along a continuous change that preserves time reversal and the band separation,
 the index remains unchanged, although the parity criterion is no longer available.
@@ -435,7 +432,7 @@ the index remains unchanged, although the parity criterion is no longer availabl
 We first consider a continuous change of the hamiltonian,
 such as a change in bond geometry or in the strength of spin-orbit coupling.
 As long as the selected subspace remains isolated and time-reversal symmetry is preserved,
-its $Z_2$ index cannot change.
+its $\mathbb{Z}_2$ index cannot change.
 We denote the two possible values by $\nu=0$ and $\nu=1$.
 The former is trivial with respect to this index, while the latter is non-trivial.
 
@@ -446,16 +443,15 @@ Here, a local choice covers only a neighbourhood of one wave vector.
 A global choice must join these local choices over the whole Brillouin zone, including its identified boundaries,
 while preserving the relation between each state and its time-reversed partner.
 For $\nu=1$, this time-reversal-compatible choice is obstructed.
-This does not mean that the projector itself is discontinuous,
-or that all smooth choices of basis are forbidden.
+The projector itself remains continuous, and smooth choices of basis still exist.
 The constraint comes from requiring the basis to satisfy the time-reversal pairing as well as the global continuity conditions~\cite{kane2005z2}.
 
 For an insulating filling, this distinction has a physical consequence at an interface with a topologically trivial insulator.
 Within the non-interacting description and with time-reversal symmetry preserved at the boundary,
 the non-trivial phase supports an odd number of Kramers pairs of edge modes connecting the bulk bands~\cite{kane2005z2}.
-These edge states are helical:
-time-reversed partners propagate in opposite directions and have opposite spin expectation values.
-This relation does not require a conserved spin component.
+These edge states are helical.
+Time-reversed partners propagate in opposite directions and have opposite spin expectation values.
+This relation holds even when spin-orbit coupling mixes the spin components.
 
 For a single pair, we consider a static one-electron perturbation $\hat{V}$ that is Hermitian and preserves time reversal.
 The antiunitary relation used in equation~\eqref{kramers_orthogonality_topology} of appendix~\ref{cha:appendix_topology} gives:
@@ -470,10 +466,10 @@ The antiunitary relation used in equation~\eqref{kramers_orthogonality_topology}
 
 here, $\ket{\psi}$ and $\hat{\Theta}\ket{\psi}$ are the two time-reversed edge states.
 Thus this perturbation cannot produce elastic backscattering between the partners~\cite{kane2005z2}.
-The statement concerns a single edge within the one-electron description;
-it does not establish dissipationless transport in the presence of bulk conduction or inelastic processes.
-For a metallic filling, the same insulating-edge interpretation cannot be inferred from a parity sign alone,
-because bulk states can remain at the Fermi level.
+The statement concerns a single edge within the one-electron description.
+Bulk conduction and inelastic processes can still dissipate the current.
+For a metallic filling, bulk states can remain at the Fermi level,
+so the insulating-edge interpretation requires more than the parity sign.
 
 \subsection{The Fu--Kane parity product}
 
@@ -488,8 +484,8 @@ For each TRIM $\vec{\Lambda}_i$, we first multiply one parity eigenvalue from ea
 
 here, the indices $(2m-1,2m)$ label two states related by time reversal within the $m$th Kramers pair.
 Their equal parity follows from equation~\eqref{equal_parity_kramers_pair_topology}.
-If several pairs share the same energy, we resolve inversion within that eigenspace and pair its states by time reversal;
-energy ordering alone does not specify these partners.
+If several pairs share the same energy, we resolve inversion within that eigenspace and pair its states by time reversal,
+as the energy ordering leaves these partners open.
 The subspace contains $2N_\mathrm{p}$ spinor states, but the product contains $N_\mathrm{p}$ factors.
 The use of $2m$ selects one representative from each pair.
 
@@ -514,20 +510,19 @@ We then count how many of the four TRIM have a negative product.
 For example, if $(\delta_1,\delta_2,\delta_3,\delta_4)=(-1,+1,+1,+1)$,
 the total product is $-1$ and $\nu=1$.
 If a second product changes from $+1$ to $-1$, the total becomes $+1$ and $\nu=0$.
-These illustrative signs show why the index records an even or odd count;
-they are not parity results for a particular material.
+These illustrative signs show that the index records an even or odd count.
 
 The equality of the two parities in each pair explains the counting in equation~\eqref{parity_product_at_trim_topology}.
-Identifying the four-point product with $(-1)^\nu$ is an additional topological result, not a consequence of degeneracy counting.
+Identifying the four-point product with $(-1)^\nu$ is an additional topological result.
 Fu and Kane derive this identification from the symmetry transformation of the Bloch basis~\cite[sections II and III]{fu2007topological}.
-The criterion evaluates the global time-reversal obstruction;
-it does not equate an arbitrary-loop single-band Berry phase with $\mathrm{\pi}\nu$.
+The criterion evaluates the global time-reversal obstruction,
+which is distinct from a single-band Berry phase on an arbitrary loop.
 
 The result also explains why the parity of a single state or the ordering at one wave vector is insufficient.
 Every selected Kramers pair contributes at each of the four TRIM.
 If one selected pair exchanges with an excluded pair of opposite parity at a TRIM,
 that exchange changes the local product when the gap reopens.
-An odd number of such sign changes changes the global product,
+An odd number of such sign changes alters the global product,
 whereas an even number leaves it unchanged.
 If inversion is preserved throughout the exchange, the separation between the two subspaces must close at that TRIM.
 An exchange wholly within the selected subspace instead preserves the product because neither pair leaves the count.
@@ -545,7 +540,7 @@ the general product is:
 \end{equation}
 
 If crystal symmetry relates the three $\mathrm{M}$ points with equal parity products in the chosen inversion convention,
-we can set $\delta_{\mathrm{M}_1}=\delta_{\mathrm{M}_2}=\delta_{\mathrm{M}_3}=\delta_\mathrm{M}$.
+we can stipulate $\delta_{\mathrm{M}_1}=\delta_{\mathrm{M}_2}=\delta_{\mathrm{M}_3}=\delta_\mathrm{M}$.
 The product then reduces to $\delta_\Gamma(\delta_\mathrm{M})^3=\delta_\Gamma\delta_\mathrm{M}$.
 
 For the square Brillouin zone in figure~\ref{fig:four_trim_two_dimensions}(b),
@@ -562,22 +557,21 @@ then $\delta_\mathrm{X}\delta_\mathrm{Y}=(\delta_\mathrm{X})^2=1$,
 and the same reduced expression follows.
 A fourfold rotation about the chosen inversion centre can give this equality;
 the two symmetry-equivalent representatives may then both be called $\mathrm{X}$ points.
-The equality of the final expressions does not make the two Brillouin zones equivalent.
-It results from different symmetry relations among their four TRIM.
+The equality of the final expressions results from different symmetry relations among their four TRIM,
+and the two Brillouin zones remain inequivalent.
 
 We therefore retain all four factors in equation~\eqref{fu_kane_index_topology} until the symmetry of the calculated structure
 and the inversion convention establish these equalities.
-A high-symmetry path alone does not justify the reduction.
+The reduction follows from these symmetries, whatever high-symmetry path is plotted.
 
 \newpage
 \section{From the parity criterion to the calculation}
 \label{sec:interpreting_topology_calculation}
 
 % opening paragraph
-The previous section connected the parity eigenvalues to the $Z_2$ index.
+The previous section connected the parity eigenvalues to the $\mathbb{Z}_2$ index.
 We now return to the first-principles setting introduced in subsection~\ref{subsec:method_topology}.
-The calculation must supply the same ingredients used in that connection:
-a specified spinor hamiltonian, the relevant symmetries, an isolated band subspace, and the parity of its Kramers pairs.
+The calculation must supply the same ingredients used in that connection, namely a specified spinor hamiltonian, the relevant symmetries, an isolated band subspace, and the parity of its Kramers pairs.
 The interpretation then follows from the relation between that subspace and the Fermi level.
 
 \subsection{Identifying the states used in the product}
@@ -586,8 +580,8 @@ We first determine the crystal symmetry and the reciprocal lattice of the relaxe
 These determine the inversion operation and the four TRIM.
 For the spinful classification used here, the electronic states are calculated with spin-orbit coupling,
 and the reference state must preserve time-reversal symmetry.
-The small atomic number of an element does not justify omitting spin-orbit coupling from this step:
-a small coupling may still affect a band crossing or a small separation relevant to the selected subspace.
+We retain spin-orbit coupling even for a light element,
+since a small coupling may still affect a band crossing or a small separation relevant to the selected subspace.
 
 We then select the fixed number $2N_\mathrm{p}$ of bands and examine
 $\Delta_\mathrm{dir}(\vec{k}\,)$ from equation~\eqref{minimum_direct_gap_topology}.
@@ -596,30 +590,29 @@ where $N_\mathrm{occ}$ counts occupied spinor bands rather than Kramers pairs.
 In this insulating case, equations~\eqref{parity_product_at_trim_topology} and~\eqref{fu_kane_index_topology}
 have the occupied-band counting used in equations~\eqref{eq:proj3_parity_product} and~\eqref{eq:proj3_z2_index} of chapter~\ref{cha:project_beryllene}.
 For a metal, the number of states below $E_\mathrm{F}$ can change with $\vec{k}$,
-so the phrase ``occupied bands'' alone does not identify the subspace.
+so the phrase ``occupied bands'' leaves the subspace ambiguous.
 Numerical smearing of the occupations also does not define a fixed-rank projector.
-The band count must instead refer to the selected spectral subspace at every wave vector.
+The band count instead refers to the selected spectral subspace at every wave vector.
 
 The direct separation has to be checked over the two-dimensional Brillouin zone.
-Its positivity at the four TRIM or along a plotted high-symmetry path does not establish the condition throughout that zone.
+Its positivity at the four TRIM or along a plotted high-symmetry path covers only part of that zone.
 In practice, a converged two-dimensional sampling, with refinement near the smallest separations,
 provides evidence for the gap condition within the numerical accuracy of the calculation.
-If interpolation is used, its accuracy near those separations must be checked against direct calculations.
-A near-zero separation requires particular care because an unresolved touching point changes whether the chosen spectral subspace is isolated.
+If interpolation is used, direct calculations near those separations verify its accuracy.
+A near-zero separation is refined further, because an unresolved touching point changes whether the chosen spectral subspace is isolated.
 
 At each TRIM, the parity eigenvalues can be obtained from the symmetry representation of the spinor states.
-The \texttt{irvsp} method used in chapter~\ref{cha:project_beryllene}
-extracts such symmetry information from VASP wave functions~\cite{gao2021irvsp}.
+The \texttt{IrRep} code used in chapter~\ref{cha:project_beryllene}
+extracts such symmetry information from VASP wave functions~\cite{iraola2022irrep}.
 Equation~\eqref{cell_periodic_parity_topology} explains the reciprocal-lattice identification required by a cell-periodic representation.
-For a degenerate group, the inversion representation must be resolved within that group,
-so an arbitrary numerical mixture is not mistaken for a parity eigenstate.
+For a degenerate group, we resolve the inversion representation within that group,
+which separates the parity eigenstates from an arbitrary numerical mixture.
 We then identify complete Kramers pairs, count one parity from each pair,
 and evaluate the four factors in equation~\eqref{parity_product_at_trim_topology}.
 
 \subsection{Interpreting the resulting index}
 
-A parity product alone does not establish a $Z_2$ invariant if the selected spectral subspace has not been shown to be isolated.
-Once its isolation and symmetries have been established, the parity criterion classifies this subspace.
+Once the isolation and symmetries of the selected spectral subspace have been established, the parity criterion classifies this subspace.
 We then compare its energy range with the physical Fermi level.
 If equation~\eqref{insulating_fermi_level_topology} holds,
 the subspace is the occupied space of a band insulator,
@@ -632,7 +625,7 @@ Thus the topological index and the metallic character describe different aspects
 as illustrated in figure~\ref{fig:band_subspace_and_insulating_gap}(b).
 If the selected and excluded bands touch,
 the isolation condition used throughout this chapter is absent,
-and this fixed-rank spectral-subspace argument cannot be applied without further justification.
+and applying this fixed-rank spectral-subspace argument requires further justification.
 
 This distinction also clarifies the relation to the optical analysis.
 The independent-particle response in equation~\eqref{independent_particle_imaginary_dielectric_tensor}
