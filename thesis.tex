@@ -59,6 +59,15 @@
 \usepackage{etoolbox}
 \usepackage{multirow}
 \usepackage{lmodern}
+%% monospace font: style/photonicocode.ttf (Photonico Code), metrics in style/photonicocode-t1.tfm
+\pdfmapline{+photonicocode-t1 <style/T1-WGL4.enc <style/photonicocode.ttf}
+\DeclareFontFamily{T1}{photonicocode}{\hyphenchar\font=-1}
+\DeclareFontShape{T1}{photonicocode}{m}{n}{<-> style/photonicocode-t1}{}
+\DeclareFontShape{T1}{photonicocode}{m}{it}{<-> style/photonicocode-t1}{}
+\DeclareFontShape{T1}{photonicocode}{m}{sl}{<-> style/photonicocode-t1}{}
+\DeclareFontShape{T1}{photonicocode}{b}{n}{<-> style/photonicocode-t1}{}
+\DeclareFontShape{T1}{photonicocode}{bx}{n}{<-> style/photonicocode-t1}{}
+\renewcommand{\ttdefault}{photonicocode}
 \usepackage{siunitx}
 \usepackage{placeins}
 \usepackage{adjustbox}
