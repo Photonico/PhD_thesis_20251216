@@ -1,6 +1,13 @@
 \chapter[Topological and Optical Properties of Beryllene Phases]{Emergent Topological and Optical Properties in\\ Pristine and Hydrogen-Functionalized\\ Two-Dimensional Beryllium Phases}
 \label{cha:project_beryllene}
 
+This chapter is based on the manuscript by L.~Niu, O.~J.~Conquest, H.~Ma, C.~Verdi, and C.~Stampfl~\cite{niu2026emergent}.
+The candidate carried out the calculations, data analysis, and visualization.
+Catherine Stampfl supervised the project.
+Oliver James Conquest provided detailed guidance on the calculations,
+and Hongyang Ma guided the superconductivity calculations.
+Carla Verdi performed the validation.
+
 \section{Abstract}
 \label{3_abstract}
 
@@ -96,7 +103,7 @@ while electrical measurements demonstrated intrinsic metallic conductivity.
 
 Subsequent theoretical investigations have examined thermal transport in hexagonal monolayer beryllene.
 Using first-principles phonon calculations combined with the Boltzmann transport equation,
-Chowdhury and Mogurampelly predicted an exceptionally high in-plane lattice thermal conductivity of approximately \qty{270}{\watt\per\metre\per\kelvin} at room temperature,
+Chowdhury and Mogurampelly predicted an in-plane lattice thermal conductivity of approximately \qty{270}{\watt\per\metre\per\kelvin} at room temperature,
 which exceeds that of bulk beryllium~\cite{chowdhury2024unusual}.
 This enhancement was attributed to suppressed phonon-phonon scattering and the dominant contribution of long-wavelength flexural phonons,
 a feature rarely observed in atomically thin metallic systems.
@@ -281,12 +288,12 @@ the parity product of the lowest $N$ spinor bands is given by:
 \begin{equation}
     \delta_i =
     \prod_{m=1}^{N/2}
-    \xi_{2m}(\vec{\Lambda}_i)
+    \xi_{2m}(\vec{\Lambda}_i\,)
 \label{eq:proj3_parity_product}
 \end{equation}
 
 here,
-$\xi_{2m}(\vec{\Lambda}_i)=\pm1$ is the parity eigenvalue of one state in the $m$th Kramers pair at $\vec{\Lambda}_i$,
+$\xi_{2m}(\vec{\Lambda}_i\,)=\pm1$ is the parity eigenvalue of one state in the $m$th Kramers pair at $\vec{\Lambda}_i$,
 and $N$ is the number of spinor bands in the selected subspace.
 Thus, $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
 The $\mathbb{Z}_2$ index is then obtained from the Fu--Kane product over the four time-reversal invariant momenta of the two-dimensional Brillouin zone,
@@ -313,7 +320,7 @@ written through the interface between VASP and \texttt{Wannier90}~\cite{pizzi202
 The Wilson loops are refined until the convergence checks of \texttt{Z2Pack} are passed.
 For the metallic structures,
 the lowest $N$ bands are not completely filled.
-We therefore check the isolation of this subspace with the direct gap $E_{N+1}(\vec{k})-E_{N}(\vec{k})$ on the $105 \times 105$ mesh,
+We therefore check the isolation of this subspace with the direct gap $E_{N+1}(\vec{k}\,)-E_{N}(\vec{k}\,)$ on the $105 \times 105$ mesh,
 along the band paths,
 and on locally refined meshes around each minimum.
 The time-reversal symmetry assumed in this analysis is checked with spin-polarized calculations started from ferromagnetic and antiferromagnetic configurations.
@@ -335,7 +342,7 @@ The plane-wave cutoffs are \qty{80}{Ry} and \qty{640}{Ry} for the wave functions
 and the Marzari--Vanderbilt smearing is \qty{0.02}{Ry}~\cite{marzari1999thermal}.
 We also use a two-dimensional Coulomb cutoff~\cite{sohier2017density},
 along with a vacuum of about \qty{15}{\angstrom} or larger.
-The k-point meshes are $56 \times 56 \times 1$, $52 \times 52 \times 1$, $46 \times 46 \times 1$, and $57 \times 52 \times 1$ for trilayer cubic beryllene,
+The k-point meshes are $56 \times 56 \times 1$, $52 \times 52 \times 1$, $46 \times 46 \times 1$, and $52 \times 57 \times 1$ for trilayer cubic beryllene,
 2H-$\alpha$-beryllene,
 2H-$\beta$-beryllene,
 and 1H-$\beta$-beryllene,
@@ -833,7 +840,7 @@ the structures considered here are metallic,
 so the lowest $N$ bands are not completely filled.
 In this case,
 $\nu$ is defined for the subspace of the lowest $N$ bands only if this subspace is separated from band $N+1$ by a direct gap,
-$E_{N+1}(\vec{k})-E_{N}(\vec{k})>0$,
+$E_{N+1}(\vec{k}\,)-E_{N}(\vec{k}\,)>0$,
 at every $\vec{k}$ in the Brillouin zone.
 The index then describes a band inversion within this subspace,
 while the states at the Fermi level remain metallic.
@@ -1006,10 +1013,6 @@ the parity eigenvalues of the centrosymmetric structures and the Wilson loops gi
 2H-$\alpha$-beryllene,
 2H-$\beta$-beryllene,
 and 1H-$\beta$-beryllene.
-For trilayer cubic beryllene,
-2H-$\alpha$-beryllene,
-and 2H-$\beta$-beryllene,
-the Wilson loop calculation is consistent with the parity calculation.
 In trilayer cubic beryllene,
 the Wannier charge centres switch partners once along the Wilson loop.
 The band structures with the lowest-$N$ subspaces are shown in figures~\ref{fig:proj3_topology_bands_pristine} and~\ref{fig:proj3_topology_bands_hydrogenated}.
@@ -1057,21 +1060,21 @@ and 1H-$\beta$-beryllene.
 The main superconducting characteristics are listed in table~\ref{tab:proj3_superconductivity} and presented in figure~\ref{fig:proj3_superconducting_gap}.
 For trilayer cubic beryllene,
 the analysis gives $\lambda=0.46$,
-Allen--Dynes $T_\mathrm{c}^{\mathrm{AD}}=\qty{2.0}{\kelvin}$,
+Allen--Dynes $T_\mathrm{c}^{\mathrm{AD}}=\qty{2.0}{\kelvin}$ for $\mu^*=0.13$,
 and isotropic Migdal--Eliashberg $T_\mathrm{c}^{\mathrm{iso}}=\qty{3.7}{\kelvin}$.
 Trilayer cubic beryllene is therefore predicted to be a weak-coupling superconductor with a $T_\mathrm{c}$ of a few kelvin.
 The electron-phonon coupling strength $\lambda$ in the case of 2H-$\beta$-beryllene is 1.40,
 and the Allen--Dynes superconducting transition temperature is $T_\mathrm{c}^{\mathrm{AD}}=\qty{21.9}{\kelvin}$ for $\mu^*=0.13$.
 The solution of the isotropic Migdal--Eliashberg equations gives a larger $T_\mathrm{c}^{\mathrm{iso}}$ of \qty{28.3}{\kelvin},
 with $2\Delta_0/\kB T_\mathrm{c}=4.28$,
-which is above the BCS value of 3.53~\cite{bardeen1957theory},
+which is above the Bardeen--Cooper--Schrieffer value of 3.53~\cite{bardeen1957theory},
 as shown in figure~\ref{fig:proj3_superconducting_gap}(c).
 Therefore, 2H-$\beta$-beryllene is predicted to be a strong-coupling superconductor with the highest $T_\mathrm{c}$ among all cases examined.
 In the case of the anisotropic solution,
 the superconducting gap of 2H-$\beta$-beryllene approaches a finite value at \qtyrange{29}{31}{\kelvin},
 while at \qty{32}{\kelvin} and above,
 it exponentially tends to zero,
-as shown in figure~\ref{fig:proj3_superconducting_gap}(d).
+as shown in figures~\ref{fig:proj3_superconducting_gap}(c) and~(d).
 Thus, the anisotropic transition temperature $T_\mathrm{c}$ falls into the range from \qty{31}{\kelvin} to \qty{32}{\kelvin} and is estimated to be \qty{31.7}{\kelvin}.
 These electron-phonon calculations use harmonic phonons,
 whereas the soft mode of 2H-$\beta$-beryllene is anharmonic,
@@ -1104,7 +1107,7 @@ Therefore, the gap anisotropy increases $T_\mathrm{c}$ by about \qtyrange{2.5}{2
 \rowcolor{gray!25}
 structure
 & $\lambda$
-& $\omega_\mathrm{log}$ (meV)
+& $\hbar\omega_\mathrm{log}$ (meV)
 & $T_\mathrm{c}^{\mathrm{AD}}$ (K)
 & $T_\mathrm{c}^{\mathrm{iso}}$ (K)
 & $\Delta_0$ (meV)
@@ -1136,7 +1139,7 @@ and $\mu^*=0.13$ is used for the Migdal--Eliashberg calculations.}
 \caption{Superconducting gap.
 (a) Gap at the first Matsubara frequency, $\Delta(\mathrm{i}\omega_1)$, as a function of temperature,
 with $\omega_1=\mathrm{\pi}\kB T/\hbar$.
-Circles and squares represent isotropic Migdal--Eliashberg solutions,
+Circles and squares represent the isotropic Migdal--Eliashberg solutions of 1H-$\beta$-beryllene and trilayer cubic beryllene, respectively,
 while lines correspond to fits with $\Delta_0\tanh\left[1.74\left(T_\mathrm{c}/T-1\right)^{1/2}\right]$.
 Open diamonds show the anisotropic gaps below $T_\mathrm{c}$,
 and the shaded band marks the anisotropic $T_\mathrm{c}$.
@@ -1426,6 +1429,12 @@ Trilayer cubic beryllene absorbs more strongly than bulk bcc beryllium only in s
 and hydrogen adsorption enhances some components while reducing others.
 These comparisons use the Cartesian diagonal dielectric components and exclude a Drude intraband contribution.
 
+Parity analysis of the spin-orbit-coupled electronic states confirms the previously reported non-trivial topology of $\alpha$-beryllene and the trivial topology of $\beta$-beryllene.
+Trilayer cubic beryllene also has a non-trivial $\mathbb{Z}_2$ index,
+whereas all hydrogen-functionalized structures are trivial.
+As the non-trivial subspaces of these metallic phases are isolated only by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} above the Fermi level,
+these indices are conditional screening results for band inversions.
+
 In addition to the earlier predictions for $\alpha$- and $\beta$-beryllene~\cite{li2023coexistence},
 electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene.
 Trilayer cubic beryllene is a weak-coupling superconductor with $T_\mathrm{c}^{\mathrm{iso}}=\qty{3.7}{\kelvin}$.
@@ -1433,11 +1442,6 @@ Trilayer cubic beryllene is a weak-coupling superconductor with $T_\mathrm{c}^{\
 and the highest transition temperatures, \qty{28.3}{\kelvin} from the isotropic and approximately \qty{31.7}{\kelvin} from the anisotropic Migdal--Eliashberg equations.
 For 1H-$\beta$-beryllene, the gap anisotropy raises $T_\mathrm{c}$ from \qty{11.6}{\kelvin} to approximately \qty{14.2}{\kelvin}.
 
-Parity analysis of the spin-orbit-coupled electronic states confirms the previously reported non-trivial topology of $\alpha$-beryllene and the trivial topology of $\beta$-beryllene.
-Trilayer cubic beryllene also has a non-trivial $\mathbb{Z}_2$ index,
-whereas all hydrogen-functionalized structures are trivial.
-As the non-trivial subspaces of these metallic phases are isolated only by spin-orbit gaps of approximately \qty{1}{\milli\electronvolt} above the Fermi level,
-these indices are conditional screening results for band inversions.
 Together,
 these results identify two-dimensional beryllium as an elemental platform,
 where structural design and hydrogen functionalization tune the electronic structure,
