@@ -156,6 +156,20 @@
 \definecolor{dark_violet}{HTML}{8C3CA5}
 \definecolor{dark_emerald}{HTML}{009687}
 
+%% \hexcolor{#5073c8}{text}: same as \textcolor[HTML]{5073c8}{text}; the # is optional
+%% (omit the # inside section titles and captions)
+\ExplSyntaxOn
+\str_new:N \l__lu_hex_str
+\NewDocumentCommand{\hexcolor}{m}
+  {
+    \str_set:Nn \l__lu_hex_str {#1}
+    \exp_args:NNV \str_remove_all:Nn \l__lu_hex_str \c_hash_str
+    \str_remove_all:Nn \l__lu_hex_str { ~ }
+    \exp_args:NV \__lu_hexcolor:n \l__lu_hex_str
+  }
+\cs_new_protected:Npn \__lu_hexcolor:n #1 { \textcolor[HTML]{#1} }
+\ExplSyntaxOff
+
 %%%% Hyperlink configurations
 \hypersetup{
     pdfauthor = {\myname},
