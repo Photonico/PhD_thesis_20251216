@@ -180,7 +180,7 @@ Finally, section~\ref{2_conclusions} gives the conclusions.
 \section{Computation methods}
 \label{2_methods}
 
-The density functional theory calculations are performed using the Vienna Ab initio Simulation Package, VASP~\cite{kresse1993ab,kresse1994ab,kresse1996efficiency,kresse1996efficient}.
+The density functional theory calculations are performed using the Vienna Ab initio Simulation Package, \texttt{VASP}~\cite{kresse1993ab,kresse1994ab,kresse1996efficiency,kresse1996efficient}.
 The projector augmented wave method is used to describe the electron-ion interactions~\cite{kresse1999ultrasoft}.
 The generalized gradient approximation of Perdew--Burke--Ernzerhof is employed for the exchange-correlation functional~\cite{perdew1996generalized},
 along with the D3 dispersion correction with Becke--Johnson damping to account for long-range van der Waals interactions~\cite{becke2005density,grimme2010consistent,grimme2011effect}.
@@ -262,7 +262,7 @@ is examined from the phonon-dispersion curves using the finite-difference method
 The main phonon dispersions are calculated using $(3\times3)$ supercells.
 The comparison with $(2\times2)$ supercells is included in figures~\ref{S2.8} and~\ref{S2.9}.
 For the hydrogen-terminated bilayer,
-\textit{ab initio} molecular dynamics calculations are also carried out using VASP in the NVT ensemble at \qty{400}{K}.
+\textit{ab initio} molecular dynamics calculations are also carried out using \texttt{VASP} in the NVT ensemble at \qty{400}{K}.
 A Nosé--Hoover thermostat, a time step of \qty{1}{fs},
 and a $2\times2$ supercell containing 112 boron and 16 hydrogen atoms are used.
 The trajectory extends over \qty{5.5}{ps}, as shown in figure~\ref{S2.10}.
@@ -270,7 +270,7 @@ The trajectory extends over \qty{5.5}{ps}, as shown in figure~\ref{S2.10}.
 The superconducting behaviour of o-\ce{B14} is investigated systematically in three structural phases,
 namely bulk, monolayer, and hydrogen-terminated bilayer.
 Calculations are carried out using the Perdew--Burke--Ernzerhof formulation of the generalized gradient approximation~\cite{perdew1996generalized},
-as provided in Quantum ESPRESSO~\cite{giannozzi2009quantum}.
+as provided in \texttt{Quantum ESPRESSO}~\cite{giannozzi2009quantum}.
 Norm-conserving pseudopotentials and a kinetic energy cutoff of $45$~Ry are chosen~\cite{hamann2013optimized},
 and a vacuum spacing of \qty{15}{\angstrom} is added for the two-dimensional systems to suppress spurious periodic interactions.
 Monkhorst--Pack k-point meshes of $9 \times 12 \times 8$ for the bulk,
@@ -282,17 +282,17 @@ $5 \times 5 \times 1$, and $3 \times 3 \times 1$, respectively~\cite{baroni2001p
 Atomic positions and lattice parameters are relaxed until residual forces are below $1\times10^{-5}$~Ry/bohr,
 corresponding to \qty{2.6e-4}{\electronvolt\per\angstrom}.
 
-Maximally localized Wannier functions are constructed in Wannier90 by initializing projections on boron $s$ and $p$ orbitals~\cite{pizzi2020wannier90}.
+Maximally localized Wannier functions are constructed in \texttt{Wannier90} by initializing projections on boron $s$ and $p$ orbitals~\cite{pizzi2020wannier90}.
 Uniform k-point meshes of $6 \times 8 \times 6$ for the bulk and $6 \times 6 \times 1$ for the monolayer and bilayer are used in Wannier interpolation.
 The localized representation is used to interpolate both the electronic states and the electron-phonon matrix elements,
 as defined in equation~\eqref{electron_phonon_matrix_element_method}.
 The Fermi-surface average of the squared matrix elements, resolved by phonon frequency,
 gives the Eliashberg spectral function $\alpha^2F(\omega)$,
 from which $\lambda$ and $\omega_\mathrm{log}$ follow through equation~\eqref{electron_phonon_spectral_moments}.
-Superconductivity is subsequently analysed using the EPW code~\cite{giannozzi2009quantum,giannozzi2020quantum,giannozzi2017advanced,ponce2016epw},
+Superconductivity is subsequently analysed using the \texttt{EPW} code~\cite{giannozzi2009quantum,giannozzi2020quantum,giannozzi2017advanced,ponce2016epw},
 which is employed to evaluate the electron-phonon coupling strength and estimate the Allen--Dynes transition temperatures, $T_\mathrm{c}$~\cite{margine2013anisotropic}.
 The superconducting properties are also obtained by solving the fully anisotropic Migdal--Eliashberg equations~\cite{bardeen1955electron,giustino2017electron,margine2013anisotropic},
-as implemented in the EPW code.
+as implemented in the \texttt{EPW} code.
 In this treatment, $T_\mathrm{c}$ is obtained from the disappearance of the superconducting gap upon increasing temperature;
 it is a separate estimate from the Allen--Dynes result.
 The Morel--Anderson pseudopotential $\mu^{*}$ is chosen to be $0.13$,
@@ -302,7 +302,7 @@ With this choice,
 the calculated electron-phonon coupling strengths, $\lambda$, and $T_\mathrm{c}$ indicate clear dimensionality effects,
 as discussed in section~\ref{2_superconducting}.
 
-For the calculation of the optical properties within VASP,
+For the calculation of the optical properties within \texttt{VASP},
 in particular the frequency-dependent dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$,
 the k-point meshes of $20 \times 28 \times 18$ and $20 \times 18 \times 1$ are found to yield converged results for the bulk and two-dimensional systems,
 respectively, as shown in figure~\ref{S2.4}.
@@ -546,7 +546,7 @@ These small imaginary frequencies may be sensitive to the numerical treatment of
 but their numerical origin has not been established by the present calculations.
 Based on these results,
 the hydrogen-terminated monolayer is not considered further.
-Using \textit{ab initio} molecular dynamics calculations at a temperature of \qty{400}{K} within VASP,
+Using \textit{ab initio} molecular dynamics calculations at a temperature of \qty{400}{K} within \texttt{VASP},
 the hydrogen-terminated bilayer retains its bonding framework over the \qty{5.5}{ps} trajectory,
 as shown in figure~\ref{S2.10}.
 This supports thermal persistence on the simulated time scale.
@@ -673,11 +673,11 @@ the monolayer,
 and the hydrogen-terminated bilayer are investigated.
 The pristine bilayer is not included in these superconductivity calculations;
 its HSE06 band structure is semiconducting.
-We first confirm that the atomic relaxation obtained using Quantum ESPRESSO yields very similar results to those obtained using VASP.
+We first confirm that the atomic relaxation obtained using \texttt{Quantum ESPRESSO} yields very similar results to those obtained using \texttt{VASP}.
 For the hydrogen-terminated bilayer,
-the lattice constants $a$ and $b$ are \qty{5.66}{\angstrom} and \qty{6.12}{\angstrom} from Quantum ESPRESSO,
-compared with \qty{5.68}{\angstrom} and \qty{6.14}{\angstrom} from VASP.
-The interlayer distance is \qty{4.13}{\angstrom} from Quantum ESPRESSO and \qty{4.11}{\angstrom} from VASP,
+the lattice constants $a$ and $b$ are \qty{5.66}{\angstrom} and \qty{6.12}{\angstrom} from \texttt{Quantum ESPRESSO},
+compared with \qty{5.68}{\angstrom} and \qty{6.14}{\angstrom} from \texttt{VASP}.
+The interlayer distance is \qty{4.13}{\angstrom} from \texttt{Quantum ESPRESSO} and \qty{4.11}{\angstrom} from \texttt{VASP},
 while the H-B distance is \qty{1.19}{\angstrom} in both cases.
 
 For the bulk phase,

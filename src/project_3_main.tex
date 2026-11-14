@@ -168,7 +168,7 @@ together with anisotropic dielectric and energy-loss spectra and a redistributio
 \label{3_methods}
 
 The density functional theory calculations are performed using the Vienna Ab initio Simulation Package,
-VASP~\cite{kresse1993ab,kresse1994ab,kresse1996efficiency,kresse1996efficient}.
+\texttt{VASP}~\cite{kresse1993ab,kresse1994ab,kresse1996efficiency,kresse1996efficient}.
 We use the projector augmented wave method to describe the electron-ion interactions~\cite{kresse1999ultrasoft}.
 The generalized gradient approximation of Perdew--Burke--Ernzerhof is employed for the exchange-correlation functional~\cite{perdew1996generalized}.
 The structural relaxations,
@@ -317,7 +317,7 @@ For 1H-$\beta$-beryllene,
 which has no inversion symmetry,
 $\nu$ is obtained from the evolution of the Wannier charge centres on 23 Wilson loops across half of the Brillouin zone~\cite{soluyanov2011computing,gresch2017z2pack}.
 We calculate the Wannier charge centres with \texttt{Z2Pack} from the overlaps of the spin-orbit-coupled wave functions,
-written through the interface between VASP and \texttt{Wannier90}~\cite{pizzi2020wannier90}.
+written through the interface between \texttt{VASP} and \texttt{Wannier90}~\cite{pizzi2020wannier90}.
 The Wilson loops are refined until the convergence checks of \texttt{Z2Pack} are passed.
 For the metallic structures,
 the lowest $N$ bands are not completely filled.
@@ -336,7 +336,7 @@ and the spin-orbit splittings of Be and H are approximately \qty{1}{\milli\elect
 We therefore compare the parities of the spinless states at the time-reversal invariant momenta directly with those of the Kramers pairs.
 The HSE06 band structure of 2H-$\alpha$-beryllene is calculated at 71 points along the $\Gamma$--$\mathrm{K}$--$\mathrm{M}$--$\Gamma$ path and at 9 points around each PBE band edge.
 
-The Quantum ESPRESSO calculations~\cite{giannozzi2017advanced,giannozzi2009quantum} are performed on the structures relaxed with the PBE functional.
+The \texttt{Quantum ESPRESSO} calculations~\cite{giannozzi2017advanced,giannozzi2009quantum} are performed on the structures relaxed with the PBE functional.
 We use optimized norm-conserving Vanderbilt pseudopotentials~\cite{hamann2013optimized},
 where the Be $1s$ states are considered to be valence states.
 The plane-wave cutoffs are \qty{80}{Ry} and \qty{640}{Ry} for the wave functions and charge density, respectively,
@@ -359,7 +359,7 @@ based on Wannier function models generated with \texttt{Wannier90}~\cite{pizzi20
 Phonons of trilayer cubic beryllene,
 2H-$\beta$-beryllene,
 and 1H-$\beta$-beryllene are computed using density functional perturbation theory~\cite{baroni2001phonons} on a $12 \times 12 \times 1$ q-point mesh,
-and electron-phonon coupling is calculated using EPW~\cite{lee2023electron,giustino2007electron}.
+and electron-phonon coupling is calculated using \texttt{EPW}~\cite{lee2023electron,giustino2007electron}.
 Electronic states and phonon perturbations are Wannier-interpolated from coarse $24 \times 24 \times 1$ k-point and $12 \times 12 \times 1$ q-point meshes to $80 \times 80 \times 1$ fine meshes,
 and the convergence is checked using $40 \times 40 \times 1$ fine meshes.
 Electronic and phonon smearings are set to \qty{0.15}{\electronvolt} and \qty{0.5}{\milli\electronvolt}, respectively,
@@ -378,7 +378,7 @@ and above $T_\mathrm{c}$ if the gap exponentially decreases with increasing numb
 Finally, $T_\mathrm{c}$ is estimated from the extrapolation of the limiting gaps below $T_\mathrm{c}$ and the decay rates above $T_\mathrm{c}$.
 
 For the optical calculations,
-we calculate the frequency-dependent dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ within VASP.
+we calculate the frequency-dependent dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ within \texttt{VASP}.
 The microscopic expression for the dielectric response,
 the Kramers--Kronig relation,
 and the derived optical quantities are introduced in chapter~\ref{cha:fundamentals_b},
@@ -396,7 +396,7 @@ which can differ from the corresponding component of the inverse tensor.
 The reflectivity describes a homogeneous semi-infinite medium in the scalar normal-incidence approximation.
 
 For all eight selected optical datasets,
-we use the independent-particle approximation in VASP 6.5.0 with \texttt{LOPTICS=T}.
+we use the independent-particle approximation in \texttt{VASP} 6.5.0 with \texttt{LOPTICS=T}.
 These calculations are spin-unpolarized and do not include spin-orbit coupling
 (\texttt{ISPIN=1} and \texttt{LSORBIT=F}).
 We use Gaussian occupation smearing of \qty{0.01}{\electronvolt}
@@ -1009,7 +1009,7 @@ The converged spin-orbit-coupled states are non-magnetic,
 with a magnetization density below $3\times10^{-7}~\mu_{\mathrm{B}}\,\text{\AA}^{-3}$.
 Spin-polarized calculations started from ferromagnetic and antiferromagnetic configurations all converge to the non-magnetic state.
 These results support the time-reversal symmetry assumed in the analysis.
-For the PBE structures used in the Quantum ESPRESSO calculations,
+For the PBE structures used in the \texttt{Quantum ESPRESSO} calculations,
 the parity eigenvalues of the centrosymmetric structures and the Wilson loops give the same $\nu$ as in table~\ref{tab:proj3_topological_parity} for trilayer cubic beryllene,
 2H-$\alpha$-beryllene,
 2H-$\beta$-beryllene,

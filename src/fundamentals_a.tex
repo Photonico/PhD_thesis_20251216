@@ -1842,7 +1842,7 @@ Increasing it enlarges the basis at each k point.
 This is different from increasing the number of k points,
 which improves the integration over the Brillouin zone.
 
-For the VASP calculations, the projector augmented wave (PAW) method connects the smooth auxiliary state to the reconstructed all-electron valence state~\cite{blochl1994projector,kresse1999ultrasoft}:
+For the \texttt{VASP} calculations, the projector augmented wave (PAW) method connects the smooth auxiliary state to the reconstructed all-electron valence state~\cite{blochl1994projector,kresse1999ultrasoft}:
 
 \begin{equation}
 \begin{aligned}
@@ -1862,7 +1862,7 @@ The correction restores the rapidly varying part inside the augmentation regions
 outside these regions, the two partial waves coincide.
 The implemented calculation uses a frozen-core approximation and a finite partial-wave representation.
 The reconstructed all-electron density therefore consists of the smooth auxiliary density and the augmentation corrections.
-The Quantum ESPRESSO calculations for superconductivity in sections~\ref{2_methods} and~\ref{3_methods} instead use norm-conserving pseudopotentials~\cite{hamann2013optimized}.
+The \texttt{Quantum ESPRESSO} calculations for superconductivity in sections~\ref{2_methods} and~\ref{3_methods} instead use norm-conserving pseudopotentials~\cite{hamann2013optimized}.
 The datasets and their convergence settings are specified for each calculation.
 
 Electronic quantities require integration over the Brillouin zone.
@@ -2141,7 +2141,7 @@ A comparison with direct calculations in the energy range of interest validates 
 The electron-phonon perturbation also carries the phonon wave vector $\vec{q}$.
 Its matrix elements therefore require Fourier transformations with respect to both $\vec{k}$ and $\vec{q}$,
 together with the phonon eigenvectors and the electronic band rotations~\cite{giustino2007electron}.
-EPW uses this localized representation to obtain the matrix elements on finer electronic and phonon meshes~\cite{ponce2016epw}.
+\texttt{EPW} uses this localized representation to obtain the matrix elements on finer electronic and phonon meshes~\cite{ponce2016epw}.
 The coupling in equation~\eqref{electron_phonon_matrix_element_method} therefore requires the interpolated matrix elements in addition to the band energies.
 
 For a spin-degenerate metallic normal state with $N(E_\mathrm{F})>0$,

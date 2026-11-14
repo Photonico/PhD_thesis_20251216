@@ -98,7 +98,7 @@ This is followed by the Conclusion in section~\ref{1_conclusions}.
 \section{Calculation methods}
 \label{1_calculation_methods}
 
-We perform first-principles calculations using density functional theory (DFT) as implemented in the Vienna Ab initio Simulation Package (VASP)~\cite{kresse1993ab, kresse1996efficiency, kresse1996efficient}.
+We perform first-principles calculations using density functional theory (DFT) as implemented in the Vienna Ab initio Simulation Package (\texttt{VASP})~\cite{kresse1993ab, kresse1996efficiency, kresse1996efficient}.
 Projector augmented wave (PAW) pseudopotentials account for the electron-ion interactions~\cite{kresse1999ultrasoft}.
 For the structural optimization calculations, we use the generalized gradient approximation (GGA) of Perdew--Burke--Ernzerhof (PBE) as the exchange-correlation functional.
 The Becke--Johnson damped D3(BJ) dispersion correction accounts for long-range van der Waals (vdW) interactions.
@@ -107,7 +107,7 @@ Figure~\ref{S1.1} shows the k-point convergence test for the Graphene-\ce{BC3} b
 Here, the plane-wave energy cutoff is set to \qty{450}{\electronvolt}.
 The electronic convergence criterion is set to \qty{1e-6}{\electronvolt}, and the systems are allowed to relax until all forces on each atom are below \qty{0.01}{\electronvolt\per\angstrom}.
 For smearing at the Fermi level,
-we use the Gaussian smearing method implemented in VASP.
+we use the Gaussian smearing method implemented in \texttt{VASP}.
 
 For the calculation of electronic properties,
 the PBE exchange-correlation functional is known to underestimate band-gap energies.
