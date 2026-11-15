@@ -66,7 +66,7 @@ thermal management,
 and quantum technologies.
 
 Beyond graphene,
-the discovery and prediction of atomically thin materials has expanded to include transition-metal dichalcogenides,
+the discovery and prediction of atomically thin materials have expanded to include transition-metal dichalcogenides,
 hexagonal boron nitride,
 black phosphorus,
 and elemental two-dimensional materials,
@@ -205,7 +205,7 @@ bulk bcc beryllium,
 and trilayer cubic beryllene lie within \qty{0.3}{\milli\electronvolt} per atom of the values for the densest meshes tested.
 These densest meshes are $41 \times 41 \times 41$ for the bulk phases and $47 \times 47 \times 1$ for the two-dimensional structures.
 Over all denser meshes,
-the cohesive energies vary by at most \qty{2.2}{\milli\electronvolt} per atom.
+the cohesive energies stay within \qty{2.2}{\milli\electronvolt} per atom of the values for the selected meshes.
 
 The dynamical stability of the structures is examined using finite-displacement phonon calculations with \texttt{phonopy}~\cite{togo2015first,togo2023implementation},
 with atomic displacements of \qty{0.01}{\angstrom}.
@@ -714,12 +714,12 @@ system
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Lattice vectors $a$ and $b$,
+\caption{Lattice constants $a$ and $b$,
 interlayer Be-Be distance, H-Be bond length,
 hydrogen adsorption energy $E_{\mathrm{ad}}$ per hydrogen atom relative to \ce{H2},
 angle between the two in-plane lattice vectors,
 and electronic nature of the hydrogen-functionalized beryllene structures.
-The lattice vectors, interlayer Be-Be distance,
+The lattice constants, interlayer Be-Be distance,
 and H-Be bond length are given in \si{\angstrom},
 while the adsorption energy is given in \si{\electronvolt}.}
 \label{tab:proj3_hydrogenated_structural_parameters}
@@ -1080,6 +1080,10 @@ Thus, the anisotropic transition temperature $T_\mathrm{c}$ falls into the range
 These electron-phonon calculations use harmonic phonons,
 whereas the soft mode of 2H-$\beta$-beryllene is anharmonic,
 as discussed in section~\ref{3_dynamical_stability_and_phonon_dispersion}.
+On the coarse $12 \times 12 \times 1$ q-point mesh,
+all phonon frequencies of 2H-$\beta$-beryllene are real,
+except for imaginary values of up to approximately $0.24\mathrm{i}$~\si{\tera\hertz} at $\Gamma$.
+Modes with imaginary frequencies are excluded in \texttt{EPW}.
 For 1H-$\beta$-beryllene,
 from the Allen--Dynes expression,
 we obtain $T_\mathrm{c}^{\mathrm{AD}}=\qty{8.1}{\kelvin}$ for $\mu^*=0.13$.
@@ -1241,7 +1245,9 @@ The in-plane and out-of-plane curves correspond to the $xx$ and $zz$ components,
 \label{fig:proj3_alpha_beta_extinction}
 \end{figure}
 
-The corresponding reflectivity and energy-loss spectra show the same structural and directional contrast.
+The corresponding reflectivity and energy-loss spectra,
+given in figures~\ref{fig:proj3_reflectivity_alpha_beta} and~\ref{fig:proj3_energy_loss_alpha_beta} in section~\ref{3_supplementary},
+show the same structural and directional contrast.
 For reflectivity,
 $\beta$-beryllene shows strong reflection in the low-energy and near-ultraviolet regions for in-plane polarization,
 separated by a pronounced minimum.
@@ -1266,8 +1272,8 @@ and trilayer cubic beryllene.
 The real and imaginary parts of the dielectric function are shown in figure~\ref{fig:proj3_bulk_cubic_dielectric}.
 Bulk hcp and bulk bcc beryllium show similar behaviour and weak directional dependence.
 For both bulk structures,
-the real part becomes negative above approximately \qty{4.5}{\electronvolt},
-reaches a minimum around \qtyrange{5.5}{6.0}{\electronvolt},
+the real part becomes negative at \qtyrange{4.4}{4.9}{\electronvolt},
+reaches a minimum at \qtyrange{5.3}{6.2}{\electronvolt},
 and then rises smoothly towards zero around \qty{12}{\electronvolt}.
 The imaginary part displays a broad low-energy feature up to approximately \qty{5.5}{\electronvolt},
 indicating a wide range of allowed interband transitions.
