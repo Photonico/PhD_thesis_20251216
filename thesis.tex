@@ -158,10 +158,6 @@
   \ifcase#1\or I\or II\or III\else #1\fi
 }
 
-\definecolor{dark_blue}{HTML}{0069A0}
-\definecolor{dark_violet}{HTML}{8C3CA5}
-\definecolor{dark_emerald}{HTML}{009687}
-
 %% \hexcolor{#5073c8}{text}: same as \textcolor[HTML]{5073c8}{text}; the # is optional
 %% (omit the # inside section titles and captions)
 \ExplSyntaxOn
@@ -174,22 +170,33 @@
     \exp_args:NV \__lu_hexcolor:n \l__lu_hex_str
   }
 \cs_new_protected:Npn \__lu_hexcolor:n #1 { \textcolor[HTML]{#1} }
+% Accept #RRGGBB in hyperlink color settings, while retaining named colors.
+\tl_new:N \l__lu_hypercolors_tl
+\NewDocumentCommand{\hexhypersetup}{m}
+  {
+    \tl_set:Nn \l__lu_hypercolors_tl {#1}
+    \regex_replace_all:nnN
+      {\#([0-9A-Fa-f]{6})} {[HTML]\{\1\}} \l__lu_hypercolors_tl
+    \exp_args:NV \hypersetup \l__lu_hypercolors_tl
+  }
 \ExplSyntaxOff
 
 %%%% Hyperlink configurations
 \hypersetup{
     pdfauthor = {\myname},
     pdftitle = {\suptitle},
-    colorlinks,
+    colorlinks
+    }
+\hexhypersetup{
     linkcolor={Black},
-    % citecolor={Purple},
-    citecolor={dark_violet},
-    urlcolor={dark_emerald},
-    % urlcolor={PineGreen},
-    % urlcolor={Emerald},
-    % urlcolor={WildStrawberry},
-    % urlcolor={Mulberry},
-    % urlcolor={Orchid},
+    % citecolor={#8C24FF}, % Purple
+    citecolor={#8C3CA5},
+    urlcolor={#009687},
+    % urlcolor={#00BF29}, % PineGreen
+    % urlcolor={#00FF80}, % Emerald
+    % urlcolor={#FF0A9C}, % WildStrawberry
+    % urlcolor={#A314FA}, % Mulberry
+    % urlcolor={#AD5CFF}, % Orchid
     }
 
 %%%% Maths functions
@@ -389,9 +396,9 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
-\hypersetup{linkcolor=dark_blue}
-% \hypersetup{linkcolor=MidnightBlue}
-% \hypersetup{linkcolor=Periwinkle}
+\hexhypersetup{linkcolor={#0069A0}}
+% \hexhypersetup{linkcolor={#007091}} % MidnightBlue
+% \hexhypersetup{linkcolor={#6E73FF}} % Periwinkle
 \input{src/font_matter.tex}
 
 %%%%%%%%%%%%
@@ -453,3 +460,5 @@
 \printbibliography[title={References}]
 
 \end{document}
+
+% color references
