@@ -527,6 +527,11 @@ for (a) the lowest four bands and (b) the lowest six bands.}
 The structures optimized with PBE in \texttt{Quantum ESPRESSO},
 which are used for the topological cross-check and the electron-phonon calculations,
 are listed in table~\ref{tab:proj3_qe_structures}.
+For 2H-$\beta$-beryllene,
+the phonon and electron-phonon calculations instead use the structure relaxed with the D3 dispersion correction,
+listed in the last row of the table.
+In \texttt{Quantum ESPRESSO} with this correction,
+the residual forces on this structure are below \qty{0.03}{\electronvolt\per\angstrom}.
 
 \begin{table}[!htbp]
 \centering
@@ -548,9 +553,12 @@ trilayer cubic beryllene
 2H-$\alpha$-beryllene
 & \ce{BeH2} & 2.32 & 2.32 & $120.00^{\circ}$ & 1.74 & semiconductor \\
 2H-$\beta$-beryllene
-& \ce{Be2H2} & 2.62 & 2.62 & $133.12^{\circ}$ & 3.79 & metallic \\
+& \ce{Be2H2} & 2.62 & 2.62 & $133.12^{\circ}$ & 3.78 & metallic \\
 1H-$\beta$-beryllene
 & \ce{Be2H} & 2.32 & 2.11 & $117.01^{\circ}$ & 2.85 & metallic \\
+\hline
+2H-$\beta$-beryllene, PBE+D3
+& \ce{Be2H2} & 2.53 & 2.53 & $131.88^{\circ}$ & 3.79 & metallic \\
 \hline
 \end{tabular}
 \end{adjustbox}
@@ -559,8 +567,63 @@ lattice constants $a$ and $b$,
 angle between the two in-plane lattice vectors,
 thickness between the outermost atomic centres,
 and electronic nature of the structures optimized with PBE in \texttt{Quantum ESPRESSO}.
+The last row is the structure relaxed with the D3 dispersion correction,
+which is used for the phonon and electron-phonon calculations of 2H-$\beta$-beryllene.
 The lattice constants and thickness are given in \si{\angstrom}.}
 \label{tab:proj3_qe_structures}
+\end{table}
+
+\subsection*{Phonon and electron-phonon calculations}
+
+On the $12 \times 12 \times 1$ q-point mesh,
+the phonon frequencies from density functional perturbation theory are real for all three structures,
+except at $\Gamma$,
+where the lowest values are $0.14\mathrm{i}$~\si{\tera\hertz},
+$0.24\mathrm{i}$~\si{\tera\hertz},
+and $0.20\mathrm{i}$~\si{\tera\hertz} for trilayer cubic beryllene,
+2H-$\beta$-beryllene,
+and 1H-$\beta$-beryllene,
+respectively.
+The Wannier interpolation uses 12, 10, and 9 Wannier functions for these three structures,
+with frozen windows that extend to \qtyrange{3.0}{3.6}{\electronvolt} above the Fermi level.
+
+The electron-phonon coupling of trilayer cubic beryllene and 2H-$\beta$-beryllene depends on the lower phonon frequency threshold,
+as shown in table~\ref{tab:proj3_epw_threshold}.
+With a threshold of \qty{5}{\per\centi\metre} on the $40 \times 40 \times 1$ fine meshes,
+the modes below \qty{40}{\per\centi\metre} contribute approximately half of $\lambda$ for these two structures.
+Restricting the same spectral functions to frequencies above \qty{40}{\per\centi\metre} gives $\lambda=0.44$ and $\lambda=1.50$,
+close to the values on the $80 \times 80 \times 1$ fine meshes.
+For 1H-$\beta$-beryllene,
+both fine meshes use the threshold of \qty{5}{\per\centi\metre} and give similar values.
+
+\begin{table}[!htbp]
+\centering
+\rowcolors{2}{gray!15}{white}
+\begin{adjustbox}{max width=1.0\linewidth,center}
+\begin{tabular}{cccccc}
+\hline
+\rowcolor{gray!25}
+structure
+& fine meshes
+& threshold (\si{\per\centi\metre})
+& $\lambda$
+& $\hbar\omega_\mathrm{log}$ (meV)
+& $T_\mathrm{c}^{\mathrm{AD}}$ (K) \\
+\hline
+trilayer cubic beryllene & $40 \times 40 \times 1$ & 5 & 1.00 & 4.0 & 2.8 \\
+trilayer cubic beryllene & $80 \times 80 \times 1$ & 40 & 0.46 & 36.0 & 2.0 \\
+2H-$\beta$-beryllene & $40 \times 40 \times 1$ & 5 & 3.06 & 7.5 & 15.1 \\
+2H-$\beta$-beryllene & $80 \times 80 \times 1$ & 40 & 1.40 & 19.5 & 21.9 \\
+1H-$\beta$-beryllene & $40 \times 40 \times 1$ & 5 & 0.60 & 41.0 & 7.8 \\
+1H-$\beta$-beryllene & $80 \times 80 \times 1$ & 5 & 0.61 & 40.7 & 8.1 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Electron-phonon coupling strength $\lambda$,
+logarithmic average frequency $\omega_\mathrm{log}$,
+and Allen--Dynes transition temperature $T_\mathrm{c}^{\mathrm{AD}}$ for $\mu^*=0.13$,
+calculated with different fine meshes and lower phonon frequency thresholds.}
+\label{tab:proj3_epw_threshold}
 \end{table}
 
 \subsection*{Additional optical spectra}

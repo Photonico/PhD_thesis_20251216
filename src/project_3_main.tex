@@ -1,11 +1,11 @@
 \chapter[Topological and Optical Properties of Beryllene Phases]{Emergent Topological and Optical Properties in\\ Pristine and Hydrogen-Functionalized\\ Two-Dimensional Beryllium Phases}
 \label{cha:project_beryllene}
 
-This chapter is based on the manuscript by L.~Niu, O.~J.~Conquest, H.~Ma, C.~Verdi, and C.~Stampfl~\cite{niu2026emergent}.
-The candidate carried out the calculations, data analysis, and visualization.
+This chapter is based on the manuscript by L.~Niu, O.~J.~Conquest, H.~Ma, C.~Verdi, and C.~Stampfl~\cite{niu2026emergent_github}.
+The candidate carried out the \texttt{VASP} calculations, data analysis, and visualization.
 Catherine Stampfl supervised the project.
-Oliver James Conquest provided detailed guidance on the calculations,
-and Hongyang Ma guided the superconductivity calculations.
+Oliver James Conquest provided detailed guidance on the calculations.
+Hongyang Ma performed the \texttt{Quantum ESPRESSO} and \texttt{EPW} calculations.
 Carla Verdi performed the validation.
 All authors contributed to writing and revising the manuscript.
 
@@ -336,14 +336,17 @@ and the spin-orbit splittings of Be and H are approximately \qty{1}{\milli\elect
 We therefore compare the parities of the spinless states at the time-reversal invariant momenta directly with those of the Kramers pairs.
 The HSE06 band structure of 2H-$\alpha$-beryllene is calculated at 71 points along the $\Gamma$--$\mathrm{K}$--$\mathrm{M}$--$\Gamma$ path and at 9 points around each PBE band edge.
 
-The \texttt{Quantum ESPRESSO} calculations~\cite{giannozzi2017advanced,giannozzi2009quantum} are performed on the structures relaxed with the PBE functional.
+The \texttt{Quantum ESPRESSO} calculations~\cite{giannozzi2017advanced,giannozzi2009quantum} are performed on the structures relaxed with the PBE functional,
+except for the phonon and electron-phonon calculations of 2H-$\beta$-beryllene described below.
 We use optimized norm-conserving Vanderbilt pseudopotentials~\cite{hamann2013optimized},
 where the Be $1s$ states are considered to be valence states.
 The plane-wave cutoffs are \qty{80}{Ry} and \qty{640}{Ry} for the wave functions and charge density, respectively,
 and the Marzari--Vanderbilt smearing is \qty{0.02}{Ry}~\cite{marzari1999thermal}.
 We also use a two-dimensional Coulomb cutoff~\cite{sohier2017density},
 along with a vacuum of about \qty{15}{\angstrom} or larger.
-The k-point meshes are $56 \times 56 \times 1$, $52 \times 52 \times 1$, $46 \times 46 \times 1$, and $52 \times 57 \times 1$ for trilayer cubic beryllene,
+The k-point meshes of the self-consistent calculations are $56 \times 56 \times 1$,
+$52 \times 52 \times 1$, $46 \times 46 \times 1$,
+and $52 \times 57 \times 1$ for trilayer cubic beryllene,
 2H-$\alpha$-beryllene,
 2H-$\beta$-beryllene,
 and 1H-$\beta$-beryllene,
@@ -360,10 +363,27 @@ Phonons of trilayer cubic beryllene,
 2H-$\beta$-beryllene,
 and 1H-$\beta$-beryllene are computed using density functional perturbation theory~\cite{baroni2001phonons} on a $12 \times 12 \times 1$ q-point mesh,
 and electron-phonon coupling is calculated using \texttt{EPW}~\cite{lee2023electron,giustino2007electron}.
+For 2H-$\beta$-beryllene,
+these calculations use a structure relaxed with the D3 dispersion correction with Becke--Johnson damping,
+with a lattice constant of \qty{2.53}{\angstrom},
+and include this correction.
+The Wannier functions are initialized with projections on the Be $s$ and $p$ orbitals and the H $s$ orbitals,
+and the Be $1s$ bands are excluded.
 Electronic states and phonon perturbations are Wannier-interpolated from coarse $24 \times 24 \times 1$ k-point and $12 \times 12 \times 1$ q-point meshes to $80 \times 80 \times 1$ fine meshes,
 and the convergence is checked using $40 \times 40 \times 1$ fine meshes.
 Electronic and phonon smearings are set to \qty{0.15}{\electronvolt} and \qty{0.5}{\milli\electronvolt}, respectively,
 and the Matsubara-frequency cutoff is \qty{1.2}{\electronvolt}.
+Electronic states within \qty{0.6}{\electronvolt} of the Fermi level are included.
+Phonon modes below \qty{40}{\per\centi\metre}, approximately \qty{5}{\milli\electronvolt},
+are excluded from the electron-phonon coupling of trilayer cubic beryllene and 2H-$\beta$-beryllene.
+This threshold follows from convergence tests.
+Above it, $\lambda$ changes little with the fine meshes and the other calculation settings,
+whereas the contribution below it comes from acoustic modes near $\Gamma$ and does not converge.
+We therefore treat this contribution as a numerical artefact.
+For 1H-$\beta$-beryllene,
+the modes below \qty{40}{\per\centi\metre} contribute less than \qty{1}{\percent} of $\lambda$,
+and only the modes below \qty{5}{\per\centi\metre} are excluded.
+The effect of this threshold is given in table~\ref{tab:proj3_epw_threshold} in section~\ref{3_supplementary}.
 The electron-phonon coupling strength $\lambda$ and the logarithmic average frequency $\omega_\mathrm{log}$ are extracted from the Eliashberg spectral function $\alpha^2F(\omega)$ through equations~\eqref{eliashberg_spectral_function_method} and~\eqref{electron_phonon_spectral_moments}.
 The superconducting transition temperature $T_\mathrm{c}$ is calculated in two ways.
 Firstly, the simplified Allen--Dynes expression in equation~\eqref{allen_dynes_temperature_estimate}~\cite{allen-dynes,mcmillan1968transition} is used with the Coulomb pseudopotential $\mu^*$ varying from 0.10 to 0.16.
@@ -1077,13 +1097,14 @@ while at \qty{32}{\kelvin} and above,
 it exponentially tends to zero,
 as shown in figures~\ref{fig:proj3_superconducting_gap}(c) and~(d).
 Thus, the anisotropic transition temperature $T_\mathrm{c}$ falls into the range from \qty{31}{\kelvin} to \qty{32}{\kelvin} and is estimated to be \qty{31.7}{\kelvin}.
-These electron-phonon calculations use harmonic phonons,
-whereas the soft mode of 2H-$\beta$-beryllene is anharmonic,
-as discussed in section~\ref{3_dynamical_stability_and_phonon_dispersion}.
+These electron-phonon calculations use the structure relaxed with the D3 dispersion correction,
+whose lattice constant is \qty{2.4}{\percent} smaller than the PBE value in table~\ref{tab:proj3_hydrogenated_structural_parameters}.
 On the coarse $12 \times 12 \times 1$ q-point mesh,
-all phonon frequencies of 2H-$\beta$-beryllene are real,
-except for imaginary values of up to approximately $0.24\mathrm{i}$~\si{\tera\hertz} at $\Gamma$.
-Modes with imaginary frequencies are excluded in \texttt{EPW}.
+all phonon frequencies of this structure are real,
+except for an imaginary value of $0.24\mathrm{i}$~\si{\tera\hertz} at $\Gamma$.
+At the mesh point closest to the soft-mode wave vector of section~\ref{3_dynamical_stability_and_phonon_dispersion},
+the lowest frequency is \qty{5.9}{\tera\hertz}.
+The soft mode of the PBE structure is therefore absent from these electron-phonon calculations.
 For 1H-$\beta$-beryllene,
 from the Allen--Dynes expression,
 we obtain $T_\mathrm{c}^{\mathrm{AD}}=\qty{8.1}{\kelvin}$ for $\mu^*=0.13$.
@@ -1133,7 +1154,7 @@ logarithmic average frequency $\omega_\mathrm{log}$,
 Allen--Dynes transition temperature $T_\mathrm{c}^{\mathrm{AD}}$ from equation~\eqref{allen_dynes_temperature_estimate} for $\mu^*=0.10$, 0.13, and 0.16,
 isotropic Migdal--Eliashberg transition temperature $T_\mathrm{c}^{\mathrm{iso}}$ with the fitted gap amplitude $\Delta_0$ and gap ratio,
 and anisotropic Migdal--Eliashberg transition temperature $T_\mathrm{c}^{\mathrm{aniso}}$.
-All values are calculated on $80 \times 80 \times 1$ fine meshes,
+All values are calculated on $80 \times 80 \times 1$ fine meshes with the phonon frequency thresholds given in section~\ref{3_methods},
 and $\mu^*=0.13$ is used for the Migdal--Eliashberg calculations.}
 \label{tab:proj3_superconductivity}
 \end{table}
@@ -1260,7 +1281,8 @@ whereas $\alpha$-beryllene shows pronounced peaks in the ultraviolet region.
 The in-plane energy-loss spectrum of $\beta$-beryllene has a visible-range local maximum of approximately 0.49
 and a larger high-energy local maximum of approximately 1.34 near \qty{11.03}{\electronvolt}.
 It reaches approximately 1.50 at the last available sample near \qty{11.98}{\electronvolt} while still rising.
-For the out-of-plane response, $\alpha$-beryllene has a dominant energy-loss maximum of approximately 8.88 near \qty{10.64}{\electronvolt},
+For the out-of-plane response,
+$\alpha$-beryllene has a dominant energy-loss maximum of approximately 8.88 near \qty{10.64}{\electronvolt},
 substantially above the $\beta$ maximum of approximately 1.09 near \qty{9.95}{\electronvolt}.
 
 \subsubsection{Bulk hcp, bulk bcc, and trilayer cubic beryllene}
@@ -1282,10 +1304,13 @@ coinciding with a minimum in the real part and a change in the inverse dielectri
 
 For trilayer cubic beryllene,
 the dielectric response is redistributed and becomes direction dependent relative to bulk bcc beryllium.
-The largest imaginary dielectric features occur near \qty{3.74}{\electronvolt} in $xx$ and $yy$, with a value of approximately 19.75,
-and near \qty{2.71}{\electronvolt} in $zz$, with a value of approximately 27.32.
+The largest imaginary dielectric features occur near \qty{3.74}{\electronvolt} in $xx$ and $yy$,
+with a value of approximately 19.75,
+and near \qty{2.71}{\electronvolt} in $zz$,
+with a value of approximately 27.32.
 The real part also develops direction-dependent sign changes.
-These dielectric features do not coincide in general with absorption maxima, which also depend on the photon energy and the non-linear relation between the dielectric function and the extinction coefficient.
+These dielectric features do not coincide in general with absorption maxima,
+which also depend on the photon energy and the non-linear relation between the dielectric function and the extinction coefficient.
 Assignments to specific surface bands or transitions would require band- and matrix-element-resolved evidence.
 
 \begin{figure}[!htbp]
@@ -1375,11 +1400,14 @@ The corresponding absorption coefficient and energy-loss spectra are shown in fi
 For $\alpha$-beryllene, hydrogen adsorption produces a strongly direction-dependent redistribution of absorption.
 Relative to pristine $\alpha$-beryllene,
 the $xx$ and $yy$ coefficients increase over the sampled visible interval,
-but the visible maximum of 2H-$\alpha$-beryllene is only approximately \qty{0.00137}{\per\nano\metre}, much smaller than its ultraviolet maximum near \qty{5.71}{\electronvolt}.
+but the visible maximum of 2H-$\alpha$-beryllene is only approximately \qty{0.00137}{\per\nano\metre},
+much smaller than its ultraviolet maximum near \qty{5.71}{\electronvolt}.
 The $zz$ coefficient instead decreases throughout the sampled \qtyrange{1.65}{4.13}{\electronvolt} interval,
 and its strongest peak occurs near \qty{9.83}{\electronvolt}.
-For 2H-$\beta$-beryllene, the strongest sampled absorption peaks occur near \qty{6.75}{\electronvolt} in $xx$,
-\qty{9.39}{\electronvolt} in $yy$, and \qty{8.36}{\electronvolt} in $zz$.
+For 2H-$\beta$-beryllene,
+the strongest sampled absorption peaks occur near \qty{6.75}{\electronvolt} in $xx$,
+\qty{9.39}{\electronvolt} in $yy$,
+and \qty{8.36}{\electronvolt} in $zz$.
 The energy-loss spectra likewise change with hydrogen coverage and direction.
 These results establish changes in the calculated interband and inverse dielectric response.
 The weak low-energy tails arise from the finite numerical broadening.
@@ -1399,7 +1427,8 @@ using the scalar definitions described in section~\ref{3_methods}.}
 \end{figure}
 
 These results show that both dimensionality and hydrogen functionalization redistribute the effective interband optical response of beryllene.
-Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy, while trilayer cubic beryllene and the hydrogen-functionalized structures enhance some components and reduce others.
+Pristine $\alpha$- and $\beta$-beryllene exhibit pronounced anisotropy,
+while trilayer cubic beryllene and the hydrogen-functionalized structures enhance some components and reduce others.
 
 \section{Conclusions}
 \label{3_conclusions}
@@ -1448,6 +1477,10 @@ Trilayer cubic beryllene is a weak-coupling superconductor with $T_\mathrm{c}^{\
 2H-$\beta$-beryllene has the strongest coupling, $\lambda=1.40$,
 and the highest transition temperatures, \qty{28.3}{\kelvin} from the isotropic and approximately \qty{31.7}{\kelvin} from the anisotropic Migdal--Eliashberg equations.
 For 1H-$\beta$-beryllene, the gap anisotropy raises $T_\mathrm{c}$ from \qty{11.6}{\kelvin} to approximately \qty{14.2}{\kelvin}.
+The electron-phonon calculations of 2H-$\beta$-beryllene use a structure relaxed with the D3 dispersion correction,
+in which the soft mode is absent.
+For trilayer cubic beryllene and 2H-$\beta$-beryllene,
+the coupling strengths exclude the phonon modes below \qty{40}{\per\centi\metre}.
 
 Together,
 these results identify two-dimensional beryllium as an elemental platform,
