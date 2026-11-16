@@ -380,7 +380,6 @@ response (171), approximation (68), structure (46), observable (42), contributio
 - 一个人的复姓用连字符: Levi-Civita, Ismail-Beigi.
 - 两个实体之间的关系用连字符: spin-orbit, electron-phonon, electron-electron, electron-hole, exchange-correlation, metal-semiconductor, potassium-boron, ket-bra. 化学键同样用连字符: B-B, Be-Be, Be-H.
 - 材料组合的泛称用连字符并小写: graphene-borophene interfaces. 第 5 章定义的体系名保留首字母大写: Graphene-Borophene, Graphene-\ce{BC3}, Graphene-\ce{B4C3}.
-- 某一方本身是带连字符的复合词时用 en dash: graphene--boron-carbide.
 
 ### 8.4 前缀
 

@@ -158,8 +158,6 @@
   \ifcase#1\or I\or II\or III\else #1\fi
 }
 
-%% \hexcolor{#5073c8}{text}: same as \textcolor[HTML]{5073c8}{text}; the # is optional
-%% (omit the # inside section titles and captions)
 \ExplSyntaxOn
 \str_new:N \l__lu_hex_str
 \NewDocumentCommand{\hexcolor}{m}
@@ -170,7 +168,6 @@
     \exp_args:NV \__lu_hexcolor:n \l__lu_hex_str
   }
 \cs_new_protected:Npn \__lu_hexcolor:n #1 { \textcolor[HTML]{#1} }
-% Accept #RRGGBB in hyperlink color settings, while retaining named colors.
 \tl_new:N \l__lu_hypercolors_tl
 \NewDocumentCommand{\hexhypersetup}{m}
   {
@@ -189,14 +186,8 @@
     }
 \hexhypersetup{
     linkcolor={Black},
-    % citecolor={#8C24FF}, % Purple
-    citecolor={#8C3CA5},
-    urlcolor={#009687},
-    % urlcolor={#00BF29}, % PineGreen
-    % urlcolor={#00FF80}, % Emerald
-    % urlcolor={#FF0A9C}, % WildStrawberry
-    % urlcolor={#A314FA}, % Mulberry
-    % urlcolor={#AD5CFF}, % Orchid
+    citecolor={#823ca5},  %{#823ca5},
+    urlcolor={#00827d},   %{#00827d},
     }
 
 %%%% Maths functions
@@ -396,9 +387,7 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
-\hexhypersetup{linkcolor={#0069A0}}
-% \hexhypersetup{linkcolor={#007091}} % MidnightBlue
-% \hexhypersetup{linkcolor={#6E73FF}} % Periwinkle
+\hexhypersetup{linkcolor={#0050a0}}
 \input{src/font_matter.tex}
 
 %%%%%%%%%%%%
@@ -462,3 +451,94 @@
 \end{document}
 
 % color references
+% Names are case-sensitive; HTML values use xcolor's rounded conversion.
+% xcolor base colors (19)
+% red              #FF0000
+% green            #00FF00
+% blue             #0000FF
+% brown            #BF8040
+% lime             #BFFF00
+% orange           #FF8000
+% pink             #FFBFBF
+% purple           #BF0040
+% teal             #008080
+% violet           #800080
+% cyan             #00FFFF
+% magenta          #FF00FF
+% yellow           #FFFF00
+% olive            #808000
+% black            #000000
+% darkgray         #404040
+% gray             #808080
+% lightgray        #BFBFBF
+% white            #FFFFFF
+%
+% dvipsnames colors (68)
+% GreenYellow      #D9FF4F
+% Yellow           #FFFF00
+% Goldenrod        #FFE529
+% Dandelion        #FFB529
+% Apricot          #FFAD7A
+% Peach            #FF804D
+% Melon            #FF8A80
+% YellowOrange     #FF9400
+% Orange           #FF6321
+% BurntOrange      #FF7D00
+% Bittersweet      #C20300
+% RedOrange        #FF3B21
+% Mahogany         #A60000
+% Maroon           #AD0000
+% BrickRed         #B80000
+% Red              #FF0000
+% OrangeRed        #FF0080
+% RubineRed        #FF00DE
+% WildStrawberry   #FF0A9C
+% Salmon           #FF789E
+% CarnationPink    #FF5EFF
+% Magenta          #FF00FF
+% VioletRed        #FF30FF
+% Rhodamine        #FF2EFF
+% Mulberry         #A314FA
+% RedViolet        #9600A8
+% Fuchsia          #7303EB
+% Lavender         #FF85FF
+% Thistle          #E069FF
+% Orchid           #AD5CFF
+% DarkOrchid       #9933CC
+% Purple           #8C24FF
+% Plum             #8000FF
+% Violet           #361FFF
+% RoyalPurple      #401AFF
+% BlueViolet       #1A0DF5
+% Periwinkle       #6E73FF
+% CadetBlue        #616EC4
+% CornflowerBlue   #59DEFF
+% MidnightBlue     #007091
+% NavyBlue         #0F75FF
+% RoyalBlue        #0080FF
+% Blue             #0000FF
+% Cerulean         #0FE3FF
+% Cyan             #00FFFF
+% ProcessBlue      #0AFFFF
+% SkyBlue          #61FFE0
+% Turquoise        #26FFCC
+% TealBlue         #1FFAA3
+% Aquamarine       #2EFFB2
+% BlueGreen        #26FFAB
+% Emerald          #00FF80
+% JungleGreen      #03FF7A
+% SeaGreen         #4FFF80
+% Green            #00FF00
+% ForestGreen      #00E000
+% PineGreen        #00BF29
+% LimeGreen        #80FF00
+% YellowGreen      #8FFF42
+% SpringGreen      #BDFF3D
+% OliveGreen       #009900
+% RawSienna        #8C0000
+% Sepia            #4D0000
+% Brown            #660000
+% Tan              #DB9470
+% Gray             #808080
+% Black            #000000
+% White            #FFFFFF
