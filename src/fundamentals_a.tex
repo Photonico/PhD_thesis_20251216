@@ -1630,7 +1630,7 @@ Among them, the Perdew--Burke--Ernzerhof functional remains one of the most wide
 
 Compared with the local density approximation,
 generalized gradient approximations usually improve equilibrium geometries,
-atomization energies, and surface properties.
+atomization energies, and surface properties~\cite{dasilva2006converged}.
 However, they still tend to overestimate lattice constants slightly and underestimate band gaps.
 Meanwhile, their balance between computational efficiency and accuracy keeps generalized gradient approximations in wide use in practical calculations.
 
@@ -1638,7 +1638,7 @@ Meanwhile, their balance between computational efficiency and accuracy keeps gen
 
 In addition to local and semilocal approximations,
 hybrid functionals incorporate a fraction of exact exchange into the exchange-correlation functional.
-The exact Hartree--Fock exchange term partially reduces the self-interaction error and often yields more accurate band gaps, reaction barriers, and localized electronic states.
+The exact Hartree--Fock exchange term partially reduces the self-interaction error and often yields more accurate band gaps, reaction barriers, and localized electronic states~\cite{carter2012vacancies}.
 
 However, in periodic solids,
 the direct use of long-range Hartree--Fock exchange is computationally expensive.
@@ -1695,7 +1695,7 @@ In the present work,
 we use PBE and HSE06 to examine how the electronic properties depend on the exchange-correlation approximation.
 The screened exchange contribution in equation~\eqref{HSE_exchange_correlation_functional}
 can reduce self-interaction and delocalization errors,
-thereby changing the localization of electronic states and the predicted band gap.
+thereby changing the localization of electronic states and the predicted band gap~\cite{cohen2012challenges}.
 However, HSE06 remains an approximation.
 A larger band gap does not imply a more accurate result.
 Therefore, when comparing the results in chapters~\ref{cha:project_bilayers} and~\ref{cha:project_boron},
@@ -1913,7 +1913,7 @@ we define the harmonic force constants as:
 
 here, the subscript $0$ denotes the relaxed reference structure.
 The force constants describe the curvature of the same energy surface used for structural relaxation.
-They can be obtained from finite-displacement calculations or density functional perturbation theory~\cite{baroni2001phonons}.
+They can be obtained from finite-displacement calculations or density functional perturbation theory~\cite{baroni2001phonons,togo2015first}.
 
 At a stationary reference structure, the first derivative of the energy vanishes.
 Keeping the terms up to second order in the displacements, we obtain:
@@ -1982,7 +1982,7 @@ A negative eigenvalue $\omega_{\vec{q}s}^{2}$ gives an imaginary frequency and i
 Small imaginary frequencies are attributed to numerical errors only after convergence checks.
 The absence of imaginary modes supports harmonic dynamical stability.
 
-We then turn to \textit{ab initio} molecular dynamics (AIMD).
+We then turn to \textit{ab initio} molecular dynamics (AIMD)~\cite{marx2009ab}.
 In the Born--Oppenheimer approximation,
 the electronic ground state determines the forces acting on the nuclei.
 Before adding any thermostat terms, the classical nuclear equation of motion is:
@@ -2002,7 +2002,7 @@ whereas AIMD follows an atomic trajectory on that surface.
 The trajectory tests whether the structure persists at the chosen temperature over the simulated time.
 The ensemble, temperature control, time step, and duration are therefore specified with each calculation.
 These two methods address the boron and beryllene structures in chapters~\ref{cha:project_boron} and~\ref{cha:project_beryllene}.
-Thermodynamic stability and experimental synthesizability are separate questions from these two tests.
+Thermodynamic stability and experimental synthesizability are separate questions from these two tests~\cite{stampfl2005surface}.
 
 \subsection{Spin polarization and magnetic ordering}
 \label{subsec:method_magnetism}
@@ -2027,7 +2027,7 @@ $f_{i\sigma}$ denotes its occupation,
 and $\Delta n(\vec{r}\,)$ denotes the spin-density difference.
 The position projection follows the coordinate representation in equation~\eqref{coordinate_representation_definition}.
 In a periodic calculation, the orbital sum also includes the weighted k-point sampling in equation~\eqref{brillouin_zone_quadrature}.
-The exchange-correlation energy then depends on both spin densities.
+The exchange-correlation energy then depends on both spin densities~\cite{vonbarth1972local}.
 For a semilocal functional, the potential definition in equation~\eqref{xc_potential_definition} becomes:
 
 \begin{equation}
@@ -2043,7 +2043,7 @@ while the Hartree potential depends on the total density.
 We accordingly solve equation~\eqref{KS_equation_diagonal_dirac} for the two spin channels and update their densities self-consistently.
 For hybrid functionals, the generalized Kohn--Sham operator also contains the non-local exchange contribution discussed in section~\ref{sec:exchange_correlation_functional}.
 
-Different initial spin arrangements allow us to examine competing magnetic solutions.
+Different initial spin arrangements allow us to examine competing magnetic solutions~\cite{fakhera2026exploring,conquest2025investigation}.
 We compare their converged energies and local spin densities under consistent numerical conditions.
 For ferromagnetic and antiferromagnetic configurations represented by cells of the same composition and size,
 we can define the energy difference per atom as:
@@ -2140,8 +2140,8 @@ A comparison with direct calculations in the energy range of interest validates 
 
 The electron-phonon perturbation also carries the phonon wave vector $\vec{q}$.
 Its matrix elements therefore require Fourier transformations with respect to both $\vec{k}$ and $\vec{q}$,
-together with the phonon eigenvectors and the electronic band rotations~\cite{giustino2007electron}.
-\texttt{EPW} uses this localized representation to obtain the matrix elements on finer electronic and phonon meshes~\cite{ponce2016epw}.
+together with the phonon eigenvectors and the electronic band rotations~\cite{giustino2007electron,verdi2015frohlich}.
+\texttt{EPW} uses this localized representation to obtain the matrix elements on finer electronic and phonon meshes~\cite{ponce2016epw,noffsinger2010epw}.
 The coupling in equation~\eqref{electron_phonon_matrix_element_method} therefore requires the interpolated matrix elements in addition to the band energies.
 
 For a spin-degenerate metallic normal state with $N(E_\mathrm{F})>0$,

@@ -19,7 +19,7 @@ When an electromagnetic field is applied,
 it drives the electrons away from their static equilibrium and triggers a series of responses.
 
 Therefore, before introducing the dielectric function, we need a language that describes both the applied field and the feedback of matter to that field.
-That language is electrodynamics.
+That language is electrodynamics~\cite{jackson1999classical}.
 The present section extracts only the ingredients required for the discussion of the dielectric function, the Kramers--Kronig relations, and the optical properties in chapter~\ref{cha:fundamentals_b}~\cite{landau2013electrodynamics,griffiths2023introduction}.
 We begin with electromagnetic fields in matter, and then gradually move towards a frequency-dependent response function that can be connected to the electronic structure.
 
@@ -80,7 +80,7 @@ Secondly, for media, it proves useful to decompose the sources into free and bou
 here, the free part describes externally supplied or mobile macroscopic sources,
 while the bound part describes the response generated internally by the medium.
 
-For discussing the bound electric response, we introduce the polarization field $\vec{P}(\vec{r},t)$ as:
+For discussing the bound electric response, we introduce the polarization field $\vec{P}(\vec{r},t)$ as~\cite{resta1994macroscopic}:
 
 \begin{equation}
     \rho_\mathrm{bound}(\vec{r},t)\coloneqq -\nabla\cdot\vec{P}(\vec{r},t)
@@ -154,7 +154,7 @@ instead, it may spread the response over space and retain memory in time.
 At the same time, the upper limit $t$ in equation~\eqref{general_nonlocal_constitutive_relation} keeps the causal order explicit: the perturbation acts first, and the response follows.
 
 For the present work, we focus on the linear response in the long-wavelength regime.
-Under this approximation, spatial non-locality drops out, and the constitutive relation retains only the memory of the earlier perturbation.
+Under this approximation, spatial non-locality drops out~\cite{raza2015nonlocal}, and the constitutive relation retains only the memory of the earlier perturbation.
 Therefore, it reduces to the time-domain constitutive relation:
 
 \begin{equation}
@@ -430,7 +430,7 @@ It defines the integral through a symmetric limiting procedure around $\omega'=\
 This expression identifies the physical roles of the two parts of the dielectric response.
 The imaginary part $\varepsilon_{2,\alpha\beta}(\omega)$ characterizes the absorptive channel, 
 whereas the real part $\varepsilon_{1,\alpha\beta}(\omega)$ characterizes the dispersive channel.
-Consequently, causality unifies these two channels into a single complex response function.
+Consequently, causality unifies these two channels into a single complex response function~\cite{peiponen2009generalized}.
 
 The symmetry relations in equation~\eqref{parity_of_dielectric_components} then reduce the full-frequency integrals to the positive-frequency form in equation~\eqref{kk_positive_frequency_dielectric_component}.
 The corresponding static limit and its physical interpretation are discussed in section~\ref{sec:causality_and_kramers_kronig_relations}.

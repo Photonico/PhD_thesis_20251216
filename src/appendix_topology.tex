@@ -4,7 +4,7 @@
 % opening paragraph
 The electronic states introduced in appendix~\ref{cha:appendix_quantum} carry both amplitudes and phases.
 When we compare states at different parameter values, we must account for their relative phases.
-In this appendix, we develop this connection through the Berry phase, the Berry connection, and the Berry curvature.
+In this appendix, we develop this connection through the Berry phase, the Berry connection, and the Berry curvature~\cite{cayssol2021topological}.
 We then return to a group of electronic bands and establish the time-reversal properties of spinor states.
 We apply these results to the band-subspace and parity analysis in chapter~\ref{cha:fundamentals_c}.
 
@@ -16,7 +16,7 @@ The discussion of the Berry phase, connection, and curvature partly draws on the
 
 % opening paragraph
 The time-dependent Schrödinger equation describes how a quantum state evolves under a given hamiltonian.
-When the hamiltonian changes slowly and returns to its initial form, the state can acquire a phase that depends on the path through parameter space.
+When the hamiltonian changes slowly and returns to its initial form, the state can acquire a phase that depends on the path through parameter space~\cite{resta2000manifestations}.
 We first derive this geometric contribution, and use it to compare electronic states at neighbouring wave vectors later.
 For the application to electronic bands, we use the cell-periodic states introduced in equation~\eqref{bloch_hamiltonian_topology},
 with inner products normalized over one unit cell.
@@ -373,7 +373,7 @@ The connection plays the role of a vector potential, while the curvature plays t
 Adding a gradient changes the potential but leaves its curl unchanged.
 Here, the field describes the electronic states in parameter space; the parameter space itself can be flat~\cite{xiao2010berry}.
 
-For an arbitrary number of parameters, differential forms express the line and surface elements directly~\cite{hassani2013mathematical}.
+For an arbitrary number of parameters, differential forms express the line and surface elements directly~\cite{hassani2013mathematical,nakahara2018geometry}.
 Denoting the corresponding one-form and two-form by $\mathcal{A}_n$ and $\mathcal{F}_n$, we write:
 
 \begin{equation}
@@ -544,9 +544,9 @@ In two dimensions, we sum its charge-current contribution over occupied states a
 
 here, $j_x=\sigma_{xy}^{\mathrm{int}}E_y$ fixes the sign convention,
 and $f_{n\vec{k}}$ is the Fermi--Dirac occupation.
-This is the intrinsic Hall contribution; the ordinary Hall effect also involves the Lorentz force from a real magnetic field.
+This is the intrinsic Hall contribution~\cite{nagaosa2010anomalous}; the ordinary Hall effect also involves the Lorentz force from a real magnetic field.
 For an isolated band, the integrated curvature defines a Chern number.
-For a band insulator at zero temperature, the Hall expression then reduces to:
+For a band insulator at zero temperature, the Hall expression then reduces to~\cite{thouless1982quantized}:
 
 \begin{equation}
     C_n=\frac{1}{2\mathrm{\pi}}\int_\mathrm{BZ}\Omega_{n,z}\dif^2k\in\mathbb{Z},
@@ -668,7 +668,7 @@ we now express the corresponding cell-periodic state as:
 \end{equation}
 
 here, the two spatial components form one spinor state.
-Spin-orbit coupling can mix these components, so spin is not generally a conserved band label.
+Spin-orbit coupling can mix these components, so spin is not generally a conserved band label~\cite{bihlmayer2022rashba}.
 The time-reversal classification, however, remains applicable when the hamiltonian preserves time-reversal symmetry.
 
 For spin-$1/2$ electrons, we choose the time-reversal operator as:
@@ -737,7 +737,7 @@ If $\hat{h}\ket{\psi}=E\ket{\psi}$, its partner therefore satisfies:
 here, the energy $E$ is real because $\hat{h}$ is Hermitian.
 At a wave vector equivalent to its negative, $\ket{\psi}$ and $\hat{\Theta}\ket{\psi}$
 therefore represent orthogonal states with the same energy and wave vector.
-These states form a Kramers pair.
+These states form a Kramers pair~\cite{dresselhaus2008group}.
 Removing the same Bloch factor from both states preserves their orthogonality,
 so we also obtain two orthogonal cell-periodic states at this representative wave vector.
 At a general wave vector, time reversal instead relates a state at $\vec{k}$ to an equal-energy state at $-\vec{k}$.

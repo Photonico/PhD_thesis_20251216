@@ -28,7 +28,7 @@ In this new framework, the Schrödinger equation plays the central role.
 
 In quantum mechanics, the state of a physical system at a given instant is represented by a vector $\ket{\psi(t)}$.
 In a chosen representation, the same state can be expressed as a wave function.
-This state vector encapsulates all information required to predict the statistics of measurement outcomes at time $t$.
+This state vector encapsulates all information required to predict the statistics of measurement outcomes at time $t$~\cite{cohentannoudji1977quantum}.
 
 Next, we switch to the coordinate representation.
 We define the wave function as the projection of the state onto the position eigenbasis:
@@ -509,7 +509,7 @@ We can extract them from the wave function through expectation values:
 
 \subsection{An introduction to grand canonical ensemble}
 
-At finite temperature and variable particle number, the grand canonical ensemble replaces the pure-state expectation value by a thermal trace~\cite{gould2026ensemblization}.
+At finite temperature and variable particle number, the grand canonical ensemble replaces the pure-state expectation value by a thermal trace~\cite{gould2026ensemblization,pathria2022statistical}.
 In what follows, we consider zero temperature and a fixed particle number.
 
 \subsection{From wave function to practical functionals}
@@ -540,7 +540,7 @@ here, the square brackets $[\Psi]$ (rather than parentheses) emphasize that $\Om
 A functional simply assigns a number to a function. In our case of equation~\eqref{observables_N-body}, its form is a known integral. However, evaluating it requires the exact many-body wave function, which we generally cannot compute or store. Moreover, integration acts as an averaging operation that smooths out microscopic fluctuations, so only the coarse-grained features of the integrand contribute to the result.
 
 Consequently, we can discard irrelevant details of the many-body wave function and work with simplified approximations tailored to specific observables.
-In practice, we often use approximate wave functions: methods such as Hartree--Fock, configuration interaction, and quantum Monte Carlo follow this strategy by retaining the dominant components of the wave function while approximating or sampling the rest.
+In practice, we often use approximate wave functions: methods such as Hartree--Fock, configuration interaction, and quantum Monte Carlo follow this strategy by retaining the dominant components of the wave function while approximating or sampling the rest~\cite{foulkes2001quantum}.
 
 A more radical question is whether we need to work with explicit wave functions at all, or whether the expectation value in equation~\eqref{observables_N-body} can be reformulated entirely in terms of other, more tractable quantities.
 
@@ -704,7 +704,7 @@ Equivalently, for the spin-summed spatial density, the same condition takes the 
 This constraint will be enforced explicitly when we later vary an energy functional with respect to $n$.
 
 We also note that not every non-negative function is an admissible density.
-In general, a candidate $n(x)$ must be compatible with an antisymmetric $N$-body wave function and the chosen external potential.
+In general, a candidate $n(x)$ must be compatible with an antisymmetric $N$-body wave function and the chosen external potential~\cite{lieb1983density}.
 In what follows, we keep these representability requirements implicit,
 and we work within the set of admissible densities.
 Equation~\eqref{particle_number_constraint_density} provides the particle number constraint.
@@ -881,7 +881,7 @@ We now introduce the concept of a functional.
 This idea forms the conceptual basis of density functional theory,
 whose quantum-mechanical formulation and Hohenberg--Kohn theorem are developed in section~\ref{sec:introduction_density_functionals}.
 
-A functional is a mapping that takes a function as its input and returns a number (or sometimes another function).
+A functional is a mapping that takes a function as its input and returns a number (or sometimes another function)~\cite{parr1989density}.
 
 The reason we introduce density functional theory in condensed matter physics research is that solving the full many-body or many-electron Schrödinger equation scales hopelessly with the number of electrons~\cite{becke2014perspective}.
 DFT reformulates it as a variational problem in terms of the three-dimensional electron density
@@ -940,7 +940,7 @@ The basic idea is to treat the electrons locally as a uniform, spin-degenerate F
 We first construct the total-energy functional and then determine the ground-state density variationally.
 
 We write the total energy as the density functional $E_{\mathrm{TF}}[n;v_\mathrm{ext}]$.
-The Thomas--Fermi model provides an explicit approximation to the universal functional.
+The Thomas--Fermi model provides an explicit approximation to the universal functional~\cite{spruch1991pedagogic}.
 
 From the Thomas--Fermi approximation, we express the total energy as a density functional composed of a statistical kinetic term $K_\mathrm{TF}[n]$, an interaction term $E_\mathrm{int}[n]$, and an external contribution $E_\mathrm{ext}[n]$ describing the coupling to the external potential $v_\mathrm{ext}(\vec{r}\,)$.
 
@@ -1025,7 +1025,7 @@ To determine the ground-state density, we minimize the Thomas--Fermi energy func
 \label{constraint_particle_number}
 \end{equation}
 
-Using the method of Lagrange multipliers, we require the first variation of the constrained functional to vanish.
+Using the method of Lagrange multipliers, we require the first variation of the constrained functional to vanish~\cite{gelfand1963calculus}.
 
 The Lagrange multiplier $\lambda$ enforces the particle number constraint and can be identified with the chemical potential:
 
@@ -1135,7 +1135,7 @@ Substituting equation~\eqref{density_TF_from_potential} into equation~\eqref{Poi
 \label{differential_form_Thomas_Fermi_equation}
 \end{equation}
 
-This procedure constitutes the Thomas--Fermi method.
+This procedure constitutes the Thomas--Fermi method~\cite{lieb2010stability}.
 
 \subsection{Limitations of the Thomas--Fermi approach}
 
