@@ -15,6 +15,52 @@ Throughout this discussion, we distinguish the properties of the calculated stru
 \section{Conclusions from the material comparisons}
 \label{sec:conclusions_material_comparisons}
 
+We collect the main calculated quantities of the three comparisons in table~\ref{tab:conclusion_material_summary}.
+
+\begin{table}[!htbp]
+\centering
+\rowcolors{2}{gray!15}{white}
+\begin{adjustbox}{max width=1.0\linewidth,center}
+\begin{tabular}{cccccccc}
+\hline
+\rowcolor{gray!25}
+chapter
+& structure
+& electronic nature
+& band gap (eV)
+& $\lambda$
+& $T_\mathrm{c}^{\mathrm{AD}}$ (K)
+& $T_\mathrm{c}^{\mathrm{aniso}}$ (K)
+& $\mathbb{Z}_2$ \\
+\hline
+chapter~\ref{cha:project_bilayers} & Graphene-Borophene & metallic & -- & -- & -- & -- & -- \\
+& Graphene-\ce{BC3} & semimetallic & -- & -- & -- & -- & -- \\
+& Graphene-\ce{B4C3} & semimetallic & -- & -- & -- & -- & -- \\
+chapter~\ref{cha:project_boron} & bulk o-\ce{B14} & metallic & -- & 0.931 & 28.2 & $>30$ & -- \\
+& monolayer o-\ce{B14} & semiconductor & 0.105 & 0.05 & -- & -- & -- \\
+& bilayer o-\ce{B14} & semiconductor & 0.67 & -- & -- & -- & -- \\
+& hydrogen-terminated bilayer o-\ce{B14} & metallic & -- & 1.01 & 18.5 & $\approx 26$ & -- \\
+chapter~\ref{cha:project_beryllene} & $\alpha$-beryllene & metallic & -- & -- & -- & -- & 1 \\
+& $\beta$-beryllene & metallic & -- & -- & -- & -- & 0 \\
+& trilayer cubic beryllene & metallic & -- & 0.46 & 2.0 & -- & 1 \\
+& 2H-$\alpha$-beryllene & semiconductor & 6.00 & -- & -- & -- & 0 \\
+& 1H-$\beta$-beryllene & metallic & -- & 0.61 & 8.1 & $\approx 14.2$ & 0 \\
+& 2H-$\beta$-beryllene & metallic & -- & 1.40 & 21.9 & $\approx 31.7$ & 0 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Electronic nature, band gap, electron-phonon coupling strength $\lambda$,
+Allen--Dynes transition temperature $T_\mathrm{c}^{\mathrm{AD}}$ for $\mu^*=0.13$,
+anisotropic Migdal--Eliashberg transition temperature $T_\mathrm{c}^{\mathrm{aniso}}$,
+and $\mathbb{Z}_2$ index of the main structures in the three research chapters.
+The band gaps are HSE06 values.
+The gap of monolayer o-\ce{B14} refers to its antiferromagnetic state, whereas its coupling strength refers to the non-magnetic PBE reference.
+The pristine o-\ce{B14} bilayer is semimetallic with PBE.
+For 2H-$\beta$-beryllene, the electron-phonon quantities refer to the structure relaxed with the D3 dispersion correction.
+The $\mathbb{Z}_2$ indices refer to the selected band subspaces and are conditional for the metallic structures.}
+\label{tab:conclusion_material_summary}
+\end{table}
+
 \subsection{Interfacial coupling in graphene-based heterostructures}
 
 Firstly, chapter~\ref{cha:project_bilayers} examines how an adjacent boron-containing layer modifies graphene.
@@ -122,10 +168,12 @@ The minimum sampled direct gaps are only \qty{1.13}{\milli\electronvolt} and \qt
 The relevant gaps lie above the Fermi level, and both neutral structures remain metallic.
 These results therefore identify conditional non-trivial subspaces in structures that remain metallic at neutral filling.
 The selected subspaces of $\beta$-beryllene and the hydrogen-functionalized structures give trivial indices, and for metallic systems these fixed subspaces again differ from an occupied insulating manifold.
+The indices of $\alpha$- and $\beta$-beryllene agree with the earlier classification~\cite{li2023coexistence}.
 
-The electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene.
+In addition to the earlier predictions for $\alpha$- and $\beta$-beryllene~\cite{li2023coexistence}, the electron-phonon calculations predict phonon-mediated superconductivity in trilayer cubic beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene.
 Trilayer cubic beryllene has the weakest coupling, $\lambda=0.46$, and an isotropic Migdal--Eliashberg transition temperature of \qty{3.7}{\kelvin}.
 2H-$\beta$-beryllene has the strongest coupling, $\lambda=1.40$, and the anisotropic Migdal--Eliashberg solution places its $T_{\mathrm{c}}$ at approximately \qty{31.7}{\kelvin}.
+The electron-phonon calculations of 2H-$\beta$-beryllene use a structure relaxed with the D3 dispersion correction, in which the soft mode is absent.
 For 1H-$\beta$-beryllene, the gap anisotropy raises $T_{\mathrm{c}}$ from \qty{11.6}{\kelvin} to approximately \qty{14.2}{\kelvin}.
 
 The optical response resolves changes beyond the metallic or semiconducting classification.
