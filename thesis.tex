@@ -59,14 +59,20 @@
 \usepackage{etoolbox}
 \usepackage{multirow}
 \usepackage{lmodern}
-%% monospace font: style/photonicocode.ttf (Photonico Code), metrics in style/photonicocode-t1.tfm
+%% monospace font: Photonico Code, style/photonicocode.ttf (Regular) and style/photonicocode-mediumlight.ttf (Medium Light),
+%% metrics in style/photonicocode-t1.tfm and style/photonicocode-mediumlight-t1.tfm
+%% \photonicocodescale: size relative to the surrounding text
+%% \photonicocodeweight: weight of normal text, photonicocode-mediumlight or photonicocode; bold text uses Regular
+\newcommand*{\photonicocodescale}{1.0}
+\newcommand*{\photonicocodeweight}{photonicocode-mediumlight}
 \pdfmapline{+photonicocode-t1 <style/T1-WGL4.enc <style/photonicocode.ttf}
+\pdfmapline{+photonicocode-mediumlight-t1 <style/T1-WGL4.enc <style/photonicocode-mediumlight.ttf}
 \DeclareFontFamily{T1}{photonicocode}{\hyphenchar\font=-1}
-\DeclareFontShape{T1}{photonicocode}{m}{n}{<-> style/photonicocode-t1}{}
-\DeclareFontShape{T1}{photonicocode}{m}{it}{<-> style/photonicocode-t1}{}
-\DeclareFontShape{T1}{photonicocode}{m}{sl}{<-> style/photonicocode-t1}{}
-\DeclareFontShape{T1}{photonicocode}{b}{n}{<-> style/photonicocode-t1}{}
-\DeclareFontShape{T1}{photonicocode}{bx}{n}{<-> style/photonicocode-t1}{}
+\DeclareFontShape{T1}{photonicocode}{m}{n}{<-> s*[\photonicocodescale] style/\photonicocodeweight-t1}{}
+\DeclareFontShape{T1}{photonicocode}{m}{it}{<-> s*[\photonicocodescale] style/\photonicocodeweight-t1}{}
+\DeclareFontShape{T1}{photonicocode}{m}{sl}{<-> s*[\photonicocodescale] style/\photonicocodeweight-t1}{}
+\DeclareFontShape{T1}{photonicocode}{b}{n}{<-> s*[\photonicocodescale] style/photonicocode-t1}{}
+\DeclareFontShape{T1}{photonicocode}{bx}{n}{<-> s*[\photonicocodescale] style/photonicocode-t1}{}
 \renewcommand{\ttdefault}{photonicocode}
 \usepackage{siunitx}
 \usepackage{placeins}
