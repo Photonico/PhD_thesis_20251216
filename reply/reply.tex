@@ -1,1 +1,241 @@
 % reply to reports
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{replyblue}{HTML}{0064b4}
+\newenvironment{reply}{\par\medskip\color{replyblue}}{\par\medskip}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+\begin{document}
+
+\textbf{Reply to Examiner Reports}
+
+\textbf{Candidate's Name:} Lu Niu\\
+\textbf{Thesis Title:} \textit{Exploring Quantum Properties of Light-Element Xenes: DFT Studies of the Electronic Structure and Optical Response for Boron and Beryllium Allotropes}
+
+I thank the examiners for their reports.
+I understand the outcome of the thesis is ``awarded the degree subject to corrections of the thesis to the satisfaction of the University.''
+
+Below, in blue text, the points raised are responded to, with an explanation of where changes have been made in the thesis.
+The examiners' text is given in black.
+Page numbers refer to the revised thesis, in which a new Chapter~4 on band topology has been added.
+The examiners' Chapters~4--7 are therefore now Chapters~5--8.
+
+\bigskip
+\textbf{Examiner 1}
+
+This thesis presents a substantial programme of first-principles research on light-element two-dimensional materials. It studies graphene-based boron heterostructures, boron allotropes, and pristine or hydrogen-functionalised beryllene, with attention to electronic structure, optical response, magnetism, superconductivity, stability, and topology. The topic is timely and the combination of structural and property calculations is potentially valuable for the design of new low-dimensional materials.
+
+The thesis contains original computational research. The candidate has published 2 papers (Chapters 4 and 5),and is preparing another paper (Chapter 6). The main contributions appear to be the study of graphene-based boron heterostructures, the predicted magnetic and superconducting properties of \textit{o}-B$_{14}$, and the proposed cubic trilayer beryllene structure. The candidate's individual contribution to the multi-author chapters should be stated more explicitly, and the revised thesis should distinguish genuinely new predictions from the characterisation of known structures.
+
+\begin{reply}
+Each research chapter now begins with a statement of my contribution relative to those of the co-authors (pages~115, 161, and~201).
+The chapters also state which results for known structures reproduce earlier calculations, for example the transition temperature of bulk \textit{o}-B$_{14}$ (page~180) and the stability and $\mathbb{Z}_2$ indices of $\alpha$- and $\beta$-beryllene (pages~216 and~223--224).
+\end{reply}
+
+\begin{enumerate}[leftmargin=*]
+
+\item The research scope and publication record are appropriate for a PhD, and the presentation is generally professional. The thesis-level research position is nevertheless not sufficiently clear: \textbf{the early literature review does not lead to a sharp research gap or central motivation. Chapters 2 and 3 together are also disproportionately long}, at approximately 100 pages, while still not giving the reader a \textbf{concise roadmap of the computational methods} (geometry optimization, phonon, magnetism, AIMD, superconductivity, topological property) used later. Substantial scientific and editorial corrections are therefore required.
+
+\begin{reply}
+In response to the above comment, the thesis has been modified in the following ways:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item The literature review has been improved by explaining the research gap and central motivation.
+This has been done in Chapter~1, Sections~1.2 and~1.4 (pages~2--11 and~13--14).
+\item To address the length, Chapters~2 and~3 have been reduced in size from 105 to 80 pages by allocating the general quantum-mechanical background and the macroscopic electrodynamics to the new Appendices~A and~B (pages~285--330).
+\item To provide a detailed explanation for the computational methods used in the thesis at the start of the thesis rather than later in the various chapters, new text has been added in Section~2.4 and Chapter~4 (pages~62--72 and~97--114) that explains in particular topological properties and how they are determined as well as calculation of the superconducting transition temperature of a material.
+\end{enumerate}
+\end{reply}
+
+\item The rest chapters look like hopping between different materials and there is a lack of relationship between them. More detailed comments are given in the context below. Chapter 1 provides useful background but reads more as a broad survey than as a focused argument for the thesis. \textbf{It should explain why graphene-based boron systems, boron phases, and beryllene belong to one thesis}, what unresolved question each chapter addresses, and how the studies collectively support one conclusion. The literature should be used critically to separate established experimental systems from theoretical proposals and to identify the research gap. \textbf{The motivation for calculating optical properties is also not sufficiently clear}: absorption, refractive index, reflectivity, and loss spectra are often presented as a standard set of outputs rather than as observables answering defined scientific questions. The introduction should also \textbf{briefly explain why topology is important} and what physical consequence is expected from a non-trivial $Z_2$ invariant, before introducing the parity calculation.
+
+\begin{reply}
+The above comment relates again to the literature review, which has been improved as described above.
+Specifically, Chapter~1 now addresses why graphene-based boron systems, boron phases, and beryllene, as light two-dimensional systems, form a cohesive topic of study, and what question each chapter addresses (Sections~1.1 and~1.4).
+It separates the established experimental systems from the theoretical proposals (Section~1.2.4).
+It also highlights why it is important to study the specific optical and topological properties, including the physical consequence of a non-trivial $\mathbb{Z}_2$ index (Section~1.3).
+These changes are on pages~1--2 and~10--14.
+Section~8.2 (pages~274--276) connects the conclusions of the three studies.
+\end{reply}
+
+\item Chapter 2 and 3 are very long and contain considerable formal background, but they do not provide a sufficiently concise and practical explanation of the computational methods used in the thesis. \textbf{The reader more needs a brief, method-oriented account} of geometry optimisation and convergence criteria, Brillouin-zone sampling and the choice of $k$-points, phonon calculations, AIMD, spin-polarised calculations and magnetic ordering, electron--phonon calculations and superconductivity, and spin--orbit coupling and topological analysis. These methods should be connected explicitly to the scientific questions in the later chapters. These chapters should be shortened and reorganised around the methods actually used.
+
+\begin{reply}
+Chapters~2 and~3 have been considerably shortened as noted above.
+Following the examiner's suggestion, a description of the density functional theory codes and of the calculations used in the thesis is now given in Section~2.4 (pages~62--72).
+It covers the methods listed by the examiner, apart from spin-orbit coupling and the topological analysis, which are described in Chapter~4 (pages~97--114).
+Each method is connected to its use in the research chapters.
+Since each system studied requires different k-points and energy cutoffs, these details are still provided in the related chapters.
+\end{reply}
+
+\item Chapter 4 is a useful but relatively incremental computational study. It addresses the lack of systematic knowledge about the electronic and optical properties of graphene--boron-based heterostructures. Its main contribution is mapping structure--property relationships and suggest optical/plasmonic tunability, rather than solving a major practical problem. The captions of Figures 4.29--4.36 are too short to be self-contained and should identify the panels, tensor components, line styles, PBE--HSE06 comparison, polarisation directions, units, and principal feature.
+
+\begin{reply}
+The captions of Figures~4.29 to~4.36, now Figures~5.29 to~5.36 (pages~152--159), have been changed following the examiner's suggestion to make it clear what the figures contain.
+Each caption now identifies the panels, tensor components, line styles, functionals, polarization directions, units, and principal features.
+\end{reply}
+
+\item Chapter 5 is stronger and more scientifically interesting. It asks how dimensionality and hydrogen functionalisation modify the properties of a complex boron phase, including magnetism, optical response, and superconductivity. This is a meaningful materials-design problem. However, the work remains predictive: the stability, superconductivity, and plasmon claims require careful qualification and are not experimentally demonstrated. This chapter is scientifically substantial and includes published work on \textit{o}-B$_{14}$, its magnetic states, optical response, and hydrogen terminated bilayer superconductivity. Cohesive energies, phonons, and a very short 5.5 ps AIMD trajectory establish energetic preference relative to selected references, dynamical stability, and short-time thermal persistence, but do not by themselves establish thermodynamic stability or synthesizability. The \textbf{small AFM--FM energy difference and inconsistent statements about negative phonon frequencies should be clarified.}
+
+\begin{reply}
+Indeed, there is a small energy difference of 20~meV per 14-atom cell between the AFM and FM configurations.
+Section~6.4.2.3 (page~177) now states that this is a zero-temperature energy comparison and that the magnetic ordering temperature requires a separate calculation.
+Regarding the ``negative phonon frequencies'', it should be written as ``imaginary phonon frequencies'', and this has been changed on the two occasions in the caption of Fig.~5.21, now Fig.~6.21 (page~195).
+The caption now gives numerical convergence and a physical instability as the two possible origins of these modes, in agreement with Section~6.4.2.2 (page~176).
+Sections~6.4.2.2, 6.4.3, and~6.4.4 (pages~176, 181, and~185) also qualify the stability, superconductivity, and plasmon claims.
+\end{reply}
+
+\item The monolayer is described as an \textbf{AFM semiconductor in one place and as metallic} in the optical discussion, so the electronic and magnetic state used for the optical calculation and its intraband treatment must be stated. The PBE--HSE06 difference should be explained: HSE06 can open a gap by reducing self-interaction and delocalisation errors, but it remains an approximation. Finally, the superconductivity workflow needs a concise reproducible explanation of how density-functional perturbation theory, Wannier interpolation, and EPW produce the phonons, electron--phonon matrix elements, $\alpha^2F(\omega)$, $\lambda$, $\omega_{\log}$, and the Allen--Dynes and anisotropic Migdal--Eliashberg values. The distinction between phonon stability and finite-temperature AIMD should be made clear.
+
+\begin{reply}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item The metallic versus AFM semiconductor conflict has been clarified in the updated thesis.
+Specifically, the AFM monolayer is a semiconductor with an HSE06 gap of 0.105~eV (page~177), whereas its optical spectra are calculated for the non-spin-polarized PBE state, which is metallic (Section~6.3, page~171).
+The spectra therefore contain only the interband response, as no separate Drude term is added (pages~171 and~183).
+The PBE--HSE06 difference is now explained in Section~2.3.2 (page~60).
+\item The theory and workflow for calculating the superconductivity, which includes density functional perturbation theory, the Wannier interpolation in EPW, and the Allen--Dynes and Migdal--Eliashberg theory, has been included in Section~2.4.5 (pages~69--72).
+Section~6.3 (pages~170--171) gives the settings used for \textit{o}-B$_{14}$.
+Further, the distinction between phonon stability and AIMD is explained in Section~2.4.3 (pages~66--67).
+\end{enumerate}
+\end{reply}
+
+\item Chapter 6 is potentially the most novel. It proposes a new cubic trilayer beryllene structure and explores whether elemental beryllium can support tunable electronic, optical, and topological properties. The main weaknesses are \textbf{that the method used to generate the new structure is unclear}, and the $Z_2$ claim needs justification because the phase is described as metallic.
+
+\begin{reply}
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item In this chapter, now Chapter~7, the approach used to identify the new structure is explained better by adding a short paragraph in Section~7.4.1 (page~214).
+\item The $\mathbb{Z}_2$ topological invariant determines whether the occupied Bloch states can be continuously deformed into those of an ordinary atomic insulator without closing the bulk band gap or breaking time-reversal symmetry.
+A material can be metallic overall while still having a well-defined $\mathbb{Z}_2$ topology for a particular group of bands, provided that a direct gap separates them from the higher bands at every wave vector.
+An explanation of this is now given in Section~1.3.2 (pages~12--13) and Chapter~4 (pages~97--114).
+For $\alpha$-beryllene and trilayer cubic beryllene, the minimum direct gaps are only 1.13 and 0.735~meV, so the indices are reported as conditional results (Section~7.4.5, pages~222--225).
+\end{enumerate}
+\end{reply}
+
+\item Details of how the new structure was constructed should be described. Stability and optical quantities should be reported with appropriate two-dimensional normalisation and with a clear distinction between dynamical stability, energetic preference, and experimental synthesizability.
+
+\begin{reply}
+The construction of the new structure is described in the previous response.
+The two-dimensional normalization was included in the calculation of the optical properties (see equation~(3.10), Table~3.1 on page~81, and Section~7.3 on page~212).
+Cohesive energies are given per atom and adsorption energies per hydrogen atom (pages~207--208).
+To provide a clearer distinction between the properties that the examiner highlights, the text has been improved to better explain these aspects.
+These alterations are made in Sections~7.4.2 and~7.4.3 (pages~215--220) and Section~8.3 (pages~277--278).
+\end{reply}
+
+\item Overall, the thesis contains substantial original research and is capable of reaching a professional doctoral standard, but the research gap, computational-methods overview, and scope of several scientific claims need to be clarified before acceptance.
+
+\end{enumerate}
+
+\bigskip
+\textbf{Examiner 2}
+
+This is a good PhD thesis, which I enjoyed reading. There is obviously a great deal of work that has gone into this thesis, and I believe there are important results generated throughout the study. Two chapters have already been published in peer reviewed journals, and a third chapter has been submitted, demonstrating the quality and originality of the research. Overall, this thesis represents a substantial body of work that makes a meaningful contribution to the field and is, in my opinion, of an appropriate standard for the award of a Doctor of Philosophy.
+
+There are some weaknesses in the thesis that require correction. These can be readily rectified and do not significantly affect the validity of the results or the conclusions of the work. In my view, the required corrections and can be adjudicated by the Chair of Examination.
+
+\begin{enumerate}[leftmargin=*]
+
+\item Chapter 1 provides a clear introduction to the systems under investigation and establishes the scientific background and motivation for the work. The principal weakness of this chapter, and indeed of the thesis as a whole, is \textbf{the absence of a dedicated and comprehensive literature review}. While relevant background information is provided, the thesis would benefit significantly from a more thorough critical review of previous research in the area. The candidate should include a discussion of the key studies that have been undertaken on related two-dimensional boron, and beryllium-based materials, highlighting the findings of previous researchers and identifying the gaps in knowledge that motivate the present work. Such a review should also discuss the various theoretical and computational approaches that have been employed in the literature, including the levels of theory used successfully to predict properties of similar systems.
+
+\begin{reply}
+Taking the examiner's comment, a dedicated and comprehensive literature review has been included in Chapter~1, Section~1.2 (pages~2--11).
+It discusses the key studies of two-dimensional boron- and beryllium-based materials, the gaps in knowledge that motivate each research chapter, and the computational approaches and levels of theory used in the literature (Section~1.2.3, pages~8--10).
+Each chapter had its own literature review in the introduction section, but the examiner's comment that an overall literature review is needed at the start of the thesis is appreciated.
+\end{reply}
+
+\item Chapters 2 and 3 give almost textbook version of the theoretical framework and computational methodologies employed throughout the thesis. The discussion of density functional theory (DFT) and the computational approaches adopted is generally clear and provides a suitable foundation for the investigations presented in later chapters. There are certain sections that need to be rectified -- From page 100 onwards, optical properties of $\alpha$-beryllene and $\beta$-beryllene are discussed as examples within the methodology chapter. While the use of examples to illustrate particular concepts is helpful, \textbf{the source of the results should be clearly identified}. If the results are generated as part of the present thesis, an appropriate statement and cross reference should be provided. If they are taken from published literature, the relevant citation should be included.
+
+\begin{reply}
+The optical properties of $\alpha$-beryllene and $\beta$-beryllene are from my own calculations, presented in Chapter~7.
+This is now made clear in the captions of Figures~3.1--3.6 (pages~82--96).
+\end{reply}
+
+\item Chapter 4, investigates graphene, borophene, and various two-dimensional boron carbide systems, together with heterostructures formed by combining them. The chapter presents a thorough examination of the structural stability, electronic properties, and optical response of these materials using DFT, GGA-PBE and HSE06 hybrid functionals. By comparing the predictions of the two levels of theory, the chapter provides increased confidence in the reported trends and conclusions. This chapter has already been published in a peer-reviewed journal, is generally well written and presents a thorough investigation of the materials considered. However, as this chapter is based on a multi-author publication, a \textbf{clear statement should be included at the beginning of the chapter} indicating that the work has been published and outlining the specific contributions of the PhD candidate relative to those of the co-authors.
+
+\begin{reply}
+Following the examiner's suggestion, a clear statement has been included at the beginning of this chapter, now Chapter~5 (page~115).
+It states that the chapter is based on the article published in \textit{Nanomaterials} and outlines my contribution relative to those of the co-authors.
+Chapters~6 and~7 begin with corresponding statements (pages~161 and~201).
+\end{reply}
+
+\item A weakness of Chapter 4 relates to the quality of several figures in the thesis. They are difficult or impossible to read in the printed version of the thesis. All figures should remain legible to the reader without requiring access to the published article. In particular, several multi-panel figures contain text, axis labels, and legends that are too small to be read clearly. For example, in Figures 4.29 and 4.30, the legends are largely illegible. The candidate should revise these figures by increasing the font sizes, enlarging the individual panels, or splitting the figures into multiple figures where necessary.
+
+\begin{reply}
+Following the examiner's suggestion, these figures, now Figures~5.29--5.36, have been enlarged (pages~152--159).
+Figures~5.29--5.31 are now printed at the full text width, with all text, including the legends, in larger fonts.
+Figures~5.32--5.36 now show only the three diagonal components in panels~(a)--(c), which gives larger panels and a single legend.
+The fonts of the multi-panel Figures~4.10 and~4.11, now Figures~5.10 and~5.11 (pages~133--134), have also been enlarged.
+\end{reply}
+
+\item Chapter 5 investigates penta-bipyramidal boron-based systems and their hydrogenterminated counterparts using DFT. The study also employs both the GGA-PBE and HSE06 hybrid functionals, allowing a comprehensive assessment of the structural, electronic, magnetic, and superconducting properties of these materials. This chapter has also been published and represents a significant contribution to the understanding of these emerging boron-based materials. A minor issue relates to Figure 5.1. This figure is important for understanding the structures and systems investigated in the chapter; \textbf{The figure should be referenced and presented earlier in the methodology or introductory} section of the chapter, before the associated discussion of the computational models to provide readers with the necessary structural context before detailed results are presented.
+
+\begin{reply}
+Following the examiner's suggestion, Figure~5.1, renumbered Figure~6.1 (page~166), is now referenced earlier in the chapter, specifically in the Introduction following the text that discusses the penta-bipyramidal structure for the first time (page~165).
+\end{reply}
+
+\item Chapter 6 investigates several beryllium phases, including $\alpha$-beryllene, $\beta$-beryllene, and cubic trilayer beryllene structure, as well as their hydrogen-functionalised counterparts. The primary focus is on the optical properties of these materials. While the results presented are interesting and provide useful information regarding the optical response of these systems, this chapter appears somewhat less comprehensive than Chapters 4 and 5. Weaknesses of Chapter 6:
+
+\begin{enumerate}[label=\arabic*.,leftmargin=*]
+
+\item Unlike Chapters 4 and 5, which employ both GGA-PBE and HSE06 functionals, Chapter 6 relies solely on GGA-PBE calculations. The absence of HSE06 results limits direct comparison with earlier chapters and weakens confidence in the reported optical properties. A justification for excluding HSE06 calculations should be provided.
+
+\begin{reply}
+The reason we did not employ HSE06 for the optical calculations is that all structures in the optical comparison, except 2H-$\alpha$-beryllene, are metallic.
+HSE06 brings a significant improvement in the accuracy of the electronic band gap and associated properties of semiconducting or insulating materials.
+Therefore, we expect the results obtained from GGA-PBE to be sufficiently accurate for the comparison between the metallic structures.
+HSE06 is now used to test the band gaps and band order (Section~7.3, page~209).
+The parity eigenvalues used for the $\mathbb{Z}_2$ indices are unchanged with HSE06 (page~224).
+For 2H-$\alpha$-beryllene, HSE06 increases the indirect gap from 4.84 to 6.00~eV (page~220).
+Section~8.3 (page~276) discusses the resulting uncertainty in its absorption onset, and Section~8.4.3 (page~280) proposes quasiparticle and Bethe--Salpeter calculations to locate it.
+\end{reply}
+
+\item Although convergence tests appear to have been performed and included in the supplementary material, they are not adequately discussed in the chapter. A brief explanation of the convergence procedure and the basis for selecting the k-point meshes should be included in the methods section, without expecting the readers to interpret the graphs by themselves.
+
+\begin{reply}
+Following the examiner's suggestion, an explanation and description of the performed convergence tests is now given in the methods section, Section~7.3 (page~206).
+With the selected k-point meshes, the cohesive energies lie within 0.3~meV per atom of those obtained with the densest meshes tested.
+\end{reply}
+
+\item In Figures 6.2 and 6.3, both green and blue spheres are used to represent beryllium atoms, but the significance of the different colours is not explained in either the figure captions or the main text.
+
+\begin{reply}
+Following the examiner's suggestion, the significance of the different coloured beryllium atoms is now given in the caption of each figure that contains these two colours (Figures~7.2 and~7.3, pages~213 and~215).
+\end{reply}
+
+\item The rationale for hydrogenating some beryllium phases while excluding the trilayer phase is not provided.
+
+\begin{reply}
+Following the examiner's note, an explanation that hydrogenating the trilayer was considered, but the resulting structures were dynamically unstable, is provided in Section~7.4.1 (page~214).
+\end{reply}
+
+\item AIMD simulations are presented to support structural stability; however methodological details, including the simulation ensemble, temperature, time step, and total simulation time, are omitted.
+
+\begin{reply}
+The AIMD simulations were done at a temperature of 300~K, the time step was 0.5~fs, the total simulation time was 5.5~ps, and the ensemble was the canonical (NVT) ensemble with a Nos\'e--Hoover thermostat.
+These details are now given in the methods section, Section~7.3 (page~207).
+\end{reply}
+
+\end{enumerate}
+
+\item Chapter 7, the conclusions chapter, should provide a \textbf{more critical assessment of the limitations} of the research. At present, the chapter mainly summarises the findings obtained from the chapters. The limitations of the theoretical approaches employed, the assumptions inherent in the calculations, and any uncertainties associated with the predictions need to be added. Furthermore, the candidate should clearly distinguish between systems that have already been experimentally found and characterised and those that remain purely theoretical predictions.
+
+\begin{reply}
+Following the examiner's comment, in Chapter~7, now Chapter~8, more details on the limitations of the theoretical approaches are given in Section~8.3 (pages~276--278), along with making it clear which systems have been experimentally observed and which are predictions (pages~277--278).
+\end{reply}
+
+\item The future work section simply lists potential theoretical directions for further study, the candidate should discuss specific improvements that could be expected from such studies.
+
+\begin{reply}
+Following the examiner's suggestion, in addition to the future potential directions, the specific improvements and new understanding that would result from them are given in Section~8.4 (pages~278--283).
+\end{reply}
+
+\end{enumerate}
+
+\textbf{General Comments}
+
+The thesis is generally well written and logically structured. The candidate demonstrates a strong understanding of computational materials science and first principles calculations.
+
+\end{document}
