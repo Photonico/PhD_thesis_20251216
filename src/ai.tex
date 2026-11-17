@@ -3,15 +3,19 @@
 % \addcontentsline{toc}{chapter}{Statement on the Use of Generative Artificial Intelligence}
 
 % \begin{sloppypar}
+% AI icons: 72 * 72 pt PDFs in figures_ch1 (DeepSeek 84 * 72);
+% [0.75em][0.25em] keeps the line spacing unchanged
+\newcommand*{\aiicon}[1]{\raisebox{-0.20em}[0.75em][0.25em]{\includegraphics[height=1.40em]{figures_ch1/#1.pdf}}}
+
 During the preparation of this thesis, the candidate used
-\hexcolor{#506ec8}{\simpleicon{openai}}~\href{https://openai.com/codex/}
+\thinspace\aiicon{openai}~\href{https://openai.com/codex/}
 {\hexcolor{#5069af}{\texttt{Codex}}} by OpenAI
-and \hexcolor{#D76946}{\simpleicon{claude}}~\href{https://claude.ai/}
+and \thinspace\aiicon{claude}~\href{https://claude.ai/}
 {\hexcolor{#c85f3c}{\texttt{Claude}}} by Anthropic
 to polish the language, revise individual sentences, and troubleshoot and format \LaTeX~code.
 The candidate also introduced
-\raisebox{-0.1em}[0.75em][0.05em]{\includegraphics[height=0.9em]{figures_ch1/deepseek.pdf}}~\href{https://www.deepseek.com/}{\hexcolor{#4664f0}{\texttt{DeepSeek}}} by High-Flyer
-and \hexcolor{#D45aff}{\simpleicon{googlegemini}}~\href{https://gemini.google.com/}
+\thinspace\aiicon{deepseek}~\href{https://www.deepseek.com/}{\hexcolor{#4664f0}{\texttt{DeepSeek}}} by High-Flyer
+and \thinspace\aiicon{gemini}~\href{https://gemini.google.com/}
 {\hexcolor{#aa55f0}{\texttt{Gemini}}} by Google to refine a few sentences and seek general feedback.
 
 All AI-assisted text and code suggestions were reviewed and edited by the candidate.
@@ -19,3 +23,8 @@ The candidate takes full responsibility for the research content, results, inter
 
 % For further information, see \href{https://openai.com/codex/}{\texttt{openai.com/codex}} for \texttt{Codex}
 % and \href{https://claude.ai/}{\texttt{claude.ai}} for \texttt{Claude}.
+
+% Simple Icons
+% openai: simpleicon{openai}
+% claude: simpleicon{claude}
+% gemini: simpleicon{googlegemini}
