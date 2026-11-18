@@ -1,8 +1,27 @@
 # Reproducing the optical figures
 
+## Source-project synchronization on 2026-11-18
+
+The six PDFs are now copies of the thesis versions written by `0.0_thesis_demo.ipynb`
+in `../H-Beryllene_20250718` (run with `figure_version("thesis")`), the same files that
+Project 3 uses:
+
+| Chapter 3 | `../H-Beryllene_20250718/figures/` |
+| --- | --- |
+| `3.1_dielectric.pdf` | `dielectric_alpha-beta_thesis.pdf` |
+| `4.1_absorption.pdf` | `optics_alpha-beta_absorption_thesis.pdf` |
+| `4.2_refractive.pdf` | `optics_alpha-beta_refractive_thesis.pdf` |
+| `4.3_extinction.pdf` | `optics_alpha-beta_extinction_thesis.pdf` |
+| `4.4_reflectivity.pdf` | `optics_alpha-beta_reflectivity_thesis.pdf` |
+| `4.5_energy-loss.pdf` | `optics_alpha-beta_energy-loss_thesis.pdf` |
+
+Subplot titles sit in rounded boxes inside the upper-left corner of each panel and the
+legends sit in a corner. The scripts below reproduce the earlier layout, with titles
+above the panels.
+
 ## Source-project synchronization on 2026-09-21
 
-The current PDFs were subsequently synchronized from the repaired calculation
+The PDFs were subsequently synchronized from the repaired calculation
 project `../H-Beryllene_20250718/exported_figures/`. That project's notebook-based
 pipeline is the canonical generator for all 34 A/B/C figures, including the bulk,
 cubic, hydrogenated and convergence comparisons. See `../optics_update.md` and
