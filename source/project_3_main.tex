@@ -182,7 +182,7 @@ For 2H-$\alpha$-beryllene, we sample 71 points along $\Gamma$--$\mathrm{K}$--$\m
 For the \texttt{Quantum ESPRESSO} calculations, we use the PBE relaxed structures~\cite{giannozzi2017advanced,giannozzi2009quantum}, with a separate relaxation for the phonon and electron-phonon calculations of 2H-$\beta$-beryllene.
 We use optimized norm-conserving Vanderbilt pseudopotentials that treat the Be $1s$ states as valence states~\cite{hamann2013optimized}.
 The plane-wave cutoffs are \qty{80}{Ry} for the wave functions and \qty{640}{Ry} for the charge density.
-We use Marzari--Vanderbilt smearing of \qty{0.02}{Ry} and a two-dimensional Coulomb cutoff with at least about \qty{15}{\angstrom} of vacuum~\cite{marzari1999thermal,sohier2017density}.
+We use Marzari--Vanderbilt smearing of \qty{0.02}{Ry} and a two-dimensional Coulomb cutoff with a vacuum of about \qty{15}{\angstrom} or larger~\cite{marzari1999thermal,sohier2017density}.
 The self-consistent k-point meshes are $56 \times 56 \times 1$ for trilayer cubic beryllene, $52 \times 52 \times 1$ for 2H-$\alpha$-beryllene, $46 \times 46 \times 1$ for 2H-$\beta$-beryllene, and $57 \times 52 \times 1$ for 1H-$\beta$-beryllene in the input lattice-vector order.
 Table~\ref{tab:proj3_qe_structures} lists these structures.
 For the parity calculations, we use fully relativistic projector augmented wave pseudopotentials with spin-orbit coupling and cutoffs of \qty{90}{Ry} and \qty{720}{Ry}~\cite{dalcorso2014pseudopotentials}.
@@ -191,6 +191,7 @@ For the Wilson loops~\cite{yu2011equivalent}, we build models with \texttt{Wanni
 We calculate the phonons of trilayer cubic beryllene, 2H-$\beta$-beryllene, and 1H-$\beta$-beryllene by density functional perturbation theory on a $12 \times 12 \times 1$ q-point mesh~\cite{baroni2001phonons}.
 We use \texttt{EPW} for the electron-phonon calculations~\cite{lee2023electron,giustino2007electron}.
 For 2H-$\beta$-beryllene, we include D3 with Becke--Johnson damping and use the structure relaxed with this correction, with a lattice constant of \qty{2.53}{\angstrom}.
+The PBE structure has an imaginary harmonic mode in section~\ref{3_dynamical_stability_and_phonon_dispersion}, whereas the electron-phonon expressions in section~\ref{subsec:method_elph} assume stable phonon modes.
 We initialize the Wannier functions with Be $s$ and $p$ and H $s$ projections and exclude the Be $1s$ bands.
 We interpolate the electronic states and phonon perturbations from coarse $24 \times 24 \times 1$ k-point and $12 \times 12 \times 1$ q-point meshes onto fine $80 \times 80 \times 1$ meshes.
 We compare the results with calculations on $40 \times 40 \times 1$ meshes.
@@ -630,6 +631,7 @@ The product is $-1$, giving $\nu=1$.
 The direct gap to band 3 is smallest at the spin-orbit-gapped Dirac point near $\mathrm{K}$, where it is \qty{1.13}{\milli\electronvolt}.
 In $\beta$-beryllene, the product is $+1$, giving $\nu=0$ for the lowest four bands.
 The smallest gap to band 5 is \qty{0.898}{\milli\electronvolt} at $\mathrm{K}$.
+These two indices agree with the previous calculations~\cite{li2023coexistence}.
 
 In trilayer cubic beryllene, the parity products at $\Gamma$ and $\mathrm{M}$ have opposite signs, giving $\nu=1$ for the lowest six bands.
 At $\mathrm{M}$, the next Kramers pair lies \qty{1.3}{\milli\electronvolt} above band 6 and has the same parity as the third pair.
