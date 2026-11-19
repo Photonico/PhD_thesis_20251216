@@ -9,7 +9,7 @@
 
 ### A1. 章的开头: 定位, 物理动作链, 方法路线
 
-`src/fundamentals_b.tex`, 第 5 至 9 行:
+`source/fundamentals_b.tex`, 第 5 至 9 行:
 
 ```latex
 We continue our discussion of the fundamentals in this chapter, where we introduce the linear optical response of matter.
@@ -25,7 +25,7 @@ We therefore use linear response theory to connect the electromagnetic field to 
 
 ### A2. 节的开头: 回扣上一节, 列出本节路线
 
-`src/fundamentals_b.tex`, 第 63 至 75 行:
+`source/fundamentals_b.tex`, 第 63 至 75 行:
 
 ```latex
 The previous section introduced the constitutive relations for optical response.
@@ -48,7 +48,7 @@ Therefore, we advance from the general constitutive picture to a response functi
 
 ### A3. 先讲物理动作, 再写公式
 
-`src/fundamentals_b.tex`, 第 86 至 102 行:
+`source/fundamentals_b.tex`, 第 86 至 102 行:
 
 ```latex
 Under a monochromatic electric field, part of the polarization stays in phase with the field,
@@ -76,7 +76,7 @@ It describes how the medium polarizes with the field and therefore how it stores
 
 ### A4. 先一般, 后近似
 
-`src/appendix_electrodynamics.tex`, 第 138 至 159 行:
+`source/appendix_electrodynamics.tex`, 第 138 至 159 行:
 
 ```latex
 Firstly, we start from the most general linear-response form.
@@ -111,7 +111,7 @@ Therefore, it reduces to the time-domain constitutive relation:
 
 ### A5. 命名新量
 
-`src/fundamentals_a.tex`, 第 881 至 890 行:
+`source/fundamentals_a.tex`, 第 881 至 890 行:
 
 ```latex
 For comparison, the kinetic energy functional $T[n]$ appearing in the Hohenberg--Kohn functional $E_\mathrm{HK}[n]$ is evaluated on the minimizing interacting many-body state $\Psi[n]$ that yields the same density.
@@ -130,7 +130,7 @@ We name it the kinetic-correlation functional.
 
 ### A6. 叙述一个计算流程
 
-`src/fundamentals_a.tex`, 第 1544 至 1549 行:
+`source/fundamentals_a.tex`, 第 1544 至 1549 行:
 
 ```latex
 Next, the Hartree equations already demonstrate the basic one-particle structure of a self-consistent field theory.
@@ -145,13 +145,13 @@ and repeat these steps until convergence is reached.
 
 ### A7. 用作用路径解释公式
 
-`src/fundamentals_a.tex`, 第 1512 行, 解释逆 Kohn--Sham 迭代的更新公式:
+`source/fundamentals_a.tex`, 第 1512 行, 解释逆 Kohn--Sham 迭代的更新公式:
 
 ```latex
 Accordingly, the Kohn--Sham potential is increased where the density is overestimated and decreased where it is underestimated.
 ```
 
-`src/fundamentals_b.tex`, 第 412 至 414 行, 解释静态极限的积分权重:
+`source/fundamentals_b.tex`, 第 412 至 414 行, 解释静态极限的积分权重:
 
 ```latex
 Next, the factor $1/\omega'$ gives higher weight to low-energy spectral contributions.
@@ -163,7 +163,7 @@ Therefore, the static limit represents an accumulated response over the full abs
 
 ### A8. 小节的结尾
 
-`src/fundamentals_b.tex`, 第 135 至 140 行:
+`source/fundamentals_b.tex`, 第 135 至 140 行:
 
 ```latex
 At this stage, we arrive at the complex dielectric function as the central response quantity for discussing optical performance.
@@ -180,7 +180,7 @@ We now turn to the microscopic origin of the imaginary part $\varepsilon_2(\omeg
 
 ### A9. 故事引子, 只用于章或附录的第一段
 
-`src/appendix_quantum.tex`, 第 18 至 25 行:
+`source/appendix_quantum.tex`, 第 18 至 25 行:
 
 ```latex
 Imagine that we are watching the evolution of electrons and atoms as a microscopic performance.
@@ -198,7 +198,7 @@ In this new framework, the Schrödinger equation plays the central role.
 
 ### A10. 短句定调
 
-`src/appendix_electrodynamics.tex`, 第 21 至 22 行:
+`source/appendix_electrodynamics.tex`, 第 21 至 22 行:
 
 ```latex
 Therefore, before introducing the dielectric function, we need a language that describes both the applied field and the feedback of matter to that field.
@@ -209,7 +209,7 @@ That language is electrodynamics.
 
 ### A11. 带名称的方程组
 
-`src/appendix_electrodynamics.tex`, 第 44 至 56 行:
+`source/appendix_electrodynamics.tex`, 第 44 至 56 行:
 
 ```latex
 \begin{equation}
@@ -229,7 +229,7 @@ That language is electrodynamics.
 
 ### A12. whereas 对照对
 
-`src/fundamentals_b.tex`, 第 557 至 558 行:
+`source/fundamentals_b.tex`, 第 557 至 558 行:
 
 ```latex
 The refractive index determines the phase evolution,
@@ -240,7 +240,7 @@ whereas the extinction coefficient describes the attenuation of the wave amplitu
 
 ### B1. 防御性否定句改为肯定句
 
-原文, `src/project_3_main.tex`, 第 1011 至 1018 行:
+原文, `source/project_3_main.tex`, 第 1011 至 1018 行:
 
 ```latex
 For $\beta$-beryllene,
@@ -287,7 +287,7 @@ The broadening of \qty{0.1}{\electronvolt} enters the present spectra as a numer
 
 ### B4. 重复的公式改为引用
 
-原文, `src/appendix_electrodynamics.tex`, 第 364 至 371 行, 再次显示了第 199 至 203 行已经定义的 $\varepsilon_{\alpha\beta}=\delta_{\alpha\beta}+\chi_{\alpha\beta}$:
+原文, `source/appendix_electrodynamics.tex`, 第 364 至 371 行, 再次显示了第 199 至 203 行已经定义的 $\varepsilon_{\alpha\beta}=\delta_{\alpha\beta}+\chi_{\alpha\beta}$:
 
 ```latex
 We then express the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ via the electric susceptibility tensor $\chi_{\alpha\beta}(\omega)$~\cite{...}:
@@ -310,7 +310,7 @@ The dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$ then follows from the 
 
 ### B5. 分号与 "not merely" 改为两句肯定句
 
-原文, `src/fundamentals_a.tex`, 第 79 行:
+原文, `source/fundamentals_a.tex`, 第 79 行:
 
 ```latex
 This is not merely a change of notation; it marks the conceptual compression from a function of $3N$ variables, $\Psi_0(\vec{r}_1,\cdots,\vec{r}_N\,)$, to a function of only three spatial variables, $n(\vec{r}\,)$, which is the cornerstone of the practical formulation of DFT.

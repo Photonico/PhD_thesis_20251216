@@ -1,40 +1,24 @@
 {
-  "latex-workshop.latex.outDir": ".output",
+  "latex-workshop.latex.build.fromFolder": ".",
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/.output",
+  "latex-workshop.latex.auxDir": "%WORKSPACE_FOLDER%/.output/.build",
   "latex-workshop.latex.recipe.default": "first",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk-pdflatex",
-      "tools": ["latexmk-pdflatex"]
+      "tools": [
+        "latexmk-pdflatex"
+      ]
     }
   ],
-  // "latex-workshop.latex.tools": [ //macos
-  //   {
-  //     "name": "latexmk-pdflatex",
-  //     "command": "latexmk",
-  //     "args": [
-  //       "-synctex=1",
-  //       "-interaction=nonstopmode",
-  //       "-file-line-error",
-  //       "-pdf",
-  //       "-outdir=%OUTDIR%",
-  //       "%DOC%"
-  //     ],
-  //     "env": {
-  //       "PATH": "/Library/TeX/texbin:/usr/bin:/bin:/usr/sbin:/sbin" 
-  //     }
-  //   }
-  // ],
-  "latex-workshop.latex.tools": [ // windows
+  "latex-workshop.latex.tools": [
     {
       "name": "latexmk-pdflatex",
       "command": "latexmk",
       "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "-outdir=%OUTDIR%",
-        "%DOC%"
+        "-r",
+        "source/.latexmkrc",
+        "%RELATIVE_CWD_DOC%.tex"
       ]
     }
   ],
@@ -46,10 +30,13 @@
     "*.blg",
     "*.fdb_latexmk",
     "*.fls",
-    "*.log",
+    "*.lof",
+    "*.lot",
     "*.out",
-    "*.toc",
     "*.run.xml",
-    "*.synctex.gz"
+    "*.toc"
+  ],
+  "latex-workshop.latex.texDirs": [
+    "%WORKSPACE_FOLDER%"
   ]
 }

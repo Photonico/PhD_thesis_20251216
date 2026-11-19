@@ -21,10 +21,10 @@ description: >-
 
 风格语料 (作者逐字写成, 经导师验收):
 
-- `src/fundamentals_a.tex`, 第 2 章, DFT.
-- `src/fundamentals_b.tex`, 第 3 章, 线性光学响应.
-- `src/appendix_quantum.tex`, 附录 A.
-- `src/appendix_electrodynamics.tex`, 附录 B.
+- `source/fundamentals_a.tex`, 第 2 章, DFT.
+- `source/fundamentals_b.tex`, 第 3 章, 线性光学响应.
+- `source/appendix_quantum.tex`, 附录 A.
+- `source/appendix_electrodynamics.tex`, 附录 B.
 
 合计约 23,000 词, 335 个行间公式.
 

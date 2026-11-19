@@ -52,7 +52,7 @@ Lu 的主要问题是重复路标和释义：pp35–45 多次重述辅助体系�
 
 **6. 代码规范：Lu 已有可复用工作流，工程规范仍分层。**
 
-**LaTeX 源码：** 章节与 SI 分文件、常用宏集中，描述性标签、正体下标、`\qty` 和 `\eqref` 提高可维护性（[主文件](../thesis.tex#L407)、[符号示例](../src/fundamentals_a.tex#L906)）。但主文件与类文件都定义章节样式，存在多层覆盖；重复宏包、旧 `style/bib.sty` 与 biblatex 并存，增加维护负担（[导言区](../thesis.tex#L33)、[旧引用定义](../style/bib.sty#L10)）。标签体系和一句一行习惯尚未完全统一。这些是源码整理问题，不能据此断言成品有错。
+**LaTeX 源码：** 章节与 SI 分文件、常用宏集中，描述性标签、正体下标、`\qty` 和 `\eqref` 提高可维护性（[主文件](../source/thesis.tex#L407)、[符号示例](../source/fundamentals_a.tex#L906)）。但主文件与类文件都定义章节样式，存在多层覆盖；重复宏包、旧 `style/bib.sty` 与 biblatex 并存，增加维护负担（[导言区](../source/thesis.tex#L33)、[旧引用定义](../style/bib.sty#L10)）。标签体系和一句一行习惯尚未完全统一。这些是源码整理问题，不能据此断言成品有错。
 
 **Python 分析：** `vmatplot` 已复用公共绘图和转换函数；新 [regenerate_optics.py](../figures_ch3/regenerate_optics.py#L29) 固定输入 commit/SHA256、记录软件版本与输出哈希，[verify_optics.py](../figures_ch3/verify_optics.py#L157) 对曲线和残差作专项验证。旧库同时保留 alpha/beta/dev/backup，多处关闭 pylint 检查，部分模块很长；本次未找到统一依赖与格式化配置。旧 [linear_optical_properties.py](../vmatplot/linear_optical_properties.py#L28) 将普通 Planck 常数数值命名为 `hbar`，也提示物理量名称和单位需要统一；这里未追溯其调用链来判断图值。
 
@@ -78,7 +78,7 @@ Lu 第 8.2–8.4 节的综合、限制与后续问题比 Ollie 的简短结尾�
 
 ## deepseek 4.1 flash
 
-依据：`src/` 编译出的 `.output/thesis.pdf`（420 页）与 `.agents/ollie.pdf`（224 页），以及全文抽取后的统计（LaTeX 命令剥离、按章切分）。页码为印刷页；PDF 物理页分别 +44 与 +12。未重跑任何计算，关于"结果是否成立"的判断只针对论文自身的论述与呈现。
+依据：`source/` 编译出的 `.output/thesis.pdf`（420 页）与 `.agents/ollie.pdf`（224 页），以及全文抽取后的统计（LaTeX 命令剥离、按章切分）。页码为印刷页；PDF 物理页分别 +44 与 +12。未重跑任何计算，关于"结果是否成立"的判断只针对论文自身的论述与呈现。
 
 **总判断：Ollie 的论文在一个具体问题上做到了可被实验采纳；Lu 的论文在一个方向上把第一性原理工具箱全部打开。前者赢在叙事与外部锚点，后者赢在技术广度、严谨度与工程完成度。Ollie 的失分几乎都是可修的（排版、语法、参考文献）；Lu 的失分要动结构（三章缝合、缺实验对标）。**
 
@@ -198,7 +198,7 @@ Lu：*Nanomaterials* 14, 1659 (2024，MDPI)、*Phys. Rev. Materials* 10, 074001 
 
 #### 9.1 Conclusion and Outlook 章：还能放什么
 
-诊断（读 `src/conclusion.tex` 全部 353 行）：这一章的**防守**已经很强——§8.2 的五条连接、§8.3 的七段 limitations、正文四处 "conditional" 措辞，都是答辩资产，比 Ollie 的四页 Outlook 强得多。缺的是**进攻**：
+诊断（读 `source/conclusion.tex` 全部 353 行）：这一章的**防守**已经很强——§8.2 的五条连接、§8.3 的七段 limitations、正文四处 "conditional" 措辞，都是答辩资产，比 Ollie 的四页 Outlook 强得多。缺的是**进攻**：
 
 - §8.1 用约 2 000 词逐条复述三章各自的结论，委员想横向比较仍需自己翻三章；
 - 第一章 §1.4 提的三个研究问题，正文没有一处逐条回答；
