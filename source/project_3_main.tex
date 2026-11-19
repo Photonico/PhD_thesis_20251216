@@ -71,7 +71,7 @@ Section~\ref{3_supplementary} provides the convergence tests and additional resu
 We perform density functional theory calculations with the Vienna Ab initio Simulation Package (\texttt{VASP})~\cite{kresse1993ab,kresse1994ab,kresse1996efficiency,kresse1996efficient}.
 We describe the electron-ion interaction with the projector augmented wave method~\cite{kresse1999ultrasoft}.
 For exchange and correlation, we use the Perdew--Burke--Ernzerhof (PBE) generalized gradient approximation~\cite{perdew1996generalized}.
-The \texttt{VASP} structural relaxations, total energies, reported phonon spectra, and molecular dynamics simulations use PBE without a dispersion correction.
+Unless stated otherwise, the \texttt{VASP} structural relaxations, total energies, reported phonon spectra, and molecular dynamics simulations use PBE without a dispersion correction.
 We include the D3 dispersion correction with Becke--Johnson damping in the PBE band calculations without spin-orbit coupling~\cite{becke2005density,grimme2010consistent,grimme2011effect}.
 At a fixed geometry, this correction changes the total energy and leaves the Kohn--Sham eigenvalues unchanged.
 We calculate these bands non-self-consistently.
@@ -100,7 +100,9 @@ The force calculations use Gaussian smearing of \qty{0.05}{\electronvolt} and an
 For the metallic two-dimensional phases, the supercell meshes correspond to approximately $65 \times 65$ k points per unit cell.
 The relaxed cells of $\alpha$-beryllene and 2H-$\alpha$-beryllene deviate from hexagonal symmetry by up to \qty{1e-4}{\angstrom}.
 We use a symmetry tolerance of \qty{1e-3}{\angstrom} to recover equivalence among the supercell images used in the interpolation.
-We include D3 in the preliminary phonon screening and use uncorrected PBE for the finite-displacement dispersions reported here.
+For 2H-$\beta$-beryllene, we also calculate the dispersion with D3 and Becke--Johnson damping, using the structure relaxed with this correction in table~\ref{tab:proj3_qe_structures}.
+This calculation uses a $12 \times 12 \times 1$ supercell with a height of \qty{23.8}{\angstrom} and a $\Gamma$-centred $5 \times 5 \times 1$ k-point mesh.
+We include D3 in the preliminary phonon screening and use uncorrected PBE for the other finite-displacement dispersions reported here.
 We use frozen-phonon calculations to examine the soft mode of 2H-$\beta$-beryllene in section~\ref{3_supplementary}.
 
 We examine the hydrogen-functionalized structures at finite temperature with \textit{ab initio} molecular dynamics (AIMD).
@@ -340,19 +342,36 @@ Full anharmonic stability also depends on the coupling between phonon modes.
 Neither the bare susceptibility nor the nesting function peaks at the soft-mode wave vector.
 Table~\ref{tab:proj3_soft_mode} and figure~\ref{fig:proj3_nesting} give the frozen-phonon and nesting results.
 
+Figure~\ref{fig:proj3_phonon_2H_beta_d3} compares the dispersions of 2H-$\beta$-beryllene without and with the D3 dispersion correction.
+At the PBE soft-mode wave vector, \qty{80}{\percent} of the way from $\Gamma$ to $\mathrm{M}$, the lowest frequency is \qty{4.9}{\tera\hertz}.
+Along the path, imaginary frequencies of up to $0.46\mathrm{i}$~\unit{\tera\hertz} appear only in the interpolated acoustic branches near $\Gamma$.
+The D3 correction therefore removes the soft mode at this wave vector.
+
 \begin{figure}[!htbp]
 \centering
 \begin{tabular}{@{}cc@{}}
-    \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon_cubic-beryllene-trilayer_thesis.pdf}}%
-    &\adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon_2H-alpha-beryllene_thesis.pdf}}%
-    \\\adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon_1H-beta-beryllene_thesis.pdf}}%
-    &\adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon_2H-beta-beryllene_thesis.pdf}}%
+    \adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon/phonon_cubic-beryllene-trilayer_thesis.pdf}}%
+    &\adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon/phonon_2H-alpha-beryllene_thesis.pdf}}%
+    \\\adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon/phonon_1H-beta-beryllene_thesis.pdf}}%
+    &\adjustbox{valign=c}{\includegraphics[width=0.40\linewidth]{figures_proj3/phonon/phonon_2H-beta-beryllene_thesis.pdf}}%
 \end{tabular}
 \caption{Phonon-dispersion curves of trilayer cubic beryllene and the hydrogen-functionalized beryllene structures.
 Upper left: trilayer cubic beryllene. Upper right: 2H-$\alpha$-beryllene.
 Lower left: 1H-$\beta$-beryllene. Lower right: 2H-$\beta$-beryllene.
+These dispersions use PBE without the D3 correction.
 Imaginary frequencies are shown as negative values.}
 \label{fig:proj3_cubic_hydrogenated_phonons}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+    \includegraphics[width=0.60\linewidth]{figures_proj3/phonon/phonon_2H-beta-beryllene_pbed3_thesis.pdf}
+\caption{Phonon-dispersion curves of 2H-$\beta$-beryllene calculated with PBE (blue) and PBE+D3 (purple).
+For PBE+D3, the structure and force constants include D3 with Becke--Johnson damping.
+The path follows figure~\ref{fig:proj3_brillouin_zones}(b), with $\mathrm{K}=(0.300,\,0.300)$ for the PBE+D3 cell.
+Each PBE+D3 segment is scaled to the length of the corresponding PBE segment.
+Imaginary frequencies are shown as negative values.}
+\label{fig:proj3_phonon_2H_beta_d3}
 \end{figure}
 
 We next follow the three hydrogen-functionalized structures at finite temperature using AIMD.
@@ -687,8 +706,7 @@ Extrapolating the gap and its decay rate gives $T_\mathrm{c}^{\mathrm{aniso}}\ap
 For 2H-$\beta$-beryllene, these results use the structure relaxed with the D3 dispersion correction and exclude phonon frequencies below \qty{40}{\per\centi\metre}.
 The lattice constant is \qty{2.4}{\percent} smaller than the PBE value in table~\ref{tab:proj3_hydrogenated_structural_parameters}.
 On the coarse $12 \times 12 \times 1$ mesh, the only imaginary frequency is $0.24\mathrm{i}$~\si{\tera\hertz} at $\Gamma$.
-The soft-mode wave vector of the PBE structure in section~\ref{3_dynamical_stability_and_phonon_dispersion} lies between the sampled wave vectors of this mesh.
-At the nearest sampled wave vector, the lowest frequency is \qty{5.9}{\tera\hertz}.
+At the PBE soft-mode wave vector, the PBE+D3 dispersion in figure~\ref{fig:proj3_phonon_2H_beta_d3} gives a real frequency of \qty{4.9}{\tera\hertz}.
 
 For 1H-$\beta$-beryllene at $\mu^*=0.13$, the Allen--Dynes expression gives $T_\mathrm{c}^{\mathrm{AD}}=\qty{8.1}{\kelvin}$.
 The isotropic solution gives $T_\mathrm{c}^{\mathrm{iso}}=\qty{11.6}{\kelvin}$ and a fitted gap ratio of 3.64.
@@ -926,6 +944,7 @@ The spectra are shown for the $xx$, $yy$, and $zz$ components as functions of ph
 The harmonic phonon dispersions support dynamical stability for trilayer cubic beryllene and 2H-$\alpha$-beryllene.
 For 1H-$\beta$-beryllene, interpolated imaginary frequencies near $\Gamma$ leave long-wavelength stability unresolved.
 The one-mode quantum calculation of 2H-$\beta$-beryllene supports suppression of a static distortion along its soft mode.
+With the D3 dispersion correction, the frequency at this wave vector becomes real.
 All three hydrogenated structures retain their frameworks during \qty{5.5}{\pico\second} at \qty{300}{\kelvin}.
 
 Hydrogenation opens an indirect HSE06 gap of \qty{6.00}{\electronvolt} in 2H-$\alpha$-beryllene, whereas both hydrogenated $\beta$ structures remain metallic.
