@@ -26,7 +26,7 @@ The lowest two spinor bands of pristine $\alpha$-beryllene also give $\nu=1$.
 These indices describe band subspaces in two metals.
 The selected subspaces of the hydrogenated structures give $\nu=0$.
 Electron-phonon calculations predict phonon-mediated superconductivity in the cubic trilayer and both hydrogen-functionalized $\beta$ phases.
-The highest anisotropic Migdal--Eliashberg transition temperature is approximately \qty{31.7}{\kelvin} for double-sided hydrogen-terminated $\beta$-beryllene.
+The highest anisotropic Migdal--Eliashberg transition temperature is approximately \qty{31.7}{\kelvin} for double-sided hydrogen-terminated $\beta$-beryllene relaxed with the D3 dispersion correction.
 
 \section{Introduction}
 \label{3_introduction}
@@ -153,7 +153,7 @@ At a time-reversal invariant momentum $\vec{\Lambda}_i$, we take one parity eige
 here, $\xi_{2m}(\vec{\Lambda}_i\,)=\pm1$ is the parity eigenvalue of one state in pair $m$.
 $N$ is the number of spinor bands in the selected subspace, so $N=2N_\mathrm{p}$ in the notation of chapter~\ref{cha:fundamentals_c}.
 We take the product over $\Gamma=(0,0)$, $\mathrm{X}=(1/2,0)$, $\mathrm{Y}=(0,1/2)$, and $\mathrm{M}=(1/2,1/2)$ in reciprocal lattice coordinates.
-This gives the Fu--Kane relation for the $\mathbb{Z}_2$ index~\cite{fu2007topological,fu2007topological3d}:
+This product gives the Fu--Kane relation for the $\mathbb{Z}_2$ index~\cite{fu2007topological,fu2007topological3d}:
 \begin{equation}
     (-1)^{\nu} =
     \prod_{i=1}^{4} \delta_i
@@ -162,7 +162,8 @@ This gives the Fu--Kane relation for the $\mathbb{Z}_2$ index~\cite{fu2007topolo
 
 here, $\nu=1$ denotes non-trivial topology, whereas $\nu=0$ denotes trivial topology.
 Sections~\ref{sec:fu_kane_criterion_topology} and~\ref{sec:interpreting_topology_calculation} derive the criterion and describe its application to an isolated band subspace.
-The 1H-$\beta$-beryllene structure lacks inversion symmetry, so we obtain $\nu$ from the evolution of Wannier charge centres across half of the Brillouin zone~\cite{soluyanov2011computing,gresch2017z2pack}.
+The 1H-$\beta$-beryllene structure lacks inversion symmetry.
+We therefore obtain $\nu$ from the evolution of Wannier charge centres across half of the Brillouin zone~\cite{soluyanov2011computing,gresch2017z2pack}.
 We calculate the centres with \texttt{Z2Pack} from spinor overlaps exported through the \texttt{VASP} interface to \texttt{Wannier90}~\cite{pizzi2020wannier90}.
 The final set of 23 Wilson loops passes the convergence checks in \texttt{Z2Pack}.
 In the metallic structures, we check the isolation of the lowest $N$ bands through the direct gap $E_{N+1}(\vec{k}\,)-E_N(\vec{k}\,)$.
@@ -172,7 +173,8 @@ We also check for magnetic solutions by starting spin-polarized calculations fro
 To test the PBE band gap and ordering, we use the HSE06 hybrid functional~\cite{heyd2003hybrid,krukau2006influence}.
 These calculations use a supercell height of \qty{20}{\angstrom} and a $\Gamma$-centred $12 \times 12 \times 1$ mesh for both the electronic states and the Fock exchange.
 We omit spin-orbit coupling in the hybrid calculations.
-Inversion acts on the spatial part of the wave function, so we compare the spinless parities with those of the PBE Kramers pairs at the time-reversal invariant momenta.
+Inversion acts on the spatial part of the wave function.
+We therefore compare the spinless parities with those of the PBE Kramers pairs at the time-reversal invariant momenta.
 For 2H-$\alpha$-beryllene, we sample 71 points along $\Gamma$--$\mathrm{K}$--$\mathrm{M}$--$\Gamma$ and 9 additional points around each PBE band edge.
 
 For the \texttt{Quantum ESPRESSO} calculations, we use the PBE relaxed structures~\cite{giannozzi2017advanced,giannozzi2009quantum}, with a separate relaxation for the phonon and electron-phonon calculations of 2H-$\beta$-beryllene.
@@ -194,12 +196,13 @@ The electronic and phonon smearings are \qty{0.15}{\electronvolt} and \qty{0.5}{
 We include electronic states within \qty{0.6}{\electronvolt} of the Fermi level and use a Matsubara energy cutoff of \qty{1.2}{\electronvolt}.
 
 For trilayer cubic beryllene and 2H-$\beta$-beryllene, we exclude phonons below \qty{40}{\per\centi\metre}, corresponding to about \qty{5}{\milli\electronvolt}.
-The two fine meshes give similar electron-phonon coupling strengths $\lambda$ above this threshold.
-On the $40 \times 40 \times 1$ mesh, the modes below the threshold contribute roughly half of the total coupling.
-Their convergence remains unresolved because the finer mesh excludes them.
+On the $12 \times 12 \times 1$ q-point mesh, this range contains only the acoustic branches near $\Gamma$.
+On the $40 \times 40 \times 1$ fine meshes, it contributes about half of the electron-phonon coupling strength $\lambda$.
+Above the threshold, the $40 \times 40 \times 1$ and $80 \times 80 \times 1$ fine meshes give similar values of $\lambda$.
+The reported $\lambda$ and transition temperatures of these two structures refer to phonons above the threshold.
 For 1H-$\beta$-beryllene, modes below \qty{40}{\per\centi\metre} contribute less than \qty{1}{\percent} to $\lambda$.
 We therefore use a smaller cutoff of \qty{5}{\per\centi\metre} for this structure.
-Table~\ref{tab:proj3_epw_threshold} and figure~\ref{fig:proj3_a2f} show the comparison.
+Table~\ref{tab:proj3_epw_threshold} and figure~\ref{fig:proj3_a2f} compare the results for the two fine meshes and the two thresholds.
 We obtain $\lambda$ and the logarithmic average frequency $\omega_\mathrm{log}$ from the Eliashberg spectral function $\alpha^2F(\omega)$ using equations~\eqref{eliashberg_spectral_function_method} and~\eqref{electron_phonon_spectral_moments}.
 
 Firstly, we estimate the superconducting transition temperature $T_\mathrm{c}$ with the simplified Allen--Dynes expression~\eqref{allen_dynes_temperature_estimate} for Coulomb pseudopotentials $\mu^*$ from 0.10 to 0.16~\cite{allen-dynes,mcmillan1968transition}.
@@ -225,7 +228,7 @@ We set \texttt{ISPIN=1} and \texttt{LSORBIT=F} to omit spin polarization and spi
 We use Gaussian occupation smearing of \qty{0.01}{\electronvolt} with \texttt{ISMEAR=0} and \texttt{SIGMA=0.01}.
 The complex frequency shift is \qty{0.1}{\electronvolt}, set by \texttt{CSHIFT=0.1}.
 The spectra include interband transitions without microscopic local-field effects.
-For metals this describes the interband part of the low-frequency response, as both the calculation (\texttt{WPLASMAI=0}) and the postprocessing omit the Drude term.
+For metals, these spectra describe the interband part of the low-frequency response, as both the calculation with \texttt{WPLASMAI=0} and the postprocessing omit the Drude term.
 
 The supercell dielectric tensor of a two-dimensional structure describes the response averaged over the layer and its surrounding vacuum.
 We apply equation~\eqref{optical_volume_normalization_2d} with the full supercell height of \qty{40}{\angstrom} to obtain an effective response for the layer~\cite{yang2021method}.
@@ -333,7 +336,7 @@ The fit gives a shallow double well, at most \qty{0.2}{\milli\electronvolt} deep
 The one-mode quantum ground state lies about \qty{6}{\milli\electronvolt} above the well bottom and is centred at the undistorted structure.
 The first excitation corresponds to a real frequency of approximately \qty{4}{\tera\hertz}.
 This calculation supports suppression of a static distortion along the mode by quantum fluctuations~\cite{verdi2023quantum,ranalli2023temperature}.
-A test of full anharmonic stability would also need the coupling between phonon modes.
+Full anharmonic stability also depends on the coupling between phonon modes.
 Neither the bare susceptibility nor the nesting function peaks at the soft-mode wave vector.
 Table~\ref{tab:proj3_soft_mode} and figure~\ref{fig:proj3_nesting} give the frozen-phonon and nesting results.
 
@@ -385,7 +388,7 @@ Table~\ref{tab:proj3_hydrogenated_structural_parameters} gives the relaxed geome
 Hydrogenation increases the in-plane lattice constant of $\alpha$-beryllene from \qty{2.129}{\angstrom} to \qty{2.322}{\angstrom}.
 In 1H-$\beta$-beryllene, the in-plane lattice vectors have lengths of \qty{2.322}{\angstrom} and \qty{2.108}{\angstrom} and enclose an angle of \qty{117}{\degree}.
 In 2H-$\beta$-beryllene, both lengths round to \qty{2.596}{\angstrom} and the angle increases to \qty{133}{\degree}.
-Both hydrogenated $\beta$ structures thus depart from the pristine hexagonal lattice.
+Both hydrogenated $\beta$ structures therefore depart from the pristine hexagonal lattice.
 
 The electronic adsorption energies relative to \ce{H2} are \qty{-0.33}{\electronvolt}, \qty{-0.07}{\electronvolt}, and \qty{-0.17}{\electronvolt} per hydrogen atom for 2H-$\alpha$-beryllene, 1H-$\beta$-beryllene, and 2H-$\beta$-beryllene, respectively.
 Zero-point motion raises all three adsorption energies and changes the sign for 1H-$\beta$-beryllene, from \qty{-0.07}{\electronvolt} to \qty{0.01}{\electronvolt} per hydrogen atom.
@@ -480,7 +483,7 @@ The trilayer has a finite density of states at the Fermi level, consistent with 
 Figure~\ref{fig:proj3_dos_hydrogenated} compares the densities of states of the pristine and hydrogen-functionalized phases.
 The total density of states vanishes around the Fermi level in 2H-$\alpha$-beryllene and remains finite in both hydrogenated $\beta$ phases.
 The projected densities of states show Be $s$ and $p$ and H $1s$ weight over common energy ranges, consistent with Be-H hybridization.
-These band and density-of-states comparisons establish the metallic and semiconducting cases for the topology analysis below.
+At this stage, we arrive at the metallic and semiconducting cases for the topology analysis below.
 
 \begin{figure}[!htbp]
 \centering
@@ -517,7 +520,7 @@ The finite mesh provides a screening result, conditional on isolation between th
 
 Table~\ref{tab:proj3_topological_parity} lists the parities, indices, and sampled gap minima.
 For $\alpha$-beryllene, $\beta$-beryllene, and 2H-$\alpha$-beryllene, the three zone-boundary momenta are symmetry-equivalent $\mathrm{M}$ points of the hexagonal Brillouin zone.
-Their Fu--Kane product thus reduces to $(-1)^\nu=\delta_\Gamma\delta_\mathrm{M}$, since $(\delta_\mathrm{M})^3=\delta_\mathrm{M}$.
+Their Fu--Kane product therefore reduces to $(-1)^\nu=\delta_\Gamma\delta_\mathrm{M}$, since $(\delta_\mathrm{M})^3=\delta_\mathrm{M}$.
 The same reduction holds for trilayer cubic beryllene because the two equivalent $\mathrm{X}$ points of the square Brillouin zone give a factor of $(\delta_\mathrm{X})^2=1$.
 For the monoclinic 2H-$\beta$-beryllene, we use the parity products at all four momenta.
 
@@ -611,7 +614,7 @@ The smallest gap to band 5 is \qty{0.898}{\milli\electronvolt} at $\mathrm{K}$.
 
 In trilayer cubic beryllene, the parity products at $\Gamma$ and $\mathrm{M}$ have opposite signs, giving $\nu=1$ for the lowest six bands.
 At $\mathrm{M}$, the next Kramers pair lies \qty{1.3}{\milli\electronvolt} above band 6 and has the same parity as the third pair.
-Thus, exchanging these two pairs at $\mathrm{M}$ leaves the parity product unchanged.
+Therefore, exchanging these two pairs at $\mathrm{M}$ leaves the parity product unchanged.
 The smallest direct gap is \qty{0.735}{\milli\electronvolt} at a spin-orbit-gapped crossing on the $\Gamma$--$\mathrm{M}$ line.
 
 The two non-trivial subspaces have their narrowest sampled gaps about \qty{2.7}{\electronvolt} above the Fermi level in $\alpha$-beryllene and \qty{1.2}{\electronvolt} above it in the cubic trilayer.
@@ -630,7 +633,7 @@ The Wannier charge centres give $\nu=0$ for both choices of subspace.
 
 We also check the assumptions of the topological analysis.
 The HSE06 calculations without spin-orbit coupling reproduce the parity products at the four time-reversal invariant momenta of the five centrosymmetric structures.
-Testing whether the subspaces remain isolated away from these momenta would require HSE06 bands with spin-orbit coupling.
+HSE06 bands with spin-orbit coupling determine whether the subspaces remain isolated away from these momenta.
 The spin-polarized calculations converge to non-magnetic states from the magnetic configurations tested, supporting the time-reversal symmetry assumed here.
 The results of these checks are listed in section~\ref{3_supplementary}.
 
@@ -684,8 +687,8 @@ Extrapolating the gap and its decay rate gives $T_\mathrm{c}^{\mathrm{aniso}}\ap
 For 2H-$\beta$-beryllene, these results use the structure relaxed with the D3 dispersion correction and exclude phonon frequencies below \qty{40}{\per\centi\metre}.
 The lattice constant is \qty{2.4}{\percent} smaller than the PBE value in table~\ref{tab:proj3_hydrogenated_structural_parameters}.
 On the coarse $12 \times 12 \times 1$ mesh, the only imaginary frequency is $0.24\mathrm{i}$~\si{\tera\hertz} at $\Gamma$.
-The mesh misses the PBE soft-mode wave vector of section~\ref{3_dynamical_stability_and_phonon_dispersion}.
-The lowest frequency at the nearest sampled wave vector is \qty{5.9}{\tera\hertz}, leaving the frequency at the soft-mode wave vector unresolved for this structure.
+The soft-mode wave vector of the PBE structure in section~\ref{3_dynamical_stability_and_phonon_dispersion} lies between the sampled wave vectors of this mesh.
+At the nearest sampled wave vector, the lowest frequency is \qty{5.9}{\tera\hertz}.
 
 For 1H-$\beta$-beryllene at $\mu^*=0.13$, the Allen--Dynes expression gives $T_\mathrm{c}^{\mathrm{AD}}=\qty{8.1}{\kelvin}$.
 The isotropic solution gives $T_\mathrm{c}^{\mathrm{iso}}=\qty{11.6}{\kelvin}$ and a fitted gap ratio of 3.64.
@@ -695,9 +698,9 @@ We obtain limiting gaps of \qtyrange{0.39}{0.40}{\milli\electronvolt} at \qty{14
 At \qty{14.2}{\kelvin}, the gap is still decreasing after about 5000 iterations.
 We therefore estimate $T_\mathrm{c}^{\mathrm{aniso}}$ at \qty{14.2}{\kelvin}, within the bracket of \qtyrange{14.1}{14.5}{\kelvin}.
 
-For both hydrogen-functionalized metallic layers, the anisotropic solutions give higher transition temperatures than the isotropic solutions under the same numerical settings.
+Consequently, we arrive at the conclusion that the gap anisotropy raises the transition temperatures of both hydrogen-functionalized metallic layers.
 These temperatures mark the closing of the calculated superconducting gap.
-A transition associated with the loss of phase coherence in two dimensions would require a separate calculation of the superfluid stiffness.
+A separate calculation of the superfluid stiffness determines the transition associated with the loss of phase coherence in two dimensions.
 
 \begin{table}[!htbp]
 \centering
@@ -762,7 +765,7 @@ Figure~\ref{fig:proj3_alpha_beta_dielectric} shows the real and imaginary parts 
 For $\beta$-beryllene, the sampled in-plane and out-of-plane real parts have opposite signs over \qtyrange{1.22}{2.21}{\electronvolt}.
 For $\alpha$-beryllene, the out-of-plane real part crosses zero near \qty{10.64}{\electronvolt}, where the imaginary part is small.
 These features identify energy ranges for testing collective modes.
-Determining their propagation and lifetimes would require a finite-momentum response calculation.
+A finite-momentum response calculation determines their propagation and lifetimes.
 
 \begin{figure}[!htbp]
 \centering
@@ -934,7 +937,7 @@ Their smallest sampled gaps are of order \qty{1}{\milli\electronvolt} and lie we
 The other selected subspaces give $\nu=0$.
 
 The isotropic Migdal--Eliashberg equations give a transition temperature of \qty{3.7}{\kelvin} for the cubic trilayer.
-The anisotropic estimates are approximately \qty{14.2}{\kelvin} for 1H-$\beta$-beryllene and \qty{31.7}{\kelvin} for 2H-$\beta$-beryllene.
+The anisotropic estimates are approximately \qty{14.2}{\kelvin} for 1H-$\beta$-beryllene and \qty{31.7}{\kelvin} for 2H-$\beta$-beryllene relaxed with the D3 dispersion correction.
 
 Across the sampled visible range, the in-plane absorption coefficient of the cubic trilayer lies below that of bulk bcc beryllium.
 Hydrogenation splits the in-plane spectra of $\beta$-beryllene.
