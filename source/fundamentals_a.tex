@@ -22,6 +22,7 @@ Readers interested in the computational procedure can proceed directly to that s
 The supporting quantum-mechanical and Thomas--Fermi derivations are collected in appendix~\ref{cha:appendix_quantum}.
 
 \newpage
+\FloatBarrier
 \section{Density functional in quantum mechanics}
 \label{sec:introduction_density_functionals}
 
@@ -39,7 +40,7 @@ To describe this process, we first introduce the density operator:
 \label{density_operator}
 \end{equation}
 
-Next, the expectation value of this operator in the ground state defines the ground-state electron density
+Next, the expectation value of this operator in the ground state defines the ground-state electron density:
 
 \begin{equation}
     n(\vec{r}\,)\coloneqq\bra{\Psi_0}\hat{n}(\vec{r}\,)\ket{\Psi_0}
@@ -153,6 +154,7 @@ In this sense, all ground-state observables can be regarded as functionals of th
 
 In the presence of ground-state degeneracy, the strict one-to-one correspondence must be understood at the level of the ground-state subspace; certain observables may then depend on the particular choice of degenerate ground state. This issue is commonly handled through an ensemble formulation (or via a symmetry-breaking limit) to recover a single-valued density-functional description.
 
+\FloatBarrier
 \subsection{The Hohenberg--Kohn theorem}
 
 In this subsection, we focus on the Hohenberg--Kohn theorem, which provides the conceptual foundation of density functional theory: for a fixed form of electron-electron interaction and a non-degenerate ground state, it establishes a one-to-one correspondence between the external potential and the ground-state density (up to an additive constant), and it leads to a variational characterization of the ground state.
@@ -181,7 +183,7 @@ Subtracting the two equations yields:
 \label{difference_eigen}
 \end{equation}
 
-Review the expression for the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
+Recall the expression for the external potential operator in equation~\eqref{Electron-nucleus_one-body_form}.
 Since $\hat{T}$ and $\hat{V}_\mathrm{int}$ are identical in $\hat{H}_1$ and $\hat{H}_2$, the difference comes entirely from the external potential term.
 Therefore, for an $N$-electron system, we have:
 
@@ -456,9 +458,8 @@ To generalize this variational picture, for a given admissible density $n(\vec{r
 \label{functional_energy_constrained_search}
 \end{equation}
 
-which reduces to $E_0$ when $n=n_0$.
-
-Here the minimization is taken over all normalized antisymmetric $N$-electron wave functions $\ket{\Psi}$ compatible with the fixed interaction.
+here, the minimization is taken over all normalized antisymmetric $N$-electron wave functions $\ket{\Psi}$ compatible with the fixed interaction.
+This functional reduces to $E_0$ when $n=n_0$.
 
 The kinetic energy functional $K[n]$, the interaction energy functional $E_\mathrm{int}[n]$, and the external potential energy functional $E_\mathrm{ext}[n]$ are evaluated on a minimizing wave function $\Psi[n]$ that yields the density $n$.
 We use $K$ for kinetic energy and $T$ for temperature.
@@ -590,6 +591,7 @@ and the remaining unknown part can be approximated systematically.
 
 
 \newpage
+\FloatBarrier
 \section{From density functional to Kohn--Sham theory}
 \label{sec:from_density_functional_to_Kohn_Sham_theory}
 
@@ -604,6 +606,7 @@ They show that improved treatments of the kinetic energy and the exchange-correl
 
 In what follows, we introduce an auxiliary description that retains the density as the central variable and provides a practical starting point for systematic improvements.
 
+\FloatBarrier
 \subsection{Auxiliary system}
 
 We introduce an auxiliary system that reproduces the ground-state density $n(\vec{r}\,)$ of the interacting electrons.
@@ -732,8 +735,8 @@ with this convention, the Schrödinger equation in the coordinate representation
 \label{BO_hamiltonian_SE}
 \end{equation}
 
-here, $E$ and $\Psi$ denote the electronic eigenvalue and eigenstate of interest at fixed nuclear coordinates $\{\vec{R}_I\}$,
-where the constant term $E_\mathrm{NN}(\{\vec{R}_I\})$ has been absorbed into $E$.
+here, $E$ and $\Psi$ denote the electronic eigenvalue and eigenstate of interest at fixed nuclear coordinates $\{\vec{R}_I\}$.
+The constant term $E_\mathrm{NN}(\{\vec{R}_I\})$ is absorbed into $E$.
 In particular, the ground state determines the target density $n(\vec{r}\,)$ through equation~\eqref{one-body_density}.
 
 Moreover, we introduce a non-interacting auxiliary system by dropping the electron-electron interaction,
@@ -797,6 +800,7 @@ In other words, we start from a given density $n(\vec{r}\,)$ and ask whether we 
 This is the basic existence question behind the auxiliary construction,
 and it is often referred to as non-interacting $v$-representability~\cite{de2012pure}.
 
+\FloatBarrier
 \subsection{The framework of the Kohn--Sham equations}
 
 Firstly, we introduce a non-interacting reference system that reproduces the density $n(\vec{r}\,)$, and denote its ground-state wave function by $\Psi_\mathrm{s}[n]$.
@@ -1056,6 +1060,7 @@ It is chosen such that equation~\eqref{KS_same_density_assumption} holds.
 
 Consequently, the interacting many-electron problem is mapped to a non-interacting orbital problem with the same density.
 
+\FloatBarrier
 \subsection{From variational derivation to the Kohn--Sham equations}
 \label{subsec:KS_variational_derivation}
 
@@ -1215,6 +1220,7 @@ Together with equation~\eqref{density_with_occupation_number},
 we can solve the Kohn--Sham equations~\eqref{KS_equations_expansion},
 and achieve the exact ground-state density of the interacting system.
 
+\FloatBarrier
 \subsection{Variational construction of the Kohn--Sham scheme}
 
 The previous subsection derived the Kohn--Sham equations by varying the orbitals directly. Here we complement that derivation by showing, at the density-functional level, why the auxiliary non-interacting construction is variationally consistent.
@@ -1274,6 +1280,7 @@ In principle, the Kohn--Sham equations give the exact electron density~\cite{wag
 The only missing piece is the exchange-correlation energy functional $E_\mathrm{xc}[n]$, or equivalently the exchange-correlation potential $v_\mathrm{xc}([n];\vec{r}\,)$.
 We will introduce approximations for it later.
 
+\FloatBarrier
 \subsection{Remarks on the Kohn--Sham solutions}
 
 In practical applications, we have to solve the Kohn--Sham equations~\eqref{KS_equations_expansion}.
@@ -1332,6 +1339,7 @@ Therefore, practical density functional theory relies on approximations for the 
 or equivalently for $v_\mathrm{xc}([n];\vec{r}\,)$.
 We will discuss these approximations later.
 
+\FloatBarrier
 \subsection{Structure and construction of the Kohn--Sham potential}
 
 After the general framework of the Kohn--Sham construction has been established through equations~\eqref{density_with_occupation_number},~\eqref{KS_equations_expansion}, and~\eqref{KS_potential_decomposition},
@@ -1503,6 +1511,7 @@ At convergence, we arrive at:
 \label{inverse_KS_fixed_point_condition}
 \end{equation}
 
+\FloatBarrier
 \subsection{The Hartree equations}
 
 Before turning to practical approximations to $E_\mathrm{xc}$, it is useful to consider the simpler self-consistent scheme that remains when exchange and correlation are omitted. If we retain the external potential $v_\mathrm{ext}(\vec{r}\,)$ and the classical electrostatic interaction generated by the density $n(\vec{r}\,)$, then we arrive at the Hartree equations:
@@ -1545,6 +1554,7 @@ but in the construction of the exchange-correlation functional itself.
 Therefore, the next step is to introduce practical approximations for $E_\mathrm{xc}[n]$ and $v_\mathrm{xc}([n];\vec{r}\,)$.
 
 \newpage
+\FloatBarrier
 \section{Exchange-correlation functional}
 \label{sec:exchange_correlation_functional}
 
@@ -1564,6 +1574,7 @@ The simplest approximation depends only on the local value of the density.
 Semilocal approximations also include the density gradient.
 Beyond them, hybrid functionals incorporate a fraction of exact exchange.
 
+\FloatBarrier
 \subsection{Local density and generalized gradient approximations}
 
 Firstly, we consider the local density approximation.
@@ -1713,6 +1724,7 @@ Therefore, for the density functional theory framework used in the present work,
 we arrive at the essential exchange-correlation approximations required in practical first-principles calculations.
 
 \newpage
+\FloatBarrier
 \section{From density functional theory to practical calculations}
 \label{sec:practical_computational_methods}
 
@@ -1730,6 +1742,7 @@ We retain the Hartree atomic units specified at the start of this chapter.
 When discussing electron-phonon coupling and the transition temperature,
 we restore $\hbar$ and $\kB$ explicitly to distinguish frequency, energy, and temperature.
 
+\FloatBarrier
 \subsection{Structural relaxation and convergence}
 \label{subsec:method_relaxation}
 
@@ -1783,6 +1796,7 @@ For two-dimensional structures, the vacuum separation also controls the interact
 The treatment of dispersion interactions is particularly relevant to the interlayer geometry in chapter~\ref{cha:project_bilayers}.
 The actual stopping criteria and numerical settings are given with the calculations in chapters~\ref{cha:project_bilayers}, \ref{cha:project_boron}, and~\ref{cha:project_beryllene}.
 
+\FloatBarrier
 \subsection{Periodic states and Brillouin-zone sampling}
 \label{subsec:method_kpoints}
 
@@ -1893,6 +1907,7 @@ and the energy difference $E_{m\vec{k}}-E_{n\vec{k}}$.
 Therefore, optical convergence depends on the k-point mesh, the number of bands included, and the broadening of the transitions.
 The research chapters discuss the meshes used for structural and optical calculations separately.
 
+\FloatBarrier
 \subsection{Phonons and molecular dynamics}
 \label{subsec:method_stability}
 
@@ -2004,6 +2019,7 @@ The ensemble, temperature control, time step, and duration are therefore specifi
 These two methods address the boron and beryllene structures in chapters~\ref{cha:project_boron} and~\ref{cha:project_beryllene}.
 Thermodynamic stability and experimental synthesizability are separate questions from these two tests~\cite{stampfl2005surface}.
 
+\FloatBarrier
 \subsection{Spin polarization and magnetic ordering}
 \label{subsec:method_magnetism}
 
@@ -2066,6 +2082,7 @@ The local spin density distinguishes the antiferromagnetic state from the non-ma
 The lowest-energy solution among the configurations examined identifies the preferred state within that set,
 while magnetic order at finite temperature requires a separate calculation.
 
+\FloatBarrier
 \subsection{Electron-phonon coupling and superconductivity}
 \label{subsec:method_elph}
 

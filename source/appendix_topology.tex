@@ -11,6 +11,7 @@ We apply these results to the band-subspace and parity analysis in chapter~\ref{
 The discussion of the Berry phase, connection, and curvature partly draws on the educational video by Tony Low at the University of Minnesota Twin Cities~\cite{low2025berry}.
 
 \newpage
+\FloatBarrier
 \section{From phase freedom to the Berry phase}
 \label{sec:berry_phase_topology}
 
@@ -21,6 +22,7 @@ We first derive this geometric contribution, and use it to compare electronic st
 For the application to electronic bands, we use the cell-periodic states introduced in equation~\eqref{bloch_hamiltonian_topology},
 with inner products normalized over one unit cell.
 
+\FloatBarrier
 \subsection{The phase of a quantum state}
 
 We first examine the freedom to choose the phase of an individual normalized state.
@@ -39,6 +41,7 @@ However, a derivative with respect to $\vec{k}$ also differentiates the chosen p
 Consequently, we must account for this freedom when connecting states at different wave vectors.
 We now examine how this freedom enters the evolution of a state and the comparison of neighbouring states.
 
+\FloatBarrier
 \subsection{From adiabatic evolution to the geometric phase}
 \label{subsec:adiabatic_geometric_phase_appendix}
 
@@ -120,6 +123,7 @@ This explains the geometric character of $\gamma_n$.
 We now take the wave vector $\vec{k}$ as the parameter and recover the same connection directly from neighbouring Bloch states.
 Their comparison requires no actual time evolution of an electron.
 
+\FloatBarrier
 \subsection{Connecting neighbouring states}
 
 We first consider a single normalized band that is non-degenerate along a path.
@@ -200,6 +204,7 @@ when the endpoint overlap is non-zero, adding its argument
 $\arg\braket{u_{n\vec{k}_\mathrm{i}}|u_{n\vec{k}_\mathrm{f}}}$ cancels these endpoint changes.
 For the band-topology discussion, we now consider a closed path.
 
+\FloatBarrier
 \subsection{Parallel transport}
 
 Before closing the path, we ask how to compare phases locally.
@@ -241,6 +246,7 @@ The orthogonal component can remain non-zero when the eigenspace changes.
 Therefore, parallel transport fixes the local phase without requiring $D_s\ket{u_n(s)}=0$.
 For a closed loop, a representative transported in this way need not return with its initial phase.
 
+\FloatBarrier
 \subsection{Closing the path}
 
 Let $C$ be an oriented closed path on which the band remains non-degenerate.
@@ -312,6 +318,7 @@ provided the band remains non-degenerate along the loop.
 The phase $\gamma_n(C)$ is not generally restricted to $0$ or $\mathrm{\pi}$.
 The two-dimensional $\mathbb{Z}_2$ index requires additional structure, which comes from time-reversal symmetry and the full selected band subspace.
 
+\FloatBarrier
 \subsection{From the Berry connection to the Berry curvature}
 \label{subsec:berry_curvature_appendix}
 
@@ -351,6 +358,7 @@ For a sufficiently small loop, the curvature consequently gives the geometric ph
 A loop winding around the periodically identified Brillouin zone need not bound such a surface within that zone;
 equation~\eqref{berry_phase_closed_path_topology} still defines its phase, but the surface expression requires this additional check.
 
+\FloatBarrier
 \subsection{The curvature in different dimensions}
 
 In three-dimensional parameter space, we can express the same curvature as a vector:
@@ -365,8 +373,7 @@ In three-dimensional parameter space, we can express the same curvature as a vec
 \label{berry_curvature_vector_appendix}
 \end{equation}
 
-Equivalently, $\Omega_{n,i}=\frac{1}{2}\sum_{j,l}\varepsilon_{ijl}\mathcal{F}_{n,jl}$,
-where $\varepsilon_{ijl}$ is the Levi-Civita symbol in a right-handed coordinate system.
+Equivalently, $\Omega_{n,i}=\frac{1}{2}\sum_{j,l}\varepsilon_{ijl}\mathcal{F}_{n,jl}$, with the Levi-Civita symbol $\varepsilon_{ijl}$ in a right-handed coordinate system.
 In two dimensions, $\mathcal{F}_{n,xy}$ is the perpendicular curvature component.
 The relation resembles $\vec{B}=\nabla_{\vec{r}}\times\vec{A}_\mathrm{EM}$ in electrodynamics.
 The connection plays the role of a vector potential, while the curvature plays the role of its field strength.
@@ -391,6 +398,7 @@ $\dif k_i\wedge\dif k_j=-\dif k_j\wedge\dif k_i$ and $\dif k_i\wedge\dif k_i=0$.
 These forms collect the same components used above;
 integrating the one-form along a boundary or the two-form over its surface gives equation~\eqref{berry_curvature_stokes_appendix}.
 
+\FloatBarrier
 \subsection{The curvature from a projector}
 
 The phase freedom in equation~\eqref{bloch_phase_freedom_topology} leaves the single-state projector
@@ -413,6 +421,7 @@ here, the trace is over the state space.
 Substituting the differentiated ket-bra product into the second line, we recover equation~\eqref{abelian_berry_curvature_appendix}.
 The projector therefore determines the curvature, while a connection additionally requires a choice of phase.
 
+\FloatBarrier
 \subsection{A two-component example}
 \label{subsec:berry_two_component_example_appendix}
 
@@ -515,6 +524,7 @@ The path thus closes on the state sphere while retaining the phase mismatch desc
     \label{fig:geometric_phase_appendix}
 \end{figure}
 
+\FloatBarrier
 \subsection{A connection to transverse transport}
 
 The curvature also enters the motion of electrons under an external field.
@@ -564,6 +574,7 @@ with spin-orbit coupling, this is not generally the difference of two independen
 These examples explain the physical role of the curvature~\cite{xiao2010berry}.
 The time-reversal invariant $\mathbb{Z}_2$ index used in this thesis requires the full band subspace, to which we now return.
 
+\FloatBarrier
 \subsection{From an individual band to a band subspace}
 
 So far, we have followed a single band separately from the other bands along the path.
@@ -653,6 +664,7 @@ Using inversion symmetry, we evaluate the corresponding $\mathbb{Z}_2$ index fro
 We first establish how time reversal acts on the same states.
 
 \newpage
+\FloatBarrier
 \section{Spinor states and time reversal}
 \label{sec:spinors_time_reversal_appendix}
 

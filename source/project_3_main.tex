@@ -1,7 +1,7 @@
 \chapter[Properties of Pristine and Hydrogenated Beryllene]{Emergent Topological, Superconducting, and Optical Properties of Pristine and Hydrogenated Beryllene Phases}
 \label{cha:project_beryllene}
 
-This chapter is based on the manuscript by L.~Niu, O.~J.~Conquest, H.~Ma, C.~Verdi, and C.~Stampfl~\cite{niu2026draftemergent}.
+This chapter is based on a manuscript in preparation by L.~Niu, O.~J.~Conquest, H.~Ma, C.~Verdi, and C.~Stampfl.
 The candidate carried out the \texttt{VASP} and postprocessing calculations, data analysis, and visualization.
 Catherine Stampfl supervised the project.
 Oliver James Conquest provided detailed guidance on the calculations.
@@ -9,6 +9,7 @@ Hongyang Ma performed the \texttt{Quantum ESPRESSO} and \texttt{EPW} calculation
 Carla Verdi performed the validation.
 All authors contributed to writing or revising the manuscript.
 
+\FloatBarrier
 \section{Abstract}
 \label{3_abstract}
 
@@ -28,6 +29,7 @@ The selected subspaces of the hydrogenated structures give $\nu=0$.
 Electron-phonon calculations predict phonon-mediated superconductivity in the cubic trilayer and both hydrogen-functionalized $\beta$ phases.
 The highest anisotropic Migdal--Eliashberg transition temperature is approximately \qty{31.7}{\kelvin} for double-sided hydrogen-terminated $\beta$-beryllene relaxed with the D3 dispersion correction.
 
+\FloatBarrier
 \section{Introduction}
 \label{3_introduction}
 
@@ -65,6 +67,7 @@ Section~\ref{3_results} starts with the structures, their dynamical stability, a
 We then examine their electronic bands, band topology, electron-phonon coupling, and optical response.
 Section~\ref{3_supplementary} provides the convergence tests and additional results.
 
+\FloatBarrier
 \section{Computation methods}
 \label{3_methods}
 
@@ -240,9 +243,11 @@ We use radii of \qty{1.98}{\angstrom} for Be and \qty{0.70}{\angstrom} for H.
 The same normalization applies to the $xx$, $yy$, and $zz$ components, so the magnitude of the effective response depends on this thickness convention.
 Section~\ref{3_supplementary} gives the thicknesses and the numbers of bands used.
 
+\FloatBarrier
 \section{Results and discussion}
 \label{3_results}
 
+\FloatBarrier
 \subsection{Atomic structure}
 \label{3_atomic_structure}
 
@@ -317,6 +322,7 @@ These structures retain the Be framework and change the local environment of the
 The preliminary phonon calculations give imaginary frequencies for all tested hollow- and top-site configurations on one or both sides of the cubic trilayer.
 We therefore restrict the hydrogenation analysis to the $\alpha$ and $\beta$ phases.
 
+\FloatBarrier
 \subsection{Dynamical stability and phonon dispersion}
 \label{3_dynamical_stability_and_phonon_dispersion}
 
@@ -401,6 +407,7 @@ with beryllium in green and hydrogen in grey.}
 \label{fig:proj3_hydrogenated_aimd}
 \end{figure}
 
+\FloatBarrier
 \subsection{Hydrogen adsorption energetics}
 \label{3_hydrogen_adsorption_energetics}
 
@@ -457,6 +464,7 @@ The electronic adsorption energy $E_{\mathrm{ad}}$ is given per hydrogen atom re
 \label{tab:proj3_hydrogenated_structural_parameters}
 \end{table}
 
+\FloatBarrier
 \subsection{Electronic properties}
 \label{3_electronic_properties}
 
@@ -521,6 +529,7 @@ Lower right: projected density of states of 2H-$\beta$-beryllene.}
 \label{fig:proj3_dos_hydrogenated}
 \end{figure}
 
+\FloatBarrier
 \subsection{Topological properties}
 \label{3_topological_properties}
 
@@ -686,6 +695,7 @@ Both $\beta$-beryllene derivatives follow the paths of figure~\ref{fig:proj3_ban
 \label{fig:proj3_topology_bands_hydrogenated}
 \end{figure}
 
+\FloatBarrier
 \subsection{Electron-phonon coupling and superconductivity}
 \label{3_superconductivity}
 
@@ -707,7 +717,7 @@ Extrapolating the gap and its decay rate gives $T_\mathrm{c}^{\mathrm{aniso}}\ap
 
 For 2H-$\beta$-beryllene, these results use the structure relaxed with the D3 dispersion correction and exclude phonon frequencies below \qty{40}{\per\centi\metre}.
 The lattice constant is \qty{2.4}{\percent} smaller than the PBE value in table~\ref{tab:proj3_hydrogenated_structural_parameters}.
-On the coarse $12 \times 12 \times 1$ mesh, the only imaginary frequency is $0.24\mathrm{i}$~\si{\tera\hertz} at $\Gamma$.
+On the coarse $12 \times 12 \times 1$ mesh, the only imaginary frequency is $0.24\mathrm{i}$~\unit{\tera\hertz} at $\Gamma$.
 At the PBE soft-mode wave vector, the PBE+D3 dispersion in figure~\ref{fig:proj3_phonon_2H_beta_d3} gives a real frequency of \qty{4.9}{\tera\hertz}.
 
 For 1H-$\beta$-beryllene at $\mu^*=0.13$, the Allen--Dynes expression gives $T_\mathrm{c}^{\mathrm{AD}}=\qty{8.1}{\kelvin}$.
@@ -769,6 +779,7 @@ Open pentagons in (a) and (c) mark the extrapolated limiting gaps, and shading b
 \label{fig:proj3_superconducting_gap}
 \end{figure}
 
+\FloatBarrier
 \subsection{Optical properties}
 \label{3_optical_properties}
 
@@ -778,6 +789,7 @@ We first compare pristine $\alpha$- and $\beta$-beryllene, then examine the effe
 Peak energies refer to sampled points within \qtyrange{0}{12}{\electronvolt}.
 We locate zero crossings and refractive-index crossings by linear interpolation between adjacent samples.
 
+\FloatBarrier
 \subsubsection{Pristine $\alpha$- and $\beta$-beryllene}
 \label{3_optical_alpha_beta}
 
@@ -841,6 +853,7 @@ It is still rising at the final sample, where it reaches 1.50 at \qty{11.98}{\el
 The $zz$ loss of $\alpha$-beryllene peaks at 8.88 near \qty{10.64}{\electronvolt}, close to the zero of the real dielectric component.
 The corresponding $\beta$-beryllene loss peaks at 1.09 near \qty{9.95}{\electronvolt}.
 
+\FloatBarrier
 \subsubsection{Bulk hcp, bulk bcc, and trilayer cubic beryllene}
 \label{3_optical_bulk_cubic}
 
@@ -897,6 +910,7 @@ and $zz$ components as functions of photon energy.}
 \label{fig:proj3_bulk_cubic_abs_loss}
 \end{figure}
 
+\FloatBarrier
 \subsubsection{Hydrogen-functionalized beryllene structures}
 \label{3_optical_hydrogenated_structures}
 
