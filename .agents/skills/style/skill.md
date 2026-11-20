@@ -64,6 +64,8 @@ mix 单元为 `ch2C` (`source/fundamentals_a.tex` 第 1480 行至末尾, 其中 
 | `The previous section established...` 模板 | 仅 1 次 | AI/Mix 合计 16 次 | 这是 Claude 模板, 不是作者的节首固定公式 |
 | `characterize(s)` | 0.00 (0 次) | 0.69 (7 次) | `characterize` 是纯 AI 词, 作者不用 |
 
+* 其实作者不排斥 characterize, since;
+
 ---
 
 ## 1. 去 AI 味儿 (De-AI) 原则与工作流
