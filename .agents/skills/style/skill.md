@@ -1,428 +1,215 @@
 ---
-name: thesis-writing-style
+name: style
 description: >-
   Lu Niu's own English writing style for the PhD thesis on light-element xenes
-  (DFT, linear optical response, band topology). Load it before drafting,
-  rewriting, polishing, or reviewing any English prose or LaTeX in this
-  repository, including chapters, appendices, abstract, captions, and replies to
-  examiners, and whenever the user asks for text "in my style" or "我的风格".
-  Derived from the parts the author wrote word by word and the supervisor
-  approved: Chapter 2, Chapter 3, Appendix A, and Appendix B.
+  (DFT, linear optical response, band topology), grounded strictly in the pure
+  hand-written units verified as human (Chapter 2A, Chapter 2B, Appendix A1,
+  Appendix A2, and Appendix D) and contrasted against AI-edited chapters. Load
+  it before drafting, de-AI-ing, rewriting, polishing, or reviewing any English
+  prose or LaTeX in this repository, including chapters, appendices, abstract,
+  captions, and replies to examiners, and whenever the user asks for text
+  "in my style".
 ---
 
-# Lu Niu 论文写作风格
+# Lu Niu 论文真实写作风格与去 AI 痕指南
 
-本文件归纳作者本人的英文学术写作风格, 用于续写, 改写和审读本仓库中的论文文本.
-规则后面的数字来自对语料的统计, 用来区分两类内容: 作者的真实习惯, 以及作者希望达到的目标.
-原文范例和改写示例见 `references/examples.md`.
-作者的待办清单见同目录下的 `todo.md`, 其中列出全文需要修改的具体位置.
+本文件严格依据经 AI 检测验证为纯人工 (human) 的五个纯手搓单元归纳作者本人的英文学术写作风格, 并与仓库中被检出为 ai 或 mix 的章节做定量对照, 用于后续文本的去 AI 味儿 (de-AI), 续写, 改写与审读.
+原文范例和改写示例见 `references/examples.md` (其中部分节选来自 `ch3` 和 `appB`, 仅作公式格式与特定局部参考, 散文句式以本文件第 0 至 3 节为准).
 
-## 0. 依据与适用范围
+---
 
-风格语料 (作者逐字写成, 经导师验收):
+## 0. 纯手搓基准语料与检测对照 (`.output/.parts/check.txt`)
 
-- `source/fundamentals_a.tex`, 第 2 章, DFT.
-- `source/fundamentals_b.tex`, 第 3 章, 线性光学响应.
-- `source/appendix_quantum.tex`, 附录 A.
-- `source/appendix_electrodynamics.tex`, 附录 B.
+### 0.1 纯手搓基准单元 (human, 唯一风格依据)
 
-合计约 23,000 词, 335 个行间公式.
+五个纯手搓单元合计约 11,800 个正文词, 754 个句子, 218 个行间公式.
 
-不作为风格依据:
+`ch2A` (`source/fundamentals_a.tex`, 第 1–593 行): 第 2 章导言与 2.1 节 (量子力学中的密度泛函与 Hohenberg--Kohn 定理).
 
-- 第 5, 6 章 (`project_1_main.tex`, `project_2_main.tex`). 这两章主要由师兄润色, 已经没有作者的特征.
-- 第 1, 4, 7, 8 章与附录 C. 这些部分不在作者逐字写成的范围内, 语气与语料明显不同. 它们是按本风格统一改写的对象.
+`ch2B` (`source/fundamentals_a.tex`, 第 594–1479 行): 第 2 章 2.2.1–2.2.6 节 (辅助体系与 Kohn--Sham 理论框架, 至式 `v_\mathrm{KS}^{(0)}(x)=v_\mathrm{ext}(x)`).
 
-语料与其他章节的对照, 单位为每 1000 词:
+`appA1` (`source/appendix_quantum.tex`, 第 1–501 行): 附录 A 导言与 A1 节 (时间演化, 多体 Schrödinger 方程, Heisenberg 绘景与连续性方程).
 
-| 指标 | 语料 | 第 5, 6 章 | 第 1, 4, 7, 8 章与附录 C |
+`appA2` (`source/appendix_quantum.tex`, 第 502 行至末尾): 附录 A 的 A2–A4 节 (约化密度, 泛函定义, Thomas--Fermi 方法及其局限).
+
+`appD` (`source/appendix.tex`, 全章): 附录 D (源代码与数据分析说明, 代表无公式的客观说明与文档语体).
+
+### 0.2 非基准单元 (严禁作为作者散文风格来源)
+
+旧版风格文档曾误把 `ch2C`, `ch3`, `appB` 一并当作纯手写语料, 导致把 Claude Opus 5.5 的改写习惯当成了作者习惯.
+
+ai 单元为 `ch1` (`source/introduction.tex`) 和 `appC` (`source/appendix_topology.tex`).
+mix 单元为 `ch2C` (`source/fundamentals_a.tex` 第 1480 行至末尾, 其中 2.4 节为典型 AI 改写) 和 `appB` (`source/appendix_electrodynamics.tex`).
+第 3, 4, 7, 8 章含大量 AI 重写或待核查段落; 第 5, 6 章经师兄深度润色.
+
+### 0.3 纯手搓 (human) 与 AI 改写 (ch1 + appC + ch2.4) 定量对照
+
+单位除注明外均为每 1000 正文词 (已剥离公式与宏命令):
+
+| 指标 / 句式特征 | 纯手搓 human (11.8k 词) | AI 单元 ch1+appC+2.4 (10.1k 词) | 诊断结论 |
 | --- | --- | --- | --- |
-| we / us / our | 22.2 | 4.2 | 14.0 |
-| Therefore | 3.0 | 0.4 | 0.3 |
-| arrive at | 0.70 | 0 | 0.12 |
-| medium | 2.5 | 0.3 | 0.1 |
-| not / no / cannot 等否定词 | 3.2 | 3.2 | 5.8 |
-| why / how | 1.0 | 0.5 | 2.7 |
-| "does not establish", "by itself" 一类防御句 | 0.30 | 0.78 | 1.04 |
-| 分号 | 1.0 | 1.5 | 2.1 |
-| 正文括号 | 0.7 | 2.5 | 0.8 |
+| 句长标准差 SD / 变异系数 CV (突发性) | SD 6.5–9.5 (`appD` 19.6), CV 0.43–0.90 | SD 4.8–6.1, CV 0.32–0.39 | 头号差异: 手搓长短句交错; AI 句长被削平在 12–18 词 |
+| 极短句 ($\le 8$ 词) / 长句 ($\ge 30$ 词) 占比 | 短句 9.5%–15.7% / 长句 3.3%–18.2% | `ch2.4` 短句 3.4% / 长句 0.0% | 禁止把所有大于 25 词的有机长句机械拆成定长短句 |
+| 句首 `Therefore, we` vs 句中 `We therefore` | `Therefore, we` 1.10 vs `We therefore` 0.17 | `Therefore, we` 0.00 vs `We therefore` 1.28 | 作者把逻辑副词放句首加逗号; AI 习惯塞在 `We` 后面 |
+| 句首 `Then, we` / `Now, we` vs `We then` / `We now` | 句首 0.76 vs 句中 0.76 | 句首 0.00 vs 句中 3.65 | `We then` / `We now` 连续刷屏是典型 AI 痕迹 |
+| `Accordingly,` / `Hence` / `Moreover,` | 1.27 / 1.02 / 0.93 | 0.20 / 0.00 / 0.00 | 这组逻辑连接词是作者高频真迹, AI 几乎不用 |
+| `Let us ...` / `Recall ...` / `According to ...` | 1.02 / 0.93 / 0.51 | 0.20 / 0.10 / 0.00 | 作者典型的讲义式推导引导语 |
+| `In what follows,` / `Up to now,` | 0.68 / 0.25 | 0.00 / 0.00 | 作者真实的阶段切换语 |
+| `In principle,` / `In practice,` / `In particular,` | 0.51 / 0.34 / 0.42 | 0.00 / 0.00 / 0.10 | 作者真实高频限定语, 严禁按旧规删除 |
+| `In this sense,` / `In other words,` / `in terms of` | 0.34 / 0.34 / 0.76 | 0.00 / 0.00 / 0.10 | 作者常用的物理换述方式 |
+| `can be` + 过去分词 (`expressed/written/regarded as`) | 3.40 (40 次) | 0.40 (4 次) | 关键反转: 作者大量使用自然数学被动情态; AI 强行改成物作主语反而极假 |
+| `it is` (`convenient/instructive/important to`) | 1.44 (17 次) | 0.10 (1 次) | 关键反转: 作者自然使用 `it is ... to`, 严禁一刀切禁用 |
+| 对照词: `while` vs `whereas` | `while` 0.85 vs `whereas` 0.08 (仅 1 次) | `while` 2.17 vs `whereas` 0.79 (`ch3` 达 2.14) | 严禁滥用 `whereas` 对照句, 作者几乎只用 `while` |
+| 替代词: `rather than` vs `instead` | `rather than` 0.59 vs `instead` 0.08 (仅 1 次) | `rather than` 0.30 vs `instead` 0.89 | 少用句首 `Instead,`, 优先用句中 `rather than` |
+| `The previous section established...` 模板 | 仅 1 次 | AI/Mix 合计 16 次 | 这是 Claude 模板, 不是作者的节首固定公式 |
+| `characterize(s)` | 0.00 (0 次) | 0.69 (7 次) | `characterize` 是纯 AI 词, 作者不用 |
 
-公式与句子的统计:
+---
 
-- 98% 的行间公式, 前一句以冒号结尾.
-- 98 处公式之后, 新段以小写 `here,` 开头解释符号.
-- 句子平均 15.6 词, 中位数 14 词, 90% 的句子不超过 25 词.
-- 公式之间的文字块很短, 73% 只有一到两句.
+## 1. 去 AI 味儿 (De-AI) 原则与工作流
 
-## 1. 总纲
+最小化手术原则: 去 AI 痕时, 只修改被检测器标黄, 标橙或存在明显 AI 模板的句子, 未标出 AI 痕迹的原句一字不动.
 
-1. 叙事推进. 用 we 作叙述者, 带读者沿一条推导路线前进. 每一步都由上一步引出. 读者始终知道我们从哪里来, 现在做什么, 下一步去哪里.
-2. 物理先行. 先提出物理问题或物理动作, 再引入并命名概念, 最后写公式. 写完公式, 立即用物理动作和因果路径解释它.
-3. 先一般, 后近似. 先给出一般形式, 再说明本文采用的近似, 最后收束到工作形式.
-4. 命名一切. 新概念, 新物理量, 新公式都有名字. 重要物理量在正文出现时, 名称和符号同时给出.
-5. 肯定陈述. 用肯定句交代适用范围和限制条件. 写 "X determines Y", 少写 "X alone does not establish Y".
-6. 短句. 一句只做一件事, 长度约 15 词. 源文件一句一行.
-7. 不重复. 一个公式只显示一次, 之后用 `equation~\eqref{}` 引用. 一个论点只论证一次.
-8. 首尾衔接. 小节开头回扣上一节. 小节结尾用 we arrive at 收束本节, 再引出下一节.
+先剥离 LaTeX 宏再送检: 外部 AI 检测器会被 `\ce{BC3}`, `\qty{1.822}{\electronvolt}`, `\eqref{}` 等宏切碎 token 分布而产生误报 (false positive). 检测时先替换成纯文本, 如 `BC3` 和 `1.822 eV`.
 
-## 2. 篇章结构
+恢复句长突发性 (burstiness), 拒绝大约 15 词定长切句: AI 最致命的统计指纹是把每句话都切成 12–18 词的齐整短句 (`Subject + verb + object.`), 导致句长方差暴跌. 作者真实节奏是长短错落, 既有 5–9 词的干脆判断句 (`The electron density is an obvious choice.`, `Next, we switch to the coordinate representation.`), 也有 25–38 词的完整复合句 (带条件状语, `which` 非限制性定语从句, `namely that ...` 同位语, 或真实项目列举).
 
-### 2.1 章的开头
+把 `We <副词> <动词>` 改回作者习惯的句首状语加逗号: 少写 `We therefore ...`, `We then ...`, `We now ...`, `We next ...`. 改回作者高频写法 `Therefore, we ...`, `Accordingly, ...`, `Consequently, ...`, `Hence, ...`, `Then, we ...`, `Now, we ...`, `Next, we ...`, `Subsequently, we ...`, 或前置方法状语 `Through the calculation of ..., we ...`, `From ..., we ...`, `By substituting ..., we ...`.
 
-固定由三步组成:
+解除对自然数学被动句和 `it is` 的错误禁令: 不要让所有无生命名词强行充当施事主语去演动作片 (如 `This step compresses...`, `The factor converts...`, `The limitation motivates...`). 恢复作者自然的学术表达, 包括 `can be expressed as`, `can be written as`, `can be regarded as`, `is uniquely determined by`, `is commonly referred to as`, 以及 `It is convenient/instructive to ...`.
 
-1. 定位句, 说明本章在整个理论链条中的位置:
-   `We start our discussion of the fundamentals in this chapter by introducing ...`
-   `We continue our discussion of the fundamentals in this chapter, where we introduce ...`
-2. 物理动作链, 两到四句, 从物理对象出发讲清要解决的问题. 最后一句用 `We therefore ...` 给出方法路线.
-3. 路线图段落, 按节列出, 每节一句, 句中带 `section~\ref{}`, 用 `then`, `Next`, `Finally` 串联.
+---
 
-单位制在章首声明一次, 例如 `We use the Hartree atomic units ...` 或 `We use SI units for the macroscopic electrodynamic equations.`
-之后需要恢复常数时, 明确写出 `We now restore $\hbar$ explicitly.`
+## 2. 语体分层与篇章结构
 
-故事引子 (附录 A 的 `Imagine that we are watching ...`) 只用于章或附录的第一段, 两到四个短句, 可以用一个设问.
-正文其他位置不用设问和第二人称.
+作者在五个纯手搓单元中展现出两种清晰的自然语体, 按章节性质选用, 不跨语体硬套模板.
 
-### 2.2 节的开头
+### 2.1 理论与推导语体 (`ch2A`, `ch2B`, `appA1`, `appA2`)
 
-语料中有 17 处以 `The previous section ...` 一类句式开头. 模板:
+理论推导部分以讲义式的 `we` 为叙述主线 (约 20–31 次/千词), 带读者沿一条推导路线前进.
 
-```
-The previous section established/introduced <结果 X>.
-We now turn to/identify/connect <对象 Y>.
-In this section, we start by <步骤 1>.
-We then <步骤 2>.
-Next, we <步骤 3>.
-Therefore, we advance from <起点> to <终点>.
-```
+章首导言包含四个常见成分. 先用定位句交代本章位置, 例如 `We start our discussion of the fundamentals in this chapter by introducing ...` 或 `In this appendix, we develop the basic quantum-mechanical descriptions used in chapter~\ref{...}.`. 随后用 `In principle, ...` 与 `However, as ..., direct calculation becomes impractical ...` 指出核心矛盾并给出方法路线. 如有资料来源说明则直接交代, 例如 `This chapter partly draws on my notes from ...`. 最后的路线图段落用 `We start from ...`, `With ... as the central variable, we construct ...`, `Finally, section~\ref{...} demonstrates ...`, `In addition, appendix~\ref{...} collects ...` 自然串联, 不写 `Readers interested in X can proceed directly to Y` 这类跳读元话语. 故事引子仅在附录大章开头偶一为之 (`Imagine that we are watching ... Something has changed. But how do we describe this evolution in physical language?`), 随后立即回到物理史与核心方程.
 
-### 2.3 从物理问题到公式
+节与小节的开头多样化切入, 不套用千篇一律的 `The previous section established X. We now turn to Y.` 模板. 常见切入方式有四类. 第一类是直接点出物理便利性或现实约束, 例如 `In quantum mechanics, it is often convenient to shift the basic variable from ... to ...`, `In practical many-body problems, an exact treatment of the hamiltonian is impossible, and approximation is inevitable. This motivates a reformulation in terms of a simpler basic variable. The electron density is an obvious choice.`, 或 `In practical applications, we have to solve the Kohn--Sham equations~\eqref{...}.`. 第二类是设定假设或考察对象, 例如 `Suppose that the hamiltonian is independent of time, so that it does not depend explicitly on $t$.`, `Consider the operator for the measurement ..., and the ground-state $N$-body wave function ...`, 或 `For a many-body system, it is instructive to contrast the exact density functional with ...`. 第三类是阶段回顾, 例如 `Up to now, we have mainly discussed a single-particle quantum system ...` 或 `After the general framework of the Kohn--Sham construction has been established through equations~\eqref{...}, we examine ...`. 第四类是直接聚焦核心定理, 例如 `In this subsection, we focus on the Hohenberg--Kohn theorem, which provides the conceptual foundation of density functional theory: ...`.
 
-每引入一个公式, 依次完成四个动作:
+节与小节的结尾自然收尾, 不喊固定口号. 需要特别澄清 `we arrive at` 的真实用法: 在纯手搓语料中, 10 处 `arrive at` 有 9 处以冒号结尾用于引出推导终式 (`Summing all these terms, we arrive at the full many-body hamiltonian:`, `Substituting equation~\eqref{a} into equation~\eqref{b}, we arrive at ...:`, `Therefore, we arrive at:`), 仅 1 处用于定理结论 (`Therefore, we arrive at the conclusion that ...`). 它不是每节末尾必写的 `At this stage, we arrive at X as role. We now turn to Y.` 机械模板. 真实的小节结尾方式包括: 一句简短结论直接收束 (`This procedure constitutes the Thomas--Fermi method.`), 坦率的后文预告 (`In what follows, we introduce ...` 或 `We will introduce approximations for it later.`), 或者推导完最后一个方程与解释句后直接结束本小节, 不强行加过渡套话.
 
-1. 物理动作: 场, 电子, 介质, 势等对象做了什么.
-2. 命名: 给即将出现的量或关系起名字.
-3. 引导句: 以冒号结尾, 句中点出公式的名字.
-4. 解释: `here,` 段解释符号, 接着一句讲这个公式描述的物理过程.
+### 2.2 客观说明与结果摘要语体 (`appD` 与摘要/结果段)
 
-推导中的步骤用序数副词标明: Firstly, Secondly, Thirdly, Next, Then, Subsequently, Afterwards, Thereafter, Finally.
-这组词是作者自己在 `fundamentals_a.tex` 末尾列出的清单. 同一推导中按顺序使用, 不跳号.
-发起一步运算用 `Let us ...`, 调回前文结果用 `Recall ...`.
+在无公式的代码说明 (`appD`) 中, 不强塞 `we` 或推导连接词. 直接以具体对象 (`The program code`, `Each chapter repository`, `Later repositories`) 或正式学位论文第三人称 (`The candidate used \texttt{vmatplot} to ...`, `the candidate releases ...`) 平实陈述功能与范围, 用 `In particular,` 点出重点功能.
 
-### 2.4 先一般, 后近似
+在摘要与结果概述中, 用 `Our first study examines ...`, `In this thesis, we study/apply ...` 替代无人称的 `The <topic> study examines ...`. 用前置方法短语引出发现, 例如 `Through the calculation of ..., we reveal/obtain ...` 和 `From the dielectric response, we find ...`. 避免连续三四句使用完全同构的 `A remains X, whereas B and C are Y` 对称句模.
 
-模板:
+---
 
-```
-Firstly, we start from the most general <...> form.
-<一句说明一般形式包含的物理: 非局域, 记忆效应, 全张量, 多体波函数 ...>
-Therefore, before introducing the simplified form used in the present work, we write <...> as:
-<一般公式>
-For the present work, we focus on <条件>.
-Under this approximation, <被丢掉的部分> drops out, and <保留的部分> remains.
-Therefore, it reduces to the <工作形式名称>:
-<工作公式>
-```
+## 3. 句子与连接词特征
 
-### 2.5 小节的结尾
+### 3.1 连接副词与引导短语 (作者真迹清单)
 
-语料中有 16 处 arrive at. 结尾两句:
+句首连接词后一律加逗号. 优先使用作者在 `fundamentals_a.tex` 手稿末尾自列的顺序词及正文中高频出现的连接词.
 
-1. 收束句, 点名本节得到的结果, 以及它的物理角色:
-   `At this stage, we arrive at <named result> as <role>.`
-   `Consequently, we arrive at <...>.`
-   `Therefore, we arrive at the conclusion that <...>.`
-2. 过渡句, 说明下一节要用这个结果做什么:
-   `We now turn to <...>.`
-   `In the next subsection, we derive <...> and clarify its physical meaning.`
+逻辑推论常用 `Therefore,` (最常用), `Accordingly,` (顺应前文设定得出下一步), `Consequently,`, `Hence,` (亦常作句中 `, and hence ...`), 以及 `As a result,`. 递进与补充常用 `Moreover,`, `In addition,`, `In particular,`, 和 `Specifically,`. 转折与对比在句首用 `However,` 和 `Nevertheless,`, 句中对比优先用 `while` (不用或极少用 `whereas`), 取舍用 `rather than` (少用 `; instead,` 或句首 `Instead,`).
 
-## 3. 句子层面
+推导步骤序数词按作者手稿清单顺序使用, 不跳号: `Firstly,`, `Secondly,`, `Thirdly,`, `Next,`, `Then,`, `Subsequently,`, `Afterwards,`, 收尾用 `Finally,`. 阶段与视角切换常用 `Up to now,`, `Now,`, `At this stage,`, `In what follows,`, `From this point of view,`, `In this sense,`, `In other words,`, `In principle,`, 和 `In practice,`. 互动式推导引导常用 `Let us ...`, `Recall ...` / `Recall that ...`, `Suppose (that) ...`, `Consider ...`, `According to equation~\eqref{...}, ...`, 以及 `We are going to apply ...` 和 `We will discuss ... later.`.
 
-### 3.1 we 与主动语态
+### 3.2 主动与被动的自然配比
 
-- 方法动作由 we 完成: introduce, define, write, obtain, derive, express, impose, construct, recall, apply, substitute, separate, collect, restore, examine.
-- 物理动作由物理对象完成, 同样用主动语态: `the field drives the electrons`, `the medium stores energy`, `causality constrains the real and imaginary parts`, `the Bloch phase carries the change between cells`.
-- 被动语态在语料中约占每 1000 词 10 处, 主要是 `is defined as`, `is given by`, `is obtained from`. 这类约定性表述可以保留. 同一段内不连续使用两个以上被动句.
+叙述者动作 (`we`) 常用 `introduce`, `define`, `denote`, `write`, `express`, `obtain`, `arrive at`, `construct`, `apply`, `substitute`, `examine`, `focus on`, `start from`, `switch to`.
 
-### 3.2 具体动词
+同时保留自然的数学被动与情态被动, 包括 `can be expressed as`, `can be written as`, `can be obtained from`, `can be regarded as`, `may be written as`, `is defined as`, `is given by`, `is evaluated through`, `is uniquely determined by`, `is commonly referred to as`, 和 `is handled through`.
 
-用具体动词替换空泛结构:
+评价性引导句如 `In quantum mechanics, it is often convenient to ...`, `For a many-body system, it is instructive to contrast ...`, `It is worth noting that ...`, 以及适度使用的 `There is ...` 均属作者自然表达, 不必强行改写.
 
-| 少用 | 改用 |
+### 3.3 括号与从句
+
+纯手搓语料中适度保留精确的数学圆括号补充 (约 1–2 处/千词), 例如 `(up to an additive constant)`, `(up to an overall phase)`, `(in particular, for a non-degenerate ground state)`, `(self-adjoint)`, 以及缩写首次定义 `independent-particle approximation (IPA)`, 不必把所有圆括号机械拆成独立短句.
+
+纯手搓语料中也自然存在适量的 `why` 和 `how` 从句 (约 0.7 处/千词, 例如 `showing, at the density-functional level, why the auxiliary non-interacting construction is variationally consistent` 与 `They also elucidate why its exchange-correlation component can remain highly non-trivial...`). 在解释物理机制时允许自然使用, 仅避免 AI 式的自问自答套话 (`This explains why X.`).
+
+---
+
+## 4. 公式与符号规范 (严格执行)
+
+纯手搓单元的 218 个行间公式在格式上高度统一, 以下规范严格执行.
+
+### 4.1 公式引导与标点
+
+每一个行间公式前的引导句必须以冒号 `:` 结尾, 例如 `we introduce the density operator:` 或 `we arrive at the full many-body hamiltonian:`. 行间公式内部末尾不加逗号或句号. 散文正文中的冒号仅偶尔用于定理或核心概念的总括说明 (如 `provides the conceptual foundation of density functional theory: for a fixed form of ...`), 其余普通句子不用冒号. 正文完全不用破折号 `---`, 极少用分号 `;` (约 0.5 处/千词).
+
+### 4.2 小写 `here,` 符号解释段
+
+公式后若需解释新符号, 新起一段并以小写 `here,` 开头 (纯手搓单元 41 比 0, 从不用 `where`), 例如 `here, $\ket{\Psi_0}$ denotes the ground-state many-body wave function, which encodes the full complexity of the current interacting $N$-electron system.`. 解释符号常用动词 `denotes` (最常用), `represents`, `labels`, `is`. 前文已完整定义过的符号不重复解释. 命名新物理量可用 `We name it the kinetic-correlation functional.` 或 `which is commonly referred to as ...`.
+
+### 4.3 LaTeX 与数学记号约定
+
+数学定义用 `\coloneqq` (纯手搓单元 45 处). 成对或联立关系优先放在 `\left\{\begin{aligned} ... \end{aligned}\right.` 中, 右侧可用 `&&\qquad \text{...}` 标注物理名称.
+
+正文引用在句中一律小写并加不换行空格 `~`, 即 `equation~\eqref{...}`, `equations~\eqref{a} and~\eqref{b}`, `section~\ref{...}`, `subsection~\ref{...}`, `chapter~\ref{...}`, `appendix~\ref{...}`, `figure~\ref{...}`, `table~\ref{...}`, 仅句首大写. 公式引用一律用 `\eqref`, 不用 `\ref`.
+
+矢量用 `\vec{}`; 后接 `)`, `'`, `|`, `}` 时必加细空格 `\,`, 如 `n(\vec{r}\,)`, `\vec{r}\,'`, `|\vec{r}-\vec{r}\,'|`, `\ket{\vec{r}\,}`, `\hat{\vec{r}}_i\,)`. 常数与算子用正体 `\mathrm{i}` (或 `\ii`), `\mathrm{e}` (或 `\euler`), `\mathrm{\pi}`, `\dif` (`\mathrm{d}`). 描述性上下标正体 (`v_\mathrm{ext}`, `E_\mathrm{xc}`, `T_\mathrm{c}`), 指标上下标斜体 (`\psi_{n\vec{k}}`, `\varepsilon_{\alpha\beta}`). 泛函用方括号 `E[n]`, 含空间变量与泛函依赖写作 `v_\mathrm{xc}([n];\vec{r}\,)`. 算符加帽 `\hat{H}`, `\hat{n}(\vec{r}\,)`, 狄拉克记号用 `braket` 宏包. 正文中 `hamiltonian` 一律小写 (纯手搓单元 43 比 1, 仅专名 `Hamiltonian mechanics` 大写). 数值与单位一律用 `siunitx`, 例如 `\qty{0.67}{\electronvolt}` 和 `\unit{\per\nano\metre}`.
+
+---
+
+## 5. 全文一致性约定 (拼写与连字符)
+
+注释行, `\label`, 引用键与 URL 不改动, 正文统一遵循以下约定.
+
+Oxford 拼写: `-ize` 与 `-ization` 用 `organize`, `organization`, `synthesize`, `stabilize`, `realize`, `normalize`, `polarization`, `delocalization`, `minimizing`. 英式 `-our`, `-re`, `-ll-` 用 `behaviour`, `favour`, `favourable`, `colour`, `neighbour`, `centre`, `$\Gamma$-centred`, `labelled`, `modelling`. 保留 `analyse` 和 `analysed`; `towards` 带 `s`; 名词写 `licence` (`MIT License` 专名除外); 写 `tunable`.
+
+复合定语连字符: 修饰紧随其后的名词时加连字符, 作名词时分写. 例如 `the ground-state density` 与 `in the ground state`, `first-principles calculations` 与 `from first principles`, `band-gap opening` 与 `a band gap of ...`, 以及 `two-dimensional`, `many-body`, `one-body`, `non-degenerate`, `time-dependent`, `spin-orbit`, `electron-phonon`, `exchange-correlation`. 例外是理论全称作定语仍分写, 如 `density functional theory framework` 和 `linear response theory`. `non-` 前缀一律加连字符, 如 `non-interacting`, `non-local`, `non-trivial`, `non-zero`, `non-degenerate`, `non-magnetic`.
+
+人名与材料记号: 多人并列用 en dash `--`, 如 `Hohenberg--Kohn`, `Kohn--Sham`, `Thomas--Fermi`, `Born--Oppenheimer`, `Kramers--Kronig`, `Fu--Kane`, `Allen--Dynes`, `Migdal--Eliashberg`, `Heyd--Scuseria--Ernzerhof`. 单人复姓用连字符, 如 `Ismail-Beigi` 和 `Levi-Civita`. 材料通用名小写 (`graphene`, `borophene`, `$\alpha$-beryllene`, `$\beta$-beryllene`), 化学式用 `\ce{}`. `Xene` 与 `Xenes` 首字母大写. 第 5 章特定双层体系名保留大写 (`Graphene-Borophene`, `Graphene-\ce{BC3}`, `Graphene-\ce{B4C3}`). 拓扑不变量写 `$\mathbb{Z}_2$`, `et al.` 用正体. 吸收系数统一用 `\unit{\per\nano\metre}` (第 6 章沿用的已发表图 `fig2.11a.pdf` 除外).
+
+---
+
+## 6. 典型 AI 痕迹黑名单 (去 AI 时重点清除)
+
+遇到以下 Claude 或 GPT 高频模式时, 按右侧的作者纯手搓习惯替换:
+
+| AI 典型痕迹 (高危标黄) | 作者纯手搓替代写法 |
 | --- | --- |
-| is responsible for, plays a role in | drives, determines, controls, generates |
-| there is / there are | <主语> + 具体动词 |
-| it is ... that | 直接陈述 |
-| is related to | connects ... to, depends on, follows from |
-| has an effect on | modifies, shifts, suppresses, enhances |
+| 连续 12–18 词齐整短句 (`We first consider X. We then examine Y. We next identify Z.`) | 合并关联紧密的因果与条件句, 穿插 6–9 词短判断句与 25–35 词含从句长句, 拉开句长方差 |
+| `We therefore <verb> ...`, `We then <verb> ...`, `We now <verb> ...` | `Therefore, we <verb> ...`, `Accordingly, ...`, `Then, we ...`, `Now, we ...`, `Subsequently, we ...` |
+| `The previous section established X. We now turn to Y.` | 直接从本节物理问题, 假设 (`Suppose...`, `Consider...`) 或 `Up to now, we have ...` 切入 |
+| `At this stage, we arrive at X as the central ... We now turn to ...` | 直接收尾, 或简短写 `In what follows, we ...` / `We will discuss ... later.` |
+| `A is X, whereas B is Y` (尤其同一段连续出现 `whereas` / `remains`) | 改用 `while`, 或拆成前后两句自然对比 |
+| `... ; instead, ...` 或句首高频 `Instead, ...` | 句中用 `rather than`, 或直接正面陈述 |
+| `X does not by itself establish Y` / `X alone does not determine Y` | 肯定句直接写什么决定 Y (`Y requires ...` / `Y is determined by ...`) |
+| `This limitation motivates the search for alternative ... in which ...` | `This constraint leads us to ...` 或直接写我们考察什么体系及调控手段 |
+| `The <topic> study examines ...` / `The analysis characterizes ...` | `Our first study examines ...` / `Through the calculation of ..., we obtain/reveal ...` / `We examine ...` |
+| 空泛套话词 (`characterize(s)`, `provide contrasting ... characters`, `supports ... features`, `shows a similar feature`, `crucial`, `robust`, `remarkable`, `intriguing`, `promising`, `novel`, `rich physics`) | 换成具体物理量与平实动词 (`show`, `give`, `yield`, `obtain`, `find`, `determine`, `excitations`, `modes`, `states`, `behaviour`) |
+| 跳出文本的读者指南 (`Readers interested in ... can proceed directly to ...`) | 直接删除, 或平实交代 `Section~\ref{...} connects ...` |
 
-### 3.3 肯定句
+---
 
-用肯定句交代条件和范围, 把限制写成适用条件:
+## 7. 常见非母语笔误修正表 (仅修语法硬伤, 不伤个人文风)
 
-- 写 `The scalar relations apply to the diagonal response along a principal direction.`
-- 少写 `Applying them to an off-diagonal element does not give ...`
-- 写 `A finite-momentum calculation determines the dispersion of these modes.`
-- 少写 `These features do not by themselves establish propagating modes.`
+仅修正真正的语法与拼写硬伤, 保留作者地道的讲义式表达 (`In principle`, `In practice`, `It is convenient to`, `can be expressed as` 等):
 
-确有对照时才用否定, 并立即给出正面陈述:
-`The polarization does not follow the electric field instantaneously. Instead, the medium retains a memory of the earlier perturbation.`
-
-### 3.4 why 与 how 从句
-
-语料中仍有约 23 处 why/how. 新写和改写时按下表处理:
-
-| 原句 | 改为 |
+| 语法/用词硬伤 | 修正为 |
 | --- | --- |
-| This explains why X. | X therefore follows. |
-| To understand why there are four, we rewrite ... | We count these points by rewriting ... |
-| This is why we compare A with B. | We therefore compare A with B. |
-| It describes how strongly P responds to E. | It measures the strength of the response of P to E. |
+| 逗号拼接两个完整主句 (`A are semiconductors, their gaps reach ...`) | 改为句号分句, 或加连词 `, and their gaps ...` / `, whose gaps ...` |
+| 用 `separately` 表示各自对应 (`1.82 eV and 2.38 eV separately`) | `..., respectively.` |
+| `the researches on ...` / `a effective ...` | `research on ...` (不可数) / `an effective ...` |
+| `let us start by <名词>` | `let us start with <名词>` |
+| `we process X as` | `we treat X as` 或 `we regard X as` |
+| `it demonstrates as:` | `it takes the form:` 或 `it can be written as:` |
+| `We adopt $i$ labels the electrons` | `We use $i$ to label the electrons` |
 
-设问只用于章首故事引子, 或在整章中提出一次核心问题: `a natural question is the following: what ...?`
+---
 
-### 3.5 连接副词
+## 8. 自检清单
 
-句首副词后加逗号. 按功能选词:
+去 AI 时确认做到最小化修改, 未标黄或未含 AI 模板的原句保持未动.
 
-- 推论: Therefore (语料最常用, 68 次), Consequently, Hence, As a result. Therefore 只用于真正的推论, 程序性的下一步用 Next 或 We then.
-- 顺应前文而采取行动: Accordingly.
-- 追加: Moreover.
-- 同时成立: Meanwhile, At the same time.
-- 对照: However, By contrast, Instead. 句中对照用 whereas, while.
-- 换一种说法: Equivalently, In other words, In this sense, Specifically, In particular.
-- 顺序: Firstly, Secondly, Thirdly, Next, Then, Subsequently, Afterwards, Thereafter, Finally.
-- 阶段: At this stage, Up to now, In what follows, Here.
-- 原因或伴随: as 引导的从句, 例如 `As different principal components produce different optical responses along different directions, optical anisotropy appears.`
+检查句长突发性, 保留长短句交错节奏, 没有把全文削平为约 15 词的均一短句.
 
-### 3.6 whereas 对照对
+检查连接词位置, `Therefore`, `Accordingly`, `Consequently`, `Then`, `Now`, `Next` 多放在句首加逗号, 不连续使用 `We therefore`, `We then`, `We now`.
 
-两个量分工不同时, 用一句 whereas 并列:
-`The refractive index determines the phase evolution, whereas the extinction coefficient describes the attenuation of the wave amplitude.`
-两个分句的主语和动词结构保持平行.
+检查对比与被动语态, 用 `while` 和 `rather than` 替代成堆的 `whereas` 和 `Instead,`, 同时保留自然的 `can be ...` 与 `it is ... to`.
 
-### 3.7 名称与符号同时出现
+检查公式规范, 每个行间公式前以冒号结尾, 公式末尾无标点, 新符号在小写 `here,` 段解释.
 
-`the electron density $n(\vec{r}\,)$`, `the dielectric tensor $\varepsilon_{\alpha\beta}(\omega)$`, `the absorption coefficient $\alpha(\omega)$`.
-每节第一次出现时写全名和符号. 同一推导内部可以只写符号.
+检查符号与拼写, `\vec{r}\,`, `\vec{r}\,'`, 正体 `\mathrm{i},\mathrm{e},\mathrm{\pi},\dif`, 小写 `hamiltonian`, `\eqref`, `siunitx`, Oxford 拼写及复合定语连字符保持一致.
 
-### 3.8 medium
 
-在光学和电动力学部分, 材料称为 the medium, 并让它做动作: the medium responds, stores energy, absorbs, retains memory, spreads the response over space.
-语料中 medium 出现 58 次, 其他章节几乎不用.
-
-### 3.9 句长与段落
-
-- 一句只表达一个动作或一个判断. 超过 30 词的句子拆成两句.
-- 源文件一句一行. 长句可以在逗号处换行.
-- 公式之间的文字块通常是: 引导句, 公式, `here,` 解释, 物理解释或推论.
-- 不在正文中描述图中的颜色, 箭头和线型. 这些信息写进图注.
-
-## 4. 公式
-
-### 4.1 引导句与公式末尾
-
-- 行间公式前一句以冒号结尾, 并点出公式的名字: `we obtain the Euler--Lagrange condition:`, `we define the potential shift function:`.
-- 行间公式末尾不加任何标点.
-- 冒号后必须紧跟公式. 冒号后接文字段落属于错误.
-
-### 4.2 here 解释段
-
-公式后新起一段, 以小写 `here,` 开头, 依次解释新符号:
-`here, $\omega$ refers to the screening parameter that controls the range separation.`
-`here, $n$ and $m$ label the initial and final bands, and $f_{n\vec{k}}$ and $f_{m\vec{k}}$ denote their occupations.`
-解释符号用 `here,`, 不用 `where`. 只有前文已有完整解释的符号不再重复.
-
-### 4.3 公式后的物理解释
-
-符号解释之后, 用一句以 `This relation/expression/equation` 开头的句子讲公式的物理作用:
-`This relation demonstrates that the imaginary part of the dielectric response directly describes the energy-absorbing part of the induced current.`
-`This expression separates the dissipative channel from the dielectric screening.`
-讲作用路径: 哪个量驱动哪个量, 增大什么会怎样.
-例如 `Accordingly, the Kohn--Sham potential is increased where the density is overestimated and decreased where it is underestimated.`
-
-### 4.4 LaTeX 写法
-
-- 定义用 `\coloneqq` (语料 55 处).
-- 成对或相关的关系放在同一个大括号系统中, 需要时在右侧写名字:
-
-```latex
-\begin{equation}
-\left\{\begin{aligned}
-    &0\le f_i\le 1              &&\qquad  \text{Pauli bound} \\
-    &\textstyle{\sum_i}f_i = N  &&\qquad  \text{particle-number constraint}
-\end{aligned}\right.
-\label{occupation_constraints}
-\end{equation}
-```
-
-- 多步推导用 `aligned`, 每行一步, 以 `&=` 对齐.
-- label 用描述性的 snake_case, 写明物理内容: `KS_effective_potential_definition`, `kk_positive_frequency_dielectric_component`, `absorption_coefficient_from_dielectric_function`. 常用后缀: `_definition`, `_decomposition`, `_condition`, `_relation`, `_from_<source>`. 不用 `obvious`, `approx` 一类无信息的 label.
-
-### 4.5 正文中的引用
-
-- 句中一律小写: `equation~\eqref{}`, `equations~\eqref{a} and~\eqref{b}`, `section~\ref{}`, `subsection~\ref{}`, `chapter~\ref{}`, `appendix~\ref{}`, `figure~\ref{}`, `table~\ref{}`. 只有位于句首时大写.
-- 公式一律用 `\eqref`, 不用 `\ref`. 引用前一律加 `~`.
-- 名称加编号的写法: `the Slater determinant representation~\eqref{slater_determinant}`, `the universal Hohenberg--Kohn functional~\eqref{functional_HK_definition}`.
-- 已经显示过的公式不再重写. 用 `Recall the Kohn--Sham equations~\eqref{KS_equation}.` 调回.
-
-### 4.6 符号约定
-
-- 矢量用 `\vec{}`. 矢量后面紧跟 `)`, `'`, `|`, `}` 时加细空格 `\,`: `n(\vec{r}\,)`, `\vec{r}\,'`, `|\vec{r}-\vec{r}\,'|`, `\ket{\vec{r}\,}`, `\hat{\vec{r}}_i\,)`. 语料中带 prime 的矢量 35 处全部如此, 后接右括号的情形 447 处全部如此.
-- 常数和微分用正体: `\mathrm{i}`, `\mathrm{e}`, `\mathrm{\pi}`, `\dif` (即 `\mathrm{d}`). 不用斜体 i 和 e.
-- 描述性上下标用正体: `v_\mathrm{ext}`, `E_\mathrm{xc}`, `\varepsilon^\mathrm{inter}`. 指标性下标用斜体: `\varepsilon_{\alpha\beta}`, `\psi_{n\vec{k}}`.
-- 泛函用方括号 `E[n]`. 对密度的泛函依赖写成 `v_\mathrm{H}([n];\vec{r}\,)`.
-- 算符加帽: `\hat{H}`, `\hat{n}(\vec{r}\,)`. 狄拉克记号用 braket 宏包.
-- 正文中 hamiltonian 小写 (语料 64 比 1).
-- 数值与单位用 siunitx: `\qty{0.67}{\electronvolt}`, `\unit{\electronvolt}`.
-- 时间依赖约定 `\exp(-\mathrm{i}\,\omega t)` 在章首声明一次.
-
-## 5. 标点
-
-- 正文只用逗号和句号.
-- 冒号只用于引出行间公式.
-- 分号改成两句. 语料正文中有 23 个分号, 其中 8 个是 `; instead,` 结构, 改写为 `... . Instead, ...`.
-- 括号内的补充说明改写进句子, 或单独成句. 缩写首次出现时的括号可以保留, 例如 `independent-particle approximation (IPA)`.
-- 正文不用破折号.
-- 不用感叹号. 设问只用于 2.1 和 3.4 规定的位置.
-
-## 6. 词汇
-
-### 6.1 动词
-
-按功能列出, 括号内为语料出现次数:
-
-- 解释符号: denote (91), represent (18), refer to (9).
-- 描述物理: describe (49), determine (47), provide (29), connect (20), characterize (15), reproduce (15), demonstrate (13), drive (8), generate (6), induce (6), enforce (4), measure (3), encode (3), reveal (2), govern, store, transfer, absorb, retain.
-- 叙述者动作: introduce (25), obtain (19), write (15), arrive at (16), define (10), express, derive, construct, impose, recall, apply, substitute, collect, separate, restore, examine, resolve.
-
-### 6.2 名词
-
-response (171), approximation (68), structure (46), observable (42), contribution (32), channel (23), picture (22), framework (19), constraint (17), construction (15), medium (58), descriptor, ingredient, language, backbone, route, stage, counterpart, correspondence.
-
-### 6.3 常用框架句
-
-- `We start our discussion of ... by introducing ...`
-- `The previous section established ... We now turn to ...`
-- `In physical terms, ...`
-- `Here, the central object is ...`
-- `This relation demonstrates that ...`
-- `In this sense, ...`
-- `Equivalently, ...`
-- `We name it the ... .`
-- `For the present work, we focus on ...`
-- `In what follows, we ...`
-- `At this stage, we arrive at ...`
-
-### 6.4 形容词
-
-用精确的描述性形容词: central, universal, compact, practical, direct, explicit, local, effective, auxiliary, causal, directional.
-不用评价性和宣传性形容词: crucial, essential, robust, remarkable, intriguing, powerful, promising, unprecedented, rich (physics), novel.
-
-## 7. 已知的非母语用法
-
-语料中反复出现以下用法, 新写和改写时一律替换. 全文中的具体位置见 `todo.md` 第 2 节.
-
-| 原文 | 改为 |
-| --- | --- |
-| let us start by <名词> | let us start with <名词> |
-| we achieve: | we obtain: |
-| we process X as, we can process X as | we treat X as, we regard X as |
-| the problem degenerates to | the problem reduces to |
-| the density of ground state, the wave function of ground state | the ground-state density, the ground-state wave function |
-| it demonstrates as: | it takes the form: |
-| the kernel idea ... is here: ... | the key idea. 句中的冒号改为句号 |
-| Review the expression of ... | Recall the expression for ... |
-| We adopt $i$ labels the electrons | We use $i$ to label the electrons |
-| This is convenient to introduce | It is convenient to introduce |
-| does not aim to review a complete lecture of ...; instead, we only extract ... | 改为肯定句: extracts only the ingredients required for ... |
-| Afterwards, ... then ... | 二者只留一个 |
-| In practice, ... in principle ... | 二者只留一个 |
-| Since A. (无主句) | A. Therefore, B. |
-| If we start from ...: <公式> Therefore, ... | We first test ...: <公式> With this choice, ... |
-
-## 8. 一致性约定
-
-以下约定已在全文所有参与编译的源文件中落实. 注释行, label, 引用键, 文献键和 URL 不随正文改动, 例如 `general_nonlocal_constitutive_relation`, `sec:intro_organisation`.
-
-### 8.1 拼写
-
-采用 Oxford spelling:
-
-- -ize 和 -ization: characterize, organize, organization, synthesize, stabilize, realize, normalize, polarization, delocalization.
-- 英式 -our, -re, -ll-: behaviour, favour, favourable, colour, neighbour, centre, $\Gamma$-centred, labelled, modelling.
-- analyse 和 analysed 保留 -yse.
-- towards 带 s.
-- 名词写 licence. 专名 MIT License 保持原样.
-- tunable 不写 tuneable.
-
-### 8.2 复合定语
-
-复合词放在名词前作定语时加连字符, 作名词时分写. 形容词加名词和名词加名词都按这一条处理.
-
-- ground state: `the ground state`, `the ground-state density`, `the ground-state $N$-body wave function`.
-- first principles: `from first principles`, `first-principles calculations`.
-- 其他已统一的定语: total-energy functional, charge-density difference, electron-density difference, phonon-dispersion curves, band-gap energies, band-structure analysis, density-functional formalism, dielectric-function convergence, exchange-correlation functional, zero-temperature setting, two-dimensional, many-body, low-energy, long-range, short-range, first-order, high-symmetry, single-particle, k-point mesh.
-- 同一词组作名词时分写: the band gap, a band gap of 0.67 eV, at a k point, the phonon dispersion, at low energy, in two dimensions.
-
-区分名词和定语的方法: 后面紧跟被修饰的名词时是定语. 后面接标点, 动词, 介词, 连词, 或同位的符号时是名词, 例如 `the ground state $\ket{\Psi_0}$`, `from the ground state $g$`. 中间插入括号说明时仍按定语处理, 例如 `the ground-state ($g\coloneqq 0$) many-body wave function`.
-
-两类例外:
-
-- 理论名称一律分写, 即使作定语: density functional theory, density functional perturbation theory, time-dependent density functional theory, linear response theory.
-- 不是固定术语的描述性短语不强行加连字符, 例如 energy convergence criterion, electronic convergence criterion.
-
-共用中心词的悬垂复合词保留连字符: `time-reversal and inversion symmetry`, `zero-point and thermal contributions`, `the near-infrared and ultraviolet regions`.
-
-### 8.3 连字符与 en dash
-
-- 人名并列用 en dash `--`: Kohn--Sham, Hohenberg--Kohn, Kramers--Kronig, Born--Oppenheimer, Thomas--Fermi, Hartree--Fock, Perdew--Burke--Ernzerhof, Heyd--Scuseria--Ernzerhof, Becke--Johnson, Fu--Kane, Allen--Dynes, Migdal--Eliashberg, Schottky--Mott, Nos\'e--Hoover, Amp\`ere--Maxwell.
-- 一个人的复姓用连字符: Levi-Civita, Ismail-Beigi.
-- 两个实体之间的关系用连字符: spin-orbit, electron-phonon, electron-electron, electron-hole, exchange-correlation, metal-semiconductor, potassium-boron, ket-bra. 化学键同样用连字符: B-B, Be-Be, Be-H.
-- 材料组合的泛称用连字符并小写: graphene-borophene interfaces. 第 5 章定义的体系名保留首字母大写: Graphene-Borophene, Graphene-\ce{BC3}, Graphene-\ce{B4C3}.
-
-### 8.4 前缀
-
-non- 前缀按英式加连字符: non-interacting, non-zero, non-local, non-locality, non-linear, non-classical, non-relativistic, non-commuting, non-monotonically, non-degenerate, non-trivial, non-magnetic, non-negative, non-negligible, non-Abelian, non-self-consistently, non-spin-polarized. none 和 nonetheless 不属于前缀构词.
-
-### 8.5 名称与记号
-
-- 材料名小写: $\alpha$-beryllene, $\beta$-beryllene, borophene, graphene. 化学式用 `\ce{}`.
-- Xene 和 Xenes 首字母大写, X 代表元素.
-- 拓扑指数写 $\mathbb{Z}_2$, 与 Chern 数的 $C_n\in\mathbb{Z}$ 用同一套整数记号. 斜体 $Z$ 已用于核电荷 $Z_I$ 和附录 C 的重叠乘积 $Z_C$, 不再用于拓扑指数. 软件名 Z2Pack 和 PDF 书签中的 Z2 保持纯文本.
-- et al. 用正体.
-
-### 8.6 单位
-
-吸收系数统一用 \unit{\per\nano\metre}. 例外: 第 6 章沿用已发表论文中的图 `figures_proj2/fig2.11a.pdf`, 单位保持 Å⁻¹, 不重新出图. 图注中写明单位.
-
-## 9. 避免的写法
-
-以下写法常见于 AI 修订或他人润色的章节, 不属于作者风格. 全文中的具体位置见 `todo.md` 第 3 节.
-
-- 防御性否定句: `X does not by itself establish Y`, `X alone does not determine Y`, `need not`. 改为肯定句, 说明 Y 由什么确定 (见 3.3).
-- 每个图后重复同一条限制. 限制条件在方法部分或一个 scope 段落中集中说明一次, 结果段专注于物理.
-- 规定式语气: `must be specified`, `must be identified with`. 论文自己就是执行者, 改为陈述句: `Each research chapter reports ...`.
-- why 和 how 解释句 (见 3.4).
-- 宣传性形容词 (见 6.4).
-- 跨章节重复的教科书段落. 定义只出现在理论章, 结果章引用.
-- 同一公式多次显示, 同一定理多次复述.
-- 正文描述图中的颜色, 箭头和阴影.
-- 没有明确对象的 `This` 开头句. `This` 后面接名词: `This relation`, `This step`, `This contribution`.
-
-## 10. 自检清单
-
-写完一个小节后逐条检查:
-
-1. 开头是否回扣了上一节, 并说明本节要做什么.
-2. 每个公式之前, 是否先讲了物理动作并给出了名字.
-3. 每个行间公式前是否是冒号, 末尾是否没有标点.
-4. 新符号是否都在 `here,` 段中解释.
-5. 公式后是否有一句讲物理作用的解释.
-6. 是否有重复显示的公式或重复论证的段落.
-7. 是否有防御性否定句, why/how 从句, 分号, 括号, 破折号.
-8. Therefore 是否只用于真正的推论.
-9. 句子是否大多在 25 词以内, 一句一行.
-10. 重要物理量第一次出现时是否名称与符号并列.
-11. 符号约定: `\vec{r}\,)`, `\vec{r}\,'`, 正体 i, e, π, d, 小写 hamiltonian, `\eqref`.
-12. 结尾是否用 we arrive at 一类句式收束, 并引出下一节.
